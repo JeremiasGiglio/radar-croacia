@@ -6,7 +6,7 @@
 - También es la **pieza principal del portfolio** que va a mostrar en el **9.º Encuentro de la Diáspora Croata Sudamericana (Córdoba, 5–8/11/2026)**: foro de negocios, Oficina para los Croatas fuera de Croacia, MDU (ministerio) y asociaciones de toda Sudamérica.
 
 ## Lo que tiene que existir antes del 5/11/2026 (MVP de demo)
-1. **Web pública** (estática) con el mapa, los filtros por perfil (`ar` / `cit` / `res`) y las fichas. ✅ Está en `site/` (lee `site/data/opportunities.json`) y se publica con GitHub Pages desde `.github/workflows/pages.yml`. `site/index.html` se generó con `scripts/build_site.py` desde `prototype/`; de acá en adelante se edita `site/index.html` directamente.
+1. **Web pública** (estática) con el mapa, los filtros por perfil (`ar` / `cit` / `res`) y las fichas. ✅ Está en `site/` (lee `site/data/opportunities.json`) y se publica con GitHub Pages desde `.github/workflows/pages.yml` en **https://radar.jgcup.stream** (dominio provisorio). `jgcup.stream` es de Jeremías y lo usan otros proyectos suyos por un túnel de Cloudflare: **del dominio, el Radar solo usa el registro CNAME `radar`**. No tocar el dominio raíz, `estudio`, `comfy` ni el túnel. `site/index.html` se generó con `scripts/build_site.py` desde `prototype/`; de acá en adelante se edita `site/index.html` directamente.
 2. **Pipeline real con al menos 4–6 fuentes** (de las 12 del plan): RSS de la Oficina (`hrvatiizvanrh.gov.hr/rss.aspx?ID=574`), MDU (`mdu.gov.hr`, javni pozivi), HZZ (`mjere.hzz.hr`), PGŽ (`pgz.hr`, WordPress), Grad Rijeka, udruge.gov.hr.
 3. **Agentes de IA** con salida JSON validada por esquema:
    - **Extractor/resumidor:** convocatoria en croata → ficha en español (qué es, quién la da, monto, plazo, link).

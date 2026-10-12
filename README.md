@@ -13,7 +13,7 @@ Becas, cursos, residencia de diáspora, ayudas para emprender, programas municip
 | Pieza | Estado |
 |---|---|
 | Investigación de mercado, técnica y legal | ✅ `docs/01_investigacion_y_factibilidad.md` |
-| Web pública (mapa + filtros + fichas) | ✅ `site/`, publicada con GitHub Pages: https://jeremiasgiglio.github.io/radar-croacia/ |
+| Web pública (mapa + filtros + fichas) | ✅ `site/`, publicada con GitHub Pages: https://radar.jgcup.stream (provisorio, hasta tener el dominio del Ateneo) |
 | Maqueta offline para eventos | ✅ `prototype/index.html` (datos del 28/9/2026 embebidos; funciona sin internet) |
 | Datos en JSON con esquema | ✅ `site/data/opportunities.json` (14 fichas, revisión 10/10/2026) + `schema/` |
 | Tests | ✅ validación del JSON + 11 E2E con Playwright (escritorio y celular) en cada push |
@@ -22,7 +22,7 @@ Becas, cursos, residencia de diáspora, ayudas para emprender, programas municip
 | Agentes de IA (resumen, elegibilidad, detección de cambios) | ⬜ por construir |
 | Revisión humana (panel del Ateneo) | ⬜ por construir |
 | Avisos, boletín y posteos semanales | ⬜ por construir |
-| Dominio del Ateneo | ⬜ por ahora en github.io |
+| Dominio del Ateneo | ⬜ por ahora `radar.jgcup.stream` (subdominio personal de Jeremías, en Cloudflare) |
 
 ## Fechas que mandan
 | Fecha | Qué | Necesita |
@@ -34,7 +34,7 @@ Becas, cursos, residencia de diáspora, ayudas para emprender, programas municip
 | **1/2 – 30/6/2027** | **Ejecución del proyecto financiado** (si se aprueba) | Ver compromisos en `docs/02_compromisos_convocatoria.md` |
 
 ## Cómo verlo
-- **Online:** https://jeremiasgiglio.github.io/radar-croacia/
+- **Online:** https://radar.jgcup.stream (dominio provisorio; también https://jeremiasgiglio.github.io/radar-croacia/)
 - **En tu compu:** `npm install` y después `npm run serve` → http://localhost:8080
 - **Sin internet (eventos):** abrí `prototype/index.html` directamente.
 
