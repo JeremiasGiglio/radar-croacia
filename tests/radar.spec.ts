@@ -75,3 +75,44 @@ test("las convocatorias cerradas van al final de la lista", async ({ page }) => 
   const firstClosed = pills.findIndex(t => t.includes("Cerrada"));
   expect(firstClosed).toBe(total - closed);
 });
+
+test.describe("WhatsApp", () => {
+  test("sin número configurado no aparece ningún botón", async ({ page }) => {
+    await expect(page.locator("#wa-general")).toBeHidden();
+    await expect(page.locator("a.wa[data-wa]")).toHaveCount(0);
+  });
+
+  test("con número: botón general y uno por ficha con la consulta escrita", async ({ page }) => {
+    await page.route("**/data/contact.json", r => r.fulfill({ json: { whatsapp: "+54 9 341 000-0000", nota: "nota" } }));
+    await page.reload();
+    await expect(page.locator("a.wa[data-wa]")).toHaveCount(total);
+    const general = page.locator("#wa-general");
+    await expect(general).toBeVisible();
+    await expect(general).toHaveAttribute("href", /^https:\/\/wa\.me\/5493410000000\?text=/);
+
+    await page.locator("#pf-res").click();
+    const first = data.opportunities[0];
+    const href = await page.locator(`a.wa[data-wa="${first.id}"]`).getAttribute("href");
+    const text = decodeURIComponent(new URL(href!).searchParams.get("text")!);
+    expect(text).toContain(first.t);
+    expect(text).toContain(data.profiles.res);
+    expect(await general.getAttribute("href")).toContain(encodeURIComponent(data.profiles.res));
+  });
+
+  test("un número inválido no rompe la página ni muestra botones", async ({ page }) => {
+    await page.route("**/data/contact.json", r => r.fulfill({ json: { whatsapp: "123" } }));
+    await page.reload();
+    await expect(page.locator("#list article")).toHaveCount(total);
+    await expect(page.locator("a.wa[data-wa]")).toHaveCount(0);
+  });
+});
+
+test("en el celular nada es más ancho que la pantalla, aunque no carguen las fuentes", async ({ page, isMobile }) => {
+  test.skip(!isMobile, "solo celular");
+  await page.route(/fonts\.(googleapis|gstatic)/, r => r.abort());
+  await page.route("**/data/contact.json", r => r.fulfill({ json: { whatsapp: "5493410000000" } }));
+  await page.reload();
+  await expect(page.locator("#list article")).toHaveCount(total);
+  const [client, scroll] = await page.evaluate(() => [document.documentElement.clientWidth, document.documentElement.scrollWidth]);
+  expect(scroll).toBeLessThanOrEqual(client);
+});

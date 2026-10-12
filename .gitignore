@@ -1,6 +1,7 @@
 *.log
 .DS_Store
 .env
+/review/last_run.md
 __pycache__/
 convocatoria/
 node_modules/

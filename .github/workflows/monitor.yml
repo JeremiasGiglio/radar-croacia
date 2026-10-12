@@ -1,0 +1,47 @@
+name: Robot diario de fuentes oficiales
+
+on:
+  schedule:
+    - cron: "17 5 * * *"   # todos los días 05:17 UTC (07:17 en Croacia, 02:17 en Argentina)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run test:unit
+      - name: Leer fuentes y detectar novedades
+        id: run
+        run: node scripts/monitor.mjs
+        continue-on-error: true
+      - name: Abrir PR de revisión si hay novedades
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: radar/novedades
+          delete-branch: true
+          commit-message: "Robot: novedades de fuentes oficiales"
+          title: "🔔 Novedades en fuentes oficiales: revisar antes de publicar"
+          body-path: review/last_run.md
+          labels: revisión
+          add-paths: |
+            data/sources/**
+            review/queue/**
+      - name: Fallar si alguna fuente rompió el contrato
+        if: steps.run.outcome == 'failure'
+        run: |
+          echo "::error::Alguna fuente falló (sin ítems, HTTP distinto de 200 o estructura cambiada). Ver el resumen."
+          exit 1

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "oficina_natjecaji",
+    "name": "Oficina para los Croatas fuera de Croacia: convocatorias (Natječaji)",
+    "type": "rss",
+    "url": "https://hrvatiizvanrh.gov.hr/rss.aspx?ID=574",
+    "min_items": 1
+  },
+  {
+    "id": "mdu_javni_pozivi",
+    "name": "Ministerio de Demografía e Inmigración (MDU): convocatorias (Javni pozivi)",
+    "type": "rss",
+    "url": "https://mdu.gov.hr/rss.aspx?ID=5923",
+    "min_items": 1
+  }
+]

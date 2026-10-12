@@ -7,9 +7,9 @@
 - [ ] Enviar el resumen del IMIN.
 
 ## Sprint 1: hasta el 2/11/2026 (demo para Córdoba)
-- [ ] Adaptadores para 4–6 fuentes: Oficina RSS, MDU, HZZ, PGŽ, Grad Rijeka, udruge.
+- [ ] Adaptadores para 4–6 fuentes: ~~Oficina RSS~~ ✅, ~~MDU~~ ✅, HZZ, PGŽ, Grad Rijeka, udruge.
 - [ ] Agente extractor/resumidor + agente de elegibilidad, con esquema JSON y evals.
-- [ ] Cola de revisión como PR automático.
+- [x] Cola de revisión como PR automático.
 - [ ] Panel "Cambios detectados" con datos reales.
 - [ ] Modo offline + video nuevo de 60–90 s.
 - [ ] Volante con QR + formulario "me interesa volver" (sirve como indicador para el fondo del MDU).

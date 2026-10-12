@@ -16,9 +16,10 @@ Becas, cursos, residencia de diáspora, ayudas para emprender, programas municip
 | Web pública (mapa + filtros + fichas) | ✅ `site/`, publicada con GitHub Pages: https://radar.jgcup.stream (provisorio, hasta tener el dominio del Ateneo) |
 | Maqueta offline para eventos | ✅ `prototype/index.html` (datos del 28/9/2026 embebidos; funciona sin internet) |
 | Datos en JSON con esquema | ✅ `site/data/opportunities.json` (14 fichas, revisión 10/10/2026) + `schema/` |
-| Tests | ✅ validación del JSON + 11 E2E con Playwright (escritorio y celular) en cada push |
+| Tests | ✅ validación del JSON, 7 tests del robot con copias reales de los feeds y 15 E2E con Playwright (escritorio, celular y celular chico) |
 | Video demo con subtítulos | ✅ `media/Radar_Croacia_demo.mp4` |
-| Scrapers y monitoreo diario de fuentes | ⬜ por construir (`docs/03_arquitectura.md`) |
+| Monitoreo diario de fuentes | 🟡 2 de 12: RSS de la Oficina (natječaji) y del MDU (javni pozivi). Robot diario + PR de revisión (`.github/workflows/monitor.yml`, `review/`) |
+| Botón de consultas por WhatsApp | 🟡 listo; aparece cuando se carga el número en `site/data/contact.json` |
 | Agentes de IA (resumen, elegibilidad, detección de cambios) | ⬜ por construir |
 | Revisión humana (panel del Ateneo) | ⬜ por construir |
 | Avisos, boletín y posteos semanales | ⬜ por construir |
@@ -42,6 +43,16 @@ Becas, cursos, residencia de diáspora, ayudas para emprender, programas municip
 1. Editá `site/data/opportunities.json` (el esquema está en `schema/opportunities.schema.json`).
 2. `npm test` valida los datos y corre los tests.
 3. Commit y push a `main`: GitHub Actions corre los tests y, si pasan, publica.
+
+## Botón de WhatsApp
+Cargá el número en `site/data/contact.json` (campo `whatsapp`, con código de país, por ejemplo `+54 9 341 …`).
+Con el campo vacío los botones no aparecen. Cada ficha arma la consulta con su título y el perfil elegido; la persona la manda desde su WhatsApp y se contesta a mano desde la app de WhatsApp Business (gratis).
+
+## Robot diario
+- Fuentes en `scripts/sources.json`; adaptador RSS en `scripts/lib/rss.mjs`.
+- Corre todos los días a las 05:17 UTC (o a mano: *Actions → Robot diario → Run workflow*).
+- Guarda cada fuente en `data/sources/` (el historial de git muestra qué cambió) y, si hay novedades, abre un PR con la cola en `review/queue/`. Ver `review/README.md`.
+- Falla en rojo si una fuente trae 0 ítems o cambia de estructura.
 
 ## Estructura
 ```
