@@ -1,0 +1,591 @@
+{
+ "version": "2026-10-10",
+ "verified_at": "2026-10-10",
+ "note": "Beta. Fichas revisadas por Jeremías Giglio con fuentes oficiales; falta la revisión del Ateneo. Los montos y plazos pueden cambiar: la fuente oficial manda.",
+ "profiles": {
+  "ar": "Vive en Argentina, sin ciudadanía",
+  "cit": "Vive en Argentina, con ciudadanía",
+  "res": "Vive en Croacia con residencia de diáspora (art. 79.a)"
+ },
+ "categories": {
+  "beca": {
+   "n": "Becas y cursos",
+   "c": "#1D5F8A"
+  },
+  "emp": {
+   "n": "Emprender",
+   "c": "#C8102E"
+  },
+  "res": {
+   "n": "Residencia y trámites",
+   "c": "#6B4FA0"
+  },
+  "loc": {
+   "n": "Ayudas locales",
+   "c": "#1F7A4D"
+  },
+  "proy": {
+   "n": "Proyectos comunitarios",
+   "c": "#B26A00"
+  }
+ },
+ "eligibility_codes": {
+  "ok": "Te sirve",
+  "cond": "Con condiciones",
+  "no": "No aplica"
+ },
+ "opportunities": [
+  {
+   "id": "conv26",
+   "cat": "proy",
+   "t": "Convocatoria Pública 2026 para proyectos de la diáspora",
+   "who": "Oficina Central para los Croatas fuera de Croacia",
+   "pts": [
+    [
+     15.98,
+     45.81
+    ]
+   ],
+   "deadline": "2026-10-07T23:59:00+02:00",
+   "amount": "€800 a €30.000 por proyecto",
+   "what": "Financia proyectos que fortalecen la identidad, la lengua y los vínculos con Croacia. Pueden presentarse asociaciones y personas. La edición 2026 estuvo abierta del 7/9 al 7/10; el resultado se espera entre fines de noviembre de 2026 y enero de 2027.",
+   "el": {
+    "ar": [
+     "ok",
+     "Personas que viven fuera de Croacia pueden presentarse (categoría B). No hace falta ciudadanía."
+    ],
+    "cit": [
+     "ok",
+     "Si vivís fuera de Croacia, podés presentarte."
+    ],
+    "res": [
+     "no",
+     "Es para croatas que viven fuera de Croacia."
+    ]
+   },
+   "src": [
+    "hrvatiizvanrh.gov.hr",
+    "https://hrvatiizvanrh.gov.hr/natjecaji-574/574"
+   ],
+   "verified_at": "2026-10-10",
+   "next": "Próxima edición: septiembre de 2027 (estimado)"
+  },
+  {
+   "id": "beca",
+   "cat": "beca",
+   "t": "Beca de lengua croata en universidades croatas (2027/28)",
+   "who": "Ministerio de Demografía e Inmigración (MDU)",
+   "pts": [
+    [
+     14.44,
+     45.33
+    ],
+    [
+     15.98,
+     45.81
+    ],
+    [
+     16.44,
+     43.51
+    ],
+    [
+     18.69,
+     45.55
+    ],
+    [
+     15.23,
+     44.12
+    ],
+    [
+     13.85,
+     44.87
+    ]
+   ],
+   "next": "Junio 2027",
+   "amount": "Curso gratis, comidas subsidiadas y €400 por mes para alojamiento",
+   "what": "Un semestre o un año de croata en Zagreb, Rijeka, Split, Osijek, Zadar o Pula. La convocatoria 2026 cerró el 6 de julio; la próxima sale en junio.",
+   "el": {
+    "ar": [
+     "ok",
+     "Pensada para descendientes. Vivir fuera de Europa suma puntos."
+    ],
+    "cit": [
+     "ok",
+     "Pensada para descendientes. Vivir fuera de Europa suma puntos."
+    ],
+    "res": [
+     "cond",
+     "Se puede, pero vivir ya en Croacia da menos puntaje."
+    ]
+   },
+   "src": [
+    "mdu.gov.hr",
+    "https://mdu.gov.hr/"
+   ],
+   "verified_at": "2026-09-28"
+  },
+  {
+   "id": "a1hr",
+   "cat": "beca",
+   "t": "Cursos online de croata A1.HR y A2.HR",
+   "who": "Oficina Central para los Croatas fuera de Croacia",
+   "pts": [
+    [
+     15.98,
+     45.81
+    ]
+   ],
+   "next": "Por cohortes",
+   "amount": "Gratis",
+   "what": "Cursos online oficiales de croata para principiantes, con certificado. El certificado sirve como prueba de compromiso con la identidad croata.",
+   "el": {
+    "ar": [
+     "ok",
+     "Abiertos a la diáspora."
+    ],
+    "cit": [
+     "ok",
+     "Abiertos a la diáspora."
+    ],
+    "res": [
+     "ok",
+     "Sirven igual desde Croacia."
+    ]
+   },
+   "src": [
+    "hrvatiizvanrh.gov.hr",
+    "https://hrvatiizvanrh.gov.hr/"
+   ],
+   "verified_at": "2026-09-28"
+  },
+  {
+   "id": "hmi",
+   "cat": "beca",
+   "t": "Escuela de verano de lengua y cultura croata",
+   "who": "Hrvatska matica iseljenika",
+   "pts": [
+    [
+     15.98,
+     45.81
+    ]
+   ],
+   "next": "Abril 2027",
+   "amount": "€1.050, con becas que incluyen alojamiento",
+   "what": "Cuatro semanas de clases y programa cultural en Zagreb. En 2026 fue del 23/6 al 17/7 y la convocatoria cerró el 17/4. Las becas suelen cerrar entre el 17/4 y el 1/6.",
+   "el": {
+    "ar": [
+     "ok",
+     "Pensada para descendientes que viven afuera."
+    ],
+    "cit": [
+     "ok",
+     "Pensada para descendientes que viven afuera."
+    ],
+    "res": [
+     "cond",
+     "Consultar: está orientada a quienes viven fuera de Croacia."
+    ]
+   },
+   "src": [
+    "matis.hr",
+    "https://matis.hr/"
+   ],
+   "verified_at": "2026-10-10"
+  },
+  {
+   "id": "potvrda",
+   "cat": "res",
+   "t": "Residencia de diáspora (art. 79.a) y certificado del MDU",
+   "who": "MDU y policía (MUP)",
+   "pts": [
+    [
+     15.98,
+     45.81
+    ]
+   ],
+   "next": "Todo el año",
+   "amount": "Residencia de 2 años renovable, con permiso para trabajar y emprender",
+   "what": "Los descendientes de emigrantes croatas pueden vivir y trabajar en Croacia sin tener la ciudadanía. Se pide ya estando en Croacia: primero el certificado del MDU (Potvrda) y después la residencia en la policía.",
+   "el": {
+    "ar": [
+     "ok",
+     "Es la puerta de entrada si querés vivir en Croacia sin ciudadanía."
+    ],
+    "cit": [
+     "no",
+     "Con ciudadanía no la necesitás."
+    ],
+    "res": [
+     "ok",
+     "Ya la tenés: renovala antes de los 2 años."
+    ]
+   },
+   "src": [
+    "mdu.gov.hr",
+    "https://mdu.gov.hr/izdavanje-potvrde-za-hrvatske-iseljenike-za-reguliranje-boravka-u-rh/7257"
+   ],
+   "verified_at": "2026-09-28"
+  },
+  {
+   "id": "biram",
+   "cat": "emp",
+   "t": "Biram Hrvatsku: ayuda para quienes vuelven a trabajar",
+   "who": "Servicio de Empleo (HZZ)",
+   "pts": [
+    [
+     15.98,
+     45.81
+    ]
+   ],
+   "next": "Condiciones 2027 en enero (se anunció un \"Biram Hrvatsku 2.0\")",
+   "amount": "€7.000 para quienes vienen de Sudamérica",
+   "what": "Ayuda en dinero para retornados que empiezan a trabajar o emprender en Croacia. Incluye a quienes tienen residencia de diáspora.",
+   "el": {
+    "ar": [
+     "no",
+     "Hay que estar viviendo en Croacia."
+    ],
+    "cit": [
+     "cond",
+     "Si te mudás a Croacia. Pide un garante ciudadano croata."
+    ],
+    "res": [
+     "cond",
+     "Sí, pero pide un garante ciudadano croata."
+    ]
+   },
+   "src": [
+    "mjere.hzz.hr",
+    "https://mjere.hzz.hr/"
+   ],
+   "verified_at": "2026-10-10"
+  },
+  {
+   "id": "potpora",
+   "cat": "emp",
+   "t": "Ayuda para emprender (verde y digital)",
+   "who": "Servicio de Empleo (HZZ)",
+   "pts": [
+    [
+     15.98,
+     45.81
+    ],
+    [
+     14.44,
+     45.33
+    ]
+   ],
+   "next": "Condiciones 2027 en enero",
+   "amount": "Hasta €10.000 (€5.000 fijos + €5.000 contra factura) para un pequeño negocio con impuesto fijo (paušalni obrt)",
+   "what": "Subsidio para abrir tu propia actividad. Hay que inscribirse antes como desempleado y no abrir el negocio hasta firmar el contrato.",
+   "el": {
+    "ar": [
+     "no",
+     "Hay que estar viviendo en Croacia."
+    ],
+    "cit": [
+     "cond",
+     "Si te mudás a Croacia. Pide un garante ciudadano croata."
+    ],
+    "res": [
+     "cond",
+     "Sí, pero pide un garante ciudadano croata."
+    ]
+   },
+   "src": [
+    "mjere.hzz.hr",
+    "https://mjere.hzz.hr/"
+   ],
+   "verified_at": "2026-10-10"
+  },
+  {
+   "id": "pgz",
+   "cat": "emp",
+   "t": "Primorje-Gorski kotar: ayuda para negocios nuevos (Mjera 2.7)",
+   "who": "Županija de Primorje-Gorski kotar (PGŽ)",
+   "pts": [
+    [
+     14.44,
+     45.33
+    ]
+   ],
+   "next": "Convocatoria esperada en octubre 2026",
+   "amount": "80 % de los gastos, de €1.000 a €8.000 (mínimo €665 por ítem)",
+   "what": "Reintegra gastos de un obrt de hasta 36 meses con sede en la región de Rijeka. Es parte del programa 2026–2029. Se pide solo por la app SOM y hay una medida por solicitante.",
+   "el": {
+    "ar": [
+     "no",
+     "Hay que tener el negocio registrado en la región."
+    ],
+    "cit": [
+     "cond",
+     "Si te instalás en la región de Rijeka."
+    ],
+    "res": [
+     "ok",
+     "Sirve con residencia, sin garante."
+    ]
+   },
+   "src": [
+    "pgz.hr",
+    "https://www.pgz.hr/"
+   ],
+   "verified_at": "2026-10-10",
+   "deadline": "2026-10-19T23:59:00+02:00",
+   "flag": "Revisar: el texto 2026 ya no dice que el autoempleo cuente como persona empleada."
+  },
+  {
+   "id": "rijeka",
+   "cat": "loc",
+   "t": "Rijeka: ayudas para emprendedores",
+   "who": "Ciudad de Rijeka",
+   "pts": [
+    [
+     14.44,
+     45.33
+    ]
+   ],
+   "next": "En 2025 salió el 10/10 y cerró el 31/10; la de 2026 está sin confirmar",
+   "amount": "PP: 80 % de €500 a €4.000 · SUIT: 50 % de €300 a €2.700",
+   "what": "Dos programas de la ciudad para negocios con sede en Rijeka, que se pueden combinar. Se piden online con firma digital del banco.",
+   "el": {
+    "ar": [
+     "no",
+     "Hay que tener el negocio en Rijeka."
+    ],
+    "cit": [
+     "cond",
+     "Si abrís tu negocio en Rijeka."
+    ],
+    "res": [
+     "ok",
+     "El único requisito es la sede en Rijeka."
+    ]
+   },
+   "src": [
+    "rijeka.hr",
+    "https://www.rijeka.hr/"
+   ],
+   "verified_at": "2026-10-10",
+   "flag": "El tope total al combinar las dos medidas está sin confirmar."
+  },
+  {
+   "id": "municip",
+   "cat": "loc",
+   "t": "Programas municipales de integración de retornados",
+   "who": "MDU y 13 municipios",
+   "pts": [
+    [
+     17.81,
+     45.29
+    ],
+    [
+     18.88,
+     45.15
+    ],
+    [
+     16.27,
+     45.44
+    ],
+    [
+     17.22,
+     45.59
+    ],
+    [
+     16.86,
+     46.3
+    ],
+    [
+     16.2,
+     46.32
+    ]
+   ],
+   "next": "Según cada municipio",
+   "amount": "Varía; por ejemplo, ayudas para vivienda",
+   "what": "En julio de 2026 el MDU repartió unos €509.000 entre 13 municipios (entre ellos Pleternica, Otok, Petrinja, Daruvar, Legrad y Maruševec) para programas de retornados.",
+   "el": {
+    "ar": [
+     "no",
+     "Hay que mudarse a ese municipio."
+    ],
+    "cit": [
+     "cond",
+     "Si te mudás a uno de esos municipios."
+    ],
+    "res": [
+     "cond",
+     "Si vivís o te mudás a uno de esos municipios."
+    ]
+   },
+   "flag": "Dato de prensa (HRT). Falta verificar los requisitos en cada municipio.",
+   "src": [
+    "HRT, julio 2026",
+    "https://vijesti.hrt.hr/hrvatska/vise-od-pola-milijuna-eura-za-programe-povratka-i-integracije-iseljenika-12806443"
+   ],
+   "verified_at": "2026-09-28"
+  },
+  {
+   "id": "mdu_ocd",
+   "cat": "proy",
+   "t": "Fondo del MDU para asociaciones de la diáspora",
+   "t_hr": "Javni poziv za udruge (povratak, useljavanje i integracija)",
+   "who": "Ministerio de Demografía e Inmigración (MDU)",
+   "pts": [
+    [
+     15.98,
+     45.81
+    ]
+   ],
+   "next": "Próxima edición: julio de 2027 (estimado según 2026)",
+   "amount": "€4.000 a €10.000 para proyectos de información (P2); hasta €40.000 en otras líneas",
+   "what": "Financia al 100 % y por adelantado proyectos de asociaciones sobre retorno, inmigración e integración. En 2026 estuvo abierto del 9/7 al 10/8 con €1,2 millones. Incluye asociaciones del exterior, como las de Argentina.",
+   "el": {
+    "ar": [
+     "cond",
+     "Lo presenta una asociación (por ejemplo, el Ateneo), no una persona."
+    ],
+    "cit": [
+     "cond",
+     "Lo presenta una asociación (por ejemplo, el Ateneo), no una persona."
+    ],
+    "res": [
+     "cond",
+     "Lo presenta una asociación, no una persona."
+    ]
+   },
+   "src": [
+    "mdu.gov.hr",
+    "https://mdu.gov.hr/javni-pozivi/7595"
+   ],
+   "verified_at": "2026-10-10"
+  },
+  {
+   "id": "vivienda44",
+   "cat": "res",
+   "t": "Vivienda del Estado para retornados (art. 44)",
+   "t_hr": "Stambeno zbrinjavanje povratnika (čl. 44., NN 151/2025)",
+   "who": "Ministerio de Demografía e Inmigración (MDU)",
+   "pts": [
+    [
+     15.98,
+     45.81
+    ]
+   ],
+   "next": "Todo el año",
+   "amount": "Alquiler de una vivienda del Estado",
+   "what": "Los retornados pueden pedir en alquiler una vivienda del Estado. Acepta a quienes tienen la residencia de diáspora (79.a). Se pide al MDU por mail: stambeno@mdu.hr.",
+   "el": {
+    "ar": [
+     "cond",
+     "Es para quienes vuelven a vivir en Croacia: consultá al MDU antes de mudarte."
+    ],
+    "cit": [
+     "cond",
+     "Si volvés a vivir en Croacia."
+    ],
+    "res": [
+     "ok",
+     "Acepta la residencia de diáspora (79.a)."
+    ]
+   },
+   "flag": "Faltan los requisitos detallados y el valor del alquiler.",
+   "src": [
+    "mdu.gov.hr",
+    "https://mdu.gov.hr/"
+   ],
+   "verified_at": "2026-10-10"
+  },
+  {
+   "id": "exencion",
+   "cat": "res",
+   "t": "Cinco años sin impuesto a la renta sobre el sueldo para retornados",
+   "who": "Administración tributaria (Porezna uprava)",
+   "pts": [
+    [
+     15.98,
+     45.81
+    ]
+   ],
+   "next": "Al empezar a trabajar en Croacia",
+   "amount": "100 % del impuesto sobre el sueldo, durante 5 años",
+   "what": "Quienes vuelven a vivir y trabajar en Croacia no pagan impuesto a la renta sobre el sueldo durante 5 años. Incluye a quienes tienen la residencia de diáspora (79.a). Solo cubre ingresos por sueldo.",
+   "el": {
+    "ar": [
+     "no",
+     "Hay que vivir y trabajar en Croacia."
+    ],
+    "cit": [
+     "cond",
+     "Si te mudás y trabajás en relación de dependencia en Croacia."
+    ],
+    "res": [
+     "ok",
+     "Incluye la residencia 79.a; solo sobre el sueldo."
+    ]
+   },
+   "flag": "Falta enlazar el artículo exacto de la ley.",
+   "src": [
+    "porezna-uprava.gov.hr",
+    "https://porezna-uprava.gov.hr/"
+   ],
+   "verified_at": "2026-10-10"
+  },
+  {
+   "id": "mdu_diplomas",
+   "cat": "res",
+   "t": "Piloto: el MDU pagó la traducción de títulos universitarios",
+   "who": "Ministerio de Demografía e Inmigración (MDU)",
+   "pts": [
+    [
+     15.98,
+     45.81
+    ]
+   ],
+   "next": "Sin edición 2027 confirmada",
+   "amount": "€25.330 en total para 4 personas (2026)",
+   "what": "En 2026 el MDU pagó la traducción de títulos universitarios extranjeros de descendientes, como prueba piloto. Hubo 4 beneficiarios, de Bolivia, Chile y Argentina.",
+   "el": {
+    "ar": [
+     "cond",
+     "Fue un piloto: consultá al MDU si se repite."
+    ],
+    "cit": [
+     "cond",
+     "Fue un piloto: consultá al MDU si se repite."
+    ],
+    "res": [
+     "cond",
+     "Fue un piloto: consultá al MDU si se repite."
+    ]
+   },
+   "src": [
+    "mdu.gov.hr",
+    "https://mdu.gov.hr/"
+   ],
+   "verified_at": "2026-10-10"
+  }
+ ],
+ "schema": "docs/03_arquitectura.md",
+ "events": [
+  {
+   "date": "05–08/11/2026",
+   "t": "9.º Encuentro de la Diáspora Croata Sudamericana",
+   "where": "Córdoba",
+   "note": "Inscripción en credentia.com.ar.",
+   "src": [
+    "diasporacroata.com",
+    "https://diasporacroata.com/"
+   ]
+  },
+  {
+   "date": "30/11–02/12/2026",
+   "t": "IV Encuentro \"Procesos migratorios entre Croacia y América del Sur\"",
+   "where": "híbrido, con sede en Rosario",
+   "note": "Resúmenes hasta el 21/10/2026.",
+   "src": [
+    "croacialatam.com.hr",
+    "https://croacialatam.com.hr/iv-encuentro-internacional/"
+   ]
+  }
+ ]
+}

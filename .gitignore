@@ -1,0 +1,9 @@
+*.log
+.DS_Store
+.env
+__pycache__/
+convocatoria/
+node_modules/
+playwright-report/
+privado/
+test-results/

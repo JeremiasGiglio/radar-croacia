@@ -1,0 +1,64 @@
+# Radar Croacia 🇭🇷 · Radar Hrvatska
+
+**Oportunidades oficiales de Croacia para descendientes de croatas, en español, filtradas según tu situación y en un mapa.**
+
+Becas, cursos, residencia de diáspora, ayudas para emprender, programas municipales y convocatorias para proyectos de la comunidad. Un proceso automático revisa todos los días las páginas oficiales croatas, la IA resume en español lo nuevo y una persona del **Ateneo Croata de Rosario** verifica cada ficha antes de publicarla.
+
+> Proyecto de **Jeremías Ismael Giglio** con el **Ateneo Croata de Rosario** como socio.
+> Presentado a la **Convocatoria Pública 2026 de la Oficina Central para los Croatas fuera de Croacia** (Cat. B, formulario 51709, enviado el 7/10/2026).
+
+---
+
+## Estado al 12/10/2026
+| Pieza | Estado |
+|---|---|
+| Investigación de mercado, técnica y legal | ✅ `docs/01_investigacion_y_factibilidad.md` |
+| Web pública (mapa + filtros + fichas) | ✅ `site/`, publicada con GitHub Pages: https://jeremiasgiglio.github.io/radar-croacia/ |
+| Maqueta offline para eventos | ✅ `prototype/index.html` (datos del 28/9/2026 embebidos; funciona sin internet) |
+| Datos en JSON con esquema | ✅ `site/data/opportunities.json` (14 fichas, revisión 10/10/2026) + `schema/` |
+| Tests | ✅ validación del JSON + 11 E2E con Playwright (escritorio y celular) en cada push |
+| Video demo con subtítulos | ✅ `media/Radar_Croacia_demo.mp4` |
+| Scrapers y monitoreo diario de fuentes | ⬜ por construir (`docs/03_arquitectura.md`) |
+| Agentes de IA (resumen, elegibilidad, detección de cambios) | ⬜ por construir |
+| Revisión humana (panel del Ateneo) | ⬜ por construir |
+| Avisos, boletín y posteos semanales | ⬜ por construir |
+| Dominio del Ateneo | ⬜ por ahora en github.io |
+
+## Fechas que mandan
+| Fecha | Qué | Necesita |
+|---|---|---|
+| **21/10/2026** | Resumen para el IV Encuentro IMIN (ponencia sobre el Radar) | Texto listo (`docs/05_presentaciones.md`) |
+| **5–8/11/2026** | **9.º Encuentro de la Diáspora Croata Sudamericana, Córdoba** | **Demo en vivo** que funcione sin internet + volante con QR |
+| **30/11–2/12/2026** | IV Encuentro IMIN, sede Rosario | Charla de 10–15 min con demo |
+| Fines nov 2026 – ene 2027 | Resolución de la Oficina | — |
+| **1/2 – 30/6/2027** | **Ejecución del proyecto financiado** (si se aprueba) | Ver compromisos en `docs/02_compromisos_convocatoria.md` |
+
+## Cómo verlo
+- **Online:** https://jeremiasgiglio.github.io/radar-croacia/
+- **En tu compu:** `npm install` y después `npm run serve` → http://localhost:8080
+- **Sin internet (eventos):** abrí `prototype/index.html` directamente.
+
+## Cómo actualizar una ficha
+1. Editá `site/data/opportunities.json` (el esquema está en `schema/opportunities.schema.json`).
+2. `npm test` valida los datos y corre los tests.
+3. Commit y push a `main`: GitHub Actions corre los tests y, si pasan, publica.
+
+## Estructura
+```
+site/                 web publicada (index.html + data/opportunities.json)
+prototype/            maqueta original con datos embebidos (modo offline)
+schema/               esquema JSON de las fichas
+tests/                tests E2E con Playwright
+docs/                 investigación, compromisos, arquitectura, roadmap, presentaciones
+privado/, convocatoria/  (no van a GitHub) documentos con firmas, datos personales y borradores
+media/                video demo + subtítulos
+scripts/              build de la web, actualización y validación de datos (scrapers y agentes irán acá)
+CLAUDE.md             contexto para el chat de desarrollo
+```
+
+## Principios (no negociables)
+1. **La fuente oficial manda.** Cada ficha lleva el link oficial y la fecha de revisión.
+2. **Revisión humana** antes de publicar. La IA propone; una persona aprueba.
+3. **Gratis y de código abierto** para la comunidad (es un compromiso con la Oficina). El dominio y el contenido son del Ateneo.
+4. **Legal:** se reutiliza información pública (ZPPI, Directiva 2019/1024). Se enlazan los PDF, no se vuelven a alojar. Sin datos personales de resoluciones. Se respeta robots.txt, con visitas espaciadas y un User-Agent identificable.
+5. "Es información, no asesoramiento legal."

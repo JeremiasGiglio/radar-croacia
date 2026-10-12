@@ -1,0 +1,18 @@
+{
+  "name": "radar-croacia",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Oportunidades oficiales de Croacia para descendientes de croatas, en español.",
+  "license": "MIT",
+  "scripts": {
+    "serve": "npx --yes http-server@14.1.1 site -p 8080 -c-1",
+    "validate": "node scripts/validate-data.mjs",
+    "test": "npm run validate && playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1",
+    "ajv": "8.17.1",
+    "ajv-formats": "3.0.1",
+    "http-server": "14.1.1"
+  }
+}
