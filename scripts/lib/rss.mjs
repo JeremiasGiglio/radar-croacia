@@ -7,8 +7,11 @@ const parser = new XMLParser({ ignoreAttributes: true, cdataPropName: false, tri
 export function cleanText(s) {
   return String(s ?? "")
     .replace(/<[^>]*>/g, " ")
-    .replace(/&nbsp;/g, " ").replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&#39;/g, "'")
-    .replace(/[​-‍﻿]/g, "")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&amp;/g, "&")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/[\u200B-\u200D\uFEFF]/g, "")
     .replace(/\s+/g, " ")
     .trim();
 }
@@ -18,17 +21,19 @@ export function parseRss(xml) {
   const doc = parser.parse(xml);
   const raw = doc?.rss?.channel?.item ?? [];
   const items = Array.isArray(raw) ? raw : [raw];
-  return items.map(it => {
-    const link = cleanText(it.link);
-    const d = it.pubDate ? new Date(it.pubDate) : null;
-    return {
-      guid: cleanText(it.guid) || link,
-      title: cleanText(it.title),
-      link,
-      published: d && !isNaN(d) ? d.toISOString() : null,
-      summary: cleanText(it.description).slice(0, 1000),
-    };
-  }).filter(it => it.guid);
+  return items
+    .map((it) => {
+      const link = cleanText(it.link);
+      const d = it.pubDate ? new Date(it.pubDate) : null;
+      return {
+        guid: cleanText(it.guid) || link,
+        title: cleanText(it.title),
+        link,
+        published: d && !isNaN(d) ? d.toISOString() : null,
+        summary: cleanText(it.description).slice(0, 1000),
+      };
+    })
+    .filter((it) => it.guid);
 }
 
 /** Contrato de una fuente: falla si trae menos ítems de lo esperado o ítems inválidos. */
@@ -44,8 +49,9 @@ export function checkContract(items, minItems = 1) {
 
 /** Compara la versión guardada con la nueva: ítems nuevos y cambiados. */
 export function diffItems(prev, next) {
-  const before = new Map((prev ?? []).map(i => [i.guid, i]));
-  const added = [], changed = [];
+  const before = new Map((prev ?? []).map((i) => [i.guid, i]));
+  const added = [],
+    changed = [];
   for (const it of next) {
     const old = before.get(it.guid);
     if (!old) added.push(it);
@@ -58,11 +64,14 @@ export function diffItems(prev, next) {
 
 /** robots.txt mínimo: ¿el User-agent * prohíbe esta ruta? */
 export function robotsDisallows(robotsTxt, path) {
-  let applies = false; const rules = [];
+  let applies = false;
+  const rules = [];
   for (const line of String(robotsTxt).split(/\r?\n/)) {
-    const [k, ...v] = line.split(":"); const key = k?.trim().toLowerCase(); const val = v.join(":").trim();
+    const [k, ...v] = line.split(":");
+    const key = k?.trim().toLowerCase();
+    const val = v.join(":").trim();
     if (key === "user-agent") applies = val === "*";
     else if (applies && key === "disallow" && val) rules.push(val);
   }
-  return rules.some(r => path.startsWith(r));
+  return rules.some((r) => path.startsWith(r));
 }

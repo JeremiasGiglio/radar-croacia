@@ -1,0 +1,13 @@
+node_modules/
+prototype/
+media/
+site/index.html
+site/data/
+data/sources/
+review/
+tests/fixtures/
+docs/
+playwright-report/
+test-results/
+package-lock.json
+*.md

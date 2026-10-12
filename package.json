@@ -4,18 +4,32 @@
   "private": true,
   "description": "Oportunidades oficiales de Croacia para descendientes de croatas, en español.",
   "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
-    "serve": "npx --yes http-server@14.1.1 site -p 8080 -c-1",
+    "serve": "http-server site -p 8080 -c-1",
     "validate": "node scripts/validate-data.mjs",
-    "test": "npm run validate && npm run test:unit && playwright test",
+    "lint": "eslint . && prettier --check . && tsc -p .",
+    "format": "prettier --write .",
     "test:unit": "node --test \"tests/unit/*.test.mjs\"",
+    "test:e2e": "playwright test",
+    "test": "npm run validate && npm run test:unit && npm run test:e2e",
+    "check": "npm run lint && npm test",
     "monitor": "node scripts/monitor.mjs"
   },
   "devDependencies": {
+    "@eslint/js": "^9.17.0",
     "@playwright/test": "1.56.1",
+    "@types/node": "^22.10.2",
     "ajv": "8.17.1",
     "ajv-formats": "3.0.1",
-    "http-server": "14.1.1"
+    "eslint": "^9.17.0",
+    "globals": "^15.14.0",
+    "http-server": "14.1.1",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.2"
   },
   "dependencies": {
     "fast-xml-parser": "4.5.0"

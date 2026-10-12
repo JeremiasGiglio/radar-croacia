@@ -9,7 +9,7 @@ const ajv = new Ajv({ allErrors: true, strictTuples: false });
 addFormats(ajv);
 
 const errors = [];
-if (!ajv.validate(schema, data)) errors.push(...ajv.errors.map(e => `${e.instancePath} ${e.message}`));
+if (!ajv.validate(schema, data)) errors.push(...ajv.errors.map((e) => `${e.instancePath} ${e.message}`));
 
 const ids = new Set();
 for (const o of data.opportunities ?? []) {
