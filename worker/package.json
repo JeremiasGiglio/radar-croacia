@@ -1,0 +1,13 @@
+{
+  "name": "radar-api",
+  "private": true,
+  "type": "module",
+  "description": "Worker del asistente del Radar Croacia (api.zustrolabs.com).",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dry-run": "wrangler deploy --dry-run --outdir dist"
+  },
+  "devDependencies": {
+    "wrangler": "4.146.0"
+  }
+}

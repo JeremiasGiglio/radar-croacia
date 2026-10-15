@@ -317,6 +317,170 @@ function start(DB, CONTACT) {
   document.getElementById("profile").addEventListener("click", function () {
     waGeneral(CONTACT, DB);
   });
+  // Desde el chat: mostrar una ficha (sin des-seleccionarla si ya estaba elegida).
+  initChat(CONTACT, DB, function (id) {
+    if (sel === id) sel = null;
+    pick(id, true);
+  });
+}
+
+/* ---------- Chat: asistente con IA sobre las fichas verificadas ---------- */
+var CHAT_SUGS = [
+  "Vivo en Argentina, ¿qué me sirve?",
+  "¿Hay becas para estudiar croata?",
+  "¿Cómo es la residencia de diáspora?",
+];
+function chatApi(C) {
+  var u = String((C && C.chat_api) || "");
+  return /^https:\/\/[^/]+\/chat$/.test(u) || /^http:\/\/localhost(:\d+)?\/chat$/.test(u) ? u : "";
+}
+function initChat(C, DB, show) {
+  var api = chatApi(C);
+  var fab = document.getElementById("chat-open"),
+    box = document.getElementById("chat"),
+    log = document.getElementById("chat-log"),
+    form = document.getElementById("chat-form"),
+    input = document.getElementById("chat-input"),
+    send = document.getElementById("chat-send"),
+    sugs = document.getElementById("chat-sugs");
+  if (!api || !fab || !box) return;
+  var history = [];
+  var busy = false;
+  fab.hidden = false;
+
+  function open() {
+    box.hidden = false;
+    fab.setAttribute("aria-expanded", "true");
+    if (!log.children.length) {
+      bubble(
+        "bot",
+        "¡Hola! Contame tu situación o qué estás buscando y te digo qué oportunidades del Radar te pueden servir.",
+      );
+    }
+    input.focus();
+  }
+  function close() {
+    box.hidden = true;
+    fab.setAttribute("aria-expanded", "false");
+    fab.focus();
+  }
+  fab.onclick = function () {
+    box.hidden ? open() : close();
+  };
+  document.getElementById("chat-close").onclick = close;
+  box.addEventListener("keydown", function (ev) {
+    if (ev.key === "Escape") close();
+  });
+
+  function bubble(who, text, extra) {
+    var d = document.createElement("div");
+    d.className = "msg msg-" + who;
+    d.innerHTML = "<p>" + esc(text).replace(/\n/g, "<br>") + "</p>" + (extra || "");
+    log.appendChild(d);
+    log.scrollTop = log.scrollHeight;
+    return d;
+  }
+  function fichasHtml(list) {
+    if (!list || !list.length) return "";
+    return (
+      '<div class="msg-fichas">' +
+      list
+        .map(function (f) {
+          return '<button type="button" class="chat-ficha" data-id="' + esc(f.id) + '">' + esc(f.t) + "</button>";
+        })
+        .join("") +
+      "</div>"
+    );
+  }
+  function waHtml(question) {
+    if (!waNumber(C)) return "";
+    var p = currentProfile(),
+      perfil = (DB.profiles && DB.profiles[p]) || p;
+    var text =
+      "Hola, vengo del chat del Radar Croacia. Mi consulta: «" +
+      String(question).slice(0, 300) +
+      "». Mi situación: " +
+      perfil +
+      ".";
+    return (
+      '<a class="wa msg-wa" href="' +
+      esc(waHref(C, text)) +
+      '" target="_blank" rel="noopener">' +
+      WA_ICON +
+      "Hablar con una persona</a>"
+    );
+  }
+  log.addEventListener("click", function (ev) {
+    var b = ev.target.closest(".chat-ficha");
+    if (!b) return;
+    show(b.dataset.id);
+    if (matchMedia("(max-width: 700px)").matches) close();
+  });
+
+  sugs.innerHTML = CHAT_SUGS.map(function (s) {
+    return '<button type="button" class="chip chat-sug">' + esc(s) + "</button>";
+  }).join("");
+  sugs.addEventListener("click", function (ev) {
+    var b = ev.target.closest(".chat-sug");
+    if (b) ask(b.textContent);
+  });
+
+  function ask(text) {
+    text = String(text || "").trim();
+    if (!text || busy) return;
+    busy = true;
+    send.disabled = true;
+    sugs.hidden = true;
+    input.value = "";
+    bubble("user", text);
+    history.push({ role: "user", content: text.slice(0, 800) });
+    var wait = bubble("bot", "Pensando…");
+    wait.classList.add("msg-wait");
+    log.setAttribute("aria-busy", "true");
+    fetch(api, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ messages: history.slice(-12), perfil: currentProfile() }),
+    })
+      .then(function (r) {
+        return r.json().then(function (j) {
+          if (!r.ok) throw new Error(j.error || "Error " + r.status);
+          return j;
+        });
+      })
+      .then(function (j) {
+        wait.remove();
+        history.push({ role: "assistant", content: String(j.respuesta || "") });
+        bubble("bot", j.respuesta || "", fichasHtml(j.fichas) + (j.derivar_whatsapp ? waHtml(text) : ""));
+      })
+      .catch(function (err) {
+        wait.remove();
+        history.pop();
+        var m = bubble(
+          "bot",
+          err && err.message && !/Failed to fetch|NetworkError|Load failed/.test(err.message)
+            ? err.message
+            : "No me pude conectar. Revisá tu internet y probá de nuevo.",
+          waHtml(text),
+        );
+        m.classList.add("msg-error");
+      })
+      .then(function () {
+        busy = false;
+        send.disabled = false;
+        log.removeAttribute("aria-busy");
+      });
+  }
+  form.addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    ask(input.value);
+  });
+  input.addEventListener("keydown", function (ev) {
+    if (ev.key === "Enter" && !ev.shiftKey) {
+      ev.preventDefault();
+      ask(input.value);
+    }
+  });
 }
 
 Promise.all([

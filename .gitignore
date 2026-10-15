@@ -8,3 +8,5 @@ node_modules/
 playwright-report/
 privado/
 test-results/
+worker/dist/
+worker/.wrangler/

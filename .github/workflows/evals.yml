@@ -1,6 +1,6 @@
-name: Evals del agente que resume
+name: Evals de la IA (agente que resume y chat)
 
-# Corre las convocatorias reales de evals/summarize/cases contra el modelo (cuesta centavos).
+# Corre convocatorias reales (evals/summarize) y preguntas del chat (evals/chat) contra el modelo (cuesta centavos).
 on:
   workflow_dispatch:
   pull_request:
@@ -8,6 +8,8 @@ on:
       - "scripts/agents/**"
       - "evals/**"
       - "schema/draft.schema.json"
+      - "worker/src/**"
+      - "site/data/opportunities.json"
 
 permissions:
   contents: read
@@ -26,7 +28,7 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - name: Evals (mínimo 90 % de chequeos)
+      - name: Evals (mínimo 90 % de chequeos en cada uno)
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           ANTHROPIC_WORKSPACE_ID: ${{ vars.ANTHROPIC_WORKSPACE_ID }}
@@ -36,4 +38,7 @@ jobs:
             echo "::warning::Sin ANTHROPIC_API_KEY (PR de un fork o de Dependabot): no se corren los evals."
             exit 0
           fi
-          node scripts/agents/eval-summarize.mjs
+          status=0
+          node scripts/agents/eval-summarize.mjs || status=1
+          node scripts/agents/eval-chat.mjs || status=1
+          exit $status

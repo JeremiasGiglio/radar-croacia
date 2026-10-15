@@ -14,6 +14,7 @@
    - **Clasificador de elegibilidad** por perfil (ok / cond / no + motivo). Siempre conservador: ante la duda, "cond" y una nota para revisar.
    - **Detector de cambios:** diff de plazos, montos y requisitos entre versiones.
    - Todo pasa a una **cola de revisión humana**; nada se publica sin aprobación.
+3b. **Chat con IA en la web:** `worker/` (Cloudflare Worker en `https://api.zustrolabs.com/chat`, se publica con `.github/workflows/worker.yml`). Responde solo con `site/data/opportunities.json`, no guarda mensajes, CORS solo para el Radar, 10 preguntas/minuto por IP. Controles en `worker/src/chat.mjs` (ids reales, sin links, sin montos que no estén en las fichas). Evals: `node scripts/agents/eval-chat.mjs`.
 4. **Panel de revisión simple** (aprobar, editar, rechazar). Puede ser un archivo + PR en GitHub al principio.
 5. **Modo demo offline** para el evento: datos congelados y video de respaldo (`media/`).
 6. **Tests** (es QA: que se note). Contrato JSON de cada fuente con fixtures guardados; un test por fuente que falla si trae 0 ítems; tests visuales y E2E de la web con Playwright; evals de los agentes con un set de convocatorias reales y su salida esperada.
