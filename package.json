@@ -17,7 +17,8 @@
     "test:e2e": "playwright test",
     "test": "npm run validate && npm run test:unit && npm run test:e2e",
     "check": "npm run lint && npm test",
-    "monitor": "node scripts/monitor.mjs"
+    "monitor": "node scripts/monitor.mjs",
+    "policy": "node scripts/build-policy.mjs"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",

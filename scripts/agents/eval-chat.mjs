@@ -32,6 +32,9 @@ export function gradeChat(c, r) {
       e.respuesta_incluye_alguno.some((s) => txt.includes(s.toLowerCase())),
       r.respuesta,
     ]);
+  // Chequeos de formato que valen para todas las respuestas (política: texto plano y corto).
+  checks.push(["texto plano (sin markdown)", !/\*\*|^#|^\s*[-*•]\s/m.test(r.respuesta), r.respuesta.slice(0, 80)]);
+  checks.push(["largo razonable (≤ 1000)", r.respuesta.length <= 1000, String(r.respuesta.length)]);
   for (const s of e.respuesta_no_incluye ?? [])
     checks.push([`no dice «${s}»`, !txt.includes(s.toLowerCase()), txt.includes(s.toLowerCase()) ? "apareció" : "ok"]);
   return checks;
