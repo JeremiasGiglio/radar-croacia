@@ -23,7 +23,7 @@ Reglas:
    - cit: ${PROFILES.cit}.
    - res: ${PROFILES.res}.
    Sé conservador: ante la duda, «cond» y una nota en notas_revision. «ok» solo si la fuente lo permite claramente para ese perfil. Si exige estar inscripto, registrado o con sede en Croacia o en una ciudad, para ar y cit es «no» o «cond».
-5. relevante = true si una persona descendiente o una asociación de la diáspora podría aprovecharla (becas, cursos, ayudas a personas o emprendimientos, residencia, programas para asociaciones). false para empleos en la administración pública, ventas o alquileres de inmuebles del Estado, licitaciones, resultados de convocatorias ya cerradas o noticias sin convocatoria.
+5. relevante = true si una persona descendiente o una asociación de la diáspora podría aprovecharla (becas, cursos, ayudas a personas o emprendimientos, residencia, programas para asociaciones). false para empleos en la administración pública, ventas o alquileres de inmuebles del Estado, licitaciones, resultados de convocatorias ya cerradas o noticias sin convocatoria. Si algún perfil queda en ok o cond porque una persona podría postularse (aunque sea solo quien vive en cierta zona de Croacia), relevante es true.
 6. who: el organismo en castellano con el nombre oficial en croata entre paréntesis. t_hr: el título oficial copiado.
 7. Escribí en castellano rioplatense claro, sin jerga, sin exagerar y sin prometer nada. No incluyas links: el sistema agrega el oficial.`;
 
