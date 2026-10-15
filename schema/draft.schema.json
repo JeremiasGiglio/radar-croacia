@@ -1,0 +1,126 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://radar.zustrolabs.com/schema/draft.schema.json",
+  "title": "Borrador de ficha generado por la IA (salida del agente que resume)",
+  "description": "Compatible con las salidas estructuradas de la API de Claude: sin minLength, sin minimum, additionalProperties false en todos los objetos.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "relevante",
+    "motivo_relevancia",
+    "cat",
+    "t",
+    "t_hr",
+    "who",
+    "what",
+    "amount",
+    "amount_cita",
+    "deadline",
+    "deadline_cita",
+    "el",
+    "notas_revision"
+  ],
+  "properties": {
+    "relevante": {
+      "type": "boolean",
+      "description": "true si una persona descendiente de croatas o una asociación de la diáspora podría aprovecharla."
+    },
+    "motivo_relevancia": {
+      "type": "string",
+      "description": "Una oración en castellano."
+    },
+    "cat": {
+      "enum": ["beca", "emp", "res", "loc", "proy"],
+      "description": "beca = estudio o curso; emp = emprender o trabajar; res = residencia o trámites; loc = programa municipal o regional; proy = proyectos de asociaciones."
+    },
+    "t": {
+      "type": "string",
+      "description": "Título corto en castellano rioplatense."
+    },
+    "t_hr": {
+      "type": "string",
+      "description": "Título oficial en croata, copiado de la fuente."
+    },
+    "who": {
+      "type": "string",
+      "description": "Quién la da, en castellano con el nombre oficial en croata entre paréntesis."
+    },
+    "what": {
+      "type": "string",
+      "description": "Qué es y para quién, en 2 o 3 oraciones claras, sin jerga."
+    },
+    "amount": {
+      "type": ["string", "null"],
+      "description": "Monto tal como dice la fuente (por ejemplo «€20.000 en total»). null si la fuente no lo dice."
+    },
+    "amount_cita": {
+      "type": ["string", "null"],
+      "description": "Frase copiada textual de la fuente, en croata, donde aparece el monto. null si amount es null."
+    },
+    "deadline": {
+      "type": ["string", "null"],
+      "format": "date",
+      "description": "Fecha de cierre AAAA-MM-DD. null si la fuente no da una fecha concreta."
+    },
+    "deadline_cita": {
+      "type": ["string", "null"],
+      "description": "Frase copiada textual de la fuente, en croata, donde aparece el plazo. null si deadline es null."
+    },
+    "el": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ar", "cit", "res"],
+      "properties": {
+        "ar": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["estado", "motivo"],
+          "properties": {
+            "estado": {
+              "enum": ["ok", "cond", "no"]
+            },
+            "motivo": {
+              "type": "string",
+              "description": "Una oración en castellano."
+            }
+          }
+        },
+        "cit": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["estado", "motivo"],
+          "properties": {
+            "estado": {
+              "enum": ["ok", "cond", "no"]
+            },
+            "motivo": {
+              "type": "string",
+              "description": "Una oración en castellano."
+            }
+          }
+        },
+        "res": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["estado", "motivo"],
+          "properties": {
+            "estado": {
+              "enum": ["ok", "cond", "no"]
+            },
+            "motivo": {
+              "type": "string",
+              "description": "Una oración en castellano."
+            }
+          }
+        }
+      }
+    },
+    "notas_revision": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Dudas o cosas que la persona que revisa tiene que confirmar."
+    }
+  }
+}

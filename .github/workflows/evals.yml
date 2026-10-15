@@ -1,0 +1,38 @@
+name: Evals del agente que resume
+
+# Corre las convocatorias reales de evals/summarize/cases contra el modelo (cuesta centavos).
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "scripts/agents/**"
+      - "evals/**"
+      - "schema/draft.schema.json"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: evals-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  evals:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Evals (mínimo 90 % de chequeos)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          EVAL_MIN: "0.9"
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "::warning::Sin ANTHROPIC_API_KEY (PR de un fork o de Dependabot): no se corren los evals."
+            exit 0
+          fi
+          node scripts/agents/eval-summarize.mjs
