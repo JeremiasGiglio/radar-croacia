@@ -33,7 +33,7 @@ test("cada ficha tiene enlace oficial https y fecha de revisión", async ({ page
   const cards = page.locator("#list article");
   for (let i = 0; i < total; i++) {
     const card = cards.nth(i);
-    await expect(card.locator(".src a")).toHaveAttribute("href", /^https:\/\//);
+    await expect(card.locator(".src a:not(.wa)")).toHaveAttribute("href", /^https:\/\//);
     await expect(card.locator(".src")).toContainText(/Revisado \d{2}\/\d{2}\/\d{4}/);
   }
 });
@@ -83,7 +83,15 @@ test("las convocatorias cerradas van al final de la lista", async ({ page }) => 
 });
 
 test.describe("WhatsApp", () => {
+  test("el número publicado es un celular argentino válido para wa.me", async ({ request }) => {
+    const contact = await (await request.get("/data/contact.json")).json();
+    expect(String(contact.whatsapp).replace(/\D/g, "")).toMatch(/^549\d{10}$/);
+  });
+
   test("sin número configurado no aparece ningún botón", async ({ page }) => {
+    await page.route("**/data/contact.json", (r) => r.fulfill({ json: { whatsapp: "" } }));
+    await page.reload();
+    await expect(page.locator("#list article")).toHaveCount(total);
     await expect(page.locator("#wa-general")).toBeHidden();
     await expect(page.locator("a.wa[data-wa]")).toHaveCount(0);
   });
