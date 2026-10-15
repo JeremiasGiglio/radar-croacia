@@ -11,9 +11,10 @@ permissions:
   pages: write
   id-token: write
 
+# Los PR (incluidos los de Dependabot) van en su propio grupo: así nunca cancelan la publicación de main.
 concurrency:
-  group: pages
-  cancel-in-progress: false
+  group: ${{ github.event_name == 'pull_request' && format('pr-{0}', github.ref) || 'pages' }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   test:
