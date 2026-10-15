@@ -346,6 +346,17 @@ function initChat(C, DB, show) {
   if (!api || !fab || !box) return;
   var history = [];
   var busy = false;
+  var asked = 0;
+  var LARGA = 12; // igual que LIMITES.charlaLarga en worker/src/policy.mjs
+  var max = Number(input.getAttribute("maxlength")) || 800;
+  var count = document.getElementById("chat-count");
+  function updateCount() {
+    if (!count) return;
+    var n = input.value.length;
+    count.textContent = n + "/" + max;
+    count.classList.toggle("near", n >= max * 0.9);
+  }
+  input.addEventListener("input", updateCount);
   fab.hidden = false;
 
   function open() {
@@ -432,6 +443,8 @@ function initChat(C, DB, show) {
     send.disabled = true;
     sugs.hidden = true;
     input.value = "";
+    updateCount();
+    asked++;
     bubble("user", text);
     history.push({ role: "user", content: text.slice(0, 800) });
     var wait = bubble("bot", "Pensando…");
@@ -452,6 +465,13 @@ function initChat(C, DB, show) {
         wait.remove();
         history.push({ role: "assistant", content: String(j.respuesta || "") });
         bubble("bot", j.respuesta || "", fichasHtml(j.fichas) + (j.derivar_whatsapp ? waHtml(text) : ""));
+        if (asked === LARGA) {
+          bubble(
+            "bot",
+            "La charla ya es larga y puedo perder lo que me contaste al principio. Si querés seguir, te conviene hablar con una persona.",
+            waHtml(text),
+          ).classList.add("msg-note");
+        }
       })
       .catch(function (err) {
         wait.remove();

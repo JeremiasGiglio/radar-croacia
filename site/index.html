@@ -104,10 +104,10 @@
   <div class="chat-sugs" id="chat-sugs"></div>
   <form class="chat-form" id="chat-form">
     <label for="chat-input" class="sr">Tu pregunta</label>
-    <textarea id="chat-input" rows="2" maxlength="800" placeholder="Contame tu situación o qué buscás…" required></textarea>
+    <textarea id="chat-input" rows="2" maxlength="800" placeholder="Contame tu situación o qué buscás…" aria-describedby="chat-count" required></textarea>
     <button type="submit" id="chat-send">Enviar</button>
   </form>
-  <p class="chat-note">Responde una IA solo con las fichas verificadas del Radar. No guardamos tus mensajes: no pongas datos personales. Es información, no asesoramiento legal.</p>
+  <p class="chat-note"><span class="chat-count" id="chat-count">0/800</span> Responde una IA solo con las fichas verificadas del Radar. No guardamos tus mensajes: no pongas datos personales. Es información, no asesoramiento legal. <a href="asistente.html">Cómo responde el asistente</a>.</p>
 </section>
 
 <script src="assets/app.js" defer></script>

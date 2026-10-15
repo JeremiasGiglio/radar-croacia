@@ -227,6 +227,44 @@ test.describe("Chat con IA", () => {
     await expect(page.locator(".msg-bot").last()).toContainText("Ahora sí.");
   });
 
+  test("el contador de caracteres avisa cerca del límite y el texto no pasa de 800", async ({ page }) => {
+    await page.locator("#chat-open").click();
+    await page.locator("#chat-input").fill("hola");
+    await expect(page.locator("#chat-count")).toHaveText("4/800");
+    await page.locator("#chat-input").fill("x".repeat(900));
+    await expect(page.locator("#chat-count")).toHaveText("800/800");
+    await expect(page.locator("#chat-count")).toHaveClass(/near/);
+  });
+
+  test("después de 12 preguntas sugiere seguir con una persona", async ({ page }) => {
+    await page.route(API, reply({ respuesta: "Ok.", fichas: [], derivar_whatsapp: false, fuera_de_tema: false }));
+    await page.locator("#chat-open").click();
+    for (let i = 1; i <= 12; i++) {
+      await page.locator("#chat-input").fill(`pregunta ${i}`);
+      await page.locator("#chat-send").click();
+      await expect(page.locator(".msg-user")).toHaveCount(i);
+      await expect(page.locator("#chat-send")).toBeEnabled();
+    }
+    await expect(page.locator(".msg-note")).toContainText("La charla ya es larga");
+    await expect(page.locator(".msg-note a.msg-wa")).toBeVisible();
+  });
+
+  test("el link «Cómo responde el asistente» lleva a la política publicada", async ({ page }) => {
+    await page.locator("#chat-open").click();
+    await page.locator(".chat-note a", { hasText: "Cómo responde el asistente" }).click();
+    await expect(page).toHaveURL(/asistente\.html$/);
+    await expect(page.locator("h1")).toHaveText("Cómo responde el asistente");
+    for (const h of ["Temas que sí toma", "Temas que no toma", "Temas sensibles", "Límites", "Privacidad"]) {
+      await expect(page.getByRole("heading", { name: h })).toBeVisible();
+    }
+    await expect(page.locator("#politica")).toContainText("911");
+    const [client, scroll] = await page.evaluate(() => [
+      document.documentElement.clientWidth,
+      document.documentElement.scrollWidth,
+    ]);
+    expect(scroll).toBeLessThanOrEqual(client);
+  });
+
   test("Escape cierra el chat y devuelve el foco al botón", async ({ page }) => {
     await page.locator("#chat-open").click();
     await page.keyboard.press("Escape");
