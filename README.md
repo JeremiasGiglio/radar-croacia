@@ -18,9 +18,9 @@ Becas, cursos, residencia de diáspora, ayudas para emprender, programas municip
 | Datos en JSON con esquema | ✅ `site/data/opportunities.json` (14 fichas, revisión 10/10/2026) + `schema/` |
 | Tests | ✅ validación del JSON, 7 tests del robot con copias reales de los feeds y 15 E2E con Playwright (escritorio, celular y celular chico) |
 | Video demo con subtítulos | ✅ `media/Radar_Croacia_demo.mp4` |
-| Monitoreo diario de fuentes | 🟡 2 de 12: RSS de la Oficina (natječaji) y del MDU (javni pozivi). Robot diario + PR de revisión (`.github/workflows/monitor.yml`, `review/`) |
+| Monitoreo diario de fuentes | 🟡 6 de 12: Oficina, MDU, PGŽ, Grad Rijeka, HZZ y Ured za udruge (RSS y API de WordPress). Robot diario + PR de revisión (`.github/workflows/monitor.yml`, `review/`) |
 | Botón de consultas por WhatsApp | 🟡 listo; aparece cuando se carga el número en `site/data/contact.json` |
-| Agentes de IA (resumen, elegibilidad, detección de cambios) | ⬜ por construir |
+| Agentes de IA (resumen, elegibilidad, detección de cambios) | 🟡 agente que resume y clasifica por perfil (`scripts/agents/`, Claude Haiku 5.5, salida con esquema). Montos y plazos solo si están textuales en la fuente. Evals con 7 convocatorias (`evals/summarize/`) |
 | Revisión humana (panel de revisión) | ⬜ por construir |
 | Avisos, boletín y posteos semanales | ⬜ por construir |
 | Dominio | ✅ `radar.zustrolabs.com` (Zustro Labs, en Cloudflare) |

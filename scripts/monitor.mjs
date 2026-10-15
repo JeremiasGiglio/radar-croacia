@@ -2,10 +2,20 @@
 // Nada se publica solo: la cola se revisa a mano (PR en GitHub).
 import { readFileSync, writeFileSync, existsSync, mkdirSync, appendFileSync } from "node:fs";
 import { parseRss, checkContract, diffItems, robotsDisallows } from "./lib/rss.mjs";
+import { parseWp } from "./lib/wp.mjs";
+
+const ADAPTERS = {
+  rss: (text) => parseRss(text),
+  wp: (text, src) => parseWp(text, src),
+};
 
 const ROOT = new URL("..", import.meta.url);
 const UA = "RadarCroacia/0.2 (+https://radar.zustrolabs.com; Zustro Labs, proyecto gratuito para la diáspora)";
-const sources = JSON.parse(readFileSync(new URL("scripts/sources.json", ROOT)));
+// RADAR_SOURCES=id1,id2 limita la corrida a esas fuentes (útil para probar una sola).
+const only = (process.env.RADAR_SOURCES ?? "").split(",").filter(Boolean);
+const sources = JSON.parse(readFileSync(new URL("scripts/sources.json", ROOT))).filter(
+  (s) => !only.length || only.includes(s.id),
+);
 const today = new Date().toISOString().slice(0, 10);
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -27,7 +37,9 @@ for (const src of sources) {
     await sleep(2000);
     const { status, text } = await get(src.url);
     if (status !== 200) throw new Error(`HTTP ${status}`);
-    const items = parseRss(text).sort((a, b) => (b.published ?? "").localeCompare(a.published ?? ""));
+    const adapter = ADAPTERS[src.type];
+    if (!adapter) throw new Error(`tipo de fuente desconocido: ${src.type}`);
+    const items = adapter(text, src).sort((a, b) => (b.published ?? "").localeCompare(a.published ?? ""));
     const problems = checkContract(items, src.min_items);
     if (problems.length) throw new Error("contrato roto: " + problems.join("; "));
 

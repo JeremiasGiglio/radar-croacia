@@ -7,6 +7,8 @@ const parser = new XMLParser({ ignoreAttributes: true, cdataPropName: false, tri
 export function cleanText(s) {
   return String(s ?? "")
     .replace(/<[^>]*>/g, " ")
+    .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)))
+    .replace(/&#x([0-9a-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n, 16)))
     .replace(/&nbsp;/g, " ")
     .replace(/&amp;/g, "&")
     .replace(/&quot;/g, '"')
@@ -55,8 +57,8 @@ export function diffItems(prev, next) {
   for (const it of next) {
     const old = before.get(it.guid);
     if (!old) added.push(it);
-    else if (old.title !== it.title || old.summary !== it.summary) {
-      changed.push({ ...it, before: { title: old.title, summary: old.summary } });
+    else if (old.title !== it.title || old.summary !== it.summary || (old.updated ?? null) !== (it.updated ?? null)) {
+      changed.push({ ...it, before: { title: old.title, summary: old.summary, updated: old.updated ?? null } });
     }
   }
   return { added, changed };

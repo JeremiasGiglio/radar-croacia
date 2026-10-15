@@ -28,6 +28,15 @@ jobs:
         id: run
         run: node scripts/monitor.mjs
         continue-on-error: true
+      - name: Borradores de fichas con IA (solo sobre lo nuevo)
+        # Lee la página oficial de cada novedad y deja un borrador en review/queue/.
+        # Los montos y plazos solo quedan si aparecen textuales en la fuente. Nada se publica solo.
+        run: node scripts/agents/summarize.mjs
+        continue-on-error: true
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ vars.ANTHROPIC_WORKSPACE_ID }}
+          RADAR_MAX_DRAFTS: "12"
       - name: Abrir PR de revisión si hay novedades
         uses: peter-evans/create-pull-request@v7
         with:

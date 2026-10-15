@@ -1,0 +1,21 @@
+{
+  "id": "udruge_cofinanciacion_ue",
+  "fuente": "https://udruge.gov.hr/vijesti/javni-poziv-za-podnosenje-prijava-za-sufinanciranje-projekata-organizacija-civilnoga-drustva-ugovorenih-u-okviru-programa-europske-unije-i-inozemnih-fondova-za-2026-godinu/6358",
+  "titulo": "Javni poziv za podnošenje prijava za sufinanciranje projekata organizacija civilnoga društva ugovorenih u okviru programa Europske unije i inozemnih fondova za 2026. godinu",
+  "publicado": "2026-10-05",
+  "porque": "Para organizaciones de la sociedad civil (croatas) con proyectos de la UE. Total 1.800.000,00 EUR; abierto hasta el 1/12/2026.",
+  "expect": {
+    "relevante": "any",
+    "amount": {
+      "contains": "1.800.000"
+    },
+    "deadline": "2026-12-01",
+    "el": {
+      "ar": ["no", "cond"],
+      "cit": ["no", "cond"],
+      "res": ["no", "cond"]
+    }
+  },
+  "source_text": "Ured za udruge - Javni poziv za podnošenje prijava za sufinanciranje projekata organizacija civilnoga društva ugovorenih u okviru programa Europske unije i inozemnih fondova za 2026. godinu\nPreskoči na glavni sadržaj\nNaslovnica\nVijesti\nO Uredu\nDokumenti\nPristup informacijama\nIstaknute teme\nKontakti\nVijesti\nObjavljeno: 05.10.2026.\nJavni poziv za podnošenje prijava za sufinanciranje projekata organizacija civilnoga društva ugovorenih u okviru programa Europske unije i inozemnih fondova za 2026. godinu\nUred za udruge Vlade Republike Hrvatske objavio je Javni poziv za podnošenje prijava za sufinanciranje projekata organizacija civilnoga društva ugovorenih u okviru programa Europske unije i inozemnih fondova za 2026. godinu.\nPostupak dodjele i isplate sredstava za sufinanciranje projekata organizacija civilnoga društva ugovorenih u okviru programa Europske unije i inozemnih fondova za 2026. godinu odvija se prema Pravilima za sufinanciranje projekata organizacija civilnoga društva ugovorenih u okviru programa Europske unije i inozemnih fondova za 2026. godinu , a detalji za prijavu nalaze se u Uputama za prijavitelje .\nUkupna planirana vrijednost Javnog poziva u 2026. godini iznosi 1.800.000,00 EUR, a iznos može biti i manji ili veći, ovisno o priljevu sredstava za ovu namjenu u Državni proračun, sukladno Zakonu o izvršavanju Državnog proračuna Republike Hrvatske za 2026. godinu (NN 152/25).\nJavni poziv je otvoren do 1. prosinca 2026. godine .\nViše informacija o Javnom pozivu i natječajnoj dokumentaciji možete pogledati ovdje: Ured za udruge - Sufinanciranje 2026.\nPisane vijesti\nPrethodna\nRezultati provedbe CERV programa u 2025. godini\nSljedeća\nZnanje kao nagrada za sudjelovanje na DOVU 2026. godine: 18 udruga završilo edukacijski ciklus\nIspiši stranicu\nPodijeli na Facebooku\nPodijeli na Twitteru",
+  "leido": "2026-10-15"
+}
