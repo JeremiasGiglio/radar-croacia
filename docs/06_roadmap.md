@@ -16,7 +16,8 @@
 - [ ] Tests: contratos por fuente, E2E/visual con Playwright, axe.
 
 ## Diciembre 2026 – enero 2027
-- [ ] 12 fuentes; dominio del Ateneo.
+- [ ] 12 fuentes.
+- [x] Dominio propio: `radar.zustrolabs.com` (14/10/2026).
 - [ ] Boletín (Buttondown o similar) y placas semanales generadas.
 - [ ] Charla en el IMIN (30/11–2/12) si aceptan la ponencia.
 

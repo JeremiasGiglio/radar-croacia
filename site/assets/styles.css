@@ -586,6 +586,10 @@ footer {
   border-top: 1px solid var(--line);
   padding-top: 14px;
 }
+.made-by img {
+  vertical-align: -3px;
+  margin-right: 2px;
+}
 @media (prefers-reduced-motion: no-preference) {
   .card {
     transition:

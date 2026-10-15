@@ -67,5 +67,5 @@ fuentes →  │ adaptadores: rss | wordpress | html | playwright(js)  →  raw/
 | GitHub Actions | gratis en repo público |
 | Pages | gratis |
 | LLM | US$2–4/mes |
-| Dominio del Ateneo | ~€15/año |
+| Dominio (`zustrolabs.com`, Zustro Labs) | ~US$11/año |
 | **Total** | **< €10/mes** |
