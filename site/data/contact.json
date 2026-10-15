@@ -1,5 +1,6 @@
 {
   "whatsapp": "+54 9 341 335-0686",
   "quien": "el equipo del Radar",
-  "nota": "Se abre tu WhatsApp con la consulta escrita. Te contesta una persona; es información, no asesoramiento legal."
+  "nota": "Se abre tu WhatsApp con la consulta escrita. Te contesta una persona; es información, no asesoramiento legal.",
+  "chat_api": "https://api.zustrolabs.com/chat"
 }

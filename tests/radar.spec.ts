@@ -154,3 +154,97 @@ test.describe("Zustro Labs", () => {
     expect(svg).not.toMatch(/fill="#(fff|ffffff)"/i);
   });
 });
+
+test.describe("Chat con IA", () => {
+  const API = "https://api.zustrolabs.com/chat";
+  const reply =
+    (body: object, status = 200) =>
+    (r: import("@playwright/test").Route) =>
+      r.fulfill({ status, json: body, headers: { "access-control-allow-origin": "*" } });
+
+  test("sin chat_api configurada no aparece el botón", async ({ page }) => {
+    await page.route("**/data/contact.json", (r) => r.fulfill({ json: { whatsapp: "" } }));
+    await page.reload();
+    await expect(page.locator("#list article")).toHaveCount(total);
+    await expect(page.locator("#chat-open")).toBeHidden();
+  });
+
+  test("pregunta, respuesta con fichas recomendadas y la ficha se marca en la lista", async ({ page }) => {
+    let sent: { messages: { role: string; content: string }[]; perfil: string } | undefined;
+    await page.route(API, async (r) => {
+      sent = r.request().postDataJSON();
+      await reply({
+        respuesta: "Te sirve la beca de lengua croata.\nEl curso es gratis.",
+        fichas: [{ id: "beca", t: "Beca de lengua croata", src: ["mdu.gov.hr", "https://mdu.gov.hr/"] }],
+        derivar_whatsapp: false,
+        fuera_de_tema: false,
+      })(r);
+    });
+    await page.locator("#pf-cit").click();
+    await page.locator("#chat-open").click();
+    await expect(page.locator("#chat")).toBeVisible();
+    await expect(page.locator("#chat-input")).toBeFocused();
+    await page.locator("#chat-input").fill("¿Hay becas para estudiar croata?");
+    await page.keyboard.press("Enter");
+    await expect(page.locator(".msg-bot").last()).toContainText("Te sirve la beca");
+    expect(sent!.perfil).toBe("cit");
+    expect(sent!.messages.at(-1)).toEqual({ role: "user", content: "¿Hay becas para estudiar croata?" });
+    await page.locator(".chat-ficha", { hasText: "Beca de lengua croata" }).click();
+    await expect(page.locator("#card-beca")).toHaveClass(/sel/);
+  });
+
+  test("la respuesta se muestra como texto (no ejecuta HTML) y ofrece WhatsApp si hace falta", async ({ page }) => {
+    await page.route(
+      API,
+      reply({
+        respuesta: '<img src=x onerror="window.__x=1">No lo tengo.',
+        fichas: [],
+        derivar_whatsapp: true,
+        fuera_de_tema: false,
+      }),
+    );
+    await page.locator("#chat-open").click();
+    await page.locator(".chat-sug").first().click();
+    const bot = page.locator(".msg-bot").last();
+    await expect(bot).toContainText("<img src=x");
+    expect(await page.evaluate(() => (window as unknown as { __x?: number }).__x)).toBeUndefined();
+    await expect(bot.locator("a.msg-wa")).toHaveAttribute("href", /^https:\/\/wa\.me\/5493413350686\?text=/);
+  });
+
+  test("si el servidor falla, avisa sin romper la página y se puede volver a preguntar", async ({ page }) => {
+    let n = 0;
+    await page.route(API, (r) =>
+      ++n === 1
+        ? reply({ error: "El asistente no está disponible en este momento." }, 502)(r)
+        : reply({ respuesta: "Ahora sí.", fichas: [], derivar_whatsapp: false, fuera_de_tema: false })(r),
+    );
+    await page.locator("#chat-open").click();
+    await page.locator("#chat-input").fill("hola");
+    await page.locator("#chat-send").click();
+    await expect(page.locator(".msg-error")).toContainText("no está disponible");
+    await page.locator("#chat-input").fill("hola de nuevo");
+    await page.locator("#chat-send").click();
+    await expect(page.locator(".msg-bot").last()).toContainText("Ahora sí.");
+  });
+
+  test("Escape cierra el chat y devuelve el foco al botón", async ({ page }) => {
+    await page.locator("#chat-open").click();
+    await page.keyboard.press("Escape");
+    await expect(page.locator("#chat")).toBeHidden();
+    await expect(page.locator("#chat-open")).toBeFocused();
+  });
+
+  test("en el celular el chat abierto entra en la pantalla", async ({ page, isMobile }) => {
+    test.skip(!isMobile, "solo celular");
+    await page.locator("#chat-open").click();
+    const box = await page.locator("#chat").boundingBox();
+    const vw = page.viewportSize()!.width;
+    expect(box!.x).toBeGreaterThanOrEqual(0);
+    expect(box!.x + box!.width).toBeLessThanOrEqual(vw);
+    const [client, scroll] = await page.evaluate(() => [
+      document.documentElement.clientWidth,
+      document.documentElement.scrollWidth,
+    ]);
+    expect(scroll).toBeLessThanOrEqual(client);
+  });
+});

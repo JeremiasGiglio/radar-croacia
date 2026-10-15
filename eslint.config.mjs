@@ -2,10 +2,21 @@ import js from "@eslint/js";
 import globals from "globals";
 
 export default [
-  { ignores: ["node_modules/", "prototype/", "playwright-report/", "test-results/", "**/*.ts"] },
+  {
+    ignores: [
+      "node_modules/",
+      "**/node_modules/",
+      "worker/dist/",
+      "worker/.wrangler/",
+      "prototype/",
+      "playwright-report/",
+      "test-results/",
+      "**/*.ts",
+    ],
+  },
   js.configs.recommended,
   {
-    files: ["scripts/**/*.mjs", "tests/**/*.mjs", "*.mjs"],
+    files: ["scripts/**/*.mjs", "tests/**/*.mjs", "worker/src/**/*.mjs", "*.mjs"],
     languageOptions: { ecmaVersion: 2023, sourceType: "module", globals: { ...globals.node } },
   },
   {

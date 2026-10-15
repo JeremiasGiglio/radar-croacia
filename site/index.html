@@ -1,4 +1,4 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><title>Radar Croacia · Oportunidades oficiales para descendientes de croatas</title><meta name="description" content="Becas, cursos, residencia de diáspora y ayudas de Croacia para descendientes de croatas, en español y filtradas según tu situación."><meta property="og:title" content="Radar Croacia"><meta property="og:description" content="Oportunidades oficiales de Croacia para descendientes, en español y según tu situación."><meta property="og:type" content="website"><meta name="theme-color" content="#1D5F8A"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'"><meta name="referrer" content="strict-origin-when-cross-origin"><link rel="canonical" href="https://radar.zustrolabs.com/"><meta property="og:url" content="https://radar.zustrolabs.com/"><meta name="author" content="Zustro Labs"></head><body>
+<!doctype html><html lang="es"><head><meta charset="utf-8"><title>Radar Croacia · Oportunidades oficiales para descendientes de croatas</title><meta name="description" content="Becas, cursos, residencia de diáspora y ayudas de Croacia para descendientes de croatas, en español y filtradas según tu situación."><meta property="og:title" content="Radar Croacia"><meta property="og:description" content="Oportunidades oficiales de Croacia para descendientes, en español y según tu situación."><meta property="og:type" content="website"><meta name="theme-color" content="#1D5F8A"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://api.zustrolabs.com; base-uri 'none'; form-action 'none'"><meta name="referrer" content="strict-origin-when-cross-origin"><link rel="canonical" href="https://radar.zustrolabs.com/"><meta property="og:url" content="https://radar.zustrolabs.com/"><meta name="author" content="Zustro Labs"></head><body>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@500&display=swap">
@@ -71,7 +71,7 @@
         <li>Una persona del equipo revisa cada ficha antes de publicarla.</li>
         <li>Se publica en el mapa, se avisa de los cambios y cada semana sale un posteo con las oportunidades nuevas.</li>
       </ol>
-      <p class="note"><b>En construcción:</b> hoy las fichas se cargan y revisan a mano; el monitoreo automático llega en noviembre.</p>
+      <p class="note"><b>Ya funciona:</b> el robot revisa todos los días 6 fuentes oficiales y la IA prepara los borradores. La revisión humana sigue siendo obligatoria.</p>
       <p class="note">Cada ficha lleva el enlace a la fuente oficial y la fecha de revisión. Es información, no asesoramiento legal. Para tramitar, consultá en el consulado de Croacia o en una asociación croata de tu ciudad.</p>
     </section>
     <section class="panel">
@@ -90,6 +90,25 @@
     <span class="made-by" id="made-by"><img src="assets/zustro-simbolo.svg" alt="" width="16" height="16"> Radar Croacia es un proyecto de <strong>Zustro Labs</strong>, el estudio de QA e IA de Jeremías Giglio, con el Ateneo Croata de Rosario como socio. Es gratis y de código abierto: <a href="https://github.com/JeremiasGiglio/radar-croacia">GitHub</a>. Es información, no asesoramiento legal.</span>
   </footer>
 </div>
+
+<button type="button" class="chat-fab" id="chat-open" aria-controls="chat" aria-expanded="false" hidden>
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm3 6.5a1.5 1.5 0 1 0 0 .01zm5 0a1.5 1.5 0 1 0 0 .01zm5 0a1.5 1.5 0 1 0 0 .01z"/></svg>
+  Preguntale al Radar
+</button>
+<section class="chat" id="chat" role="dialog" aria-labelledby="chat-title" hidden>
+  <div class="chat-head">
+    <h2 id="chat-title">Preguntale al Radar</h2>
+    <button type="button" class="chat-x" id="chat-close" aria-label="Cerrar el chat">&times;</button>
+  </div>
+  <div class="chat-log" id="chat-log" aria-live="polite"></div>
+  <div class="chat-sugs" id="chat-sugs"></div>
+  <form class="chat-form" id="chat-form">
+    <label for="chat-input" class="sr">Tu pregunta</label>
+    <textarea id="chat-input" rows="2" maxlength="800" placeholder="Contame tu situación o qué buscás…" required></textarea>
+    <button type="submit" id="chat-send">Enviar</button>
+  </form>
+  <p class="chat-note">Responde una IA solo con las fichas verificadas del Radar. No guardamos tus mensajes: no pongas datos personales. Es información, no asesoramiento legal.</p>
+</section>
 
 <script src="assets/app.js" defer></script>
 

@@ -11,3 +11,7 @@ playwright-report/
 test-results/
 package-lock.json
 *.md
+worker/node_modules/
+worker/dist/
+worker/.wrangler/
+worker/package-lock.json
