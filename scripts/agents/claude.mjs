@@ -15,7 +15,7 @@ export function apiSchema() {
   return rest;
 }
 
-export function buildRequest(item, sourceText, { model = MODEL, maxTokens = 2000 } = {}) {
+export function buildRequest(item, sourceText, { model = MODEL, maxTokens = 8000 } = {}) {
   return {
     model,
     max_tokens: maxTokens,
