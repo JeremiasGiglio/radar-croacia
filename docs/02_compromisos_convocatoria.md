@@ -3,6 +3,8 @@
 
 > ⚠️ El texto **exacto** que se envió está en el portal eprijave-hrvatiizvanrh.gov.hr (Moji zahtjevi → Predani → formulario 51709). Jeremías tiene que entrar y guardar una copia o captura de cada paso. Los borradores de `convocatoria/` son versiones previas: el presupuesto final es distinto (ver abajo).
 
+> **Decisión del 14/10/2026:** el Radar pasa a ser un proyecto de **Zustro Labs** (el estudio de QA e IA de Jeremías), con el Ateneo como socio. Esto cambia lo que dice el formulario («el dominio y el contenido son del Ateneo»). **Pendiente:** hablarlo con el Ateneo (Camila) y, si la convocatoria sale aprobada, avisarle a la Oficina antes de firmar el contrato. El Radar sigue siendo **gratis y de código abierto**.
+
 ## Datos enviados
 - **Proyecto:** "Radar Hrvatska – interaktivna karta prilika za potomke hrvatskih iseljenika na španjolskom jeziku".
 - **Ejecución:** del **01.02.2027 al 30.06.2027**. Beneficiarios declarados: **1.000**.
@@ -28,7 +30,7 @@
 
 ## Sostenibilidad comprometida
 - Mantenimiento automático, por menos de €10/mes.
-- **El dominio y el contenido son del Ateneo.**
+- **El dominio y el contenido son del Ateneo.** ⚠️ Cambió el 14/10/2026: ver la nota de arriba.
 - **El código es abierto** para que otras asociaciones lo usen.
 - Jeremías lo mantiene como voluntario desde Croacia.
 

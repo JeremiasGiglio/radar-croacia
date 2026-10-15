@@ -3,10 +3,11 @@
 ## Quién y para qué
 - **Jeremías Giglio:** Senior QA Automation (Playwright/TS, Cypress, WebdriverIO, Python, API, CI/CD, healthcare), Rosario, Argentina. Se muda a **Rijeka, Croacia, en marzo de 2027** con la residencia de diáspora. Habla castellano rioplatense; escribile así.
 - Este repo es **Radar Croacia**: un mapa web en español con oportunidades oficiales de Croacia para descendientes, filtradas por perfil, con monitoreo diario de fuentes oficiales y agentes de IA.
+- **Desde el 14/10/2026 el Radar es un proyecto de Zustro Labs** (el estudio de QA e IA de Jeremías), con el Ateneo Croata de Rosario como socio. Sigue siendo gratis y de código abierto. Zustro Labs es una marca, no una empresa: no hablar de precios, clientes ni «empresa» (por la ayuda del HZZ).
 - También es la **pieza principal del portfolio** que va a mostrar en el **9.º Encuentro de la Diáspora Croata Sudamericana (Córdoba, 5–8/11/2026)**: foro de negocios, Oficina para los Croatas fuera de Croacia, MDU (ministerio) y asociaciones de toda Sudamérica.
 
 ## Lo que tiene que existir antes del 5/11/2026 (MVP de demo)
-1. **Web pública** (estática) con el mapa, los filtros por perfil (`ar` / `cit` / `res`) y las fichas. ✅ Está en `site/` (lee `site/data/opportunities.json`) y se publica con GitHub Pages desde `.github/workflows/pages.yml` en **https://radar.jgcup.stream** (dominio provisorio). `jgcup.stream` es de Jeremías y lo usan otros proyectos suyos por un túnel de Cloudflare: **del dominio, el Radar solo usa el registro CNAME `radar`**. No tocar el dominio raíz, `estudio`, `comfy` ni el túnel. El código de la web está en `site/index.html` (estructura y mapa), `site/assets/styles.css` y `site/assets/app.js`.
+1. **Web pública** (estática) con el mapa, los filtros por perfil (`ar` / `cit` / `res`) y las fichas. ✅ Está en `site/` (lee `site/data/opportunities.json`) y se publica con GitHub Pages desde `.github/workflows/pages.yml` en **https://radar.zustrolabs.com** (CNAME `radar` en la zona `zustrolabs.com`, en DNS only). En esa zona, el registro `croata` es de Šahovnica y lo maneja Wrangler: no tocarlo. El dominio viejo `radar.jgcup.stream` solo redirige. `jgcup.stream` lo usan otros proyectos de Jeremías por un túnel de Cloudflare: **ahí el Radar solo usa el registro `radar`**. No tocar el dominio raíz, `estudio`, `comfy` ni el túnel. El código de la web está en `site/index.html` (estructura y mapa), `site/assets/styles.css` y `site/assets/app.js`.
 2. **Pipeline real con al menos 4–6 fuentes** (de las 12 del plan): RSS de la Oficina (`hrvatiizvanrh.gov.hr/rss.aspx?ID=574`), MDU (`mdu.gov.hr`, javni pozivi), HZZ (`mjere.hzz.hr`), PGŽ (`pgz.hr`, WordPress), Grad Rijeka, udruge.gov.hr.
 3. **Agentes de IA** con salida JSON validada por esquema:
    - **Extractor/resumidor:** convocatoria en croata → ficha en español (qué es, quién la da, monto, plazo, link).
@@ -21,7 +22,7 @@
 GitHub Actions (cron diario) → adaptadores por tipo de fuente (RSS / WordPress / HTML / Playwright solo donde haya JS) → JSON versionado en git (el diff = cambios) → agentes LLM solo sobre lo nuevo → cola de revisión → build estático (mapa Leaflet o el SVG actual) en GitHub Pages o Cloudflare Pages → placas PNG y boletín generados con Playwright. Detalle en `docs/03_arquitectura.md`.
 
 ## Compromisos ya asumidos con la Oficina (no romperlos)
-Ver `docs/02_compromisos_convocatoria.md`:
+Ver `docs/02_compromisos_convocatoria.md`. ⚠️ El paso a Zustro Labs cambia el punto «dominio y contenido del Ateneo»: falta hablarlo con el Ateneo y, si se aprueba la convocatoria, con la Oficina.
 - código **abierto**;
 - uso **gratuito**;
 - dominio y contenido **del Ateneo**;

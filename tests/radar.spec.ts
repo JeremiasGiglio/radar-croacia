@@ -127,3 +127,22 @@ test("en el celular nada es más ancho que la pantalla, aunque no carguen las fu
   ]);
   expect(scroll).toBeLessThanOrEqual(client);
 });
+
+test.describe("Zustro Labs", () => {
+  test("el pie dice de quién es el proyecto y muestra el símbolo", async ({ page }) => {
+    const madeBy = page.locator("#made-by");
+    await expect(madeBy).toContainText("Zustro Labs");
+    await expect(madeBy).toContainText("Ateneo Croata de Rosario");
+    const img = madeBy.locator("img");
+    await expect(img).toBeVisible();
+    expect(await img.evaluate((el: HTMLImageElement) => el.naturalWidth)).toBeGreaterThan(0);
+    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", "https://radar.zustrolabs.com/");
+  });
+
+  test("el damero del símbolo arranca en rojo, nunca en blanco", async ({ request }) => {
+    const svg = await (await request.get("/assets/zustro-simbolo.svg")).text();
+    const first = svg.match(/<rect x="0" y="0"[^>]*fill="([^"]+)"/);
+    expect(first?.[1]).toBe("#C8102E");
+    expect(svg).not.toMatch(/fill="#(fff|ffffff)"/i);
+  });
+});

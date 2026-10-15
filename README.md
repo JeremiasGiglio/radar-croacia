@@ -2,18 +2,18 @@
 
 **Oportunidades oficiales de Croacia para descendientes de croatas, en español, filtradas según tu situación y en un mapa.**
 
-Becas, cursos, residencia de diáspora, ayudas para emprender, programas municipales y convocatorias para proyectos de la comunidad. Un proceso automático revisa todos los días las páginas oficiales croatas, la IA resume en español lo nuevo y una persona del **Ateneo Croata de Rosario** verifica cada ficha antes de publicarla.
+Becas, cursos, residencia de diáspora, ayudas para emprender, programas municipales y convocatorias para proyectos de la comunidad. Un proceso automático revisa todos los días las páginas oficiales croatas, la IA resume en español lo nuevo y una persona del equipo verifica cada ficha antes de publicarla.
 
-> Proyecto de **Jeremías Ismael Giglio** con el **Ateneo Croata de Rosario** como socio.
+> Proyecto de **Zustro Labs**, el estudio de QA e IA de **Jeremías Ismael Giglio**, con el **Ateneo Croata de Rosario** como socio.
 > Presentado a la **Convocatoria Pública 2026 de la Oficina Central para los Croatas fuera de Croacia** (Cat. B, formulario 51709, enviado el 7/10/2026).
 
 ---
 
-## Estado al 12/10/2026
+## Estado al 14/10/2026
 | Pieza | Estado |
 |---|---|
 | Investigación de mercado, técnica y legal | ✅ `docs/01_investigacion_y_factibilidad.md` |
-| Web pública (mapa + filtros + fichas) | ✅ `site/`, publicada con GitHub Pages: https://radar.jgcup.stream (provisorio, hasta tener el dominio del Ateneo) |
+| Web pública (mapa + filtros + fichas) | ✅ `site/`, publicada con GitHub Pages: https://radar.zustrolabs.com (antes `radar.jgcup.stream`, que redirige) |
 | Maqueta offline para eventos | ✅ `prototype/index.html` (datos del 28/9/2026 embebidos; funciona sin internet) |
 | Datos en JSON con esquema | ✅ `site/data/opportunities.json` (14 fichas, revisión 10/10/2026) + `schema/` |
 | Tests | ✅ validación del JSON, 7 tests del robot con copias reales de los feeds y 15 E2E con Playwright (escritorio, celular y celular chico) |
@@ -21,9 +21,9 @@ Becas, cursos, residencia de diáspora, ayudas para emprender, programas municip
 | Monitoreo diario de fuentes | 🟡 2 de 12: RSS de la Oficina (natječaji) y del MDU (javni pozivi). Robot diario + PR de revisión (`.github/workflows/monitor.yml`, `review/`) |
 | Botón de consultas por WhatsApp | 🟡 listo; aparece cuando se carga el número en `site/data/contact.json` |
 | Agentes de IA (resumen, elegibilidad, detección de cambios) | ⬜ por construir |
-| Revisión humana (panel del Ateneo) | ⬜ por construir |
+| Revisión humana (panel de revisión) | ⬜ por construir |
 | Avisos, boletín y posteos semanales | ⬜ por construir |
-| Dominio del Ateneo | ⬜ por ahora `radar.jgcup.stream` (subdominio personal de Jeremías, en Cloudflare) |
+| Dominio | ✅ `radar.zustrolabs.com` (Zustro Labs, en Cloudflare) |
 
 ## Fechas que mandan
 | Fecha | Qué | Necesita |
@@ -35,7 +35,7 @@ Becas, cursos, residencia de diáspora, ayudas para emprender, programas municip
 | **1/2 – 30/6/2027** | **Ejecución del proyecto financiado** (si se aprueba) | Ver compromisos en `docs/02_compromisos_convocatoria.md` |
 
 ## Cómo verlo
-- **Online:** https://radar.jgcup.stream (dominio provisorio; también https://jeremiasgiglio.github.io/radar-croacia/)
+- **Online:** https://radar.zustrolabs.com
 - **En tu compu:** `npm install` y después `npm run serve` → http://localhost:8080
 - **Sin internet (eventos):** abrí `prototype/index.html` directamente.
 
@@ -70,6 +70,6 @@ CLAUDE.md             contexto para el chat de desarrollo
 ## Principios (no negociables)
 1. **La fuente oficial manda.** Cada ficha lleva el link oficial y la fecha de revisión.
 2. **Revisión humana** antes de publicar. La IA propone; una persona aprueba.
-3. **Gratis y de código abierto** para la comunidad (es un compromiso con la Oficina). El dominio y el contenido son del Ateneo.
+3. **Gratis y de código abierto** para la comunidad (es un compromiso con la Oficina). El Radar es de Zustro Labs, con el Ateneo como socio (ver la nota en `docs/02_compromisos_convocatoria.md`).
 4. **Legal:** se reutiliza información pública (ZPPI, Directiva 2019/1024). Se enlazan los PDF, no se vuelven a alojar. Sin datos personales de resoluciones. Se respeta robots.txt, con visitas espaciadas y un User-Agent identificable.
 5. "Es información, no asesoramiento legal."

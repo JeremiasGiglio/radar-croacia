@@ -4,7 +4,7 @@ import { readFileSync, writeFileSync, existsSync, mkdirSync, appendFileSync } fr
 import { parseRss, checkContract, diffItems, robotsDisallows } from "./lib/rss.mjs";
 
 const ROOT = new URL("..", import.meta.url);
-const UA = "RadarCroacia/0.1 (+https://radar.jgcup.stream; proyecto comunitario de la diáspora)";
+const UA = "RadarCroacia/0.2 (+https://radar.zustrolabs.com; Zustro Labs, proyecto gratuito para la diáspora)";
 const sources = JSON.parse(readFileSync(new URL("scripts/sources.json", ROOT)));
 const today = new Date().toISOString().slice(0, 10);
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
