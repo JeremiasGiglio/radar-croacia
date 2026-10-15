@@ -7,20 +7,22 @@ const ROOT = new URL("..", import.meta.url);
 const UA = "RadarCroacia/0.1 (+https://radar.jgcup.stream; proyecto comunitario de la diáspora)";
 const sources = JSON.parse(readFileSync(new URL("scripts/sources.json", ROOT)));
 const today = new Date().toISOString().slice(0, 10);
-const sleep = ms => new Promise(r => setTimeout(r, ms));
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 async function get(url) {
   const res = await fetch(url, { headers: { "User-Agent": UA }, signal: AbortSignal.timeout(30_000) });
   return { status: res.status, text: await res.text() };
 }
 
-const report = []; let failed = false;
+const report = [];
+let failed = false;
 for (const src of sources) {
   try {
     const u = new URL(src.url);
     const robots = await get(`${u.origin}/robots.txt`).catch(() => ({ status: 0, text: "" }));
     if (robots.status === 200 && robotsDisallows(robots.text, u.pathname)) {
-      report.push(`⚠️ ${src.name}: robots.txt no permite leerla, se salteó.`); continue;
+      report.push(`⚠️ ${src.name}: robots.txt no permite leerla, se salteó.`);
+      continue;
     }
     await sleep(2000);
     const { status, text } = await get(src.url);
@@ -34,19 +36,40 @@ for (const src of sources) {
     const prev = existsSync(file) ? JSON.parse(readFileSync(file)).items : null;
     writeFileSync(file, JSON.stringify({ source: src.id, name: src.name, url: src.url, items }, null, 1) + "\n");
 
-    if (prev === null) { report.push(`🆕 ${src.name}: primera lectura (${items.length} ítems), queda como base.`); continue; }
+    if (prev === null) {
+      report.push(`🆕 ${src.name}: primera lectura (${items.length} ítems), queda como base.`);
+      continue;
+    }
     const { added, changed } = diffItems(prev, items);
-    if (!added.length && !changed.length) { report.push(`✅ ${src.name}: sin novedades (${items.length} ítems).`); continue; }
+    if (!added.length && !changed.length) {
+      report.push(`✅ ${src.name}: sin novedades (${items.length} ítems).`);
+      continue;
+    }
 
     mkdirSync(new URL("review/queue/", ROOT), { recursive: true });
     const q = new URL(`review/queue/${today}_${src.id}.json`, ROOT);
-    writeFileSync(q, JSON.stringify({ source: src.id, name: src.name, detected_at: today, added, changed,
-      instrucciones: "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json." }, null, 1) + "\n");
+    writeFileSync(
+      q,
+      JSON.stringify(
+        {
+          source: src.id,
+          name: src.name,
+          detected_at: today,
+          added,
+          changed,
+          instrucciones:
+            "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json.",
+        },
+        null,
+        1,
+      ) + "\n",
+    );
     report.push(`🔔 ${src.name}: ${added.length} nuevo(s), ${changed.length} cambiado(s).`);
     for (const it of added) report.push(`   - NUEVO: [${it.title}](${it.link})`);
     for (const it of changed) report.push(`   - CAMBIÓ: [${it.title}](${it.link})`);
   } catch (e) {
-    failed = true; report.push(`❌ ${src.name}: ${e.message}`);
+    failed = true;
+    report.push(`❌ ${src.name}: ${e.message}`);
   }
 }
 

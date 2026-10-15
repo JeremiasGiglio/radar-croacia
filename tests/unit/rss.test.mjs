@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { parseRss, checkContract, diffItems, robotsDisallows, cleanText } from "../../scripts/lib/rss.mjs";
 
-const fx = name => readFileSync(new URL(`../fixtures/${name}`, import.meta.url), "utf8");
+const fx = (name) => readFileSync(new URL(`../fixtures/${name}`, import.meta.url), "utf8");
 
 test("Oficina (RSS 574): parsea las 20 entradas de la copia guardada", () => {
   const items = parseRss(fx("oficina_574.xml"));
@@ -12,7 +12,7 @@ test("Oficina (RSS 574): parsea las 20 entradas de la copia guardada", () => {
     assert.match(it.link, /^https:\/\/hrvatiizvanrh\.gov\.hr\//);
     assert.ok(it.title.length > 5);
     assert.ok(it.published, "tiene fecha");
-    assert.doesNotMatch(it.summary, /<|&nbsp;|​/);
+    assert.doesNotMatch(it.summary, /<|&nbsp;|\u200B/);
   }
 });
 
@@ -35,9 +35,16 @@ test("contrato: rechaza links que no son https", () => {
 });
 
 test("diff: detecta ítems nuevos y cambiados, ignora los iguales", () => {
-  const a = { guid: "1", title: "Uno", summary: "s" }, b = { guid: "2", title: "Dos", summary: "s" };
-  const { added, changed } = diffItems([a, b], [a, { ...b, title: "Dos (plazo extendido)" }, { guid: "3", title: "Tres", summary: "" }]);
-  assert.deepEqual(added.map(i => i.guid), ["3"]);
+  const a = { guid: "1", title: "Uno", summary: "s" },
+    b = { guid: "2", title: "Dos", summary: "s" };
+  const { added, changed } = diffItems(
+    [a, b],
+    [a, { ...b, title: "Dos (plazo extendido)" }, { guid: "3", title: "Tres", summary: "" }],
+  );
+  assert.deepEqual(
+    added.map((i) => i.guid),
+    ["3"],
+  );
   assert.equal(changed[0].before.title, "Dos");
 });
 
@@ -48,5 +55,5 @@ test("robots.txt: respeta Disallow para User-agent *", () => {
 });
 
 test("el texto de la fuente se limpia de HTML (es dato, no instrucción)", () => {
-  assert.equal(cleanText('<script>alert(1)</script>Hola&nbsp;mundo'), "alert(1) Hola mundo");
+  assert.equal(cleanText("<script>alert(1)</script>Hola&nbsp;mundo"), "alert(1) Hola mundo");
 });

@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 import data from "../site/data/opportunities.json" with { type: "json" };
 
 const total = data.opportunities.length;
-const usefulFor = (p: "ar" | "cit" | "res") => data.opportunities.filter(o => o.el[p][0] !== "no").length;
+const usefulFor = (p: "ar" | "cit" | "res") => data.opportunities.filter((o) => o.el[p][0] !== "no").length;
 
 test.beforeEach(async ({ page }) => {
   await page.goto("/");
@@ -23,7 +23,7 @@ for (const p of ["ar", "cit", "res"] as const) {
 }
 
 test("apagar una categoría saca sus fichas", async ({ page }) => {
-  const becas = data.opportunities.filter(o => o.cat === "beca").length;
+  const becas = data.opportunities.filter((o) => o.cat === "beca").length;
   await page.locator("#cat-beca").click();
   await expect(page.locator("#cat-beca")).toHaveAttribute("aria-pressed", "false");
   await expect(page.locator("#list article")).toHaveCount(total - becas);
@@ -50,15 +50,17 @@ test("muestra los eventos y la nota de revisión", async ({ page }) => {
 
 test("no hay errores de consola", async ({ page }) => {
   const errors: string[] = [];
-  page.on("console", m => { if (m.type() === "error") errors.push(m.text()); });
-  page.on("pageerror", e => errors.push(e.message));
+  page.on("console", (m) => {
+    if (m.type() === "error") errors.push(m.text());
+  });
+  page.on("pageerror", (e) => errors.push(e.message));
   await page.reload();
   await expect(page.locator("#list article")).toHaveCount(total);
   expect(errors).toEqual([]);
 });
 
 test("el texto de los datos se muestra escapado, no como HTML", async ({ page }) => {
-  await page.route("**/data/opportunities.json", async route => {
+  await page.route("**/data/opportunities.json", async (route) => {
     const body = structuredClone(data);
     body.opportunities[0].t = '<img src=x onerror="window.__xss=1">Prueba';
     await route.fulfill({ json: body });
@@ -69,10 +71,14 @@ test("el texto de los datos se muestra escapado, no como HTML", async ({ page })
 });
 
 test("las convocatorias cerradas van al final de la lista", async ({ page }) => {
-  const closed = data.opportunities.filter(o => "deadline" in o && o.deadline && new Date(o.deadline) < new Date()).length;
+  const closed = data.opportunities.filter(
+    (o) => "deadline" in o && o.deadline && new Date(o.deadline) < new Date(),
+  ).length;
   test.skip(closed === 0, "no hay convocatorias cerradas en los datos");
-  const pills = await page.locator("#list article").evaluateAll(cards => cards.map(c => c.querySelector(".pill")?.textContent ?? ""));
-  const firstClosed = pills.findIndex(t => t.includes("Cerrada"));
+  const pills = await page
+    .locator("#list article")
+    .evaluateAll((cards) => cards.map((c) => c.querySelector(".pill")?.textContent ?? ""));
+  const firstClosed = pills.findIndex((t) => t.includes("Cerrada"));
   expect(firstClosed).toBe(total - closed);
 });
 
@@ -83,7 +89,9 @@ test.describe("WhatsApp", () => {
   });
 
   test("con número: botón general y uno por ficha con la consulta escrita", async ({ page }) => {
-    await page.route("**/data/contact.json", r => r.fulfill({ json: { whatsapp: "+54 9 341 000-0000", nota: "nota" } }));
+    await page.route("**/data/contact.json", (r) =>
+      r.fulfill({ json: { whatsapp: "+54 9 341 000-0000", nota: "nota" } }),
+    );
     await page.reload();
     await expect(page.locator("a.wa[data-wa]")).toHaveCount(total);
     const general = page.locator("#wa-general");
@@ -100,7 +108,7 @@ test.describe("WhatsApp", () => {
   });
 
   test("un número inválido no rompe la página ni muestra botones", async ({ page }) => {
-    await page.route("**/data/contact.json", r => r.fulfill({ json: { whatsapp: "123" } }));
+    await page.route("**/data/contact.json", (r) => r.fulfill({ json: { whatsapp: "123" } }));
     await page.reload();
     await expect(page.locator("#list article")).toHaveCount(total);
     await expect(page.locator("a.wa[data-wa]")).toHaveCount(0);
@@ -109,10 +117,13 @@ test.describe("WhatsApp", () => {
 
 test("en el celular nada es más ancho que la pantalla, aunque no carguen las fuentes", async ({ page, isMobile }) => {
   test.skip(!isMobile, "solo celular");
-  await page.route(/fonts\.(googleapis|gstatic)/, r => r.abort());
-  await page.route("**/data/contact.json", r => r.fulfill({ json: { whatsapp: "5493410000000" } }));
+  await page.route(/fonts\.(googleapis|gstatic)/, (r) => r.abort());
+  await page.route("**/data/contact.json", (r) => r.fulfill({ json: { whatsapp: "5493410000000" } }));
   await page.reload();
   await expect(page.locator("#list article")).toHaveCount(total);
-  const [client, scroll] = await page.evaluate(() => [document.documentElement.clientWidth, document.documentElement.scrollWidth]);
+  const [client, scroll] = await page.evaluate(() => [
+    document.documentElement.clientWidth,
+    document.documentElement.scrollWidth,
+  ]);
   expect(scroll).toBeLessThanOrEqual(client);
 });
