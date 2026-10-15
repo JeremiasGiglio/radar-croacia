@@ -135,6 +135,7 @@ test("llamada: reintenta un 529 y valida la respuesta", async () => {
   const fetchImpl = async (url, init) => {
     calls++;
     assert.equal(init.headers["x-api-key"], "k");
+    assert.equal(init.headers["anthropic-workspace-id"], "wrkspc_1");
     if (calls === 1) return new Response(JSON.stringify({ error: { message: "overloaded" } }), { status: 529 });
     return Response.json({
       stop_reason: "end_turn",
@@ -142,7 +143,7 @@ test("llamada: reintenta un 529 y valida la respuesta", async () => {
       usage: { input_tokens: 100, output_tokens: 50 },
     });
   };
-  const r = await callClaude(item, SOURCE, { apiKey: "k", fetchImpl });
+  const r = await callClaude(item, SOURCE, { apiKey: "k", workspaceId: "wrkspc_1", fetchImpl });
   assert.equal(calls, 2);
   assert.equal(r.draft.t, "Ayudas para inventores");
 });

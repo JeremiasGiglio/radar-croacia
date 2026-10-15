@@ -30,14 +30,24 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 /**
  * @returns {Promise<{draft:any, usage:{input_tokens:number, output_tokens:number}}>}
  */
-export async function callClaude(item, sourceText, { apiKey = process.env.ANTHROPIC_API_KEY, fetchImpl = fetch } = {}) {
+export async function callClaude(
+  item,
+  sourceText,
+  { apiKey = process.env.ANTHROPIC_API_KEY, workspaceId = process.env.ANTHROPIC_WORKSPACE_ID, fetchImpl = fetch } = {},
+) {
   if (!apiKey) throw new Error("falta ANTHROPIC_API_KEY");
   const body = JSON.stringify(buildRequest(item, sourceText));
   let res, data;
   for (let attempt = 1; attempt <= 3; attempt++) {
     res = await fetchImpl(API, {
       method: "POST",
-      headers: { "content-type": "application/json", "x-api-key": apiKey, "anthropic-version": "2023-06-01" },
+      headers: {
+        "content-type": "application/json",
+        "x-api-key": apiKey,
+        "anthropic-version": "2023-06-01",
+        // Claves de la organización que no están atadas a un workspace: hay que decir cuál usar.
+        ...(workspaceId ? { "anthropic-workspace-id": workspaceId } : {}),
+      },
       body,
       signal: AbortSignal.timeout(120_000),
     });

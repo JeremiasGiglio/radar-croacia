@@ -29,6 +29,7 @@ jobs:
       - name: Evals (mínimo 90 % de chequeos)
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ vars.ANTHROPIC_WORKSPACE_ID }}
           EVAL_MIN: "0.9"
         run: |
           if [ -z "$ANTHROPIC_API_KEY" ]; then
