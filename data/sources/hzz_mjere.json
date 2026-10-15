@@ -1,0 +1,183 @@
+{
+ "source": "hzz_mjere",
+ "name": "Servicio de Empleo de Croacia (Hrvatski zavod za zapošljavanje, HZZ): medidas y ayudas (Korisnički centar)",
+ "url": "https://mjere.hzz.hr/wp-json/wp/v2/pages?parent=45&per_page=50&orderby=modified&order=desc&_fields=id,date_gmt,modified_gmt,link,title,excerpt",
+ "items": [
+  {
+   "guid": "wp:4636",
+   "title": "Pojmovnik",
+   "link": "https://mjere.hzz.hr/korisnicki-centar/pojmovnik/",
+   "published": "2026-01-07T13:39:42.000Z",
+   "updated": "2026-03-16T12:53:47.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "wp:3749",
+   "title": "Potpore za zapošljavanje osoba uključenih u program POSAO+",
+   "link": "https://mjere.hzz.hr/korisnicki-centar/potpore-za-zaposljavanje-osoba-ukljucenih-u-program-posao/",
+   "published": "2025-01-16T09:43:45.000Z",
+   "updated": "2026-03-05T14:11:03.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "wp:3730",
+   "title": "Mjera za zadržavanje radnih mjesta u prerađivačkoj industriji (kompenzacijska mjera)",
+   "link": "https://mjere.hzz.hr/korisnicki-centar/mjera-za-zadrzavanje-radnih-mjesta-u-preradivackoj-industriji-kompenzacijska-mjera/",
+   "published": "2025-01-15T16:10:19.000Z",
+   "updated": "2026-03-05T13:43:56.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "wp:3727",
+   "title": "Skraćivanje radnog vremena (SRV)",
+   "link": "https://mjere.hzz.hr/korisnicki-centar/potpore-za-ocuvanje-radnih-mjesta-skracivanje-radnog-vremena/",
+   "published": "2025-01-15T16:09:12.000Z",
+   "updated": "2026-03-05T14:05:41.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "wp:3072",
+   "title": "Pojmovnik arhiva 2025.",
+   "link": "https://mjere.hzz.hr/korisnicki-centar/pojmovnik-arhiva-2025/",
+   "published": "2024-12-31T09:35:39.000Z",
+   "updated": "2026-01-07T13:40:08.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "wp:2292",
+   "title": "Pojmovnik arhiva 2024",
+   "link": "https://mjere.hzz.hr/korisnicki-centar/pojmovnik-arhiva-2024/",
+   "published": "2023-12-29T12:51:43.000Z",
+   "updated": "2025-01-02T08:17:13.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "wp:1994",
+   "title": "Potpora za zapošljavanje u Sisačko-moslavačkoj županiji",
+   "link": "https://mjere.hzz.hr/korisnicki-centar/potpora-za-zaposljavanje-smz/",
+   "published": "2023-03-09T10:26:26.000Z",
+   "updated": "2024-01-08T12:33:13.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "wp:249",
+   "title": "Potpora za usavršavanje",
+   "link": "https://mjere.hzz.hr/korisnicki-centar/potpora-za-usavrsavanje/",
+   "published": "2023-01-13T11:04:27.000Z",
+   "updated": "2026-03-19T11:42:06.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "wp:246",
+   "title": "Osposobljavanje na radnom mjestu",
+   "link": "https://mjere.hzz.hr/korisnicki-centar/osposobljavanje-na-radnom-mjestu/",
+   "published": "2023-01-13T10:53:00.000Z",
+   "updated": "2026-03-19T11:45:42.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "wp:1334",
+   "title": "Pojmovnik arhiva 2023.",
+   "link": "https://mjere.hzz.hr/korisnicki-centar/pojmovnik-arhiva-2023/",
+   "published": "2023-01-11T15:23:52.000Z",
+   "updated": "2024-01-02T10:42:33.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "wp:244",
+   "title": "Javni rad",
+   "link": "https://mjere.hzz.hr/korisnicki-centar/javni-rad/",
+   "published": "2023-01-11T10:46:42.000Z",
+   "updated": "2026-03-05T13:42:05.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "wp:1067",
+   "title": "Pripravništvo – javne službe",
+   "link": "https://mjere.hzz.hr/korisnicki-centar/pripravnistvo-javne-sluzbe/",
+   "published": "2022-11-23T12:19:33.000Z",
+   "updated": "2024-01-08T12:27:25.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "wp:1066",
+   "title": "Zeleno i digitalno – zapošljavanje, pripravništvo",
+   "link": "https://mjere.hzz.hr/korisnicki-centar/digitalno-i-zeleno/",
+   "published": "2022-11-23T12:15:43.000Z",
+   "updated": "2026-03-05T14:26:25.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "wp:274",
+   "title": "Radionice za samozapošljavanje",
+   "link": "https://mjere.hzz.hr/korisnicki-centar/radionice/",
+   "published": "2022-11-15T11:42:57.000Z",
+   "updated": "2026-04-10T12:34:51.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "wp:273",
+   "title": "Slanje prigovora, odustanak od potpisa ugovora",
+   "link": "https://mjere.hzz.hr/korisnicki-centar/slanje-prigovora-odustanak/",
+   "published": "2022-11-15T11:38:57.000Z",
+   "updated": "2026-03-16T12:47:06.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "wp:248",
+   "title": "Aktivacijski program",
+   "link": "https://mjere.hzz.hr/korisnicki-centar/aktivacijski-program/",
+   "published": "2022-11-15T10:59:13.000Z",
+   "updated": "2025-03-12T10:04:34.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "wp:247",
+   "title": "Osposobljavanje na radnom mjestu i ustanovama za obrazovanje odraslih",
+   "link": "https://mjere.hzz.hr/korisnicki-centar/osposobljavanje-na-radnom-mjestu-i-ustanovama-za-obrazovanje-odraslih/",
+   "published": "2022-11-15T10:56:34.000Z",
+   "updated": "2023-01-12T12:42:19.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "wp:245",
+   "title": "Stalni sezonac",
+   "link": "https://mjere.hzz.hr/korisnicki-centar/stalni-sezonac/",
+   "published": "2022-11-15T10:49:40.000Z",
+   "updated": "2024-01-08T11:16:52.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "wp:243",
+   "title": "Potpore za pripravništvo i mlade",
+   "link": "https://mjere.hzz.hr/korisnicki-centar/potpora-za-pripravnistvo/",
+   "published": "2022-11-15T10:40:02.000Z",
+   "updated": "2026-03-05T14:09:16.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "wp:241",
+   "title": "Potpora za zapošljavanje",
+   "link": "https://mjere.hzz.hr/korisnicki-centar/potpora-za-zaposljavanje/",
+   "published": "2022-11-15T10:28:19.000Z",
+   "updated": "2026-03-05T14:02:09.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "wp:240",
+   "title": "Potpora Biram Hrvatsku – mobilnost radne snage",
+   "link": "https://mjere.hzz.hr/korisnicki-centar/potpora-biram-hrvatsku-mobilnost-radne-snage/",
+   "published": "2022-11-15T10:23:59.000Z",
+   "updated": "2026-03-12T09:53:25.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "wp:64",
+   "title": "Potpora za samozapošljavanje",
+   "link": "https://mjere.hzz.hr/korisnicki-centar/samozaposljavanje/",
+   "published": "2022-10-04T13:45:31.000Z",
+   "updated": "2026-04-10T13:44:12.000Z",
+   "summary": ""
+  }
+ ]
+}

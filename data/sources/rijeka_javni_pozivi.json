@@ -1,0 +1,47 @@
+{
+ "source": "rijeka_javni_pozivi",
+ "name": "Ciudad de Rijeka (Grad Rijeka): convocatorias públicas (Javni pozivi)",
+ "url": "https://www.rijeka.hr/wp-json/wp/v2/posts?search=javni%20poziv&orderby=date&order=desc&per_page=30&_fields=id,date_gmt,modified_gmt,link,title,excerpt",
+ "items": [
+  {
+   "guid": "wp:315177",
+   "title": "Otvoren Javni poziv za prikupljanje prijedloga programa za izradu programa javnih potreba u sportu Grada Rijeke u 2027. godini",
+   "link": "https://www.rijeka.hr/otvoren-javni-poziv-za-prikupljanje-prijedloga-programa-za-izradu-programa-javnih-potreba-u-sportu-grada-rijeke-u-2027-godini/",
+   "published": "2026-10-01T11:41:55.000Z",
+   "updated": "2026-10-06T08:49:35.000Z",
+   "summary": "Zajednica sportskih udruga grada Rijeke “Riječki sportski savez” objavila je Poziv za prikupljanje prijedloga programa za izradu programa javnih potreba u sportu Grada Rijeke u 2027. godini. Poziv je otvoren do 3. studenoga."
+  },
+  {
+   "guid": "wp:315082",
+   "title": "Grad Rijeka prijavio projekt dogradnje sportske dvorane škole Gelsi na javni poziv za bespovratna sredstva",
+   "link": "https://www.rijeka.hr/grad-rijeka-prijavio-projekt-dogradnje-sportske-dvorane-skole-gelsi-na-javni-poziv-za-bespovratna-sredstva/",
+   "published": "2026-09-30T16:07:12.000Z",
+   "updated": "2026-09-30T17:14:45.000Z",
+   "summary": "Grad Rijeka prijavio je projekt naziva Dogradnja sportske dvorane Osnovne škole-Scuola elementare Gelsi na javni poziv Izgradnja, rekonstrukcija i opremanje osnovnih škola za potrebe jednosmjenskog rada i cjelodnevne škole, u sklopu Nacionalnog plana oporavka i otpornosti."
+  },
+  {
+   "guid": "wp:312381",
+   "title": "Objavljen Javni poziv za podnošenje prijedloga za dodjelu nagrada učenicima i mentorima",
+   "link": "https://www.rijeka.hr/objavljen-javni-poziv-za-podnosenje-prijedloga-za-dodjelu-nagrada-ucenicima-i-mentorima-3/",
+   "published": "2026-09-10T10:08:10.000Z",
+   "updated": "2026-09-10T10:11:54.000Z",
+   "summary": "Grad Rijeka je putem Upravnog odjela za odgoj, obrazovanje, tehničku kulturu i mlade objavio Javni poziv za podnošenje prijedloga za dodjelu nagrada učenicima i mentorima osnovnoškolskih i srednjoškolskih ustanova na području Grada Rijeke za posebna postignuća učenika na državnim natjecanjima, susretima i smotrama u školskoj godini 2025./2026."
+  },
+  {
+   "guid": "wp:312151",
+   "title": "Rinčić najavila natječaje za pročelnike – fokus na stručnosti i sposobnosti upravljanja",
+   "link": "https://www.rijeka.hr/rincic-najavila-natjecaje-za-procelnike-fokus-na-strucnosti-i-sposobnosti-upravljanja/",
+   "published": "2026-09-09T14:03:18.000Z",
+   "updated": "2026-10-06T12:10:53.000Z",
+   "summary": "„Nećemo birati podobne, nego sposobne“, poručila je gradonačelnica Iva Rinčić koja je na redovnoj konferenciji za medije najavila objavu natječaja za pročelnike. Predstavila je i novi model upravljanja Galebom te nova ulaganja u riječko školstvo. Zamjenik gradonačelnice Vedran Vivoda je govorio o uklanjanju nepropisnih reklama i suglasnosti HŽ Infrastrukturi za gradnju drugog kolosjeka."
+  },
+  {
+   "guid": "wp:311448",
+   "title": "Rezidencijalni program Kamov: Javni poziv izvaninstitucionalnoj sceni za 2027. godinu",
+   "link": "https://www.rijeka.hr/rezidencijalni-program-kamov-javni-poziv-izvaninstitucionalnoj-sceni-za-2027-godinu/",
+   "published": "2026-09-01T11:58:03.000Z",
+   "updated": "2026-09-01T13:25:05.000Z",
+   "summary": "Muzej moderne i suvremene umjetnosti u Rijeci, u suradnji s Gradskom knjižnicom Rijeka i Hrvatskim kulturnim domom na Sušaku, objavio je javni poziv za dvije dvotjedne rezidencije u sklopu Rezidencijalnog programa Kamov, namijenjene izvaninstitucionalnoj umjetničkoj sceni. Poziv je otvoren do 15. rujna."
+  }
+ ]
+}

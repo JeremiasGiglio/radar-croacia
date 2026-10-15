@@ -12,5 +12,34 @@
     "type": "rss",
     "url": "https://mdu.gov.hr/rss.aspx?ID=5923",
     "min_items": 1
+  },
+  {
+    "id": "pgz_javni_pozivi",
+    "name": "Condado de Primorje-Gorski Kotar (Primorsko-goranska županija): convocatorias y programas (Projekti i programi)",
+    "type": "rss",
+    "url": "https://www.pgz.hr/feed/?post_type=projekt_program",
+    "min_items": 5
+  },
+  {
+    "id": "rijeka_javni_pozivi",
+    "name": "Ciudad de Rijeka (Grad Rijeka): convocatorias públicas (Javni pozivi)",
+    "type": "wp",
+    "url": "https://www.rijeka.hr/wp-json/wp/v2/posts?search=javni%20poziv&orderby=date&order=desc&per_page=30&_fields=id,date_gmt,modified_gmt,link,title,excerpt",
+    "title_filter": "javni poziv|natje[čc]aj|potpor|stipendij|subvencij",
+    "min_items": 1
+  },
+  {
+    "id": "hzz_mjere",
+    "name": "Servicio de Empleo de Croacia (Hrvatski zavod za zapošljavanje, HZZ): medidas y ayudas (Korisnički centar)",
+    "type": "wp",
+    "url": "https://mjere.hzz.hr/wp-json/wp/v2/pages?parent=45&per_page=50&orderby=modified&order=desc&_fields=id,date_gmt,modified_gmt,link,title,excerpt",
+    "min_items": 10
+  },
+  {
+    "id": "udruge_vijesti",
+    "name": "Oficina para las Asociaciones del Gobierno (Ured za udruge): novedades y convocatorias (Vijesti)",
+    "type": "rss",
+    "url": "https://udruge.gov.hr/rss.aspx?ID=8",
+    "min_items": 5
   }
 ]
