@@ -250,7 +250,7 @@ test("worker /whatsapp: mensaje firmado → 200, consulta a Claude con el canal 
   await Promise.all(waits);
   assert.ok(sent.claude.system.includes("Canal: WhatsApp"));
   assert.equal(sent.length, 1);
-  assert.equal(sent[0].url, `https://graph.facebook.com/v23.0/${PHONE_ID}/messages`);
+  assert.equal(sent[0].url, `https://graph.facebook.com/v25.0/${PHONE_ID}/messages`);
   assert.equal(sent[0].auth, "Bearer token-de-prueba");
   assert.equal(sent[0].body.to, FROM);
   assert.match(sent[0].body.text.body, /Fuente oficial: https:\/\//);

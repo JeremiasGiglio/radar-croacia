@@ -64,7 +64,7 @@ El historial de mensajes para que una persona responda desde un panel es otro te
    - `WHATSAPP_TOKEN`: token permanente de un usuario del sistema del portfolio, con permisos `whatsapp_business_messaging` y `whatsapp_business_management`;
    - `WHATSAPP_APP_SECRET`: app de Meta → Configuración → Básica → Clave secreta;
    - `WHATSAPP_VERIFY_TOKEN`: una frase inventada; es la misma que se pega en Meta en el paso 4.
-3. **Variable** `WHATSAPP_PHONE_NUMBER_ID` en `wrangler.toml`. Es el id del número que muestra «Configuración de la API». No es secreto, pero va por PR. Si la Graph API cambia de versión, va en `WHATSAPP_GRAPH_VERSION` (hoy `v23.0`).
+3. **Variable** `WHATSAPP_PHONE_NUMBER_ID` en `wrangler.toml`. Es el id del número que muestra «Configuración de la API». No es secreto, pero va por PR. Si la Graph API cambia de versión, va en `WHATSAPP_GRAPH_VERSION` (hoy `v25.0`, la que muestra el panel de Meta).
 4. **En Meta:** WhatsApp → Configuración → Webhook:
    - URL: `https://api.zustrolabs.com/whatsapp`;
    - token: el `WHATSAPP_VERIFY_TOKEN`;

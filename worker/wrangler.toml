@@ -10,6 +10,8 @@ routes = [{ pattern = "api.zustrolabs.com", custom_domain = true }]
 [vars]
 ALLOWED_ORIGINS = "https://radar.zustrolabs.com"
 DATA_URL = "https://radar.zustrolabs.com/data/opportunities.json"
+# Número de PRUEBA de Meta (+1 555…). No es secreto. Cambiarlo por el real solo con la decisión de ZL-24.
+WHATSAPP_PHONE_NUMBER_ID = "1429513876909400"
 
 # 10 preguntas por minuto por IP. Además, la consola de Claude tiene un tope de gasto mensual.
 [[ratelimits]]
@@ -18,9 +20,8 @@ namespace_id = "1001"
 simple = { limit = 10, period = 60 }
 
 # Bot de WhatsApp (ZL-22): /whatsapp responde 503 hasta que estén los secretos
-# WHATSAPP_TOKEN, WHATSAPP_APP_SECRET y WHATSAPP_VERIFY_TOKEN, y el id del número de abajo.
+# WHATSAPP_TOKEN, WHATSAPP_APP_SECRET y WHATSAPP_VERIFY_TOKEN, (el id del número ya está en [vars]).
 # Pasos en docs/08_bot_whatsapp.md.
-# WHATSAPP_PHONE_NUMBER_ID = ""   ← va en [vars] cuando exista la app de Meta (ZL-21)
 # Memoria por número (perfil y estado, nunca el texto): se activa cuando se decida ZL-66.
 # [[kv_namespaces]]
 # binding = "WA_STATE"
