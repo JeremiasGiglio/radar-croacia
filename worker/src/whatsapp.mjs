@@ -169,17 +169,37 @@ export function formatAnswer(r) {
 }
 
 /** Manda un mensaje con la Cloud API. */
-export async function sendMessage(env, message, fetchImpl = fetch) {
+/**
+ * Celulares de Argentina: WhatsApp los informa como 549 + área + número, pero la API a veces solo acepta
+ * la otra forma (sin el 9, o al revés). Devuelve la variante a probar, o null si no es un celular argentino.
+ */
+export function variantArgentina(to) {
+  const n = String(to ?? "");
+  if (/^549\d{10}$/.test(n)) return "54" + n.slice(3);
+  if (/^54\d{10}$/.test(n)) return "549" + n.slice(2);
+  return null;
+}
+
+async function postMessage(env, message, fetchImpl) {
   const v = env.WHATSAPP_GRAPH_VERSION || GRAPH_VERSION;
   const res = await fetchImpl(`https://graph.facebook.com/${v}/${env.WHATSAPP_PHONE_NUMBER_ID}/messages`, {
     method: "POST",
     headers: { "content-type": "application/json", authorization: `Bearer ${env.WHATSAPP_TOKEN}` },
     body: JSON.stringify(message),
   });
-  if (!res.ok) {
-    const data = await res.json().catch(() => ({}));
-    throw new Error(`WhatsApp ${res.status}: ${data?.error?.message ?? "sin detalle"}`);
+  if (res.ok) return null;
+  const data = await res.json().catch(() => ({}));
+  return { status: res.status, code: data?.error?.code, message: data?.error?.message ?? "sin detalle" };
+}
+
+/** Manda un mensaje con la Cloud API. Si Meta rechaza un celular argentino (#131030), prueba la otra forma. */
+export async function sendMessage(env, message, fetchImpl = fetch) {
+  let err = await postMessage(env, message, fetchImpl);
+  const alt = variantArgentina(message.to);
+  if (err && err.code === 131030 && alt) {
+    err = await postMessage(env, { ...message, to: alt }, fetchImpl);
   }
+  if (err) throw new Error(`WhatsApp ${err.status}: ${err.message}`);
 }
 
 // ───────────────────────── Memoria ─────────────────────────
