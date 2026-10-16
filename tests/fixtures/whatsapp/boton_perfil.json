@@ -1,0 +1,47 @@
+{
+  "object": "whatsapp_business_account",
+  "entry": [
+    {
+      "id": "200000000000002",
+      "changes": [
+        {
+          "field": "messages",
+          "value": {
+            "messaging_product": "whatsapp",
+            "metadata": {
+              "display_phone_number": "15550000000",
+              "phone_number_id": "100000000000001"
+            },
+            "contacts": [
+              {
+                "profile": {
+                  "name": "Persona de prueba"
+                },
+                "wa_id": "5490000000001"
+              }
+            ],
+            "messages": [
+              {
+                "context": {
+                  "from": "15550000000",
+                  "id": "wamid.TEST_BIENVENIDA"
+                },
+                "from": "5490000000001",
+                "id": "wamid.TEST_BOTON_1",
+                "timestamp": "1792000060",
+                "type": "interactive",
+                "interactive": {
+                  "type": "button_reply",
+                  "button_reply": {
+                    "id": "perfil_res",
+                    "title": "Vivo en Croacia"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
