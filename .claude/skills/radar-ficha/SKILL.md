@@ -8,6 +8,8 @@ description: Agregar, corregir o cerrar una oportunidad (ficha) del Radar Croaci
 ## Antes de escribir
 1. Abrí la **página oficial** (no una nota de prensa, salvo que no haya otra; en ese caso, `flag` con la aclaración).
 2. Anotá tal cual: quién la da, monto, plazo, requisitos de residencia o ciudadanía. **Lo que no esté en la fuente no se escribe.**
+3. **Requisitos, montos y plazos se leen en el documento oficial** (PDF o DOCX: Javni poziv, Upute za prijavitelje, Pravilnik), **nunca en la página web que lo resume**: los resúmenes omiten cosas (por ejemplo, «uključuje i samozapošljavanje»). En `src` va el link a ese documento, no a la portada.
+4. Un «Revisar» en `flag` solo si, después de leer el documento oficial, de verdad falta un dato; y siempre con `src` apuntando a ese documento. El test `tests/unit/data.test.mjs` falla si no.
 
 ## Campos (esquema: `schema/opportunities.schema.json`)
 - `id`: slug estable en minúsculas con `_` (no se cambia nunca; lo usan los links de WhatsApp).
@@ -17,7 +19,7 @@ description: Agregar, corregir o cerrar una oportunidad (ficha) del Radar Croaci
 - `amount` y `what` en rioplatense, sin jerga; 2–3 frases.
 - `el.ar` / `el.cit` / `el.res`: `["ok"|"cond"|"no", "motivo corto"]`. **Ante la duda, `cond`** y explicar qué falta confirmar.
 - `pts`: `[lon, lat]` dentro de Croacia (Zagreb `[15.98, 45.81]`, Rijeka `[14.44, 45.33]` para organismos nacionales o locales).
-- `src`: `["dominio", "https://url-exacta"]`; `verified_at`: fecha de hoy (`YYYY-MM-DD`). Actualizá también el `verified_at` general si es posterior.
+- `src`: `["dominio", "https://url-exacta"]` (el documento oficial, no la portada ni una nota de prensa); `verified_at`: fecha de hoy (`YYYY-MM-DD`). Actualizá también el `verified_at` general si es posterior.
 - `flag`: lo que queda por verificar.
 
 ## Cerrar una convocatoria

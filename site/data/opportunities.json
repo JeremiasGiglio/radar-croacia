@@ -1,6 +1,6 @@
 {
  "version": "2026-10-10",
- "verified_at": "2026-10-10",
+ "verified_at": "2026-10-16",
  "note": "Beta. Fichas revisadas por Jeremías Giglio (Zustro Labs) con fuentes oficiales. Los montos y plazos pueden cambiar: la fuente oficial manda.",
  "profiles": {
   "ar": "Vive en Argentina, sin ciudadanía",
@@ -309,9 +309,9 @@
      45.33
     ]
    ],
-   "next": "Convocatoria esperada en octubre 2026",
+   "next": "Próxima edición: 2027 (la de 2026 cierra el 19/10/2026)",
    "amount": "80 % de los gastos, de €1.000 a €8.000 (mínimo €665 por ítem)",
-   "what": "Reintegra gastos de un obrt de hasta 36 meses con sede en la región de Rijeka. Es parte del programa 2026–2029. Se pide solo por la app SOM y hay una medida por solicitante.",
+   "what": "Reintegra gastos de quien abre por primera vez un obrt o una sociedad (d.o.o. o j.d.o.o.) con sede en la región de Rijeka, con hasta 36 meses de registro. Es parte del programa 2026–2029. Se pide solo por la app SOM y hay una medida por solicitante.",
    "el": {
     "ar": [
      "no",
@@ -322,17 +322,16 @@
      "Si te instalás en la región de Rijeka."
     ],
     "res": [
-     "ok",
-     "Sirve con residencia, sin garante."
+     "cond",
+     "Para 2027, cuando tengas el obrt. La de 2026 no aplica si todavía no lo tenés."
     ]
    },
    "src": [
     "pgz.hr",
-    "https://www.pgz.hr/"
+    "https://www2.pgz.hr/doc/programi/2026/razvoj-poduzetnistva-mjera-21-23-26-27/jp.docx"
    ],
-   "verified_at": "2026-10-10",
-   "deadline": "2026-10-19T23:59:00+02:00",
-   "flag": "Revisar: el texto 2026 ya no dice que el autoempleo cuente como persona empleada."
+   "verified_at": "2026-10-16",
+   "flag": "El autoempleo cuenta como persona empleada (texto oficial 2026). Paušal y tarjeta de residencia aceptados por escrito (PGŽ, 24/9/2026). App SOM: registro con mail. Requisito: no haber sido dueño de otro negocio en los 2 años previos."
   },
   {
    "id": "rijeka",
