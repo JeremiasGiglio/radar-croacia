@@ -60,7 +60,12 @@ jobs:
           [ "$code" = "200" ] || { echo "::error::api.zustrolabs.com/health no responde"; exit 1; }
           curl -s -o /dev/null -w 'CORS desde otro origen: %{http_code}\n' -X POST https://api.zustrolabs.com/chat \
             -H 'Origin: https://otro.example' -H 'content-type: application/json' -d '{"messages":[{"role":"user","content":"hola"}]}'
-          wa=$(curl -s -o /dev/null -w '%{http_code}' -X POST https://api.zustrolabs.com/whatsapp -d '{}')
+          # La versión nueva tarda unos segundos en llegar a todos lados: mientras siga la vieja, /whatsapp da 404.
+          for i in $(seq 1 12); do
+            wa=$(curl -s -o /dev/null -w '%{http_code}' -X POST https://api.zustrolabs.com/whatsapp -d '{}' || true)
+            [ "$wa" != "404" ] && break
+            echo "esperando la versión nueva ($wa)…"; sleep 10
+          done
           echo "WhatsApp sin firma: $wa"
           [ "$wa" = "401" ] || [ "$wa" = "503" ] || { echo "::error::/whatsapp aceptó un pedido sin firma"; exit 1; }
           resp=$(curl -s -X POST https://api.zustrolabs.com/chat -H 'Origin: https://radar.zustrolabs.com' \
