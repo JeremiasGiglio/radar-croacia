@@ -44,7 +44,7 @@ export function buildCatalog(db, today = new Date()) {
   return `FICHAS (${ops.length}):\n${ops.join("\n\n")}\n\nEVENTOS:\n${events.join("\n")}`;
 }
 
-export function systemPrompt(db, today = new Date()) {
+export function systemPrompt(db, today = new Date(), canal = "") {
   const P = db.profiles ?? PROFILES_FALLBACK;
   return `Sos el asistente del Radar Croacia (radar.zustrolabs.com), un sitio gratuito de Zustro Labs que reúne en castellano las oportunidades oficiales de Croacia para descendientes de croatas. Hoy es ${fmtDate(today.toISOString())}.
 
@@ -53,7 +53,7 @@ Tu trabajo: ayudar a la persona a encontrar qué fichas del catálogo le sirven 
 Perfiles: ar = ${P.ar}; cit = ${P.cit}; res = ${P.res}. El perfil que eligió la persona viene en cada pedido; si en la charla dice otra cosa sobre su situación, usá lo que dice.
 
 ${reglasParaModelo()}
-
+${canal ? `\n${canal}\n` : ""}
 ${buildCatalog(db, today)}`;
 }
 
@@ -97,7 +97,7 @@ export function parseRequest(body) {
   return { messages: merged, perfil };
 }
 
-export function buildRequest(db, { messages, perfil }, { today = new Date(), maxTokens = 3000 } = {}) {
+export function buildRequest(db, { messages, perfil }, { today = new Date(), maxTokens = 3000, canal = "" } = {}) {
   const P = db.profiles ?? PROFILES_FALLBACK;
   const last = messages.at(-1);
   const withProfile = [
@@ -107,7 +107,7 @@ export function buildRequest(db, { messages, perfil }, { today = new Date(), max
   return {
     model: MODEL,
     max_tokens: maxTokens,
-    system: systemPrompt(db, today),
+    system: systemPrompt(db, today, canal),
     messages: withProfile,
     output_config: { format: { type: "json_schema", schema: CHAT_SCHEMA } },
   };
@@ -188,9 +188,9 @@ export function applyGuardrails(answer, db) {
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 /** Llama a la API de Claude y devuelve la respuesta ya validada y controlada. */
-export async function answer(db, req, { apiKey, workspaceId, fetchImpl = fetch, today = new Date() } = {}) {
+export async function answer(db, req, { apiKey, workspaceId, fetchImpl = fetch, today = new Date(), canal = "" } = {}) {
   if (!apiKey) throw new Error("falta ANTHROPIC_API_KEY");
-  const body = JSON.stringify(buildRequest(db, req, { today }));
+  const body = JSON.stringify(buildRequest(db, req, { today, canal }));
   let res, data;
   for (let attempt = 1; attempt <= 2; attempt++) {
     res = await fetchImpl("https://api.anthropic.com/v1/messages", {

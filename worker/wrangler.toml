@@ -17,5 +17,14 @@ name = "LIMITER"
 namespace_id = "1001"
 simple = { limit = 10, period = 60 }
 
+# Bot de WhatsApp (ZL-22): /whatsapp responde 503 hasta que estén los secretos
+# WHATSAPP_TOKEN, WHATSAPP_APP_SECRET y WHATSAPP_VERIFY_TOKEN, y el id del número de abajo.
+# Pasos en docs/08_bot_whatsapp.md.
+# WHATSAPP_PHONE_NUMBER_ID = ""   ← va en [vars] cuando exista la app de Meta (ZL-21)
+# Memoria por número (perfil y estado, nunca el texto): se activa cuando se decida ZL-66.
+# [[kv_namespaces]]
+# binding = "WA_STATE"
+# id = "…"
+
 [observability]
 enabled = true

@@ -31,7 +31,7 @@ jobs:
           cache: npm
       - run: npm ci
       - name: Tests del Worker
-        run: node --test tests/unit/chat-worker.test.mjs
+        run: node --test tests/unit/chat-worker.test.mjs tests/unit/whatsapp.test.mjs
       - name: Instalar wrangler
         working-directory: worker
         run: npm ci
@@ -60,6 +60,9 @@ jobs:
           [ "$code" = "200" ] || { echo "::error::api.zustrolabs.com/health no responde"; exit 1; }
           curl -s -o /dev/null -w 'CORS desde otro origen: %{http_code}\n' -X POST https://api.zustrolabs.com/chat \
             -H 'Origin: https://otro.example' -H 'content-type: application/json' -d '{"messages":[{"role":"user","content":"hola"}]}'
+          wa=$(curl -s -o /dev/null -w '%{http_code}' -X POST https://api.zustrolabs.com/whatsapp -d '{}')
+          echo "WhatsApp sin firma: $wa"
+          [ "$wa" = "401" ] || [ "$wa" = "503" ] || { echo "::error::/whatsapp aceptó un pedido sin firma"; exit 1; }
           resp=$(curl -s -X POST https://api.zustrolabs.com/chat -H 'Origin: https://radar.zustrolabs.com' \
             -H 'content-type: application/json' -d '{"messages":[{"role":"user","content":"¿Hay becas para estudiar croata?"}],"perfil":"ar"}')
           echo "$resp" | head -c 600; echo
