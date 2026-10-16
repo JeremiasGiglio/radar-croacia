@@ -21,6 +21,7 @@ const DB = JSON.parse(readFileSync(new URL("../../site/data/opportunities.json",
 const fx = (n) => readFileSync(new URL(`../fixtures/whatsapp/${n}.json`, import.meta.url), "utf8");
 const PHONE_ID = "100000000000001";
 const FROM = "5490000000001";
+const NOW = 1792000000 * 1000 + 60_000; // un minuto después del mensaje de ejemplo
 const env = {
   ANTHROPIC_API_KEY: "k",
   DATA_URL: "https://radar.zustrolabs.com/data/opportunities.json",
@@ -243,7 +244,7 @@ test("worker /whatsapp: mensaje firmado → 200, consulta a Claude con el canal 
     await post(fx("texto")),
     env,
     { waitUntil: (p) => waits.push(p) },
-    { fetch: fakeFetch(sent), store: null },
+    { fetch: fakeFetch(sent), store: null, now: NOW },
   );
   assert.equal(res.status, 200);
   await Promise.all(waits);
@@ -260,22 +261,80 @@ test("worker /whatsapp: si Claude falla, igual responde 200 a Meta y le avisa a 
   const f = fakeFetch(sent);
   const failing = async (url, init) =>
     String(url).startsWith("https://api.anthropic.com") ? new Response("{}", { status: 400 }) : f(url, init);
-  const res = await worker.fetch(await post(fx("texto")), env, {}, { fetch: failing, store: null });
+  const res = await worker.fetch(await post(fx("texto")), env, {}, { fetch: failing, store: null, now: NOW });
   assert.equal(res.status, 200);
   assert.equal(sent[0].body.text.body, TEXTOS.falla);
 });
 
 test("worker /whatsapp: avisos de estado → 200 sin mandar nada", async () => {
   const sent = [];
-  const res = await worker.fetch(await post(fx("estado")), env, {}, { fetch: fakeFetch(sent), store: null });
+  const res = await worker.fetch(await post(fx("estado")), env, {}, { fetch: fakeFetch(sent), store: null, now: NOW });
   assert.equal(res.status, 200);
   assert.equal(sent.length, 0);
 });
 
-test("worker /whatsapp: límite por número", async () => {
+test("worker /whatsapp: pasado el límite por número no contesta nada ni llama a la IA", async () => {
   const sent = [];
-  const LIMITER = { limit: async ({ key }) => ({ success: !key.startsWith("wa:") }) };
-  await worker.fetch(await post(fx("texto")), { ...env, LIMITER }, {}, { fetch: fakeFetch(sent), store: null });
-  assert.equal(sent[0].body.text.body, TEXTOS.muchos);
+  const keys = [];
+  const LIMITER = { limit: async ({ key }) => (keys.push(key), { success: false }) };
+  await worker.fetch(
+    await post(fx("texto")),
+    { ...env, LIMITER },
+    {},
+    { fetch: fakeFetch(sent), store: null, now: NOW },
+  );
+  assert.deepEqual(keys, [`wa:${FROM}`]);
+  assert.equal(sent.length, 0);
   assert.equal(sent.claude, undefined);
+});
+
+test("worker /whatsapp: un mensaje de hace más de 1 h (reintento tardío o reenvío) se ignora", async () => {
+  const sent = [];
+  const res = await worker.fetch(
+    await post(fx("texto")),
+    env,
+    {},
+    { fetch: fakeFetch(sent), store: null, now: NOW + 2 * 3600_000 },
+  );
+  assert.equal(res.status, 200);
+  assert.equal(sent.length, 0);
+  assert.equal(sent.claude, undefined);
+});
+
+test("worker /whatsapp: cuerpo enorme → 413 antes de procesar", async () => {
+  const req = new Request("https://api.zustrolabs.com/whatsapp", {
+    method: "POST",
+    headers: { "content-length": "999999", "X-Hub-Signature-256": "sha256=" + "0".repeat(64) },
+    body: "{}",
+  });
+  assert.equal((await worker.fetch(req, env, {}, {})).status, 413);
+});
+
+test("verificación: no refleja un challenge que no tenga forma de challenge", () => {
+  const u = new URL(
+    "https://api.zustrolabs.com/whatsapp?hub.mode=subscribe&hub.verify_token=verificar-de-prueba&hub.challenge=%3Cscript%3E",
+  );
+  assert.equal(verifySubscription(u, env).status, 400);
+});
+
+test("formatAnswer: un link que no es https no se muestra", () => {
+  const t = formatAnswer({ ...respuestaIA, fichas: [{ id: "x", t: "Ficha", src: ["x", "javascript:alert(1)"] }] });
+  assert.doesNotMatch(t, /javascript|Fuente oficial/);
+  assert.match(t, /- Ficha/);
+});
+
+test("handleEvent: el texto se limpia como en la web (control y 800 caracteres)", async () => {
+  const calls = [];
+  await handleEvent(ev({ text: "hola\u0007" + "a".repeat(2000) }), { db: DB, store: null, ask: ask(calls) });
+  assert.equal(calls[0].messages[0].content.length, 800);
+  assert.ok(!calls[0].messages[0].content.includes("\u0007"));
+});
+
+test("bienvenida: avisa que es automático, qué se guarda y cómo borrarlo", async () => {
+  const r = await handleEvent(ev({ text: "hola" }), { db: DB, store: memoryStore(), ask: ask([]) });
+  const t = r.send[0].interactive.body.text;
+  assert.ok(t.length <= 1024);
+  for (const x of [/automático/, /no asesoramiento legal/, /nunca tus mensajes/, /90 días/, /BORRAR/, /PERSONA/]) {
+    assert.match(t, x);
+  }
 });

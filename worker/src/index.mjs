@@ -2,6 +2,7 @@
 // No guarda mensajes ni datos personales: cada pedido trae la charla y se olvida al responder.
 // /whatsapp → webhook de la Cloud API de Meta (ZL-22), con el mismo cerebro (whatsapp.mjs).
 import { answer, parseRequest } from "./chat.mjs";
+// (parseRequest también limpia los mensajes de WhatsApp: ver askWhatsApp)
 import {
   askWhatsApp,
   handleEvent,
@@ -17,6 +18,8 @@ import {
 const DEFAULT_ORIGINS = "https://radar.zustrolabs.com";
 const DEFAULT_DATA = "https://radar.zustrolabs.com/data/opportunities.json";
 const MAX_BODY = 16_000;
+const MAX_WA_BODY = 256_000;
+const MAX_EDAD_MS = 3600_000; // mensajes de más de 1 h se ignoran (reintentos tardíos o reenvíos de un pedido firmado)
 
 let cache = { at: 0, url: "", db: null };
 
@@ -61,14 +64,22 @@ async function whatsapp(request, env, ctx, deps) {
   const url = new URL(request.url);
   if (request.method === "GET") {
     const v = verifySubscription(url, env);
-    return new Response(v.body, { status: v.status, headers: { "content-type": "text/plain" } });
+    return new Response(v.body, {
+      status: v.status,
+      headers: {
+        "content-type": "text/plain; charset=utf-8",
+        "cache-control": "no-store",
+        "x-content-type-options": "nosniff",
+      },
+    });
   }
   if (request.method !== "POST") return json({ error: "usá POST" }, 405);
   if (!env.WHATSAPP_APP_SECRET || !env.WHATSAPP_TOKEN || !env.WHATSAPP_PHONE_NUMBER_ID) {
     return json({ error: "WhatsApp sin configurar" }, 503);
   }
+  if (Number(request.headers.get("content-length") ?? 0) > MAX_WA_BODY) return json({ error: "demasiado grande" }, 413);
   const raw = await request.text();
-  if (raw.length > 256_000) return json({ error: "demasiado grande" }, 413);
+  if (raw.length > MAX_WA_BODY) return json({ error: "demasiado grande" }, 413);
   if (!(await verifySignature(raw, request.headers.get("X-Hub-Signature-256"), env.WHATSAPP_APP_SECRET))) {
     return json({ error: "firma inválida" }, 401);
   }
@@ -88,18 +99,24 @@ async function whatsapp(request, env, ctx, deps) {
 async function processEvents(events, env, fetchImpl, deps) {
   const store = deps.store !== undefined ? deps.store : kvStore(env.WA_STATE);
   const ask = deps.ask ?? askWhatsApp(env, fetchImpl);
+  const now = deps.now ?? Date.now();
   for (const ev of events) {
     const t0 = Date.now();
+    if (!ev.ts || now - ev.ts * 1000 > MAX_EDAD_MS) {
+      console.log(JSON.stringify({ canal: "wa", ok: true, que: "viejo" }));
+      continue;
+    }
     try {
       if (env.LIMITER?.limit) {
         const { success } = await env.LIMITER.limit({ key: `wa:${ev.from}` });
+        // Pasado el límite no se contesta nada: responder cada mensaje sería otra forma de abuso.
         if (!success) {
-          await sendMessage(env, msgTexto(ev.from, TEXTOS.muchos), fetchImpl);
+          console.log(JSON.stringify({ canal: "wa", ok: true, que: "limite" }));
           continue;
         }
       }
       const db = await loadDb(env, fetchImpl);
-      const r = await handleEvent(ev, { db, store, ask });
+      const r = await handleEvent(ev, { db, store, ask, now });
       for (const m of r.send) await sendMessage(env, m, fetchImpl);
       // Solo métricas: ni el número ni el texto.
       console.log(

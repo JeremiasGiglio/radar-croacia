@@ -3,7 +3,7 @@
 // Reglas: solo procesa pedidos firmados por Meta; no guarda el texto de los mensajes; la memoria
 // (perfil, si atiende una persona) es opcional y depende de ZL-66: sin store, el bot no recuerda nada.
 
-import { answer } from "./chat.mjs";
+import { answer, parseRequest } from "./chat.mjs";
 
 export const GRAPH_VERSION = "v23.0";
 const PERFILES = ["ar", "cit", "res"];
@@ -18,7 +18,8 @@ export const BOTONES_PERFIL = [
 export const TEXTOS = {
   bienvenida:
     "¡Hola! Soy el asistente del Radar Croacia: te ayudo a encontrar oportunidades oficiales de Croacia para descendientes. Respondo con las fichas verificadas del Radar y no doy asesoramiento legal. Para empezar, contame tu situación:",
-  aviso: "Escribí PERSONA para hablar con alguien del equipo o BORRAR para que olvidemos tus datos.",
+  aviso:
+    "Soy un asistente automático: es información, no asesoramiento legal. Guardamos solo tu perfil (nunca tus mensajes) por 90 días. Escribí PERSONA para hablar con alguien del equipo o BORRAR para que lo olvidemos.",
   perfilListo: {
     ar: "Listo: vivís en Argentina y no tenés la ciudadanía croata. ¿Qué estás buscando? Por ejemplo becas, cursos de croata o ayudas para mudarte.",
     cit: "Listo: vivís en Argentina y tenés la ciudadanía croata. ¿Qué estás buscando? Por ejemplo becas, trabajo o ayudas para mudarte.",
@@ -30,7 +31,6 @@ export const TEXTOS = {
   borrado:
     "Listo, borramos lo que teníamos de vos (tu perfil y el estado de la charla). Si volvés a escribir, empezamos de cero.",
   soloTexto: "Por ahora solo puedo leer mensajes de texto. Escribime tu pregunta, por favor.",
-  muchos: "Son muchas preguntas seguidas. Esperá un minuto y probá de nuevo.",
   falla: "El asistente no está disponible en este momento. Escribí PERSONA y te responde alguien del equipo.",
   derivar: "Si querés que lo vea una persona del equipo, escribí PERSONA.",
 };
@@ -46,7 +46,9 @@ export function verifySubscription(url, env) {
   const p = url.searchParams;
   if (!env.WHATSAPP_VERIFY_TOKEN) return { status: 503, body: "sin configurar" };
   if (p.get("hub.mode") === "subscribe" && safeEqual(p.get("hub.verify_token") ?? "", env.WHATSAPP_VERIFY_TOKEN)) {
-    return { status: 200, body: p.get("hub.challenge") ?? "" };
+    // Solo se devuelve un challenge con forma de challenge (Meta manda números): nada de reflejar texto arbitrario.
+    const ch = p.get("hub.challenge") ?? "";
+    return /^[A-Za-z0-9_-]{1,128}$/.test(ch) ? { status: 200, body: ch } : { status: 400, body: "challenge inválido" };
   }
   return { status: 403, body: "token inválido" };
 }
@@ -152,7 +154,15 @@ export const msgBotones = (to, body) => ({
 export function formatAnswer(r) {
   const parts = [r.respuesta];
   if (r.fichas?.length) {
-    parts.push(r.fichas.map((f) => `- ${f.t}\n  Fuente oficial: ${f.src?.[1] ?? f.src?.[0] ?? ""}`).join("\n"));
+    parts.push(
+      r.fichas
+        .map((f) => {
+          // Solo links https de la propia ficha; nunca uno escrito por la IA.
+          const link = /^https:\/\/\S+$/.test(f.src?.[1] ?? "") ? f.src[1] : "";
+          return link ? `- ${f.t}\n  Fuente oficial: ${link}` : `- ${f.t}`;
+        })
+        .join("\n"),
+    );
   }
   if (r.derivar_whatsapp && !r.fuera_de_tema) parts.push(TEXTOS.derivar);
   return parts.filter(Boolean).join("\n\n");
@@ -252,7 +262,8 @@ export async function handleEvent(ev, { db, store, ask, now = Date.now() }) {
   if (!text) return { send: [msgTexto(ev.from, TEXTOS.soloTexto)], metric: "vacio" };
 
   const perfil = PERFILES.includes(state?.perfil) ? state.perfil : "ar";
-  const r = await ask(db, { messages: [{ role: "user", content: text.slice(0, 800) }], perfil });
+  // Misma limpieza que el chat de la web: sin caracteres de control y hasta 800 caracteres.
+  const r = await ask(db, parseRequest({ messages: [{ role: "user", content: text }], perfil }));
   if (state) await save({ ...state, visto: now });
   return { send: [msgTexto(ev.from, formatAnswer(r))], metric: "ia", fichas: r.fichas.length, usage: r.usage };
 }

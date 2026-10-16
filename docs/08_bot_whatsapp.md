@@ -30,6 +30,21 @@ La memoria (KV `WA_STATE`) guarda por número **solo** `{perfil, humanoHasta, vi
 
 El historial de mensajes para que una persona responda desde un panel es otro tema: ZL-65 (panel de atención) y ZL-66 (cuánto se guarda).
 
+## Seguridad (lo que controla el código, con test)
+
+| Riesgo | Control |
+|---|---|
+| Alguien que no es Meta manda mensajes falsos | Firma HMAC `X-Hub-Signature-256` con el secreto de la app, comparada en tiempo constante. Sin firma válida: 401. Sin secretos cargados: 503 (nunca procesa sin firma). El deploy verifica que `/whatsapp` sin firma no dé 200. |
+| Reenvío de un pedido firmado o reintento tardío | Se ignoran los mensajes de más de 1 h. Con memoria, cada `wamid` se responde una sola vez. |
+| Mensajes de otro número de la cuenta | Solo se procesa el `phone_number_id` configurado. |
+| Abuso o costo de IA | Hasta 10 mensajes por minuto por número. Pasado el límite no contesta nada. Más el tope de gasto mensual de la consola de Claude. |
+| Cuerpos enormes | 413 antes de leer si `content-length` pasa 256 KB, y otra vez después de leer. |
+| Verificación usada para reflejar contenido | El challenge solo se devuelve si es alfanumérico, como `text/plain` y con `nosniff`. |
+| Inyección de instrucciones del usuario | Mismo prompt y controles que la web: el mensaje es dato. Limpieza de caracteres de control y corte en 800 caracteres. Sin links de la IA: solo el `https://` oficial de cada ficha. Montos contra las fichas. |
+| Datos personales | Los registros tienen solo métricas, sin número ni texto. La memoria guarda solo perfil y estado por 90 días. BORRAR. Fixtures con datos ficticios. |
+| Secretos | Solo en Cloudflare, cargados por Jeremías. Nada en el repo, el chat ni Jira. |
+| Asistente de uso general (prohibido por Meta) | La política de temas de la web: rechaza lo que no es del Radar. |
+
 ## Comandos
 
 - **PERSONA** (o «humano», «hablar con una persona»): pide que responda alguien del equipo.
@@ -55,6 +70,13 @@ El historial de mensajes para que una persona responda desde un panel es otro te
    - token: el `WHATSAPP_VERIFY_TOKEN`;
    - campo suscripto: **messages**.
 5. Mandar «hola» desde un número de prueba y revisar los registros del Worker. Solo deben aparecer métricas.
+
+## Antes de usarlo con el número real (no se negocia)
+
+1. **Memoria activa (ZL-66)**: así el primer mensaje avisa que es un asistente automático, que es información y no asesoramiento legal, qué se guarda y cómo borrarlo. Sin memoria no hay bienvenida, así que **no se activa en el número real sin memoria**.
+2. **Panel o aviso (ZL-65)**: con el número solo en la API, los mensajes no aparecen en la app. Sin panel, nadie ve los pedidos de PERSONA.
+3. **Evals del bot en verde (ZL-23)**, con casos de inyección.
+4. **Política pública actualizada**: hoy `asistente.html` dice que solo acepta pedidos de la web y que no guarda nada. Hay que sumar WhatsApp y su memoria en `worker/src/policy.mjs` y correr `npm run policy`.
 
 ## Pendiente
 
