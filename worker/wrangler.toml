@@ -22,10 +22,11 @@ simple = { limit = 10, period = 60 }
 # Bot de WhatsApp (ZL-22): /whatsapp responde 503 hasta que estén los secretos
 # WHATSAPP_TOKEN, WHATSAPP_APP_SECRET y WHATSAPP_VERIFY_TOKEN, (el id del número ya está en [vars]).
 # Pasos en docs/08_bot_whatsapp.md.
-# Memoria por número (perfil y estado, nunca el texto): se activa cuando se decida ZL-66.
-# [[kv_namespaces]]
-# binding = "WA_STATE"
-# id = "…"
+# Memoria por número (ZL-66, aprobada el 16/10): solo perfil y estado, nunca el texto; vence a los 90 días.
+# Plan gratis de KV: 1.000 escrituras por día (unas 2 por mensaje).
+[[kv_namespaces]]
+binding = "WA_STATE"
+id = "7149434b82dd4489bbea633f52b5435f"
 
 [observability]
 enabled = true

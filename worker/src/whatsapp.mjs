@@ -26,6 +26,9 @@ export const TEXTOS = {
     res: "Listo: vivís en Croacia con residencia de diáspora. ¿Qué estás buscando? Por ejemplo ayudas para emprender, cursos o trámites.",
   },
   personaSinMemoria: "Listo, le avisamos al equipo y te va a responder una persona en cuanto pueda.",
+  // Sin panel de atención (ZL-65) nadie lee este WhatsApp: se deriva al mail y el bot sigue contestando.
+  personaMail:
+    "Para hablar con una persona del equipo, escribinos a hola@zustrolabs.com contando tu consulta y te respondemos. Mientras tanto, acá sigo para lo que necesites del Radar.",
   persona:
     "Listo, le avisamos al equipo y te va a responder una persona en cuanto pueda. Mientras tanto, el asistente no contesta en esta charla.",
   borrado:
@@ -244,7 +247,7 @@ const HORAS_PERSONA = 24;
  * Decide qué contestar a un evento. Devuelve los mensajes a mandar y métricas (sin texto).
  * deps: {db, store, ask(db, req) → respuesta del chat, now}
  */
-export async function handleEvent(ev, { db, store, ask, now = Date.now() }) {
+export async function handleEvent(ev, { db, store, ask, now = Date.now(), panel = false }) {
   if (store && (await store.seen(ev.id))) return { send: [], metric: "repetido" };
   const state = (store && (await store.get(ev.from))) || null;
   const save = (s) => store?.put(ev.from, s);
@@ -259,6 +262,7 @@ export async function handleEvent(ev, { db, store, ask, now = Date.now() }) {
   if (state?.humanoHasta && state.humanoHasta > now) return { send: [], metric: "humano" };
 
   if (cmd === "persona") {
+    if (!panel) return { send: [msgTexto(ev.from, TEXTOS.personaMail)], metric: "persona", handoff: true };
     if (!store) return { send: [msgTexto(ev.from, TEXTOS.personaSinMemoria)], metric: "persona", handoff: true };
     await save({ ...state, humanoHasta: now + HORAS_PERSONA * 3600_000, visto: now });
     return { send: [msgTexto(ev.from, TEXTOS.persona)], metric: "persona", handoff: true };

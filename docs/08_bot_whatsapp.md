@@ -45,6 +45,12 @@ El historial de mensajes para que una persona responda desde un panel es otro te
 | Secretos | Solo en Cloudflare, cargados por Jeremías. Nada en el repo, el chat ni Jira. |
 | Asistente de uso general (prohibido por Meta) | La política de temas de la web: rechaza lo que no es del Radar. |
 
+## Estado al 16/10/2026
+
+- Memoria **activada** (ZL-66 aprobado): KV `radar-wa-state` (binding `WA_STATE`).
+- **PERSONA**, mientras no exista el panel (ZL-65), deriva a hola@zustrolabs.com y el bot sigue contestando. Con `WHATSAPP_PANEL = "1"` en `[vars]`, PERSONA silencia al bot 24 h.
+- Funciona con el número de prueba. Para el número real hay que repetir el paso «suscribir la app a la WABA» (`POST /{WABA_ID}/subscribed_apps`), porque sin eso Meta no manda los mensajes.
+
 ## Comandos
 
 - **PERSONA** (o «humano», «hablar con una persona»): pide que responda alguien del equipo.

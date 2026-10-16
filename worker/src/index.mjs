@@ -116,7 +116,8 @@ async function processEvents(events, env, fetchImpl, deps) {
         }
       }
       const db = await loadDb(env, fetchImpl);
-      const r = await handleEvent(ev, { db, store, ask, now });
+      // Con panel de atención (ZL-65), PERSONA silencia al bot; sin panel, deriva al mail.
+      const r = await handleEvent(ev, { db, store, ask, now, panel: env.WHATSAPP_PANEL === "1" });
       for (const m of r.send) await sendMessage(env, m, fetchImpl);
       // Solo métricas: ni el número ni el texto.
       console.log(
