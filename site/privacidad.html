@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Privacidad · Radar Croacia</title>
+    <meta
+      name="description"
+      content="Qué datos usa el Radar Croacia en la web, en el chat y en el asistente de WhatsApp, y cómo pedir que se borren."
+    />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'none'; form-action 'none'"
+    />
+    <link rel="canonical" href="https://radar.zustrolabs.com/privacidad.html" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap"
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <main class="wrap policy" id="privacidad">
+      <p><a href="./">← Volver al Radar</a></p>
+      <h1>Privacidad</h1>
+      <p class="sub">
+        Radar Croacia es un proyecto gratuito de Zustro Labs, con el Ateneo Croata de Rosario como socio. Esta página
+        explica qué datos usamos y cómo pedir que se borren. Última actualización: 16/10/2026.
+      </p>
+
+      <section class="panel">
+        <h2>La web</h2>
+        <ul>
+          <li>No hay que crear una cuenta ni dar datos para usar el Radar.</li>
+          <li>No usamos cookies, publicidad ni herramientas de seguimiento.</li>
+          <li>
+            El sitio se publica en GitHub Pages, que puede registrar datos técnicos de las visitas (como la dirección
+            IP) por seguridad.
+          </li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <h2>El chat «Preguntale al Radar»</h2>
+        <ul>
+          <li>
+            Tu pregunta viaja a nuestro servidor (Cloudflare) y a Claude, la IA de Anthropic, solo para armar la
+            respuesta.
+          </li>
+          <li>
+            No guardamos las charlas. En los registros técnicos solo quedan métricas (tiempo de respuesta, cantidad de
+            fichas), nunca el texto.
+          </li>
+          <li>La dirección IP se usa un momento para limitar la cantidad de preguntas por minuto.</li>
+          <li>Más detalles en <a href="asistente.html">Cómo responde el asistente</a>.</li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <h2>El asistente por WhatsApp</h2>
+        <ul>
+          <li>WhatsApp (Meta) procesa tu número y tus mensajes según su propia política de privacidad.</li>
+          <li>
+            Nuestro asistente recibe tu mensaje, lo manda a Claude (Anthropic) para responder con las fichas del Radar y
+            contesta. No guardamos el texto de los mensajes.
+          </li>
+          <li>En los registros técnicos solo quedan métricas: ni tu número ni lo que escribiste.</li>
+          <li>
+            Hoy el asistente no recuerda nada entre mensajes. Si más adelante recuerda tu perfil (por ejemplo, si vivís
+            en Argentina o en Croacia), lo va a avisar en el primer mensaje, solo va a guardar eso (nunca los mensajes),
+            por 90 días como máximo, y vamos a actualizar esta página antes.
+          </li>
+        </ul>
+      </section>
+
+      <section class="panel" id="borrar">
+        <h2>Cómo pedir que borremos tus datos</h2>
+        <ul>
+          <li>Por WhatsApp: escribí <strong>BORRAR</strong> y se borra lo que el asistente tenga de vos.</li>
+          <li>
+            Por mail: escribí a
+            <a href="mailto:hola@zustrolabs.com?subject=Borrar%20mis%20datos">hola@zustrolabs.com</a> con el asunto
+            «Borrar mis datos». Respondemos dentro de los 30 días.
+          </li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <h2>Contacto</h2>
+        <p>Por cualquier duda sobre esta página: <a href="mailto:hola@zustrolabs.com">hola@zustrolabs.com</a>.</p>
+      </section>
+
+      <p class="note">
+        Es información, no asesoramiento legal. El código del Radar es abierto:
+        <a href="https://github.com/JeremiasGiglio/radar-croacia">GitHub</a>.
+      </p>
+    </main>
+  </body>
+</html>

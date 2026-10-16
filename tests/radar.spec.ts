@@ -249,6 +249,16 @@ test.describe("Chat con IA", () => {
     await expect(page.locator(".msg-note a.msg-wa")).toBeVisible();
   });
 
+  test("el pie lleva a la página de privacidad, con cómo borrar los datos", async ({ page }) => {
+    await page.locator("#made-by a", { hasText: "Privacidad" }).click();
+    await expect(page).toHaveURL(/privacidad\.html$/);
+    await expect(page.locator("h1")).toHaveText("Privacidad");
+    await expect(page.locator("#borrar")).toContainText("BORRAR");
+    await expect(page.locator("#borrar a[href^='mailto:hola@zustrolabs.com']")).toBeVisible();
+    const wide = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth + 1);
+    expect(wide).toBe(false);
+  });
+
   test("el link «Cómo responde el asistente» lleva a la política publicada", async ({ page }) => {
     await page.locator("#chat-open").click();
     await page.locator(".chat-note a", { hasText: "Cómo responde el asistente" }).click();
