@@ -178,9 +178,15 @@ test("handleEvent: PERSONA silencia al bot 24 h; BORRAR borra todo y sigue funci
   const calls = [];
   const now = 1_000_000;
   await handleEvent(ev({ kind: "perfil", perfil: "ar" }), { db: DB, store, ask: ask(calls), now });
-  const p = await handleEvent(ev({ text: "PERSONA" }), { db: DB, store, ask: ask(calls), now });
+  const p = await handleEvent(ev({ text: "PERSONA" }), { db: DB, store, ask: ask(calls), now, panel: true });
   assert.ok(p.handoff);
-  const quiet = await handleEvent(ev({ text: "¿y las becas?" }), { db: DB, store, ask: ask(calls), now: now + 60_000 });
+  const quiet = await handleEvent(ev({ text: "¿y las becas?" }), {
+    db: DB,
+    store,
+    ask: ask(calls),
+    now: now + 60_000,
+    panel: true,
+  });
   assert.deepEqual(quiet.send, []);
   assert.equal(calls.length, 0);
   const later = await handleEvent(ev({ text: "¿y las becas?" }), {
@@ -209,7 +215,7 @@ test("handleEvent: sin memoria (ZL-66 pendiente) responde directo con perfil ar 
   const r = await handleEvent(ev({ text: "¿Hay becas?" }), { db: DB, store: null, ask: ask(calls) });
   assert.equal(calls[0].perfil, "ar");
   assert.equal(r.metric, "ia");
-  const p = await handleEvent(ev({ text: "persona" }), { db: DB, store: null, ask: ask(calls) });
+  const p = await handleEvent(ev({ text: "persona" }), { db: DB, store: null, ask: ask(calls), panel: true });
   assert.equal(p.send[0].text.body, TEXTOS.personaSinMemoria);
 });
 
@@ -370,4 +376,21 @@ test("sendMessage: otros errores no reintentan y se informan", async () => {
   const f = async () => (n++, Response.json({ error: { code: 190, message: "token vencido" } }, { status: 401 }));
   await assert.rejects(sendMessage(env, msgTexto("5493410000001", "hola"), f), /WhatsApp 401: token vencido/);
   assert.equal(n, 1);
+});
+
+test("handleEvent: sin panel de atención, PERSONA deriva al mail y el bot no se silencia", async () => {
+  const store = memoryStore();
+  const calls = [];
+  await handleEvent(ev({ kind: "perfil", perfil: "ar" }), { db: DB, store, ask: ask(calls) });
+  const p = await handleEvent(ev({ text: "PERSONA" }), { db: DB, store, ask: ask(calls) });
+  assert.equal(p.send[0].text.body, TEXTOS.personaMail);
+  assert.match(TEXTOS.personaMail, /hola@zustrolabs\.com/);
+  const next = await handleEvent(ev({ text: "¿Hay becas?" }), { db: DB, store, ask: ask(calls) });
+  assert.equal(next.metric, "ia");
+  assert.equal(store._data.get(FROM).humanoHasta, 0);
+});
+
+test("wrangler.toml: la memoria WA_STATE está conectada", () => {
+  const toml = readFileSync(new URL("../../worker/wrangler.toml", import.meta.url), "utf8");
+  assert.match(toml, /^\[\[kv_namespaces\]\]\s*\nbinding = "WA_STATE"\s*\nid = "[0-9a-f]{32}"/m);
 });

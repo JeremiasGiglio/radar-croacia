@@ -50,6 +50,9 @@ ${l(limites)}
 ## Privacidad
 ${l(P.privacidad)}
 
+## WhatsApp
+${l(P.whatsapp)}
+
 ## Controles automáticos (después de la IA)
 ${l(P.controles)}
 
@@ -86,6 +89,7 @@ export function html() {
   <section class="panel"><h2>Cómo escribe</h2>${ul(P.formato)}</section>
   <section class="panel"><h2>Límites</h2>${ul(limites)}</section>
   <section class="panel"><h2>Privacidad</h2>${ul(P.privacidad)}</section>
+  <section class="panel"><h2>WhatsApp</h2>${ul(P.whatsapp)}</section>
   <section class="panel"><h2>Controles automáticos</h2><p>Después de la IA, un programa revisa cada respuesta:</p>${ul(P.controles)}</section>
   <p class="note">Es información, no asesoramiento legal. Radar Croacia es un proyecto gratuito de Zustro Labs, con el Ateneo Croata de Rosario como socio.</p>
 </main>

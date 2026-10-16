@@ -54,7 +54,15 @@ Responde en castellano rioplatense. Si la persona escribe en croata, inglés o p
 ## Privacidad
 - No guarda las charlas: cada pregunta viaja con la conversación y se olvida al responder.
 - En los registros técnicos solo quedan métricas (tiempo de respuesta, cantidad de fichas y tokens), nunca el texto.
-- Solo acepta pedidos desde radar.zustrolabs.com.
+- El chat de la web solo acepta pedidos desde radar.zustrolabs.com.
+
+## WhatsApp
+- Es el mismo asistente, con las mismas reglas, en WhatsApp. Solo recibe mensajes firmados por Meta.
+- Recuerda tu número con tu perfil (dónde vivís y si tenés ciudadanía) y la fecha del último mensaje, nunca lo que escribís. Se borra a los 90 días sin mensajes.
+- El primer mensaje avisa que es un asistente automático y qué guarda.
+- Comandos: PERFIL cambia tu situación, BORRAR elimina lo que recuerda y PERSONA te indica cómo hablar con alguien del equipo.
+- Solo lee texto: audios, fotos y archivos no se procesan.
+- Detalles completos en radar.zustrolabs.com/privacidad.html.
 
 ## Controles automáticos (después de la IA)
 - Solo se muestran fichas que existen en el Radar.
