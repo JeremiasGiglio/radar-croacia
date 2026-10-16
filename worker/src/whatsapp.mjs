@@ -5,7 +5,7 @@
 
 import { answer, parseRequest } from "./chat.mjs";
 
-export const GRAPH_VERSION = "v23.0";
+export const GRAPH_VERSION = "v25.0";
 const PERFILES = ["ar", "cit", "res"];
 
 /** Botones del primer mensaje (Meta: hasta 3 botones, título de hasta 20 caracteres). */
