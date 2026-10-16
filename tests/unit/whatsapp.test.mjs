@@ -14,6 +14,9 @@ import {
   TEXTOS,
   verifySignature,
   verifySubscription,
+  variantArgentina,
+  sendMessage,
+  msgTexto,
 } from "../../worker/src/whatsapp.mjs";
 import { buildRequest } from "../../worker/src/chat.mjs";
 
@@ -337,4 +340,34 @@ test("bienvenida: avisa que es automático, qué se guarda y cómo borrarlo", as
   for (const x of [/automático/, /no asesoramiento legal/, /nunca tus mensajes/, /90 días/, /BORRAR/, /PERSONA/]) {
     assert.match(t, x);
   }
+});
+
+test("variantArgentina: 549… ↔ 54… solo para celulares argentinos", () => {
+  assert.equal(variantArgentina("5493410000001"), "543410000001");
+  assert.equal(variantArgentina("543410000001"), "5493410000001");
+  assert.equal(variantArgentina("15550000000"), null);
+  assert.equal(variantArgentina("385910000000"), null);
+});
+
+test("sendMessage: si Meta rechaza el celular argentino (#131030), reintenta con la otra forma", async () => {
+  const tos = [];
+  const f = async (url, init) => {
+    const to = JSON.parse(init.body).to;
+    tos.push(to);
+    return to === "543410000001"
+      ? Response.json({ messages: [{ id: "ok" }] })
+      : Response.json(
+          { error: { code: 131030, message: "Recipient phone number not in allowed list" } },
+          { status: 400 },
+        );
+  };
+  await sendMessage(env, msgTexto("5493410000001", "hola"), f);
+  assert.deepEqual(tos, ["5493410000001", "543410000001"]);
+});
+
+test("sendMessage: otros errores no reintentan y se informan", async () => {
+  let n = 0;
+  const f = async () => (n++, Response.json({ error: { code: 190, message: "token vencido" } }, { status: 401 }));
+  await assert.rejects(sendMessage(env, msgTexto("5493410000001", "hola"), f), /WhatsApp 401: token vencido/);
+  assert.equal(n, 1);
 });
