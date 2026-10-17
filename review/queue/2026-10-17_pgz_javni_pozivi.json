@@ -1,0 +1,60 @@
+{
+ "source": "pgz_javni_pozivi",
+ "name": "Condado de Primorje-Gorski Kotar (Primorsko-goranska županija): convocatorias y programas (Projekti i programi)",
+ "detected_at": "2026-10-17",
+ "added": [
+  {
+   "guid": "https://www.pgz.hr/?post_type=projekt_program&p=108223",
+   "title": "Javni poziv za podnošenje zahtjeva za dodjelu financijskih sredstava iz projekta Komercijalizacija inovacija 2026.",
+   "link": "https://www.pgz.hr/projekt_program/javni-poziv-za-podnosenje-zahtjeva-za-dodjelu-financijskih-sredstava-iz-projekta-komercijalizacija-inovacija-2026/",
+   "published": "2026-10-15T06:00:00.000Z",
+   "summary": "Inovativnim poduzetnicima dostupno je novih 60 tisuća eura za razvoj proizvoda i usluga te njihov izlazak na tržište. Zaklada FIPRO u suradnji s Primorsko-goranskom županijom objavila je javni poziv u sklopu projekta „Komercijalizacija inovacija”, kojim se pojedinom prijavitelju može dodijeliti od 7 do 20 tisuća eura."
+  }
+ ],
+ "changed": [],
+ "instrucciones": "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json.",
+ "borradores": [
+  {
+   "guid": "https://www.pgz.hr/?post_type=projekt_program&p=108223",
+   "link": "https://www.pgz.hr/projekt_program/javni-poziv-za-podnosenje-zahtjeva-za-dodjelu-financijskih-sredstava-iz-projekta-komercijalizacija-inovacija-2026/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-10-17T09:26:45.172Z",
+   "text_from": "página oficial",
+   "relevante": true,
+   "motivo_relevancia": "Una persona descendiente de croatas podría postularse si funda un obrador o una empresa con sede en el condado antes de recibir los fondos, y también puede hacerlo una asociación que cumpla los requisitos.",
+   "ficha": {
+    "cat": "emp",
+    "t": "Fondos para llevar innovaciones al mercado (2026)",
+    "t_hr": "Javni poziv za podnošenje zahtjeva za dodjelu financijskih sredstava iz projekta Komercijalizacija inovacija 2026.",
+    "who": "Fundación FIPRO (Zaklada FIPRO), en colaboración con el Condado de Primorje-Gorski Kotar (Primorsko-goranska županija)",
+    "amount": "",
+    "what": "Es una convocatoria para emprendedores innovadores que quieran desarrollar productos o servicios y llevarlos al mercado. Cada solicitante puede recibir entre 7.000 y 20.000 euros. Está dirigida a micro, pequeñas y medianas empresas con sede en el condado, a obrtи privados y a personas físicas que vayan a crear un negocio propio con sede en el condado o que cedan sus derechos de innovación a una empresa de la zona.",
+    "el": {
+     "ar": [
+      "cond",
+      "Solo podría postularse si crea antes de la adjudicación una empresa u obrt con sede en el condado de Primorje-Gorski Kotar."
+     ],
+     "cit": [
+      "cond",
+      "Solo podría postularse si crea antes de la adjudicación una empresa u obrt con sede en el condado de Primorje-Gorski Kotar."
+     ],
+     "res": [
+      "cond",
+      "Vivir en Croacia no alcanza: debe tener o crear una empresa u obrt con sede en el condado y cumplir las condiciones del llamado."
+     ]
+    },
+    "src": [
+     "pgz.hr",
+     "https://www.pgz.hr/projekt_program/javni-poziv-za-podnosenje-zahtjeva-za-dodjelu-financijskih-sredstava-iz-projekta-komercijalizacija-inovacija-2026/"
+    ],
+    "ai_generated": true,
+    "deadline": "2026-11-13T23:59:00+01:00",
+    "flag": "Confirmar si una persona física residente en Argentina puede crear un obrt o una sociedad con sede en el condado antes de la adjudicación, y qué documentación exige. El monto de 60.000 euros es el total de la convocatoria y el rango de 7.000 a 20.000 euros es por solicitante; confirmar en el llamado completo. La fuente remite al texto del llamado, los requisitos y los formularios en el sitio de FIPRO; revisar esos documentos antes de publicar, porque el resumen se basa solo en la noticia. La fuente incluye texto de interfaz del sitio («BLOK Privici», «edit» mod) y noticias ajenas a la convocatoria; se ignoraron por no ser parte del llamado. Revisar si el profile res (residencia de diáspora en Croacia) cumple el requisito de sede en el condado, ya que la fuente no lo aclara para ese caso. Se borró el monto «Entre 7.000 y 20.000 euros por solicitante (el total de la convocatoria es de 60.000 euros)»: no aparece textual en la fuente. Revisar el PDF de la convocatoria."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": "Prijave su otvorene od 15. listopada do 13. studenoga 2026. u 23:59 sati ."
+   }
+  }
+ ]
+}
