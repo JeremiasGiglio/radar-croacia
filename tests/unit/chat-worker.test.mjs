@@ -243,3 +243,15 @@ test("controles: se limpia el markdown y un pedido fuera de tema no ofrece Whats
   );
   assert.equal(md.respuesta, "Te sirve la beca.");
 });
+
+test("límites: la llamada a la IA tiene tiempo máximo (no deja al Worker colgado)", async () => {
+  const calls = [];
+  await worker.fetch(
+    post({ messages: [{ role: "user", content: "¿Hay becas?" }], perfil: "ar" }),
+    env,
+    {},
+    { fetch: fakeFetch(ok, calls) },
+  );
+  const ia = calls.find((c) => c.url.startsWith("https://api.anthropic.com"));
+  assert.ok(ia.init.signal instanceof AbortSignal);
+});

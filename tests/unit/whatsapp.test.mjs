@@ -394,3 +394,12 @@ test("wrangler.toml: la memoria WA_STATE está conectada", () => {
   const toml = readFileSync(new URL("../../worker/wrangler.toml", import.meta.url), "utf8");
   assert.match(toml, /^\[\[kv_namespaces\]\]\s*\nbinding = "WA_STATE"\s*\nid = "[0-9a-f]{32}"/m);
 });
+
+test("límites: el envío por WhatsApp tiene tiempo máximo", async () => {
+  let signal;
+  await sendMessage(env, msgTexto("5493410000001", "hola"), async (url, init) => {
+    signal = init.signal;
+    return Response.json({ messages: [{ id: "ok" }] });
+  });
+  assert.ok(signal instanceof AbortSignal);
+});
