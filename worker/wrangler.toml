@@ -17,6 +17,9 @@ DATA_URL = "https://radar.zustrolabs.com/data/opportunities.json"
 # Número real del Radar: +54 9 341 335-0686 (WABA «Radar Croacia» 1119676600545702). No es secreto.
 # El de prueba de Meta era 1429513876909400.
 WHATSAPP_PHONE_NUMBER_ID = "1311970855343004"
+WHATSAPP_PANEL = "1"
+ACCESS_TEAM_DOMAIN = "floral-shape-d2bf.cloudflareaccess.com"
+ACCESS_AUD = "ab8aa325ee7d6e4cab51e6c58bf480e24152149553b7c22e8c5c846b40ce71f4"
 
 # 10 preguntas por minuto por IP. Además, la consola de Claude tiene un tope de gasto mensual.
 [[ratelimits]]
@@ -33,11 +36,11 @@ simple = { limit = 10, period = 60 }
 binding = "WA_STATE"
 id = "7149434b82dd4489bbea633f52b5435f"
 
-# Panel de atención (ZL-65). Queda apagado (WHATSAPP_PANEL sin definir) hasta configurar Cloudflare Access.
-# Mientras tanto, el panel responde 503 y PERSONA sigue derivando a hola@zustrolabs.com.
-# Para prenderlo (otro PR): WHATSAPP_PANEL = "1", ACCESS_TEAM_DOMAIN y ACCESS_AUD en [vars] (no son secretos).
+# Panel de atención (ZL-65), detrás de Cloudflare Access (app «Panel de atención», política «Solo Jeremías»).
+# Estas variables no son secretos: el dominio del equipo de Access y la audiencia (AUD) de la app.
 # Secretos (los carga Jeremías en Cloudflare, nunca en el repo): PANEL_EMAILS (quién entra) y AVISO_PARA (a quién avisar).
-# El destinatario tiene que estar verificado en Email Routing de zustrolabs.com.
+# Sin PANEL_EMAILS el panel responde 503 y PERSONA sigue derivando a hola@zustrolabs.com (no silencia al bot).
+# El destinatario del aviso tiene que estar verificado en Email Routing de zustrolabs.com.
 [[send_email]]
 name = "AVISO"
 

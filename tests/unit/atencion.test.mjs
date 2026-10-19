@@ -438,7 +438,7 @@ test("worker: con WHATSAPP_PANEL=1, PERSONA abre la charla y manda el aviso por 
     now: T0 + 1000,
     notify: async () => (avisos++, true),
   };
-  const env = { ...WA_ENV, WHATSAPP_PANEL: "1" };
+  const env = { ...WA_ENV, ...ENV, WHATSAPP_PANEL: "1" };
   assert.equal((await wa("PERSONA", "wamid.A", env, d)).status, 200);
   assert.equal(sent[0].text.body, TEXTOS.persona);
   assert.equal(avisos, 1);
@@ -461,9 +461,36 @@ test("worker: si el mail de aviso falla, la persona igual recibe la confirmació
       throw new Error("mail caído");
     },
   };
-  await wa("PERSONA", "wamid.C", { ...WA_ENV, WHATSAPP_PANEL: "1" }, d);
+  await wa("PERSONA", "wamid.C", { ...WA_ENV, ...ENV, WHATSAPP_PANEL: "1" }, d);
   assert.equal(sent.length, 1);
   assert.equal(sent[0].text.body, TEXTOS.persona);
+});
+
+test("worker: con WHATSAPP_PANEL=1 pero sin el login completo, PERSONA deriva al mail y el bot no se calla", async () => {
+  for (const falta of ["PANEL_EMAILS", "ACCESS_AUD", "ACCESS_TEAM_DOMAIN"]) {
+    const sent = [];
+    const store = memoryStore();
+    await store.put(NUM, { perfil: "ar", humanoHasta: 0, visto: T0 });
+    const chats = memoryChats();
+    const env = { ...WA_ENV, ...ENV, WHATSAPP_PANEL: "1", [falta]: "" };
+    await wa("PERSONA", "wamid.F" + falta, env, {
+      fetch: fakeGraph(sent),
+      store,
+      chats,
+      now: T0 + 1000,
+      notify: async () => true,
+    });
+    assert.equal(sent[0].text.body, TEXTOS.personaMail, falta);
+    assert.equal(chats._data.size, 0, falta);
+    assert.equal((await store.get(NUM)).humanoHasta, 0, falta);
+  }
+});
+
+test("wrangler.toml: el panel está prendido con el login de Access (dominio y audiencia, que no son secretos)", () => {
+  const toml = readFileSync(new URL("../../worker/wrangler.toml", import.meta.url), "utf8");
+  assert.match(toml, /^WHATSAPP_PANEL = "1"$/m);
+  assert.match(toml, /^ACCESS_TEAM_DOMAIN = "[a-z0-9-]+\.cloudflareaccess\.com"$/m);
+  assert.match(toml, /^ACCESS_AUD = "[0-9a-f]{64}"$/m);
 });
 
 test("worker: el host atencion.zustrolabs.com va al panel (y sin Access configurado, 503)", async () => {
