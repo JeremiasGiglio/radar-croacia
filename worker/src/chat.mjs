@@ -1,6 +1,7 @@
 // Lógica del chat del Radar (sin dependencias: corre igual en Cloudflare Workers y en Node para los tests).
 // Reglas: responde solo con las fichas verificadas; nunca inventa montos; no guarda mensajes.
 
+import { textos } from "./textos.mjs";
 import { LIMITES, reglasParaModelo } from "./policy.mjs";
 
 export const MODEL = "claude-haiku-5-5";
@@ -126,14 +127,22 @@ export function validateAnswer(a) {
   );
 }
 
-const NUM = String.raw`\d+(?:[.\s\u00A0]\d{3})*(?:,\d+)?`;
-const CUR = String.raw`(?:€|eur(?:o|os)?\b|usd|us\$|d[oó]lares|kunas?)`;
-const MONEY_RE = new RegExp(String.raw`${CUR}\s*(${NUM})|(${NUM})\s*(?:mil\s+)?${CUR}`, "gi");
-const intPart = (n) => String(n).split(",")[0].replace(/\D/g, "");
+const NUM = String.raw`\d+(?:[.,\s\u00A0]\d{3})*(?:,\d+)?`;
+// Monedas en castellano, croata, inglés y portugués (ZL-78): «€», «euros», «eura», «dollars», «kuna», «reais»…
+const CUR = String.raw`(?:€|eur(?:o|os|a)?\b|usd|us\$|d[oó]lares|dollars?|dolara|kun[aei]\b|kn\b|reais|r\$)`;
+const MIL = String.raw`(?:mil|tisuća|tisuće|thousand)`;
+const MONEY_RE = new RegExp(String.raw`${CUR}\s*(${NUM})|(${NUM})\s*(?:${MIL}\s+)?${CUR}`, "gi");
+// «1.050», «1,050» y «1 050» son mil cincuenta; «400,50» es cuatrocientos con cincuenta.
+const intPart = (n) =>
+  /^\d{1,3}(?:[.,\s\u00A0]\d{3})+$/.test(String(n))
+    ? String(n).replace(/\D/g, "")
+    : String(n).split(",")[0].replace(/\D/g, "");
 const numbersIn = (s) => [...String(s ?? "").matchAll(new RegExp(NUM, "g"))].map((m) => intPart(m[0]));
 /** Cifras de plata de un texto: «€400», «400 euros», «30 mil euros» (este último nunca coincide: se descarta). */
 export const moneyIn = (s) =>
-  [...String(s ?? "").matchAll(MONEY_RE)].map((m) => intPart(m[1] ?? m[2]) + (/mil\s/i.test(m[0]) ? "k" : ""));
+  [...String(s ?? "").matchAll(MONEY_RE)].map(
+    (m) => intPart(m[1] ?? m[2]) + (new RegExp(String.raw`${MIL}\s`, "i").test(m[0]) ? "k" : ""),
+  );
 
 /** Texto plano: saca negritas, títulos, viñetas y código de markdown, conservando los saltos de línea. */
 export function stripMarkdown(s) {
@@ -153,7 +162,8 @@ export function stripMarkdown(s) {
  * - sin links (la página muestra la fuente oficial de cada ficha);
  * - cada oración que habla de plata tiene que usar cifras que estén en el monto de alguna ficha; si no, se saca.
  */
-export function applyGuardrails(answer, db) {
+export function applyGuardrails(answer, db, { whatsapp = false, idioma = "es" } = {}) {
+  const T = textos(idioma);
   const byId = new Map((db.opportunities ?? []).map((o) => [o.id, o]));
   const notes = [];
   const fichas = [...new Set(answer.fichas)].filter((id) => byId.has(id)).slice(0, LIMITS.fichas);
@@ -169,17 +179,38 @@ export function applyGuardrails(answer, db) {
     if (!ok) notes.push("se sacó una cifra que no está en las fichas");
     return ok;
   });
-  text = kept.join(" ").trim();
-  if (kept.length !== sentences.length) text += " Para montos exactos, mirá la ficha oficial.";
+  // Por WhatsApp no se dice «escribinos por WhatsApp» ni «una persona por WhatsApp» (ZL-76): se saca la oración
+  // y, en su lugar, el bot agrega cómo pedir una persona (PERSONA) en el idioma de la charla.
+  let derivar = answer.derivar_whatsapp;
+  const final = whatsapp
+    ? kept.filter((s) => {
+        const habla = /whats\s?app/i.test(s);
+        if (habla) {
+          notes.push("se sacó una mención a WhatsApp");
+          derivar = true;
+        }
+        return !habla;
+      })
+    : kept;
+  text = final.join(" ").trim();
+  if (kept.length !== sentences.length)
+    text += " " + (whatsapp ? T.montos : "Para montos exactos, mirá la ficha oficial.");
   if (text.length > LIMITS.answer) text = text.slice(0, LIMITS.answer).replace(/\s+\S*$/, "") + "…";
-  if (!text)
-    text = "No tengo una respuesta segura para eso. Si querés, escribinos por WhatsApp y te ayuda una persona.";
+  text = text.trim();
+  let sinTexto = false;
+  if (!text) {
+    sinTexto = true;
+    text = whatsapp
+      ? T.sinRespuesta
+      : "No tengo una respuesta segura para eso. Si querés, escribinos por WhatsApp y te ayuda una persona.";
+  }
 
   return {
     respuesta: text,
     fichas: fichas.map((id) => ({ id, t: byId.get(id).t, src: byId.get(id).src })),
     // Sin fichas, se ofrece una persona; salvo que el pedido sea ajeno al Radar.
-    derivar_whatsapp: answer.derivar_whatsapp || (fichas.length === 0 && !answer.fuera_de_tema),
+    // Por WhatsApp, el texto de «sin respuesta» ya dice cómo pedir una persona: no se repite.
+    derivar_whatsapp: whatsapp && sinTexto ? false : derivar || (fichas.length === 0 && !answer.fuera_de_tema),
     fuera_de_tema: answer.fuera_de_tema,
     notes,
   };
@@ -188,7 +219,11 @@ export function applyGuardrails(answer, db) {
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 /** Llama a la API de Claude y devuelve la respuesta ya validada y controlada. */
-export async function answer(db, req, { apiKey, workspaceId, fetchImpl = fetch, today = new Date(), canal = "" } = {}) {
+export async function answer(
+  db,
+  req,
+  { apiKey, workspaceId, fetchImpl = fetch, today = new Date(), canal = "", whatsapp = false, idioma = "es" } = {},
+) {
   if (!apiKey) throw new Error("falta ANTHROPIC_API_KEY");
   const body = JSON.stringify(buildRequest(db, req, { today, canal }));
   let res, data;
@@ -221,5 +256,5 @@ export async function answer(db, req, { apiKey, workspaceId, fetchImpl = fetch, 
     throw new Error("la respuesta no es JSON");
   }
   if (!validateAnswer(parsed)) throw new Error("la respuesta no cumple el esquema");
-  return { ...applyGuardrails(parsed, db), usage: data.usage ?? {} };
+  return { ...applyGuardrails(parsed, db, { whatsapp, idioma }), usage: data.usage ?? {} };
 }

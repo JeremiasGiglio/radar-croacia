@@ -99,7 +99,7 @@ test("agregar: crea la charla, suma mensajes y marca el último de la persona", 
   assert.equal(c.ultimoPersona, T0);
   assert.equal(c.ultimo, T0 + 1000);
   const [i] = await chats.list();
-  assert.deepEqual(Object.keys(i).sort(), ["abierta", "num", "ultimo", "ultimoPersona"]); // el índice no tiene texto
+  assert.deepEqual(Object.keys(i).sort(), ["abierta", "idioma", "num", "ultimo", "ultimoPersona"]); // el índice no tiene texto
 });
 
 test("agregar: límites de tamaño (200 mensajes, 1.600 caracteres cada uno)", async () => {

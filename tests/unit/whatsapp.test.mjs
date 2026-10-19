@@ -148,11 +148,14 @@ test("botones de perfil: 3 como máximo y títulos de hasta 20 caracteres (lími
 const ev = (o) => ({ id: "wamid." + Math.random(), from: FROM, ts: 0, kind: "text", text: "hola", ...o });
 const ask = (calls) => async (db, req) => (calls.push(req), respuestaIA);
 
-test("handleEvent: primer contacto con memoria → bienvenida con botones; después recuerda el perfil", async () => {
+test("handleEvent: primer contacto con memoria → idioma, bienvenida con botones; después recuerda el perfil", async () => {
   const store = memoryStore();
   const calls = [];
-  const a = await handleEvent(ev({ text: "hola" }), { db: DB, store, ask: ask(calls) });
+  const l = await handleEvent(ev({ text: "hola" }), { db: DB, store, ask: ask(calls) });
+  assert.equal(l.send[0].interactive.type, "list");
+  const a = await handleEvent(ev({ kind: "idioma", idioma: "es" }), { db: DB, store, ask: ask(calls) });
   assert.equal(a.send[0].type, "interactive");
+  assert.equal(a.send[0].interactive.type, "button");
   assert.match(a.send[0].interactive.body.text, /PERSONA/);
   assert.equal(calls.length, 0);
 
@@ -340,7 +343,7 @@ test("handleEvent: el texto se limpia como en la web (control y 800 caracteres)"
 });
 
 test("bienvenida: avisa que es automático, qué se guarda y cómo borrarlo", async () => {
-  const r = await handleEvent(ev({ text: "hola" }), { db: DB, store: memoryStore(), ask: ask([]) });
+  const r = await handleEvent(ev({ kind: "idioma", idioma: "es" }), { db: DB, store: memoryStore(), ask: ask([]) });
   const t = r.send[0].interactive.body.text;
   assert.ok(t.length <= 1024);
   for (const x of [/automático/, /no asesoramiento legal/, /no lo que escribís/, /90 días/, /BORRAR/, /PERSONA/]) {

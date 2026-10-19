@@ -4,6 +4,7 @@
 // atencion.zustrolabs.com → panel de atención humana (ZL-65), detrás de Cloudflare Access (atencion.mjs).
 import { avisar, kvChats, panel } from "./atencion.mjs";
 import { answer, parseRequest } from "./chat.mjs";
+import { textos } from "./textos.mjs";
 // (parseRequest también limpia los mensajes de WhatsApp: ver askWhatsApp)
 import {
   askWhatsApp,
@@ -12,7 +13,6 @@ import {
   msgTexto,
   parseWebhook,
   sendMessage,
-  TEXTOS,
   verifySignature,
   verifySubscription,
 } from "./whatsapp.mjs";
@@ -141,6 +141,7 @@ async function processEvents(events, env, fetchImpl, deps) {
           ok: true,
           ms: Date.now() - t0,
           que: r.metric,
+          idioma: r.idioma,
           fichas: r.fichas,
           usage: r.usage,
           handoff: r.handoff,
@@ -151,7 +152,9 @@ async function processEvents(events, env, fetchImpl, deps) {
       console.log(
         JSON.stringify({ canal: "wa", ok: false, ms: Date.now() - t0, error: String(e.message).slice(0, 200) }),
       );
-      await sendMessage(env, msgTexto(ev.from, TEXTOS.falla), fetchImpl).catch(() => {});
+      // El aviso de falla va en el idioma de la charla (si la memoria responde).
+      const st = await Promise.resolve(store?.get(ev.from)).catch(() => null);
+      await sendMessage(env, msgTexto(ev.from, textos(st?.idioma).falla), fetchImpl).catch(() => {});
     }
   }
 }

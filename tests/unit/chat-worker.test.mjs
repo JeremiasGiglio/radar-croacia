@@ -186,6 +186,8 @@ test("evals del chat: casos bien formados y el puntaje funciona con un modelo si
   assert.ok(cases.length >= 8);
   for (const c of cases) {
     assert.ok(c.id && c.porque && c.expect && c.messages.at(-1).role === "user", c.id);
+    if (c.canal) assert.equal(c.canal, "whatsapp", c.id);
+    if (c.idioma) assert.ok(["es", "hr", "en", "pt"].includes(c.idioma), c.id);
     for (const id of c.expect.fichas_alguna ?? [])
       assert.ok(
         DB.opportunities.some((o) => o.id === id),

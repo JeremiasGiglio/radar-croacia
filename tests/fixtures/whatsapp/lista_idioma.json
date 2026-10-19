@@ -1,0 +1,47 @@
+{
+  "object": "whatsapp_business_account",
+  "entry": [
+    {
+      "id": "200000000000002",
+      "changes": [
+        {
+          "field": "messages",
+          "value": {
+            "messaging_product": "whatsapp",
+            "metadata": {
+              "display_phone_number": "15550000000",
+              "phone_number_id": "100000000000001"
+            },
+            "contacts": [
+              {
+                "profile": {
+                  "name": "Persona de prueba"
+                },
+                "wa_id": "5490000000001"
+              }
+            ],
+            "messages": [
+              {
+                "context": {
+                  "from": "15550000000",
+                  "id": "wamid.TEST_PIDE_IDIOMA"
+                },
+                "from": "5490000000001",
+                "id": "wamid.TEST_LISTA_IDIOMA_1",
+                "timestamp": "1792000060",
+                "type": "interactive",
+                "interactive": {
+                  "type": "list_reply",
+                  "list_reply": {
+                    "id": "idioma_hr",
+                    "title": "Hrvatski"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -7,43 +7,41 @@
 
 import { agregar } from "./atencion.mjs";
 import { answer, parseRequest } from "./chat.mjs";
+import {
+  BOTON_IDIOMA,
+  IDIOMA_PROMPT,
+  IDIOMAS,
+  idiomaDe,
+  NOMBRE_IDIOMA,
+  SALUDO_IDIOMA,
+  SECCION_IDIOMA,
+  TEXTOS_I18N,
+  textos,
+} from "./textos.mjs";
 
 export const GRAPH_VERSION = "v25.0";
 const PERFILES = ["ar", "cit", "res"];
+const IDS_PERFIL = ["perfil_ar", "perfil_cit", "perfil_res"];
 
-/** Botones del primer mensaje (Meta: hasta 3 botones, título de hasta 20 caracteres). */
-export const BOTONES_PERFIL = [
-  { id: "perfil_ar", title: "Sin ciudadanía" },
-  { id: "perfil_cit", title: "Con ciudadanía" },
-  { id: "perfil_res", title: "Vivo en Croacia" },
-];
+/** Botones de perfil en el idioma de la charla (Meta: hasta 3 botones, título de hasta 20 caracteres). */
+export const botonesPerfil = (idioma = "es") =>
+  textos(idioma).botones.map((title, i) => ({ id: IDS_PERFIL[i], title }));
+export const BOTONES_PERFIL = botonesPerfil("es");
 
-export const TEXTOS = {
-  bienvenida:
-    "¡Hola! Soy el asistente del Radar Croacia: te ayudo a encontrar oportunidades oficiales de Croacia para descendientes. Respondo con las fichas verificadas del Radar y no doy asesoramiento legal. Para empezar, contame tu situación:",
-  aviso:
-    "Soy un asistente automático: es información, no asesoramiento legal. Guardamos tu perfil por 90 días, pero no lo que escribís (salvo que pidas hablar con una persona). Escribí PERSONA para hablar con alguien del equipo o BORRAR para que lo olvidemos.",
-  perfilListo: {
-    ar: "Listo: vivís en Argentina y no tenés la ciudadanía croata. ¿Qué estás buscando? Por ejemplo becas, cursos de croata o ayudas para mudarte.",
-    cit: "Listo: vivís en Argentina y tenés la ciudadanía croata. ¿Qué estás buscando? Por ejemplo becas, trabajo o ayudas para mudarte.",
-    res: "Listo: vivís en Croacia con residencia de diáspora. ¿Qué estás buscando? Por ejemplo ayudas para emprender, cursos o trámites.",
-  },
-  personaSinMemoria: "Listo, le avisamos al equipo y te va a responder una persona en cuanto pueda.",
-  // Sin panel de atención (ZL-65) nadie lee este WhatsApp: se deriva al mail y el bot sigue contestando.
-  personaMail:
-    "Para hablar con una persona del equipo, escribinos a hola@zustrolabs.com contando tu consulta y te respondemos. Mientras tanto, acá sigo para lo que necesites del Radar.",
-  persona:
-    "Listo, le avisamos al equipo y te va a responder una persona en cuanto pueda. Escribí acá tu consulta: para que el equipo la lea, guardamos lo que escribas desde ahora por 30 días (BORRAR lo borra antes). Mientras tanto, el asistente no contesta en esta charla.",
-  borrado:
-    "Listo, borramos lo que teníamos de vos (tu perfil, el estado y los mensajes guardados para el equipo). Si volvés a escribir, empezamos de cero.",
-  soloTexto: "Por ahora solo puedo leer mensajes de texto. Escribime tu pregunta, por favor.",
-  falla: "El asistente no está disponible en este momento. Escribí PERSONA y te responde alguien del equipo.",
-  derivar: "Si querés que lo vea una persona del equipo, escribí PERSONA.",
-};
+/** Textos en castellano (compatibilidad); cada idioma está en textos.mjs. */
+export const TEXTOS = TEXTOS_I18N.es;
+export { IDIOMAS, TEXTOS_I18N };
 
 /** Lo que se agrega al prompt cuando la charla es por WhatsApp. */
 export const CANAL_WHATSAPP =
   "Canal: WhatsApp. Ya estás hablando por WhatsApp: nunca digas «escribinos por WhatsApp». Si conviene una persona, poné derivar_whatsapp = true y el sistema le explica cómo pedirla. Cada mensaje llega solo, sin el historial de la charla: si falta contexto, pedilo en una oración.";
+
+/** Aviso de canal + idioma elegido (ZL-78). En castellano queda igual que antes. */
+export function canalWhatsApp(idioma = "es") {
+  const i = idiomaDe(idioma);
+  if (i === "es") return CANAL_WHATSAPP;
+  return `${CANAL_WHATSAPP}\nIdioma elegido por la persona: ${IDIOMA_PROMPT[i]}. Respondé en ese idioma (el catálogo está en castellano: traducilo). Los nombres oficiales van en croata. Si la persona te escribe claramente en otro idioma, respondé en el idioma en que escribe.`;
+}
 
 // ───────────────────────── Seguridad ─────────────────────────
 
@@ -90,7 +88,7 @@ export async function verifySignature(rawBody, header, secret) {
 /**
  * Pasa el payload de Meta a eventos simples. Ignora los avisos de estado (enviado, leído) y lo que
  * llegue para otro número de la cuenta.
- * @returns {{id:string, from:string, ts:number, kind:"text"|"perfil"|"otro", text?:string, perfil?:string}[]}
+ * @returns {{id:string, from:string, ts:number, kind:"text"|"perfil"|"idioma"|"otro", text?:string, perfil?:string, idioma?:string}[]}
  */
 export function parseWebhook(payload, phoneNumberId) {
   if (payload?.object !== "whatsapp_business_account") return [];
@@ -105,6 +103,9 @@ export function parseWebhook(payload, phoneNumberId) {
         if (!base.id || !/^\d{6,16}$/.test(base.from)) continue;
         if (m.type === "text") {
           out.push({ ...base, kind: "text", text: String(m.text?.body ?? "") });
+        } else if (m.type === "interactive" && m.interactive?.type === "list_reply") {
+          const i = /^idioma_(es|hr|en|pt)$/.exec(m.interactive.list_reply?.id ?? "")?.[1];
+          out.push(i ? { ...base, kind: "idioma", idioma: i } : { ...base, kind: "otro" });
         } else if (m.type === "interactive" && m.interactive?.type === "button_reply") {
           const p = /^perfil_(ar|cit|res)$/.exec(m.interactive.button_reply?.id ?? "")?.[1];
           out.push(p ? { ...base, kind: "perfil", perfil: p } : { ...base, kind: "otro" });
@@ -126,11 +127,26 @@ export function comando(text) {
     .trim()
     .toLowerCase()
     .normalize("NFD")
-    .replace(/[̀-ͯ]/g, "")
-    .replace(/[¡!¿?.]/g, "");
-  if (/^(borrar|borra|olvidame|eliminar mis datos)$/.test(t)) return "borrar";
-  if (/^(persona|humano|hablar con (una )?persona|operador|agente)$/.test(t)) return "persona";
-  if (/^(perfil|cambiar perfil)$/.test(t)) return "perfil";
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[¡!¿?.,;:-]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  // Castellano, croata, inglés y portugués (ZL-78). Solo el mensaje entero: «borrar mi duda» no es un comando.
+  if (
+    /^(borrar|borra|olvidame|eliminar mis datos|obrisi|obrisi me|zaboravi me|delete|delete my data|forget me|apagar|apagar meus dados|esqueca me|esquecer)$/.test(
+      t,
+    )
+  )
+    return "borrar";
+  if (
+    /^(persona|humano|hablar con (una )?persona|operador|agente|osoba|covjek|razgovor s osobom|operater|person|human|agent|talk to a person|operator|pessoa|atendente|falar com uma pessoa)$/.test(
+      t,
+    )
+  )
+    return "persona";
+  if (/^(perfil|cambiar perfil|profil|promijeni profil|profile|change profile|mudar perfil)$/.test(t)) return "perfil";
+  if (/^(idioma|cambiar idioma|jezik|promijeni jezik|language|change language|lingua|mudar idioma)$/.test(t))
+    return "idioma";
   return null;
 }
 
@@ -144,7 +160,7 @@ export const msgTexto = (to, body) => ({
   text: { preview_url: false, body: String(body).slice(0, 4096) },
 });
 
-export const msgBotones = (to, body) => ({
+export const msgBotones = (to, body, idioma = "es") => ({
   messaging_product: "whatsapp",
   recipient_type: "individual",
   to,
@@ -152,12 +168,29 @@ export const msgBotones = (to, body) => ({
   interactive: {
     type: "button",
     body: { text: String(body).slice(0, 1024) },
-    action: { buttons: BOTONES_PERFIL.map((b) => ({ type: "reply", reply: b })) },
+    action: { buttons: botonesPerfil(idioma).map((b) => ({ type: "reply", reply: b })) },
+  },
+});
+
+/** Lista para elegir idioma (4 opciones: más de 3, por eso es lista y no botones). */
+export const msgIdiomas = (to) => ({
+  messaging_product: "whatsapp",
+  recipient_type: "individual",
+  to,
+  type: "interactive",
+  interactive: {
+    type: "list",
+    body: { text: SALUDO_IDIOMA },
+    action: {
+      button: BOTON_IDIOMA,
+      sections: [{ title: SECCION_IDIOMA, rows: IDIOMAS.map((i) => ({ id: `idioma_${i}`, title: NOMBRE_IDIOMA[i] })) }],
+    },
   },
 });
 
 /** Respuesta de la IA → texto de WhatsApp. Los links son solo los oficiales de cada ficha (no los escribe la IA). */
-export function formatAnswer(r) {
+export function formatAnswer(r, idioma = "es") {
+  const T = textos(idioma);
   const parts = [r.respuesta];
   if (r.fichas?.length) {
     parts.push(
@@ -165,12 +198,12 @@ export function formatAnswer(r) {
         .map((f) => {
           // Solo links https de la propia ficha; nunca uno escrito por la IA.
           const link = /^https:\/\/\S+$/.test(f.src?.[1] ?? "") ? f.src[1] : "";
-          return link ? `- ${f.t}\n  Fuente oficial: ${link}` : `- ${f.t}`;
+          return link ? `- ${f.t}\n  ${T.fuente}: ${link}` : `- ${f.t}`;
         })
         .join("\n"),
     );
   }
-  if (r.derivar_whatsapp && !r.fuera_de_tema) parts.push(TEXTOS.derivar);
+  if (r.derivar_whatsapp && !r.fuera_de_tema) parts.push(T.derivar);
   return parts.filter(Boolean).join("\n\n");
 }
 
@@ -249,12 +282,17 @@ const HORAS_PERSONA = 24;
 
 /** Cómo queda en el panel un mensaje que no es texto. */
 const notaNoTexto = (ev) =>
-  ev.kind === "perfil" ? "[Tocó un botón de perfil]" : "[Mandó algo que no es texto: audio, foto o archivo]";
+  ev.kind === "perfil"
+    ? "[Tocó un botón de perfil]"
+    : ev.kind === "idioma"
+      ? "[Eligió idioma]"
+      : "[Mandó algo que no es texto: audio, foto o archivo]";
 
 /**
  * Decide qué contestar a un evento. Devuelve los mensajes a mandar y métricas (sin texto).
- * deps: {db, store, ask(db, req) → respuesta del chat, now, panel, chats}
+ * deps: {db, store, ask(db, req, {idioma}) → respuesta del chat, now, panel, chats}
  * chats (ZL-65): charlas con atención humana; solo se usa con panel activo.
+ * Idioma (ZL-78): en el primer contacto se pregunta con una lista; se guarda con el perfil.
  */
 export async function handleEvent(ev, { db, store, ask, now = Date.now(), panel = false, chats = null }) {
   if (store && (await store.seen(ev.id))) return { send: [], metric: "repetido" };
@@ -262,11 +300,13 @@ export async function handleEvent(ev, { db, store, ask, now = Date.now(), panel 
   const save = (s) => store?.put(ev.from, s);
   const cmd = ev.kind === "text" ? comando(ev.text) : null;
   const conPanel = panel && store && chats;
+  const idioma = idiomaDe(state?.idioma);
+  const T = textos(idioma);
 
   if (cmd === "borrar") {
     await store?.delete(ev.from);
     await chats?.delete(ev.from);
-    return { send: [msgTexto(ev.from, TEXTOS.borrado)], metric: "borrar" };
+    return { send: [msgTexto(ev.from, T.borrado)], metric: "borrar" };
   }
 
   // Si atiende una persona, el bot no contesta (salvo BORRAR) hasta que se devuelva o pasen 24 h.
@@ -281,53 +321,84 @@ export async function handleEvent(ev, { db, store, ask, now = Date.now(), panel 
   }
 
   if (cmd === "persona") {
-    if (!panel) return { send: [msgTexto(ev.from, TEXTOS.personaMail)], metric: "persona", handoff: true };
-    if (!store) return { send: [msgTexto(ev.from, TEXTOS.personaSinMemoria)], metric: "persona", handoff: true };
+    if (!panel) return { send: [msgTexto(ev.from, T.personaMail)], metric: "persona", handoff: true };
+    if (!store) return { send: [msgTexto(ev.from, T.personaSinMemoria)], metric: "persona", handoff: true };
     await save({ ...state, humanoHasta: now + HORAS_PERSONA * 3600_000, visto: now });
     if (chats) {
       // Se abre la charla en el panel. El texto «PERSONA» cuenta como su último mensaje (ventana de 24 h).
       await agregar(chats, ev.from, { de: "persona", texto: String(ev.text ?? "PERSONA").trim() }, now, {
         abierta: true,
+        idioma,
       });
       await agregar(
         chats,
         ev.from,
-        { de: "sistema", texto: "Pidió hablar con una persona. El bot está en pausa." },
+        {
+          de: "sistema",
+          texto: `Pidió hablar con una persona. El bot está en pausa. Idioma: ${NOMBRE_IDIOMA[idioma]}.`,
+        },
         now,
       );
     }
-    return { send: [msgTexto(ev.from, TEXTOS.persona)], metric: "persona", handoff: true, notify: Boolean(chats) };
+    return { send: [msgTexto(ev.from, T.persona)], metric: "persona", handoff: true, notify: Boolean(chats) };
   }
+
+  if (ev.kind === "idioma") {
+    const nuevo = idiomaDe(ev.idioma);
+    const N = textos(nuevo);
+    await save({ ...state, idioma: nuevo, humanoHasta: 0, visto: now });
+    // Con perfil ya elegido solo se confirma; si no, bienvenida y botones de perfil en ese idioma.
+    if (PERFILES.includes(state?.perfil)) return { send: [msgTexto(ev.from, N.idiomaCambiado)], metric: "idioma" };
+    return { send: [msgBotones(ev.from, `${N.bienvenida}\n\n${N.aviso}`, nuevo)], metric: "idioma" };
+  }
+
+  if (cmd === "idioma" && store) return { send: [msgIdiomas(ev.from)], metric: "pide_idioma" };
 
   if (ev.kind === "perfil") {
     await save({ ...state, perfil: ev.perfil, humanoHasta: 0, visto: now });
-    return { send: [msgTexto(ev.from, TEXTOS.perfilListo[ev.perfil])], metric: "perfil" };
+    return { send: [msgTexto(ev.from, T.perfilListo[ev.perfil])], metric: "perfil" };
   }
 
-  if (ev.kind === "otro") return { send: [msgTexto(ev.from, TEXTOS.soloTexto)], metric: "otro" };
+  if (ev.kind === "otro") return { send: [msgTexto(ev.from, T.soloTexto)], metric: "otro" };
 
-  // Primer contacto (solo si hay memoria) o pedido de cambiar el perfil: botones.
+  // Primer contacto (solo con memoria): lista de idiomas. Si ya la vio y escribió igual, sigue en castellano.
+  if (store && !state) {
+    await save({ humanoHasta: 0, visto: now });
+    return { send: [msgIdiomas(ev.from)], metric: "pide_idioma" };
+  }
+
+  // Sin perfil o pedido de cambiarlo: botones.
   if (store && (!state?.perfil || cmd === "perfil")) {
     await save({ ...state, humanoHasta: 0, visto: now });
-    const body = cmd === "perfil" ? "Contame tu situación:" : `${TEXTOS.bienvenida}\n\n${TEXTOS.aviso}`;
-    return { send: [msgBotones(ev.from, body)], metric: "bienvenida" };
+    const body = cmd === "perfil" ? T.perfilPedir : `${T.bienvenida}\n\n${T.aviso}`;
+    return { send: [msgBotones(ev.from, body, idioma)], metric: "bienvenida" };
   }
 
   const text = String(ev.text ?? "").trim();
-  if (!text) return { send: [msgTexto(ev.from, TEXTOS.soloTexto)], metric: "vacio" };
+  if (!text) return { send: [msgTexto(ev.from, T.soloTexto)], metric: "vacio" };
 
   const perfil = PERFILES.includes(state?.perfil) ? state.perfil : "ar";
   // Misma limpieza que el chat de la web: sin caracteres de control y hasta 800 caracteres.
-  const r = await ask(db, parseRequest({ messages: [{ role: "user", content: text }], perfil }));
+  const r = await ask(db, parseRequest({ messages: [{ role: "user", content: text }], perfil }), { idioma });
   if (state) await save({ ...state, visto: now });
-  return { send: [msgTexto(ev.from, formatAnswer(r))], metric: "ia", fichas: r.fichas.length, usage: r.usage };
+  return {
+    send: [msgTexto(ev.from, formatAnswer(r, idioma))],
+    metric: "ia",
+    idioma,
+    fichas: r.fichas.length,
+    usage: r.usage,
+  };
 }
 
-/** Respuesta del chat con el aviso de canal (lo usa el Worker; en los tests se reemplaza). */
-export const askWhatsApp = (env, fetchImpl) => (db, req) =>
-  answer(db, req, {
-    apiKey: env.ANTHROPIC_API_KEY,
-    workspaceId: env.ANTHROPIC_WORKSPACE_ID,
-    fetchImpl,
-    canal: CANAL_WHATSAPP,
-  });
+/** Respuesta del chat con el aviso de canal y el idioma (lo usa el Worker; en los tests se reemplaza). */
+export const askWhatsApp =
+  (env, fetchImpl) =>
+  (db, req, { idioma = "es" } = {}) =>
+    answer(db, req, {
+      apiKey: env.ANTHROPIC_API_KEY,
+      workspaceId: env.ANTHROPIC_WORKSPACE_ID,
+      fetchImpl,
+      canal: canalWhatsApp(idioma),
+      whatsapp: true,
+      idioma,
+    });

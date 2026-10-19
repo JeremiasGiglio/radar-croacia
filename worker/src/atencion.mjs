@@ -8,14 +8,17 @@
 //   PANEL_EMAILS. Si falta configuración, el panel responde 503: nunca queda abierto.
 // - Las acciones (responder, devolver) exigen JSON y Origin del propio panel (sin CSRF).
 
+import { idiomaDe, textos } from "./textos.mjs";
+
 export const RETENCION_DIAS = 30;
 const RETENCION_S = RETENCION_DIAS * 24 * 3600;
 export const VENTANA_MS = 24 * 3600_000; // Meta: solo se puede responder dentro de las 24 h del último mensaje.
 const MAX_MENSAJES = 200;
 const MAX_TEXTO = 1600;
 export const MAX_RESPUESTA = 1000;
-export const TEXTO_DEVUELTA =
-  "Listo, te vuelve a atender el asistente del Radar. Si necesitás una persona de nuevo, escribí PERSONA.";
+/** Aviso a la persona cuando la charla vuelve al bot, en su idioma (ZL-78). */
+export const textoDevuelta = (idioma) => textos(idioma).devuelta;
+export const TEXTO_DEVUELTA = textoDevuelta("es");
 const NUM_RE = /^\d{6,16}$/;
 // Saca caracteres de control (deja salto de línea y tabulación).
 // eslint-disable-next-line no-control-regex
@@ -34,7 +37,13 @@ export function kvChats(kv) {
     put: async (n, chat) => {
       await kv.put(`chat:${n}`, JSON.stringify(chat), { expirationTtl: RETENCION_S });
       const idx = (await getIdx()).filter((x) => x.num !== n);
-      idx.unshift({ num: n, ultimo: chat.ultimo, ultimoPersona: chat.ultimoPersona, abierta: chat.abierta });
+      idx.unshift({
+        num: n,
+        ultimo: chat.ultimo,
+        ultimoPersona: chat.ultimoPersona,
+        abierta: chat.abierta,
+        idioma: idiomaDe(chat.idioma),
+      });
       await putIdx(idx.slice(0, 500));
     },
     delete: async (n) => {
@@ -55,7 +64,13 @@ export function memoryChats() {
     delete: async (n) => void m.delete(n),
     list: async () =>
       [...m.values()]
-        .map((c) => ({ num: c.num, ultimo: c.ultimo, ultimoPersona: c.ultimoPersona, abierta: c.abierta }))
+        .map((c) => ({
+          num: c.num,
+          ultimo: c.ultimo,
+          ultimoPersona: c.ultimoPersona,
+          abierta: c.abierta,
+          idioma: idiomaDe(c.idioma),
+        }))
         .sort((a, b) => b.ultimo - a.ultimo),
   };
 }
@@ -271,7 +286,7 @@ export async function panel(request, env, deps = {}) {
         recipient_type: "individual",
         to: num,
         type: "text",
-        text: { preview_url: false, body: TEXTO_DEVUELTA },
+        text: { preview_url: false, body: textoDevuelta(st.idioma) },
       })
       .catch(() => {}); // si falla el aviso, la charla igual vuelve al bot
   }
@@ -333,11 +348,11 @@ function lista(){api("/api/charlas").then(function(d){
   $("yo").textContent=d.yo||"";var ul=$("charlas");ul.textContent="";$("vacio").hidden=d.charlas.length>0;
   d.charlas.forEach(function(c){var li=document.createElement("li");li.className="charla";var b=document.createElement("button");b.type="button";
     var n=document.createElement("strong");n.textContent="+"+c.num;var e=document.createElement("span");
-    e.className=c.abierta?"abierta":"cerrada";e.textContent=c.abierta?" · esperando":" · devuelta al bot";
+    e.className=c.abierta?"abierta":"cerrada";e.textContent=(c.abierta?" · esperando":" · devuelta al bot")+" · "+String(c.idioma||"es").toUpperCase();
     var t=document.createElement("span");t.className="hora";t.textContent="Último mensaje: "+hora(c.ultimo);
     b.appendChild(n);b.appendChild(e);b.appendChild(t);b.addEventListener("click",function(){abrir(c.num)});li.appendChild(b);ul.appendChild(li)})
 }).catch(function(e){$("vacio").hidden=false;$("vacio").textContent=e.message})}
-function pintar(c){actual=c.num;$("lista").hidden=true;$("charla").hidden=false;$("titulo").textContent="+"+c.num;$("ventana").textContent=queda(c.quedaMs);
+function pintar(c){actual=c.num;$("lista").hidden=true;$("charla").hidden=false;$("titulo").textContent="+"+c.num+" · "+String(c.idioma||"es").toUpperCase()+(c.idioma&&c.idioma!=="es"?" (respondé en ese idioma)":"");$("ventana").textContent=queda(c.quedaMs);
   var ol=$("mensajes");ol.textContent="";c.mensajes.forEach(function(m){var li=document.createElement("li");li.className=m.de;
     var s=document.createElement("span");s.className="hora";s.textContent=(m.de==="equipo"?"Equipo":m.de==="persona"?"Persona":"")+" · "+hora(m.t);
     li.appendChild(document.createTextNode(m.texto));li.appendChild(s);ol.appendChild(li)});

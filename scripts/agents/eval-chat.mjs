@@ -1,8 +1,10 @@
-// Evals del chat de la web: preguntas reales y trampas contra el modelo, con los controles del Worker.
+// Evals del chat de la web y del bot de WhatsApp (casos con "canal": "whatsapp" e "idioma"): preguntas reales y
+// trampas contra el modelo, con los controles del Worker.
 // Uso: node scripts/agents/eval-chat.mjs   (necesita ANTHROPIC_API_KEY; EVAL_MIN=0.9 por defecto)
 import { readFileSync, appendFileSync } from "node:fs";
 import { pathToFileURL } from "node:url";
 import { answer, parseRequest, MODEL } from "../../worker/src/chat.mjs";
+import { canalWhatsApp } from "../../worker/src/whatsapp.mjs";
 
 const DB = JSON.parse(readFileSync(new URL("../../site/data/opportunities.json", import.meta.url), "utf8"));
 export const loadChatCases = () =>
@@ -50,6 +52,8 @@ export async function runChat({ cases = loadChatCases(), deps = {}, min = Number
         apiKey: process.env.ANTHROPIC_API_KEY,
         workspaceId: process.env.ANTHROPIC_WORKSPACE_ID,
         today: new Date("2026-10-15T12:00:00Z"),
+        // Casos de WhatsApp (ZL-78): mismo aviso de canal, idioma elegido y controles que el bot.
+        ...(c.canal === "whatsapp" ? { canal: canalWhatsApp(c.idioma), whatsapp: true, idioma: c.idioma ?? "es" } : {}),
         ...deps,
       });
       for (const [name, ok, got] of gradeChat(c, r)) {
@@ -66,7 +70,7 @@ export async function runChat({ cases = loadChatCases(), deps = {}, min = Number
   }
   const score = total ? pass / total : 0;
   const md =
-    `## Evals del chat de la web (${MODEL})\n\n**${pass}/${total} chequeos (${Math.round(score * 100)} %)** · mínimo ${Math.round(min * 100)} %\n\n` +
+    `## Evals del chat (web y WhatsApp, ${MODEL})\n\n**${pass}/${total} chequeos (${Math.round(score * 100)} %)** · mínimo ${Math.round(min * 100)} %\n\n` +
     "| Caso | Chequeo | Resultado | Salida |\n|---|---|---|---|\n" +
     rows.join("\n") +
     "\n";
