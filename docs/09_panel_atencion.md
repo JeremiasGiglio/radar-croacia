@@ -50,8 +50,10 @@ Topes: 200 mensajes por charla, 1.600 caracteres por mensaje guardado y 1.000 po
 ## Estado al 19/10/2026
 
 - Zero Trust Free activado. App de Access «Panel de atención» para `atencion.zustrolabs.com`, política «Solo Jeremías» (un solo mail), sesión de 24 h. Login con la cuenta de Cloudflare o código por mail.
-- `WHATSAPP_PANEL`, `ACCESS_TEAM_DOMAIN` y `ACCESS_AUD` en `[vars]` (segundo PR).
-- **Falta:** los secretos `PANEL_EMAILS` y `AVISO_PARA`. Mientras falte `PANEL_EMAILS`, el bot no considera activo el panel: PERSONA deriva al mail y el bot no se calla (con test).
+- `WHATSAPP_PANEL`, `ACCESS_TEAM_DOMAIN` y `ACCESS_AUD` en `[vars]` (PR #26).
+- Secretos `PANEL_EMAILS` y `AVISO_PARA` cargados por Jeremías. Email Routing: destino verificado.
+- **Funciona de punta a punta (probado por Jeremías el 19/10):** PERSONA → mail de aviso → login → respuesta desde el panel → «Devolver al bot».
+- Si alguna vez falta `PANEL_EMAILS`, el bot no considera activo el panel: PERSONA deriva al mail y el bot no se calla (con test).
 
 ## Puesta en marcha (Jeremías)
 
