@@ -26,9 +26,9 @@ Tests: `tests/unit/whatsapp.test.mjs` con mensajes de ejemplo ficticios en `test
 | PERSONA avisa, pero el bot sigue contestando. | PERSONA silencia al bot 24 h en esa charla. |
 | — | Un mensaje que Meta reintenta no se responde dos veces. |
 
-La memoria (KV `WA_STATE`) guarda por número **solo** `{perfil, humanoHasta, visto}` y vence a los 90 días. **Nunca el texto de los mensajes.** BORRAR la elimina. Los registros solo tienen métricas: ni el número ni el texto.
+La memoria (KV `WA_STATE`) guarda por número **solo** `{perfil, humanoHasta, visto}` y vence a los 90 días. **Nunca el texto de la charla con el bot.** BORRAR la elimina. Los registros solo tienen métricas: ni el número ni el texto.
 
-El historial de mensajes para que una persona responda desde un panel es otro tema: ZL-65 (panel de atención) y ZL-66 (cuánto se guarda).
+La única excepción es la atención humana: desde que la persona escribe PERSONA (con el panel activo), sus mensajes se guardan 30 días para que el equipo los lea y responda. Detalle en [`09_panel_atencion.md`](09_panel_atencion.md) (ZL-65).
 
 ## Seguridad (lo que controla el código, con test)
 
@@ -48,7 +48,7 @@ El historial de mensajes para que una persona responda desde un panel es otro te
 ## Estado al 16/10/2026
 
 - Memoria **activada** (ZL-66 aprobado): KV `radar-wa-state` (binding `WA_STATE`).
-- **PERSONA**, mientras no exista el panel (ZL-65), deriva a hola@zustrolabs.com y el bot sigue contestando. Con `WHATSAPP_PANEL = "1"` en `[vars]`, PERSONA silencia al bot 24 h.
+- **PERSONA**, mientras el panel (ZL-65) esté apagado, deriva a hola@zustrolabs.com y el bot sigue contestando. Con `WHATSAPP_PANEL = "1"` en `[vars]`, PERSONA silencia al bot, abre la charla en atencion.zustrolabs.com y avisa por mail. Puesta en marcha en [`09_panel_atencion.md`](09_panel_atencion.md).
 - Funciona con el número de prueba. Para el número real hay que repetir el paso «suscribir la app a la WABA» (`POST /{WABA_ID}/subscribed_apps`), porque sin eso Meta no manda los mensajes.
 
 ## Comandos
@@ -80,13 +80,12 @@ El historial de mensajes para que una persona responda desde un panel es otro te
 ## Antes de usarlo con el número real (no se negocia)
 
 1. **Memoria activa (ZL-66)**: así el primer mensaje avisa que es un asistente automático, que es información y no asesoramiento legal, qué se guarda y cómo borrarlo. Sin memoria no hay bienvenida, así que **no se activa en el número real sin memoria**.
-2. **Panel o aviso (ZL-65)**: con el número solo en la API, los mensajes no aparecen en la app. Sin panel, nadie ve los pedidos de PERSONA.
+2. **Panel o aviso (ZL-65)**: con el número solo en la API, los mensajes no aparecen en la app. Sin panel, PERSONA deriva al mail; con panel, se responde desde atencion.zustrolabs.com.
 3. **Evals del bot en verde (ZL-23)**, con casos de inyección.
 4. **Política pública actualizada**: hoy `asistente.html` dice que solo acepta pedidos de la web y que no guarda nada. Hay que sumar WhatsApp y su memoria en `worker/src/policy.mjs` y correr `npm run policy`.
 
 ## Pendiente
 
 - ZL-23: evals del bot por WhatsApp (los del chat, con el aviso de canal).
-- ZL-65: panel de atención, con login, para responder como persona y devolverle la charla al bot.
-- ZL-66: qué se guarda y cuánto tiempo.
+- ZL-65: panel de atención hecho (PR); falta configurar Cloudflare Access y prenderlo (`09_panel_atencion.md`).
 - ZL-24: número real (solo API o BSP).

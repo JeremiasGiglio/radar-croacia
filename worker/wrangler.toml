@@ -5,7 +5,11 @@ main = "src/index.mjs"
 compatibility_date = "2026-10-01"
 workers_dev = false
 
-routes = [{ pattern = "api.zustrolabs.com", custom_domain = true }]
+# atencion.zustrolabs.com: panel de atención humana (ZL-65), solo detrás de Cloudflare Access.
+routes = [
+  { pattern = "api.zustrolabs.com", custom_domain = true },
+  { pattern = "atencion.zustrolabs.com", custom_domain = true },
+]
 
 [vars]
 ALLOWED_ORIGINS = "https://radar.zustrolabs.com"
@@ -28,6 +32,14 @@ simple = { limit = 10, period = 60 }
 [[kv_namespaces]]
 binding = "WA_STATE"
 id = "7149434b82dd4489bbea633f52b5435f"
+
+# Panel de atención (ZL-65). Queda apagado (WHATSAPP_PANEL sin definir) hasta configurar Cloudflare Access.
+# Mientras tanto, el panel responde 503 y PERSONA sigue derivando a hola@zustrolabs.com.
+# Para prenderlo (otro PR): WHATSAPP_PANEL = "1", ACCESS_TEAM_DOMAIN y ACCESS_AUD en [vars] (no son secretos).
+# Secretos (los carga Jeremías en Cloudflare, nunca en el repo): PANEL_EMAILS (quién entra) y AVISO_PARA (a quién avisar).
+# El destinatario tiene que estar verificado en Email Routing de zustrolabs.com.
+[[send_email]]
+name = "AVISO"
 
 [observability]
 enabled = true
