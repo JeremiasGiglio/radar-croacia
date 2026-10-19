@@ -24,6 +24,10 @@ const MAX_WA_BODY = 256_000;
 const MAX_EDAD_MS = 3600_000; // mensajes de más de 1 h se ignoran (reintentos tardíos o reenvíos de un pedido firmado)
 const PANEL_HOST = "atencion.zustrolabs.com";
 
+/** WHATSAPP_PANEL=1 y el login de Access completo (dominio del equipo, audiencia y mails autorizados). */
+export const panelListo = (env) =>
+  env.WHATSAPP_PANEL === "1" && Boolean(env.ACCESS_TEAM_DOMAIN && env.ACCESS_AUD && env.PANEL_EMAILS);
+
 let cache = { at: 0, url: "", db: null };
 
 /** Fichas publicadas (la misma fuente que la web), con caché de 10 minutos por instancia. */
@@ -103,7 +107,9 @@ async function processEvents(events, env, fetchImpl, deps) {
   const store = deps.store !== undefined ? deps.store : kvStore(env.WA_STATE);
   const ask = deps.ask ?? askWhatsApp(env, fetchImpl);
   const now = deps.now ?? Date.now();
-  const conPanel = env.WHATSAPP_PANEL === "1";
+  // El panel cuenta como activo solo si además está el login: si no, nadie vería los pedidos de PERSONA
+  // y el bot quedaría callado. En ese caso PERSONA sigue derivando al mail.
+  const conPanel = panelListo(env);
   const chats = conPanel ? (deps.chats !== undefined ? deps.chats : kvChats(env.WA_STATE)) : null;
   const notify = deps.notify ?? (() => avisar(env));
   for (const ev of events) {

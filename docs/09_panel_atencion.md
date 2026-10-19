@@ -47,9 +47,15 @@ Topes: 200 mensajes por charla, 1.600 caracteres por mensaje guardado y 1.000 po
 | Datos personales en el repo | El mail autorizado y el destinatario del aviso son **secretos** de Cloudflare. El test falla si aparece un `@gmail.com` en `wrangler.toml`. |
 | Costo | Unas 3 escrituras de KV por mensaje en modo persona (plan gratis: 1.000 por día). Sin IA mientras atiende una persona. |
 
+## Estado al 19/10/2026
+
+- Zero Trust Free activado. App de Access «Panel de atención» para `atencion.zustrolabs.com`, política «Solo Jeremías» (un solo mail), sesión de 24 h. Login con la cuenta de Cloudflare o código por mail.
+- `WHATSAPP_PANEL`, `ACCESS_TEAM_DOMAIN` y `ACCESS_AUD` en `[vars]` (segundo PR).
+- **Falta:** los secretos `PANEL_EMAILS` y `AVISO_PARA`. Mientras falte `PANEL_EMAILS`, el bot no considera activo el panel: PERSONA deriva al mail y el bot no se calla (con test).
+
 ## Puesta en marcha (Jeremías)
 
-El primer PR deja el panel **apagado**: el subdominio existe, pero responde 503 y PERSONA sigue derivando a hola@zustrolabs.com.
+El primer PR dejó el panel **apagado**: el subdominio existe, pero responde 503 y PERSONA sigue derivando a hola@zustrolabs.com.
 
 1. **Cloudflare → Zero Trust** (la primera vez pide un nombre de equipo y el plan; el *Free* alcanza, hasta 50 usuarios).
 2. **Access → Applications → Add an application → Self-hosted**:
