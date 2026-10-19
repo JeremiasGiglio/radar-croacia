@@ -301,7 +301,7 @@
           45.33
         ]
       ],
-      "next": "Convocatoria esperada en octubre 2026",
+      "next": "Próxima edición: 2027 (la de 2026 cierra el 19/10/2026)",
       "amount": "80 % de los gastos, hasta €8.000",
       "what": "Reintegra gastos de un negocio recién abierto en la región de Rijeka. Confirmaron por escrito que acepta la residencia de extranjeros.",
       "el": {
@@ -314,14 +314,15 @@
           "Si te instalás en la región de Rijeka."
         ],
         "res": [
-          "ok",
-          "Sirve con residencia, sin garante."
+          "cond",
+          "Para 2027, cuando tengas el obrt. La de 2026 no aplica si todavía no lo tenés."
         ]
       },
       "src": [
         "pgz.hr",
-        "https://www.pgz.hr/"
-      ]
+        "https://www2.pgz.hr/doc/programi/2026/razvoj-poduzetnistva-mjera-21-23-26-27/jp.docx"
+      ],
+      "flag": "El autoempleo cuenta como persona empleada (texto oficial 2026). Paušal y tarjeta de residencia aceptados por escrito (PGŽ, 24/9/2026). App SOM: registro con mail. Requisito: no haber sido dueño de otro negocio en los 2 años previos."
     },
     {
       "id": "rijeka",
