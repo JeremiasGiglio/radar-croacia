@@ -189,6 +189,7 @@ async function postMessage(env, message, fetchImpl) {
     method: "POST",
     headers: { "content-type": "application/json", authorization: `Bearer ${env.WHATSAPP_TOKEN}` },
     body: JSON.stringify(message),
+    signal: AbortSignal.timeout(10_000),
   });
   if (res.ok) return null;
   const data = await res.json().catch(() => ({}));

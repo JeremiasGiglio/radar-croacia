@@ -202,6 +202,8 @@ export async function answer(db, req, { apiKey, workspaceId, fetchImpl = fetch, 
         ...(workspaceId ? { "anthropic-workspace-id": workspaceId } : {}),
       },
       body,
+      // Si la IA no responde en 25 s se corta: el Worker no queda colgado y la persona recibe el aviso de falla.
+      signal: AbortSignal.timeout(25_000),
     });
     data = await res.json().catch(() => ({}));
     if (res.ok) break;

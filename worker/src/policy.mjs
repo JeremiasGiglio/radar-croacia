@@ -90,7 +90,7 @@ export const POLITICA = {
     "El primer mensaje avisa que es un asistente automático y qué guarda.",
     "Comandos: PERFIL cambia tu situación, BORRAR elimina lo que recuerda y PERSONA te indica cómo hablar con alguien del equipo.",
     "Solo lee texto: audios, fotos y archivos no se procesan.",
-    "Detalles completos en radar.zustrolabs.com/privacidad.html.",
+    "Los detalles completos están en la página de Privacidad del Radar.",
   ],
 
   controles: [

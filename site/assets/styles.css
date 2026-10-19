@@ -840,3 +840,10 @@ footer {
   margin: 2px 0 0;
   line-height: 1.5;
 }
+
+/* Páginas de texto (política, privacidad): ningún link o palabra larga puede ensanchar la pantalla. */
+.policy li,
+.policy p,
+.policy dd {
+  overflow-wrap: anywhere;
+}
