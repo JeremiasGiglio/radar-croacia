@@ -1,8 +1,11 @@
 // Bot de WhatsApp del Radar (ZL-22): webhook de la Cloud API de Meta en api.zustrolabs.com/whatsapp.
 // Usa el mismo cerebro y la misma política que el chat de la web (chat.mjs + policy.mjs).
-// Reglas: solo procesa pedidos firmados por Meta; no guarda el texto de los mensajes; la memoria
+// Reglas: solo procesa pedidos firmados por Meta; no guarda el texto de las charlas con el bot; la memoria
 // (perfil, si atiende una persona) es opcional y depende de ZL-66: sin store, el bot no recuerda nada.
+// Excepción (ZL-65): si la persona escribe PERSONA y el panel está activo, se guardan sus mensajes 30 días
+// para que el equipo los lea y responda en atencion.zustrolabs.com.
 
+import { agregar } from "./atencion.mjs";
 import { answer, parseRequest } from "./chat.mjs";
 
 export const GRAPH_VERSION = "v25.0";
@@ -19,7 +22,7 @@ export const TEXTOS = {
   bienvenida:
     "¡Hola! Soy el asistente del Radar Croacia: te ayudo a encontrar oportunidades oficiales de Croacia para descendientes. Respondo con las fichas verificadas del Radar y no doy asesoramiento legal. Para empezar, contame tu situación:",
   aviso:
-    "Soy un asistente automático: es información, no asesoramiento legal. Guardamos solo tu perfil (nunca tus mensajes) por 90 días. Escribí PERSONA para hablar con alguien del equipo o BORRAR para que lo olvidemos.",
+    "Soy un asistente automático: es información, no asesoramiento legal. Guardamos tu perfil por 90 días, pero no lo que escribís (salvo que pidas hablar con una persona). Escribí PERSONA para hablar con alguien del equipo o BORRAR para que lo olvidemos.",
   perfilListo: {
     ar: "Listo: vivís en Argentina y no tenés la ciudadanía croata. ¿Qué estás buscando? Por ejemplo becas, cursos de croata o ayudas para mudarte.",
     cit: "Listo: vivís en Argentina y tenés la ciudadanía croata. ¿Qué estás buscando? Por ejemplo becas, trabajo o ayudas para mudarte.",
@@ -30,9 +33,9 @@ export const TEXTOS = {
   personaMail:
     "Para hablar con una persona del equipo, escribinos a hola@zustrolabs.com contando tu consulta y te respondemos. Mientras tanto, acá sigo para lo que necesites del Radar.",
   persona:
-    "Listo, le avisamos al equipo y te va a responder una persona en cuanto pueda. Mientras tanto, el asistente no contesta en esta charla.",
+    "Listo, le avisamos al equipo y te va a responder una persona en cuanto pueda. Escribí acá tu consulta: para que el equipo la lea, guardamos lo que escribas desde ahora por 30 días (BORRAR lo borra antes). Mientras tanto, el asistente no contesta en esta charla.",
   borrado:
-    "Listo, borramos lo que teníamos de vos (tu perfil y el estado de la charla). Si volvés a escribir, empezamos de cero.",
+    "Listo, borramos lo que teníamos de vos (tu perfil, el estado y los mensajes guardados para el equipo). Si volvés a escribir, empezamos de cero.",
   soloTexto: "Por ahora solo puedo leer mensajes de texto. Escribime tu pregunta, por favor.",
   falla: "El asistente no está disponible en este momento. Escribí PERSONA y te responde alguien del equipo.",
   derivar: "Si querés que lo vea una persona del equipo, escribí PERSONA.",
@@ -244,29 +247,56 @@ export function memoryStore() {
 
 const HORAS_PERSONA = 24;
 
+/** Cómo queda en el panel un mensaje que no es texto. */
+const notaNoTexto = (ev) =>
+  ev.kind === "perfil" ? "[Tocó un botón de perfil]" : "[Mandó algo que no es texto: audio, foto o archivo]";
+
 /**
  * Decide qué contestar a un evento. Devuelve los mensajes a mandar y métricas (sin texto).
- * deps: {db, store, ask(db, req) → respuesta del chat, now}
+ * deps: {db, store, ask(db, req) → respuesta del chat, now, panel, chats}
+ * chats (ZL-65): charlas con atención humana; solo se usa con panel activo.
  */
-export async function handleEvent(ev, { db, store, ask, now = Date.now(), panel = false }) {
+export async function handleEvent(ev, { db, store, ask, now = Date.now(), panel = false, chats = null }) {
   if (store && (await store.seen(ev.id))) return { send: [], metric: "repetido" };
   const state = (store && (await store.get(ev.from))) || null;
   const save = (s) => store?.put(ev.from, s);
   const cmd = ev.kind === "text" ? comando(ev.text) : null;
+  const conPanel = panel && store && chats;
 
   if (cmd === "borrar") {
     await store?.delete(ev.from);
+    await chats?.delete(ev.from);
     return { send: [msgTexto(ev.from, TEXTOS.borrado)], metric: "borrar" };
   }
 
   // Si atiende una persona, el bot no contesta (salvo BORRAR) hasta que se devuelva o pasen 24 h.
-  if (state?.humanoHasta && state.humanoHasta > now) return { send: [], metric: "humano" };
+  // Con panel, el mensaje queda en la charla para el equipo y la ventana de 24 h se renueva.
+  if (state?.humanoHasta && state.humanoHasta > now) {
+    if (conPanel) {
+      const texto = ev.kind === "text" ? String(ev.text ?? "").trim() || "[Mensaje vacío]" : notaNoTexto(ev);
+      await agregar(chats, ev.from, { de: "persona", texto }, now, { abierta: true });
+      await save({ ...state, humanoHasta: now + HORAS_PERSONA * 3600_000, visto: now });
+    }
+    return { send: [], metric: "humano" };
+  }
 
   if (cmd === "persona") {
     if (!panel) return { send: [msgTexto(ev.from, TEXTOS.personaMail)], metric: "persona", handoff: true };
     if (!store) return { send: [msgTexto(ev.from, TEXTOS.personaSinMemoria)], metric: "persona", handoff: true };
     await save({ ...state, humanoHasta: now + HORAS_PERSONA * 3600_000, visto: now });
-    return { send: [msgTexto(ev.from, TEXTOS.persona)], metric: "persona", handoff: true };
+    if (chats) {
+      // Se abre la charla en el panel. El texto «PERSONA» cuenta como su último mensaje (ventana de 24 h).
+      await agregar(chats, ev.from, { de: "persona", texto: String(ev.text ?? "PERSONA").trim() }, now, {
+        abierta: true,
+      });
+      await agregar(
+        chats,
+        ev.from,
+        { de: "sistema", texto: "Pidió hablar con una persona. El bot está en pausa." },
+        now,
+      );
+    }
+    return { send: [msgTexto(ev.from, TEXTOS.persona)], metric: "persona", handoff: true, notify: Boolean(chats) };
   }
 
   if (ev.kind === "perfil") {

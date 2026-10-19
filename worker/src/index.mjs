@@ -1,6 +1,8 @@
 // Worker del Radar (api.zustrolabs.com): POST /chat → asistente con Claude Haiku sobre las fichas verificadas.
 // No guarda mensajes ni datos personales: cada pedido trae la charla y se olvida al responder.
 // /whatsapp → webhook de la Cloud API de Meta (ZL-22), con el mismo cerebro (whatsapp.mjs).
+// atencion.zustrolabs.com → panel de atención humana (ZL-65), detrás de Cloudflare Access (atencion.mjs).
+import { avisar, kvChats, panel } from "./atencion.mjs";
 import { answer, parseRequest } from "./chat.mjs";
 // (parseRequest también limpia los mensajes de WhatsApp: ver askWhatsApp)
 import {
@@ -20,6 +22,7 @@ const DEFAULT_DATA = "https://radar.zustrolabs.com/data/opportunities.json";
 const MAX_BODY = 16_000;
 const MAX_WA_BODY = 256_000;
 const MAX_EDAD_MS = 3600_000; // mensajes de más de 1 h se ignoran (reintentos tardíos o reenvíos de un pedido firmado)
+const PANEL_HOST = "atencion.zustrolabs.com";
 
 let cache = { at: 0, url: "", db: null };
 
@@ -100,6 +103,9 @@ async function processEvents(events, env, fetchImpl, deps) {
   const store = deps.store !== undefined ? deps.store : kvStore(env.WA_STATE);
   const ask = deps.ask ?? askWhatsApp(env, fetchImpl);
   const now = deps.now ?? Date.now();
+  const conPanel = env.WHATSAPP_PANEL === "1";
+  const chats = conPanel ? (deps.chats !== undefined ? deps.chats : kvChats(env.WA_STATE)) : null;
+  const notify = deps.notify ?? (() => avisar(env));
   for (const ev of events) {
     const t0 = Date.now();
     if (!ev.ts || now - ev.ts * 1000 > MAX_EDAD_MS) {
@@ -116,9 +122,12 @@ async function processEvents(events, env, fetchImpl, deps) {
         }
       }
       const db = await loadDb(env, fetchImpl);
-      // Con panel de atención (ZL-65), PERSONA silencia al bot; sin panel, deriva al mail.
-      const r = await handleEvent(ev, { db, store, ask, now, panel: env.WHATSAPP_PANEL === "1" });
+      // Con panel de atención (ZL-65), PERSONA silencia al bot y abre la charla; sin panel, deriva al mail.
+      const r = await handleEvent(ev, { db, store, ask, now, panel: conPanel, chats });
       for (const m of r.send) await sendMessage(env, m, fetchImpl);
+      // Aviso por mail (sin número ni texto). Si falla, la charla igual queda en el panel.
+      let avisado;
+      if (r.notify) avisado = await Promise.resolve(notify()).catch(() => false);
       // Solo métricas: ni el número ni el texto.
       console.log(
         JSON.stringify({
@@ -129,6 +138,7 @@ async function processEvents(events, env, fetchImpl, deps) {
           fichas: r.fichas,
           usage: r.usage,
           handoff: r.handoff,
+          avisado,
         }),
       );
     } catch (e) {
@@ -149,6 +159,15 @@ export default {
     const origin = request.headers.get("Origin");
     const ch = cors(origin, env);
 
+    if (url.hostname === (env.PANEL_HOST || PANEL_HOST)) {
+      return panel(request, env, {
+        fetch: fetchImpl,
+        now: deps.now,
+        store: deps.store !== undefined ? deps.store : kvStore(env.WA_STATE),
+        chats: deps.chats !== undefined ? deps.chats : kvChats(env.WA_STATE),
+        send: (e, m) => sendMessage(e, m, fetchImpl),
+      });
+    }
     if (url.pathname === "/health") return json({ ok: true }, 200);
     if (url.pathname === "/whatsapp") return whatsapp(request, env, ctx, deps);
     if (url.pathname !== "/chat") return json({ error: "no existe" }, 404);

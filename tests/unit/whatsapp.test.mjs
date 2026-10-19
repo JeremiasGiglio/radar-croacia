@@ -343,7 +343,7 @@ test("bienvenida: avisa que es automático, qué se guarda y cómo borrarlo", as
   const r = await handleEvent(ev({ text: "hola" }), { db: DB, store: memoryStore(), ask: ask([]) });
   const t = r.send[0].interactive.body.text;
   assert.ok(t.length <= 1024);
-  for (const x of [/automático/, /no asesoramiento legal/, /nunca tus mensajes/, /90 días/, /BORRAR/, /PERSONA/]) {
+  for (const x of [/automático/, /no asesoramiento legal/, /no lo que escribís/, /90 días/, /BORRAR/, /PERSONA/]) {
     assert.match(t, x);
   }
 });
