@@ -49,6 +49,7 @@ Presupuesto pedido: **€1.200** (traducción 500, diseño 300, promoción 200, 
 
 ## Dónde está el resto del contexto
 En el proyecto de claude.ai **"Viaje"** (si este chat tiene acceso):
+- `claude/ESTADO_Radar_Zustro_19Oct2026.md` (**leer primero**: estado del Radar, el bot, el panel y la infraestructura)
 - `claude/Radar_Croacia_Investigacion_28Sep2026.md`
 - `claude/Convocatoria_2026_Formulario_B_Hrvatski.md`
 - `claude/CALENDARIO_MAESTRO_Ayudas_Plazos_Pendientes.md` (datos actualizados de ayudas)
