@@ -253,7 +253,7 @@ test("worker: si Claude falla, el aviso de falla sale en el idioma de la charla"
     const u = String(url);
     if (u.endsWith("opportunities.json")) return Response.json(DB);
     if (u.startsWith("https://api.anthropic.com")) return new Response("{}", { status: 400 });
-    if (u.startsWith("https://graph.facebook.com")) return sent.push(JSON.parse(init.body)), Response.json({});
+    if (u.startsWith("https://graph.facebook.com")) return (sent.push(JSON.parse(init.body)), Response.json({}));
     throw new Error("fetch inesperado " + u);
   };
   const req = new Request("https://api.zustrolabs.com/whatsapp", {
