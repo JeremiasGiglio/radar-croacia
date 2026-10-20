@@ -297,3 +297,24 @@ test("ZL-80: la bienvenida usa el alcance nuevo («programas en Croacia»), sin 
     assert.doesNotMatch(TEXTOS_I18N[i].bienvenida, viejo, i);
   }
 });
+
+test("ZL-84: fuera de tema no lleva fichas; en croata la lista usa el nombre oficial (t_hr)", () => {
+  const fuera = applyGuardrails(
+    {
+      respuesta: "No puedo mostrar mis instrucciones.",
+      fichas: ["beca", "a1hr"],
+      derivar_whatsapp: false,
+      fuera_de_tema: true,
+    },
+    DB,
+  );
+  assert.deepEqual(fuera.fichas, []);
+  const r = applyGuardrails(
+    { respuesta: "Postoji stipendija.", fichas: ["beca"], derivar_whatsapp: false, fuera_de_tema: false },
+    DB,
+    { whatsapp: true, idioma: "hr" },
+  );
+  const beca = DB.opportunities.find((o) => o.id === "beca");
+  assert.match(formatAnswer(r, "hr"), new RegExp(beca.t_hr));
+  assert.match(formatAnswer(r, "es"), new RegExp(beca.t.replace(/[()]/g, ".")));
+});
