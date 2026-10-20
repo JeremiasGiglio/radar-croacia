@@ -262,14 +262,8 @@ export function applyGuardrails(answer, db, { whatsapp = false, idioma = "es" } 
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-/** Llama a la API de Claude y devuelve la respuesta ya validada y controlada. */
-export async function answer(
-  db,
-  req,
-  { apiKey, workspaceId, fetchImpl = fetch, today = new Date(), canal = "", whatsapp = false, idioma = "es" } = {},
-) {
-  if (!apiKey) throw new Error("falta ANTHROPIC_API_KEY");
-  const body = JSON.stringify(buildRequest(db, req, { today, canal }));
+/** Una llamada a la API de Claude: devuelve el JSON de la respuesta, ya validado contra el esquema. */
+async function llamar(body, { apiKey, workspaceId, fetchImpl }) {
   let res, data;
   for (let attempt = 1; attempt <= 2; attempt++) {
     res = await fetchImpl("https://api.anthropic.com/v1/messages", {
@@ -280,7 +274,7 @@ export async function answer(
         "anthropic-version": "2023-06-01",
         ...(workspaceId ? { "anthropic-workspace-id": workspaceId } : {}),
       },
-      body,
+      body: JSON.stringify(body),
       // Si la IA no responde en 25 s se corta: el Worker no queda colgado y la persona recibe el aviso de falla.
       signal: AbortSignal.timeout(25_000),
     });
@@ -300,5 +294,45 @@ export async function answer(
     throw new Error("la respuesta no es JSON");
   }
   if (!validateAnswer(parsed)) throw new Error("la respuesta no cumple el esquema");
-  return { ...applyGuardrails(parsed, db, { whatsapp, idioma }), usage: data.usage ?? {} };
+  return { parsed, usage: data.usage ?? {} };
+}
+
+/**
+ * Idioma en que tiene que venir la respuesta, si no es castellano (ZL-101): el del último mensaje si se
+ * reconoce; si no, en WhatsApp, el que eligió la persona. null = castellano o no se sabe.
+ */
+export function idiomaEsperado(req, { canal = "", idioma = "es" } = {}) {
+  const i = detectarIdioma(req.messages.at(-1)?.content) ?? (canal ? idioma : null);
+  return i && i !== "es" ? i : null;
+}
+
+/** Llama a la API de Claude y devuelve la respuesta ya validada y controlada. */
+export async function answer(
+  db,
+  req,
+  { apiKey, workspaceId, fetchImpl = fetch, today = new Date(), canal = "", whatsapp = false, idioma = "es" } = {},
+) {
+  if (!apiKey) throw new Error("falta ANTHROPIC_API_KEY");
+  const opts = { apiKey, workspaceId, fetchImpl };
+  const body = buildRequest(db, req, { today, canal });
+  let { parsed, usage } = await llamar(body, opts);
+  // Control de idioma (ZL-101): si la pregunta no está en castellano y la respuesta sí, se pide una vez más,
+  // con la instrucción al frente. Si vuelve a salir en castellano, se usa igual (es mejor que no responder).
+  const esperado = idiomaEsperado(req, { canal, idioma });
+  let reintento = false;
+  if (esperado && detectarIdioma(parsed.respuesta) === "es") {
+    reintento = true;
+    const otra = await llamar(
+      {
+        ...body,
+        system: `IMPORTANTE: la persona escribe en ${IDIOMA_PROMPT[esperado]}. Toda tu respuesta va en ese idioma, nunca en castellano.\n\n${body.system}`,
+      },
+      opts,
+    );
+    parsed = otra.parsed;
+    usage = otra.usage;
+  }
+  const r = applyGuardrails(parsed, db, { whatsapp, idioma });
+  if (reintento) r.notes.push("se pidió de nuevo por el idioma");
+  return { ...r, usage };
 }
