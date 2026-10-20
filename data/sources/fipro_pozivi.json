@@ -1,0 +1,31 @@
+{
+ "source": "fipro_pozivi",
+ "name": "Fundación FIPRO: convocatorias para innovación en la región de Rijeka (Javni pozivi, Zaklada FIPRO)",
+ "url": "https://www.fipro.hr/wp-json/wp/v2/pages?per_page=30&orderby=modified&order=desc&_fields=id,date_gmt,modified_gmt,link,title,excerpt",
+ "items": [
+  {
+   "guid": "wp:1320",
+   "title": "Javni poziv – PGŽ – 2026",
+   "link": "https://www.fipro.hr/javni-poziv-pgz-2026/",
+   "published": "2026-10-15T06:17:56.000Z",
+   "updated": "2026-10-15T06:18:00.000Z",
+   "summary": "Javni poziv za podnošenje zahtjeva za dodjelu financijskih sredstava iz projekta Komercijalizacija inovacija"
+  },
+  {
+   "guid": "wp:1151",
+   "title": "Javni poziv – GRADRI",
+   "link": "https://www.fipro.hr/javni-poziv-copy/",
+   "published": "2025-10-31T13:47:30.000Z",
+   "updated": "2025-12-03T08:02:30.000Z",
+   "summary": "Javni poziv za podnošenje zahtjeva za dodjelu financijskih sredstava iz projekta Komercijalizacija inovacija"
+  },
+  {
+   "guid": "wp:92",
+   "title": "Javni poziv – PGŽ",
+   "link": "https://www.fipro.hr/javni-poziv/",
+   "published": "2023-09-14T15:20:14.000Z",
+   "updated": "2026-03-25T10:13:20.000Z",
+   "summary": "Javni poziv za podnošenje zahtjeva za dodjelu financijskih sredstava iz projekta Komercijalizacija inovacija"
+  }
+ ]
+}

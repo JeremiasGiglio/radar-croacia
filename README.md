@@ -19,7 +19,7 @@ Becas, cursos y estudios universitarios (también universidades privadas con car
 | Tests | ✅ 140 unitarios (datos, robot, chat, WhatsApp, panel, idiomas, demo offline) y 100 E2E con Playwright (escritorio, celular y celular chico), más evals de la IA |
 | Video demo con subtítulos | ✅ `media/Radar_Croacia_demo.mp4` (20/10/2026, 1 min) |
 | Demo sin conexión | ✅ `prototype/radar-offline.html` (`npm run offline`; un test controla que esté al día) |
-| Monitoreo diario de fuentes | 🟡 6 de 12: Oficina, MDU, PGŽ, Grad Rijeka, HZZ y Ured za udruge (RSS y API de WordPress). Robot diario + PR de revisión (`.github/workflows/monitor.yml`, `review/`) |
+| Monitoreo diario de fuentes | ✅ 12 de 12: Oficina (convocatorias y novedades), MDU (convocatorias y novedades), MZOM (becas), Matica iseljenika, PGŽ (programas y concursos), Grad Rijeka, HZZ, Ured za udruge y FIPRO (RSS y API de WordPress). Robot diario + PR de revisión (`.github/workflows/monitor.yml`, `review/`) |
 | Botón de consultas por WhatsApp | ✅ +54 9 341 335-0686 (`site/data/contact.json`) |
 | Chat con IA en la web («Preguntale al Radar») | ✅ Worker de Cloudflare en `api.zustrolabs.com` (`worker/`), Claude Haiku 5.5, responde solo con las fichas verificadas, deriva a WhatsApp. Evals en `evals/chat/` |
 | Agentes de IA (resumen, elegibilidad, detección de cambios) | 🟡 agente que resume y clasifica por perfil (`scripts/agents/`, Claude Haiku 5.5, salida con esquema). Montos y plazos solo si están textuales en la fuente. Evals con 7 convocatorias (`evals/summarize/`) |
