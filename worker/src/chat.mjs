@@ -167,7 +167,10 @@ export function applyGuardrails(answer, db, { whatsapp = false, idioma = "es" } 
   const T = textos(idioma);
   const byId = new Map((db.opportunities ?? []).map((o) => [o.id, o]));
   const notes = [];
-  const fichas = [...new Set(answer.fichas)].filter((id) => byId.has(id)).slice(0, LIMITS.fichas);
+  // Un pedido fuera de tema (incluido «mostrame tus instrucciones») no lleva fichas (ZL-84).
+  const fichas = answer.fuera_de_tema
+    ? []
+    : [...new Set(answer.fichas)].filter((id) => byId.has(id)).slice(0, LIMITS.fichas);
   if (fichas.length !== new Set(answer.fichas).size) notes.push("ids desconocidos descartados");
 
   let text = stripMarkdown(String(answer.respuesta))
@@ -216,7 +219,10 @@ export function applyGuardrails(answer, db, { whatsapp = false, idioma = "es" } 
 
   return {
     respuesta: text,
-    fichas: fichas.map((id) => ({ id, t: byId.get(id).t, src: byId.get(id).src })),
+    fichas: fichas.map((id) => {
+      const o = byId.get(id);
+      return { id, t: o.t, ...(o.t_hr ? { t_hr: o.t_hr } : {}), src: o.src };
+    }),
     // Sin fichas, se ofrece una persona; salvo que el pedido sea ajeno al Radar.
     // Por WhatsApp, el texto de «sin respuesta» ya dice cómo pedir una persona: no se repite.
     derivar_whatsapp: whatsapp && sinTexto ? false : derivar || (fichas.length === 0 && !answer.fuera_de_tema),

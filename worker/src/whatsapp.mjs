@@ -198,7 +198,9 @@ export function formatAnswer(r, idioma = "es") {
         .map((f) => {
           // Solo links https de la propia ficha; nunca uno escrito por la IA.
           const link = /^https:\/\/\S+$/.test(f.src?.[1] ?? "") ? f.src[1] : "";
-          return link ? `- ${f.t}\n  ${T.fuente}: ${link}` : `- ${f.t}`;
+          // En croata va el nombre oficial de la ficha, si lo tiene (ZL-84).
+          const nombre = idioma === "hr" && f.t_hr ? f.t_hr : f.t;
+          return link ? `- ${nombre}\n  ${T.fuente}: ${link}` : `- ${nombre}`;
         })
         .join("\n"),
     );
