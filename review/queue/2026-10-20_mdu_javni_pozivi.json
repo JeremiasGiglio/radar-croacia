@@ -1,0 +1,60 @@
+{
+ "source": "mdu_javni_pozivi",
+ "name": "Ministerio de Demografía e Inmigración (MDU): convocatorias (Javni pozivi)",
+ "detected_at": "2026-10-20",
+ "added": [
+  {
+   "guid": "https://mdu.gov.hr/javni-pozivi/program-provedbe-edukativnih-kulturnih-i-sportskih-aktivnosti-za-predskolsku-djecu-te-djecu-od-1-do-4-razreda-osnovne-skole-u-lokalnim-zajednicama/7674",
+   "title": "Program provedbe edukativnih, kulturnih i sportskih aktivnosti za predškolsku djecu te djecu od 1. do 4. razreda osnovne škole u lokalnim zajednicama",
+   "link": "https://mdu.gov.hr/javni-pozivi/program-provedbe-edukativnih-kulturnih-i-sportskih-aktivnosti-za-predskolsku-djecu-te-djecu-od-1-do-4-razreda-osnovne-skole-u-lokalnim-zajednicama/7674",
+   "published": "2026-10-19T12:19:25.000Z",
+   "summary": ""
+  }
+ ],
+ "changed": [],
+ "instrucciones": "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json.",
+ "borradores": [
+  {
+   "guid": "https://mdu.gov.hr/javni-pozivi/program-provedbe-edukativnih-kulturnih-i-sportskih-aktivnosti-za-predskolsku-djecu-te-djecu-od-1-do-4-razreda-osnovne-skole-u-lokalnim-zajednicama/7674",
+   "link": "https://mdu.gov.hr/javni-pozivi/program-provedbe-edukativnih-kulturnih-i-sportskih-aktivnosti-za-predskolsku-djecu-te-djecu-od-1-do-4-razreda-osnovne-skole-u-lokalnim-zajednicama/7674",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-10-20T10:07:39.750Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Los fondos son solo para gobiernos locales y Grad Zagreb, y las organizaciones solo pueden participar como socias de un proyecto municipal, así que una persona o asociación de la diáspora no puede postularse directamente.",
+   "ficha": {
+    "cat": "loc",
+    "t": "Fondos para actividades educativas, culturales y deportivas para niños en comunidades locales",
+    "t_hr": "Program provedbe edukativnih, kulturnih i sportskih aktivnosti za predškolsku djecu te djecu od 1. do 4. razreda osnovne škole u lokalnim zajednicama",
+    "who": "Ministerio de Demografía e Inmigración (Ministarstvo demografije i useljeništva)",
+    "amount": "",
+    "what": "Convocatoria para financiar proyectos educativos, culturales y deportivos destinados a niños en edad preescolar y a alumnos de 1.º a 4.º grado de primaria en comunidades locales de Croacia. Pueden presentarse las unidades de gobierno local y la Ciudad de Zagreb, y pueden sumarse como socios instituciones públicas y organizaciones de la sociedad civil. Las actividades deben ejecutarse entre el 7 de septiembre de 2026 y el día anterior al inicio del curso escolar 2027/2028.",
+    "el": {
+     "ar": [
+      "no",
+      "Solo pueden postularse gobiernos locales de Croacia y la Ciudad de Zagreb, y las personas particulares no son solicitantes."
+     ],
+     "cit": [
+      "no",
+      "Solo pueden postularse gobiernos locales de Croacia y la Ciudad de Zagreb, y las personas particulares no son solicitantes."
+     ],
+     "res": [
+      "no",
+      "Aunque viva en Croacia, una persona particular no es solicitante; solo podría participar como parte de una organización socia."
+     ]
+    },
+    "src": [
+     "mdu.gov.hr",
+     "https://mdu.gov.hr/javni-pozivi/program-provedbe-edukativnih-kulturnih-i-sportskih-aktivnosti-za-predskolsku-djecu-te-djecu-od-1-do-4-razreda-osnovne-skole-u-lokalnim-zajednicama/7674"
+    ],
+    "ai_generated": true,
+    "deadline": "2026-11-19T23:59:00+01:00",
+    "flag": "Confirmar si una asociación de la diáspora registrada en Croacia podría figurar como organización socia de la sociedad civil según las Upute za prijavitelje. Revisar el PDF de Upute za prijavitelje para verificar los requisitos de socios y si se exige sede en alguna localidad. La fecha de cierre figura como 19 de noviembre de 2026 a las 16:00 horas en la fuente. Se borró el monto «5.000.000 de euros en total para toda la convocatoria; cada proyecto recibe entre 10.000 y 70.000 euros»: no aparece textual en la fuente. Revisar el PDF de la convocatoria."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": "do 19. studenoga 2026. godine do 16:00 sati"
+   }
+  }
+ ]
+}
