@@ -8,7 +8,7 @@
 
 ## Lo que tiene que existir antes del 5/11/2026 (MVP de demo)
 1. **Web pública** (estática) con el mapa, los filtros por perfil (`ar` / `cit` / `res`) y las fichas. ✅ Está en `site/` (lee `site/data/opportunities.json`) y se publica con GitHub Pages desde `.github/workflows/pages.yml` en **https://radar.zustrolabs.com** (CNAME `radar` en la zona `zustrolabs.com`, en DNS only). En esa zona, el registro `croata` es de Šahovnica y lo maneja Wrangler: no tocarlo. `api` y `atencion` son custom domains del Worker `radar-api` (Wrangler). El dominio viejo `radar.jgcup.stream` solo redirige. `jgcup.stream` lo usan otros proyectos de Jeremías por un túnel de Cloudflare: **ahí el Radar solo usa el registro `radar`**. No tocar el dominio raíz, `estudio`, `comfy` ni el túnel. El código de la web está en `site/index.html` (estructura y mapa), `site/assets/styles.css` y `site/assets/app.js`.
-2. **Pipeline real con al menos 4–6 fuentes** (de las 12 del plan): RSS de la Oficina (`hrvatiizvanrh.gov.hr/rss.aspx?ID=574`), MDU (`mdu.gov.hr`, javni pozivi), HZZ (`mjere.hzz.hr`), PGŽ (`pgz.hr`, WordPress), Grad Rijeka, udruge.gov.hr.
+2. **Pipeline real:** ✅ **12 fuentes** desde el 20/10/2026 (`scripts/sources.json`; un test exige ≥12). Las primeras: RSS de la Oficina (`hrvatiizvanrh.gov.hr/rss.aspx?ID=574`), MDU (`mdu.gov.hr`, javni pozivi), HZZ (`mjere.hzz.hr`), PGŽ (`pgz.hr`, WordPress), Grad Rijeka, udruge.gov.hr.
 3. **Agentes de IA** con salida JSON validada por esquema:
    - **Extractor/resumidor:** convocatoria en croata → ficha en español (qué es, quién la da, monto, plazo, link).
    - **Clasificador de elegibilidad** por perfil (ok / cond / no + motivo). Siempre conservador: ante la duda, "cond" y una nota para revisar.

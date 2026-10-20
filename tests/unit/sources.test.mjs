@@ -79,3 +79,48 @@ test("todas las fuentes tienen id, nombre con el original en croata, tipo conoci
   }
   assert.ok(sources.length >= 6);
 });
+
+// ── ZL-10: fuentes nuevas (20/10/2026), cada una con su copia real ──
+
+test("Oficina (RSS 8, novedades): 20 ítems con fecha", () => {
+  const items = parseRss(fx("oficina_8.xml"));
+  assert.equal(items.length, 20);
+  assertSource(items, "oficina_vijesti", "hrvatiizvanrh.gov.hr");
+});
+
+test("MDU (RSS 4693, novedades): 20 ítems con fecha", () => {
+  const items = parseRss(fx("mdu_4693.xml"));
+  assert.equal(items.length, 20);
+  assertSource(items, "mdu_vijesti", "mdu.gov.hr");
+});
+
+test("MZOM (RSS 196, natječaji): 20 ítems, incluida la convocatoria de becas estatales", () => {
+  const items = parseRss(fx("mzom_196.xml"));
+  assert.equal(items.length, 20);
+  assertSource(items, "mzom_natjecaji", "mzom.gov.hr");
+  assert.ok(items.some((i) => /stipendij/i.test(i.title)));
+});
+
+test("Matica iseljenika (feed de WordPress): 10 novedades", () => {
+  const items = parseRss(fx("matis_feed.xml"));
+  assert.equal(items.length, 10);
+  assertSource(items, "matis_novosti", "matis.hr");
+});
+
+test("PGŽ (API de WordPress, natječaji): 30 concursos", () => {
+  const items = parseWp(fx("pgz_natjecaj.json"), src("pgz_natjecaji"));
+  assert.equal(items.length, 30);
+  assertSource(items, "pgz_natjecaji", "www.pgz.hr");
+  assert.ok(items.every((i) => i.guid.startsWith("wp:")));
+});
+
+test("FIPRO (API de WordPress, páginas): solo quedan las convocatorias", () => {
+  const items = parseWp(fx("fipro_pages.json"), src("fipro_pozivi"));
+  assert.equal(items.length, 3);
+  assertSource(items, "fipro_pozivi", "www.fipro.hr");
+  assert.ok(items.some((i) => /2026/.test(i.title)));
+});
+
+test("compromiso con la Oficina: el robot revisa al menos 12 fuentes", () => {
+  assert.ok(sources.length >= 12, `hay ${sources.length}`);
+});

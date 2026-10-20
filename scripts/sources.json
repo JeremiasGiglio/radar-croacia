@@ -41,5 +41,48 @@
     "type": "rss",
     "url": "https://udruge.gov.hr/rss.aspx?ID=8",
     "min_items": 5
+  },
+  {
+    "id": "oficina_vijesti",
+    "name": "Oficina para los Croatas fuera de Croacia: novedades (Vijesti)",
+    "type": "rss",
+    "url": "https://hrvatiizvanrh.gov.hr/rss.aspx?ID=8",
+    "min_items": 5
+  },
+  {
+    "id": "mdu_vijesti",
+    "name": "Ministerio de Demografía e Inmigración (MDU): novedades (Vijesti)",
+    "type": "rss",
+    "url": "https://mdu.gov.hr/rss.aspx?ID=4693",
+    "min_items": 5
+  },
+  {
+    "id": "mzom_natjecaji",
+    "name": "Ministerio de Ciencia, Educación y Juventud (MZOM): becas y convocatorias (Natječaji)",
+    "type": "rss",
+    "url": "https://mzom.gov.hr/rss.aspx?ID=196",
+    "min_items": 5
+  },
+  {
+    "id": "matis_novosti",
+    "name": "Hrvatska matica iseljenika: novedades y programas (Novosti)",
+    "type": "rss",
+    "url": "https://matis.hr/feed/",
+    "min_items": 5
+  },
+  {
+    "id": "pgz_natjecaji",
+    "name": "Condado de Primorje-Gorski Kotar: concursos de empleo y becas (Natječaji, Primorsko-goranska županija)",
+    "type": "wp",
+    "url": "https://www.pgz.hr/wp-json/wp/v2/natjecaj?per_page=30&orderby=date&order=desc&_fields=id,date_gmt,modified_gmt,link,title,excerpt",
+    "min_items": 5
+  },
+  {
+    "id": "fipro_pozivi",
+    "name": "Fundación FIPRO: convocatorias para innovación en la región de Rijeka (Javni pozivi, Zaklada FIPRO)",
+    "type": "wp",
+    "url": "https://www.fipro.hr/wp-json/wp/v2/pages?per_page=30&orderby=modified&order=desc&_fields=id,date_gmt,modified_gmt,link,title,excerpt",
+    "title_filter": "javni poziv",
+    "min_items": 1
   }
 ]

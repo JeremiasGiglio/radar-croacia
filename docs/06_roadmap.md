@@ -7,7 +7,7 @@
 - [ ] Enviar el resumen del IMIN.
 
 ## Sprint 1: hasta el 2/11/2026 (demo para Córdoba)
-- [ ] Adaptadores para 4–6 fuentes: ~~Oficina RSS~~ ✅, ~~MDU~~ ✅, HZZ, PGŽ, Grad Rijeka, udruge.
+- [x] 12 fuentes en el robot (20/10/2026): Oficina (convocatorias y novedades), MDU (convocatorias y novedades), MZOM, Matica, PGŽ (programas y concursos), Grad Rijeka, HZZ, udruge y FIPRO.
 - [ ] Agente extractor/resumidor + agente de elegibilidad, con esquema JSON y evals.
 - [x] Cola de revisión como PR automático.
 - [ ] Panel "Cambios detectados" con datos reales.
