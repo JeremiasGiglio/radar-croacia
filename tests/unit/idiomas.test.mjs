@@ -318,3 +318,21 @@ test("ZL-84: fuera de tema no lleva fichas; en croata la lista usa el nombre ofi
   assert.match(formatAnswer(r, "hr"), new RegExp(beca.t_hr));
   assert.match(formatAnswer(r, "es"), new RegExp(beca.t.replace(/[()]/g, ".")));
 });
+
+// ZL-101: idioma del mensaje en el chat de la web.
+test("detectarIdioma: reconoce castellano, croata, inglés y portugués, y es conservador con mensajes cortos", async () => {
+  const { detectarIdioma } = await import("../../worker/src/textos.mjs");
+  const casos = [
+    ["¿Me recomendás un restaurante en Rijeka?", "es"],
+    ["Vivo en Rosario y quiero estudiar croata en Šibenik", "es"],
+    ["Can you recommend a restaurant in Rijeka?", "en"],
+    ["I have no Croatian ancestry. Is there anything for working in Croatia?", "en"],
+    ["Nemam hrvatsko podrijetlo. Ima li nešto za posao u Hrvatskoj?", "hr"],
+    ["Potomak sam Hrvata i želim studirati u Hrvatskoj. Koje stipendije postoje?", "hr"],
+    ["Quero morar na Croácia, existe ajuda para mim?", "pt"],
+    ["beca", null],
+    ["Rijeka", null],
+    ["", null],
+  ];
+  for (const [t, esperado] of casos) assert.equal(detectarIdioma(t), esperado, t);
+});

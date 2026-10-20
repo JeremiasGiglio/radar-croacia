@@ -144,3 +144,40 @@ export const TEXTOS_I18N = {
 /** Idioma válido o castellano. */
 export const idiomaDe = (x) => (IDIOMAS.includes(x) ? x : "es");
 export const textos = (idioma) => TEXTOS_I18N[idiomaDe(idioma)];
+
+// Palabras frecuentes de cada idioma, para adivinar en qué escribe la persona en el chat de la web (ZL-101).
+// En WhatsApp el idioma lo elige la persona; en la web no hay selector, así que se mira el mensaje.
+const PALABRAS = {
+  es: "el la los las de del y que qué en un una es soy tengo quiero hay para por con mi me puedo cómo vivo busco algo ayuda estudiar trabajar",
+  hr: "je sam i u li za što koje koji ima imam nemam možeš mogu želim trebam nešto kako gdje molim bok hvala posao stipendije studirati raditi hrvatsku hrvatskoj",
+  en: "the is are what can you i i'm im have want there for how any my do does is anything recommend scholarships working study work please",
+  pt: "você voce não nao tenho quero para morar trabalhar existe há como posso ajuda obrigado eu estou bolsas estudar uma",
+};
+const LISTAS = Object.fromEntries(Object.entries(PALABRAS).map(([k, v]) => [k, new Set(v.split(" "))]));
+
+/**
+ * Idioma del texto: "es", "hr", "en" o "pt"; null si no está claro.
+ * Conservador: un idioma que no sea castellano tiene que sumar al menos 2 palabras y más que el castellano.
+ */
+export function detectarIdioma(texto) {
+  const palabras =
+    String(texto ?? "")
+      .toLowerCase()
+      .match(/[a-záéíóúñüãõçâêôàčćđšž']+/g) ?? [];
+  if (!palabras.length) return null;
+  const puntos = Object.fromEntries(
+    Object.entries(LISTAS).map(([k, set]) => [k, new Set(palabras.filter((p) => set.has(p))).size]),
+  );
+  // Las letras propias del croata cuentan, salvo en nombres de lugares que se escriben igual en castellano.
+  if (
+    /[čćđšž]/.test(
+      String(texto)
+        .toLowerCase()
+        .replace(/šahovnica|šibenik|žminj|kvarner/g, ""),
+    )
+  )
+    puntos.hr += 1;
+  const [mejor, p] = Object.entries(puntos).sort((a, b) => b[1] - a[1])[0];
+  if (mejor === "es") return p > 0 ? "es" : null;
+  return p >= 2 && p > puntos.es ? mejor : null;
+}

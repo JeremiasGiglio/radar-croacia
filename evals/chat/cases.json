@@ -382,5 +382,56 @@
       "respuesta_no_incluye": ["http"],
       "fuera_de_tema": false
     }
+  },
+  {
+    "id": "web_en_fuera_de_tema",
+    "porque": "ZL-101: en la web, una pregunta fuera de tema en inglés volvía en castellano. Tiene que responder en inglés y sin fichas.",
+    "perfil": "ar",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Can you recommend a restaurant in Rijeka?"
+      }
+    ],
+    "expect": {
+      "fuera_de_tema": true,
+      "fichas_max": 0,
+      "respuesta_incluye_alguno": [" i ", " you", " can"],
+      "respuesta_no_incluye": ["puedo", "solo puedo", "querés"]
+    }
+  },
+  {
+    "id": "web_hr_posao",
+    "porque": "ZL-101: en la web, una pregunta en croata volvía en castellano. Tiene que responder en croata, con trato de «ti», y recomendar las fichas de trabajo.",
+    "perfil": "ar",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Nemam hrvatsko podrijetlo. Ima li nešto za posao u Hrvatskoj?"
+      }
+    ],
+    "expect": {
+      "fichas_alguna": ["hzz_burza", "dozvola_trabajo", "eures"],
+      "respuesta_incluye_alguno": ["posao", "rad", "dozvol"],
+      "respuesta_no_incluye": ["necesitás", "trabajar", "podés", "radar hrvatske"],
+      "fuera_de_tema": false
+    }
+  },
+  {
+    "id": "web_en_estudiar_sin_ids",
+    "porque": "ZL-101: en inglés dejaba ver «(cupo_uni)» en el texto. Tiene que recomendar el cupo y no escribir ids.",
+    "perfil": "cit",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I'm of Croatian descent and I want to study in Croatia. What scholarships are there?"
+      }
+    ],
+    "expect": {
+      "fichas_alguna": ["cupo_uni", "beca", "uniri_master"],
+      "respuesta_incluye_alguno": [" you", "your"],
+      "respuesta_no_incluye": ["cupo_uni", "uniri_master", "study_in_croatia"],
+      "fuera_de_tema": false
+    }
   }
 ]

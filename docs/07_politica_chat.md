@@ -70,6 +70,7 @@ Responde en el idioma del último mensaje de la persona: castellano rioplatense 
 ## Controles automáticos (después de la IA)
 - Solo se muestran fichas que existen en el Radar.
 - Se sacan los links que escriba el modelo.
+- Se sacan los códigos internos de las fichas si el modelo los escribe en el texto.
 - Se saca toda oración con una cifra de plata que no figure en ninguna ficha.
 - Se limpia el markdown y se corta la respuesta si se pasa del largo máximo.
 - Si no hay fichas para recomendar, se ofrece hablar con una persona.

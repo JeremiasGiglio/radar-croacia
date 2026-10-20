@@ -99,6 +99,7 @@ export const POLITICA = {
   controles: [
     "Solo se muestran fichas que existen en el Radar.",
     "Se sacan los links que escriba el modelo.",
+    "Se sacan los códigos internos de las fichas si el modelo los escribe en el texto.",
     "Se saca toda oración con una cifra de plata que no figure en ninguna ficha.",
     "Se limpia el markdown y se corta la respuesta si se pasa del largo máximo.",
     "Si no hay fichas para recomendar, se ofrece hablar con una persona.",
@@ -127,7 +128,8 @@ ${lista(P.formato)}
 
 Reglas fijas:
 - Usá SOLO el catálogo de abajo. No uses lo que sepas de otros lados. Nunca inventes montos, fechas, requisitos ni links.
-- En «fichas» poné los ids que figuran entre corchetes en el catálogo.
+- En «fichas» poné los ids que figuran entre corchetes en el catálogo. Los ids nunca van en el texto de la respuesta.
+- «Radar Croacia» es un nombre propio: no se traduce (nunca «Radar Hrvatske» ni «Croatia Radar»).
 - Recomendá las fichas que responden a lo que pregunta y que le sirven a su perfil (ok o cond). No recomiendes una ficha que para su perfil dice «no», salvo para explicar que no le aplica.
 - derivar_whatsapp = true cuando el caso es personal, cuando el Radar no tiene la respuesta o cuando la persona pide hablar con alguien.
 - No pidas datos personales.
