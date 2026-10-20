@@ -28,7 +28,7 @@ export const SECCION_IDIOMA = "Idiomas · Languages";
 export const TEXTOS_I18N = {
   es: {
     bienvenida:
-      "¡Hola! Soy el asistente del Radar Croacia: te ayudo a encontrar oportunidades oficiales de Croacia para descendientes. Respondo con las fichas verificadas del Radar y no doy asesoramiento legal. Para empezar, contame tu situación:",
+      "¡Hola! Soy el asistente del Radar Croacia: te ayudo a encontrar programas, becas y oportunidades en Croacia, para la diáspora sudamericana y para quien quiera ir a Croacia. Respondo con las fichas verificadas del Radar y no doy asesoramiento legal. Para empezar, contame tu situación:",
     aviso:
       "Soy un asistente automático: es información, no asesoramiento legal. Guardamos tu perfil por 90 días, pero no lo que escribís (salvo que pidas hablar con una persona). Escribí PERSONA para hablar con alguien del equipo o BORRAR para que lo olvidemos.",
     perfilPedir: "Contame tu situación:",
@@ -57,7 +57,7 @@ export const TEXTOS_I18N = {
   },
   hr: {
     bienvenida:
-      "Bok! Ja sam asistent Radara Croacia: pomažem ti pronaći službene prilike u Hrvatskoj za potomke Hrvata. Odgovaram na temelju provjerenih kartica Radara (napisane su na španjolskom, a ja ti ih objašnjavam na hrvatskom) i ne dajem pravne savjete. Za početak, reci mi svoju situaciju:",
+      "Bok! Ja sam asistent Radara Croacia: pomažem ti pronaći programe, stipendije i prilike u Hrvatskoj, za iseljenike iz Južne Amerike i za sve koji žele doći u Hrvatsku. Odgovaram na temelju provjerenih kartica Radara (napisane su na španjolskom, a ja ti ih objašnjavam na hrvatskom) i ne dajem pravne savjete. Za početak, reci mi svoju situaciju:",
     aviso:
       "Ja sam automatski asistent: ovo su informacije, a ne pravni savjet. Tvoj profil čuvamo 90 dana, ali ne i ono što pišeš (osim ako zatražiš razgovor s osobom). Napiši OSOBA za razgovor s nekim iz tima ili OBRIŠI da te zaboravimo.",
     perfilPedir: "Reci mi svoju situaciju:",
@@ -85,7 +85,7 @@ export const TEXTOS_I18N = {
   },
   en: {
     bienvenida:
-      "Hi! I'm the Radar Croacia assistant: I help you find official opportunities in Croatia for people of Croatian descent. I answer with the Radar's verified cards (they're written in Spanish; I'll explain them in English) and I don't give legal advice. To start, tell me your situation:",
+      "Hi! I'm the Radar Croacia assistant: I help you find programs, scholarships and opportunities in Croatia, for the South American diaspora and for anyone who wants to go to Croatia. I answer with the Radar's verified cards (they're written in Spanish; I'll explain them in English) and I don't give legal advice. To start, tell me your situation:",
     aviso:
       "I'm an automated assistant: this is information, not legal advice. We keep your profile for 90 days, but not what you write (unless you ask to talk to a person). Write PERSON to talk to someone on the team or DELETE so we forget you.",
     perfilPedir: "Tell me your situation:",
@@ -113,7 +113,7 @@ export const TEXTOS_I18N = {
   },
   pt: {
     bienvenida:
-      "Olá! Sou o assistente do Radar Croacia: ajudo você a encontrar oportunidades oficiais da Croácia para descendentes de croatas. Respondo com as fichas verificadas do Radar (estão em espanhol; eu explico em português) e não dou orientação jurídica. Para começar, conte sua situação:",
+      "Olá! Sou o assistente do Radar Croacia: ajudo você a encontrar programas, bolsas e oportunidades na Croácia, para a diáspora sul-americana e para quem quer ir para a Croácia. Respondo com as fichas verificadas do Radar (estão em espanhol; eu explico em português) e não dou orientação jurídica. Para começar, conte sua situação:",
     aviso:
       "Sou um assistente automático: isto é informação, não orientação jurídica. Guardamos seu perfil por 90 dias, mas não o que você escreve (a menos que peça para falar com uma pessoa). Escreva PESSOA para falar com alguém da equipe ou APAGAR para que a gente esqueça você.",
     perfilPedir: "Conte sua situação:",

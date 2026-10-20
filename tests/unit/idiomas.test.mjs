@@ -288,3 +288,12 @@ test("evals: hay casos de WhatsApp en croata, inglés y portugués, y uno de iny
   assert.ok(wa.some((c) => /inyecci/i.test(c.porque) && c.idioma === "hr"));
   assert.ok(wa.every((c) => (c.expect.respuesta_no_incluye ?? []).length > 0));
 });
+
+test("ZL-80: la bienvenida usa el alcance nuevo («programas en Croacia»), sin «oficiales» ni «descendientes»", () => {
+  const programas = { es: /programas/, hr: /programe/, en: /programs/, pt: /programas/ };
+  const viejo = /oficiales|official|službene|oficiais|descendientes|descent|potomke/i;
+  for (const i of IDIOMAS) {
+    assert.match(TEXTOS_I18N[i].bienvenida, programas[i], i);
+    assert.doesNotMatch(TEXTOS_I18N[i].bienvenida, viejo, i);
+  }
+});
