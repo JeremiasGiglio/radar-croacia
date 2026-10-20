@@ -289,3 +289,53 @@ test("límites: la llamada a la IA tiene tiempo máximo (no deja al Worker colga
   const ia = calls.find((c) => c.url.startsWith("https://api.anthropic.com"));
   assert.ok(ia.init.signal instanceof AbortSignal);
 });
+
+// ZL-101: el chat de la web no tiene selector de idioma; se mira el último mensaje.
+test("web: una pregunta en inglés o croata le pide a la IA responder en ese idioma; en castellano no cambia nada", () => {
+  const en = buildRequest(DB, {
+    messages: [{ role: "user", content: "Can you recommend a restaurant in Rijeka?" }],
+    perfil: "ar",
+  });
+  assert.match(en.system, /Idioma del último mensaje de la persona: inglés/);
+  assert.match(en.messages.at(-1).content, /\[Respondé en inglés claro y simple\.\]$/);
+  const hr = buildRequest(DB, {
+    messages: [{ role: "user", content: "Nemam hrvatsko podrijetlo. Ima li nešto za posao u Hrvatskoj?" }],
+    perfil: "ar",
+  });
+  assert.match(hr.system, /croata estándar \(hrvatski\), con trato de «ti»/);
+  const es = buildRequest(DB, {
+    messages: [{ role: "user", content: "¿Me recomendás un restaurante en Rijeka?" }],
+    perfil: "ar",
+  });
+  assert.doesNotMatch(es.system, /Idioma del último mensaje/);
+  assert.doesNotMatch(es.messages.at(-1).content, /Respondé en/);
+  // WhatsApp ya trae su canal con el idioma elegido: no se le agrega el de la web
+  const wa = buildRequest(
+    DB,
+    { messages: [{ role: "user", content: "Can you help me?" }], perfil: "ar" },
+    { canal: "Canal: WhatsApp." },
+  );
+  assert.doesNotMatch(wa.system, /chat de la web/);
+  assert.doesNotMatch(wa.messages.at(-1).content, /Respondé en/);
+});
+
+test("controles: los ids internos de las fichas no quedan en el texto (ZL-101)", () => {
+  const r = applyGuardrails(
+    {
+      respuesta:
+        "Your best starting point is the special university quota (cupo_uni). The Rijeka quota [uniri_master] is closed.",
+      fichas: ["cupo_uni", "uniri_master"],
+      derivar_whatsapp: false,
+      fuera_de_tema: false,
+    },
+    DB,
+  );
+  assert.doesNotMatch(r.respuesta, /cupo_uni|uniri_master|\(\s*\)|\[\s*\]/);
+  assert.match(r.respuesta, /special university quota\. The Rijeka quota is closed\./);
+  // una palabra común que también es id («beca») sigue en el texto si no está entre paréntesis
+  const b = applyGuardrails(
+    { respuesta: "Te sirve la beca del MDU.", fichas: ["beca"], derivar_whatsapp: false, fuera_de_tema: false },
+    DB,
+  );
+  assert.equal(b.respuesta, "Te sirve la beca del MDU.");
+});

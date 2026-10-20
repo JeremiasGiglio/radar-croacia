@@ -1,7 +1,7 @@
 // Lógica del chat del Radar (sin dependencias: corre igual en Cloudflare Workers y en Node para los tests).
 // Reglas: responde solo con las fichas verificadas; nunca inventa montos; no guarda mensajes.
 
-import { textos } from "./textos.mjs";
+import { textos, detectarIdioma, IDIOMA_PROMPT } from "./textos.mjs";
 import { LIMITES, reglasParaModelo } from "./policy.mjs";
 
 export const MODEL = "claude-haiku-5-5";
@@ -99,17 +99,32 @@ export function parseRequest(body) {
   return { messages: merged, perfil };
 }
 
+/**
+ * Chat de la web (sin canal): no hay selector de idioma, así que se mira el último mensaje (ZL-101).
+ * Si está claro que no es castellano, se le dice a la IA en qué idioma responder, en el prompt y al final del pedido,
+ * porque el catálogo y la marca de perfil en castellano la tiraban a contestar en castellano.
+ */
+export function canalWeb(idioma) {
+  if (!idioma || idioma === "es") return "";
+  return `Canal: chat de la web. Idioma del último mensaje de la persona: ${IDIOMA_PROMPT[idioma]}. Respondé todo en ese idioma, también cuando el pedido es fuera de tema (el catálogo está en castellano: traducilo). Los nombres oficiales van en croata.`;
+}
+
 export function buildRequest(db, { messages, perfil }, { today = new Date(), maxTokens = 3000, canal = "" } = {}) {
   const P = db.profiles ?? PROFILES_FALLBACK;
   const last = messages.at(-1);
+  const idiomaWeb = canal ? null : detectarIdioma(last.content);
+  const recordatorio = idiomaWeb && idiomaWeb !== "es" ? `\n[Respondé en ${IDIOMA_PROMPT[idiomaWeb]}.]` : "";
   const withProfile = [
     ...messages.slice(0, -1),
-    { role: "user", content: `[Perfil elegido en la página: ${perfil} = ${P[perfil]}]\n${last.content}` },
+    {
+      role: "user",
+      content: `[Perfil elegido en la página: ${perfil} = ${P[perfil]}]\n${last.content}${recordatorio}`,
+    },
   ];
   return {
     model: MODEL,
     max_tokens: maxTokens,
-    system: systemPrompt(db, today, canal),
+    system: systemPrompt(db, today, canal || canalWeb(idiomaWeb)),
     messages: withProfile,
     output_config: { format: { type: "json_schema", schema: CHAT_SCHEMA } },
   };
@@ -163,6 +178,20 @@ export function stripMarkdown(s) {
  * - sin links (la página muestra la fuente oficial de cada ficha);
  * - cada oración que habla de plata tiene que usar cifras de las fichas recomendadas; si no, se saca.
  */
+/**
+ * Saca del texto los ids internos de las fichas (ZL-101): «(cupo_uni)», «[beca]», o un id con guion bajo suelto.
+ * Un id que es una palabra común («beca», «rijeka») solo se saca entre paréntesis o corchetes.
+ */
+export function sinIds(text, byId) {
+  let t = String(text);
+  for (const id of byId.keys()) {
+    const e = id.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    t = t.replace(new RegExp(`\\s*[([]\\s*${e}\\s*[)\\]]`, "gi"), "");
+    if (id.includes("_")) t = t.replace(new RegExp(`\\b${e}\\b`, "gi"), "");
+  }
+  return t.replace(/\s+([.,;:!?])/g, "$1").replace(/[ \t]{2,}/g, " ");
+}
+
 export function applyGuardrails(answer, db, { whatsapp = false, idioma = "es" } = {}) {
   const T = textos(idioma);
   const byId = new Map((db.opportunities ?? []).map((o) => [o.id, o]));
@@ -173,7 +202,7 @@ export function applyGuardrails(answer, db, { whatsapp = false, idioma = "es" } 
     : [...new Set(answer.fichas)].filter((id) => byId.has(id)).slice(0, LIMITS.fichas);
   if (fichas.length !== new Set(answer.fichas).size) notes.push("ids desconocidos descartados");
 
-  let text = stripMarkdown(String(answer.respuesta))
+  let text = sinIds(stripMarkdown(String(answer.respuesta)), byId)
     .replace(/https?:\/\/\S+|www\.\S+/gi, "")
     .replace(/[ \t]{2,}/g, " ");
   // Las cifras de plata tienen que estar en las fichas que la respuesta recomienda (monto, descripción o aviso),
