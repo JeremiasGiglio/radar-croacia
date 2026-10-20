@@ -1,6 +1,6 @@
 {
- "version": "2026-10-10",
- "verified_at": "2026-10-16",
+ "version": "2026-10-20",
+ "verified_at": "2026-10-20",
  "note": "Beta. Fichas revisadas por Jeremías Giglio (Zustro Labs) con fuentes oficiales. Los montos y plazos pueden cambiar: la fuente oficial manda.",
  "profiles": {
   "ar": "Vive en Argentina, sin ciudadanía",
@@ -79,7 +79,7 @@
   {
    "id": "beca",
    "cat": "beca",
-   "t": "Beca de lengua croata en universidades croatas (2027/28)",
+   "t": "Beca de lengua croata en universidades croatas (MDU)",
    "who": "Ministerio de Demografía e Inmigración (MDU)",
    "pts": [
     [
@@ -107,30 +107,31 @@
      44.87
     ]
    ],
-   "next": "Junio 2027",
-   "amount": "Curso gratis, comidas subsidiadas y €400 por mes para alojamiento",
-   "what": "Un semestre o un año de croata en Zagreb, Rijeka, Split, Osijek, Zadar o Pula. La convocatoria 2026 cerró el 6 de julio; la próxima sale en junio.",
+   "next": "La 2027/28 todavía no salió (las últimas se publicaron en abril y en junio)",
+   "amount": "Curso gratis, hasta dos comidas por día subsidiadas y €400 por mes para alojamiento",
+   "what": "Un semestre o un año de croata en Zagreb, Rijeka, Split, Osijek, Zadar o Pula, con hasta 700 becas en la edición 2026/27 (cerró el 6 de julio). Es para descendientes de croatas mayores de 18 con el secundario terminado, y también para sus cónyuges. Los €400 se cobran al aprobar el semestre y el pasaje lo pagás vos.",
    "el": {
     "ar": [
      "ok",
-     "Pensada para descendientes. Vivir fuera de Europa suma puntos."
+     "Pensada para descendientes: probás la ascendencia con las partidas hasta tu antepasado croata."
     ],
     "cit": [
      "ok",
-     "Pensada para descendientes. Vivir fuera de Europa suma puntos."
+     "Pensada para descendientes: igual tenés que probar la ascendencia con las partidas."
     ],
     "res": [
      "cond",
-     "Se puede, pero vivir ya en Croacia da menos puntaje."
+     "Solo si tu domicilio en Croacia tiene menos de 3 años al momento del llamado."
     ]
    },
    "src": [
     "mdu.gov.hr",
-    "https://mdu.gov.hr/"
+    "https://mdu.gov.hr/UserDocsImages/Ministarstvo%20demografije%20i%20useljeni%C5%A1tva/useljeni%C5%A1tvo/Javni%20poziv%20za%20stipendije%202026/Javni%20poziv_2026-2027.pdf"
    ],
-   "verified_at": "2026-09-28",
+   "verified_at": "2026-10-20",
    "fuente": "oficial",
-   "abierta": false
+   "abierta": false,
+   "t_hr": "Stipendija za učenje hrvatskoga jezika u Republici Hrvatskoj"
   },
   {
    "id": "a1hr",
@@ -594,6 +595,180 @@
    "verified_at": "2026-10-10",
    "fuente": "oficial",
    "abierta": false
+  },
+  {
+   "id": "cupo_uni",
+   "cat": "beca",
+   "t": "Cupo especial para estudiar una carrera en universidades croatas",
+   "t_hr": "Posebna upisna kvota za Hrvate izvan Republike Hrvatske",
+   "who": "Universidades croatas y Oficina Central para los Croatas fuera de Croacia",
+   "pts": [
+    [
+     15.98,
+     45.81
+    ],
+    [
+     14.44,
+     45.33
+    ],
+    [
+     16.44,
+     43.51
+    ],
+    [
+     18.69,
+     45.55
+    ],
+    [
+     15.23,
+     44.12
+    ],
+    [
+     13.85,
+     44.87
+    ]
+   ],
+   "next": "La 2027/28 todavía no salió. En la 2026/27 la inscripción abrió el 1/2/2026 y los papeles se mandaban hasta el 22/5/2026",
+   "amount": "Matrícula subsidiada como a un ciudadano croata (alumno regular; confirmado en Rijeka y Zagreb)",
+   "what": "Las universidades públicas croatas guardan lugares en sus carreras de grado para emigrados croatas y sus descendientes (en 2026/27, por ejemplo, 39 en Rijeka). No tenés que rendir la matura croata (državna matura). Te anotás en postani-student.hr eligiendo la carrera marcada «Hrvati izvan RH» y pedís a la Oficina la constancia de que pertenecés al pueblo croata (potvrda).",
+   "el": {
+    "ar": [
+     "ok",
+     "Con la constancia de la Oficina y el secundario reconocido en Croacia."
+    ],
+    "cit": [
+     "ok",
+     "Con la constancia de la Oficina: el pasaporte croata no alcanza como prueba."
+    ],
+    "res": [
+     "cond",
+     "La constancia pide domicilio fuera de Croacia: consultalo con la Oficina."
+    ]
+   },
+   "src": [
+    "hrvatiizvanrh.gov.hr",
+    "https://hrvatiizvanrh.gov.hr/UserDocsImages//dokumenti/POSEBNA%20UPISNA%20KVOTA//Objedinjena%20tablica%20broj%20upisnih%20mjesta%20ak.god.%202026-2027.docx"
+   ],
+   "flag": "Algunas carreras piden el examen de croata B2. En Zagreb el subsidio es para carreras dictadas en croata. Consultas: upisne-kvote@hrvatiizvanrh.hr.",
+   "fuente": "oficial",
+   "abierta": false,
+   "verified_at": "2026-10-20"
+  },
+  {
+   "id": "uniri_master",
+   "cat": "beca",
+   "t": "Rijeka: cupo en las maestrías para croatas de afuera",
+   "t_hr": "Diplomski studiji Sveučilišta u Rijeci, kvota Hrvati izvan RH",
+   "who": "Universidad de Rijeka (Sveučilište u Rijeci)",
+   "pts": [
+    [
+     14.44,
+     45.33
+    ]
+   ],
+   "next": "La 2027/28 todavía no salió. En la 2026/27 la inscripción fue del 1/7 al 18/9/2026",
+   "amount": "Matrícula subsidiada como a un ciudadano croata (alumno regular). La facultad puede cobrar €35 por la evaluación",
+   "what": "La Universidad de Rijeka guarda lugares en sus maestrías para descendientes de croatas emigrados: 27 en la edición 2026/27. Necesitás la constancia de la Oficina y que te reconozcan el título de grado extranjero.",
+   "el": {
+    "ar": [
+     "ok",
+     "Con la constancia de la Oficina y el título de grado reconocido."
+    ],
+    "cit": [
+     "ok",
+     "Con la constancia de la Oficina: el pasaporte no prueba la ascendencia."
+    ],
+    "res": [
+     "cond",
+     "La constancia pide domicilio fuera de Croacia: consultalo con la Oficina."
+    ]
+   },
+   "src": [
+    "uniri.hr",
+    "https://uniri.hr/wp-content/uploads/2026/07/4-Natjecaj-za-upis-diplomski-studiji-2026_2027-privitak2P.pdf"
+   ],
+   "flag": "Algunas facultades piden aprobar el examen de croata B2 antes de terminar el primer año.",
+   "fuente": "oficial",
+   "abierta": false,
+   "verified_at": "2026-10-20"
+  },
+  {
+   "id": "beca_sdu",
+   "cat": "beca",
+   "t": "Beca de la Oficina para estudiantes de origen croata en Croacia",
+   "t_hr": "Stipendije za studente – pripadnike hrvatskog naroda izvan Republike Hrvatske",
+   "who": "Oficina Central para los Croatas fuera de Croacia (Središnji državni ured za Hrvate izvan RH)",
+   "pts": [
+    [
+     15.98,
+     45.81
+    ]
+   ],
+   "next": "Diciembre de 2026 (convocatoria 2026/27, según el plan anual de la Oficina). La anterior abrió el 17/12/2025 y cerró el 16/1/2026",
+   "amount": "€175 por mes durante 10 meses",
+   "what": "Beca anual para alumnos regulares de grado o maestría que ya estudian en una universidad croata y tienen domicilio fuera de Croacia. En la última edición hubo 40 becas para la diáspora emigrada, por promedio y situación económica. No cubre doctorado.",
+   "el": {
+    "ar": [
+     "cond",
+     "Solo si ya estudiás en Croacia como alumno regular y mantenés el domicilio afuera."
+    ],
+    "cit": [
+     "cond",
+     "Mismas condiciones: la ciudadanía no prueba la ascendencia, piden otra constancia."
+    ],
+    "res": [
+     "cond",
+     "Piden domicilio en el exterior: con domicilio en Croacia probablemente no entrás."
+    ]
+   },
+   "src": [
+    "hrvatiizvanrh.gov.hr",
+    "https://hrvatiizvanrh.gov.hr/UserDocsImages//dokumenti/Javni_natjecaji_i_pozivi//Javni%20natje%C4%8Daj%20za%20dodjelu%20stipendija%20studentima%20-%20pripadnicima%20hrvatskog%20naroda%20izvan%20Republike%20Hrvatske%20-%20za%20akademsku%20godinu%202025.-2026..pdf"
+   ],
+   "fuente": "oficial",
+   "abierta": false,
+   "verified_at": "2026-10-20"
+  },
+  {
+   "id": "beca_gob_croata",
+   "cat": "beca",
+   "t": "Beca del Gobierno croata para un semestre de croata (estudiantes de cualquier país)",
+   "t_hr": "Croatian Government Scholarships, Application Pool 2",
+   "who": "Ministerio de Ciencia, Educación y Juventud (MZOM) y agencia AMPEU",
+   "pts": [
+    [
+     15.98,
+     45.81
+    ],
+    [
+     14.44,
+     45.33
+    ]
+   ],
+   "next": "La 2027/28 todavía no salió. La 2026/27 se publicó el 20/2/2026 y cerró el 10/4/2026",
+   "amount": "€300 por mes (sin julio ni agosto), curso gratis, residencia y comidas subsidiadas",
+   "what": "Un semestre en Croaticum (Zagreb) o en la Escuela de Estudios Croatas de Rijeka, para estudiantes universitarios de cualquier país que estudien croata o eslavística, o que aprendan croata en su universidad, con al menos dos semestres hechos. Te tiene que proponer tu profesor de croata.",
+   "el": {
+    "ar": [
+     "cond",
+     "Solo si estudiás croata en tu universidad y tu profesor te propone."
+    ],
+    "cit": [
+     "cond",
+     "Es para estudiantes extranjeros: confirmá con AMPEU si te toma con ciudadanía croata."
+    ],
+    "res": [
+     "no",
+     "Hay que estar inscripto en una universidad fuera de Croacia."
+    ]
+   },
+   "src": [
+    "mzom.gov.hr",
+    "https://mzom.gov.hr/UserDocsImages/dokumenti/Engleski/Call-for-Applications-Croatia-2026-2027.docx"
+   ],
+   "fuente": "oficial",
+   "abierta": true,
+   "verified_at": "2026-10-20"
   }
  ],
  "schema": "docs/03_arquitectura.md",
