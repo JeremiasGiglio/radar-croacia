@@ -1,0 +1,60 @@
+{
+ "source": "pgz_javni_pozivi",
+ "name": "Condado de Primorje-Gorski Kotar (Primorsko-goranska županija): convocatorias y programas (Projekti i programi)",
+ "detected_at": "2026-10-20",
+ "added": [
+  {
+   "guid": "https://www.pgz.hr/?post_type=projekt_program&p=108223",
+   "title": "Javni poziv za podnošenje zahtjeva za dodjelu financijskih sredstava iz projekta Komercijalizacija inovacija 2026.",
+   "link": "https://www.pgz.hr/projekt_program/javni-poziv-za-podnosenje-zahtjeva-za-dodjelu-financijskih-sredstava-iz-projekta-komercijalizacija-inovacija-2026/",
+   "published": "2026-10-15T06:00:00.000Z",
+   "summary": "Inovativnim poduzetnicima dostupno je novih 60 tisuća eura za razvoj proizvoda i usluga te njihov izlazak na tržište. Zaklada FIPRO u suradnji s Primorsko-goranskom županijom objavila je javni poziv u sklopu projekta „Komercijalizacija inovacija”, kojim se pojedinom prijavitelju može dodijeliti od 7 do 20 tisuća eura."
+  }
+ ],
+ "changed": [],
+ "instrucciones": "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json.",
+ "borradores": [
+  {
+   "guid": "https://www.pgz.hr/?post_type=projekt_program&p=108223",
+   "link": "https://www.pgz.hr/projekt_program/javni-poziv-za-podnosenje-zahtjeva-za-dodjelu-financijskih-sredstava-iz-projekta-komercijalizacija-inovacija-2026/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-10-20T10:07:56.109Z",
+   "text_from": "página oficial",
+   "relevante": true,
+   "motivo_relevancia": "Puede aprovecharla una persona física inventora o un emprendimiento que tenga sede en Primorje-Gorski Kotar o que la abra antes de cobrar, así que queda abierta para quien viva en esa zona de Croacia.",
+   "ficha": {
+    "cat": "emp",
+    "t": "Fondos para llevar innovaciones al mercado en Primorje-Gorski Kotar",
+    "t_hr": "Javni poziv za podnošenje zahtjeva za dodjelu financijskih sredstava iz projekta Komercijalizacija inovacija 2026.",
+    "who": "Fundación FIPRO (Zaklada FIPRO) junto con el Condado de Primorje-Gorski Kotar (Primorsko-goranska županija)",
+    "amount": "",
+    "what": "Financiamiento de entre 7.000 y 20.000 euros por postulante para desarrollar productos o servicios innovadores y llevarlos al mercado. Está dirigido a micro, pequeñas y medianas empresas con sede en el condado, a empresas privadas y talleres (obrt), y también a personas físicas inventoras que estén dispuestas a abrir un negocio o ceder sus derechos a una empresa de la zona antes de recibir los fondos.",
+    "el": {
+     "ar": [
+      "no",
+      "Exige tener sede en el condado de Primorje-Gorski Kotar, algo que no se cumple desde Argentina sin antes establecer una empresa allí."
+     ],
+     "cit": [
+      "no",
+      "Exige tener sede en el condado de Primorje-Gorski Kotar, algo que no se cumple desde Argentina sin antes establecer una empresa allí, aunque tenga ciudadanía."
+     ],
+     "res": [
+      "cond",
+      "Podría postularse si vive en el condado o establece allí su empresa antes de cobrar, y cumple las condiciones del llamado."
+     ]
+    },
+    "src": [
+     "pgz.hr",
+     "https://www.pgz.hr/projekt_program/javni-poziv-za-podnosenje-zahtjeva-za-dodjelu-financijskih-sredstava-iz-projekta-komercijalizacija-inovacija-2026/"
+    ],
+    "ai_generated": true,
+    "deadline": "2026-11-13T23:59:00+01:00",
+    "flag": "Confirmar si una persona física con residencia de diáspora que no vive en el condado puede postularse abriendo luego una empresa con sede allí, o si la sede debe existir al momento de postular. Confirmar si los 60.000 euros son el total de la convocatoria y si el rango de 7.000 a 20.000 euros aplica a cada proyecto. La fuente indica que la documentación se envía por correo electrónico a fipro@fipro.hr; no se incluyeron enlaces según las reglas. La fuente no detalla el porcentaje de cofinanciación ni los gastos elegibles; la ficha no los incluye. El aviso fue publicado el 15 de octubre de 2026 y la fecha de cierre es el 13 de noviembre de 2026 a las 23:59 (hora de Croacia). Se borró el monto «Entre €7.000 y €20.000 por postulante (€60.000 en total para la convocatoria)»: no aparece textual en la fuente. Revisar el PDF de la convocatoria."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": "Prijave su otvorene od 15. listopada do 13. studenoga 2026. u 23:59 sati"
+   }
+  }
+ ]
+}
