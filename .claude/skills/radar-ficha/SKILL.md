@@ -6,14 +6,16 @@ description: Agregar, corregir o cerrar una oportunidad (ficha) del Radar Croaci
 # Nueva ficha o corrección
 
 ## Antes de escribir
-1. Abrí la **página oficial** (no una nota de prensa, salvo que no haya otra; en ese caso, `flag` con la aclaración).
+1. Abrí la **página oficial** o la de la institución que ofrece el programa (no una nota de prensa, salvo que no haya otra; en ese caso, `flag` con la aclaración).
 2. Anotá tal cual: quién la da, monto, plazo, requisitos de residencia o ciudadanía. **Lo que no esté en la fuente no se escribe.**
 3. **Requisitos, montos y plazos se leen en el documento oficial** (PDF o DOCX: Javni poziv, Upute za prijavitelje, Pravilnik), **nunca en la página web que lo resume**: los resúmenes omiten cosas (por ejemplo, «uključuje i samozapošljavanje»). En `src` va el link a ese documento, no a la portada.
 4. Un «Revisar» en `flag` solo si, después de leer el documento oficial, de verdad falta un dato; y siempre con `src` apuntando a ese documento. El test `tests/unit/data.test.mjs` falla si no.
 
 ## Campos (esquema: `schema/opportunities.schema.json`)
 - `id`: slug estable en minúsculas con `_` (no se cambia nunca; lo usan los links de WhatsApp).
-- `cat`: `beca` | `emp` | `res` | `loc` | `proy`.
+- `cat`: `beca` (becas y estudios) | `emp` | `trab` (solo portales u organismos oficiales, nunca avisos sueltos) | `res` | `loc` | `proy`.
+- `fuente`: `oficial` (Estado, región, ciudad, universidad pública, agencia estatal, Narodne novine) | `institucion` (universidad privada, fundación, asociación) | `portal` (portal de empleo) | `prensa` (solo si no hay otra; con `flag`).
+- `abierta`: `true` si no pide ascendencia ni ciudadanía croata (abierta a todos); si no, `false`.
 - `t` en castellano claro; `t_hr` con el nombre oficial en croata si existe.
 - `deadline` (ISO con zona horaria de Croacia, p. ej. `2026-10-19T23:59:00+02:00`) **o** `next` (texto: "Junio 2027", "Todo el año").
 - `amount` y `what` en rioplatense, sin jerga; 2–3 frases.
