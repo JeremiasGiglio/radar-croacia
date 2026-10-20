@@ -15,7 +15,7 @@ Becas, cursos y estudios universitarios (también universidades privadas con car
 | Investigación de mercado, técnica y legal | ✅ `docs/01_investigacion_y_factibilidad.md` |
 | Web pública (mapa + filtros + fichas) | ✅ `site/`, publicada con GitHub Pages: https://radar.zustrolabs.com (antes `radar.jgcup.stream`, que redirige) |
 | Maqueta offline para eventos | ✅ `prototype/index.html` (datos del 28/9/2026 embebidos; funciona sin internet) |
-| Datos en JSON con esquema | ✅ `site/data/opportunities.json` (14 fichas, revisión 10/10/2026) + `schema/` |
+| Datos en JSON con esquema | ✅ `site/data/opportunities.json` (28 fichas, revisión 20/10/2026; cada una con tipo de fuente y si está abierta a todos) + `schema/` |
 | Tests | ✅ validación del JSON, 7 tests del robot con copias reales de los feeds y 15 E2E con Playwright (escritorio, celular y celular chico) |
 | Video demo con subtítulos | ✅ `media/Radar_Croacia_demo.mp4` |
 | Monitoreo diario de fuentes | 🟡 6 de 12: Oficina, MDU, PGŽ, Grad Rijeka, HZZ y Ured za udruge (RSS y API de WordPress). Robot diario + PR de revisión (`.github/workflows/monitor.yml`, `review/`) |

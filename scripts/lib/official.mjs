@@ -15,6 +15,8 @@ export const OFFICIAL_HOSTS = [
   "unipu.hr",
   "ampeu.hr",
   "studyincroatia.hr",
+  // Boletín oficial (leyes)
+  "nn.hr",
 ];
 
 /** true si la URL es https y su dominio es oficial (o un subdominio de uno oficial). */

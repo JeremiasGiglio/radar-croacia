@@ -9,7 +9,7 @@
  },
  "categories": {
   "beca": {
-   "n": "Becas y cursos",
+   "n": "Becas y estudios",
    "c": "#1D5F8A"
   },
   "emp": {
@@ -767,6 +767,408 @@
     "https://mzom.gov.hr/UserDocsImages/dokumenti/Engleski/Call-for-Applications-Croatia-2026-2027.docx"
    ],
    "fuente": "oficial",
+   "abierta": true,
+   "verified_at": "2026-10-20"
+  },
+  {
+   "id": "hzz_burza",
+   "cat": "trab",
+   "t": "Bolsa de empleo del Servicio de Empleo de Croacia",
+   "t_hr": "Burza rada HZZ",
+   "who": "Servicio de Empleo de Croacia (HZZ)",
+   "pts": [
+    [
+     15.98,
+     45.81
+    ],
+    [
+     14.44,
+     45.33
+    ]
+   ],
+   "next": "Todo el año",
+   "amount": "Gratis",
+   "what": "Es el buscador oficial de ofertas de trabajo de toda Croacia. Podés filtrar por condado (županija): elegí «PRIMORSKO-GORANSKA» para ver Rijeka y alrededores. Para mirar no hace falta registrarte; para postularte desde el portal necesitás una cuenta de e-Građani (NIAS).",
+   "el": {
+    "ar": [
+     "cond",
+     "Podés mirar las ofertas, pero para trabajar necesitás permiso de trabajo o la residencia de diáspora."
+    ],
+    "cit": [
+     "ok",
+     "Con ciudadanía croata trabajás sin permiso. Para postularte por el portal necesitás e-Građani."
+    ],
+    "res": [
+     "ok",
+     "Con la residencia de diáspora trabajás sin permiso de trabajo."
+    ]
+   },
+   "src": [
+    "burzarada.hzz.hr",
+    "https://burzarada.hzz.hr/Posloprimac_RadnaMjesta.aspx"
+   ],
+   "fuente": "portal",
+   "abierta": true,
+   "verified_at": "2026-10-20"
+  },
+  {
+   "id": "eures",
+   "cat": "trab",
+   "t": "Portal europeo de empleo (EURES)",
+   "who": "Comisión Europea, con el HZZ en Croacia",
+   "pts": [
+    [
+     15.98,
+     45.81
+    ]
+   ],
+   "next": "Todo el año",
+   "amount": "Gratis",
+   "what": "La red europea de empleo junta ofertas de los países de la UE, Noruega, Islandia, Liechtenstein y Suiza, Croacia incluida. Está pensada para quienes pueden circular libremente para trabajar, es decir, ciudadanos de esos países. Si no lo sos, podés buscar, pero igual necesitás un permiso o una residencia que te habilite.",
+   "el": {
+    "ar": [
+     "cond",
+     "Podés buscar, pero EURES no te da permiso para trabajar."
+    ],
+    "cit": [
+     "ok",
+     "Con ciudadanía croata podés trabajar en Croacia y en el resto de la UE sin permiso."
+    ],
+    "res": [
+     "cond",
+     "Te sirve para Croacia; para trabajar en otro país de la UE la residencia croata no alcanza."
+    ]
+   },
+   "src": [
+    "eures.europa.eu",
+    "https://eures.europa.eu/eures-services/help-and-support_en"
+   ],
+   "fuente": "portal",
+   "abierta": true,
+   "verified_at": "2026-10-20"
+  },
+  {
+   "id": "rijeka_empleo",
+   "cat": "trab",
+   "t": "Concursos para trabajar en la Municipalidad de Rijeka",
+   "t_hr": "Natječaji za zapošljavanje, Grad Rijeka",
+   "who": "Ciudad de Rijeka (Grad Rijeka)",
+   "pts": [
+    [
+     14.44,
+     45.33
+    ]
+   ],
+   "next": "Todo el año",
+   "amount": "Sin costo",
+   "what": "La sección donde la Municipalidad de Rijeka publica sus concursos para trabajar en la administración. La ley exige ciudadanía croata, título homologado si lo sacaste afuera y una prueba escrita. Los concursos también salen en el boletín oficial (Narodne novine) y los temporales, en el HZZ.",
+   "el": {
+    "ar": [
+     "no",
+     "Exige ciudadanía croata (art. 12 de la ley de empleados locales)."
+    ],
+    "cit": [
+     "cond",
+     "Tenés la ciudadanía, pero hay que homologar el título y rendir la prueba."
+    ],
+    "res": [
+     "no",
+     "La residencia de diáspora no alcanza: exige ciudadanía croata."
+    ]
+   },
+   "src": [
+    "rijeka.hr",
+    "https://www.rijeka.hr/gradska-uprava/natjecaji-2/natjecaji-za-zaposljavanje/"
+   ],
+   "fuente": "oficial",
+   "abierta": false,
+   "verified_at": "2026-10-20"
+  },
+  {
+   "id": "pgz_empleo",
+   "cat": "trab",
+   "t": "Concursos para trabajar en el gobierno de Primorje-Gorski kotar",
+   "t_hr": "Natječaji – prijam u službu, PGŽ",
+   "who": "Županija de Primorje-Gorski kotar (PGŽ)",
+   "pts": [
+    [
+     14.44,
+     45.33
+    ]
+   ],
+   "next": "Todo el año",
+   "amount": "Sin costo",
+   "what": "La sección donde el condado de Rijeka publica sus concursos para trabajar en sus oficinas (Rijeka, Opatija, Delnice y otras). Rige la misma ley que para la Municipalidad, que exige ciudadanía croata.",
+   "el": {
+    "ar": [
+     "no",
+     "Exige ciudadanía croata (art. 12 de la ley de empleados locales y regionales)."
+    ],
+    "cit": [
+     "cond",
+     "Tenés la ciudadanía, pero hay que homologar el título y rendir la prueba."
+    ],
+    "res": [
+     "no",
+     "La residencia de diáspora no alcanza: exige ciudadanía croata."
+    ]
+   },
+   "src": [
+    "pgz.hr",
+    "https://www.pgz.hr/vrsta_natjecaja/prijam-u-sluzbu/"
+   ],
+   "fuente": "oficial",
+   "abierta": false,
+   "verified_at": "2026-10-20"
+  },
+  {
+   "id": "dozvola_trabajo",
+   "cat": "res",
+   "t": "Permiso de residencia y trabajo para personas de fuera de la UE",
+   "t_hr": "Dozvola za boravak i rad",
+   "who": "Policía (MUP), con el HZZ",
+   "pts": [
+    [
+     15.98,
+     45.81
+    ],
+    [
+     14.44,
+     45.33
+    ]
+   ],
+   "next": "Todo el año",
+   "amount": "Con tasas administrativas (ver la página del MUP)",
+   "what": "Si no sos ciudadano de la UE y venís a trabajar con un contrato, necesitás este permiso. Casi siempre lo pide el empleador: primero el HZZ revisa si hay alguien en Croacia para ese puesto y después decide la policía. Sirve para ese empleador y ese trabajo. Si sos descendiente de croatas, la residencia de diáspora te deja trabajar sin este permiso.",
+   "el": {
+    "ar": [
+     "cond",
+     "Lo necesitás si venís con contrato y sin residencia de diáspora. Lo tramita el empleador."
+    ],
+    "cit": [
+     "no",
+     "Con ciudadanía croata no lo necesitás."
+    ],
+    "res": [
+     "no",
+     "Con la residencia de diáspora trabajás sin este permiso (art. 79.a, párrafo 4)."
+    ]
+   },
+   "src": [
+    "narodne-novine.nn.hr",
+    "https://narodne-novine.nn.hr/clanci/sluzbeni/2025_03_40_545.html"
+   ],
+   "flag": "La ley de extranjeros se reformó otra vez en mayo de 2026 (NN 55/2026); no cambia la residencia de diáspora.",
+   "fuente": "oficial",
+   "abierta": true,
+   "verified_at": "2026-10-20"
+  },
+  {
+   "id": "study_in_croatia",
+   "cat": "beca",
+   "t": "Study in Croatia: el portal oficial para estudiar en Croacia (carreras en inglés)",
+   "who": "Agencia de Movilidad y Programas de la UE (AMPEU), con el Ministerio de Ciencia y Educación",
+   "pts": [
+    [
+     15.98,
+     45.81
+    ],
+    [
+     14.44,
+     45.33
+    ],
+    [
+     16.44,
+     43.51
+    ],
+    [
+     18.69,
+     45.55
+    ],
+    [
+     18.09,
+     42.65
+    ],
+    [
+     15.23,
+     44.12
+    ]
+   ],
+   "next": "Todo el año (cada universidad fija sus plazos)",
+   "amount": "Según la universidad",
+   "what": "Es el portal oficial para estudiantes extranjeros. Tiene la lista de carreras en inglés de universidades públicas y privadas (grado, maestría y doctorado), con la institución que dicta cada una, y explica cómo inscribirte. La matrícula la fija cada universidad.",
+   "el": {
+    "ar": [
+     "ok",
+     "Abierto a cualquier estudiante extranjero."
+    ],
+    "cit": [
+     "ok",
+     "Sirve igual; con ascendencia croata también podés usar el cupo para croatas de afuera."
+    ],
+    "res": [
+     "ok",
+     "Sirve igual para elegir carrera y ver trámites."
+    ]
+   },
+   "src": [
+    "studyincroatia.hr",
+    "https://www.studyincroatia.hr/study-in-croatia/study-programmes-in-english/"
+   ],
+   "fuente": "oficial",
+   "abierta": true,
+   "verified_at": "2026-10-20"
+  },
+  {
+   "id": "uniri_ingles",
+   "cat": "beca",
+   "t": "Universidad de Rijeka: carreras completas en inglés",
+   "who": "Universidad de Rijeka (Sveučilište u Rijeci), universidad pública",
+   "pts": [
+    [
+     14.44,
+     45.33
+    ]
+   ],
+   "next": "Según la carrera (la guía oficial indica inscripción de abril a septiembre)",
+   "amount": "Sin becas propias para internacionales. Matrícula según la carrera (Medicina y Odontología: €12.000 por año)",
+   "what": "La universidad pública de Rijeka dicta en inglés carreras completas como Medicina, Odontología, Negocios Internacionales, Hotelería, Biotecnología y Matemática. Su guía oficial avisa que la mayoría de las universidades croatas no da becas propias a estudiantes internacionales.",
+   "el": {
+    "ar": [
+     "cond",
+     "Quien no es de la UE suele pagar otra tarifa y no hay becas propias."
+    ],
+    "cit": [
+     "cond",
+     "Con ciudadanía croata podés pagar otra tarifa: confirmalo con cada facultad."
+    ],
+    "res": [
+     "cond",
+     "Confirmá con cada facultad qué tarifa te corresponde."
+    ]
+   },
+   "src": [
+    "uniri.hr",
+    "https://uniri.hr/wp-content/uploads/2025/04/UNIRI_Guide_for_International_Degree_Students_03_2025.pdf"
+   ],
+   "flag": "La guía es de marzo de 2025: los montos de 2026/27 pueden cambiar.",
+   "fuente": "oficial",
+   "abierta": true,
+   "verified_at": "2026-10-20"
+  },
+  {
+   "id": "rit_croatia",
+   "cat": "beca",
+   "t": "RIT Croatia: ayuda económica y becas para carreras en inglés",
+   "who": "RIT Croatia (Rochester Institute of Technology), universidad privada",
+   "pts": [
+    [
+     15.98,
+     45.81
+    ],
+    [
+     18.09,
+     42.65
+    ]
+   ],
+   "next": "Prioridad para la ayuda económica: solicitudes hasta el 15 de febrero",
+   "amount": "Ayuda económica de €1.000 a €10.000; becas de €1.000 a €4.000",
+   "what": "Universidad privada estadounidense con sedes en Zagreb y Dubrovnik, con clases en inglés. Da ayuda económica según tu necesidad, que se descuenta de la matrícula, y varias becas por mérito. Una da €2.000 al primer alumno admitido de un país que hoy no tenga estudiantes ahí. Primero te tienen que admitir.",
+   "el": {
+    "ar": [
+     "ok",
+     "No pide nacionalidad: te tienen que admitir primero."
+    ],
+    "cit": [
+     "ok",
+     "No pide nacionalidad: te tienen que admitir primero."
+    ],
+    "res": [
+     "ok",
+     "No pide nacionalidad: te tienen que admitir primero."
+    ]
+   },
+   "src": [
+    "rit.edu",
+    "https://www.rit.edu/croatia/financial-aid-and-scholarships"
+   ],
+   "flag": "Es privada: la matrícula no está publicada en esa página.",
+   "fuente": "institucion",
+   "abierta": true,
+   "verified_at": "2026-10-20"
+  },
+  {
+   "id": "algebra_becas",
+   "cat": "beca",
+   "t": "Algebra Bernays: becas del 15 al 50 % de la matrícula para quien no tiene ciudadanía croata",
+   "who": "Universidad Algebra Bernays (Sveučilište Algebra Bernays), universidad privada",
+   "pts": [
+    [
+     15.98,
+     45.81
+    ]
+   ],
+   "deadline": "2027-05-01T23:59:00+02:00",
+   "next": "Resultados el 15/5/2027 (ingreso 2027/28)",
+   "amount": "5 becas del 50 %, 5 del 30 % y 10 del 15 % de la matrícula del primer año",
+   "what": "Universidad privada de Zagreb con carreras de grado y maestría en inglés (informática, diseño, comunicación, negocios digitales). Para el ingreso 2027/28 reparte 20 becas que bajan la matrícula del primer año. Primero te tienen que admitir y después mandás la solicitud.",
+   "el": {
+    "ar": [
+     "ok",
+     "Son para quien no tiene ciudadanía croata."
+    ],
+    "cit": [
+     "no",
+     "Con ciudadanía croata no podés pedirlas."
+    ],
+    "res": [
+     "cond",
+     "Te sirve mientras no tengas la ciudadanía croata."
+    ]
+   },
+   "src": [
+    "algebra.hr",
+    "https://www.algebra.hr/sveuciliste/en/admissions/tuition-fee/our-students/financial-incentives-for-international-students"
+   ],
+   "flag": "Es privada. Algebra también participa del cupo para croatas de afuera.",
+   "fuente": "institucion",
+   "abierta": true,
+   "verified_at": "2026-10-20"
+  },
+  {
+   "id": "zsem_becas",
+   "cat": "beca",
+   "t": "ZŠEM: concurso de becas «Plan for the Future» para la carrera de grado",
+   "who": "Escuela de Economía y Gestión de Zagreb (ZŠEM), institución privada",
+   "pts": [
+    [
+     15.98,
+     45.81
+    ]
+   ],
+   "next": "La edición 2027 todavía no se anunció (la 2026 fue del 17/3 al 17/4)",
+   "amount": "Tres becas del 50 %, 30 % y 20 % de la matrícula del primer año",
+   "what": "Escuela privada de negocios de Zagreb con carreras de grado en inglés. Cada año hace el concurso «Plan for the Future»: rendís el examen de ingreso y las tres mejores candidaturas reciben descuento en la matrícula, renovable si mantenés promedio 4,0.",
+   "el": {
+    "ar": [
+     "cond",
+     "La página no dice si hay restricción por nacionalidad: consultalo con admisiones."
+    ],
+    "cit": [
+     "cond",
+     "La página no dice si hay restricción por nacionalidad: consultalo con admisiones."
+    ],
+    "res": [
+     "cond",
+     "La página no dice si hay restricción por nacionalidad: consultalo con admisiones."
+    ]
+   },
+   "src": [
+    "zsem.hr",
+    "https://zsem.hr/en/events/scholarship-competition-plan-for-the-future/"
+   ],
+   "flag": "Es privada. Son solo tres becas por año.",
+   "fuente": "institucion",
    "abierta": true,
    "verified_at": "2026-10-20"
   }

@@ -211,8 +211,8 @@ function start(DB, CONTACT) {
       "aria-label": n + " fichas en este lugar. " + (abierto ? "Tocá para cerrar." : "Tocá para verlas."),
       "data-grupo": k,
     });
-    g.appendChild(el("circle", { class: "core", cx: xy[0], cy: xy[1], r: abierto ? 14 : 20 }));
-    var t = el("text", { x: xy[0], y: xy[1] + 6, class: "num" });
+    g.appendChild(el("circle", { class: "core", cx: xy[0], cy: xy[1], r: abierto ? 16 : 24 }));
+    var t = el("text", { x: xy[0], y: xy[1] + 7, class: "num" });
     t.textContent = abierto ? "×" : String(n);
     g.appendChild(t);
     function toggle() {
@@ -268,8 +268,12 @@ function start(DB, CONTACT) {
           e = d.el[profile][0],
           col = CATS[d.cat].c,
           xy = P(p[0], p[1]);
-        var R = n > 1 ? (grande ? 30 + n * 5 : n > 4 ? 38 : 28) : 0,
-          a = -Math.PI / 2 + (i * 2 * Math.PI) / n,
+        // Grupo abierto: dos anillos (hasta 9 adentro y el resto afuera) para que no se salga tanto del lugar.
+        var anillo = grande && i >= 9 ? 1 : 0,
+          enAnillo = grande ? (anillo ? n - 9 : Math.min(n, 9)) : n,
+          j = anillo ? i - 9 : i,
+          R = n > 1 ? (grande ? (anillo ? 88 : 52) : n > 4 ? 38 : 28) : 0,
+          a = -Math.PI / 2 + (anillo ? Math.PI / enAnillo : 0) + (j * 2 * Math.PI) / enAnillo,
           x = xy[0] + R * Math.cos(a),
           y = xy[1] + R * Math.sin(a);
         var g = el("g", {
