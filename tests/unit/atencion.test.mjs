@@ -342,6 +342,10 @@ test("API devolver: el bot vuelve a contestar y se le avisa a la persona", async
   await conCharla(d);
   const r = await panel(await pedido(`/api/charlas/${NUM}/devolver`, { method: "POST", body: "{}" }), ENV, d);
   assert.equal(r.status, 200);
+  // ZL-103: la respuesta trae el tiempo real que queda (antes el panel mostraba «pasaron más de 24 h»)
+  const cuerpo = await r.json();
+  assert.equal(cuerpo.chat.quedaMs, 23 * HORA);
+  assert.equal(cuerpo.chat.abierta, false);
   assert.equal(d.sent[0].text.body, TEXTO_DEVUELTA);
   assert.equal((await d.store.get(NUM)).humanoHasta, 0);
   assert.equal((await d.chats.get(NUM)).abierta, false);
@@ -517,4 +521,11 @@ test("privacidad: la página pública explica qué se guarda con PERSONA y por c
   const html = readFileSync(new URL("../../site/privacidad.html", import.meta.url), "utf8");
   assert.match(html, /PERSONA/);
   assert.match(html, /30 días/);
+});
+
+test("panel (ZL-103): con la charla devuelta al bot no dice «pasaron más de 24 h», y la línea del sistema no empieza con «·»", () => {
+  assert.match(APP_JS, /La atiende el bot/);
+  assert.doesNotMatch(APP_JS, /quedaMs:0\}/);
+  assert.doesNotMatch(APP_JS, /quedaMs:86400000/);
+  assert.match(APP_JS, /\(q\?q\+" · ":""\)\+hora\(m\.t\)/);
 });
