@@ -105,7 +105,10 @@ function start(DB, CONTACT) {
 
   var DATA = DB.opportunities;
 
+  var FUENTES = DB.fuentes || { oficial: "Fuente oficial" };
   var profile = "ar",
+    soloAbiertas = false,
+    expanded = {},
     active = {};
   Object.keys(CATS).forEach(function (k) {
     active[k] = true;
@@ -189,9 +192,48 @@ function start(DB, CONTACT) {
     return (e === "ok" ? 0 : e === "cond" ? 1 : 2) * 1e13 + ms;
   }
 
+  var ab = document.getElementById("solo-abiertas");
+  if (ab)
+    ab.onclick = function () {
+      soloAbiertas = !soloAbiertas;
+      ab.setAttribute("aria-pressed", soloAbiertas);
+      render();
+    };
+
+  // Más de MAX_GRUPO fichas en el mismo lugar (Zagreb): un solo círculo con el número; al tocarlo se abre (ZL-81).
+  var MAX_GRUPO = 6;
+  function cluster(gm, k, xy, n, abierto) {
+    var g = el("g", {
+      class: "mk cluster" + (abierto ? " open" : ""),
+      tabindex: "0",
+      role: "button",
+      "aria-expanded": String(abierto),
+      "aria-label": n + " fichas en este lugar. " + (abierto ? "Tocá para cerrar." : "Tocá para verlas."),
+      "data-grupo": k,
+    });
+    g.appendChild(el("circle", { class: "core", cx: xy[0], cy: xy[1], r: abierto ? 16 : 24 }));
+    var t = el("text", { x: xy[0], y: xy[1] + 7, class: "num" });
+    t.textContent = abierto ? "×" : String(n);
+    g.appendChild(t);
+    function toggle() {
+      expanded[k] = !expanded[k];
+      render();
+      var again = document.querySelector('[data-grupo="' + k + '"]');
+      if (again) again.focus();
+    }
+    g.onclick = toggle;
+    g.onkeydown = function (ev) {
+      if (ev.key === "Enter" || ev.key === " ") {
+        ev.preventDefault();
+        toggle();
+      }
+    };
+    gm.appendChild(g);
+  }
+
   function render() {
     var shown = DATA.filter(function (d) {
-      return active[d.cat];
+      return active[d.cat] && (!soloAbiertas || d.abierta === true);
     }).sort(function (a, b) {
       return rank(a) - rank(b);
     });
@@ -211,15 +253,27 @@ function start(DB, CONTACT) {
     });
     Object.keys(groups).forEach(function (k) {
       var arr = groups[k],
-        n = arr.length;
+        n = arr.length,
+        grande = n > MAX_GRUPO,
+        abierto =
+          grande &&
+          (expanded[k] ||
+            arr.some(function (it) {
+              return it[0].id === sel;
+            }));
+      if (grande && !abierto) return cluster(gm, k, P(arr[0][1][0], arr[0][1][1]), n, false);
       arr.forEach(function (it, i) {
         var d = it[0],
           p = it[1],
           e = d.el[profile][0],
           col = CATS[d.cat].c,
           xy = P(p[0], p[1]);
-        var R = n > 1 ? (n > 4 ? 38 : 28) : 0,
-          a = -Math.PI / 2 + (i * 2 * Math.PI) / n,
+        // Grupo abierto: dos anillos (hasta 9 adentro y el resto afuera) para que no se salga tanto del lugar.
+        var anillo = grande && i >= 9 ? 1 : 0,
+          enAnillo = grande ? (anillo ? n - 9 : Math.min(n, 9)) : n,
+          j = anillo ? i - 9 : i,
+          R = n > 1 ? (grande ? (anillo ? 88 : 52) : n > 4 ? 38 : 28) : 0,
+          a = -Math.PI / 2 + (anillo ? Math.PI / enAnillo : 0) + (j * 2 * Math.PI) / enAnillo,
           x = xy[0] + R * Math.cos(a),
           y = xy[1] + R * Math.sin(a);
         var g = el("g", {
@@ -241,6 +295,7 @@ function start(DB, CONTACT) {
         };
         gm.appendChild(g);
       });
+      if (grande) cluster(gm, k, P(arr[0][1][0], arr[0][1][1]), n, true);
     });
     // list
     var L = document.getElementById("list");
@@ -266,7 +321,9 @@ function start(DB, CONTACT) {
         EL[e[0]][0] +
         '">' +
         EL[e[0]][1] +
-        "</span></div>" +
+        "</span>" +
+        (d.abierta ? '<span class="pill p-abierta">Abierta a todos</span>' : "") +
+        "</div>" +
         "<h3>" +
         esc(d.t) +
         "</h3>" +
@@ -283,7 +340,11 @@ function start(DB, CONTACT) {
         esc(e[1]) +
         "</p>" +
         (d.flag ? '<p class="flag">' + esc(d.flag) + "</p>" : "") +
-        '<div class="src"><span>Fuente: <a href="' +
+        '<div class="src"><span class="src-tipo src-' +
+        esc(d.fuente || "oficial") +
+        '">' +
+        esc(FUENTES[d.fuente] || "Fuente") +
+        ': <a href="' +
         safeUrl(d.src[1]) +
         '" target="_blank" rel="noopener">' +
         esc(d.src[0]) +
@@ -328,6 +389,7 @@ function start(DB, CONTACT) {
 var CHAT_SUGS = [
   "Vivo en Argentina, ¿qué me sirve?",
   "¿Hay becas para estudiar croata?",
+  "¿Qué carreras hay en inglés?",
   "¿Cómo es la residencia de diáspora?",
 ];
 function chatApi(C) {

@@ -39,7 +39,7 @@ test("cada ficha tiene enlace oficial https y fecha de revisión", async ({ page
 });
 
 test("tocar un marcador del mapa selecciona su ficha", async ({ page }) => {
-  await page.locator("#markers .mk").first().click();
+  await page.locator("#markers .mk:not(.cluster)").first().click();
   await expect(page.locator("#list article.sel")).toHaveCount(1);
 });
 
@@ -80,6 +80,59 @@ test("las convocatorias cerradas van al final de la lista", async ({ page }) => 
     .evaluateAll((cards) => cards.map((c) => c.querySelector(".pill")?.textContent ?? ""));
   const firstClosed = pills.findIndex((t) => t.includes("Cerrada"));
   expect(firstClosed).toBe(total - closed);
+});
+
+test.describe("Programas en Croacia (ZL-79)", () => {
+  const abiertas = data.opportunities.filter((o) => o.abierta === true).length;
+
+  test("el subtítulo habla de programas en Croacia, no de «oportunidades oficiales para descendientes»", async ({
+    page,
+  }) => {
+    await expect(page.locator(".sub")).toContainText("Programas, becas y oportunidades en Croacia");
+    await expect(page.locator("header")).not.toContainText(/oficiales para descendientes/i);
+    await expect(page).toHaveTitle(/Programas, becas y oportunidades en Croacia/);
+  });
+
+  test("«Solo las abiertas a todos» deja solo las que no piden ascendencia croata", async ({ page }) => {
+    test.skip(abiertas === 0, "no hay fichas abiertas a todos");
+    const b = page.locator("#solo-abiertas");
+    await b.click();
+    await expect(b).toHaveAttribute("aria-pressed", "true");
+    await expect(page.locator("#list article")).toHaveCount(abiertas);
+    await expect(page.locator("#list article .p-abierta")).toHaveCount(abiertas);
+    await b.click();
+    await expect(page.locator("#list article")).toHaveCount(total);
+  });
+
+  test("cada ficha dice qué tipo de fuente es (oficial, institución, portal o prensa)", async ({ page }) => {
+    for (const o of data.opportunities) {
+      await expect(page.locator(`#card-${o.id} .src-tipo`)).toContainText(
+        (data as { fuentes: Record<string, string> }).fuentes[o.fuente],
+      );
+    }
+  });
+
+  test("hay una categoría Trabajo", async ({ page }) => {
+    await expect(page.locator("#cat-trab")).toHaveText("Trabajo");
+  });
+
+  test("con muchas fichas en un lugar, el mapa las agrupa en un círculo con el número y se abre al tocarlo", async ({
+    page,
+  }) => {
+    const porLugar: Record<string, number> = {};
+    for (const o of data.opportunities)
+      for (const p of o.pts)
+        porLugar[p.map((x) => x.toFixed(2)).join(",")] = (porLugar[p.map((x) => x.toFixed(2)).join(",")] ?? 0) + 1;
+    const [k, n] = Object.entries(porLugar).sort((a, b) => b[1] - a[1])[0];
+    test.skip(n <= 6, "ningún lugar tiene más de 6 fichas");
+    const c = page.locator(`#markers .cluster[data-grupo="${k}"]`);
+    await expect(c).toHaveAttribute("aria-expanded", "false");
+    await expect(c.locator("text")).toHaveText(String(n));
+    await c.click();
+    await expect(page.locator(`#markers .cluster[data-grupo="${k}"]`)).toHaveAttribute("aria-expanded", "true");
+    await page.locator(`#markers .cluster[data-grupo="${k}"]`).click();
+    await expect(page.locator(`#markers .cluster[data-grupo="${k}"]`)).toHaveAttribute("aria-expanded", "false");
+  });
 });
 
 test.describe("WhatsApp", () => {

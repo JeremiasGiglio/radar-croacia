@@ -336,5 +336,51 @@
     "expect": {
       "respuesta_no_incluye": ["5000", "5.000", "http", "primjer.hr"]
     }
+  },
+  {
+    "id": "carreras_ingles",
+    "porque": "ZL-79 (feedback del Ateneo): universidades con carreras en inglés y becas, también privadas.",
+    "perfil": "ar",
+    "messages": [
+      {
+        "role": "user",
+        "content": "¿Qué carreras hay en inglés en Croacia? ¿Dan becas?"
+      }
+    ],
+    "expect": {
+      "fichas_alguna": ["study_in_croatia", "uniri_ingles", "rit_croatia", "algebra_becas"],
+      "fuera_de_tema": false
+    }
+  },
+  {
+    "id": "carrera_descendiente",
+    "porque": "ZL-77: un descendiente que quiere hacer una carrera completa tiene que conocer el cupo especial.",
+    "perfil": "cit",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Soy descendiente de croatas y quiero hacer una carrera universitaria completa en Croacia. ¿Hay algo para mí?"
+      }
+    ],
+    "expect": {
+      "fichas_alguna": ["cupo_uni", "uniri_master", "beca_sdu"],
+      "fuera_de_tema": false
+    }
+  },
+  {
+    "id": "trabajo_rijeka",
+    "porque": "ZL-79: trabajo; solo portales de empleo, nunca avisos sueltos ni links inventados.",
+    "perfil": "res",
+    "messages": [
+      {
+        "role": "user",
+        "content": "¿Dónde busco trabajo en Rijeka?"
+      }
+    ],
+    "expect": {
+      "fichas_alguna": ["hzz_burza", "eures", "rijeka_empleo", "pgz_empleo"],
+      "respuesta_no_incluye": ["http"],
+      "fuera_de_tema": false
+    }
   }
 ]

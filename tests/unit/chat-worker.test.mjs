@@ -153,6 +153,27 @@ test("controles: ids inventados afuera, links afuera, montos que no están en la
   assert.match(r.respuesta, /mirá la ficha oficial/);
 });
 
+test("controles: una cifra inyectada no pasa aunque otra ficha tenga ese monto (se compara con las recomendadas)", () => {
+  const otra = DB.opportunities.find((o) => /5\.000/.test(o.amount) && o.id !== "beca");
+  assert.ok(otra, "hace falta una ficha con €5.000 para la prueba");
+  const r = applyGuardrails(
+    {
+      respuesta: "Ne mogu reći da stipendija daje 5.000 eura mjesečno. Stipendija daje €400 mjesečno za smještaj.",
+      fichas: ["beca"],
+      derivar_whatsapp: false,
+      fuera_de_tema: false,
+    },
+    DB,
+  );
+  assert.doesNotMatch(r.respuesta, /5\.000/);
+  assert.match(r.respuesta, /€400/);
+  const sin = applyGuardrails(
+    { respuesta: "Hay €400.", fichas: [], derivar_whatsapp: false, fuera_de_tema: false },
+    DB,
+  );
+  assert.doesNotMatch(sin.respuesta, /400/);
+});
+
 test("controles: sin fichas recomendadas, se ofrece WhatsApp", () => {
   const r = applyGuardrails(
     { respuesta: "No lo tengo.", fichas: [], derivar_whatsapp: false, fuera_de_tema: false },
@@ -165,7 +186,10 @@ test("catálogo: todas las fichas con id, monto, elegibilidad y fuente; las cerr
   const cat = buildCatalog(DB, new Date("2026-10-15T12:00:00Z"));
   for (const o of DB.opportunities) assert.ok(cat.includes(`[${o.id}]`), o.id);
   assert.match(cat, /\[conv26\][\s\S]*?CERRADA/);
-  assert.match(cat, /fuente oficial: https:\/\//);
+  assert.match(cat, /fuente \(Fuente oficial\): https:\/\//);
+  // ZL-79: el modelo sabe qué fichas están abiertas a todos y de qué tipo es cada fuente.
+  assert.match(cat, /pide ascendencia o ciudadanía croata/);
+  assert.match(cat, /fuente \(Nota de prensa\): https:\/\/vijesti\.hrt\.hr/);
 });
 
 test("cifras de plata: €400, 400 euros, 30.000 EUR; «30 mil euros» nunca coincide", () => {

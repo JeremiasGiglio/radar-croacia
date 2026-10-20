@@ -1,5 +1,23 @@
-// Dominios oficiales (Estado croata, región y ciudad). Una nota de prensa o un portal privado no cuentan.
-export const OFFICIAL_HOSTS = ["gov.hr", "pgz.hr", "rijeka.hr", "hzz.hr", "matis.hr"];
+// Dominios oficiales (Estado croata, región, ciudad y universidades públicas). Una nota de prensa, una
+// universidad privada o un portal privado no cuentan como oficiales (se marcan como «institucion» o «portal»).
+export const OFFICIAL_HOSTS = [
+  "gov.hr",
+  "pgz.hr",
+  "rijeka.hr",
+  "hzz.hr",
+  "matis.hr",
+  // Universidades públicas y la agencia estatal de movilidad (ZL-79)
+  "uniri.hr",
+  "unizg.hr",
+  "unist.hr",
+  "unios.hr",
+  "unizd.hr",
+  "unipu.hr",
+  "ampeu.hr",
+  "studyincroatia.hr",
+  // Boletín oficial (leyes)
+  "nn.hr",
+];
 
 /** true si la URL es https y su dominio es oficial (o un subdominio de uno oficial). */
 export function isOfficial(url) {

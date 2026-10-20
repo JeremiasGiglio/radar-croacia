@@ -1,8 +1,8 @@
 # Radar Croacia 🇭🇷 · Radar Hrvatska
 
-**Oportunidades oficiales de Croacia para descendientes de croatas, en español, filtradas según tu situación y en un mapa.**
+**Programas, becas y oportunidades en Croacia, para la diáspora sudamericana y para quien quiera ir. En español, filtrados según tu situación y en un mapa.**
 
-Becas, cursos, residencia de diáspora, ayudas para emprender, programas municipales y convocatorias para proyectos de la comunidad. Un proceso automático revisa todos los días las páginas oficiales croatas, la IA resume en español lo nuevo y una persona del equipo verifica cada ficha antes de publicarla.
+Becas, cursos y estudios universitarios (también universidades privadas con carreras en inglés), portales de trabajo, residencia, ayudas para emprender, programas municipales y convocatorias para proyectos de la comunidad. Cada ficha dice qué tipo de fuente es (oficial, institución, portal de empleo) y si está abierta a todos o pide ascendencia croata. Un proceso automático revisa todos los días las páginas oficiales croatas, la IA resume en español lo nuevo y una persona del equipo verifica cada ficha antes de publicarla.
 
 > Proyecto de **Zustro Labs**, el estudio de QA e IA de **Jeremías Ismael Giglio**, con el **Ateneo Croata de Rosario** como socio.
 > Presentado a la **Convocatoria Pública 2026 de la Oficina Central para los Croatas fuera de Croacia** (Cat. B, formulario 51709, enviado el 7/10/2026).
@@ -15,7 +15,7 @@ Becas, cursos, residencia de diáspora, ayudas para emprender, programas municip
 | Investigación de mercado, técnica y legal | ✅ `docs/01_investigacion_y_factibilidad.md` |
 | Web pública (mapa + filtros + fichas) | ✅ `site/`, publicada con GitHub Pages: https://radar.zustrolabs.com (antes `radar.jgcup.stream`, que redirige) |
 | Maqueta offline para eventos | ✅ `prototype/index.html` (datos del 28/9/2026 embebidos; funciona sin internet) |
-| Datos en JSON con esquema | ✅ `site/data/opportunities.json` (14 fichas, revisión 10/10/2026) + `schema/` |
+| Datos en JSON con esquema | ✅ `site/data/opportunities.json` (27 fichas, revisión 20/10/2026; cada una con tipo de fuente y si está abierta a todos) + `schema/` |
 | Tests | ✅ validación del JSON, 7 tests del robot con copias reales de los feeds y 15 E2E con Playwright (escritorio, celular y celular chico) |
 | Video demo con subtítulos | ✅ `media/Radar_Croacia_demo.mp4` |
 | Monitoreo diario de fuentes | 🟡 6 de 12: Oficina, MDU, PGŽ, Grad Rijeka, HZZ y Ured za udruge (RSS y API de WordPress). Robot diario + PR de revisión (`.github/workflows/monitor.yml`, `review/`) |

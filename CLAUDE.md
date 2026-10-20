@@ -2,7 +2,7 @@
 
 ## Quién y para qué
 - **Jeremías Giglio:** Senior QA Automation (Playwright/TS, Cypress, WebdriverIO, Python, API, CI/CD, healthcare), Rosario, Argentina. Se muda a **Rijeka, Croacia, en marzo de 2027** con la residencia de diáspora. Habla castellano rioplatense; escribile así.
-- Este repo es **Radar Croacia**: un mapa web en español con oportunidades oficiales de Croacia para descendientes, filtradas por perfil, con monitoreo diario de fuentes oficiales y agentes de IA.
+- Este repo es **Radar Croacia**: un mapa web en español con **programas, becas y oportunidades en Croacia para la diáspora sudamericana y para quien quiera ir** (desde el 20/10/2026, por feedback del Ateneo; antes: «oportunidades oficiales para descendientes»), filtradas por perfil, con monitoreo diario de fuentes oficiales y agentes de IA.
 - **Desde el 14/10/2026 el Radar es un proyecto de Zustro Labs** (el estudio de QA e IA de Jeremías), con el Ateneo Croata de Rosario como socio. Sigue siendo gratis y de código abierto. Zustro Labs es una marca, no una empresa: no hablar de precios, clientes ni «empresa» (por la ayuda del HZZ).
 - También es la **pieza principal del portfolio** que va a mostrar en el **9.º Encuentro de la Diáspora Croata Sudamericana (Córdoba, 5–8/11/2026)**: foro de negocios, Oficina para los Croatas fuera de Croacia, MDU (ministerio) y asociaciones de toda Sudamérica.
 

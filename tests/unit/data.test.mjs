@@ -45,3 +45,35 @@ test("prototype/index.html (datos embebidos para el evento): PGŽ 2.7 con el mis
   assert.match(block, /autoempleo cuenta como persona empleada/);
   assert.doesNotMatch(block, /revisar|deadline:|res:\["ok"/i);
 });
+
+// ── ZL-79: tipo de fuente, abiertas a todos y trabajo ──
+{
+  const db = load("site/data/opportunities.json");
+
+  test("tipo de fuente: «oficial» es un dominio oficial; «prensa» lleva aviso; todas tienen etiqueta", () => {
+    for (const o of db.opportunities) {
+      assert.ok(db.fuentes[o.fuente], `${o.id}: sin etiqueta para ${o.fuente}`);
+      if (o.fuente === "oficial") assert.ok(isOfficial(o.src[1]), `${o.id}: ${o.src[1]} no es un dominio oficial`);
+      if (o.fuente === "prensa") assert.ok(o.flag, `${o.id}: un dato de prensa tiene que avisarlo en flag`);
+    }
+  });
+
+  test("fichas nuevas (desde el 20/10/2026): enlazan la página o el documento concreto, no la portada", () => {
+    const bad = db.opportunities
+      .filter((o) => o.verified_at >= "2026-10-20" && !isSpecific(o.src[1]))
+      .map((o) => `${o.id} → ${o.src[1]}`);
+    assert.deepEqual(bad, []);
+  });
+
+  test("trabajo: solo portales de empleo u organismos oficiales, nunca avisos sueltos", () => {
+    for (const o of db.opportunities.filter((x) => x.cat === "trab")) {
+      assert.ok(["portal", "oficial"].includes(o.fuente), `${o.id}: ${o.fuente}`);
+    }
+  });
+
+  test("abierta a todos: true solo si nadie queda afuera por no tener ascendencia (ningún perfil sin ciudadanía da «no» por eso)", () => {
+    for (const o of db.opportunities.filter((x) => x.abierta)) {
+      assert.doesNotMatch(o.el.ar[1], /ascendencia|descendiente|origen croata/i, o.id);
+    }
+  });
+}
