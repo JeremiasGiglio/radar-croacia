@@ -413,7 +413,7 @@ const payload = (text, id) =>
 const fakeGraph = (sent) => async (url, init) => {
   const u = String(url);
   if (u.endsWith("opportunities.json")) return Response.json(DB);
-  if (u.startsWith("https://graph.facebook.com")) return sent.push(JSON.parse(init.body)), Response.json({});
+  if (u.startsWith("https://graph.facebook.com")) return (sent.push(JSON.parse(init.body)), Response.json({}));
   throw new Error("fetch inesperado " + u);
 };
 async function wa(text, id, env, d) {
