@@ -189,7 +189,15 @@ test("catálogo: todas las fichas con id, monto, elegibilidad y fuente; las cerr
   assert.match(cat, /fuente \(Fuente oficial\): https:\/\//);
   // ZL-79: el modelo sabe qué fichas están abiertas a todos y de qué tipo es cada fuente.
   assert.match(cat, /pide ascendencia o ciudadanía croata/);
-  assert.match(cat, /fuente \(Nota de prensa\): https:\/\/vijesti\.hrt\.hr/);
+  // Si una ficha solo tiene nota de prensa, el catálogo lo dice (ficha de prueba: hoy ninguna es de prensa).
+  const prensa = {
+    ...DB.opportunities[0],
+    id: "prueba_prensa",
+    fuente: "prensa",
+    src: ["HRT", "https://vijesti.hrt.hr/x"],
+  };
+  const cat2 = buildCatalog({ ...DB, opportunities: [prensa] }, new Date("2026-10-15T12:00:00Z"));
+  assert.match(cat2, /fuente \(Nota de prensa\): https:\/\/vijesti\.hrt\.hr/);
 });
 
 test("cifras de plata: €400, 400 euros, 30.000 EUR; «30 mil euros» nunca coincide", () => {
