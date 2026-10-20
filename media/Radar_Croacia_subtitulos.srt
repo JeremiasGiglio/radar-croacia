@@ -1,67 +1,31 @@
 1
-00:00:00,391 --> 00:00:07,466
-Radar Croacia: las oportunidades oficiales de Croacia para descendientes, en un mapa y en español.
+00:00:01,172 --> 00:00:06,024
+Radar Croacia: programas, becas y oportunidades en Croacia, en español y según tu situación.
 
 2
-00:00:07,616 --> 00:00:13,271
-Esto es una maqueta con datos reales, revisados el 28 de septiembre de 2026.
+00:00:06,174 --> 00:00:11,149
+Elegís tu situación y cada ficha te dice si te sirve, con condiciones o no aplica.
 
 3
-00:00:13,421 --> 00:00:20,561
-Hoy esa información está repartida en decenas de páginas del gobierno croata, casi todas en croata.
+00:00:11,299 --> 00:00:18,893
+«Solo las abiertas a todos»: estudios en inglés, portales de trabajo y más, sin pedir ascendencia croata.
 
 4
-00:00:20,711 --> 00:00:27,463
-Primero elegís tu situación. Por ejemplo: vivo en Argentina y todavía no tengo la ciudadanía.
+00:00:19,043 --> 00:00:22,453
+En el mapa, los lugares con muchas fichas se agrupan: tocás el número y se abren.
 
 5
-00:00:27,613 --> 00:00:35,526
-Cada punto es una oportunidad. El color indica el tipo: becas, emprender, trámites, ayudas locales o proyectos.
+00:00:22,603 --> 00:00:28,072
+Cada ficha: qué es, monto, plazo, para quién sirve y la fuente oficial con la fecha de revisión.
 
 6
-00:00:35,676 --> 00:00:40,557
-Los puntos apagados son los que no te sirven desde tu situación.
+00:00:28,222 --> 00:00:48,942
+Y le podés preguntar al Radar: responde solo con las fichas verificadas y nunca inventa montos.
 
 7
-00:00:40,707 --> 00:00:47,008
-Tocás un punto y se abre su ficha: qué es, quién la da, cuánto da y si te sirve a vos.
+00:00:49,092 --> 00:00:53,943
+También por WhatsApp, en castellano, croata, inglés o portugués: +54 9 341 335-0686.
 
 8
-00:00:47,158 --> 00:00:53,652
-Si tiene plazo, muestra la cuenta regresiva. La Convocatoria 2026 cierra el 7 de octubre.
-
-9
-00:00:53,802 --> 00:01:00,556
-Si cambiás tu situación, todo se reordena. Ahora: vivo en Croacia con residencia de diáspora.
-
-10
-00:01:00,706 --> 00:01:06,683
-Aparecen las ayudas para emprender en Rijeka y su región, que antes no aplicaban.
-
-11
-00:01:06,833 --> 00:01:13,588
-Cada ficha explica por qué te sirve o qué condición tiene, con el enlace a la fuente oficial.
-
-12
-00:01:13,738 --> 00:01:20,906
-También podés filtrar por lo que buscás: por ejemplo, solo becas y cursos.
-
-13
-00:01:21,056 --> 00:01:26,969
-Un robot revisa las páginas oficiales todos los días y avisa cuando algo cambia.
-
-14
-00:01:27,119 --> 00:01:35,548
-Playwright visita las fuentes, la inteligencia artificial resume en español y una persona del Ateneo revisa cada ficha.
-
-15
-00:01:35,698 --> 00:01:42,063
-Próxima etapa: escribís el pueblo de tus antepasados y ves qué ofrece hoy su municipio.
-
-16
-00:01:42,213 --> 00:01:46,771
-Radar Croacia: un proyecto con el Ateneo Croata de Rosario.
-
-17
-00:01:46,921 --> 00:01:53,243
-Es información, no asesoramiento legal. Para tramitar, el Ateneo te acompaña.
+00:00:54,093 --> 00:00:59,947
+radar.zustrolabs.com · Un proyecto de Zustro Labs con el Ateneo Croata de Rosario.

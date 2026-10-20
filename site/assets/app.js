@@ -141,8 +141,9 @@ function start(DB, CONTACT) {
   CITIES.forEach(function (c) {
     var p = P(c[1], c[2]);
     gc.appendChild(el("circle", { cx: p[0], cy: p[1], r: 3.5, class: "cdot" }));
-    var dx = c[0] === "Zagreb" ? 44 : c[0] === "Pula" ? -52 : 8,
-      dy = c[0] === "Zagreb" ? 28 : c[0] === "Pula" ? 22 : -8;
+    // Rijeka y Zagreb tienen el círculo de grupo encima: el nombre va corrido para que no lo tape.
+    var dx = c[0] === "Zagreb" ? 44 : c[0] === "Pula" ? -52 : c[0] === "Rijeka" ? 30 : 8,
+      dy = c[0] === "Zagreb" ? 28 : c[0] === "Pula" ? 22 : c[0] === "Rijeka" ? -18 : -8;
     var t = el("text", { x: p[0] + dx, y: p[1] + dy, class: "city" });
     t.textContent = c[0];
     gc.appendChild(t);
@@ -565,19 +566,24 @@ function initChat(C, DB, show) {
   });
 }
 
-Promise.all([
-  fetch("data/opportunities.json", { cache: "no-cache" }).then(function (r) {
-    if (!r.ok) throw new Error(r.status);
-    return r.json();
-  }),
-  fetch("data/contact.json", { cache: "no-cache" })
-    .then(function (r) {
-      return r.ok ? r.json() : {};
-    })
-    .catch(function () {
-      return {};
-    }),
-])
+// Demo sin conexión (ZL-41): prototype/radar-offline.html trae los datos adentro y no pide nada a la red.
+var OFFLINE = window.RADAR_OFFLINE;
+(OFFLINE
+  ? Promise.resolve([OFFLINE.db, OFFLINE.contact || {}])
+  : Promise.all([
+      fetch("data/opportunities.json", { cache: "no-cache" }).then(function (r) {
+        if (!r.ok) throw new Error(r.status);
+        return r.json();
+      }),
+      fetch("data/contact.json", { cache: "no-cache" })
+        .then(function (r) {
+          return r.ok ? r.json() : {};
+        })
+        .catch(function () {
+          return {};
+        }),
+    ])
+)
   .then(function (res) {
     start(res[0], res[1]);
   })
@@ -585,5 +591,5 @@ Promise.all([
     document.getElementById("list").innerHTML =
       '<p class="note" role="alert">No se pudieron cargar las oportunidades (' +
       esc(err.message) +
-      "). Si abriste el archivo desde tu computadora, usá la versión de <code>prototype/</code> o un servidor local.</p>";
+      "). Si abriste el archivo desde tu computadora, usá <code>prototype/radar-offline.html</code> o un servidor local.</p>";
   });

@@ -18,7 +18,8 @@
     "test": "npm run validate && npm run test:unit && npm run test:e2e",
     "check": "npm run lint && npm test",
     "monitor": "node scripts/monitor.mjs",
-    "policy": "node scripts/build-policy.mjs"
+    "policy": "node scripts/build-policy.mjs",
+    "offline": "node scripts/build-offline.mjs"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
