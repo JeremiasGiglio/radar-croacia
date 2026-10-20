@@ -165,7 +165,10 @@ test("catálogo: todas las fichas con id, monto, elegibilidad y fuente; las cerr
   const cat = buildCatalog(DB, new Date("2026-10-15T12:00:00Z"));
   for (const o of DB.opportunities) assert.ok(cat.includes(`[${o.id}]`), o.id);
   assert.match(cat, /\[conv26\][\s\S]*?CERRADA/);
-  assert.match(cat, /fuente oficial: https:\/\//);
+  assert.match(cat, /fuente \(Fuente oficial\): https:\/\//);
+  // ZL-79: el modelo sabe qué fichas están abiertas a todos y de qué tipo es cada fuente.
+  assert.match(cat, /pide ascendencia o ciudadanía croata/);
+  assert.match(cat, /fuente \(Nota de prensa\): https:\/\/vijesti\.hrt\.hr/);
 });
 
 test("cifras de plata: €400, 400 euros, 30.000 EUR; «30 mil euros» nunca coincide", () => {

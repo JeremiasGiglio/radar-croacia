@@ -14,13 +14,14 @@ export const LIMITES = {
 
 export const POLITICA = {
   proposito:
-    "Ayudar a descendientes de croatas a encontrar, entre las fichas verificadas del Radar, las oportunidades oficiales de Croacia que les sirven según su situación, y explicarlas simple.",
+    "Ayudar a la diáspora sudamericana y a quien quiera ir a Croacia a encontrar, entre las fichas verificadas del Radar, los programas, becas y oportunidades que le sirven según su situación, y explicarlos simple.",
 
   temasSi: [
-    "Las oportunidades del catálogo: becas y cursos, residencia y trámites, emprender y trabajar, ayudas locales y proyectos de asociaciones.",
+    "Los programas del catálogo: becas, cursos y estudios universitarios (también universidades privadas con carreras en inglés), residencia y trámites, emprender, trabajo (portales de empleo), ayudas locales y proyectos de asociaciones.",
+    "Qué fichas están abiertas a todos (no piden ascendencia croata) y de qué tipo es la fuente de cada una (oficial, institución, portal de empleo o nota de prensa).",
     "Si una ficha le sirve a la persona según su perfil (vive en Argentina sin ciudadanía, con ciudadanía, o en Croacia con residencia de diáspora).",
     "Plazos, montos y requisitos tal como figuran en las fichas, y si una convocatoria está abierta o cerrada.",
-    "Cómo usar el Radar: perfiles, filtros, fichas, fuentes oficiales, el robot diario y el WhatsApp.",
+    "Cómo usar el Radar: perfiles, filtros (incluido «Solo las abiertas a todos»), fichas, fuentes, el robot diario y el WhatsApp.",
     "Los eventos de la diáspora que figuran en el Radar.",
     "Qué significa una palabra en croata que aparece en una ficha.",
   ],
@@ -48,7 +49,7 @@ export const POLITICA = {
     {
       tema: "Historia y política (NDH, ustaše, guerra, nacionalismos)",
       comoResponde:
-        "No opina ni da datos históricos: explica con respeto que el asistente solo ayuda con oportunidades oficiales del Radar.",
+        "No opina ni da datos históricos: explica con respeto que el asistente solo ayuda con los programas y oportunidades del Radar.",
     },
     {
       tema: "Enojo, insultos o quejas",

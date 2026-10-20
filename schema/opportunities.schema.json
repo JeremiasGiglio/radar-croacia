@@ -20,12 +20,17 @@
       "minItems": 1,
       "items": {
         "type": "object",
-        "required": ["id", "cat", "t", "who", "pts", "amount", "what", "el", "src", "verified_at"],
+        "required": ["id", "cat", "t", "who", "pts", "amount", "what", "el", "src", "verified_at", "fuente", "abierta"],
         "anyOf": [{ "required": ["deadline"] }, { "required": ["next"] }],
         "additionalProperties": false,
         "properties": {
           "id": { "type": "string", "pattern": "^[a-z0-9_]+$" },
-          "cat": { "enum": ["beca", "emp", "res", "loc", "proy"] },
+          "cat": { "enum": ["beca", "emp", "trab", "res", "loc", "proy"] },
+          "fuente": {
+            "description": "Quién publica la fuente: el Estado o un organismo público (oficial), la institución que ofrece el programa (institucion), un portal de empleo (portal) o un medio (prensa).",
+            "enum": ["oficial", "institucion", "portal", "prensa"]
+          },
+          "abierta": { "description": "true si no exige ascendencia croata (abierta a todos).", "type": "boolean" },
           "t": { "type": "string", "minLength": 5 },
           "t_hr": { "type": "string" },
           "who": { "type": "string", "minLength": 2 },

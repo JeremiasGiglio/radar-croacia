@@ -847,3 +847,43 @@ footer {
 .policy dd {
   overflow-wrap: anywhere;
 }
+
+/* ZL-79: fichas abiertas a todos, tipo de fuente y filtro */
+.p-abierta {
+  background: #e6f4f1;
+  color: #0b5a52;
+  border-color: #9fd3cb;
+}
+.chip-abiertas[aria-pressed="true"] {
+  background: #0f766e;
+  border-color: #0f766e;
+  color: #fff;
+}
+.src-tipo.src-institucion,
+.src-tipo.src-portal,
+.src-tipo.src-prensa {
+  font-style: italic;
+}
+
+/* ZL-81: varias fichas en el mismo lugar se agrupan en un círculo con el número */
+.mk.cluster circle.core {
+  fill: var(--ink, #1b2230);
+  stroke: #fff;
+  stroke-width: 3;
+}
+.mk.cluster.open circle.core {
+  fill: #fff;
+  stroke: var(--ink, #1b2230);
+}
+.mk.cluster text.num {
+  fill: #fff;
+  font:
+    700 18px "Barlow Condensed",
+    system-ui,
+    sans-serif;
+  text-anchor: middle;
+  pointer-events: none;
+}
+.mk.cluster.open text.num {
+  fill: var(--ink, #1b2230);
+}

@@ -1,8 +1,8 @@
 # Radar Croacia 🇭🇷 · Radar Hrvatska
 
-**Oportunidades oficiales de Croacia para descendientes de croatas, en español, filtradas según tu situación y en un mapa.**
+**Programas, becas y oportunidades en Croacia, para la diáspora sudamericana y para quien quiera ir. En español, filtrados según tu situación y en un mapa.**
 
-Becas, cursos, residencia de diáspora, ayudas para emprender, programas municipales y convocatorias para proyectos de la comunidad. Un proceso automático revisa todos los días las páginas oficiales croatas, la IA resume en español lo nuevo y una persona del equipo verifica cada ficha antes de publicarla.
+Becas, cursos y estudios universitarios (también universidades privadas con carreras en inglés), portales de trabajo, residencia, ayudas para emprender, programas municipales y convocatorias para proyectos de la comunidad. Cada ficha dice qué tipo de fuente es (oficial, institución, portal de empleo) y si está abierta a todos o pide ascendencia croata. Un proceso automático revisa todos los días las páginas oficiales croatas, la IA resume en español lo nuevo y una persona del equipo verifica cada ficha antes de publicarla.
 
 > Proyecto de **Zustro Labs**, el estudio de QA e IA de **Jeremías Ismael Giglio**, con el **Ateneo Croata de Rosario** como socio.
 > Presentado a la **Convocatoria Pública 2026 de la Oficina Central para los Croatas fuera de Croacia** (Cat. B, formulario 51709, enviado el 7/10/2026).

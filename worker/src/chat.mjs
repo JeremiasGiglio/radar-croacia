@@ -29,14 +29,15 @@ export function buildCatalog(db, today = new Date()) {
     const closed = o.deadline && o.deadline.slice(0, 10) < t;
     return [
       `[${o.id}] ${o.t}`,
-      `  categoría: ${db.categories?.[o.cat]?.n ?? o.cat} · quién: ${o.who}`,
+      `  categoría: ${db.categories?.[o.cat]?.n ?? o.cat} · quién: ${o.who}` +
+        ` · ${o.abierta ? "abierta a todos (no pide ascendencia croata)" : "pide ascendencia o ciudadanía croata"}`,
       `  monto: ${o.amount || "sin dato"}`,
       `  plazo: ${o.deadline ? fmtDate(o.deadline) + (closed ? " (CERRADA)" : " (abierta)") : "sin fecha fija"}` +
         (o.next ? ` · próxima edición: ${o.next}` : ""),
       `  qué es: ${o.what}`,
       `  elegibilidad: ar=${o.el.ar[0]} (${o.el.ar[1]}) · cit=${o.el.cit[0]} (${o.el.cit[1]}) · res=${o.el.res[0]} (${o.el.res[1]})`,
       o.flag ? `  ojo: ${o.flag}` : null,
-      `  fuente oficial: ${o.src[1]} · revisada: ${fmtDate(o.verified_at)}`,
+      `  fuente (${db.fuentes?.[o.fuente] ?? o.fuente ?? "oficial"}): ${o.src[1]} · revisada: ${fmtDate(o.verified_at)}`,
     ]
       .filter(Boolean)
       .join("\n");
@@ -47,7 +48,7 @@ export function buildCatalog(db, today = new Date()) {
 
 export function systemPrompt(db, today = new Date(), canal = "") {
   const P = db.profiles ?? PROFILES_FALLBACK;
-  return `Sos el asistente del Radar Croacia (radar.zustrolabs.com), un sitio gratuito de Zustro Labs que reúne en castellano las oportunidades oficiales de Croacia para descendientes de croatas. Hoy es ${fmtDate(today.toISOString())}.
+  return `Sos el asistente del Radar Croacia (radar.zustrolabs.com), un sitio gratuito de Zustro Labs que reúne en castellano programas, becas y oportunidades en Croacia para la diáspora sudamericana y para quien quiera ir a Croacia. Hoy es ${fmtDate(today.toISOString())}.
 
 Tu trabajo: ayudar a la persona a encontrar qué fichas del catálogo le sirven según su situación, y explicarlas simple.
 

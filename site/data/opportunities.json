@@ -16,6 +16,10 @@
    "n": "Emprender",
    "c": "#C8102E"
   },
+  "trab": {
+   "n": "Trabajo",
+   "c": "#0F766E"
+  },
   "res": {
    "n": "Residencia y trámites",
    "c": "#6B4FA0"
@@ -68,7 +72,9 @@
     "https://hrvatiizvanrh.gov.hr/natjecaji-574/574"
    ],
    "verified_at": "2026-10-10",
-   "next": "Próxima edición: septiembre de 2027 (estimado)"
+   "next": "Próxima edición: septiembre de 2027 (estimado)",
+   "fuente": "oficial",
+   "abierta": false
   },
   {
    "id": "beca",
@@ -122,7 +128,9 @@
     "mdu.gov.hr",
     "https://mdu.gov.hr/"
    ],
-   "verified_at": "2026-09-28"
+   "verified_at": "2026-09-28",
+   "fuente": "oficial",
+   "abierta": false
   },
   {
    "id": "a1hr",
@@ -156,7 +164,9 @@
     "hrvatiizvanrh.gov.hr",
     "https://hrvatiizvanrh.gov.hr/"
    ],
-   "verified_at": "2026-09-28"
+   "verified_at": "2026-09-28",
+   "fuente": "oficial",
+   "abierta": false
   },
   {
    "id": "hmi",
@@ -190,7 +200,9 @@
     "matis.hr",
     "https://matis.hr/"
    ],
-   "verified_at": "2026-10-10"
+   "verified_at": "2026-10-10",
+   "fuente": "oficial",
+   "abierta": false
   },
   {
    "id": "potvrda",
@@ -224,7 +236,9 @@
     "mdu.gov.hr",
     "https://mdu.gov.hr/izdavanje-potvrde-za-hrvatske-iseljenike-za-reguliranje-boravka-u-rh/7257"
    ],
-   "verified_at": "2026-09-28"
+   "verified_at": "2026-09-28",
+   "fuente": "oficial",
+   "abierta": false
   },
   {
    "id": "biram",
@@ -258,7 +272,9 @@
     "mjere.hzz.hr",
     "https://mjere.hzz.hr/"
    ],
-   "verified_at": "2026-10-10"
+   "verified_at": "2026-10-10",
+   "fuente": "oficial",
+   "abierta": false
   },
   {
    "id": "potpora",
@@ -296,7 +312,9 @@
     "mjere.hzz.hr",
     "https://mjere.hzz.hr/"
    ],
-   "verified_at": "2026-10-10"
+   "verified_at": "2026-10-10",
+   "fuente": "oficial",
+   "abierta": false
   },
   {
    "id": "pgz",
@@ -331,7 +349,9 @@
     "https://www2.pgz.hr/doc/programi/2026/razvoj-poduzetnistva-mjera-21-23-26-27/jp.docx"
    ],
    "verified_at": "2026-10-16",
-   "flag": "El autoempleo cuenta como persona empleada (texto oficial 2026). Paušal y tarjeta de residencia aceptados por escrito (PGŽ, 24/9/2026). App SOM: registro con mail. Requisito: no haber sido dueño de otro negocio en los 2 años previos."
+   "flag": "El autoempleo cuenta como persona empleada (texto oficial 2026). Paušal y tarjeta de residencia aceptados por escrito (PGŽ, 24/9/2026). App SOM: registro con mail. Requisito: no haber sido dueño de otro negocio en los 2 años previos.",
+   "fuente": "oficial",
+   "abierta": false
   },
   {
    "id": "rijeka",
@@ -366,7 +386,9 @@
     "https://www.rijeka.hr/"
    ],
    "verified_at": "2026-10-10",
-   "flag": "El tope total al combinar las dos medidas está sin confirmar."
+   "flag": "El tope total al combinar las dos medidas está sin confirmar.",
+   "fuente": "oficial",
+   "abierta": false
   },
   {
    "id": "municip",
@@ -421,7 +443,9 @@
     "HRT, julio 2026",
     "https://vijesti.hrt.hr/hrvatska/vise-od-pola-milijuna-eura-za-programe-povratka-i-integracije-iseljenika-12806443"
    ],
-   "verified_at": "2026-09-28"
+   "verified_at": "2026-09-28",
+   "fuente": "prensa",
+   "abierta": false
   },
   {
    "id": "mdu_ocd",
@@ -456,7 +480,9 @@
     "mdu.gov.hr",
     "https://mdu.gov.hr/javni-pozivi/poziv-za-dodjelu-financijskih-sredstava-organizacijama-civilnoga-drustva-za-projekte-usmjerene-poticanju-povratka-useljavanja-i-integracije-hrvatskog-iseljenistva-u-2026-godini/7595"
    ],
-   "verified_at": "2026-10-10"
+   "verified_at": "2026-10-10",
+   "fuente": "oficial",
+   "abierta": false
   },
   {
    "id": "vivienda44",
@@ -492,7 +518,9 @@
     "mdu.gov.hr",
     "https://mdu.gov.hr/"
    ],
-   "verified_at": "2026-10-10"
+   "verified_at": "2026-10-10",
+   "fuente": "oficial",
+   "abierta": false
   },
   {
    "id": "exencion",
@@ -527,7 +555,9 @@
     "porezna-uprava.gov.hr",
     "https://porezna-uprava.gov.hr/"
    ],
-   "verified_at": "2026-10-10"
+   "verified_at": "2026-10-10",
+   "fuente": "oficial",
+   "abierta": false
   },
   {
    "id": "mdu_diplomas",
@@ -561,7 +591,9 @@
     "mdu.gov.hr",
     "https://mdu.gov.hr/"
    ],
-   "verified_at": "2026-10-10"
+   "verified_at": "2026-10-10",
+   "fuente": "oficial",
+   "abierta": false
   }
  ],
  "schema": "docs/03_arquitectura.md",
@@ -586,5 +618,11 @@
     "https://croacialatam.com.hr/iv-encuentro-internacional/"
    ]
   }
- ]
+ ],
+ "fuentes": {
+  "oficial": "Fuente oficial",
+  "institucion": "Institución",
+  "portal": "Portal de empleo",
+  "prensa": "Nota de prensa"
+ }
 }
