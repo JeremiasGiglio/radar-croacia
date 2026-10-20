@@ -1134,6 +1134,45 @@
    "fuente": "institucion",
    "abierta": true,
    "verified_at": "2026-10-20"
+  },
+  {
+   "id": "fipro_inovacije",
+   "cat": "emp",
+   "t": "Rijeka: fondos para llevar una innovación al mercado",
+   "t_hr": "Komercijalizacija inovacija 2026",
+   "who": "Fundación FIPRO (Zaklada FIPRO), con el condado de Primorje-Gorski kotar (PGŽ)",
+   "pts": [
+    [
+     14.44,
+     45.33
+    ]
+   ],
+   "deadline": "2026-11-13T23:59:00+01:00",
+   "next": "Resultados hasta el 3/12/2026",
+   "amount": "De €7.000 a €20.000 por proyecto: 50 % sin devolución y 50 % préstamo sin interés a 2 años (fondo total €60.000)",
+   "what": "Financia el desarrollo de un producto o servicio innovador y su salida al mercado. Pueden pedirlo pequeñas empresas y obrt con sede en la región de Rijeka, y también personas inventoras: en ese caso, antes de cobrar hay que abrir un obrt o una empresa en la región o ceder la innovación a una empresa de ahí. El proyecto dura hasta 6 meses.",
+   "el": {
+    "ar": [
+     "cond",
+     "Solo si abrís un obrt o una empresa en la región de Rijeka antes de cobrar."
+    ],
+    "cit": [
+     "cond",
+     "Solo si abrís un obrt o una empresa en la región de Rijeka antes de cobrar."
+    ],
+    "res": [
+     "cond",
+     "Si tenés o abrís un obrt o una empresa en la región de Rijeka."
+    ]
+   },
+   "src": [
+    "fipro.hr",
+    "https://www.fipro.hr/wp-content/uploads/2026/10/Javni_poziv_2026.pdf"
+   ],
+   "flag": "La mitad es un préstamo que se devuelve en 2 años. Hay que poder demostrar que la innovación funciona. Quien firmó con FIPRO en los últimos 2 años no puede pedirlo.",
+   "fuente": "institucion",
+   "abierta": true,
+   "verified_at": "2026-10-20"
   }
  ],
  "schema": "docs/03_arquitectura.md",
