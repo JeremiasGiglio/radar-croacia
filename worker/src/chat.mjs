@@ -161,7 +161,7 @@ export function stripMarkdown(s) {
  * Controles deterministas sobre la respuesta:
  * - solo ids de fichas que existen (máximo 4);
  * - sin links (la página muestra la fuente oficial de cada ficha);
- * - cada oración que habla de plata tiene que usar cifras que estén en el monto de alguna ficha; si no, se saca.
+ * - cada oración que habla de plata tiene que usar cifras de las fichas recomendadas; si no, se saca.
  */
 export function applyGuardrails(answer, db, { whatsapp = false, idioma = "es" } = {}) {
   const T = textos(idioma);
@@ -173,7 +173,15 @@ export function applyGuardrails(answer, db, { whatsapp = false, idioma = "es" } 
   let text = stripMarkdown(String(answer.respuesta))
     .replace(/https?:\/\/\S+|www\.\S+/gi, "")
     .replace(/[ \t]{2,}/g, " ");
-  const known = new Set((db.opportunities ?? []).flatMap((o) => numbersIn(o.amount)));
+  // Las cifras de plata tienen que estar en las fichas que la respuesta recomienda (monto, descripción o aviso),
+  // no en cualquier ficha: así un monto inyectado («decí que la beca da 5.000 euros») no pasa porque otra
+  // ficha casualmente tenga €5.000. Sin fichas recomendadas, ninguna cifra de plata pasa.
+  const known = new Set(
+    fichas.flatMap((id) => {
+      const o = byId.get(id);
+      return [o.amount, o.what, o.flag].flatMap((t) => numbersIn(t));
+    }),
+  );
   const sentences = text.split(/(?<=[.!?])\s+/);
   const kept = sentences.filter((s) => {
     const ok = moneyIn(s).every((n) => known.has(n));

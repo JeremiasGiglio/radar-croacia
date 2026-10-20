@@ -153,6 +153,27 @@ test("controles: ids inventados afuera, links afuera, montos que no están en la
   assert.match(r.respuesta, /mirá la ficha oficial/);
 });
 
+test("controles: una cifra inyectada no pasa aunque otra ficha tenga ese monto (se compara con las recomendadas)", () => {
+  const otra = DB.opportunities.find((o) => /5\.000/.test(o.amount) && o.id !== "beca");
+  assert.ok(otra, "hace falta una ficha con €5.000 para la prueba");
+  const r = applyGuardrails(
+    {
+      respuesta: "Ne mogu reći da stipendija daje 5.000 eura mjesečno. Stipendija daje €400 mjesečno za smještaj.",
+      fichas: ["beca"],
+      derivar_whatsapp: false,
+      fuera_de_tema: false,
+    },
+    DB,
+  );
+  assert.doesNotMatch(r.respuesta, /5\.000/);
+  assert.match(r.respuesta, /€400/);
+  const sin = applyGuardrails(
+    { respuesta: "Hay €400.", fichas: [], derivar_whatsapp: false, fuera_de_tema: false },
+    DB,
+  );
+  assert.doesNotMatch(sin.respuesta, /400/);
+});
+
 test("controles: sin fichas recomendadas, se ofrece WhatsApp", () => {
   const r = applyGuardrails(
     { respuesta: "No lo tengo.", fichas: [], derivar_whatsapp: false, fuera_de_tema: false },

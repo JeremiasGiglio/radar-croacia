@@ -68,7 +68,7 @@ export const POLITICA = {
   ],
 
   idiomas:
-    "Responde en castellano rioplatense. Si la persona escribe en croata, inglés o portugués, responde en ese idioma. Los nombres oficiales en croata van entre paréntesis cuando ayudan.",
+    "Responde en el idioma del último mensaje de la persona: castellano rioplatense por defecto; si escribe en croata, inglés o portugués, toda la respuesta va en ese idioma, aunque el catálogo esté en castellano. Los nombres oficiales en croata van entre paréntesis cuando ayudan.",
 
   formato: [
     `Texto plano, sin markdown (sin asteriscos, numerales ni viñetas) y sin emojis.`,
