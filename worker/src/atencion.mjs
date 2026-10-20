@@ -266,11 +266,12 @@ export async function panel(request, env, deps = {}) {
       return jsonResp({ error: "WhatsApp no aceptó el mensaje. Probá de nuevo en un rato." }, 502);
     }
     const actualizada = await agregar(chats, num, { de: "equipo", texto }, now);
+    const quedaMs = Math.max(0, (actualizada.ultimoPersona || 0) + VENTANA_MS - now);
     // Mientras atiende una persona, el bot sigue callado en esa charla.
     const st = (await store?.get(num)) ?? {};
     await store?.put(num, { ...st, humanoHasta: now + VENTANA_MS, visto: now });
     console.log(JSON.stringify({ canal: "panel", que: "responder" }));
-    return jsonResp({ ok: true, chat: actualizada });
+    return jsonResp({ ok: true, chat: { ...actualizada, quedaMs } });
   }
 
   // devolver: el bot vuelve a atender esa charla.
@@ -291,7 +292,11 @@ export async function panel(request, env, deps = {}) {
       .catch(() => {}); // si falla el aviso, la charla igual vuelve al bot
   }
   console.log(JSON.stringify({ canal: "panel", que: "devolver" }));
-  return jsonResp({ ok: true, chat: actualizada });
+  // El tiempo que queda se calcula acá (ZL-103): antes el panel mostraba «pasaron más de 24 h» al devolver.
+  return jsonResp({
+    ok: true,
+    chat: { ...actualizada, quedaMs: Math.max(0, (actualizada.ultimoPersona || 0) + VENTANA_MS - now) },
+  });
 }
 
 // ───────────────────────── Página ─────────────────────────
@@ -341,7 +346,7 @@ export const APP_JS = `(function(){
 var $=function(id){return document.getElementById(id)};
 var actual=null;
 function hora(t){return new Date(t).toLocaleString("es-AR",{dateStyle:"short",timeStyle:"short"})}
-function queda(ms){if(ms<=0)return "Pasaron más de 24 h: WhatsApp ya no deja responder.";var h=Math.floor(ms/3600000),m=Math.floor(ms%3600000/60000);return "Podés responder durante "+h+" h "+m+" min más."}
+function queda(ms,c){if(c&&c.abierta===false&&ms>0)return "La atiende el bot. Si hace falta, todavía podés escribirle durante "+Math.floor(ms/3600000)+" h "+Math.floor(ms%3600000/60000)+" min.";if(ms<=0)return "Pasaron más de 24 h: WhatsApp ya no deja responder.";var h=Math.floor(ms/3600000),m=Math.floor(ms%3600000/60000);return "Podés responder durante "+h+" h "+m+" min más."}
 function api(path,opts){opts=opts||{};opts.headers=Object.assign({"content-type":"application/json"},opts.headers||{});opts.credentials="same-origin";
   return fetch(path,opts).then(function(r){return r.json().then(function(d){if(!r.ok)throw new Error(d.error||("error "+r.status));return d})})}
 function lista(){api("/api/charlas").then(function(d){
@@ -352,17 +357,17 @@ function lista(){api("/api/charlas").then(function(d){
     var t=document.createElement("span");t.className="hora";t.textContent="Último mensaje: "+hora(c.ultimo);
     b.appendChild(n);b.appendChild(e);b.appendChild(t);b.addEventListener("click",function(){abrir(c.num)});li.appendChild(b);ul.appendChild(li)})
 }).catch(function(e){$("vacio").hidden=false;$("vacio").textContent=e.message})}
-function pintar(c){actual=c.num;$("lista").hidden=true;$("charla").hidden=false;$("titulo").textContent="+"+c.num+" · "+String(c.idioma||"es").toUpperCase()+(c.idioma&&c.idioma!=="es"?" (respondé en ese idioma)":"");$("ventana").textContent=queda(c.quedaMs);
+function pintar(c){actual=c.num;$("lista").hidden=true;$("charla").hidden=false;$("titulo").textContent="+"+c.num+" · "+String(c.idioma||"es").toUpperCase()+(c.idioma&&c.idioma!=="es"?" (respondé en ese idioma)":"");$("ventana").textContent=queda(c.quedaMs,c);
   var ol=$("mensajes");ol.textContent="";c.mensajes.forEach(function(m){var li=document.createElement("li");li.className=m.de;
-    var s=document.createElement("span");s.className="hora";s.textContent=(m.de==="equipo"?"Equipo":m.de==="persona"?"Persona":"")+" · "+hora(m.t);
+    var s=document.createElement("span");s.className="hora";var q=m.de==="equipo"?"Equipo":m.de==="persona"?"Persona":"";s.textContent=(q?q+" · ":"")+hora(m.t);
     li.appendChild(document.createTextNode(m.texto));li.appendChild(s);ol.appendChild(li)});
   $("enviar").disabled=c.quedaMs<=0;$("devolver").disabled=!c.abierta;}
 function abrir(num){$("estado").textContent="";api("/api/charlas/"+num).then(pintar).catch(function(e){$("estado").textContent=e.message})}
 $("volver").addEventListener("click",function(){actual=null;$("charla").hidden=true;$("lista").hidden=false;lista()});
 $("form").addEventListener("submit",function(ev){ev.preventDefault();var t=$("texto").value.trim();if(!t||!actual)return;$("enviar").disabled=true;$("estado").textContent="Enviando…";
-  api("/api/charlas/"+actual+"/responder",{method:"POST",body:JSON.stringify({texto:t})}).then(function(d){$("texto").value="";$("estado").textContent="Enviado.";pintar(Object.assign(d.chat,{quedaMs:86400000}))})
+  api("/api/charlas/"+actual+"/responder",{method:"POST",body:JSON.stringify({texto:t})}).then(function(d){$("texto").value="";$("estado").textContent="Enviado.";pintar(d.chat)})
   .catch(function(e){$("estado").textContent=e.message;$("enviar").disabled=false})});
-$("devolver").addEventListener("click",function(){if(!actual)return;api("/api/charlas/"+actual+"/devolver",{method:"POST",body:"{}"}).then(function(d){$("estado").textContent="La charla volvió al bot.";pintar(Object.assign(d.chat,{quedaMs:0}))})
+$("devolver").addEventListener("click",function(){if(!actual)return;api("/api/charlas/"+actual+"/devolver",{method:"POST",body:"{}"}).then(function(d){$("estado").textContent="La charla volvió al bot.";pintar(d.chat)})
   .catch(function(e){$("estado").textContent=e.message})});
 setInterval(function(){if(actual)abrir(actual);else lista()},60000);
 lista();
