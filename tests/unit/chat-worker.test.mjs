@@ -339,3 +339,71 @@ test("controles: los ids internos de las fichas no quedan en el texto (ZL-101)",
   );
   assert.equal(b.respuesta, "Te sirve la beca del MDU.");
 });
+
+// ZL-101: si la pregunta no está en castellano y la respuesta sí, se pide una vez más con el idioma al frente.
+test("control de idioma: una respuesta en castellano a una pregunta en croata se pide de nuevo, una sola vez", async () => {
+  const { answer } = await import("../../worker/src/chat.mjs");
+  const bodies = [];
+  const respuestas = [
+    {
+      respuesta: "Hay opciones abiertas a todos: para trabajar necesitás un permiso.",
+      fichas: ["hzz_burza"],
+      derivar_whatsapp: false,
+      fuera_de_tema: false,
+    },
+    {
+      respuesta: "Da, postoje opcije otvorene za sve: za rad ti treba dozvola.",
+      fichas: ["hzz_burza"],
+      derivar_whatsapp: false,
+      fuera_de_tema: false,
+    },
+  ];
+  const fetchImpl = async (_url, init) => {
+    bodies.push(JSON.parse(init.body));
+    return Response.json({
+      stop_reason: "end_turn",
+      content: [{ type: "text", text: JSON.stringify(respuestas[bodies.length - 1]) }],
+    });
+  };
+  const req = {
+    messages: [{ role: "user", content: "Nemam hrvatsko podrijetlo. Ima li nešto za posao u Hrvatskoj?" }],
+    perfil: "ar",
+  };
+  const r = await answer(DB, req, { apiKey: "k", fetchImpl });
+  assert.equal(bodies.length, 2);
+  assert.match(bodies[1].system, /^IMPORTANTE: la persona escribe en croata/);
+  assert.match(r.respuesta, /^Da, postoje/);
+  assert.ok(r.notes.includes("se pidió de nuevo por el idioma"));
+
+  // en castellano, o si la respuesta ya viene en el idioma de la pregunta, una sola llamada
+  for (const [pregunta, resp] of [
+    ["¿Hay algo para trabajar en Croacia?", respuestas[0]],
+    ["Nemam hrvatsko podrijetlo. Ima li nešto za posao u Hrvatskoj?", respuestas[1]],
+  ]) {
+    let n = 0;
+    await answer(
+      DB,
+      { messages: [{ role: "user", content: pregunta }], perfil: "ar" },
+      {
+        apiKey: "k",
+        fetchImpl: async () => (
+          n++,
+          Response.json({ stop_reason: "end_turn", content: [{ type: "text", text: JSON.stringify(resp) }] })
+        ),
+      },
+    );
+    assert.equal(n, 1, pregunta);
+  }
+});
+
+test("control de idioma: en WhatsApp vale el idioma elegido si el mensaje no alcanza para reconocerlo", async () => {
+  const { idiomaEsperado } = await import("../../worker/src/chat.mjs");
+  const req = (c) => ({ messages: [{ role: "user", content: c }], perfil: "ar" });
+  assert.equal(idiomaEsperado(req("beca"), { canal: "Canal: WhatsApp.", idioma: "hr" }), "hr");
+  assert.equal(idiomaEsperado(req("beca"), {}), null);
+  assert.equal(
+    idiomaEsperado(req("¿Hay becas para estudiar croata?"), { canal: "Canal: WhatsApp.", idioma: "hr" }),
+    null,
+  );
+  assert.equal(idiomaEsperado(req("Can you recommend a restaurant in Rijeka?"), {}), "en");
+});
