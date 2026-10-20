@@ -348,7 +348,7 @@
       }
     ],
     "expect": {
-      "fichas_alguna": ["study_in_croatia", "uniri_ingles", "rit_croatia", "algebra_becas", "zsem_becas"],
+      "fichas_alguna": ["study_in_croatia", "uniri_ingles", "rit_croatia", "algebra_becas"],
       "fuera_de_tema": false
     }
   },

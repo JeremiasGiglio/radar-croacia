@@ -107,7 +107,7 @@
      44.87
     ]
    ],
-   "next": "La 2027/28 todavía no salió (las últimas se publicaron en abril y en junio)",
+   "next": "La 2027/28 todavía no salió (la 2026/27 se publicó el 19/6/2026)",
    "amount": "Curso gratis, hasta dos comidas por día subsidiadas y €400 por mes para alojamiento",
    "what": "Un semestre o un año de croata en Zagreb, Rijeka, Split, Osijek, Zadar o Pula, con hasta 700 becas en la edición 2026/27 (cerró el 6 de julio). Es para descendientes de croatas mayores de 18 con el secundario terminado, y también para sus cónyuges. Los €400 se cobran al aprobar el semestre y el pasaje lo pagás vos.",
    "el": {
@@ -628,9 +628,9 @@
      44.87
     ]
    ],
-   "next": "La 2027/28 todavía no salió. En la 2026/27 la inscripción abrió el 1/2/2026 y los papeles se mandaban hasta el 22/5/2026",
-   "amount": "Matrícula subsidiada como a un ciudadano croata (alumno regular; confirmado en Rijeka y Zagreb)",
-   "what": "Las universidades públicas croatas guardan lugares en sus carreras de grado para emigrados croatas y sus descendientes (en 2026/27, por ejemplo, 39 en Rijeka). No tenés que rendir la matura croata (državna matura). Te anotás en postani-student.hr eligiendo la carrera marcada «Hrvati izvan RH» y pedís a la Oficina la constancia de que pertenecés al pueblo croata (potvrda).",
+   "next": "La 2027/28 todavía no salió",
+   "amount": "Según la universidad",
+   "what": "Las universidades croatas (públicas y algunas privadas) guardan lugares en sus carreras para la minoría croata y la diáspora. No tenés que rendir la matura croata (državna matura): alcanza con el secundario terminado en tu país. Te anotás directamente en la facultad y pedís el reconocimiento de tu secundario y la constancia de la Oficina de que pertenecés al pueblo croata (potvrda).",
    "el": {
     "ar": [
      "ok",
@@ -646,10 +646,10 @@
     ]
    },
    "src": [
-    "hrvatiizvanrh.gov.hr",
-    "https://hrvatiizvanrh.gov.hr/UserDocsImages//dokumenti/POSEBNA%20UPISNA%20KVOTA//Objedinjena%20tablica%20broj%20upisnih%20mjesta%20ak.god.%202026-2027.docx"
+    "gov.hr",
+    "https://gov.hr/hr/kako-ostvariti-pravo-na-koristenje-posebne-upisne-kvote/1730"
    ],
-   "flag": "Algunas carreras piden el examen de croata B2. En Zagreb el subsidio es para carreras dictadas en croata. Consultas: upisne-kvote@hrvatiizvanrh.hr.",
+   "flag": "Cada facultad puede tomar su propia prueba de ingreso. En los concursos 2026/27 de Rijeka y Zagreb, la matrícula de los alumnos regulares de este cupo se subsidia como a un ciudadano croata (en Zagreb, para carreras en croata).",
    "fuente": "oficial",
    "abierta": false,
    "verified_at": "2026-10-20"
@@ -676,7 +676,7 @@
     ],
     "cit": [
      "ok",
-     "Con la constancia de la Oficina: el pasaporte no prueba la ascendencia."
+     "Con la constancia de la Oficina, aunque tengas pasaporte croata."
     ],
     "res": [
      "cond",
@@ -704,7 +704,7 @@
      45.81
     ]
    ],
-   "next": "Diciembre de 2026 (convocatoria 2026/27, según el plan anual de la Oficina). La anterior abrió el 17/12/2025 y cerró el 16/1/2026",
+   "next": "La 2026/27 todavía no salió (la anterior abrió el 17/12/2025 y cerró el 16/1/2026)",
    "amount": "€175 por mes durante 10 meses",
    "what": "Beca anual para alumnos regulares de grado o maestría que ya estudian en una universidad croata y tienen domicilio fuera de Croacia. En la última edición hubo 40 becas para la diáspora emigrada, por promedio y situación económica. No cubre doctorado.",
    "el": {
@@ -714,7 +714,7 @@
     ],
     "cit": [
      "cond",
-     "Mismas condiciones: la ciudadanía no prueba la ascendencia, piden otra constancia."
+     "Mismas condiciones: el pasaporte croata no prueba la pertenencia; piden otro documento, como una partida de nacimiento."
     ],
     "res": [
      "cond",
@@ -745,9 +745,9 @@
      45.33
     ]
    ],
-   "next": "La 2027/28 todavía no salió. La 2026/27 se publicó el 20/2/2026 y cerró el 10/4/2026",
+   "next": "La 2027/28 todavía no salió (la 2026/27 cerró el 10/4/2026)",
    "amount": "€300 por mes (sin julio ni agosto), curso gratis, residencia y comidas subsidiadas",
-   "what": "Un semestre en Croaticum (Zagreb) o en la Escuela de Estudios Croatas de Rijeka, para estudiantes universitarios de cualquier país que estudien croata o eslavística, o que aprendan croata en su universidad, con al menos dos semestres hechos. Te tiene que proponer tu profesor de croata.",
+   "what": "Un semestre en Croaticum (Zagreb) o en la Escuela de Estudios Croatas de Rijeka, para estudiantes universitarios de cualquier país que estudien croata o eslavística, o que aprendan croata en su universidad, con al menos dos semestres hechos. Hasta 34 años. Te tiene que proponer tu profesor de croata.",
    "el": {
     "ar": [
      "cond",
@@ -755,11 +755,11 @@
     ],
     "cit": [
      "cond",
-     "Es para estudiantes extranjeros: confirmá con AMPEU si te toma con ciudadanía croata."
+     "Quedan afuera quienes tienen solo la ciudadanía croata: si tenés doble ciudadanía, confirmalo con AMPEU."
     ],
     "res": [
      "no",
-     "Hay que estar inscripto en una universidad fuera de Croacia."
+     "Quedan afuera quienes tienen o tramitan residencia en Croacia."
     ]
    },
    "src": [
@@ -788,7 +788,7 @@
    ],
    "next": "Todo el año",
    "amount": "Gratis",
-   "what": "Es el buscador oficial de ofertas de trabajo de toda Croacia. Podés filtrar por condado (županija): elegí «PRIMORSKO-GORANSKA» para ver Rijeka y alrededores. Para mirar no hace falta registrarte; para postularte desde el portal necesitás una cuenta de e-Građani (NIAS).",
+   "what": "Es el buscador oficial de ofertas de trabajo de toda Croacia. Podés filtrar por condado (županija): elegí «PRIMORSKO-GORANSKA» para ver Rijeka y alrededores. Para mirar no hace falta registrarte; para postularte desde el portal tenés que iniciar sesión.",
    "el": {
     "ar": [
      "cond",
@@ -796,7 +796,7 @@
     ],
     "cit": [
      "ok",
-     "Con ciudadanía croata trabajás sin permiso. Para postularte por el portal necesitás e-Građani."
+     "Con ciudadanía croata trabajás sin permiso."
     ],
     "res": [
      "ok",
@@ -861,7 +861,7 @@
    ],
    "next": "Todo el año",
    "amount": "Sin costo",
-   "what": "La sección donde la Municipalidad de Rijeka publica sus concursos para trabajar en la administración. La ley exige ciudadanía croata, título homologado si lo sacaste afuera y una prueba escrita. Los concursos también salen en el boletín oficial (Narodne novine) y los temporales, en el HZZ.",
+   "what": "La sección donde la Municipalidad de Rijeka publica sus concursos para trabajar en la administración. La ley de empleados locales exige ciudadanía croata (art. 12) y una prueba. Los concursos también salen en el boletín oficial (Narodne novine).",
    "el": {
     "ar": [
      "no",
@@ -869,7 +869,7 @@
     ],
     "cit": [
      "cond",
-     "Tenés la ciudadanía, pero hay que homologar el título y rendir la prueba."
+     "Tenés la ciudadanía: hay que cumplir los requisitos de cada concurso y rendir la prueba."
     ],
     "res": [
      "no",
@@ -906,7 +906,7 @@
     ],
     "cit": [
      "cond",
-     "Tenés la ciudadanía, pero hay que homologar el título y rendir la prueba."
+     "Tenés la ciudadanía: hay que cumplir los requisitos de cada concurso y rendir la prueba."
     ],
     "res": [
      "no",
@@ -1031,12 +1031,12 @@
     ]
    ],
    "next": "Según la carrera (la guía oficial indica inscripción de abril a septiembre)",
-   "amount": "Sin becas propias para internacionales. Matrícula según la carrera (Medicina y Odontología: €12.000 por año)",
-   "what": "La universidad pública de Rijeka dicta en inglés carreras completas como Medicina, Odontología, Negocios Internacionales, Hotelería, Biotecnología y Matemática. Su guía oficial avisa que la mayoría de las universidades croatas no da becas propias a estudiantes internacionales.",
+   "amount": "Matrícula según la carrera (Medicina y Odontología: €12.000 por año). La guía no menciona becas propias",
+   "what": "La universidad pública de Rijeka dicta en inglés carreras completas como Medicina, Odontología, Negocios Internacionales, Hotelería, Biotecnología y Matemática. Su guía oficial avisa que la mayoría de las universidades croatas no da becas a estudiantes internacionales.",
    "el": {
     "ar": [
      "cond",
-     "Quien no es de la UE suele pagar otra tarifa y no hay becas propias."
+     "Según la carrera, quien no es de la UE puede pagar otra tarifa."
     ],
     "cit": [
      "cond",
@@ -1111,7 +1111,7 @@
    "deadline": "2027-05-01T23:59:00+02:00",
    "next": "Resultados el 15/5/2027 (ingreso 2027/28)",
    "amount": "5 becas del 50 %, 5 del 30 % y 10 del 15 % de la matrícula del primer año",
-   "what": "Universidad privada de Zagreb con carreras de grado y maestría en inglés (informática, diseño, comunicación, negocios digitales). Para el ingreso 2027/28 reparte 20 becas que bajan la matrícula del primer año. Primero te tienen que admitir y después mandás la solicitud.",
+   "what": "Universidad privada de Zagreb con carreras de grado y maestría (informática, diseño, comunicación, negocios digitales), varias en inglés. Para el ingreso 2027/28 reparte 20 becas que bajan la matrícula del primer año. Primero te tienen que admitir y después mandás la solicitud.",
    "el": {
     "ar": [
      "ok",
@@ -1131,43 +1131,6 @@
     "https://www.algebra.hr/sveuciliste/en/admissions/tuition-fee/our-students/financial-incentives-for-international-students"
    ],
    "flag": "Es privada. Algebra también participa del cupo para croatas de afuera.",
-   "fuente": "institucion",
-   "abierta": true,
-   "verified_at": "2026-10-20"
-  },
-  {
-   "id": "zsem_becas",
-   "cat": "beca",
-   "t": "ZŠEM: concurso de becas «Plan for the Future» para la carrera de grado",
-   "who": "Escuela de Economía y Gestión de Zagreb (ZŠEM), institución privada",
-   "pts": [
-    [
-     15.98,
-     45.81
-    ]
-   ],
-   "next": "La edición 2027 todavía no se anunció (la 2026 fue del 17/3 al 17/4)",
-   "amount": "Tres becas del 50 %, 30 % y 20 % de la matrícula del primer año",
-   "what": "Escuela privada de negocios de Zagreb con carreras de grado en inglés. Cada año hace el concurso «Plan for the Future»: rendís el examen de ingreso y las tres mejores candidaturas reciben descuento en la matrícula, renovable si mantenés promedio 4,0.",
-   "el": {
-    "ar": [
-     "cond",
-     "La página no dice si hay restricción por nacionalidad: consultalo con admisiones."
-    ],
-    "cit": [
-     "cond",
-     "La página no dice si hay restricción por nacionalidad: consultalo con admisiones."
-    ],
-    "res": [
-     "cond",
-     "La página no dice si hay restricción por nacionalidad: consultalo con admisiones."
-    ]
-   },
-   "src": [
-    "zsem.hr",
-    "https://zsem.hr/en/events/scholarship-competition-plan-for-the-future/"
-   ],
-   "flag": "Es privada. Son solo tres becas por año.",
    "fuente": "institucion",
    "abierta": true,
    "verified_at": "2026-10-20"
