@@ -45,11 +45,13 @@ La única excepción es la atención humana: desde que la persona escribe PERSON
 | Secretos | Solo en Cloudflare, cargados por Jeremías. Nada en el repo, el chat ni Jira. |
 | Asistente de uso general (prohibido por Meta) | La política de temas de la web: rechaza lo que no es del Radar. |
 
-## Estado al 16/10/2026
+## Estado al 19/10/2026
 
-- Memoria **activada** (ZL-66 aprobado): KV `radar-wa-state` (binding `WA_STATE`).
-- **PERSONA**, mientras el panel (ZL-65) esté apagado, deriva a hola@zustrolabs.com y el bot sigue contestando. Con `WHATSAPP_PANEL = "1"` en `[vars]`, PERSONA silencia al bot, abre la charla en atencion.zustrolabs.com y avisa por mail. Puesta en marcha en [`09_panel_atencion.md`](09_panel_atencion.md).
-- Funciona con el número de prueba. Para el número real hay que repetir el paso «suscribir la app a la WABA» (`POST /{WABA_ID}/subscribed_apps`), porque sin eso Meta no manda los mensajes.
+- **En producción con el número real** +54 9 341 335-0686 (WABA «Radar Croacia» `1119676600545702`, phone id `1311970855343004`), registrado en la Cloud API, estado *Connected*, calidad *High*. Ya no se usa en la app de WhatsApp Business.
+- Usuario del sistema `radar-bot` con acceso total a la app y a la WABA real. Perfil con foto (damero Z), descripción, web y mail.
+- Memoria **activada** (ZL-66): KV `radar-wa-state` (binding `WA_STATE`).
+- **PERSONA** pausa al bot, abre la charla en el panel de atención y avisa por mail (ZL-65, [`09_panel_atencion.md`](09_panel_atencion.md)).
+- Probado por Jeremías: botones de perfil, respuestas con fichas y fuente oficial, PERSONA y panel.
 
 ## Comandos
 
@@ -79,13 +81,13 @@ La única excepción es la atención humana: desde que la persona escribe PERSON
 
 ## Antes de usarlo con el número real (no se negocia)
 
-1. **Memoria activa (ZL-66)**: así el primer mensaje avisa que es un asistente automático, que es información y no asesoramiento legal, qué se guarda y cómo borrarlo. Sin memoria no hay bienvenida, así que **no se activa en el número real sin memoria**.
-2. **Panel o aviso (ZL-65)**: con el número solo en la API, los mensajes no aparecen en la app. Sin panel, PERSONA deriva al mail; con panel, se responde desde atencion.zustrolabs.com.
+1. **Memoria activa (ZL-66)** ✅: así el primer mensaje avisa que es un asistente automático, que es información y no asesoramiento legal, qué se guarda y cómo borrarlo. Sin memoria no hay bienvenida, así que **no se activa en el número real sin memoria**.
+2. **Panel o aviso (ZL-65)** ✅: con el número solo en la API, los mensajes no aparecen en la app. Sin panel, PERSONA deriva al mail; con panel, se responde desde atencion.zustrolabs.com.
 3. **Evals del bot en verde (ZL-23)**, con casos de inyección.
-4. **Política pública actualizada**: hoy `asistente.html` dice que solo acepta pedidos de la web y que no guarda nada. Hay que sumar WhatsApp y su memoria en `worker/src/policy.mjs` y correr `npm run policy`.
+4. **Política pública actualizada** ✅: `asistente.html` y `privacidad.html` explican WhatsApp, la memoria y la atención humana.
 
 ## Pendiente
 
 - ZL-23: evals del bot por WhatsApp (los del chat, con el aviso de canal).
-- ZL-65: panel de atención hecho (PR); falta configurar Cloudflare Access y prenderlo (`09_panel_atencion.md`).
-- ZL-24: número real (solo API o BSP).
+- Que en WhatsApp no diga «te ayuda una persona por WhatsApp» (ya está en WhatsApp): que diga «escribí PERSONA».
+- Fichas de estudios universitarios para descendientes (hoy solo está la beca de lengua), siempre contra el documento oficial.

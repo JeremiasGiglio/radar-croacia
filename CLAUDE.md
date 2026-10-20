@@ -14,7 +14,7 @@
    - **Clasificador de elegibilidad** por perfil (ok / cond / no + motivo). Siempre conservador: ante la duda, "cond" y una nota para revisar.
    - **Detector de cambios:** diff de plazos, montos y requisitos entre versiones.
    - Todo pasa a una **cola de revisión humana**; nada se publica sin aprobación.
-3b. **Chat con IA en la web:** `worker/` (Cloudflare Worker en `https://api.zustrolabs.com/chat`, se publica con `.github/workflows/worker.yml`). Responde solo con `site/data/opportunities.json`, no guarda mensajes, CORS solo para el Radar, 10 preguntas/minuto por IP. Controles en `worker/src/chat.mjs` (ids reales, sin links, sin montos que no estén en las fichas). Evals: `node scripts/agents/eval-chat.mjs`. **Bot de WhatsApp** en `/whatsapp` del mismo Worker (`worker/src/whatsapp.mjs`, ZL-22): solo mensajes firmados por Meta, mismo cerebro y política; secretos solo en Cloudflare; checklist para activarlo en `docs/08_bot_whatsapp.md`. **Panel de atención** en `atencion.zustrolabs.com` (ZL-65, `worker/src/atencion.mjs`): detrás de Cloudflare Access; solo guarda los mensajes desde que alguien escribe PERSONA, 30 días; aviso por mail sin número ni texto; puesta en marcha en `docs/09_panel_atencion.md`.
+3b. **Chat con IA en la web:** `worker/` (Cloudflare Worker en `https://api.zustrolabs.com/chat`, se publica con `.github/workflows/worker.yml`). Responde solo con `site/data/opportunities.json`, no guarda mensajes, CORS solo para el Radar, 10 preguntas/minuto por IP. Controles en `worker/src/chat.mjs` (ids reales, sin links, sin montos que no estén en las fichas). Evals: `node scripts/agents/eval-chat.mjs`. **Bot de WhatsApp** en `/whatsapp` del mismo Worker (`worker/src/whatsapp.mjs`, ZL-22): solo mensajes firmados por Meta, mismo cerebro y política; secretos solo en Cloudflare; checklist en `docs/08_bot_whatsapp.md`. ✅ **En producción desde el 19/10/2026 con el número real +54 9 341 335-0686** (Cloud API, ya no en la app de WhatsApp Business). **Panel de atención** en `atencion.zustrolabs.com` (ZL-65, `worker/src/atencion.mjs`): detrás de Cloudflare Access; solo guarda los mensajes desde que alguien escribe PERSONA, 30 días; aviso por mail sin número ni texto; puesta en marcha en `docs/09_panel_atencion.md`. ✅ Funcionando desde el 19/10/2026 (Zero Trust Free, app de Access «Panel de atención», política «Solo Jeremías»).
 4. **Panel de revisión simple** (aprobar, editar, rechazar). Puede ser un archivo + PR en GitHub al principio.
 5. **Modo demo offline** para el evento: datos congelados y video de respaldo (`media/`).
 6. **Tests** (es QA: que se note). Contrato JSON de cada fuente con fixtures guardados; un test por fuente que falla si trae 0 ítems; tests visuales y E2E de la web con Playwright; evals de los agentes con un set de convocatorias reales y su salida esperada.
@@ -49,6 +49,7 @@ Presupuesto pedido: **€1.200** (traducción 500, diseño 300, promoción 200, 
 
 ## Dónde está el resto del contexto
 En el proyecto de claude.ai **"Viaje"** (si este chat tiene acceso):
+- `claude/ESTADO_Radar_Zustro_19Oct2026.md` (**leer primero**: estado del Radar, el bot, el panel y la infraestructura)
 - `claude/Radar_Croacia_Investigacion_28Sep2026.md`
 - `claude/Convocatoria_2026_Formulario_B_Hrvatski.md`
 - `claude/CALENDARIO_MAESTRO_Ayudas_Plazos_Pendientes.md` (datos actualizados de ayudas)
