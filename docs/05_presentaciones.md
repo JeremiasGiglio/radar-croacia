@@ -31,7 +31,8 @@ El proyecto nace de la experiencia del autor como descendiente de un emigrante d
 
 **Kit:**
 - volante en castellano y croata con QR;
-- **modo offline** (datos congelados) + video de respaldo (`media/`);
+- **modo offline:** `prototype/radar-offline.html`, un solo archivo que se abre con doble clic, sin internet, con todas las fichas (sin el chat con IA). Se regenera con `npm run offline` y el test falla si quedó viejo. Llevarlo en el celular y en un pendrive;
+- **video de respaldo** (`media/Radar_Croacia_demo.mp4`, 1 min, con subtítulos): perfiles, «abiertas a todos», mapa, ficha y chat con una respuesta real. Se graba con Playwright;
 - tarjetas;
 - pedir **certificado de asistencia**.
 

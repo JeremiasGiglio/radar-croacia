@@ -135,6 +135,29 @@ test.describe("Programas en Croacia (ZL-79)", () => {
   });
 });
 
+test("demo sin conexión (ZL-41): abre desde el archivo, con todas las fichas y sin pedir nada a la red", async ({
+  browser,
+}) => {
+  const ctx = await browser.newContext();
+  const page = await ctx.newPage();
+  const externos: string[] = [];
+  page.on("request", (r) => {
+    if (!/^(file|data):/.test(r.url())) externos.push(r.url());
+  });
+  const errors: string[] = [];
+  page.on("pageerror", (e) => errors.push(e.message));
+  page.on("console", (m) => {
+    if (m.type() === "error") errors.push(m.text());
+  });
+  await page.goto(new URL("../prototype/radar-offline.html", import.meta.url).href);
+  await expect(page.locator("#list article")).toHaveCount(total);
+  await expect(page.locator(".stamp")).toContainText("Sin conexión");
+  await expect(page.locator("#chat-open")).toBeHidden();
+  expect(externos).toEqual([]);
+  expect(errors).toEqual([]);
+  await ctx.close();
+});
+
 test.describe("WhatsApp", () => {
   test("el número publicado es un celular argentino válido para wa.me", async ({ request }) => {
     const contact = await (await request.get("/data/contact.json")).json();
