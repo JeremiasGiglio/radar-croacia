@@ -26,7 +26,7 @@ Tests: `tests/unit/whatsapp.test.mjs` con mensajes de ejemplo ficticios en `test
 | PERSONA avisa, pero el bot sigue contestando. | PERSONA silencia al bot 24 h en esa charla. |
 | — | Un mensaje que Meta reintenta no se responde dos veces. |
 
-La memoria (KV `WA_STATE`) guarda por número **solo** `{perfil, humanoHasta, visto}` y vence a los 90 días. **Nunca el texto de la charla con el bot.** BORRAR la elimina. Los registros solo tienen métricas: ni el número ni el texto.
+La memoria (KV `WA_STATE`) guarda por número **solo** `{idioma, perfil, humanoHasta, visto}` y vence a los 90 días. **Nunca el texto de la charla con el bot.** BORRAR la elimina. Los registros solo tienen métricas: ni el número ni el texto.
 
 La única excepción es la atención humana: desde que la persona escribe PERSONA (con el panel activo), sus mensajes se guardan 30 días para que el equipo los lea y responda. Detalle en [`09_panel_atencion.md`](09_panel_atencion.md) (ZL-65).
 
@@ -55,9 +55,24 @@ La única excepción es la atención humana: desde que la persona escribe PERSON
 
 ## Comandos
 
-- **PERSONA** (o «humano», «hablar con una persona»): pide que responda alguien del equipo.
-- **BORRAR** (o «olvidame»): borra perfil y estado.
-- **PERFIL**: vuelve a mostrar los botones de perfil.
+Los comandos funcionan en los 4 idiomas, sin importar mayúsculas, tildes ni signos.
+
+| Qué hace | Castellano | Croata | Inglés | Portugués |
+|---|---|---|---|---|
+| Pedir que responda alguien del equipo | PERSONA, humano | OSOBA, razgovor s osobom | PERSON, human | PESSOA, atendente |
+| Borrar perfil, idioma, estado y la charla con el equipo | BORRAR, olvidame | OBRIŠI, zaboravi me | DELETE, forget me | APAGAR, esqueça-me |
+| Volver a elegir el perfil | PERFIL | PROFIL | PROFILE | PERFIL |
+| Volver a elegir el idioma | IDIOMA | JEZIK | LANGUAGE | IDIOMA, LÍNGUA |
+
+## Idiomas (ZL-78)
+
+- **Primer mensaje:** una lista de WhatsApp con Español, Hrvatski, English y Português. El idioma se guarda en la memoria con el perfil.
+- **Textos fijos** (bienvenida, aviso, botones, PERSONA, BORRAR, errores y «devuelto al bot») en `worker/src/textos.mjs`. **El croata lo revisan Ivan o Camila** antes de Córdoba.
+- **La IA** responde en el idioma elegido: el catálogo está en castellano y lo traduce; los nombres oficiales van en croata.
+- **Controles:** los montos se controlan en los 4 idiomas (€, euros, eura, dollars, kuna, reais, «mil», «tisuća», «thousand») y con separadores de miles.
+- **Quien no elige y escribe igual** sigue en castellano. Quien ya tenía perfil de antes, también.
+- **En el panel** se ve el idioma de cada charla. La respuesta del equipo sale tal cual la escribe la persona del equipo.
+- **ZL-76:** por WhatsApp se saca toda oración de la IA que diga «WhatsApp» y se ofrece «escribí PERSONA» en el idioma de la charla.
 
 ## Reglas de Meta que hay que respetar
 

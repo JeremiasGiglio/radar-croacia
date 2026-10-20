@@ -58,10 +58,11 @@ Responde en castellano rioplatense. Si la persona escribe en croata, inglés o p
 
 ## WhatsApp
 - Es el mismo asistente, con las mismas reglas, en WhatsApp. Solo recibe mensajes firmados por Meta.
-- Recuerda tu número con tu perfil (dónde vivís y si tenés ciudadanía) y la fecha del último mensaje. Lo que le escribís al asistente no se guarda. Se borra a los 90 días sin mensajes.
+- Al empezar te pregunta el idioma: castellano, croata, inglés o portugués. Las fichas están en castellano y el asistente te las explica en tu idioma.
+- Recuerda tu número con tu idioma, tu perfil (dónde vivís y si tenés ciudadanía) y la fecha del último mensaje. Lo que le escribís al asistente no se guarda. Se borra a los 90 días sin mensajes.
 - Si pedís hablar con una persona y el equipo te atiende por WhatsApp, el asistente se pausa en esa charla y guardamos lo que escribas desde ese momento por 30 días, para que el equipo lo lea y te responda. Solo lo ve el equipo, en un panel con acceso restringido.
 - El primer mensaje avisa que es un asistente automático y qué guarda.
-- Comandos: PERFIL cambia tu situación, BORRAR elimina lo que recuerda (también la charla con el equipo) y PERSONA te indica cómo hablar con alguien del equipo.
+- Comandos (también en croata, inglés y portugués): PERFIL cambia tu situación, IDIOMA cambia el idioma, BORRAR elimina lo que recuerda (también la charla con el equipo) y PERSONA te indica cómo hablar con alguien del equipo.
 - Solo lee texto: audios, fotos y archivos no se procesan.
 - Los detalles completos están en la página de Privacidad del Radar.
 

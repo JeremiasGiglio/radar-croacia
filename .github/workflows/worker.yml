@@ -31,7 +31,7 @@ jobs:
           cache: npm
       - run: npm ci
       - name: Tests del Worker
-        run: node --test tests/unit/chat-worker.test.mjs tests/unit/whatsapp.test.mjs tests/unit/atencion.test.mjs
+        run: node --test tests/unit/chat-worker.test.mjs tests/unit/whatsapp.test.mjs tests/unit/atencion.test.mjs tests/unit/idiomas.test.mjs
       - name: Instalar wrangler
         working-directory: worker
         run: npm ci
