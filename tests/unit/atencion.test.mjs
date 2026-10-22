@@ -470,6 +470,44 @@ test("worker: si el mail de aviso falla, la persona igual recibe la confirmació
   assert.equal(sent[0].text.body, TEXTOS.persona);
 });
 
+async function conLogs(fn) {
+  const logs = [];
+  const orig = console.log;
+  console.log = (x) => logs.push(String(x));
+  try {
+    await fn();
+  } finally {
+    console.log = orig;
+  }
+  return logs;
+}
+
+test("worker: si el aviso no sale, el registro dice por qué (sin el número)", async () => {
+  for (const [notify, motivo] of [
+    [async () => false, "sin_config"],
+    [
+      async () => {
+        throw new TypeError("destino no verificado");
+      },
+      "TypeError",
+    ],
+  ]) {
+    const store = memoryStore();
+    await store.put(NUM, { perfil: "ar", humanoHasta: 0, visto: T0 });
+    const d = { fetch: fakeGraph([]), store, chats: memoryChats(), now: T0 + 1000, notify };
+    const logs = await conLogs(() => wa("PERSONA", "wamid.M" + motivo, { ...WA_ENV, ...ENV, WHATSAPP_PANEL: "1" }, d));
+    const linea = logs.map((l) => JSON.parse(l)).find((l) => l.que === "persona");
+    assert.equal(linea.avisado, false, motivo);
+    assert.equal(linea.avisoError, motivo);
+    assert.ok(!logs.join("\n").includes(NUM), "el número no va al registro");
+  }
+});
+
+test("wrangler.toml: sin registros automáticos de cada pedido (la ruta del panel lleva el número)", () => {
+  const toml = readFileSync(new URL("../../worker/wrangler.toml", import.meta.url), "utf8");
+  assert.match(toml, /^\[observability\.logs\]\ninvocation_logs = false$/m);
+});
+
 test("worker: con WHATSAPP_PANEL=1 pero sin el login completo, PERSONA deriva al mail y el bot no se calla", async () => {
   for (const falta of ["PANEL_EMAILS", "ACCESS_AUD", "ACCESS_TEAM_DOMAIN"]) {
     const sent = [];
