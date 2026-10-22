@@ -336,3 +336,51 @@ test("detectarIdioma: reconoce castellano, croata, inglés y portugués, y es co
   ];
   for (const [t, esperado] of casos) assert.equal(detectarIdioma(t), esperado, t);
 });
+
+// ZL-106: en el chat de la web no hay idioma elegido; las frases fijas van en el idioma de la pregunta.
+test("chat de la web en otro idioma: el aviso de montos y el de «sin respuesta» van en ese idioma", () => {
+  const conMonto = {
+    respuesta: "You get 99,999 euros a month.",
+    fichas: ["beca"],
+    derivar_whatsapp: false,
+    fuera_de_tema: false,
+  };
+  const en = applyGuardrails(conMonto, DB, { idioma: "en" });
+  assert.doesNotMatch(en.respuesta, /99/);
+  assert.match(en.respuesta, /For exact amounts/);
+  assert.doesNotMatch(en.respuesta, /montos|mirá/);
+  const vacio = { respuesta: "https://primjer.hr", fichas: [], derivar_whatsapp: false, fuera_de_tema: false };
+  assert.equal(applyGuardrails(vacio, DB, { idioma: "hr" }).respuesta, TEXTOS_I18N.hr.sinRespuestaWeb);
+  // en castellano, la web sigue igual
+  assert.match(applyGuardrails(conMonto, DB).respuesta, /Para montos exactos, mirá la ficha oficial\./);
+  assert.equal(applyGuardrails(vacio, DB).respuesta, TEXTOS_I18N.es.sinRespuestaWeb);
+  for (const l of IDIOMAS)
+    assert.ok(TEXTOS_I18N[l].sinRespuestaWeb && !/PERSON|OSOBA|PESSOA/.test(TEXTOS_I18N[l].sinRespuestaWeb), l);
+});
+
+test("ZL-106: answer() en la web le pasa a los controles el idioma de la pregunta", async () => {
+  const { answer } = await import("../../worker/src/chat.mjs");
+  const fetchImpl = async () =>
+    Response.json({
+      stop_reason: "end_turn",
+      content: [
+        {
+          type: "text",
+          text: JSON.stringify({
+            respuesta: "Dobiješ 99.999 eura mjesečno. Javi se za više informacija.",
+            fichas: ["beca"],
+            derivar_whatsapp: false,
+            fuera_de_tema: false,
+          }),
+        },
+      ],
+      usage: { input_tokens: 1, output_tokens: 1 },
+    });
+  const req = {
+    messages: [{ role: "user", content: "Koje stipendije postoje za studij hrvatskoga jezika?" }],
+    perfil: "ar",
+  };
+  const r = await answer(DB, req, { apiKey: "k", fetchImpl });
+  assert.match(r.respuesta, /Za točne iznose pogledaj službeni izvor\./);
+  assert.doesNotMatch(r.respuesta, /montos/);
+});

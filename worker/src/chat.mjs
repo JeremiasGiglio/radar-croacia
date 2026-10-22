@@ -235,15 +235,14 @@ export function applyGuardrails(answer, db, { whatsapp = false, idioma = "es" } 
     : kept;
   text = final.join(" ").trim();
   if (kept.length !== sentences.length)
-    text += " " + (whatsapp ? T.montos : "Para montos exactos, mirá la ficha oficial.");
+    // En la web, la frase va en el idioma de la pregunta (ZL-106); en castellano queda como estaba.
+    text += " " + (whatsapp || idioma !== "es" ? T.montos : "Para montos exactos, mirá la ficha oficial.");
   if (text.length > LIMITS.answer) text = text.slice(0, LIMITS.answer).replace(/\s+\S*$/, "") + "…";
   text = text.trim();
   let sinTexto = false;
   if (!text) {
     sinTexto = true;
-    text = whatsapp
-      ? T.sinRespuesta
-      : "No tengo una respuesta segura para eso. Si querés, escribinos por WhatsApp y te ayuda una persona.";
+    text = whatsapp ? T.sinRespuesta : T.sinRespuestaWeb;
   }
 
   return {
@@ -332,7 +331,8 @@ export async function answer(
     parsed = otra.parsed;
     usage = otra.usage;
   }
-  const r = applyGuardrails(parsed, db, { whatsapp, idioma });
+  // En la web no hay idioma elegido: los textos fijos van en el de la pregunta (ZL-106).
+  const r = applyGuardrails(parsed, db, { whatsapp, idioma: whatsapp ? idioma : (esperado ?? "es") });
   if (reintento) r.notes.push("se pidió de nuevo por el idioma");
   return { ...r, usage };
 }
