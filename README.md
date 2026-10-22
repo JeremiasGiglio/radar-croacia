@@ -17,7 +17,7 @@ Becas, cursos y estudios universitarios (también universidades privadas con car
 | Maqueta offline para eventos | ✅ `prototype/index.html` (datos del 28/9/2026 embebidos; funciona sin internet) |
 | Datos en JSON con esquema | ✅ `site/data/opportunities.json` (45 fichas, revisión 22/10/2026; cada una con tipo de fuente y si está abierta a todos) + `schema/` |
 | Tests | ✅ 140 unitarios (datos, robot, chat, WhatsApp, panel, idiomas, demo offline) y 100 E2E con Playwright (escritorio, celular y celular chico), más evals de la IA |
-| Video demo con subtítulos | ✅ `media/Radar_Croacia_demo.mp4` (20/10/2026, 1 min) |
+| Video con subtítulos | ✅ `media/Radar_Croacia_promo_{es,en,hr}_v1.mp4` (22/10/2026, 60 s, castellano, inglés y croata) |
 | Demo sin conexión | ✅ `prototype/radar-offline.html` (`npm run offline`; un test controla que esté al día) |
 | Monitoreo diario de fuentes | ✅ 12 de 12: Oficina (convocatorias y novedades), MDU (convocatorias y novedades), MZOM (becas), Matica iseljenika, PGŽ (programas y concursos), Grad Rijeka, HZZ, Ured za udruge y FIPRO (RSS y API de WordPress). Robot diario + PR de revisión (`.github/workflows/monitor.yml`, `review/`) |
 | Botón de consultas por WhatsApp | ✅ +54 9 341 335-0686 (`site/data/contact.json`) |
