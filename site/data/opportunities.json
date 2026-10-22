@@ -1,6 +1,6 @@
 {
  "version": "2026-10-20",
- "verified_at": "2026-10-20",
+ "verified_at": "2026-10-22",
  "note": "Beta. Fichas revisadas por Jeremías Giglio (Zustro Labs) con fuentes oficiales. Los montos y plazos pueden cambiar: la fuente oficial manda.",
  "profiles": {
   "ar": "Vive en Argentina, sin ciudadanía",
@@ -1188,6 +1188,660 @@
    "fuente": "institucion",
    "abierta": true,
    "verified_at": "2026-10-20"
+  },
+  {
+   "id": "ciudadania_art11",
+   "cat": "res",
+   "t": "Ciudadanía croata para emigrantes y sus descendientes (art. 11)",
+   "t_hr": "Stjecanje hrvatskog državljanstva prirođenjem – iseljenik i potomci (čl. 11. Zakona o hrvatskom državljanstvu)",
+   "who": "Ministerio del Interior (MUP), por el consulado o la policía",
+   "pts": [
+    [
+     15.98,
+     45.81
+    ]
+   ],
+   "next": "Todo el año",
+   "amount": "€139,36 de tasa si te la otorgan y la pediste en Croacia; en el consulado se paga la tasa consular",
+   "what": "Si descendés de alguien que emigró del territorio croata antes del 8/10/1991, podés pedir la ciudadanía sin examen de idioma ni de cultura, sin vivir en Croacia y sin renunciar a la argentina. Desde 2020 la ley ya no pone un límite de generaciones, pero el emigrante tiene que haber tenido la ciudadanía de la república croata o la pertenencia a un municipio croata (zavičajnost). Tenés que ser mayor de 18 y probarlo con partidas apostilladas y traducidas, antecedentes penales y un CV.",
+   "el": {
+    "ar": [
+     "cond",
+     "Solo si descendés de un emigrante croata y lo podés probar con documentos. Se presenta en el consulado."
+    ],
+    "cit": [
+     "no",
+     "Ya tenés la ciudadanía."
+    ],
+    "res": [
+     "cond",
+     "Si descendés de un emigrante y lo podés probar, lo presentás en la policía de donde vivís."
+    ]
+   },
+   "src": [
+    "narodne-novine.nn.hr",
+    "https://narodne-novine.nn.hr/clanci/sluzbeni/2019_10_102_2050.html"
+   ],
+   "fuente": "oficial",
+   "abierta": false,
+   "flag": "La tasa y la lista de documentos están en la página del MUP: https://mup.gov.hr/aliens-281621/citizenship/solicitud-de-ciudadania-croata/283137. La tasa consular de la Embajada en Buenos Aires no figura: consultala ahí.",
+   "verified_at": "2026-10-22"
+  },
+  {
+   "id": "nomada_digital",
+   "cat": "res",
+   "t": "Residencia para nómadas digitales",
+   "t_hr": "Privremeni boravak u svrhu boravka digitalnih nomada",
+   "who": "Ministerio del Interior (MUP), por la policía o el consulado",
+   "pts": [
+    [
+     15.98,
+     45.81
+    ]
+   ],
+   "next": "Todo el año",
+   "amount": "Tasas: en el consulado, €55,74 por la residencia más €41,14 por la tarjeta; en la policía, €46,45 más €41,14 (según el MUP)",
+   "what": "Si trabajás a distancia para una empresa de afuera de Croacia, o para tu propia empresa registrada afuera, podés vivir en Croacia hasta 18 meses, siempre que no trabajes para empleadores croatas. Tenés que demostrar ingresos de al menos 2,5 sueldos netos promedio de Croacia por mes, seguro médico y antecedentes penales. Cuando vence, hay que esperar 6 meses para volver a pedirla.",
+   "el": {
+    "ar": [
+     "cond",
+     "Sirve si trabajás remoto para afuera y llegás al ingreso mínimo. No te deja trabajar para empresas croatas."
+    ],
+    "cit": [
+     "no",
+     "Con ciudadanía croata no necesitás permiso de residencia."
+    ],
+    "res": [
+     "no",
+     "Ya tenés la residencia de diáspora, que además te deja trabajar en Croacia."
+    ]
+   },
+   "src": [
+    "narodne-novine.nn.hr",
+    "https://narodne-novine.nn.hr/clanci/sluzbeni/2025_03_40_545.html"
+   ],
+   "fuente": "oficial",
+   "abierta": true,
+   "flag": "Los requisitos y las tasas están en la página del MUP: https://mup.gov.hr/aliens-281621/stay-and-work/temporary-stay-of-digital-nomads/286833. El ingreso mínimo se recalcula cada año: hoy son €3.622,50 por mes, o €65.205 en la cuenta para 18 meses.",
+   "verified_at": "2026-10-22"
+  },
+  {
+   "id": "plava_karta",
+   "cat": "res",
+   "t": "Tarjeta Azul de la UE para trabajo calificado",
+   "t_hr": "Plava karta EU-a",
+   "who": "Ministerio del Interior (MUP), por el consulado o la policía",
+   "pts": [
+    [
+     15.98,
+     45.81
+    ]
+   ],
+   "next": "Todo el año",
+   "amount": "Con tasas administrativas (ver la página del MUP)",
+   "what": "Si tenés un título universitario de una carrera de al menos 3 años (en informática alcanzan 3 años de experiencia en los últimos 7, con un certificado de una comisión oficial) y una empresa croata te ofrece un contrato de 6 meses o más, podés pedir la Tarjeta Azul: es residencia y permiso de trabajo a la vez. El sueldo tiene que llegar a un mínimo atado al promedio croata, que baja si te recibiste hace menos de 3 años. Las profesiones reguladas necesitan el título reconocido. Se decide en 60 días y dura hasta 48 meses, o lo que dure el contrato más 3 meses.",
+   "el": {
+    "ar": [
+     "cond",
+     "Necesitás título (o experiencia en informática), un contrato con una empresa croata y el sueldo mínimo."
+    ],
+    "cit": [
+     "no",
+     "Con ciudadanía croata trabajás sin permiso."
+    ],
+    "res": [
+     "no",
+     "Con la residencia de diáspora ya trabajás sin permiso (art. 79.a)."
+    ]
+   },
+   "src": [
+    "narodne-novine.nn.hr",
+    "https://narodne-novine.nn.hr/clanci/sluzbeni/2025_03_40_545.html"
+   ],
+   "fuente": "oficial",
+   "abierta": true,
+   "verified_at": "2026-10-22"
+  },
+  {
+   "id": "oib",
+   "cat": "res",
+   "t": "Número de identificación personal croata (OIB)",
+   "t_hr": "Osobni identifikacijski broj (OIB)",
+   "who": "Administración Tributaria (Porezna uprava); si tramitás la residencia, la policía (MUP)",
+   "pts": [
+    [
+     15.98,
+     45.81
+    ]
+   ],
+   "next": "Todo el año",
+   "amount": "La fuente oficial no indica costo",
+   "what": "El OIB es el número que te identifica ante el Estado croata: lo vas a necesitar, por ejemplo, para comprar o heredar una propiedad y para muchos trámites. Si no sos ciudadano de la UE, desde Argentina no lo podés pedir por internet: lo pedís en persona en una oficina de Porezna uprava con el pasaporte y el formulario, o lo pide alguien con tu poder. Si tramitás la residencia, te lo asigna la policía.",
+   "el": {
+    "ar": [
+     "cond",
+     "Desde Argentina, por un apoderado en Croacia (con poder certificado si es un particular) o en persona cuando viajes."
+    ],
+    "cit": [
+     "cond",
+     "Si te inscribieron como ciudadano ya tenés OIB. Si obtuviste la ciudadanía antes de 2009 y no lo tenés, lo pedís con el certificado de ciudadanía."
+    ],
+    "res": [
+     "ok",
+     "Te lo asigna la policía al tramitar la residencia; si no lo tenés, lo pedís en Porezna uprava."
+    ]
+   },
+   "src": [
+    "porezna-uprava.gov.hr",
+    "https://porezna-uprava.gov.hr/en/foreign-person/7873"
+   ],
+   "fuente": "oficial",
+   "abierta": true,
+   "flag": "Lo de quienes obtuvieron la ciudadanía antes de 2009 está en https://porezna-uprava.gov.hr/en/assigning-pin-oib/7870. La fuente oficial no menciona el pedido por consulado: consultalo en la Embajada en Buenos Aires.",
+   "verified_at": "2026-10-22"
+  },
+  {
+   "id": "croaticum_ffzg",
+   "cat": "beca",
+   "t": "Cursos de croata para extranjeros en Zagreb (Croaticum)",
+   "t_hr": "Croaticum – Centar za hrvatski kao drugi i strani jezik (FFZG)",
+   "who": "Facultad de Humanidades y Ciencias Sociales de la Universidad de Zagreb (FFZG)",
+   "pts": [
+    [
+     15.98,
+     45.81
+    ]
+   ],
+   "next": "Escuela de invierno: 25/1 al 12/2/2027 · Semestre: 22/2 al 4/6/2027",
+   "amount": "Semestre: €850 · Escuelas de invierno, verano y otoño: €600 · Examen de certificación (un nivel): €140",
+   "what": "Cursos presenciales de croata para extranjeros en la Universidad de Zagreb. El semestre dura 15 semanas (225 horas de clase) y las escuelas de invierno, verano y otoño, 3 semanas. Te toman un examen para armar los grupos por nivel. No piden ciudadanía ni ascendencia; los libros no están incluidos.",
+   "el": {
+    "ar": [
+     "cond",
+     "Para el semestre de 15 semanas, averiguá si necesitás un permiso de estadía: Croaticum no ayuda con visas."
+    ],
+    "cit": [
+     "ok",
+     "Abierto a cualquiera; tenés que viajar a Zagreb."
+    ],
+    "res": [
+     "ok",
+     "Abierto a cualquiera."
+    ]
+   },
+   "src": [
+    "croaticum.ffzg.unizg.hr",
+    "https://croaticum.ffzg.unizg.hr/?page_id=1086"
+   ],
+   "fuente": "oficial",
+   "abierta": true,
+   "flag": "Te podés inscribir como máximo un mes antes de que empiece cada curso. Los precios están en https://croaticum.ffzg.unizg.hr/?page_id=1089.",
+   "verified_at": "2026-10-22"
+  },
+  {
+   "id": "rks_uniri_croata",
+   "cat": "beca",
+   "t": "Rijeka: cursos de croata para extranjeros (Riječka kroatistička škola)",
+   "t_hr": "Intenzivni tečaj hrvatskoga jezika i program HIKING",
+   "who": "Escuela de Croatística de Rijeka, Facultad de Humanidades de la Universidad de Rijeka",
+   "pts": [
+    [
+     14.44,
+     45.33
+    ]
+   ],
+   "next": "Cerrado. El intensivo tuvo llamados en febrero y septiembre de 2026 (cerraron el 27/2 y el 30/9) y HIKING cerró el 30/9/2026; los de 2027 todavía no salieron",
+   "amount": "Curso intensivo: €350 (60 horas, 4 ECTS) · HIKING: €600 (un cuatrimestre, 30 ECTS)",
+   "what": "Cursos presenciales de croata en la Facultad de Humanidades de Rijeka. El intensivo tiene 60 horas (dos clases por semana durante el cuatrimestre) y se dicta en nivel inicial, intermedio y avanzado. HIKING es un cuatrimestre completo para principiantes y arranca con al menos 10 alumnos. No piden ciudadanía ni ascendencia.",
+   "el": {
+    "ar": [
+     "cond",
+     "Es presencial en Rijeka durante el cuatrimestre: tenés que estar viviendo allá."
+    ],
+    "cit": [
+     "cond",
+     "Es presencial en Rijeka: tenés que estar viviendo allá."
+    ],
+    "res": [
+     "ok",
+     "Abierto a cualquiera."
+    ]
+   },
+   "src": [
+    "rks.uniri.hr",
+    "https://rks.uniri.hr/javni-poziv-za-upis-programa-cjelozivotnoga-ucenja-intenzivni-tecaj-hrvatskoga-jezika-3/"
+   ],
+   "fuente": "oficial",
+   "abierta": true,
+   "verified_at": "2026-10-22"
+  },
+  {
+   "id": "hit1_curso_online",
+   "cat": "beca",
+   "t": "Curso online de croata para principiantes de la Universidad de Zagreb (HiT-1)",
+   "t_hr": "Hrvatski internetski tečaj HiT-1",
+   "who": "Universidad de Zagreb, con la Hrvatska matica iseljenika y el centro informático Srce",
+   "pts": [
+    [
+     15.98,
+     45.81
+    ]
+   ],
+   "deadline": "2027-02-19T23:59:00+01:00",
+   "amount": "€550",
+   "what": "Curso de croata 100 % online para quien no sabe nada del idioma: 12 semanas, con dos clases en vivo por semana en horario fijo (24 horas en total). Las explicaciones están en croata, inglés y castellano. El próximo va del 1/3 al 23/5/2027: la inscripción y el pago cierran el 19/2/2027, y si dejás no se devuelve. Hay otro en septiembre (cierra el 3/9/2027).",
+   "el": {
+    "ar": [
+     "ok",
+     "Es online y no pide ciudadanía."
+    ],
+    "cit": [
+     "ok",
+     "Es online y abierto a cualquiera."
+    ],
+    "res": [
+     "ok",
+     "Es online y abierto a cualquiera."
+    ]
+   },
+   "src": [
+    "unizg.hr",
+    "https://www.unizg.hr/homepage/learn-croatian/e-learning-course-of-croatian/"
+   ],
+   "fuente": "oficial",
+   "abierta": true,
+   "verified_at": "2026-10-22"
+  },
+  {
+   "id": "hit1_beca_sudamerica",
+   "cat": "beca",
+   "t": "Beca para el curso online HiT-1, para descendientes que viven en Sudamérica",
+   "t_hr": "Natječaj za odabir stipendista za e-tečaj hrvatskoga jezika HiT-1",
+   "who": "Universidad de Zagreb",
+   "pts": [
+    [
+     15.98,
+     45.81
+    ]
+   ],
+   "next": "Sin fecha: el último llamado cerró el 6/2/2026",
+   "amount": "€550: el curso completo (hasta 10 becas)",
+   "what": "La Universidad de Zagreb paga el curso online HiT-1 completo a hasta 10 personas de origen croata que viven en Sudamérica. Hay que tener 18 años o más y el secundario terminado. Se presenta un currículum con los datos de tus antepasados croatas, una carta de motivación de al menos 250 palabras y el formulario. Valoran el inglés, la experiencia con clases online y la participación en la comunidad croata.",
+   "el": {
+    "ar": [
+     "cond",
+     "Tenés que ser de origen croata, tener 18 años o más y el secundario terminado."
+    ],
+    "cit": [
+     "ok",
+     "Si vivís en Sudamérica, tenés 18 años o más y el secundario terminado."
+    ],
+    "res": [
+     "no",
+     "Es para quien vive en Sudamérica."
+    ]
+   },
+   "src": [
+    "matis.hr",
+    "https://matis.hr/wp-content/uploads/2026/01/Odluka-o-raspisu-natjecaja-za-odabir-stipendista-za-e-tecaj-hrvatskoga-jezika-HiT-1-u-akademskoj-godini-2025.2026.pdf"
+   ],
+   "fuente": "oficial",
+   "abierta": false,
+   "flag": "El llamado 2026/27 todavía no salió y la fuente no dice cuándo sale.",
+   "verified_at": "2026-10-22"
+  },
+  {
+   "id": "hmi_mala_skola",
+   "cat": "beca",
+   "t": "Escuela de verano de croata para chicos de 9 a 14 años (Mala škola)",
+   "t_hr": "Mala škola hrvatskoga jezika i kulture",
+   "who": "Hrvatska matica iseljenika",
+   "pts": [
+    [
+     14.79,
+     45.13
+    ]
+   ],
+   "next": "Verano de 2027: la fecha se publica en otoño (en 2026 fue del 20 al 31/7)",
+   "amount": "€100 el programa y €473 el alojamiento con comidas, seguro de accidentes y traslado desde Zagreb (precios de 2026)",
+   "what": "Campamento de 12 días frente al mar, en Novi Vinodolski, para chicos de 9 a 14 años: talleres de croata en tres niveles, folklore, teatro y cine. Aceptan chicos de las comunidades croatas de todo el mundo y también chicos sin origen croata. Los llevan y los buscan en Zagreb, tienen que tener seguro de salud y se suspende si se anotan menos de 25. Hay descuento para hermanos.",
+   "el": {
+    "ar": [
+     "ok",
+     "Para chicos de 9 a 14 años, de cualquier origen."
+    ],
+    "cit": [
+     "ok",
+     "Para chicos de 9 a 14 años."
+    ],
+    "res": [
+     "cond",
+     "Está pensado para chicos de afuera: consultá a la Matica si aceptan chicos que ya viven en Croacia."
+    ]
+   },
+   "src": [
+    "matis.hr",
+    "https://matis.hr/programi/mala-skola-hrvatskoga-jezika-i-kulture-4/"
+   ],
+   "fuente": "oficial",
+   "abierta": true,
+   "flag": "Las fechas y los precios de 2027 todavía no están publicados; las cifras son de 2026.",
+   "verified_at": "2026-10-22"
+  },
+  {
+   "id": "hmi_folklore",
+   "cat": "beca",
+   "t": "Escuelas de folklore croata de invierno y de verano",
+   "t_hr": "Zimska i Ljetna škola hrvatskoga folklora",
+   "who": "Hrvatska matica iseljenika",
+   "pts": [
+    [
+     15.98,
+     45.81
+    ]
+   ],
+   "next": "Invierno de 2027: sin convocatoria todavía (la de 2026 salió en noviembre)",
+   "amount": "Inscripción: €90 (a los croatas de afuera se la pueden perdonar) más alojamiento con pensión completa, de €48 a €53 por día (2026)",
+   "what": "Diez días de danzas, tamburica o instrumentos tradicionales de una región de Croacia: se elige uno de los tres programas. La Matica les perdona la inscripción a los croatas que viven afuera si su asociación o comunidad lo pide por escrito. Los menores de 16 años van solo con su padre, madre o tutor.",
+   "el": {
+    "ar": [
+     "ok",
+     "No pide ciudadanía. Para que te perdonen la inscripción, tu asociación croata tiene que pedirlo."
+    ],
+    "cit": [
+     "ok",
+     "Tu asociación puede pedir que te perdonen la inscripción."
+    ],
+    "res": [
+     "ok",
+     "Abierto; el perdón de la inscripción es para quienes viven fuera de Croacia."
+    ]
+   },
+   "src": [
+    "matis.hr",
+    "https://matis.hr/programi/ljetna-skola-hrvatskoga-folklora-2/"
+   ],
+   "fuente": "oficial",
+   "abierta": true,
+   "flag": "Las sedes y fechas de 2027 no están publicadas. En 2026 fueron en Sisak (3 al 12/1) y en Zadar (4 al 13/8).",
+   "verified_at": "2026-10-22"
+  },
+  {
+   "id": "vaucer_croata",
+   "cat": "beca",
+   "t": "Curso de croata gratis con un voucher del Servicio de Empleo",
+   "t_hr": "Vaučer za učenje hrvatskog kao stranog jezika (HZZ)",
+   "who": "Servicio de Empleo de Croacia (HZZ)",
+   "pts": [
+    [
+     15.98,
+     45.81
+    ],
+    [
+     14.44,
+     45.33
+    ]
+   ],
+   "next": "Se pide en cualquier momento por la aplicación Moj vaučer, al menos 16 días antes de que empiece el curso",
+   "amount": "El HZZ paga el 100 % del curso a emigrantes croatas y sus descendientes, hasta 450 horas",
+   "what": "Si sos descendiente de croatas y ya vivís en Croacia con la residencia, el HZZ te paga entero un curso de croata en una escuela habilitada, hasta el nivel C1. Tenés que anotarte en el HZZ, como desempleado o como alguien que busca empleo, y pedirlo en Moj vaučer con tus claves de e-Građani. Cada persona puede usar un solo voucher: si usás este, no podés pedir otro. Si estás anotado como desempleado, además cobrás una ayuda por día de curso (€22 en 2026) y el viaje.",
+   "el": {
+    "ar": [
+     "no",
+     "Hay que vivir en Croacia con la residencia aprobada y estar anotado en el HZZ."
+    ],
+    "cit": [
+     "cond",
+     "Cuando vivas en Croacia y te anotes en el HZZ. El documento pide copia de la residencia: confirmá con el HZZ cómo se aplica a un ciudadano."
+    ],
+    "res": [
+     "ok",
+     "Con la residencia de diáspora: curso gratis hasta el nivel C1. Hay que anotarse en el HZZ y tener e-Građani."
+    ]
+   },
+   "src": [
+    "vauceri.hzz.hr",
+    "https://vauceri.hzz.hr/app/uploads/2026/10/Uvjeti-i-nacini-koristenja-sredstava-za-provedbu-obrazovanja-izmjene-i-dopune-21-07-2026.pdf"
+   ],
+   "fuente": "oficial",
+   "abierta": false,
+   "flag": "La ayuda diaria de €22 la fija una decisión del HZZ para 2026: https://vauceri.hzz.hr/app/uploads/2026/04/Odluka-o-visini-novcane-pomoci-i-troska-prijevoza-za-2026.pdf. Lo del nivel C1 sin importar si trabajás está en el documento; confirmá con el HZZ tu caso.",
+   "verified_at": "2026-10-22"
+  },
+  {
+   "id": "vaucer_formacion",
+   "cat": "trab",
+   "t": "Vouchers del Servicio de Empleo para cursos digitales y de oficio",
+   "t_hr": "Vaučeri za obrazovanje (HZZ)",
+   "who": "Servicio de Empleo de Croacia (HZZ)",
+   "pts": [
+    [
+     15.98,
+     45.81
+    ],
+    [
+     14.44,
+     45.33
+    ]
+   ],
+   "next": "Se pide por la aplicación Moj vaučer, al menos 16 días antes de que empiece el curso",
+   "amount": "El voucher cubre el curso hasta un tope; si el curso cuesta más, la diferencia la pagás vos",
+   "what": "El HZZ da vouchers para cursos de su catálogo (habilidades digitales, verdes y otras que pide el mercado) a personas desde los 15 años anotadas en el HZZ, trabajen o no. Quedan afuera estudiantes y jubilados, y cada persona tiene un solo voucher. Antes hacés un cuestionario de orientación y elegís la escuela. Si estás anotado como desempleado, además cobrás una ayuda por día de curso (€22 en 2026) y el viaje.",
+   "el": {
+    "ar": [
+     "no",
+     "Hay que vivir en Croacia y estar anotado en el HZZ."
+    ],
+    "cit": [
+     "cond",
+     "Cuando vivas en Croacia y te anotes en el HZZ."
+    ],
+    "res": [
+     "cond",
+     "Quedan afuera los extranjeros que trabajan con permiso de residencia y trabajo; la residencia de diáspora no lo necesita, pero confirmá con el HZZ que te lo dan."
+    ]
+   },
+   "src": [
+    "vauceri.hzz.hr",
+    "https://vauceri.hzz.hr/app/uploads/2026/10/Uvjeti-i-nacini-koristenja-sredstava-za-provedbu-obrazovanja-izmjene-i-dopune-21-07-2026.pdf"
+   ],
+   "fuente": "oficial",
+   "abierta": true,
+   "flag": "El documento no dice si la residencia temporal de diáspora entra: confirmarlo con el HZZ. La ayuda diaria la fija una decisión del HZZ: https://vauceri.hzz.hr/app/uploads/2026/04/Odluka-o-visini-novcane-pomoci-i-troska-prijevoza-za-2026.pdf.",
+   "verified_at": "2026-10-22"
+  },
+  {
+   "id": "hzz_formacion_puesto",
+   "cat": "trab",
+   "t": "Formación en una empresa para desempleados, con extras para quienes vuelven",
+   "t_hr": "Osposobljavanje na radnom mjestu (HZZ, mjera 6.1)",
+   "who": "Servicio de Empleo de Croacia (HZZ)",
+   "pts": [
+    [
+     15.98,
+     45.81
+    ],
+    [
+     14.44,
+     45.33
+    ]
+   ],
+   "next": "Medida vigente en 2026",
+   "amount": "Ayuda económica del HZZ mientras dura la formación. Si volviste de la emigración, te devuelven los aportes de salud (también hasta 12 meses pagados antes) y lo que gastaste en traducir y reconocer tus títulos",
+   "what": "Si estás anotado como desempleado en el HZZ, tu asesor te puede mandar a aprender un trabajo en una empresa, 40 horas por semana: hasta 4 meses para trabajos sin estudios terciarios y hasta 6 para los demás. Al terminar tenés que aceptar el trabajo que te ofrezcan. Si sos emigrante o descendiente que volvió (con ciudadanía o con la residencia de diáspora), te devuelven los aportes de salud y el costo de reconocer los títulos. Lo pide la empresa y el asesor elige a quién manda.",
+   "el": {
+    "ar": [
+     "no",
+     "Hay que vivir en Croacia y estar anotado como desempleado en el HZZ."
+    ],
+    "cit": [
+     "cond",
+     "Cuando vivas en Croacia y te anotes como desempleado; el asesor del HZZ decide si te manda."
+    ],
+    "res": [
+     "cond",
+     "Entrás como retornado con residencia temporal. Hay que anotarse como desempleado y que el asesor te elija; solo para trabajos hasta el nivel de tus estudios."
+    ]
+   },
+   "src": [
+    "mjere.hzz.hr",
+    "https://mjere.hzz.hr/app/uploads/2026/01/6.1.-Osposobljavanje-na-radnom-mjestu.pdf"
+   ],
+   "fuente": "oficial",
+   "abierta": true,
+   "flag": "El monto de la ayuda mensual depende de una decisión del HZZ que no está en este documento.",
+   "verified_at": "2026-10-22"
+  },
+  {
+   "id": "rijeka_bebes",
+   "cat": "loc",
+   "t": "Rijeka: pago por el nacimiento de un hijo",
+   "t_hr": "Novčana potpora za novorođenčad (Grad Rijeka)",
+   "who": "Municipalidad de Rijeka (Grad Rijeka)",
+   "pts": [
+    [
+     14.44,
+     45.33
+    ]
+   ],
+   "next": "Para chicos nacidos después del 1/1/2026: se pide al anotar el nacimiento o, si no usás e-Građani, en la Municipalidad dentro del año",
+   "amount": "€660 el primer hijo, €850 el segundo y €1.225 el tercero y siguientes (pago único, 2026)",
+   "what": "La Municipalidad de Rijeka da un pago único por cada hijo que nace o se adopta. Se pide al anotar el nacimiento, por e-Građani (servicio e-Novorođenče) o en el registro civil; quien no usa e-Građani lo pide en la Municipalidad dentro del año.",
+   "el": {
+    "ar": [
+     "no",
+     "Hay que vivir en Rijeka."
+    ],
+    "cit": [
+     "cond",
+     "Cuando tengas domicilio registrado (prebivalište) en Rijeka."
+    ],
+    "res": [
+     "no",
+     "Para extranjeros pide residencia permanente o de larga duración; la residencia temporal de diáspora no alcanza."
+    ]
+   },
+   "src": [
+    "rijeka.hr",
+    "https://www.rijeka.hr/wp-content/uploads/2026/01/Prijedlog-zakljucka-o-novcanoj-potpori-za-novorodencad-u-2026.-godini.pdf"
+   ],
+   "fuente": "oficial",
+   "abierta": false,
+   "verified_at": "2026-10-22"
+  },
+  {
+   "id": "rijeka_becas_estudiantes",
+   "cat": "loc",
+   "t": "Rijeka: becas para estudiantes secundarios y universitarios",
+   "t_hr": "Natječaj za dodjelu stipendija učenicima i studentima (Grad Rijeka)",
+   "who": "Municipalidad de Rijeka (Grad Rijeka)",
+   "pts": [
+    [
+     14.44,
+     45.33
+    ]
+   ],
+   "next": "El de 2026/27 todavía no salió; el anterior salió el 27/10/2025 y estuvo abierto 15 días",
+   "amount": "€150 por mes (secundaria) o €200 por mes (universidad), durante 10 meses",
+   "what": "73 becas mensuales por buen promedio, por situación económica o para tres carreras donde faltan profesionales: fonoaudiología, rehabilitación educativa y pedagogía social. Los universitarios tienen que ser alumnos regulares, tener hasta 30 años, no trabajar y no tener otra beca pública. Quien recibe la beca por carrera con falta de profesionales tiene que trabajar después en una institución pública de Rijeka al menos el mismo tiempo, o devolverla.",
+   "el": {
+    "ar": [
+     "no",
+     "Pide ciudadanía croata."
+    ],
+    "cit": [
+     "cond",
+     "Tenés que estudiar en Croacia como alumno regular. Para las becas por promedio o por situación económica, además, tener domicilio registrado (prebivalište) en Rijeka hace 3 meses o más."
+    ],
+    "res": [
+     "no",
+     "Pide ciudadanía croata en todas las categorías."
+    ]
+   },
+   "src": [
+    "rijeka.hr",
+    "https://www.rijeka.hr/wp-content/uploads/2025/10/Natjecaj-za-dodjelu-stipendija-ucenicima-i-studentima-za-skolsku-akademsku-godinu-2025-2026.pdf"
+   ],
+   "fuente": "oficial",
+   "abierta": false,
+   "flag": "Las condiciones son del llamado 2025/26; revisar cuando salga el de 2026/27.",
+   "verified_at": "2026-10-22"
+  },
+  {
+   "id": "pgz_becas_estudiantes",
+   "cat": "loc",
+   "t": "Primorje-Gorski Kotar: becas para alumnos destacados y carreras con falta de profesionales",
+   "t_hr": "Stipendije darovitim učenicima, darovitim studentima i studentima deficitarnih zanimanja (PGŽ)",
+   "who": "Gobierno de Primorje-Gorski Kotar (Primorsko-goranska županija)",
+   "pts": [
+    [
+     14.44,
+     45.33
+    ]
+   ],
+   "next": "Octubre o noviembre de 2026 (el llamado anterior salió el 15/10/2025 y estuvo abierto 8 días)",
+   "amount": "€160 por mes durante 10 meses",
+   "what": "Becas del gobierno regional para alumnos regulares de secundaria y de carreras universitarias (hasta el último año) con promedio de 4,50 o más, o de 3,00 o más en matemática, física, geodesia, biología, trabajo social, música o fonoaudiología. Hay que tener domicilio registrado en la región desde 6 meses antes del llamado, que dura solo 8 días.",
+   "el": {
+    "ar": [
+     "no",
+     "Pide domicilio registrado (prebivalište) en la región hace 6 meses o más."
+    ],
+    "cit": [
+     "cond",
+     "Tenés que tener domicilio registrado (prebivalište) en la región hace 6 meses o más y estudiar en Croacia como alumno regular."
+    ],
+    "res": [
+     "cond",
+     "El llamado no pide ciudadanía, pero sí prebivalište: confirmá con la región si la residencia temporal de diáspora cuenta."
+    ]
+   },
+   "src": [
+    "www2.pgz.hr",
+    "https://www2.pgz.hr/doc/programi/2025/Stipendije-darovitim-ucenicima/Natjecaj2025.doc"
+   ],
+   "fuente": "oficial",
+   "abierta": true,
+   "flag": "Las condiciones son del llamado 2025/26. Hay un reglamento nuevo en consulta pública desde el 25/9/2026 que puede cambiarlas (https://www.pgz.hr/savjetovanje_javnost/prijedlog-pravilnika-o-uvjetima-kriterijima-i-postupku-dodjele-stipendija-iz-proracuna-primorsko-goranske-zupanije/): revisar el llamado 2026/27.",
+   "verified_at": "2026-10-22"
+  },
+  {
+   "id": "rijeka_incubadoras",
+   "cat": "emp",
+   "t": "Rijeka: incubadoras de empresas de la ciudad (Torpedo, Proizvodni park Torpedo y Sinergana)",
+   "t_hr": "Poslovni inkubatori Grada Rijeke",
+   "who": "Municipalidad de Rijeka, a través de la Agencia de Desarrollo de Rijeka (RRA Porin)",
+   "pts": [
+    [
+     14.44,
+     45.33
+    ]
+   ],
+   "next": "Se entra por convocatoria de RRA Porin, que la publica en su web",
+   "amount": "Oficina a precio fijado por la ciudad, asesoramiento y capacitaciones (el alquiler no figura en el documento)",
+   "what": "Oficina, asesoramiento, ayuda para conseguir financiamiento, capacitaciones y contactos para empresas u oficios (obrt) con menos de 3 años de registro y sede en Rijeka (en Sinergana, también en el área metropolitana), o que la registren dentro de los 3 meses de ser aceptados. Se queda hasta 3 años (5 en Proizvodni park). Entrar es por concurso: una comisión puntúa la idea y su mercado. También hay incubación virtual, sin oficina.",
+   "el": {
+    "ar": [
+     "cond",
+     "Necesitás una empresa registrada en Croacia con sede en Rijeka y papeles para vivir y trabajar ahí."
+    ],
+    "cit": [
+     "cond",
+     "Necesitás una empresa u oficio registrado hace menos de 3 años con sede en Rijeka."
+    ],
+    "res": [
+     "cond",
+     "Necesitás una empresa u oficio registrado hace menos de 3 años con sede en Rijeka."
+    ]
+   },
+   "src": [
+    "rijeka.hr",
+    "https://www.rijeka.hr/wp-content/uploads/2026/05/Odluka-o-provedbi-programa-i-pruzanju-usluga-poslovnih-inkubatora-Grada-Rijeke-1.pdf"
+   ],
+   "fuente": "oficial",
+   "abierta": true,
+   "flag": "No pudimos leer la convocatoria vigente de RRA Porin: faltan la fecha y el precio del alquiler.",
+   "verified_at": "2026-10-22"
   }
  ],
  "schema": "docs/03_arquitectura.md",

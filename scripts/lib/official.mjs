@@ -29,10 +29,12 @@ export function isOfficial(url) {
   }
 }
 
-/** true si la URL apunta a un documento o página concreta, no a la portada del sitio. */
+/** true si la URL apunta a un documento o página concreta, no a la portada del sitio. Cuenta también una
+ * página de WordPress por parámetro (`/?page_id=1086`), como las de Croaticum. */
 export const isSpecific = (url) => {
   try {
-    return new URL(url).pathname.replace(/\/+$/, "") !== "";
+    const u = new URL(url);
+    return u.pathname.replace(/\/+$/, "") !== "" || /^\?(page_id|p)=\d+$/.test(u.search);
   } catch {
     return false;
   }
