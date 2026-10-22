@@ -32,7 +32,7 @@ El proyecto nace de la experiencia del autor como descendiente de un emigrante d
 **Kit:**
 - volante en castellano y croata con QR;
 - **modo offline:** `prototype/radar-offline.html`, un solo archivo que se abre con doble clic, sin internet, con todas las fichas (sin el chat con IA). Se regenera con `npm run offline` y el test falla si quedó viejo. Llevarlo en el celular y en un pendrive;
-- **video de respaldo** (`media/Radar_Croacia_demo.mp4`, 1 min, con subtítulos): perfiles, «abiertas a todos», mapa, ficha y chat con una respuesta real. Se graba con Playwright;
+- **video de respaldo:** el promo del Radar (60 s) en castellano, inglés y croata, con los subtítulos en la imagen y en `.srt`/`.vtt` (`media/Radar_Croacia_promo_{es,en,hr}_v1.mp4`, ZL-91, ZL-94 y ZL-97). Muestra el mapa, la web con «abiertas a todos» y una ficha con su fuente, el chat con una respuesta real, el WhatsApp con PERSONA y el robot diario. Las fuentes del video están en la Mac (`Zustro Labs/landing/fuentes/promos/`);
 - tarjetas;
 - pedir **certificado de asistencia**.
 
