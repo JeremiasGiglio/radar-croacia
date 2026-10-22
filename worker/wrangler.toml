@@ -39,7 +39,7 @@ id = "7149434b82dd4489bbea633f52b5435f"
 # Panel de atención (ZL-65), detrás de Cloudflare Access (app «Panel de atención», política «Solo Jeremías»).
 # Estas variables no son secretos: el dominio del equipo de Access y la audiencia (AUD) de la app.
 # Secretos (los carga Jeremías en Cloudflare, nunca en el repo): PANEL_EMAILS (quién entra) y AVISO_PARA (a quién avisar).
-# Sin PANEL_EMAILS el panel responde 503 y PERSONA sigue derivando a hola@zustrolabs.com (no silencia al bot).
+# Sin PANEL_EMAILS el panel responde 503 y PERSONA sigue derivando a contact@zustrolabs.com (no silencia al bot).
 # El destinatario del aviso tiene que estar verificado en Email Routing de zustrolabs.com.
 [[send_email]]
 name = "AVISO"

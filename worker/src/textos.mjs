@@ -41,7 +41,7 @@ export const TEXTOS_I18N = {
     idiomaCambiado: "Listo, seguimos en castellano. ¿En qué te ayudo?",
     personaSinMemoria: "Listo, le avisamos al equipo y te va a responder una persona en cuanto pueda.",
     personaMail:
-      "Para hablar con una persona del equipo, escribinos a hola@zustrolabs.com contando tu consulta y te respondemos. Mientras tanto, acá sigo para lo que necesites del Radar.",
+      "Para hablar con una persona del equipo, escribinos a contact@zustrolabs.com contando tu consulta y te respondemos. Mientras tanto, acá sigo para lo que necesites del Radar.",
     persona:
       "Listo, le avisamos al equipo y te va a responder una persona en cuanto pueda. Escribí acá tu consulta: para que el equipo la lea, guardamos lo que escribas desde ahora por 30 días (BORRAR lo borra antes). Mientras tanto, el asistente no contesta en esta charla.",
     borrado:
@@ -73,7 +73,7 @@ export const TEXTOS_I18N = {
     idiomaCambiado: "U redu, nastavljamo na hrvatskom. Kako ti mogu pomoći?",
     personaSinMemoria: "U redu, javili smo timu i netko će ti odgovoriti čim bude mogao.",
     personaMail:
-      "Za razgovor s nekim iz tima piši nam na hola@zustrolabs.com i opiši svoje pitanje pa ćemo ti odgovoriti. U međuvremenu sam tu za sve što trebaš o Radaru.",
+      "Za razgovor s nekim iz tima piši nam na contact@zustrolabs.com i opiši svoje pitanje pa ćemo ti odgovoriti. U međuvremenu sam tu za sve što trebaš o Radaru.",
     persona:
       "U redu, javili smo timu i netko će ti odgovoriti čim bude mogao. Napiši ovdje svoje pitanje: da bi ga tim mogao pročitati, ono što napišeš od sada čuvamo 30 dana (OBRIŠI to briše ranije). U međuvremenu asistent ne odgovara u ovom razgovoru.",
     borrado:
@@ -103,7 +103,7 @@ export const TEXTOS_I18N = {
     idiomaCambiado: "Done, we'll continue in English. How can I help?",
     personaSinMemoria: "Done, we've let the team know and a person will reply as soon as they can.",
     personaMail:
-      "To talk to someone on the team, email us at hola@zustrolabs.com with your question and we'll get back to you. Meanwhile, I'm here for anything about the Radar.",
+      "To talk to someone on the team, email us at contact@zustrolabs.com with your question and we'll get back to you. Meanwhile, I'm here for anything about the Radar.",
     persona:
       "Done, we've let the team know and a person will reply as soon as they can. Write your question here: so the team can read it, we keep what you write from now on for 30 days (DELETE erases it sooner). Meanwhile, the assistant won't reply in this chat.",
     borrado:
@@ -134,7 +134,7 @@ export const TEXTOS_I18N = {
     idiomaCambiado: "Pronto, seguimos em português. Como posso ajudar?",
     personaSinMemoria: "Pronto, avisamos a equipe e uma pessoa vai responder assim que puder.",
     personaMail:
-      "Para falar com alguém da equipe, escreva para hola@zustrolabs.com contando sua dúvida e respondemos. Enquanto isso, estou aqui para o que precisar do Radar.",
+      "Para falar com alguém da equipe, escreva para contact@zustrolabs.com contando sua dúvida e respondemos. Enquanto isso, estou aqui para o que precisar do Radar.",
     persona:
       "Pronto, avisamos a equipe e uma pessoa vai responder assim que puder. Escreva aqui sua dúvida: para que a equipe possa ler, guardamos o que você escrever a partir de agora por 30 dias (APAGAR apaga antes). Enquanto isso, o assistente não responde nesta conversa.",
     borrado:
