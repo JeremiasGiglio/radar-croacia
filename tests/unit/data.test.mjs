@@ -36,6 +36,8 @@ test("isOfficial / isSpecific", () => {
   assert.ok(!isOfficial("https://pgz.hr.example.com/"));
   assert.ok(!isSpecific("https://www.pgz.hr/"));
   assert.ok(isSpecific("https://www.pgz.hr/doc/jp.docx"));
+  assert.ok(isSpecific("https://croaticum.ffzg.unizg.hr/?page_id=1086"));
+  assert.ok(!isSpecific("https://croaticum.ffzg.unizg.hr/?utm=x"));
 });
 
 test("prototype/index.html (datos embebidos para el evento): PGŽ 2.7 con el mismo dato corregido", () => {
