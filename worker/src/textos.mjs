@@ -54,6 +54,9 @@ export const TEXTOS_I18N = {
     montos: "Para montos exactos, mirá la fuente oficial.",
     sinRespuesta:
       "No tengo una respuesta segura para eso. Si querés que te ayude una persona del equipo, escribí PERSONA.",
+    // Chat de la web: no hay PERSONA, se ofrece WhatsApp (ZL-106).
+    sinRespuestaWeb:
+      "No tengo una respuesta segura para eso. Si querés, escribinos por WhatsApp y te ayuda una persona.",
   },
   hr: {
     bienvenida:
@@ -82,6 +85,8 @@ export const TEXTOS_I18N = {
     fuente: "Službeni izvor",
     montos: "Za točne iznose pogledaj službeni izvor.",
     sinRespuesta: "Nemam pouzdan odgovor na to. Ako želiš da ti pomogne netko iz tima, napiši OSOBA.",
+    // Chat de la web: no hay PERSONA, se ofrece WhatsApp (ZL-106).
+    sinRespuestaWeb: "Nemam pouzdan odgovor na to. Ako želiš, piši nam na WhatsApp i pomoći će ti netko iz tima.",
   },
   en: {
     bienvenida:
@@ -110,6 +115,9 @@ export const TEXTOS_I18N = {
     fuente: "Official source",
     montos: "For exact amounts, check the official source.",
     sinRespuesta: "I don't have a reliable answer for that. If you'd like help from someone on the team, write PERSON.",
+    // Chat de la web: no hay PERSONA, se ofrece WhatsApp (ZL-106).
+    sinRespuestaWeb:
+      "I don't have a reliable answer for that. If you like, message us on WhatsApp and a person will help you.",
   },
   pt: {
     bienvenida:
@@ -138,6 +146,9 @@ export const TEXTOS_I18N = {
     fuente: "Fonte oficial",
     montos: "Para valores exatos, veja a fonte oficial.",
     sinRespuesta: "Não tenho uma resposta segura para isso. Se quiser ajuda de alguém da equipe, escreva PESSOA.",
+    // Chat de la web: no hay PERSONA, se ofrece WhatsApp (ZL-106).
+    sinRespuestaWeb:
+      "Não tenho uma resposta segura para isso. Se quiser, escreva para nós no WhatsApp e uma pessoa vai te ajudar.",
   },
 };
 
