@@ -69,10 +69,14 @@ El primer PR dejó el panel **apagado**: el subdominio existe, pero responde 503
 3. Copiá de la aplicación el **Application Audience (AUD) Tag** y de *Settings* el **team domain** (`<equipo>.cloudflareaccess.com`). No son secretos: pasáselos a Claude para el segundo PR.
 4. **Secretos** del Worker `radar-api` (Settings → Variables and Secrets, tipo *Secret*):
    - `PANEL_EMAILS`: tu Gmail (si algún día entra alguien más, separados por coma);
-   - `AVISO_PARA`: tu Gmail.
+   - `AVISO_PARA`: `contact@zustrolabs.com` (desde el 22/10/2026; antes, tu Gmail).
 5. **Email Routing** del subdominio `avisos.zustrolabs.com` activo (el aviso sale de `avisos@avisos.zustrolabs.com`: desde el 22/10/2026 el correo de `zustrolabs.com` lo maneja Zoho Mail, ZL-107) y, en *Destination addresses*, la casilla de `AVISO_PARA` **verificada**.
 6. Segundo PR (Claude): `WHATSAPP_PANEL = "1"`, `ACCESS_TEAM_DOMAIN` y `ACCESS_AUD` en `[vars]`.
 7. Prueba: desde tu celu escribí PERSONA al bot → te llega el mail → entrás al panel → respondés → «Devolver al bot» → el bot vuelve a contestar.
+8. Si el mail no llega: en *Observability* del Worker buscá la línea con `"que": "persona"`. `avisoError` dice por qué:
+   - `sin_config`: falta el secreto `AVISO_PARA` (o el binding `AVISO`);
+   - otro nombre (`Error`, `TypeError`…): Cloudflare no lo mandó; casi siempre, el destino no está verificado en *Destination addresses*.
+   El registro no guarda el número ni el texto; los registros automáticos de cada pedido están apagados porque la ruta del panel lleva el número.
 
 ## Dominios
 

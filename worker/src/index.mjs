@@ -132,8 +132,15 @@ async function processEvents(events, env, fetchImpl, deps) {
       const r = await handleEvent(ev, { db, store, ask, now, panel: conPanel, chats });
       for (const m of r.send) await sendMessage(env, m, fetchImpl);
       // Aviso por mail (sin número ni texto). Si falla, la charla igual queda en el panel.
-      let avisado;
-      if (r.notify) avisado = await Promise.resolve(notify()).catch(() => false);
+      // Si no sale, queda el motivo en el registro (sin datos personales): falta AVISO_PARA o el binding, o el error.
+      let avisado, avisoError;
+      if (r.notify) {
+        avisado = await Promise.resolve(notify()).catch((e) => {
+          avisoError = String((e && e.name) || "Error").slice(0, 40);
+          return false;
+        });
+        if (avisado === false && !avisoError) avisoError = "sin_config";
+      }
       // Solo métricas: ni el número ni el texto.
       console.log(
         JSON.stringify({
@@ -146,6 +153,7 @@ async function processEvents(events, env, fetchImpl, deps) {
           usage: r.usage,
           handoff: r.handoff,
           avisado,
+          avisoError,
         }),
       );
     } catch (e) {

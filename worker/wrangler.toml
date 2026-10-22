@@ -46,3 +46,8 @@ name = "AVISO"
 
 [observability]
 enabled = true
+
+# Solo los console.log del Worker (métricas sin datos personales). Sin los registros automáticos de cada
+# pedido: incluyen la ruta del panel, que lleva el número de WhatsApp de la persona (ZL-107).
+[observability.logs]
+invocation_logs = false
