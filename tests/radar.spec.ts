@@ -330,7 +330,7 @@ test.describe("Chat con IA", () => {
     await expect(page).toHaveURL(/privacidad\.html$/);
     await expect(page.locator("h1")).toHaveText("Privacidad");
     await expect(page.locator("#borrar")).toContainText("BORRAR");
-    await expect(page.locator("#borrar a[href^='mailto:hola@zustrolabs.com']")).toBeVisible();
+    await expect(page.locator("#borrar a[href^='mailto:contact@zustrolabs.com']")).toBeVisible();
     const wide = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth + 1);
     expect(wide).toBe(false);
   });

@@ -57,7 +57,7 @@ Topes: 200 mensajes por charla, 1.600 caracteres por mensaje guardado y 1.000 po
 
 ## Puesta en marcha (Jeremías)
 
-El primer PR dejó el panel **apagado**: el subdominio existe, pero responde 503 y PERSONA sigue derivando a hola@zustrolabs.com.
+El primer PR dejó el panel **apagado**: el subdominio existe, pero responde 503 y PERSONA sigue derivando a contact@zustrolabs.com.
 
 1. **Cloudflare → Zero Trust** (la primera vez pide un nombre de equipo y el plan; el *Free* alcanza, hasta 50 usuarios).
 2. **Access → Applications → Add an application → Self-hosted**:

@@ -387,7 +387,7 @@ test("handleEvent: sin panel de atención, PERSONA deriva al mail y el bot no se
   await handleEvent(ev({ kind: "perfil", perfil: "ar" }), { db: DB, store, ask: ask(calls) });
   const p = await handleEvent(ev({ text: "PERSONA" }), { db: DB, store, ask: ask(calls) });
   assert.equal(p.send[0].text.body, TEXTOS.personaMail);
-  assert.match(TEXTOS.personaMail, /hola@zustrolabs\.com/);
+  assert.match(TEXTOS.personaMail, /contact@zustrolabs\.com/);
   const next = await handleEvent(ev({ text: "¿Hay becas?" }), { db: DB, store, ask: ask(calls) });
   assert.equal(next.metric, "ia");
   assert.equal(store._data.get(FROM).humanoHasta, 0);
