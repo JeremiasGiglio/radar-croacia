@@ -115,7 +115,8 @@ export function mailAviso({ from, to, now = new Date() }) {
 /** Manda el aviso. EmailMessageImpl se inyecta en los tests (cloudflare:email solo existe en Workers). */
 export async function avisar(env, EmailMessageImpl, now = new Date()) {
   if (!env.AVISO?.send || !env.AVISO_PARA) return false;
-  const from = env.AVISO_DESDE || "avisos@zustrolabs.com";
+  // ZL-107: el correo de zustrolabs.com lo maneja Zoho; el envío de Cloudflare sale del subdominio avisos.
+  const from = env.AVISO_DESDE || "avisos@avisos.zustrolabs.com";
   const EmailMessage = EmailMessageImpl ?? (await import("cloudflare:email")).EmailMessage;
   await env.AVISO.send(new EmailMessage(from, env.AVISO_PARA, mailAviso({ from, to: env.AVISO_PARA, now })));
   return true;

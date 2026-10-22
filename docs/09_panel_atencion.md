@@ -70,7 +70,7 @@ El primer PR dejó el panel **apagado**: el subdominio existe, pero responde 503
 4. **Secretos** del Worker `radar-api` (Settings → Variables and Secrets, tipo *Secret*):
    - `PANEL_EMAILS`: tu Gmail (si algún día entra alguien más, separados por coma);
    - `AVISO_PARA`: tu Gmail.
-5. **Email Routing** de `zustrolabs.com` → *Destination addresses*: tu Gmail tiene que figurar como **verificado** (si `hola@` ya te llega, está).
+5. **Email Routing** del subdominio `avisos.zustrolabs.com` activo (el aviso sale de `avisos@avisos.zustrolabs.com`: desde el 22/10/2026 el correo de `zustrolabs.com` lo maneja Zoho Mail, ZL-107) y, en *Destination addresses*, la casilla de `AVISO_PARA` **verificada**.
 6. Segundo PR (Claude): `WHATSAPP_PANEL = "1"`, `ACCESS_TEAM_DOMAIN` y `ACCESS_AUD` en `[vars]`.
 7. Prueba: desde tu celu escribí PERSONA al bot → te llega el mail → entrás al panel → respondés → «Devolver al bot» → el bot vuelve a contestar.
 

@@ -364,8 +364,8 @@ test("API devolver: el bot vuelve a contestar y se le avisa a la persona", async
 // ── Aviso por mail ──
 
 test("mail de aviso: corto, con el link al panel y sin número ni texto de la persona", () => {
-  const m = mailAviso({ from: "avisos@zustrolabs.com", to: "yo@example.com", now: new Date(T0) });
-  assert.match(m, /^From: Radar Croacia <avisos@zustrolabs\.com>\r\n/);
+  const m = mailAviso({ from: "avisos@avisos.zustrolabs.com", to: "yo@example.com", now: new Date(T0) });
+  assert.match(m, /^From: Radar Croacia <avisos@avisos\.zustrolabs\.com>\r\n/);
   assert.match(m, /\r\nSubject: Radar Croacia: hay una charla esperando\r\n/);
   assert.match(m, /https:\/\/atencion\.zustrolabs\.com/);
   assert.doesNotMatch(m, /\d{8,}@|549\d|wamid/);
@@ -383,7 +383,7 @@ test("avisar: sin binding o sin destinatario no hace nada; con ambos manda un ma
   const env = { AVISO: { send: async (m) => void enviados.push(m) }, AVISO_PARA: "yo@example.com" };
   assert.equal(await avisar(env, FakeEmail, new Date(T0)), true);
   assert.equal(enviados[0].to, "yo@example.com");
-  assert.equal(enviados[0].from, "avisos@zustrolabs.com");
+  assert.equal(enviados[0].from, "avisos@avisos.zustrolabs.com");
 });
 
 // ── De punta a punta por el Worker ──
