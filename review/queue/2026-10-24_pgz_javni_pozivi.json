@@ -1,0 +1,60 @@
+{
+ "source": "pgz_javni_pozivi",
+ "name": "Condado de Primorje-Gorski Kotar (Primorsko-goranska županija): convocatorias y programas (Projekti i programi)",
+ "detected_at": "2026-10-24",
+ "added": [
+  {
+   "guid": "https://www.pgz.hr/?post_type=projekt_program&p=108571",
+   "title": "Natječaj za financiranje programa i projekata iz područja unapređenja kvalitete života hrvatskih branitelja iz Domovinskog rata i članova njihovih obitelji u 2026. godini",
+   "link": "https://www.pgz.hr/projekt_program/natjecaj-za-financiranje-programa-i-projekata-iz-podrucja-unapredenja-kvalitete-zivota-hrvatskih-branitelja-iz-domovinskog-rata-i-clanova-njihovih-obitelji-u-2026-godini/",
+   "published": "2026-10-23T07:53:33.000Z",
+   "summary": "Predmet Natječaja je prikupljanje prijava programa i projekata iz područja unapređenja kvalitete života hrvatskih branitelja iz Domovinskog rata i članova njihovih obitelji koji će se financirati sredstvima Primorsko-goranske županije tijekom 2026. godine."
+  }
+ ],
+ "changed": [],
+ "instrucciones": "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json.",
+ "borradores": [
+  {
+   "guid": "https://www.pgz.hr/?post_type=projekt_program&p=108571",
+   "link": "https://www.pgz.hr/projekt_program/natjecaj-za-financiranje-programa-i-projekata-iz-podrucja-unapredenja-kvalitete-zivota-hrvatskih-branitelja-iz-domovinskog-rata-i-clanova-njihovih-obitelji-u-2026-godini/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-10-24T09:37:53.151Z",
+   "text_from": "página oficial",
+   "relevante": true,
+   "motivo_relevancia": "Puede interesar a asociaciones con sede en Primorje-Gorski Kotar que trabajen por veteranos y sus familias, y a personas con residencia de diáspora en esa zona que integren una de esas asociaciones.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Fondos para programas de calidad de vida de veteranos y sus familias en Primorje-Gorski Kotar (2026)",
+    "t_hr": "Natječaj za financiranje programa i projekata iz područja unapređenja kvalitete života hrvatskih branitelja iz Domovinskog rata i članova njihovih obitelji u 2026. godini",
+    "who": "Primorsko-goranska županija (Condado de Primorje-Gorski Kotar)",
+    "amount": "€20.000,00 en total",
+    "what": "Convocatoria para financiar programas y proyectos que mejoren la calidad de vida de los veteranos de la Guerra de la Patria y de sus familias, y que fortalezcan a las asociaciones y organizaciones civiles que trabajan en su interés. Los proyectos deben ejecutarse dentro del condado de Primorje-Gorski Kotar. Cada postulante puede presentar solo un programa o proyecto.",
+    "el": {
+     "ar": [
+      "no",
+      "Solo pueden postularse asociaciones con sede en el condado de Primorje-Gorski Kotar, y una persona que vive en Argentina no cumple ese requisito."
+     ],
+     "cit": [
+      "no",
+      "Solo pueden postularse asociaciones con sede en el condado de Primorje-Gorski Kotar, y la ciudadanía no cambia ese requisito."
+     ],
+     "res": [
+      "cond",
+      "Podría postularse solo si su asociación tiene sede en el condado de Primorje-Gorski Kotar y cumple las condiciones de la documentación del concurso."
+     ]
+    },
+    "src": [
+     "pgz.hr",
+     "https://www.pgz.hr/projekt_program/natjecaj-za-financiranje-programa-i-projekata-iz-podrucja-unapredenja-kvalitete-zivota-hrvatskih-branitelja-iz-domovinskog-rata-i-clanova-njihovih-obitelji-u-2026-godini/"
+    ],
+    "ai_generated": true,
+    "deadline": "2026-11-22T23:59:00+01:00",
+    "flag": "La fuente no incluye la natječajna dokumentacija con las condiciones completas; hay que verificar los requisitos de elegibilidad de las asociaciones en el sistema SOM Natječaji. Confirmar si una asociación de la diáspora con sede en el condado podría postularse o si el concurso queda limitado a organizaciones de veteranos. El aviso dice que el plazo es de 30 días desde la publicación, y las fechas explícitas coinciden con ese cálculo (23 de octubre al 22 de noviembre de 2026). El texto de la fuente incluye una instrucción de edición de la interfaz del sitio ('prebacite prikaz bloka u edit mod'); se ignoró por no ser parte del contenido del llamado. Las noticias relacionadas de la página (homenajes, reuniones y un monumento) no son convocatorias y no se usaron para la ficha."
+   },
+   "citas": {
+    "amount": "Ukupan iznos financijskih sredstava raspoloživih za dodjelu iznosi 20.000,00 eura.",
+    "deadline": "od 23. listopada 2026. godine do 22. studenoga 2026. godine"
+   }
+  }
+ ]
+}

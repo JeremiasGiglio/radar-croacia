@@ -1,0 +1,61 @@
+{
+ "source": "rijeka_javni_pozivi",
+ "name": "Ciudad de Rijeka (Grad Rijeka): convocatorias públicas (Javni pozivi)",
+ "detected_at": "2026-10-24",
+ "added": [
+  {
+   "guid": "wp:316896",
+   "title": "Javni poziv za utvrđivanje programa kulture od interesa za Grad Rijeku iz djelatnosti kulture, umjetnosti i transverzalnih područja za 2027. godinu",
+   "link": "https://www.rijeka.hr/javni-poziv-za-utvrdivanje-programa-kulture-od-interesa-za-grad-rijeku-iz-djelatnosti-kulture-umjetnosti-i-transverzalnih-podrucja-za-2027-godinu/",
+   "published": "2026-10-21T07:53:08.000Z",
+   "updated": "2026-10-21T07:58:44.000Z",
+   "summary": "Grad Rijeka, Upravni odjel za kulturu i kreativni razvoj objavio je Javni poziv za utvrđivanje programa kulture od interesa za Grad Rijeku iz djelatnosti kulture, umjetnosti i transverzalnih područja za 2027. godinu"
+  }
+ ],
+ "changed": [],
+ "instrucciones": "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json.",
+ "borradores": [
+  {
+   "guid": "wp:316896",
+   "link": "https://www.rijeka.hr/javni-poziv-za-utvrdivanje-programa-kulture-od-interesa-za-grad-rijeku-iz-djelatnosti-kulture-umjetnosti-i-transverzalnih-podrucja-za-2027-godinu/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-10-24T09:38:13.793Z",
+   "text_from": "página oficial",
+   "relevante": true,
+   "motivo_relevancia": "Puede ser aprovechada por asociaciones o personas físicas y jurídicas que quieran presentar programas culturales en Rijeka, siempre que cumplan las condiciones de la convocatoria, que la fuente no detalla.",
+   "ficha": {
+    "cat": "loc",
+    "t": "Convocatoria de programas culturales de interés para la ciudad de Rijeka 2027",
+    "t_hr": "Javni poziv za utvrđivanje programa kulture od interesa za Grad Rijeku iz djelatnosti kulture, umjetnosti i transverzalnih područja za 2027. godinu",
+    "who": "Ciudad de Rijeka (Grad Rijeka), Departamento Administrativo de Cultura y Desarrollo Creativo (Upravni odjel za kulturu i kreativni razvoj)",
+    "amount": "",
+    "what": "Es una convocatoria pública para elegir los programas de cultura, arte y áreas transversales que la ciudad de Rijeka cofinanciará con su presupuesto en 2027. Pueden postularse personas físicas, artistas, asociaciones, organizaciones artísticas, empresas e instituciones, en áreas como patrimonio, música, teatro, danza, audiovisual, literatura, cultura comunitaria y programas para jóvenes. Las solicitudes se presentan solo en formato electrónico, a través de los formularios publicados en rijeka.hr, con la documentación indicada en las Instrucciones para postulantes.",
+    "el": {
+     "ar": [
+      "cond",
+      "La fuente no dice si exige sede o inscripción en Rijeka, y eso podría excluir a quien vive en Argentina."
+     ],
+     "cit": [
+      "cond",
+      "Con ciudadanía croata o no, la elegibilidad depende de requisitos de sede o registro que la fuente no especifica."
+     ],
+     "res": [
+      "cond",
+      "Una persona con residencia de diáspora podría postularse como persona física, pero hay que confirmar si la convocatoria exige vivir o registrarse en Rijeka."
+     ]
+    },
+    "src": [
+     "rijeka.hr",
+     "https://www.rijeka.hr/javni-poziv-za-utvrdivanje-programa-kulture-od-interesa-za-grad-rijeku-iz-djelatnosti-kulture-umjetnosti-i-transverzalnih-podrucja-za-2027-godinu/"
+    ],
+    "ai_generated": true,
+    "deadline": "2026-11-23T23:59:00+01:00",
+    "flag": "Confirmar en las Upute za prijavitelje si las personas físicas o asociaciones sin sede en Rijeka pueden postularse. La fuente no informa montos disponibles ni límites por programa; revisar la documentación del llamado o las Službene novine Grada Rijeke. Confirmar la lista de documentación obligatoria, que está en las Instrucciones para postulantes y no en la página. El plazo es hasta el 23 de noviembre de 2026 a las 16:00, según la fuente; conviene verificar la hora local antes de publicar. La página no contiene instrucciones para el agente; no se detectó ninguna orden incrustada."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": "Rok za podnošenje prijedloga programa traje od dana objave 21. listopada do 23. studenoga 2026. godine, najkasnije do 16,00 sati."
+   }
+  }
+ ]
+}

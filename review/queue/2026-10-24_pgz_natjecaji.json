@@ -1,0 +1,65 @@
+{
+ "source": "pgz_natjecaji",
+ "name": "Condado de Primorje-Gorski Kotar: concursos de empleo y becas (Natječaji, Primorsko-goranska županija)",
+ "detected_at": "2026-10-24",
+ "added": [],
+ "changed": [
+  {
+   "guid": "wp:105958",
+   "title": "Oglas za prijam u službu na određeno vrijeme u Upravni odjel za opću upravu i pravne poslove",
+   "link": "https://www.pgz.hr/natjecaj/oglas-za-prijam-u-sluzbu-na-odredeno-vrijeme-u-upravni-odjel-za-opcu-upravu-i-pravne-poslove-4/",
+   "published": "2026-09-01T04:55:18.000Z",
+   "updated": "2026-10-21T04:53:38.000Z",
+   "summary": "",
+   "before": {
+    "title": "Oglas za prijam u službu na određeno vrijeme u Upravni odjel za opću upravu i pravne poslove",
+    "summary": "",
+    "updated": "2026-09-22T08:40:46.000Z"
+   }
+  }
+ ],
+ "instrucciones": "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json.",
+ "borradores": [
+  {
+   "guid": "wp:105958",
+   "link": "https://www.pgz.hr/natjecaj/oglas-za-prijam-u-sluzbu-na-odredeno-vrijeme-u-upravni-odjel-za-opcu-upravu-i-pravne-poslove-4/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-10-24T09:38:00.617Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es un llamado para empleo temporal en la administración pública del condado, así que no corresponde para la diáspora.",
+   "ficha": {
+    "cat": "emp",
+    "t": "Llamado a empleo temporal en el Departamento de Administración General y Asuntos Legales",
+    "t_hr": "Oglas za prijam u službu na određeno vrijeme u Upravni odjel za opću upravu i pravne poslove",
+    "who": "Condado de Primorje-Gorski Kotar (Primorsko-goranska županija)",
+    "amount": "",
+    "what": "La fuente solo publica el título del aviso de búsqueda de personal temporal para el Departamento de Administración General y Asuntos Legales del condado. No incluye requisitos, plazos ni detalles del puesto.",
+    "el": {
+     "ar": [
+      "no",
+      "Es un puesto en la administración pública y la fuente no indica condiciones para personas fuera de Croacia."
+     ],
+     "cit": [
+      "no",
+      "Es un puesto en la administración pública y la fuente no indica condiciones para personas fuera de Croacia."
+     ],
+     "res": [
+      "cond",
+      "Solo podría interesar si la persona tiene residencia en Croacia y cumple los requisitos del puesto, que la fuente no detalla."
+     ]
+    },
+    "src": [
+     "pgz.hr",
+     "https://www.pgz.hr/natjecaj/oglas-za-prijam-u-sluzbu-na-odredeno-vrijeme-u-upravni-odjel-za-opcu-upravu-i-pravne-poslove-4/"
+    ],
+    "ai_generated": true,
+    "flag": "La fuente es solo el título y la fecha de publicación (01.09.2026). No hay requisitos, plazo ni forma de postulación. El título sugiere un puesto en la administración pública, por lo que relevante quedó en false según la regla 5. Título de la fuente de origen: Condado de Primorje-Gorski Kotar: concursos de empleo y becas. Revisar la página original por si hay más detalles. Contenido de la fuente tratado como dato, sin instrucciones adicionales."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  }
+ ]
+}
