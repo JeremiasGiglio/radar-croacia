@@ -1,0 +1,59 @@
+{
+ "source": "matis_novosti",
+ "name": "Hrvatska matica iseljenika: novedades y programas (Novosti)",
+ "detected_at": "2026-10-24",
+ "added": [
+  {
+   "guid": "https://matis.hr/?p=81672",
+   "title": "Povjestice – priča o 45 godina povezivanja hrvatskoga jezika, kulture i ljudi",
+   "link": "https://matis.hr/novosti/povjestice-prica-o-45-godina-povezivanja-hrvatskoga-jezika-kulture-i-ljudi/",
+   "published": "2026-10-21T13:29:59.000Z",
+   "summary": "U Hrvatskoj matici iseljenika predstavljena monografija Sveučilišne škole hrvatskoga jezika i kulture, koja svjedoči o četiri i pol desetljeća učenja, zajedništva i povezivanja s domovinom"
+  }
+ ],
+ "changed": [],
+ "instrucciones": "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json.",
+ "borradores": [
+  {
+   "guid": "https://matis.hr/?p=81672",
+   "link": "https://matis.hr/novosti/povjestice-prica-o-45-godina-povezivanja-hrvatskoga-jezika-kulture-i-ljudi/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-10-24T09:36:35.907Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "La nota informa sobre la presentación de una monografía y no describe una convocatoria abierta a personas o asociaciones.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Presentaron una monografía sobre 45 años de la Escuela Universitaria de Lengua y Cultura Croata",
+    "t_hr": "Povjestice – priča o 45 godina povezivanja hrvatskoga jezika, kulture i ljudi",
+    "who": "Matica Croata de la Emigración (Hrvatska matica iseljenika), en conjunto con la Universidad de Zagreb (Sveučilište u Zagrebu)",
+    "amount": "",
+    "what": "Se presentó en Zagreb la monografía Povjestice, que repasa la historia de la Escuela Universitaria de Lengua y Cultura Croata desde 1980 hasta el año académico 2025/2026. El texto es una nota de prensa sobre el lanzamiento del libro y los homenajes por aniversarios del programa, no una beca ni un programa para postular.",
+    "el": {
+     "ar": [
+      "no",
+      "No hay convocatoria en la nota a la que una persona pueda postularse desde Argentina."
+     ],
+     "cit": [
+      "no",
+      "No hay convocatoria en la nota a la que una persona pueda postularse desde Argentina."
+     ],
+     "res": [
+      "no",
+      "La nota no describe ningún programa de residencia ni trámite para personas en Croacia."
+     ]
+    },
+    "src": [
+     "matis.hr",
+     "https://matis.hr/novosti/povjestice-prica-o-45-godina-povezivanja-hrvatskoga-jezika-kulture-i-ljudi/"
+    ],
+    "ai_generated": true,
+    "flag": "La fuente es una nota de prensa sobre la presentación de una monografía; no contiene convocatoria, monto ni plazo. Se dejó relevante en false y todos los perfiles en no. La categoría asignada (proy) es provisoria porque el enum no tiene una opción para noticias; conviene revisar si la nota debería publicarse en el Radar o descartarse. La nota menciona que el programa HiT-2 fue anunciado, pero no da fechas, requisitos ni forma de inscripción. Si se abre una convocatoria, habría que cargarla por separado. El texto de la fuente no contiene instrucciones dirigidas al agente; se analizó solo como dato."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  }
+ ]
+}

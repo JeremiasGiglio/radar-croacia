@@ -4,6 +4,20 @@
  "url": "https://udruge.gov.hr/rss.aspx?ID=8",
  "items": [
   {
+   "guid": "https://udruge.gov.hr/vijesti/oecd-globalni-forum-building-trust-and-reinforcing-democracy-12-14-listopada-2026-u-parizu/6363",
+   "title": "OECD Globalni forum „Building Trust and Reinforcing Democracy“, 12. – 14. listopada 2026. u Parizu",
+   "link": "https://udruge.gov.hr/vijesti/oecd-globalni-forum-building-trust-and-reinforcing-democracy-12-14-listopada-2026-u-parizu/6363",
+   "published": "2026-10-23T12:53:54.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "https://udruge.gov.hr/vijesti/6362",
+   "title": "Objavljena Odluka o financiranju u okviru Poziva „Doprinos organizacija civilnoga društva razvoju lokalnih zajednica putem mikroprojekata\" unutar Programa Civilno društvo, Hrvatsko-švicarskog programa suradnje, 2. Švicarski doprinos",
+   "link": "https://udruge.gov.hr/vijesti/6362",
+   "published": "2026-10-22T07:37:23.000Z",
+   "summary": "Temeljem Odluke o financiranju ugovorit će se 11 projekta."
+  },
+  {
    "guid": "https://udruge.gov.hr/vijesti/rezultati-provedbe-cerv-programa-u-2025-godini/6359",
    "title": "Rezultati provedbe CERV programa u 2025. godini",
    "link": "https://udruge.gov.hr/vijesti/rezultati-provedbe-cerv-programa-u-2025-godini/6359",
@@ -128,20 +142,6 @@
    "link": "https://udruge.gov.hr/vijesti/u-okviru-poziva-osnazivanje-doprinosa-organizacija-civilnoga-drustva-drustveno-korisnom-ucenju-je-objavljena-azurirana-lista-projektnih-prijedloga-koji-nisu-ostvarili-minimalan-broj-bodova/6322",
    "published": "2026-07-07T08:52:25.000Z",
    "summary": "U okviru Poziva &bdquo;\"Osnaživanje doprinosa organizacija civilnoga društva društveno korisnom učenju&ldquo; je objavljena ažurirana lista projektnih prijedloga koji nisu ostvarili minimalan broj bodova."
-  },
-  {
-   "guid": "https://udruge.gov.hr/vijesti/usvojena-uredba-o-kriterijima-za-utvrdjivanje-korisnika-i-nacinu-raspodjele-dijela-prihoda-od-igara-na-srecu-za-2026/6319",
-   "title": "Usvojena Uredba o kriterijima za utvrđivanje korisnika i načinu raspodjele dijela prihoda od igara na sreću za 2026.",
-   "link": "https://udruge.gov.hr/vijesti/usvojena-uredba-o-kriterijima-za-utvrdjivanje-korisnika-i-nacinu-raspodjele-dijela-prihoda-od-igara-na-srecu-za-2026/6319",
-   "published": "2026-06-26T11:47:46.000Z",
-   "summary": "Vlada Republike Hrvatske, na 178. sjednici održanoj 26. lipnja 2026., usvojila je Uredbu o kriterijima za utvrđivanje korisnika i načinu raspodjele dijela prihoda od igara na sreću za 2026. godinu."
-  },
-  {
-   "guid": "https://udruge.gov.hr/vijesti/ured-za-udruge-je-donio-drugu-odluku-o-financiranju-u-okviru-poziva-osnazivanje-doprinosa-organizacija-civilnoga-drustva-odgoju-i-obrazovanju-za-odrzivi-razvoj/6318",
-   "title": "Ured za udruge je donio drugu Odluku o financiranju u okviru Poziva \"Osnaživanje doprinosa organizacija civilnoga društva odgoju i obrazovanju za održivi razvoj\"",
-   "link": "https://udruge.gov.hr/vijesti/ured-za-udruge-je-donio-drugu-odluku-o-financiranju-u-okviru-poziva-osnazivanje-doprinosa-organizacija-civilnoga-drustva-odgoju-i-obrazovanju-za-odrzivi-razvoj/6318",
-   "published": "2026-06-25T07:50:45.000Z",
-   "summary": "Temeljem 2. Odluke o financiranju ugovorit će se dva projekta."
   }
  ]
 }

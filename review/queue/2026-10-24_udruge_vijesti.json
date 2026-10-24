@@ -1,0 +1,107 @@
+{
+ "source": "udruge_vijesti",
+ "name": "Oficina para las Asociaciones del Gobierno (Ured za udruge): novedades y convocatorias (Vijesti)",
+ "detected_at": "2026-10-24",
+ "added": [
+  {
+   "guid": "https://udruge.gov.hr/vijesti/oecd-globalni-forum-building-trust-and-reinforcing-democracy-12-14-listopada-2026-u-parizu/6363",
+   "title": "OECD Globalni forum „Building Trust and Reinforcing Democracy“, 12. – 14. listopada 2026. u Parizu",
+   "link": "https://udruge.gov.hr/vijesti/oecd-globalni-forum-building-trust-and-reinforcing-democracy-12-14-listopada-2026-u-parizu/6363",
+   "published": "2026-10-23T12:53:54.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "https://udruge.gov.hr/vijesti/6362",
+   "title": "Objavljena Odluka o financiranju u okviru Poziva „Doprinos organizacija civilnoga društva razvoju lokalnih zajednica putem mikroprojekata\" unutar Programa Civilno društvo, Hrvatsko-švicarskog programa suradnje, 2. Švicarski doprinos",
+   "link": "https://udruge.gov.hr/vijesti/6362",
+   "published": "2026-10-22T07:37:23.000Z",
+   "summary": "Temeljem Odluke o financiranju ugovorit će se 11 projekta."
+  }
+ ],
+ "changed": [],
+ "instrucciones": "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json.",
+ "borradores": [
+  {
+   "guid": "https://udruge.gov.hr/vijesti/oecd-globalni-forum-building-trust-and-reinforcing-democracy-12-14-listopada-2026-u-parizu/6363",
+   "link": "https://udruge.gov.hr/vijesti/oecd-globalni-forum-building-trust-and-reinforcing-democracy-12-14-listopada-2026-u-parizu/6363",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-10-24T09:38:22.056Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es una noticia sobre un foro que ya se realizó, no una convocatoria abierta que una persona o asociación pueda aprovechar.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Foro de la OCDE sobre confianza y democracia en París",
+    "t_hr": "OECD Globalni forum „Building Trust and Reinforcing Democracy“, 12. – 14. listopada 2026. u Parizu",
+    "who": "Oficina para las Asociaciones del Gobierno (Ured za udruge)",
+    "amount": "",
+    "what": "La oficina informa que funcionarios suyos y del Ministerio de Justicia, Administración y Transformación Digital participaron en reuniones organizadas por la OCDE en París del 12 al 14 de octubre de 2026. Se trató del Foro Global sobre confianza y fortalecimiento de la democracia y de una reunión del Grupo de Trabajo de la OCDE sobre gobierno abierto. Los temas incluyeron sociedad civil, impacto de la inteligencia artificial en la democracia y la administración pública, y resiliencia democrática.",
+    "el": {
+     "ar": [
+      "no",
+      "No hay convocatoria ni plazo de postulación en la fuente."
+     ],
+     "cit": [
+      "no",
+      "No hay convocatoria ni plazo de postulación en la fuente."
+     ],
+     "res": [
+      "no",
+      "No hay convocatoria ni plazo de postulación en la fuente."
+     ]
+    },
+    "src": [
+     "udruge.gov.hr",
+     "https://udruge.gov.hr/vijesti/oecd-globalni-forum-building-trust-and-reinforcing-democracy-12-14-listopada-2026-u-parizu/6363"
+    ],
+    "ai_generated": true,
+    "flag": "La fuente es una noticia sobre un evento ya realizado, no un llamado abierto; no se incluye como oportunidad. La fecha de publicación del aviso (2026-10-23) coincide con la indicada en la fuente. El texto de la fuente no contenía instrucciones dirigidas al sistema; se analizó solo como dato."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  },
+  {
+   "guid": "https://udruge.gov.hr/vijesti/6362",
+   "link": "https://udruge.gov.hr/vijesti/6362",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-10-24T09:38:33.621Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es el resultado de una convocatoria ya decidida, dirigida a organizaciones civiles de Croacia, y la fuente no abre nuevas postulaciones para personas o asociaciones de la diáspora.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Resultados: financiación de 11 microproyectos de organizaciones civiles en comunidades locales",
+    "t_hr": "Objavljena Odluka o financiranju u okviru Poziva „Doprinos organizacija civilnoga društva razvoju lokalnih zajednica putem mikroprojekata\" unutar Programa Civilno društvo, Hrvatsko-švicarskog programa suradnje, 2. Švicarski doprinos",
+    "who": "Oficina para las Asociaciones del Gobierno de la República de Croacia (Ured za udruge Vlade RH)",
+    "amount": "€1.147.250,06 en total para 11 proyectos (monto total de los proyectos seleccionados, no por proyecto)",
+    "what": "Se publicó la Decisión de financiación de la primera ronda de la convocatoria para microproyectos de organizaciones de la sociedad civil en comunidades locales, dentro del Programa Civil Society del Programa de Cooperación Croata-Suizo. Según la nota, se van a contratar 11 proyectos con un total de 1.147.250,06 EUR, sobre un presupuesto de la convocatoria de 1.650.000,00 EUR. La fuente no ofrece una nueva fecha ni un formulario para presentarse.",
+    "el": {
+     "ar": [
+      "no",
+      "La convocatoria ya tiene decisión de financiación y la fuente no abre postulaciones para personas que viven en Argentina."
+     ],
+     "cit": [
+      "no",
+      "La convocatoria ya tiene decisión de financiación y la fuente no abre postulaciones para ciudadanos que viven en Argentina."
+     ],
+     "res": [
+      "no",
+      "Está dirigida a organizaciones de la sociedad civil y la fuente no menciona residencia de diáspora ni postulaciones individuales."
+     ]
+    },
+    "src": [
+     "udruge.gov.hr",
+     "https://udruge.gov.hr/vijesti/6362"
+    ],
+    "ai_generated": true,
+    "flag": "La nota menciona un PDF «1. Odluka o financiranju (264kb)» que no fue analizado; conviene revisarlo para confirmar los proyectos seleccionados y los montos por proyecto. La fuente indica un total de 11 proyectos por 1.147.250,06 EUR y un presupuesto de convocatoria de 1.650.000,00 EUR; el monto por proyecto no surge del texto. Confirmar si la convocatoria tiene rondas posteriores que sí abran postulaciones; la fuente solo habla de la primera Odluka. No se encontraron instrucciones dentro de la fuente que haya que ignorar."
+   },
+   "citas": {
+    "amount": "Temeljem Odluke o financiranju ugovorit će se 11 projekta ukupne vrijednosti 1.147.250,06 EUR.",
+    "deadline": null
+   }
+  }
+ ]
+}
