@@ -1,0 +1,111 @@
+{
+ "source": "rijeka_javni_pozivi",
+ "name": "Ciudad de Rijeka (Grad Rijeka): convocatorias públicas (Javni pozivi)",
+ "detected_at": "2026-10-26",
+ "added": [
+  {
+   "guid": "wp:317448",
+   "title": "Javni poziv za podnošenje prijava za sufinanciranje projekata učeničkih zadruga u školskoj godini 2026./2027.",
+   "link": "https://www.rijeka.hr/javni-poziv-za-podnosenje-prijava-za-sufinanciranje-projekata-ucenickih-zadruga-u-skolskoj-godini-2026-2027/",
+   "published": "2026-10-26T10:05:11.000Z",
+   "updated": "2026-10-26T10:08:33.000Z",
+   "summary": "Grad Rijeka dodjeljuje bespovratna sredstva za rad učeničkih zadruga u školskoj godini 2026./2027. Za nabavu opreme i materijala moguće je ostvariti do 398 eura, a za troškove predavača iz područja produkt dizajna do 199 eura. Prijave su otvorene do 6. studenoga, odnosno do iskorištavanja raspoloživih proračunskih sredstava."
+  },
+  {
+   "guid": "wp:316896",
+   "title": "Javni poziv za utvrđivanje programa kulture od interesa za Grad Rijeku iz djelatnosti kulture, umjetnosti i transverzalnih područja za 2027. godinu",
+   "link": "https://www.rijeka.hr/javni-poziv-za-utvrdivanje-programa-kulture-od-interesa-za-grad-rijeku-iz-djelatnosti-kulture-umjetnosti-i-transverzalnih-podrucja-za-2027-godinu/",
+   "published": "2026-10-21T07:53:08.000Z",
+   "updated": "2026-10-21T07:58:44.000Z",
+   "summary": "Grad Rijeka, Upravni odjel za kulturu i kreativni razvoj objavio je Javni poziv za utvrđivanje programa kulture od interesa za Grad Rijeku iz djelatnosti kulture, umjetnosti i transverzalnih područja za 2027. godinu"
+  }
+ ],
+ "changed": [],
+ "instrucciones": "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json.",
+ "borradores": [
+  {
+   "guid": "wp:317448",
+   "link": "https://www.rijeka.hr/javni-poziv-za-podnosenje-prijava-za-sufinanciranje-projekata-ucenickih-zadruga-u-skolskoj-godini-2026-2027/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-10-26T11:14:01.019Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Está dirigida a cooperativas escolares de escuelas primarias de Rijeka, no a personas ni asociaciones de la diáspora, salvo que alguien participe desde un colegio de esa ciudad.",
+   "ficha": {
+    "cat": "emp",
+    "t": "Fondos para cooperativas escolares de primaria en Rijeka (curso 2026/2027)",
+    "t_hr": "Javni poziv za podnošenje prijava za sufinanciranje projekata učeničkih zadruga u školskoj godini 2026./2027.",
+    "who": "Ciudad de Rijeka (Grad Rijeka), Upravni odjel za sport, poduzetništvo i turizam",
+    "amount": "Hasta 398 euros para equipamiento y materiales, y hasta 199 euros para docentes de diseño de producto. La fuente no aclara si estos montos son por proyecto o por escuela.",
+    "what": "La Ciudad de Rijeka da fondos no reembolsables para que las cooperativas escolares de las primarias de la ciudad compren equipamiento y materiales, y para pagar docentes o talleres de diseño de producto. El objetivo es desarrollar creatividad, habilidades prácticas y cultura emprendedora desde la escuela. Las solicitudes se hacen en línea a través del Servicio de Información de la Ciudad, previo registro.",
+    "el": {
+     "ar": [
+      "no",
+      "La convocatoria es solo para cooperativas de escuelas primarias de Rijeka, así que no aplica a quien vive en Argentina."
+     ],
+     "cit": [
+      "no",
+      "Solo pueden postular escuelas primarias de Rijeka, no personas que vivan en Argentina, tengan o no ciudadanía."
+     ],
+     "res": [
+      "no",
+      "Requiere ser una escuela primaria de Rijeka; la residencia de diáspora no alcanza para postular."
+     ]
+    },
+    "src": [
+     "rijeka.hr",
+     "https://www.rijeka.hr/javni-poziv-za-podnosenje-prijava-za-sufinanciranje-projekata-ucenickih-zadruga-u-skolskoj-godini-2026-2027/"
+    ],
+    "ai_generated": true,
+    "deadline": "2026-11-06T23:59:00+01:00",
+    "flag": "Confirmar si los montos de 398 y 199 euros son por proyecto o por escuela, ya que el texto no lo aclara. El plazo cierra el 6 de noviembre de 2026 a las 16 horas o antes si se agotan los fondos; las solicitudes se procesan por orden de llegada de documentación completa. La fuente menciona 3.000 euros repartidos entre ocho cooperativas en la convocatoria anterior; no se usó como dato de esta convocatoria. El aviso no contiene instrucciones para la revisión; no se detectaron órdenes dentro de la fuente."
+   },
+   "citas": {
+    "amount": "Za nabavu opreme i materijala moguće je ostvariti do 398 eura, a za troškove predavača iz područja produkt dizajna do 199 eura.",
+    "deadline": "Prijave su otvorene do 6. studenoga, odnosno do iskorištavanja raspoloživih proračunskih sredstava."
+   }
+  },
+  {
+   "guid": "wp:316896",
+   "link": "https://www.rijeka.hr/javni-poziv-za-utvrdivanje-programa-kulture-od-interesa-za-grad-rijeku-iz-djelatnosti-kulture-umjetnosti-i-transverzalnih-podrucja-za-2027-godinu/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-10-26T11:14:13.885Z",
+   "text_from": "página oficial",
+   "relevante": true,
+   "motivo_relevancia": "Personas físicas, artistas y asociaciones pueden presentar programas culturales para cofinanciación municipal en Rijeka, así que una asociación de la diáspora con actividad cultural podría postularse.",
+   "ficha": {
+    "cat": "loc",
+    "t": "Convocatoria de programas culturales de interés para Rijeka 2027",
+    "t_hr": "Javni poziv za utvrđivanje programa kulture od interesa za Grad Rijeku iz djelatnosti kulture, umjetnosti i transverzalnih područja za 2027. godinu",
+    "who": "Ciudad de Rijeka (Grad Rijeka), Upravni odjel za kulturu i kreativni razvoj",
+    "amount": "",
+    "what": "Es una convocatoria para que artistas, asociaciones culturales, organizaciones y personas físicas o jurídicas presenten programas de cultura, arte y áreas transversales que el municipio cofinancia con su presupuesto. Cubre áreas como patrimonio, música, teatro y danza, audiovisual, literatura, prácticas innovadoras, cultura comunitaria y programas para jóvenes. Las propuestas se presentan solo en formato electrónico a través de los e-formularios de la ciudad.",
+    "el": {
+     "ar": [
+      "cond",
+      "La fuente no aclara si hay que estar radicado o tener sede en Rijeka para presentarse; hay que confirmarlo en las Upute za prijavitelje."
+     ],
+     "cit": [
+      "cond",
+      "Igual que el perfil argentino: la fuente no define el requisito de residencia o sede y debe verificarse en las bases."
+     ],
+     "res": [
+      "cond",
+      "Vivir en Croacia con residencia de diáspora ayuda, pero la convocatoria se refiere a programas de Rijeka y las condiciones exactas deben confirmarse."
+     ]
+    },
+    "src": [
+     "rijeka.hr",
+     "https://www.rijeka.hr/javni-poziv-za-utvrdivanje-programa-kulture-od-interesa-za-grad-rijeku-iz-djelatnosti-kulture-umjetnosti-i-transverzalnih-podrucja-za-2027-godinu/"
+    ],
+    "ai_generated": true,
+    "deadline": "2026-11-23T23:59:00+01:00",
+    "flag": "La fuente no menciona montos ni cifras de financiamiento; hay que revisar las Upute za prijavitelje y el plan de raspodjele sredstava. La fuente no dice si el solicitante debe estar registrado o tener sede en Rijeka; confirmar en el documento de Upute para prijavitelje antes de marcar ok para Argentina o residencia. La lista de documentación obligatoria está en las Upute za prijavitelje, que no están incluidas en la fuente. El texto menciona el Upravni odjel za odgoj i obrazovanje, kulturu, sport i mlade, pero el encabezado dice Upravni odjel za kulturu i kreativni razvoj; conviene aclarar cuál es el organismo a cargo. La fecha de cierre (23 de noviembre de 2026, 16:00) figura en la fuente y se usa tal cual; confirmar si el horario corresponde a la hora local de Rijeka."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": "Rok za podnošenje prijedloga programa traje od dana objave 21. listopada do 23. studenoga 2026. godine, najkasnije do 16,00 sati."
+   }
+  }
+ ]
+}

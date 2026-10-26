@@ -1,0 +1,119 @@
+{
+ "source": "pgz_natjecaji",
+ "name": "Condado de Primorje-Gorski Kotar: concursos de empleo y becas (Natječaji, Primorsko-goranska županija)",
+ "detected_at": "2026-10-26",
+ "added": [],
+ "changed": [
+  {
+   "guid": "wp:107912",
+   "title": "Javni natječaj za prijam u službu na neodređeno vrijeme u Upravni odjel za opću upravu i pravne poslove – mjesto rada Opatija",
+   "link": "https://www.pgz.hr/natjecaj/javni-natjecaj-za-prijam-u-sluzbu-na-neodredeno-vrijeme-u-upravni-odjel-za-opcu-upravu-i-pravne-poslove-mjesto-rada-opatija/",
+   "published": "2026-10-07T04:50:07.000Z",
+   "updated": "2026-10-26T06:19:28.000Z",
+   "summary": "",
+   "before": {
+    "title": "Javni natječaj za prijam u službu na neodređeno vrijeme u Upravni odjel za opću upravu i pravne poslove – mjesto rada Opatija",
+    "summary": "",
+    "updated": "2026-10-06T08:44:17.000Z"
+   }
+  },
+  {
+   "guid": "wp:105958",
+   "title": "Oglas za prijam u službu na određeno vrijeme u Upravni odjel za opću upravu i pravne poslove",
+   "link": "https://www.pgz.hr/natjecaj/oglas-za-prijam-u-sluzbu-na-odredeno-vrijeme-u-upravni-odjel-za-opcu-upravu-i-pravne-poslove-4/",
+   "published": "2026-09-01T04:55:18.000Z",
+   "updated": "2026-10-21T04:53:38.000Z",
+   "summary": "",
+   "before": {
+    "title": "Oglas za prijam u službu na određeno vrijeme u Upravni odjel za opću upravu i pravne poslove",
+    "summary": "",
+    "updated": "2026-09-22T08:40:46.000Z"
+   }
+  }
+ ],
+ "instrucciones": "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json.",
+ "borradores": [
+  {
+   "guid": "wp:107912",
+   "link": "https://www.pgz.hr/natjecaj/javni-natjecaj-za-prijam-u-sluzbu-na-neodredeno-vrijeme-u-upravni-odjel-za-opcu-upravu-i-pravne-poslove-mjesto-rada-opatija/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-10-26T11:13:39.198Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es un llamado a concurso para un puesto permanente en la administración pública del condado en Opatija, que no está pensado para descendientes ni asociaciones de la diáspora.",
+   "ficha": {
+    "cat": "emp",
+    "t": "Concurso público para un puesto permanente en la administración del condado, en Opatija",
+    "t_hr": "Javni natječaj za prijam u službu na neodređeno vrijeme u Upravni odjel za opću upravu i pravne poslove – mjesto rada Opatija",
+    "who": "Condado de Primorje-Gorski Kotar (Primorsko-goranska županija)",
+    "amount": "",
+    "what": "Es un concurso público para ocupar un cargo de planta permanente en el Departamento de Administración General y Asuntos Jurídicos del condado, con lugar de trabajo en Opatija. La fuente que recibimos es solo el título y la fecha, sin requisitos ni detalles del puesto.",
+    "el": {
+     "ar": [
+      "cond",
+      "La fuente no informa requisitos de nacionalidad ni de residencia para este puesto, así que no se puede confirmar."
+     ],
+     "cit": [
+      "cond",
+      "La fuente no informa requisitos para ciudadanos residentes en Argentina, así que no se puede confirmar."
+     ],
+     "res": [
+      "cond",
+      "La fuente no detalla si una persona con residencia de diáspora en Croacia puede postularse, así que no se puede confirmar."
+     ]
+    },
+    "src": [
+     "pgz.hr",
+     "https://www.pgz.hr/natjecaj/javni-natjecaj-za-prijam-u-sluzbu-na-neodredeno-vrijeme-u-upravni-odjel-za-opcu-upravu-i-pravne-poslove-mjesto-rada-opatija/"
+    ],
+    "ai_generated": true,
+    "flag": "Solo se recibió el título y la fecha del aviso (07.10.2026); hay que revisar el llamado completo para confirmar requisitos, plazo y documentación. Es un empleo en la administración pública, por lo que relevante quedó en false según las reglas del Radar. El texto de la fuente no contenía instrucciones adicionales."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  },
+  {
+   "guid": "wp:105958",
+   "link": "https://www.pgz.hr/natjecaj/oglas-za-prijam-u-sluzbu-na-odredeno-vrijeme-u-upravni-odjel-za-opcu-upravu-i-pravne-poslove-4/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-10-26T11:13:45.851Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es un llamado a empleo de duración determinada en la administración pública regional, que queda fuera del alcance del radar.",
+   "ficha": {
+    "cat": "emp",
+    "t": "Llamado a empleo temporario en la administración de Primorje-Gorski Kotar",
+    "t_hr": "Oglas za prijam u službu na određeno vrijeme u Upravni odjel za opću upravu i pravne poslove",
+    "who": "Condado de Primorje-Gorski Kotar (Primorsko-goranska županija)",
+    "amount": "",
+    "what": "La fuente solo muestra el título y la fecha de publicación del llamado, sin el detalle de requisitos, funciones ni condiciones. Es un puesto temporario en el Departamento de Administración General y Asuntos Legales del condado.",
+    "el": {
+     "ar": [
+      "no",
+      "Es un empleo en la administración pública y la fuente no indica que pueda postularse alguien desde Argentina."
+     ],
+     "cit": [
+      "no",
+      "Es un empleo en la administración pública regional, fuera del alcance del radar."
+     ],
+     "res": [
+      "cond",
+      "La fuente no detalla requisitos de residencia ni de idioma, así que no se puede confirmar."
+     ]
+    },
+    "src": [
+     "pgz.hr",
+     "https://www.pgz.hr/natjecaj/oglas-za-prijam-u-sluzbu-na-odredeno-vrijeme-u-upravni-odjel-za-opcu-upravu-i-pravne-poslove-4/"
+    ],
+    "ai_generated": true,
+    "flag": "La fuente solo contiene el título y la fecha, sin el texto completo del llamado. Falta el plazo de postulación y los requisitos; conviene revisar el aviso original antes de confirmar cualquier dato. Se marca como no relevante porque es empleo en la administración pública (regla 5)."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  }
+ ]
+}

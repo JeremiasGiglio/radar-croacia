@@ -1,0 +1,24 @@
+{
+ "source": "udruge_vijesti",
+ "name": "Oficina para las Asociaciones del Gobierno (Ured za udruge): novedades y convocatorias (Vijesti)",
+ "detected_at": "2026-10-26",
+ "added": [
+  {
+   "guid": "https://udruge.gov.hr/vijesti/oecd-globalni-forum-building-trust-and-reinforcing-democracy-12-14-listopada-2026-u-parizu/6363",
+   "title": "OECD Globalni forum „Building Trust and Reinforcing Democracy“, 12. – 14. listopada 2026. u Parizu",
+   "link": "https://udruge.gov.hr/vijesti/oecd-globalni-forum-building-trust-and-reinforcing-democracy-12-14-listopada-2026-u-parizu/6363",
+   "published": "2026-10-23T12:53:54.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "https://udruge.gov.hr/vijesti/6362",
+   "title": "Objavljena Odluka o financiranju u okviru Poziva „Doprinos organizacija civilnoga društva razvoju lokalnih zajednica putem mikroprojekata\" unutar Programa Civilno društvo, Hrvatsko-švicarskog programa suradnje, 2. Švicarski doprinos",
+   "link": "https://udruge.gov.hr/vijesti/6362",
+   "published": "2026-10-22T07:37:23.000Z",
+   "summary": "Temeljem Odluke o financiranju ugovorit će se 11 projekta."
+  }
+ ],
+ "changed": [],
+ "instrucciones": "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json.",
+ "borradores": []
+}

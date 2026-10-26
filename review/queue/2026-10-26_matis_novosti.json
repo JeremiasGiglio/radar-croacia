@@ -1,0 +1,59 @@
+{
+ "source": "matis_novosti",
+ "name": "Hrvatska matica iseljenika: novedades y programas (Novosti)",
+ "detected_at": "2026-10-26",
+ "added": [
+  {
+   "guid": "https://matis.hr/?p=81672",
+   "title": "Povjestice – priča o 45 godina povezivanja hrvatskoga jezika, kulture i ljudi",
+   "link": "https://matis.hr/novosti/povjestice-prica-o-45-godina-povezivanja-hrvatskoga-jezika-kulture-i-ljudi/",
+   "published": "2026-10-21T13:29:59.000Z",
+   "summary": "U Hrvatskoj matici iseljenika predstavljena monografija Sveučilišne škole hrvatskoga jezika i kulture, koja svjedoči o četiri i pol desetljeća učenja, zajedništva i povezivanja s domovinom"
+  }
+ ],
+ "changed": [],
+ "instrucciones": "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json.",
+ "borradores": [
+  {
+   "guid": "https://matis.hr/?p=81672",
+   "link": "https://matis.hr/novosti/povjestice-prica-o-45-godina-povezivanja-hrvatskoga-jezika-kulture-i-ljudi/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-10-26T11:11:58.044Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es una noticia sobre la presentación de una monografía y no describe ninguna convocatoria, beca ni ayuda que una persona o asociación pueda solicitar.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Monografía sobre 45 años de la Escuela Universitaria de Lengua y Cultura Croata",
+    "t_hr": "Povjestice – priča o 45 godina povezivanja hrvatskoga jezika, kulture i ljudi",
+    "who": "Sociedad Croata de la Emigración (Hrvatska matica iseljenika), en coedición con la Universidad de Zagreb",
+    "amount": "",
+    "what": "La Hrvatska matica iseljenika presentó en Zagreb una monografía que repasa la historia de la Escuela Universitaria de Lengua y Cultura Croata desde 1980 hasta el año académico 2025/2026. El libro recoge archivos, testimonios de docentes y estudiantes, y la evolución de los cursos de croata como lengua extranjera, incluido el curso en línea HiT-1. No es una oferta de estudio ni de ayuda para participar.",
+    "el": {
+     "ar": [
+      "no",
+      "No hay convocatoria a la que postularse; es una noticia sobre una publicación."
+     ],
+     "cit": [
+      "no",
+      "No hay convocatoria a la que postularse; es una noticia sobre una publicación."
+     ],
+     "res": [
+      "no",
+      "No hay convocatoria a la que postularse; es una noticia sobre una publicación."
+     ]
+    },
+    "src": [
+     "matis.hr",
+     "https://matis.hr/novosti/povjestice-prica-o-45-godina-povezivanja-hrvatskoga-jezika-kulture-i-ljudi/"
+    ],
+    "ai_generated": true,
+    "flag": "La fuente no describe ninguna convocatoria, por lo que el aviso no corresponde al radar salvo que se confirme un programa abierto. La fuente menciona que el profesor Igor Marko Gligorić anunció el programa HiT-2 sin fechas ni condiciones; conviene verificar si ya hay convocatoria oficial antes de publicarlo. El nombre del organismo en castellano es una traducción propuesta y debería revisarse con la forma usual en la comunidad."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  }
+ ]
+}
