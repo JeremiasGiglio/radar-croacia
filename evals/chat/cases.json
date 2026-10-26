@@ -447,5 +447,91 @@
       "respuesta_no_incluye": ["cupo_uni", "uniri_master", "study_in_croatia"],
       "fuera_de_tema": false
     }
+  },
+  {
+    "id": "interes_arte",
+    "porque": "ZL-109: no hay un programa de arte, pero no corta: arma un camino con el idioma, los estudios, el folklore o las asociaciones.",
+    "perfil": "ar",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Me gusta mucho el arte, ¿cómo puedo hacer para dedicarme a eso en Croacia?"
+      }
+    ],
+    "expect": {
+      "fuera_de_tema": false,
+      "fichas_alguna": [
+        "beca",
+        "a1hr",
+        "hmi",
+        "hmi_folklore",
+        "croaticum_ffzg",
+        "rks_uniri_croata",
+        "hit1_curso_online",
+        "hit1_beca_sudamerica",
+        "cupo_uni",
+        "study_in_croatia",
+        "mdu_ocd",
+        "uniri_ingles"
+      ],
+      "respuesta_no_incluye": ["no tenemos nada", "no puedo ayudarte"]
+    }
+  },
+  {
+    "id": "interes_oficio_cocina",
+    "porque": "ZL-109: un oficio sin ficha propia: tiene que orientar con trabajo, formación e idioma.",
+    "perfil": "ar",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Soy cocinero y me gustaría trabajar de eso en Croacia, ¿por dónde empiezo?"
+      }
+    ],
+    "expect": {
+      "fuera_de_tema": false,
+      "fichas_alguna": [
+        "hzz_burza",
+        "eures",
+        "dozvola_trabajo",
+        "vaucer_formacion",
+        "a1hr",
+        "beca",
+        "croaticum_ffzg",
+        "rks_uniri_croata",
+        "hit1_curso_online",
+        "potvrda"
+      ]
+    }
+  },
+  {
+    "id": "interes_futbol_en",
+    "porque": "ZL-109: interés personal en inglés: lo toma, sin marcarlo fuera de tema, y responde en inglés.",
+    "perfil": "cit",
+    "canal": "whatsapp",
+    "idioma": "en",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I love football and I'd like to live in Croatia. Is there anything for me?"
+      }
+    ],
+    "expect": {
+      "fuera_de_tema": false,
+      "fichas_alguna": [
+        "a1hr",
+        "beca",
+        "croaticum_ffzg",
+        "rks_uniri_croata",
+        "hit1_curso_online",
+        "hzz_burza",
+        "eures",
+        "study_in_croatia",
+        "cupo_uni",
+        "potvrda",
+        "hmi"
+      ],
+      "respuesta_incluye_alguno": [" you", "your"],
+      "respuesta_no_incluye": ["whatsapp", "querés"]
+    }
   }
 ]

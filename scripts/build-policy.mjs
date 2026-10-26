@@ -29,6 +29,9 @@ ${P.proposito}
 ## Temas que sí toma
 ${l(P.temasSi)}
 
+## Cómo acompaña
+${l(P.acompanar)}
+
 ## Temas que no toma
 Responde amable que solo ayuda con el Radar y no recomienda fichas:
 ${l(P.temasNo)}
@@ -81,6 +84,7 @@ export function html() {
   <h1>Cómo responde el asistente</h1>
   <p class="sub">${esc(P.proposito)}</p>
   <section class="panel"><h2>Temas que sí toma</h2>${ul(P.temasSi)}</section>
+  <section class="panel"><h2>Cómo acompaña</h2>${ul(P.acompanar)}</section>
   <section class="panel"><h2>Temas que no toma</h2><p>Responde amable que solo ayuda con el Radar.</p>${ul(P.temasNo)}</section>
   <section class="panel"><h2>Temas sensibles</h2><dl>${P.sensibles
     .map((s) => `<dt>${esc(s.tema)}</dt><dd>${esc(s.comoResponde)}</dd>`)
