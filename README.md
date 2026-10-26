@@ -15,7 +15,7 @@ Becas, cursos y estudios universitarios (también universidades privadas con car
 | Investigación de mercado, técnica y legal | ✅ `docs/01_investigacion_y_factibilidad.md` |
 | Web pública (mapa + filtros + fichas) | ✅ `site/`, publicada con GitHub Pages: https://radar.zustrolabs.com (antes `radar.jgcup.stream`, que redirige) |
 | Maqueta offline para eventos | ✅ `prototype/index.html` (datos del 28/9/2026 embebidos; funciona sin internet) |
-| Datos en JSON con esquema | ✅ `site/data/opportunities.json` (45 fichas, revisión 22/10/2026; cada una con tipo de fuente y si está abierta a todos) + `schema/` |
+| Datos en JSON con esquema | ✅ `site/data/opportunities.json` (47 fichas, revisión 26/10/2026; cada una con tipo de fuente y si está abierta a todos) + `schema/` |
 | Tests | ✅ 140 unitarios (datos, robot, chat, WhatsApp, panel, idiomas, demo offline) y 100 E2E con Playwright (escritorio, celular y celular chico), más evals de la IA |
 | Video con subtítulos | ✅ `media/Radar_Croacia_promo_{es,en,hr}_v1.mp4` (22/10/2026, 60 s, castellano, inglés y croata) |
 | Demo sin conexión | ✅ `prototype/radar-offline.html` (`npm run offline`; un test controla que esté al día) |

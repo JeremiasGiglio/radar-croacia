@@ -1,6 +1,6 @@
 {
  "version": "2026-10-20",
- "verified_at": "2026-10-22",
+ "verified_at": "2026-10-26",
  "note": "Beta. Fichas revisadas por Jeremías Giglio (Zustro Labs) con fuentes oficiales. Los montos y plazos pueden cambiar: la fuente oficial manda.",
  "profiles": {
   "ar": "Vive en Argentina, sin ciudadanía",
@@ -128,7 +128,7 @@
     "mdu.gov.hr",
     "https://mdu.gov.hr/UserDocsImages/Ministarstvo%20demografije%20i%20useljeni%C5%A1tva/useljeni%C5%A1tvo/Javni%20poziv%20za%20stipendije%202026/Javni%20poziv_2026-2027.pdf"
    ],
-   "verified_at": "2026-10-20",
+   "verified_at": "2026-10-26",
    "fuente": "oficial",
    "abierta": false,
    "t_hr": "Stipendija za učenje hrvatskoga jezika u Republici Hrvatskoj"
@@ -670,6 +670,64 @@
    "verified_at": "2026-10-20"
   },
   {
+   "id": "mzom_stem",
+   "cat": "beca",
+   "t": "Becas del Estado para carreras STEM en Croacia (2026/27)",
+   "t_hr": "Državne stipendije u STEM područjima znanosti za akademsku godinu 2026./2027.",
+   "who": "Ministerio de Ciencia, Educación y Juventud (Ministarstvo znanosti, obrazovanja i mladih)",
+   "pts": [
+    [
+     15.98,
+     45.81
+    ],
+    [
+     14.44,
+     45.33
+    ],
+    [
+     16.44,
+     43.51
+    ],
+    [
+     18.69,
+     45.55
+    ],
+    [
+     15.23,
+     44.12
+    ],
+    [
+     13.85,
+     44.87
+    ]
+   ],
+   "deadline": "2026-11-11T12:00:00+01:00",
+   "amount": "€300 por mes durante 9 meses (€600 por mes en profesorados STEM); 1.500 becas en total",
+   "what": "Beca para alumnos regulares de carreras de ciencias naturales, técnicas, biomédicas, biotécnicas e informática en universidades o institutos superiores de Croacia. Pueden pedirla ciudadanos croatas o de la UE y también croatas fuera de Croacia con la constancia de la Oficina. Se pide en línea, en el Sistema de becas del Estado, con el usuario universitario (AAI@EduHr), del 21/10 al 11/11/2026 a las 12.",
+   "el": {
+    "ar": [
+     "cond",
+     "Si ya sos alumno regular de una carrera STEM en Croacia y tenés la constancia de croata fuera de Croacia (Potvrda o statusu Hrvata izvan RH)."
+    ],
+    "cit": [
+     "cond",
+     "Con la ciudadanía alcanza, pero tenés que ser alumno regular de una carrera STEM en Croacia."
+    ],
+    "res": [
+     "cond",
+     "Tenés que ser alumno regular de una carrera STEM y tener ciudadanía croata o de la UE, o la constancia de la Oficina (que pide domicilio fuera de Croacia: consultalo)."
+    ]
+   },
+   "src": [
+    "mzom.gov.hr",
+    "https://mzom.gov.hr/UserDocsImages/dokumenti/Obrazovanje/DrzavneStipendije/STEM-Stipendije/Stem-rok-11-11-2026/Javni-poziv-stem-Rok-11-11-2026.pdf"
+   ],
+   "flag": "En primer año de grado el ranking usa solo la nota de matemática de la matura croata (državna matura): si entraste con el secundario de afuera, consultá al Ministerio antes. No pueden pedirla quienes trabajan, tienen obrt, repiten el año o ya tienen un título del mismo nivel, y no se cobra junto con otra beca pública. La de profesorado STEM sigue hasta recibirte; las demás duran un año. Los adjuntos van en croata.",
+   "fuente": "oficial",
+   "abierta": false,
+   "verified_at": "2026-10-26"
+  },
+  {
    "id": "uniri_master",
    "cat": "beca",
    "t": "Rijeka: cupo en las maestrías para croatas de afuera",
@@ -1187,7 +1245,7 @@
    "flag": "La mitad es un préstamo que se devuelve en 2 años. Hay que poder demostrar que la innovación funciona. Quien firmó con FIPRO en los últimos 2 años no puede pedirlo.",
    "fuente": "institucion",
    "abierta": true,
-   "verified_at": "2026-10-20"
+   "verified_at": "2026-10-26"
   },
   {
    "id": "ciudadania_art11",
@@ -1842,6 +1900,44 @@
    "abierta": true,
    "flag": "No pudimos leer la convocatoria vigente de RRA Porin: faltan la fecha y el precio del alquiler.",
    "verified_at": "2026-10-22"
+  },
+  {
+   "id": "rijeka_cultura",
+   "cat": "proy",
+   "t": "Rijeka: fondos para programas de cultura y arte (2027)",
+   "t_hr": "Javni poziv za utvrđivanje programa kulture od interesa za Grad Rijeku iz djelatnosti kulture, umjetnosti i transverzalnih područja za 2027. godinu",
+   "who": "Municipalidad de Rijeka (Grad Rijeka), Departamento de Cultura y Desarrollo Creativo (Upravni odjel za kulturu i kreativni razvoj)",
+   "pts": [
+    [
+     14.44,
+     45.33
+    ]
+   ],
+   "deadline": "2026-11-20T16:00:00+01:00",
+   "amount": "Del 30 % al 100 % del costo justificado según el puntaje, con topes por área: por ejemplo, hasta €7.000 por programa de cultura en la comunidad y hasta €10.000 por programa de jóvenes",
+   "what": "La ciudad cofinancia en 2027 programas de cultura y arte de interés para Rijeka: patrimonio, museos y artes visuales, música, teatro y danza, audiovisual, literatura, prácticas innovadoras, cultura en la comunidad (incluye las sociedades de amistad de Croacia con otros pueblos) y programas de jóvenes de 15 a 30 años. Pueden presentarse artistas y otras personas, asociaciones y organizaciones culturales. Se presenta solo con el formulario electrónico de la ciudad y los adjuntos en croata.",
+   "el": {
+    "ar": [
+     "cond",
+     "Las bases no piden residencia ni ciudadanía, pero el programa tiene que ser para Rijeka y todo va en croata: lo más realista es con una asociación o artistas de allá."
+    ],
+    "cit": [
+     "cond",
+     "Las bases no piden residencia, pero el programa tiene que ser para Rijeka y todo va en croata: lo más realista es con una asociación o artistas de allá."
+    ],
+    "res": [
+     "cond",
+     "Podés presentarte como artista o con tu asociación si el programa es de interés para Rijeka; algunas líneas piden sede en Rijeka."
+    ]
+   },
+   "src": [
+    "rijeka.hr",
+    "https://www.rijeka.hr/wp-content/uploads/2026/10/Upute-za-prijavitelje-8.pdf"
+   ],
+   "flag": "Plazo: el llamado dice 30 días desde que se publicó (21/10/2026), hasta las 16 del último día, y la noticia de la ciudad dice hasta el 23/11. Tomamos la fecha más temprana, el 20/11: no lo dejes para el final. El funcionamiento anual de organizaciones solo se financia si tienen sede en Rijeka. Si cobra una persona, la ciudad descuenta los aportes y paga el neto.",
+   "fuente": "oficial",
+   "abierta": true,
+   "verified_at": "2026-10-26"
   }
  ],
  "schema": "docs/03_arquitectura.md",
