@@ -38,7 +38,7 @@ jobs:
           ANTHROPIC_WORKSPACE_ID: ${{ vars.ANTHROPIC_WORKSPACE_ID }}
           RADAR_MAX_DRAFTS: "12"
       - name: Abrir PR de revisión si hay novedades
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           branch: radar/novedades
           delete-branch: true
