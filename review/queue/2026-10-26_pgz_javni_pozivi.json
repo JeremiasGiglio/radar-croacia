@@ -1,0 +1,108 @@
+{
+ "source": "pgz_javni_pozivi",
+ "name": "Condado de Primorje-Gorski Kotar (Primorsko-goranska županija): convocatorias y programas (Projekti i programi)",
+ "detected_at": "2026-10-26",
+ "added": [
+  {
+   "guid": "https://www.pgz.hr/?post_type=projekt_program&p=108620",
+   "title": "Javni poziv za prijavu projekata promocije turizma za sufinanciranje iz Proračuna Primorsko-goranske županije za 2026. godinu",
+   "link": "https://www.pgz.hr/projekt_program/javni-poziv-za-prijavu-projekata-promocije-turizma-za-sufinanciranje-iz-proracuna-primorsko-goranske-zupanije-za-2026-godinu/",
+   "published": "2026-10-26T07:23:58.000Z",
+   "summary": "U Proračunu Primorsko-goranske županije za 2026. godinu, Razdjel 08. Upravni odjel za turizam poduzetništvo i ruralni razvoj, planirana su sredstva namijenjena za sufinanciranje projekata promocije turizma za sufinanciranje iz Proračuna Primorsko-goranske županije za 2026. godinu."
+  },
+  {
+   "guid": "https://www.pgz.hr/?post_type=projekt_program&p=108571",
+   "title": "Natječaj za financiranje programa i projekata iz područja unapređenja kvalitete života hrvatskih branitelja iz Domovinskog rata i članova njihovih obitelji u 2026. godini",
+   "link": "https://www.pgz.hr/projekt_program/natjecaj-za-financiranje-programa-i-projekata-iz-podrucja-unapredenja-kvalitete-zivota-hrvatskih-branitelja-iz-domovinskog-rata-i-clanova-njihovih-obitelji-u-2026-godini/",
+   "published": "2026-10-23T07:53:33.000Z",
+   "summary": "Predmet Natječaja je prikupljanje prijava programa i projekata iz područja unapređenja kvalitete života hrvatskih branitelja iz Domovinskog rata i članova njihovih obitelji koji će se financirati sredstvima Primorsko-goranske županije tijekom 2026. godine."
+  }
+ ],
+ "changed": [],
+ "instrucciones": "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json.",
+ "borradores": [
+  {
+   "guid": "https://www.pgz.hr/?post_type=projekt_program&p=108620",
+   "link": "https://www.pgz.hr/projekt_program/javni-poziv-za-prijavu-projekata-promocije-turizma-za-sufinanciranje-iz-proracuna-primorsko-goranske-zupanije-za-2026-godinu/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-10-26T11:13:13.976Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Solo pueden postularse las unidades de gobierno local del condado, así que una persona descendiente de croatas o una asociación de la diáspora no podría aprovechar esta convocatoria.",
+   "ficha": {
+    "cat": "loc",
+    "t": "Convocatoria de promoción turística del Condado Primorsko-Goranski 2026",
+    "t_hr": "Javni poziv za prijavu projekata promocije turizma za sufinanciranje iz Proračuna Primorsko-goranske županije za 2026. godinu",
+    "who": "Condado de Primorje-Gorski Kotar (Primorsko-goranska županija)",
+    "amount": "",
+    "what": "Es una convocatoria para cofinanciar con fondos a fondo perdido proyectos de promoción turística que muestren al Primorje-Gorski Kotar como destino de calidad, con énfasis en manifestaciones gastronómicas y enológicas por la distinción Kvarner Región Europea de la Gastronomía 2026. Está dirigida a municipios y ciudades del condado, y las postulaciones se hacen por el sistema electrónico SOM Natječaj.",
+    "el": {
+     "ar": [
+      "no",
+      "Solo pueden postularse unidades de gobierno local del Condado, no personas particulares."
+     ],
+     "cit": [
+      "no",
+      "Solo pueden postularse unidades de gobierno local del Condado, no personas particulares."
+     ],
+     "res": [
+      "no",
+      "Solo pueden postularse unidades de gobierno local del Condado, no personas particulares."
+     ]
+    },
+    "src": [
+     "pgz.hr",
+     "https://www.pgz.hr/projekt_program/javni-poziv-za-prijavu-projekata-promocije-turizma-za-sufinanciranje-iz-proracuna-primorsko-goranske-zupanije-za-2026-godinu/"
+    ],
+    "ai_generated": true,
+    "flag": "La fuente no indica un monto concreto; revisar la documentación adjunta (Javni poziv, Upute za prijavitelje) por si figura el presupuesto de la convocatoria. El plazo de cierre está explícito (25 de noviembre de 2026) y coincide con los 30 días desde la publicación del 26 de octubre de 2026; confirmar en pgz.hr. Verificar si la convocatoria admite algún tipo de postulación de asociaciones por medio de un municipio, aunque el texto dice que los prijavitelji son solo JLS. Las noticias relacionadas incluidas en la página no son convocatorias y no se usaron para la ficha. Se borró el plazo «2026-11-25»: no coincide con una fecha textual de la fuente."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  },
+  {
+   "guid": "https://www.pgz.hr/?post_type=projekt_program&p=108571",
+   "link": "https://www.pgz.hr/projekt_program/natjecaj-za-financiranje-programa-i-projekata-iz-podrucja-unapredenja-kvalitete-zivota-hrvatskih-branitelja-iz-domovinskog-rata-i-clanova-njihovih-obitelji-u-2026-godini/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-10-26T11:13:30.057Z",
+   "text_from": "página oficial",
+   "relevante": true,
+   "motivo_relevancia": "Solo podría aprovecharla una persona con residencia de diáspora en Croacia si forma parte de una asociación con sede en el condado de Primorje-Gorski Kotar, porque la convocatoria se dirige a asociaciones.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Convocatoria para programas y proyectos que mejoren la calidad de vida de veteranos de la Guerra de la Patria y sus familias (Condado de Primorje-Gorski Kotar, 2026)",
+    "t_hr": "Natječaj za financiranje programa i projekata iz područja unapređenja kvalitete života hrvatskih branitelja iz Domovinskog rata i članova njihovih obitelji u 2026. godini",
+    "who": "Condado de Primorje-Gorski Kotar (Primorsko-goranska županija)",
+    "amount": "€20.000 en total, monto total disponible para la convocatoria (no por proyecto)",
+    "what": "Convocatoria del condado para financiar programas y proyectos que mejoren la calidad de vida de veteranos de la Guerra de la Patria (Domovinski rat) y de sus familias durante 2026. Los proyectos tienen que realizarse en el condado y fortalecer a asociaciones y organizaciones civiles que trabajan por estos veteranos. Cada solicitante puede presentar como máximo un programa o proyecto.",
+    "el": {
+     "ar": [
+      "no",
+      "Solo pueden postularse asociaciones con sede en el condado de Primorje-Gorski Kotar, y una persona que vive en Argentina no cumple ese requisito."
+     ],
+     "cit": [
+      "no",
+      "Solo pueden postularse asociaciones con sede en el condado de Primorje-Gorski Kotar, y la ciudadanía no cambia ese requisito."
+     ],
+     "res": [
+      "cond",
+      "Solo podría participar si la persona integra una asociación con sede en el condado, ya que la convocatoria no se dirige a personas a título individual."
+     ]
+    },
+    "src": [
+     "pgz.hr",
+     "https://www.pgz.hr/projekt_program/natjecaj-za-financiranje-programa-i-projekata-iz-podrucja-unapredenja-kvalitete-zivota-hrvatskih-branitelja-iz-domovinskog-rata-i-clanova-njihovih-obitelji-u-2026-godini/"
+    ],
+    "ai_generated": true,
+    "deadline": "2026-11-22T23:59:00+01:00",
+    "flag": "Confirmar si una persona física con residencia de diáspora puede presentarse en nombre propio o solo a través de una asociación con sede en el condado; la fuente indica que el prijavitelj debe ser udruga u organización civil con sede en la región. Revisar la documentación de la convocatoria (Dokumentacija y Javni poziv), que no está incluida en el texto recibido, para confirmar requisitos y formularios. La fuente incluye noticias de otras fechas en la misma página (vestigios de la página de avisos); no forman parte de la convocatoria y no se usaron para completar la ficha. Confirmar el plazo en el sistema SOM Natječaji antes de publicar, ya que la fecha de cierre sale del texto de la convocatoria."
+   },
+   "citas": {
+    "amount": "Ukupan iznos financijskih sredstava raspoloživih za dodjelu iznosi 20.000,00 eura.",
+    "deadline": "Rok za podnošenje prijava na Natječaj je trideset (30) dana od dana objave Natječaja, odnosno od 23. listopada 2026. godine do 22. studenoga 2026. godine, isključivo putem elektroničkog sustava SOM Natječaji."
+   }
+  }
+ ]
+}

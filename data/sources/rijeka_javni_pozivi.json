@@ -4,6 +4,22 @@
  "url": "https://www.rijeka.hr/wp-json/wp/v2/posts?search=javni%20poziv&orderby=date&order=desc&per_page=30&_fields=id,date_gmt,modified_gmt,link,title,excerpt",
  "items": [
   {
+   "guid": "wp:317448",
+   "title": "Javni poziv za podnošenje prijava za sufinanciranje projekata učeničkih zadruga u školskoj godini 2026./2027.",
+   "link": "https://www.rijeka.hr/javni-poziv-za-podnosenje-prijava-za-sufinanciranje-projekata-ucenickih-zadruga-u-skolskoj-godini-2026-2027/",
+   "published": "2026-10-26T10:05:11.000Z",
+   "updated": "2026-10-26T10:08:33.000Z",
+   "summary": "Grad Rijeka dodjeljuje bespovratna sredstva za rad učeničkih zadruga u školskoj godini 2026./2027. Za nabavu opreme i materijala moguće je ostvariti do 398 eura, a za troškove predavača iz područja produkt dizajna do 199 eura. Prijave su otvorene do 6. studenoga, odnosno do iskorištavanja raspoloživih proračunskih sredstava."
+  },
+  {
+   "guid": "wp:316896",
+   "title": "Javni poziv za utvrđivanje programa kulture od interesa za Grad Rijeku iz djelatnosti kulture, umjetnosti i transverzalnih područja za 2027. godinu",
+   "link": "https://www.rijeka.hr/javni-poziv-za-utvrdivanje-programa-kulture-od-interesa-za-grad-rijeku-iz-djelatnosti-kulture-umjetnosti-i-transverzalnih-podrucja-za-2027-godinu/",
+   "published": "2026-10-21T07:53:08.000Z",
+   "updated": "2026-10-21T07:58:44.000Z",
+   "summary": "Grad Rijeka, Upravni odjel za kulturu i kreativni razvoj objavio je Javni poziv za utvrđivanje programa kulture od interesa za Grad Rijeku iz djelatnosti kulture, umjetnosti i transverzalnih područja za 2027. godinu"
+  },
+  {
    "guid": "wp:315177",
    "title": "Otvoren Javni poziv za prikupljanje prijedloga programa za izradu programa javnih potreba u sportu Grada Rijeke u 2027. godini",
    "link": "https://www.rijeka.hr/otvoren-javni-poziv-za-prikupljanje-prijedloga-programa-za-izradu-programa-javnih-potreba-u-sportu-grada-rijeke-u-2027-godini/",
@@ -34,14 +50,6 @@
    "published": "2026-09-09T14:03:18.000Z",
    "updated": "2026-10-06T12:10:53.000Z",
    "summary": "„Nećemo birati podobne, nego sposobne“, poručila je gradonačelnica Iva Rinčić koja je na redovnoj konferenciji za medije najavila objavu natječaja za pročelnike. Predstavila je i novi model upravljanja Galebom te nova ulaganja u riječko školstvo. Zamjenik gradonačelnice Vedran Vivoda je govorio o uklanjanju nepropisnih reklama i suglasnosti HŽ Infrastrukturi za gradnju drugog kolosjeka."
-  },
-  {
-   "guid": "wp:311448",
-   "title": "Rezidencijalni program Kamov: Javni poziv izvaninstitucionalnoj sceni za 2027. godinu",
-   "link": "https://www.rijeka.hr/rezidencijalni-program-kamov-javni-poziv-izvaninstitucionalnoj-sceni-za-2027-godinu/",
-   "published": "2026-09-01T11:58:03.000Z",
-   "updated": "2026-09-01T13:25:05.000Z",
-   "summary": "Muzej moderne i suvremene umjetnosti u Rijeci, u suradnji s Gradskom knjižnicom Rijeka i Hrvatskim kulturnim domom na Sušaku, objavio je javni poziv za dvije dvotjedne rezidencije u sklopu Rezidencijalnog programa Kamov, namijenjene izvaninstitucionalnoj umjetničkoj sceni. Poziv je otvoren do 15. rujna."
   }
  ]
 }

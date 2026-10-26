@@ -1,0 +1,155 @@
+{
+ "source": "mdu_vijesti",
+ "name": "Ministerio de Demografía e Inmigración (MDU): novedades (Vijesti)",
+ "detected_at": "2026-10-26",
+ "added": [
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/drzavni-tajnik-tokic-na-promociji-knjige-budi-roditelj-a-ne-noj-u-jastrebarskom/7678",
+   "title": "Državni tajnik Tokić na promociji knjige „Budi roditelj, a ne noj” u Jastrebarskom",
+   "link": "https://mdu.gov.hr/vijesti-4693/drzavni-tajnik-tokic-na-promociji-knjige-budi-roditelj-a-ne-noj-u-jastrebarskom/7678",
+   "published": "2026-10-22T14:36:33.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/urucene-stipendije-za-ucenje-hrvatskoga-jezika-147-stipendista-zapocelo-zimski-semestar-u-zagrebu/7677",
+   "title": "Uručene stipendije za učenje hrvatskoga jezika: 147 stipendista započelo zimski semestar u Zagrebu",
+   "link": "https://mdu.gov.hr/vijesti-4693/urucene-stipendije-za-ucenje-hrvatskoga-jezika-147-stipendista-zapocelo-zimski-semestar-u-zagrebu/7677",
+   "published": "2026-10-22T10:19:52.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/u-sibeniku-odrzana-prva-sjednica-vijeca-za-lokalni-razvoj-demografska-obnova-zajednicka-je-odgovornost-drzave-gradova-i-opcina/7676",
+   "title": "U Šibeniku održana prva sjednica Vijeća za lokalni razvoj: Demografska obnova zajednička je odgovornost države, gradova i općina",
+   "link": "https://mdu.gov.hr/vijesti-4693/u-sibeniku-odrzana-prva-sjednica-vijeca-za-lokalni-razvoj-demografska-obnova-zajednicka-je-odgovornost-drzave-gradova-i-opcina/7676",
+   "published": "2026-10-20T17:27:22.000Z",
+   "summary": ""
+  }
+ ],
+ "changed": [],
+ "instrucciones": "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json.",
+ "borradores": [
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/drzavni-tajnik-tokic-na-promociji-knjige-budi-roditelj-a-ne-noj-u-jastrebarskom/7678",
+   "link": "https://mdu.gov.hr/vijesti-4693/drzavni-tajnik-tokic-na-promociji-knjige-budi-roditelj-a-ne-noj-u-jastrebarskom/7678",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-10-26T11:12:05.839Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es una noticia sobre un acto de promoción de un libro y declaraciones de un funcionario, sin convocatoria ni ayuda que la diáspora pueda aprovechar.",
+   "ficha": {
+    "cat": "loc",
+    "t": "Acto de promoción de un libro sobre crianza y políticas de natalidad en Jastrebarsko",
+    "t_hr": "Državni tajnik Tokić na promociji knjige „Budi roditelj, a ne noj” u Jastrebarskom",
+    "who": "Ministerio de Demografía e Inmigración (Ministarstvo demografije i useljeništva)",
+    "amount": "",
+    "what": "Noticia publicada por el ministerio sobre la participación del secretario de Estado Frane Tokić en la presentación del libro «Budi roditelj, a ne noj» en el Centro de Cultura de Jastrebarsko, dentro del Mes del Libro Croata. El texto resume medidas de apoyo a la crianza ya existentes y datos de natalidad y migración de regreso, pero no abre ninguna convocatoria.",
+    "el": {
+     "ar": [
+      "no",
+      "No es una convocatoria ni un programa al que pueda postularse nadie."
+     ],
+     "cit": [
+      "no",
+      "No es una convocatoria ni un programa al que pueda postularse nadie."
+     ],
+     "res": [
+      "no",
+      "No es una convocatoria ni un programa al que pueda postularse nadie."
+     ]
+    },
+    "src": [
+     "mdu.gov.hr",
+     "https://mdu.gov.hr/vijesti-4693/drzavni-tajnik-tokic-na-promociji-knjige-budi-roditelj-a-ne-noj-u-jastrebarskom/7678"
+    ],
+    "ai_generated": true,
+    "flag": "La fuente es una noticia sin convocatoria; se recomienda no publicar ficha salvo que haya otro aviso asociado. El texto menciona medidas existentes (parental, naturaleza de ayuda para equipamiento de recién nacidos, programa Mudrica) que no son convocatorias abiertas; si se quisieran incluir, habría que buscar la fuente oficial específica con plazos y montos. La fuente no contiene instrucciones dirigidas al sistema; no se detectaron intentos de alterar el formato."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/urucene-stipendije-za-ucenje-hrvatskoga-jezika-147-stipendista-zapocelo-zimski-semestar-u-zagrebu/7677",
+   "link": "https://mdu.gov.hr/vijesti-4693/urucene-stipendije-za-ucenje-hrvatskoga-jezika-147-stipendista-zapocelo-zimski-semestar-u-zagrebu/7677",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-10-26T11:12:17.401Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es una nota sobre becas ya otorgadas para el semestre de invierno y no anuncia una convocatoria abierta a la que una persona pueda postularse ahora.",
+   "ficha": {
+    "cat": "beca",
+    "t": "Becas para aprender croata: 147 becarios empezaron el semestre de invierno en Zagreb",
+    "t_hr": "Uručene stipendije za učenje hrvatskoga jezika: 147 stipendista započelo zimski semestar u Zagrebu",
+    "who": "Ministerio de Demografía e Inmigración (Ministarstvo demografije i useljeništva)",
+    "amount": "",
+    "what": "El Ministerio entregó las becas para estudiar lengua croata en el Tečaj hrvatskoga jezika (curso Croaticum) de la Facultad de Filosofía de la Universidad de Zagreb. La beca cubre la enseñanza gratuita, además de comida y alojamiento subvencionados, y está dirigida a adultos de origen croata, sobre todo descendientes de emigrados de tercera y cuarta generación, y a sus cónyuges. La nota no indica el monto en euros ni el plazo para la próxima convocatoria.",
+    "el": {
+     "ar": [
+      "cond",
+      "La nota menciona que muchos becarios vienen de Sudamérica, pero no fija requisitos de residencia ni de ciudadanía para postularse."
+     ],
+     "cit": [
+      "cond",
+      "La nota no dice si las personas con ciudadanía argentina tienen un requisito distinto o el mismo que las demás."
+     ],
+     "res": [
+      "cond",
+      "La nota no aclara si quienes ya viven en Croacia con residencia de diáspora pueden postularse a estas becas."
+     ]
+    },
+    "src": [
+     "mdu.gov.hr",
+     "https://mdu.gov.hr/vijesti-4693/urucene-stipendije-za-ucenje-hrvatskoga-jezika-147-stipendista-zapocelo-zimski-semestar-u-zagrebu/7677"
+    ],
+    "ai_generated": true,
+    "flag": "La nota no es una convocatoria: confirmar en la sección Javni pozivi del Ministerio si hay una convocatoria abierta para el curso de lengua croata y cuáles son sus requisitos y plazos. Las 700 becas aprobadas para el año académico 2026/27 son una cantidad de becas, no un monto en dinero; no hay monto en euros en la fuente. La fuente menciona que se planea firmar el Aneks V. del Acuerdo antes de fines de octubre de 2026, pero no da más detalles sobre su contenido. La fuente no especifica requisitos de idioma, documentación de ascendencia ni fechas de postulación. El texto de la fuente contiene un error de redacción («Tako je tako»); no afecta el contenido de la ficha."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/u-sibeniku-odrzana-prva-sjednica-vijeca-za-lokalni-razvoj-demografska-obnova-zajednicka-je-odgovornost-drzave-gradova-i-opcina/7676",
+   "link": "https://mdu.gov.hr/vijesti-4693/u-sibeniku-odrzana-prva-sjednica-vijeca-za-lokalni-razvoj-demografska-obnova-zajednicka-je-odgovornost-drzave-gradova-i-opcina/7676",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-10-26T11:12:26.459Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es una noticia sobre una sesión institucional, sin convocatoria abierta para personas ni asociaciones de la diáspora.",
+   "ficha": {
+    "cat": "loc",
+    "t": "Primera sesión del Consejo para el Desarrollo Local en Šibenik",
+    "t_hr": "U Šibeniku održana prva sjednica Vijeća za lokalni razvoj: Demografska obnova zajednička je odgovornost države, gradova i općina",
+    "who": "Ministerio de Demografía e Inmigración (Ministarstvo demografije i useljeništva)",
+    "amount": "",
+    "what": "La nota informa que se realizó en Šibenik la primera reunión del Consejo para el Desarrollo Local, un órgano asesor creado por la nueva Ley de Desarrollo Regional. Se habló de la renovación demográfica, el financiamiento de municipios y ciudades y el plan nacional de desarrollo regional. No abre ninguna beca, ayuda ni trámite para personas.",
+    "el": {
+     "ar": [
+      "no",
+      "No hay convocatoria abierta que pueda solicitar una persona que vive en Argentina."
+     ],
+     "cit": [
+      "no",
+      "No hay convocatoria abierta que pueda solicitar una persona ciudadana que vive en Argentina."
+     ],
+     "res": [
+      "no",
+      "No hay convocatoria abierta para quienes tienen residencia de diáspora en Croacia."
+     ]
+    },
+    "src": [
+     "mdu.gov.hr",
+     "https://mdu.gov.hr/vijesti-4693/u-sibeniku-odrzana-prva-sjednica-vijeca-za-lokalni-razvoj-demografska-obnova-zajednicka-je-odgovornost-drzave-gradova-i-opcina/7676"
+    ],
+    "ai_generated": true,
+    "flag": "La nota menciona montos de programas ya ejecutados o previstos (por ejemplo, OTOK+ de un millón de euros para 2027, 1,7 millones para retorno en 2026 y 1.700 becas de idioma ya otorgadas), pero no son convocatorias con plazo. Conviene revisar si alguno tendrá llamado público más adelante. La fuente no indica fecha de cierre ni convocatoria concreta; deadline queda en null."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  }
+ ]
+}

@@ -4,6 +4,20 @@
  "url": "https://www.pgz.hr/feed/?post_type=projekt_program",
  "items": [
   {
+   "guid": "https://www.pgz.hr/?post_type=projekt_program&p=108620",
+   "title": "Javni poziv za prijavu projekata promocije turizma za sufinanciranje iz Proračuna Primorsko-goranske županije za 2026. godinu",
+   "link": "https://www.pgz.hr/projekt_program/javni-poziv-za-prijavu-projekata-promocije-turizma-za-sufinanciranje-iz-proracuna-primorsko-goranske-zupanije-za-2026-godinu/",
+   "published": "2026-10-26T07:23:58.000Z",
+   "summary": "U Proračunu Primorsko-goranske županije za 2026. godinu, Razdjel 08. Upravni odjel za turizam poduzetništvo i ruralni razvoj, planirana su sredstva namijenjena za sufinanciranje projekata promocije turizma za sufinanciranje iz Proračuna Primorsko-goranske županije za 2026. godinu."
+  },
+  {
+   "guid": "https://www.pgz.hr/?post_type=projekt_program&p=108571",
+   "title": "Natječaj za financiranje programa i projekata iz područja unapređenja kvalitete života hrvatskih branitelja iz Domovinskog rata i članova njihovih obitelji u 2026. godini",
+   "link": "https://www.pgz.hr/projekt_program/natjecaj-za-financiranje-programa-i-projekata-iz-podrucja-unapredenja-kvalitete-zivota-hrvatskih-branitelja-iz-domovinskog-rata-i-clanova-njihovih-obitelji-u-2026-godini/",
+   "published": "2026-10-23T07:53:33.000Z",
+   "summary": "Predmet Natječaja je prikupljanje prijava programa i projekata iz područja unapređenja kvalitete života hrvatskih branitelja iz Domovinskog rata i članova njihovih obitelji koji će se financirati sredstvima Primorsko-goranske županije tijekom 2026. godine."
+  },
+  {
    "guid": "https://www.pgz.hr/?post_type=projekt_program&p=108223",
    "title": "Javni poziv za podnošenje zahtjeva za dodjelu financijskih sredstava iz projekta Komercijalizacija inovacija 2026.",
    "link": "https://www.pgz.hr/projekt_program/javni-poziv-za-podnosenje-zahtjeva-za-dodjelu-financijskih-sredstava-iz-projekta-komercijalizacija-inovacija-2026/",
@@ -58,20 +72,6 @@
    "link": "https://www.pgz.hr/projekt_program/javni-poziv-za-podnosenje-ponuda-za-kupnju-nekretnine-u-vlasnistvu-republike-hrvatske-na-podrucju-primorsko-goranske-zupanije-k-c-br-3598-povrsine-732-m2-upisana-u-zk-ul-2340-k-o-malinska-dubas/",
    "published": "2026-09-25T06:55:02.000Z",
    "summary": "Pozivaju se zainteresirane osobe za podnošenje ponuda za kupnju nekretnine u vlasništvu Republike Hrvatske na području Primorsko-goranske županije i to za nekretninu pod rednim brojem i zemljišnoknjižnom oznakom k.č.br. 3598 površine 732 m2, upisana u zk.ul. 2340 k.o. Malinska -Dubašnica, kod Općinskog suda u Crikvenici, Zemljišnoknjižnog odjela Krk."
-  },
-  {
-   "guid": "https://www.pgz.hr/?post_type=projekt_program&p=106798",
-   "title": "Natječaj za izbor osoba s područja Primorsko-goranske županije čiji će se razvoj inovacija sufinancirati bespovratnim poticajnim sredstvima u 2026.",
-   "link": "https://www.pgz.hr/projekt_program/natjecaj-za-izbor-osoba-s-podrucja-primorsko-goranske-zupanije-ciji-ce-se-razvoj-inovacija-sufinancirati-bespovratnim-poticajnim-sredstvima-u-2026/",
-   "published": "2026-09-21T08:33:22.000Z",
-   "summary": "Primorsko-goranska županija putem Upravnog odjela za turizam, poduzetništvo i ruralni razvoj, tradicionalno, od 1995. raspisuje Natječaj za izbor osoba s područja Primorsko - goranske županije čiji će se razvoj inovacija sufinancirati bespovratnim poticajnim sredstvima te dodjeljuje inovatorima bespovratna poticajna sredstva za razvoj inovacija."
-  },
-  {
-   "guid": "https://www.pgz.hr/?post_type=projekt_program&p=106677",
-   "title": "Nagrada Volonteri godine 2026.",
-   "link": "https://www.pgz.hr/projekt_program/nagrada-volonteri-godine-2026/",
-   "published": "2026-09-18T07:40:32.000Z",
-   "summary": "Udruga za razvoj civilnog društva SMART – Volonterski centar Rijeka, Primorsko-goranska županija i Grad Rijeka,obilježavaju 5.12. , Međunarodni dan volontera dodjelom nagrade „Volonteri godine“ ! Ove godine nagrada slavi 20 godina postojanja, prigodno, u godini u kojoj obilježavamo Međunarodnu godinu volontera za održivi razvoj 2026."
   }
  ]
 }

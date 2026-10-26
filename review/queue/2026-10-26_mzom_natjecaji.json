@@ -1,0 +1,109 @@
+{
+ "source": "mzom_natjecaji",
+ "name": "Ministerio de Ciencia, Educación y Juventud (MZOM): becas y convocatorias (Natječaji)",
+ "detected_at": "2026-10-26",
+ "added": [
+  {
+   "guid": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/javni-poziv-za-podnosenje-prijava-za-odobravanje-koristenja-udzbenika-u-skoli-i-uvrstavanje-udzbenika-u-katalog-odobrenih-udzbenika-za-sk-god-2027-2028/8116",
+   "title": "Javni poziv za podnošenje prijava za odobravanje korištenja udžbenika u školi i uvrštavanje udžbenika u Katalog odobrenih udžbenika za šk. god. 2027./2028.",
+   "link": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/javni-poziv-za-podnosenje-prijava-za-odobravanje-koristenja-udzbenika-u-skoli-i-uvrstavanje-udzbenika-u-katalog-odobrenih-udzbenika-za-sk-god-2027-2028/8116",
+   "published": "2026-10-22T12:31:18.000Z",
+   "summary": "Rok: 1. veljače 2027."
+  },
+  {
+   "guid": "https://mzom.gov.hr/javni-poziv-za-dodjelu-drzavnih-stipendija-u-stem-podrucjima-znanosti-za-akademsku-godinu-2026-2027-studentima-u-redovitom-statusu-koji-su-upisani-na-visoka-ucilista-u-republici-hrvatskoj/8114",
+   "title": "Javni poziv za dodjelu državnih stipendija u STEM područjima znanosti za akademsku godinu 2026./2027., studentima u redovitom statusu koji su upisani na visoka učilišta u Republici Hrvatskoj",
+   "link": "https://mzom.gov.hr/javni-poziv-za-dodjelu-drzavnih-stipendija-u-stem-podrucjima-znanosti-za-akademsku-godinu-2026-2027-studentima-u-redovitom-statusu-koji-su-upisani-na-visoka-ucilista-u-republici-hrvatskoj/8114",
+   "published": "2026-10-21T10:00:13.000Z",
+   "summary": "Rok: 11. studenoga 2026. do 12.00 sati"
+  }
+ ],
+ "changed": [],
+ "instrucciones": "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json.",
+ "borradores": [
+  {
+   "guid": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/javni-poziv-za-podnosenje-prijava-za-odobravanje-koristenja-udzbenika-u-skoli-i-uvrstavanje-udzbenika-u-katalog-odobrenih-udzbenika-za-sk-god-2027-2028/8116",
+   "link": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/javni-poziv-za-podnosenje-prijava-za-odobravanje-koristenja-udzbenika-u-skoli-i-uvrstavanje-udzbenika-u-katalog-odobrenih-udzbenika-za-sk-god-2027-2028/8116",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-10-26T11:12:39.973Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es una convocatoria dirigida a editoriales y personas jurídicas registradas para publicar libros de texto en Croacia, así que una persona descendiente de croatas o una asociación de la diáspora no podría aprovecharla.",
+   "ficha": {
+    "cat": "emp",
+    "t": "Convocatoria para aprobar libros de texto en escuelas (curso 2027/2028)",
+    "t_hr": "Javni poziv za podnošenje prijava za odobravanje korištenja udžbenika u školi i uvrštavanje udžbenika u Katalog odobrenih udžbenika za šk. god. 2027./2028.",
+    "who": "Ministerio de Ciencia, Educación y Juventud (Ministarstvo znanosti, obrazovanja i mladih)",
+    "amount": "",
+    "what": "El Ministerio invita a las editoriales registradas en Croacia a presentar sus libros de texto para que sean aprobados y entren al Catálogo de libros aprobados para el curso 2027/2028. Incluye materias generales de escuelas secundarias profesionales, módulos y libros en lenguas de minorías nacionales. No es una beca ni una ayuda para personas.",
+    "el": {
+     "ar": [
+      "no",
+      "Solo pueden postularse personas jurídicas registradas para la actividad editorial en Croacia."
+     ],
+     "cit": [
+      "no",
+      "Solo pueden postularse personas jurídicas registradas para la actividad editorial en Croacia."
+     ],
+     "res": [
+      "cond",
+      "Solo si la persona tiene una editorial registrada en Croacia; no aplica a personas físicas comunes."
+     ]
+    },
+    "src": [
+     "mzom.gov.hr",
+     "https://mzom.gov.hr/istaknute-teme/natjecaji-196/javni-poziv-za-podnosenje-prijava-za-odobravanje-koristenja-udzbenika-u-skoli-i-uvrstavanje-udzbenika-u-katalog-odobrenih-udzbenika-za-sk-god-2027-2028/8116"
+    ],
+    "ai_generated": true,
+    "deadline": "2027-02-01T23:59:00+01:00",
+    "flag": "El parámetro de 1346 euros que aparece en la fuente es el valor M para calcular el precio máximo de los libros de texto, no un monto de financiamiento; por eso amount quedó en null. La fecha de publicación del aviso es 2026-10-22, pero el documento oficial está fechado el 9 de octubre de 2026; conviene confirmar la fecha de publicación original. Confirmar en la fuente oficial si el plazo del 1 de febrero de 2027 se mantiene sin cambios."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": "Zainteresirane pravne osobe registrirane za nakladničku ili izdavačku djelatnost podnose Zahtjev za odobravanje udžbenika usklađenog sa Zakonom najkasnije do 1. veljače 2027. godine"
+   }
+  },
+  {
+   "guid": "https://mzom.gov.hr/javni-poziv-za-dodjelu-drzavnih-stipendija-u-stem-podrucjima-znanosti-za-akademsku-godinu-2026-2027-studentima-u-redovitom-statusu-koji-su-upisani-na-visoka-ucilista-u-republici-hrvatskoj/8114",
+   "link": "https://mzom.gov.hr/javni-poziv-za-dodjelu-drzavnih-stipendija-u-stem-podrucjima-znanosti-za-akademsku-godinu-2026-2027-studentima-u-redovitom-statusu-koji-su-upisani-na-visoka-ucilista-u-republici-hrvatskoj/8114",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-10-26T11:13:01.632Z",
+   "text_from": "página oficial",
+   "relevante": true,
+   "motivo_relevancia": "Descendientes de croatas en el exterior pueden postularse si están inscriptos en una institución croata en estado regular y tienen la confirmación de estatus de Hrvat izvan Republike Hrvatske.",
+   "ficha": {
+    "cat": "beca",
+    "t": "Beca estatal STEM para estudiantes universitarios en Croacia, año 2026/2027",
+    "t_hr": "Javni poziv za dodjelu državnih stipendija u STEM područjima znanosti za akademsku godinu 2026./2027., studentima u redovitom statusu koji su upisani na visoka učilišta u Republici Hrvatskoj",
+    "who": "Ministerio de Ciencia, Educación y Juventud de Croacia (Ministarstvo znanosti, obrazovanja i mladih)",
+    "amount": "",
+    "what": "Beca del Estado croata para estudiantes con estado regular inscriptos en carreras STEM (ciencias naturales, biomédicas, técnicas y biotécnicas, y algunas informáticas) en universidades o colegios de Croacia. Pueden postularse ciudadanos croatas, ciudadanos de la UE, del EEE o de Suiza, descendientes de croatas con la constancia correspondiente, y personas con asilo o protección subsidiaria. La selección se hace por ranking según el promedio y la nota de matemática del examen de madurez, o los créditos ECTS y promedio en años superiores.",
+    "el": {
+     "ar": [
+      "cond",
+      "Solo podría postularse como descendiente de croata con la constancia de estatus, y debe estar inscripto en una institución croata en estado regular; la fuente no aclara si eso exige presencia en Croacia."
+     ],
+     "cit": [
+      "cond",
+      "Con ciudadanía croata la norma lo permite, pero debe estar inscripto en una institución croata en estado regular y la fuente no aclara el efecto de vivir en Argentina."
+     ],
+     "res": [
+      "cond",
+      "Con residencia de diáspora podría encuadrar como croata en el exterior, pero debe presentar la constancia de estatus y estar inscripto en una institución croata."
+     ]
+    },
+    "src": [
+     "mzom.gov.hr",
+     "https://mzom.gov.hr/javni-poziv-za-dodjelu-drzavnih-stipendija-u-stem-podrucjima-znanosti-za-akademsku-godinu-2026-2027-studentima-u-redovitom-statusu-koji-su-upisani-na-visoka-ucilista-u-republici-hrvatskoj/8114"
+    ],
+    "ai_generated": true,
+    "deadline": "2026-11-11T23:59:00+01:00",
+    "flag": "Confirmar si un estudiante que vive en Argentina y estudia en una universidad croata puede postularse sin residir en Croacia. Verificar qué constancia exacta exige el Ministerio para croatas en el exterior y cómo se obtiene desde Argentina. La fuente dice que la documentación debe estar en croata y alfabeto latino; confirmar requisitos de traducción. Confirmar si el monto de 300 EUR es mensual por 9 cuotas o total del año; la fuente lo expresa como cuotas mensuales. El plazo cierra a las 12.00 sin aclarar huso horario; confirmar hora local de Croacia. La fuente no indica si la beca es renovable; dice que las STEM no docentes se pagan en un año académico. Se borró el monto «300 EUR por mes, en 9 cuotas, para estudios STEM (600 EUR por mes para estudios STEM de docencia)»: no aparece textual en la fuente. Revisar el PDF de la convocatoria."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": "Rok: 11. studenoga 2026. do 12.00 sati"
+   }
+  }
+ ]
+}

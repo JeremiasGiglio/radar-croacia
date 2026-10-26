@@ -4,6 +4,13 @@
  "url": "https://matis.hr/feed/",
  "items": [
   {
+   "guid": "https://matis.hr/?p=81672",
+   "title": "Povjestice – priča o 45 godina povezivanja hrvatskoga jezika, kulture i ljudi",
+   "link": "https://matis.hr/novosti/povjestice-prica-o-45-godina-povezivanja-hrvatskoga-jezika-kulture-i-ljudi/",
+   "published": "2026-10-21T13:29:59.000Z",
+   "summary": "U Hrvatskoj matici iseljenika predstavljena monografija Sveučilišne škole hrvatskoga jezika i kulture, koja svjedoči o četiri i pol desetljeća učenja, zajedništva i povezivanja s domovinom"
+  },
+  {
    "guid": "https://matis.hr/?p=81639",
    "title": "Održana svečana inauguracija rektora Sveučilišta u Zagrebu prof. dr. sc. Stjepana Lakušića",
    "link": "https://matis.hr/novosti/odrzana-svecana-inauguracija-rektora-sveucilista-u-zagrebu-prof-dr-sc-stjepana-lakusica/",
@@ -65,13 +72,6 @@
    "link": "https://matis.hr/novosti/slavonska-pjesma-i-zajednistvo-okupili-tisucu-hrvata-u-gerlingenu/",
    "published": "2026-10-11T17:34:00.000Z",
    "summary": "Na 22. Slavonskoj večeri pokraj Stuttgarta još je jednom potvrđena snažna povezanost hrvatskoga iseljeništva s Domovinom"
-  },
-  {
-   "guid": "https://matis.hr/?p=81512",
-   "title": "„Povjestice“: Monografija koja bilježi 45 godina Sveučilišne škole hrvatskoga jezika i kulture",
-   "link": "https://matis.hr/novosti/povjestice-monografija-koja-biljezi-45-godina-sveucilisne-skole-hrvatskoga-jezika-i-kulture/",
-   "published": "2026-10-10T12:50:55.000Z",
-   "summary": "Predstavljanje će se održati 21. listopada 2026. u 11 sati u Hrvatskoj matici iseljenika, Trg S. Radića 3, Zagreb"
   }
  ]
 }
