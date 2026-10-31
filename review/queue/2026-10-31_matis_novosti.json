@@ -1,0 +1,155 @@
+{
+ "source": "matis_novosti",
+ "name": "Hrvatska matica iseljenika: novedades y programas (Novosti)",
+ "detected_at": "2026-10-31",
+ "added": [
+  {
+   "guid": "https://matis.hr/?p=81804",
+   "title": "NAJAVA: „Dani Julija Adamovića 2027.”",
+   "link": "https://matis.hr/novosti/najava-dani-julija-adamovica-2027/",
+   "published": "2026-10-29T09:44:44.000Z",
+   "summary": "Predstavljanje manifestacije održat će se 30. 10. 2026. u Muzeju grada Iloka, Dvorac Odescalchi"
+  },
+  {
+   "guid": "https://matis.hr/?p=81767",
+   "title": "NFCA održala godišnje zasjedanje i odala počast sportskim velikanima hrvatskoga podrijetla",
+   "link": "https://matis.hr/novosti/nfca-odrzala-godisnje-zasjedanje-i-odala-pocast-sportskim-velikanima-hrvatskoga-podrijetla/",
+   "published": "2026-10-27T20:25:03.000Z",
+   "summary": "Dvodnevno okupljanje u Clevelandu proteklo u znaku hrvatsko-američkog zajedništva i isticanja doprinosa Hrvata američkom društvu."
+  },
+  {
+   "guid": "https://matis.hr/?p=81703",
+   "title": "„Rodoč za sjećanje“ – priča o zavičaju, ljudima i baštini koja ne blijedi",
+   "link": "https://matis.hr/novosti/rodoc-za-sjecanje-prica-o-zavicaju-ljudima-i-bastini-koja-ne-blijedi/",
+   "published": "2026-10-26T18:07:24.000Z",
+   "summary": "U Hrvatskoj matici iseljenika predstavljena je monografija Davora Šaravanje i Tibora Vrančića u izdanju HKUD-a \"Rodoč\""
+  }
+ ],
+ "changed": [],
+ "instrucciones": "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json.",
+ "borradores": [
+  {
+   "guid": "https://matis.hr/?p=81804",
+   "link": "https://matis.hr/novosti/najava-dani-julija-adamovica-2027/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-10-31T10:58:54.933Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es el anuncio de la presentación de un evento cultural y científico, sin convocatoria, becas ni ayudas que una persona o asociación pueda solicitar.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Anuncio de la presentación de «Dani Julija Adamovića 2027»",
+    "t_hr": "„Dani Julija Adamovića 2027.”",
+    "who": "Hrvatska matica iseljenika (Hrvatska matica iseljenika), como socio del proyecto; organiza el Hrvatsko akademsko društvo de Subotica",
+    "amount": "",
+    "what": "Es un evento cultural, científico y educativo que recuerda al lingüista, romanista y traductor croata Julije Adamović, nacido en Srijem. Se va a desarrollar en la primavera de 2027 con conferencias, exposiciones y proyecciones de cine en Ilok, Golubinci y Ruma. La presentación oficial será el 30 de octubre de 2026 a las 10 h en el Museo de la Ciudad de Ilok (Dvorac Odescalchi).",
+    "el": {
+     "ar": [
+      "cond",
+      "La fuente no describe requisitos de participación por perfil ni menciona un procedimiento de inscripción para personas que viven en Argentina."
+     ],
+     "cit": [
+      "cond",
+      "La fuente no describe requisitos de participación por perfil ni menciona un procedimiento de inscripción para ciudadanos que viven en Argentina."
+     ],
+     "res": [
+      "cond",
+      "La fuente no describe requisitos de participación para personas con residencia de diáspora en Croacia."
+     ]
+    },
+    "src": [
+     "matis.hr",
+     "https://matis.hr/novosti/najava-dani-julija-adamovica-2027/"
+    ],
+    "ai_generated": true,
+    "flag": "El aviso es solo una presentación de un evento; no se encontró convocatoria, ayuda económica ni plazo de postulación, por lo que relevante quedó en false. La fecha de publicación del aviso es 2026-10-29 y la presentación es el 30 de octubre de 2026; conviene confirmar si la presentación será presencial o si habrá transmisión. La fuente no indica si el programa de 2027 tendrá inscripción abierta para participantes o asociaciones de la diáspora; conviene verificarlo antes de publicar cualquier recomendación. La fuente menciona fechas de la presentación (30 de octubre de 2026, 10 h) pero no da datos de contacto ni enlaces; no se incluyeron links."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  },
+  {
+   "guid": "https://matis.hr/?p=81767",
+   "link": "https://matis.hr/novosti/nfca-odrzala-godisnje-zasjedanje-i-odala-pocast-sportskim-velikanima-hrvatskoga-podrijetla/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-10-31T10:59:25.688Z",
+   "text_from": "solo el resumen del feed (no se pudo leer la página: fetch failed)",
+   "relevante": false,
+   "motivo_relevancia": "Es una crónica sobre la asamblea anual de una asociación en Estados Unidos, sin convocatoria ni ayuda que una persona o asociación pueda solicitar.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Asamblea anual de la NFCA en Cleveland y homenaje a deportistas de origen croata",
+    "t_hr": "NFCA održala godišnje zasjedanje i odala počast sportskim velikanima hrvatskoga podrijetla",
+    "who": "NFCA (nombre oficial en croata no indicado en la fuente)",
+    "amount": "",
+    "what": "Es una nota de prensa que cuenta que la NFCA, una organización de descendientes de croatas en Estados Unidos, realizó su asamblea anual de dos días en Cleveland. Durante el encuentro se homenajeó a deportistas de origen croata y se destacó el aporte de los croatas a la sociedad estadounidense. No se ofrece ninguna beca, programa ni convocatoria.",
+    "el": {
+     "ar": [
+      "no",
+      "No hay convocatoria ni programa para aplicar; la nota solo informa sobre un encuentro en Estados Unidos."
+     ],
+     "cit": [
+      "no",
+      "No hay convocatoria ni programa para aplicar; la nota solo informa sobre un encuentro en Estados Unidos."
+     ],
+     "res": [
+      "no",
+      "No hay convocatoria ni programa vinculado a la residencia de diáspora en Croacia."
+     ]
+    },
+    "src": [
+     "matis.hr",
+     "https://matis.hr/novosti/nfca-odrzala-godisnje-zasjedanje-i-odala-pocast-sportskim-velikanima-hrvatskoga-podrijetla/"
+    ],
+    "ai_generated": true,
+    "flag": "El aviso es una nota informativa, no una convocatoria; conviene confirmar que no se publique como oportunidad en el Radar. La fuente solo trae el título y una frase de resumen; no figura el nombre oficial de la NFCA en croata ni datos de contacto. La categoría 'proy' se eligió por ser una asociación de la diáspora, aunque no describe un proyecto concreto. El texto de la fuente no contiene instrucciones para el agente; no hubo nada que ignorar. El borrador se hizo con solo el resumen del feed (no se pudo leer la página: fetch failed)."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  },
+  {
+   "guid": "https://matis.hr/?p=81703",
+   "link": "https://matis.hr/novosti/rodoc-za-sjecanje-prica-o-zavicaju-ljudima-i-bastini-koja-ne-blijedi/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-10-31T10:59:53.220Z",
+   "text_from": "solo el resumen del feed (no se pudo leer la página: fetch failed)",
+   "relevante": false,
+   "motivo_relevancia": "Es una noticia sobre la presentación de una monografía, no una convocatoria a la que una persona o asociación pueda postularse.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Presentación de la monografía «Rodoč za sjećanje» en la Matica iseljenika",
+    "t_hr": "„Rodoč za sjećanje“ – priča o zavičaju, ljudima i baštini koja ne blijedi",
+    "who": "Hrvatska matica iseljenika (Matica iseljenika Hrvatske)",
+    "amount": "",
+    "what": "La Matica iseljenika presentó la monografía de Davor Šaravanja y Tibor Vrančić, publicada por la asociación HKUD «Rodoč». El libro trata sobre el lugar de origen, su gente y su patrimonio. La nota no describe ningún programa, beca ni plazo para participar.",
+    "el": {
+     "ar": [
+      "no",
+      "No hay convocatoria ni programa al que una persona que viva en Argentina pueda aplicar."
+     ],
+     "cit": [
+      "no",
+      "No hay convocatoria ni programa al que una persona con ciudadanía argentina pueda aplicar."
+     ],
+     "res": [
+      "no",
+      "No hay convocatoria ni programa al que una persona con residencia de diáspora en Croacia pueda aplicar."
+     ]
+    },
+    "src": [
+     "matis.hr",
+     "https://matis.hr/novosti/rodoc-za-sjecanje-prica-o-zavicaju-ljudima-i-bastini-koja-ne-blijedi/"
+    ],
+    "ai_generated": true,
+    "flag": "El texto recibido es solo el encabezado y la bajada de la noticia; conviene revisar la página completa por si incluye alguna convocatoria o actividad abierta. Confirmar que la publicación es solo informativa y que no hay inscripción ni ayuda asociada a la monografía. El borrador se hizo con solo el resumen del feed (no se pudo leer la página: fetch failed)."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  }
+ ]
+}

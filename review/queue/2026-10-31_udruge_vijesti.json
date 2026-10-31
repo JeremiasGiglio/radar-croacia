@@ -1,0 +1,59 @@
+{
+ "source": "udruge_vijesti",
+ "name": "Oficina para las Asociaciones del Gobierno (Ured za udruge): novedades y convocatorias (Vijesti)",
+ "detected_at": "2026-10-31",
+ "added": [
+  {
+   "guid": "https://udruge.gov.hr/vijesti/dodijeljeno-11-ugovora-vrijednih-vise-od-1-1-milijuna-eura-za-mikro-lokalni-razvoj-diljem-hrvatske/6364",
+   "title": "Dodijeljeno 11 ugovora vrijednih više od 1,1 milijuna eura za mikro lokalni razvoj diljem Hrvatske",
+   "link": "https://udruge.gov.hr/vijesti/dodijeljeno-11-ugovora-vrijednih-vise-od-1-1-milijuna-eura-za-mikro-lokalni-razvoj-diljem-hrvatske/6364",
+   "published": "2026-10-27T12:49:11.000Z",
+   "summary": "Ugovoreni projekti unutar trećeg poziva Programa Civilno društvo, Švicarsko-hrvatskog programa suradnje"
+  }
+ ],
+ "changed": [],
+ "instrucciones": "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json.",
+ "borradores": [
+  {
+   "guid": "https://udruge.gov.hr/vijesti/dodijeljeno-11-ugovora-vrijednih-vise-od-1-1-milijuna-eura-za-mikro-lokalni-razvoj-diljem-hrvatske/6364",
+   "link": "https://udruge.gov.hr/vijesti/dodijeljeno-11-ugovora-vrijednih-vise-od-1-1-milijuna-eura-za-mikro-lokalni-razvoj-diljem-hrvatske/6364",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-10-31T11:00:50.133Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "La nota informa sobre contratos ya adjudicados en un llamado cerrado, no sobre una convocatoria abierta a la que una persona o asociación pueda postularse.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Se adjudicaron 11 contratos de microproyectos locales por más de 1,1 millones de euros",
+    "t_hr": "Dodijeljeno 11 ugovora vrijednih više od 1,1 milijuna eura za mikro lokalni razvoj diljem Hrvatske",
+    "who": "Oficina para las Asociaciones del Gobierno de la República de Croacia (Ured za udruge Vlade Republike Hrvatske)",
+    "amount": "",
+    "what": "Es una noticia de la entrega de once contratos a organizaciones de la sociedad civil dentro del tercer llamado de microproyectos del Programa Civil Society del Segundo Aporte Suizo. Los proyectos apuntan a fortalecer comunidades locales pequeñas y menos desarrolladas, con actividades como talleres, acciones voluntarias y fortalecimiento de organizaciones. La nota no abre ninguna inscripción nueva.",
+    "el": {
+     "ar": [
+      "no",
+      "Los contratos ya fueron adjudicados en un llamado que la fuente presenta como cerrado, y no se indica una nueva convocatoria para personas en Argentina."
+     ],
+     "cit": [
+      "no",
+      "Los contratos ya fueron adjudicados en un llamado que la fuente presenta como cerrado, y no se indica una nueva convocatoria para personas en Argentina."
+     ],
+     "res": [
+      "no",
+      "La fuente no menciona ninguna convocatoria abierta para personas con residencia de diáspora en Croacia."
+     ]
+    },
+    "src": [
+     "udruge.gov.hr",
+     "https://udruge.gov.hr/vijesti/dodijeljeno-11-ugovora-vrijednih-vise-od-1-1-milijuna-eura-za-mikro-lokalni-razvoj-diljem-hrvatske/6364"
+    ],
+    "ai_generated": true,
+    "flag": "La nota es de tipo noticia sobre adjudicación; no figura una fecha de cierre ni una convocatoria vigente. Conviene verificar en el sitio del Ured za udruge si hay un nuevo llamado de microproyectos antes de publicar. El texto menciona que el llamado fue en el marco del Programa Civilno društvo del Drugoga švicarskog doprinosa; si se abre una nueva edición, habría que revisar elegibilidad y montos por separado. El texto no contiene instrucciones dirigidas al sistema. Se borró el monto «más de 1,1 millones de euros en total (11 contratos adjudicados)»: no aparece textual en la fuente. Revisar el PDF de la convocatoria."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  }
+ ]
+}
