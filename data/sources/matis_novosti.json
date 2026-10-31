@@ -4,6 +4,27 @@
  "url": "https://matis.hr/feed/",
  "items": [
   {
+   "guid": "https://matis.hr/?p=81804",
+   "title": "NAJAVA: „Dani Julija Adamovića 2027.”",
+   "link": "https://matis.hr/novosti/najava-dani-julija-adamovica-2027/",
+   "published": "2026-10-29T09:44:44.000Z",
+   "summary": "Predstavljanje manifestacije održat će se 30. 10. 2026. u Muzeju grada Iloka, Dvorac Odescalchi"
+  },
+  {
+   "guid": "https://matis.hr/?p=81767",
+   "title": "NFCA održala godišnje zasjedanje i odala počast sportskim velikanima hrvatskoga podrijetla",
+   "link": "https://matis.hr/novosti/nfca-odrzala-godisnje-zasjedanje-i-odala-pocast-sportskim-velikanima-hrvatskoga-podrijetla/",
+   "published": "2026-10-27T20:25:03.000Z",
+   "summary": "Dvodnevno okupljanje u Clevelandu proteklo u znaku hrvatsko-američkog zajedništva i isticanja doprinosa Hrvata američkom društvu."
+  },
+  {
+   "guid": "https://matis.hr/?p=81703",
+   "title": "„Rodoč za sjećanje“ – priča o zavičaju, ljudima i baštini koja ne blijedi",
+   "link": "https://matis.hr/novosti/rodoc-za-sjecanje-prica-o-zavicaju-ljudima-i-bastini-koja-ne-blijedi/",
+   "published": "2026-10-26T18:07:24.000Z",
+   "summary": "U Hrvatskoj matici iseljenika predstavljena je monografija Davora Šaravanje i Tibora Vrančića u izdanju HKUD-a \"Rodoč\""
+  },
+  {
    "guid": "https://matis.hr/?p=81672",
    "title": "Povjestice – priča o 45 godina povezivanja hrvatskoga jezika, kulture i ljudi",
    "link": "https://matis.hr/novosti/povjestice-prica-o-45-godina-povezivanja-hrvatskoga-jezika-kulture-i-ljudi/",
@@ -51,27 +72,6 @@
    "link": "https://matis.hr/novosti/hrvatska-izvrsnost-bez-granica-acap-u-seattleu-proslavio-deset-godina-djelovanja/",
    "published": "2026-10-12T13:03:06.000Z",
    "summary": "Na jubilarnoj konferenciji razgovaralo se o umjetnoj inteligenciji, suradnji s domovinom i povezivanju mladih, uz najavu stručnih praksi u hrvatskim tvrtkama za 2027."
-  },
-  {
-   "guid": "https://matis.hr/?p=81536",
-   "title": "Hrvatska književnost u Frankfurtu: Predstavljene knjige o ljubavi, životu i iseljeništvu",
-   "link": "https://matis.hr/novosti/hrvatska-knjizevnost-u-frankfurtu-predstavljene-knjige-o-ljubavi-zivotu-i-iseljenistvu/",
-   "published": "2026-10-12T10:06:00.000Z",
-   "summary": "Na 78. Frankfurtskom sajmu knjiga hrvatski su autori i nakladnici predstavili dio suvremene književne produkcije"
-  },
-  {
-   "guid": "https://matis.hr/?p=4871",
-   "title": "Sveučilišna škola hrvatskoga jezika i kulture",
-   "link": "https://matis.hr/programi/sveucilisna-skola-hrvatskoga-jezika-i-kulture/",
-   "published": "2026-10-12T08:00:00.000Z",
-   "summary": "21. lipnja – 16. srpnja 2027., Zagreb (prijave do 21. svibnja 2027.) Facebook Organizatori: Hrvatska matica iseljenika i Rektorat Sveučilišta u ZagrebuMjesto: Zagreb VAŽNA NAPOMENA! Organizatori zadržavaju pravo izmjene datuma i programa, kao i pravo otkazivanja programa, sukladno cjelokupnoj aktualnoj situaciji u Hrvatskoj i svijetu te broju prijavljenih polaznika. FOTOGALERIJA SVEUČILIŠNE ŠKOLE Sveučilišna škola hrvatskoga jezika i kulture […]"
-  },
-  {
-   "guid": "https://matis.hr/?p=81529",
-   "title": "Slavonska pjesma i zajedništvo okupili tisuću Hrvata u Gerlingenu",
-   "link": "https://matis.hr/novosti/slavonska-pjesma-i-zajednistvo-okupili-tisucu-hrvata-u-gerlingenu/",
-   "published": "2026-10-11T17:34:00.000Z",
-   "summary": "Na 22. Slavonskoj večeri pokraj Stuttgarta još je jednom potvrđena snažna povezanost hrvatskoga iseljeništva s Domovinom"
   }
  ]
 }

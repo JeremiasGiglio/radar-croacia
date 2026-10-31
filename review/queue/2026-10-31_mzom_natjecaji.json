@@ -1,0 +1,156 @@
+{
+ "source": "mzom_natjecaji",
+ "name": "Ministerio de Ciencia, Educación y Juventud (MZOM): becas y convocatorias (Natječaji)",
+ "detected_at": "2026-10-31",
+ "added": [
+  {
+   "guid": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/poziv-na-podnosenje-projektnih-prijedloga-u-sklopu-esa-natjecaja-8127/8127",
+   "title": "Poziv na podnošenje projektnih prijedloga u sklopu ESA natječaja",
+   "link": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/poziv-na-podnosenje-projektnih-prijedloga-u-sklopu-esa-natjecaja-8127/8127",
+   "published": "2026-10-27T12:45:26.000Z",
+   "summary": "Rok: 30. studenoga 2026."
+  },
+  {
+   "guid": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/odluka-o-obustavi-postupka-internog-oglasa-za-popunjavanje-radnog-mjesta-na-neodredjeno-vrijeme/8124",
+   "title": "Odluka o obustavi postupka Internog oglasa za popunjavanje radnog mjesta na neodređeno vrijeme",
+   "link": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/odluka-o-obustavi-postupka-internog-oglasa-za-popunjavanje-radnog-mjesta-na-neodredjeno-vrijeme/8124",
+   "published": "2026-10-26T13:06:58.000Z",
+   "summary": "Interni oglas je objavljen u Centraliziranom sustavu za zapošljavanje dana 5. lipnja 2026. godine, šifra internog oglasa: 1222/IO/26/1295, Obavijest o objavljenom Internom oglasu na neodređeno vrijeme objavljena je u Narodnim novinama, broj 59/26, od 9. lipnja 2026. godine te na web stranici Ministarstva znanosti, obrazovanja i mladih, dana 5. lipnja 2026. godine."
+  },
+  {
+   "guid": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/odluka-o-obustavi-postupka-javnog-natjecaja-za-prijam-u-drzavnu-sluzbu-na-neodredjeno-vrijeme-8122/8122",
+   "title": "Odluka o obustavi postupka Javnog natječaja za prijam u državnu službu na neodređeno vrijeme",
+   "link": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/odluka-o-obustavi-postupka-javnog-natjecaja-za-prijam-u-drzavnu-sluzbu-na-neodredjeno-vrijeme-8122/8122",
+   "published": "2026-10-26T11:49:43.000Z",
+   "summary": "Javni natječaj je objavljen u Centraliziranom sustavu za zapošljavanje dana 3. srpnja 2026. godine, šifra natječaja: 1222/N/26/1442, Obavijest o objavljenom Javnom natječaju na neodređeno vrijeme objavljena je u Narodnim novinama, broj 72/26, od 8. srpnja 2026. godine te na web stranici Ministarstva znanosti, obrazovanja i mladih, dana 3. srpnja 2026. godine."
+  }
+ ],
+ "changed": [],
+ "instrucciones": "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json.",
+ "borradores": [
+  {
+   "guid": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/poziv-na-podnosenje-projektnih-prijedloga-u-sklopu-esa-natjecaja-8127/8127",
+   "link": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/poziv-na-podnosenje-projektnih-prijedloga-u-sklopu-esa-natjecaja-8127/8127",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-10-31T11:00:11.293Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "La convocatoria está dirigida a organizaciones científicas y empresas croatas para proyectos espaciales, y la fuente no menciona asociaciones de la diáspora ni personas descendientes de croatas.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Convocatoria ESA PECS para proyectos espaciales en Croacia",
+    "t_hr": "Poziv na podnošenje projektnih prijedloga u sklopu ESA natječaja",
+    "who": "Ministerio de Ciencia, Educación y Juventud (Ministarstvo znanosti, obrazovanja i mladih)",
+    "amount": "",
+    "what": "Es el cuarto llamado nacional del programa PECS de la Agencia Espacial Europea (ESA), abierto a organizaciones científicas y empresas croatas. Financia proyectos de investigación, desarrollo de productos o servicios, ciencia espacial, aplicaciones espaciales, cursos universitarios y tesis doctorales en temas del espacio.",
+    "el": {
+     "ar": [
+      "no",
+      "Está pensada para organizaciones científicas y empresas croatas, así que una persona que vive en Argentina no puede postularse por sí sola."
+     ],
+     "cit": [
+      "no",
+      "Está pensada para organizaciones científicas y empresas croatas, así que una persona ciudadana que vive en Argentina no puede postularse por sí sola."
+     ],
+     "res": [
+      "cond",
+      "Solo podría aplicar alguien con residencia de diáspora en Croacia si participa en una organización científica o empresa croata elegible, lo cual la fuente no detalla."
+     ]
+    },
+    "src": [
+     "mzom.gov.hr",
+     "https://mzom.gov.hr/istaknute-teme/natjecaji-196/poziv-na-podnosenje-projektnih-prijedloga-u-sklopu-esa-natjecaja-8127/8127"
+    ],
+    "ai_generated": true,
+    "deadline": "2026-11-30T23:59:00+01:00",
+    "flag": "La fuente no detalla los requisitos formales de elegibilidad de las entidades; conviene revisar la convocatoria completa en el enlace oficial antes de publicar. El aviso remite a una poveznica que no aparece en el texto; el sistema agrega el enlace oficial. No se menciona ningún monto de financiamiento en la fuente. Confirmar si alguna asociación de la diáspora podría ser entidad elegible, aunque la fuente habla solo de organizaciones científicas y empresas croatas. Contacto que figura en la fuente: jelena.ilicdreven@mzom.hr."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": "Rok: 30. studenoga 2026."
+   }
+  },
+  {
+   "guid": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/odluka-o-obustavi-postupka-internog-oglasa-za-popunjavanje-radnog-mjesta-na-neodredjeno-vrijeme/8124",
+   "link": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/odluka-o-obustavi-postupka-internog-oglasa-za-popunjavanje-radnog-mjesta-na-neodredjeno-vrijeme/8124",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-10-31T11:00:17.840Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es una decisión interna de la administración pública sobre un puesto de trabajo estatal ya cerrado, por lo que no es aprovechable por la diáspora.",
+   "ficha": {
+    "cat": "emp",
+    "t": "Se suspende un concurso interno para un puesto en el Ministerio de Ciencia, Educación y Juventud",
+    "t_hr": "Odluka o obustavi postupka Internog oglasa za popunjavanje radnog mjesta na neodređeno vrijeme",
+    "who": "Ministarstvo znanosti, obrazovanja i mladih (Ministarstvo znanosti, obrazovanja i mladih)",
+    "amount": "",
+    "what": "El Ministerio decidió cancelar el proceso de un concurso interno para cubrir un puesto de asesor superior por tiempo indefinido, porque los candidatos no obtuvieron resultados satisfactorios en la entrevista. Está dirigido solo a personas que ya trabajan en la administración pública croata.",
+    "el": {
+     "ar": [
+      "no",
+      "Es un concurso interno para empleados de la administración pública croata, ya cerrado."
+     ],
+     "cit": [
+      "no",
+      "Es un concurso interno para empleados de la administración pública croata, ya cerrado."
+     ],
+     "res": [
+      "no",
+      "Es un concurso interno para empleados de la administración pública croata, ya cerrado."
+     ]
+    },
+    "src": [
+     "mzom.gov.hr",
+     "https://mzom.gov.hr/istaknute-teme/natjecaji-196/odluka-o-obustavi-postupka-internog-oglasa-za-popunjavanje-radnog-mjesta-na-neodredjeno-vrijeme/8124"
+    ],
+    "ai_generated": true,
+    "flag": "La fuente es una decisión de cancelación de un concurso interno ya cerrado, no una convocatoria abierta; se marcó como no relevante según la regla 5. La fecha de publicación indicada (2026-10-26) es posterior a la fecha de la decisión (15 de octubre de 2026); conviene confirmar la fecha de publicación real."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  },
+  {
+   "guid": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/odluka-o-obustavi-postupka-javnog-natjecaja-za-prijam-u-drzavnu-sluzbu-na-neodredjeno-vrijeme-8122/8122",
+   "link": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/odluka-o-obustavi-postupka-javnog-natjecaja-za-prijam-u-drzavnu-sluzbu-na-neodredjeno-vrijeme-8122/8122",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-10-31T11:00:26.539Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es una decisión que suspende un concurso para un puesto fijo en la administración pública, así que no hay una convocatoria abierta que una persona descendiente de croatas o una asociación pueda aprovechar.",
+   "ficha": {
+    "cat": "emp",
+    "t": "Se suspende el concurso para auditor interno en el Ministerio de Ciencia y Educación",
+    "t_hr": "Odluka o obustavi postupka Javnog natječaja za prijam u državnu službu na neodređeno vrijeme",
+    "who": "Ministerio de Ciencia, Educación y Juventud (Ministarstvo znanosti, obrazovanja i mladih)",
+    "amount": "",
+    "what": "El ministerio canceló el concurso público para cubrir un puesto fijo de unidad de auditoría interna en la administración pública. La razón es que la única candidata que llegó a la entrevista no obtuvo resultados satisfactorios. El aviso informa la decisión y no abre ninguna inscripción nueva.",
+    "el": {
+     "ar": [
+      "no",
+      "El concurso fue suspendido y no hay convocatoria abierta para postularse."
+     ],
+     "cit": [
+      "no",
+      "El concurso fue suspendido y no hay convocatoria abierta para postularse."
+     ],
+     "res": [
+      "no",
+      "El concurso fue suspendido y no hay convocatoria abierta para postularse."
+     ]
+    },
+    "src": [
+     "mzom.gov.hr",
+     "https://mzom.gov.hr/istaknute-teme/natjecaji-196/odluka-o-obustavi-postupka-javnog-natjecaja-za-prijam-u-drzavnu-sluzbu-na-neodredjeno-vrijeme-8122/8122"
+    ],
+    "ai_generated": true,
+    "flag": "La decisión lleva fecha 19 de octubre de 2026, mientras que la fecha de publicación del aviso es 26 de octubre de 2026. Conviene confirmar la fecha de carga. El aviso no contiene instrucciones ni pedidos fuera del contenido normal de una decisión administrativa."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  }
+ ]
+}

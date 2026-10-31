@@ -1,0 +1,61 @@
+{
+ "source": "rijeka_javni_pozivi",
+ "name": "Ciudad de Rijeka (Grad Rijeka): convocatorias públicas (Javni pozivi)",
+ "detected_at": "2026-10-31",
+ "added": [
+  {
+   "guid": "wp:317695",
+   "title": "Otvoreni javni pozivi Saveza DND za Nagradu „Emil Paravina“ i Naj-projekte Dječjih vijeća i Dječjih foruma",
+   "link": "https://www.rijeka.hr/otvoreni-javni-pozivi-saveza-dnd-za-nagradu-emil-paravina-i-naj-projekte-djecjih-vijeca-i-djecjih-foruma-2/",
+   "published": "2026-10-27T12:34:27.000Z",
+   "updated": "2026-10-27T12:45:54.000Z",
+   "summary": "Savez društava „Naša djeca“ Hrvatske otvorio je javne pozive za Nagradu „Emil Paravina“ i za Naj-projekte Dječjih vijeća i Dječjih foruma za 2026. godinu. Natječaji su otvoreni do 13. studenoga."
+  }
+ ],
+ "changed": [],
+ "instrucciones": "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json.",
+ "borradores": [
+  {
+   "guid": "wp:317695",
+   "link": "https://www.rijeka.hr/otvoreni-javni-pozivi-saveza-dnd-za-nagradu-emil-paravina-i-naj-projekte-djecjih-vijeca-i-djecjih-foruma-2/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-10-31T11:00:39.684Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Son premios y convocatorias para niños de primaria y para consejos y foros infantiles de Croacia, sin mención a descendientes de croatas ni a asociaciones de la diáspora.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Convocatorias del Savez DND: premio Emil Paravina y Naj-proyecto de consejos infantiles",
+    "t_hr": "Otvoreni javni pozivi Saveza DND za Nagradu „Emil Paravina“ i Naj-projekte Dječjih vijeća i Dječjih foruma",
+    "who": "Unión de Sociedades «Nuestros Niños» de Croacia (Savez društava „Naša djeca“ Hrvatske)",
+    "amount": "",
+    "what": "Son dos convocatorias abiertas para 2026. Una es el premio Emil Paravina, para niños de 7 a 15 años de primaria que aportan a la participación infantil y a los derechos de la niñez, y puede presentarlo un niño con consentimiento de sus padres, una escuela o una asociación, entre otros. La otra premia proyectos participativos de consejos y foros infantiles de Croacia, realizados en 2026 o justo antes de presentar la solicitud.",
+    "el": {
+     "ar": [
+      "no",
+      "Está dirigida a niños de primaria y a consejos o foros infantiles de Croacia, no a personas que viven en Argentina."
+     ],
+     "cit": [
+      "no",
+      "Las convocatorias son para niños de primaria y consejos infantiles de Croacia, no para ciudadanos que viven en Argentina."
+     ],
+     "res": [
+      "no",
+      "Las convocatorias son para niños de primaria y consejos infantiles, no para personas con residencia de diáspora."
+     ]
+    },
+    "src": [
+     "rijeka.hr",
+     "https://www.rijeka.hr/otvoreni-javni-pozivi-saveza-dnd-za-nagradu-emil-paravina-i-naj-projekte-djecjih-vijeca-i-djecjih-foruma-2/"
+    ],
+    "ai_generated": true,
+    "deadline": "2026-11-13T23:59:00+01:00",
+    "flag": "La fuente no menciona descendientes de croatas ni asociaciones de la diáspora; se marcó como no relevante por eso. La fuente es un aviso de Grad Rijeka, pero la convocatoria es nacional; conviene confirmar en savez-dnd.hr las bases y los formularios. La fecha del acto de premiación es solo «prosinac 2026» (diciembre 2026) en Zagreb, sin día exacto. El texto no contiene instrucciones dirigidas al sistema; se analizó solo como dato."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": "Rok za prijavu je 13. studenoga 2026."
+   }
+  }
+ ]
+}

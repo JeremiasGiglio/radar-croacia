@@ -4,6 +4,14 @@
  "url": "https://www.rijeka.hr/wp-json/wp/v2/posts?search=javni%20poziv&orderby=date&order=desc&per_page=30&_fields=id,date_gmt,modified_gmt,link,title,excerpt",
  "items": [
   {
+   "guid": "wp:317695",
+   "title": "Otvoreni javni pozivi Saveza DND za Nagradu „Emil Paravina“ i Naj-projekte Dječjih vijeća i Dječjih foruma",
+   "link": "https://www.rijeka.hr/otvoreni-javni-pozivi-saveza-dnd-za-nagradu-emil-paravina-i-naj-projekte-djecjih-vijeca-i-djecjih-foruma-2/",
+   "published": "2026-10-27T12:34:27.000Z",
+   "updated": "2026-10-27T12:45:54.000Z",
+   "summary": "Savez društava „Naša djeca“ Hrvatske otvorio je javne pozive za Nagradu „Emil Paravina“ i za Naj-projekte Dječjih vijeća i Dječjih foruma za 2026. godinu. Natječaji su otvoreni do 13. studenoga."
+  },
+  {
    "guid": "wp:317448",
    "title": "Javni poziv za podnošenje prijava za sufinanciranje projekata učeničkih zadruga u školskoj godini 2026./2027.",
    "link": "https://www.rijeka.hr/javni-poziv-za-podnosenje-prijava-za-sufinanciranje-projekata-ucenickih-zadruga-u-skolskoj-godini-2026-2027/",
@@ -34,22 +42,6 @@
    "published": "2026-09-30T16:07:12.000Z",
    "updated": "2026-09-30T17:14:45.000Z",
    "summary": "Grad Rijeka prijavio je projekt naziva Dogradnja sportske dvorane Osnovne škole-Scuola elementare Gelsi na javni poziv Izgradnja, rekonstrukcija i opremanje osnovnih škola za potrebe jednosmjenskog rada i cjelodnevne škole, u sklopu Nacionalnog plana oporavka i otpornosti."
-  },
-  {
-   "guid": "wp:312381",
-   "title": "Objavljen Javni poziv za podnošenje prijedloga za dodjelu nagrada učenicima i mentorima",
-   "link": "https://www.rijeka.hr/objavljen-javni-poziv-za-podnosenje-prijedloga-za-dodjelu-nagrada-ucenicima-i-mentorima-3/",
-   "published": "2026-09-10T10:08:10.000Z",
-   "updated": "2026-09-10T10:11:54.000Z",
-   "summary": "Grad Rijeka je putem Upravnog odjela za odgoj, obrazovanje, tehničku kulturu i mlade objavio Javni poziv za podnošenje prijedloga za dodjelu nagrada učenicima i mentorima osnovnoškolskih i srednjoškolskih ustanova na području Grada Rijeke za posebna postignuća učenika na državnim natjecanjima, susretima i smotrama u školskoj godini 2025./2026."
-  },
-  {
-   "guid": "wp:312151",
-   "title": "Rinčić najavila natječaje za pročelnike – fokus na stručnosti i sposobnosti upravljanja",
-   "link": "https://www.rijeka.hr/rincic-najavila-natjecaje-za-procelnike-fokus-na-strucnosti-i-sposobnosti-upravljanja/",
-   "published": "2026-09-09T14:03:18.000Z",
-   "updated": "2026-10-06T12:10:53.000Z",
-   "summary": "„Nećemo birati podobne, nego sposobne“, poručila je gradonačelnica Iva Rinčić koja je na redovnoj konferenciji za medije najavila objavu natječaja za pročelnike. Predstavila je i novi model upravljanja Galebom te nova ulaganja u riječko školstvo. Zamjenik gradonačelnice Vedran Vivoda je govorio o uklanjanju nepropisnih reklama i suglasnosti HŽ Infrastrukturi za gradnju drugog kolosjeka."
   }
  ]
 }
