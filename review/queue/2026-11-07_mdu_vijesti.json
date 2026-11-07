@@ -1,0 +1,115 @@
+{
+ "source": "mdu_vijesti",
+ "name": "Ministerio de Demografía e Inmigración (MDU): novedades (Vijesti)",
+ "detected_at": "2026-11-07",
+ "added": [
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/ministar-sipic-na-simpoziju-u-splitu-primalje-ce-imati-kljucnu-ulogu-u-podrsci-majkama-i-nakon-izlaska-iz-rodilista/7693",
+   "title": "Ministar Šipić na simpoziju u Splitu: Primalje će imati ključnu ulogu u podršci majkama i nakon izlaska iz rodilišta",
+   "link": "https://mdu.gov.hr/vijesti-4693/ministar-sipic-na-simpoziju-u-splitu-primalje-ce-imati-kljucnu-ulogu-u-podrsci-majkama-i-nakon-izlaska-iz-rodilista/7693",
+   "published": "2026-11-06T15:07:52.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/7692",
+   "title": "Ministarstvo demografije i useljeništva otvorilo savjetovanje o Nacrtu prijedloga zakona o izmjenama i dopuni Zakona o rodiljnim i roditeljskim potporama, s Konačnim prijedlogom zakona, Obrascu zakonodavnih aktivnosti i Obrascu iskaza procjene učinaka propisa",
+   "link": "https://mdu.gov.hr/vijesti-4693/7692",
+   "published": "2026-11-06T13:39:59.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/drzavni-tajnik-mladen-barac-na-9-susretu-hrvata-juzne-amerike-u-cordobi-hrvati-u-juznoj-americi-vazan-su-most-izmedju-domovine-i-zemalja-u-kojima-zive/7691",
+   "title": "Državni tajnik Mladen Barać na 9. susretu Hrvata Južne Amerike u Córdobi: Hrvati u Južnoj Americi važan su most između domovine i zemalja u kojima žive",
+   "link": "https://mdu.gov.hr/vijesti-4693/drzavni-tajnik-mladen-barac-na-9-susretu-hrvata-juzne-amerike-u-cordobi-hrvati-u-juznoj-americi-vazan-su-most-izmedju-domovine-i-zemalja-u-kojima-zive/7691",
+   "published": "2026-11-06T11:56:24.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/drzavna-tajnica-blazanovic-na-otvorenju-dogradjenog-djecjeg-vrtica-radost-u-ludbregu/7690",
+   "title": "Državna tajnica Blažanović na otvorenju dograđenog Dječjeg vrtića Radost u Ludbregu",
+   "link": "https://mdu.gov.hr/vijesti-4693/drzavna-tajnica-blazanovic-na-otvorenju-dogradjenog-djecjeg-vrtica-radost-u-ludbregu/7690",
+   "published": "2026-11-05T14:50:22.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/odobrene-prve-novcane-potpore-za-velike-obitelji-za-kupnju-vozila-sa-sedam-ili-vise-sjedala-osigurano-4-5-milijuna-eura/7689",
+   "title": "Odobrene prve novčane potpore za velike obitelji: za kupnju vozila sa sedam ili više sjedala osigurano 4,5 milijuna eura",
+   "link": "https://mdu.gov.hr/vijesti-4693/odobrene-prve-novcane-potpore-za-velike-obitelji-za-kupnju-vozila-sa-sedam-ili-vise-sjedala-osigurano-4-5-milijuna-eura/7689",
+   "published": "2026-11-04T13:26:55.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/mudrica-na-48-interliberu-besplatne-slikovnice-mastaonica-i-kviz-znanja-za-djecu-i-roditelje/7688",
+   "title": "Mudrica na 48. Interliberu: besplatne slikovnice, Maštaonica i kviz znanja za djecu i roditelje",
+   "link": "https://mdu.gov.hr/vijesti-4693/mudrica-na-48-interliberu-besplatne-slikovnice-mastaonica-i-kviz-znanja-za-djecu-i-roditelje/7688",
+   "published": "2026-11-04T08:35:54.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/drzavna-tajnica-blazanovic-na-konferenciji-poduzetnice-3-0-podrska-obitelji-i-fleksibilniji-uvjeti-rada-vazni-su-za-profesionalni-razvoj-zena/7687",
+   "title": "Državna tajnica Blažanović na konferenciji Poduzetnice 3.0: Podrška obitelji i fleksibilniji uvjeti rada važni su za profesionalni razvoj žena",
+   "link": "https://mdu.gov.hr/vijesti-4693/drzavna-tajnica-blazanovic-na-konferenciji-poduzetnice-3-0-podrska-obitelji-i-fleksibilniji-uvjeti-rada-vazni-su-za-profesionalni-razvoj-zena/7687",
+   "published": "2026-11-03T14:46:35.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/ministar-sipic-iz-munchena-vrijeme-je-da-se-ponovno-priblizimo-svom-domu/7686",
+   "title": "Ministar Šipić iz Münchena: Vrijeme je da se ponovno približimo svom domu",
+   "link": "https://mdu.gov.hr/vijesti-4693/ministar-sipic-iz-munchena-vrijeme-je-da-se-ponovno-priblizimo-svom-domu/7686",
+   "published": "2026-10-31T15:02:46.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/ministar-sipic-u-radnom-posjetu-osijeku-demografska-obnova-slavonije-zajednicki-je-zadatak-drzave-lokalne-zajednice-i-znanstvenog-kruga/7682",
+   "title": "Ministar Šipić u radnom posjetu Osijeku: Demografska obnova Slavonije zajednički je zadatak države, lokalne zajednice i znanstvenog kruga",
+   "link": "https://mdu.gov.hr/vijesti-4693/ministar-sipic-u-radnom-posjetu-osijeku-demografska-obnova-slavonije-zajednicki-je-zadatak-drzave-lokalne-zajednice-i-znanstvenog-kruga/7682",
+   "published": "2026-10-26T16:58:32.000Z",
+   "summary": ""
+  }
+ ],
+ "changed": [],
+ "instrucciones": "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json.",
+ "borradores": [
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/ministar-sipic-na-simpoziju-u-splitu-primalje-ce-imati-kljucnu-ulogu-u-podrsci-majkama-i-nakon-izlaska-iz-rodilista/7693",
+   "link": "https://mdu.gov.hr/vijesti-4693/ministar-sipic-na-simpoziju-u-splitu-primalje-ce-imati-kljucnu-ulogu-u-podrsci-majkama-i-nakon-izlaska-iz-rodilista/7693",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-07T11:52:18.043Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es una noticia sobre un piloto anunciado y un simposio, sin convocatoria abierta ni plazo para postularse.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Piloto «Mama, tu smo» de apoyo a madres en los primeros tres meses tras el parto",
+    "t_hr": "Ministar Šipić na simpoziju u Splitu: Primalje će imati ključnu ulogu u podršci majkama i nakon izlaska iz rodilišta",
+    "who": "Ministerio de Demografía e Inmigración (Ministarstvo demografije i useljeništva)",
+    "amount": "",
+    "what": "El ministro Ivan Šipić anunció un piloto llamado «Mama, tu smo» que daría apoyo práctico, psicológico y de lactancia a las madres durante tres meses después del parto, con un rol destacado de las parteras. Según la nota, la prueba se haría en Zagreb, Split, Rijeka y Osijek, con inicio aproximado en la segunda mitad de 2027, y no hay todavía una convocatoria para postularse.",
+    "el": {
+     "ar": [
+      "no",
+      "No hay convocatoria abierta y el piloto se planea en ciudades croatas concretas."
+     ],
+     "cit": [
+      "no",
+      "No hay convocatoria abierta y el piloto se planea en ciudades croatas concretas."
+     ],
+     "res": [
+      "cond",
+      "Solo se planea en cuatro ciudades y todavía no hay requisitos ni inscripción publicados."
+     ]
+    },
+    "src": [
+     "mdu.gov.hr",
+     "https://mdu.gov.hr/vijesti-4693/ministar-sipic-na-simpoziju-u-splitu-primalje-ce-imati-kljucnu-ulogu-u-podrsci-majkama-i-nakon-izlaska-iz-rodilista/7693"
+    ],
+    "ai_generated": true,
+    "flag": "Es una noticia sin convocatoria: no hay requisitos, formulario ni plazo publicados. El inicio es solo aproximado («okvirno») en la segunda mitad de 2027; confirmar si hay novedades. Las cifras del texto (3.001,79 €, 618 € y 803 €, la ayuda para vehículos de siete plazas) corresponden a otras medidas y no se cargaron como monto de este piloto. Confirmar si el piloto estará abierto a residentes con residencia de diáspora (art. 79.a) y cómo se accede."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  }
+ ]
+}

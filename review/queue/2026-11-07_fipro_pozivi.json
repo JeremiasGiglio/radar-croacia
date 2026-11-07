@@ -1,0 +1,66 @@
+{
+ "source": "fipro_pozivi",
+ "name": "Fundación FIPRO: convocatorias para innovación en la región de Rijeka (Javni pozivi, Zaklada FIPRO)",
+ "detected_at": "2026-11-07",
+ "added": [],
+ "changed": [
+  {
+   "guid": "wp:1320",
+   "title": "Javni poziv – PGŽ – 2026",
+   "link": "https://www.fipro.hr/javni-poziv-pgz-2026/",
+   "published": "2026-10-15T06:17:56.000Z",
+   "updated": "2026-11-02T08:20:57.000Z",
+   "summary": "Javni poziv za podnošenje zahtjeva za dodjelu financijskih sredstava iz projekta Komercijalizacija inovacija",
+   "before": {
+    "title": "Javni poziv – PGŽ – 2026",
+    "summary": "Javni poziv za podnošenje zahtjeva za dodjelu financijskih sredstava iz projekta Komercijalizacija inovacija",
+    "updated": "2026-10-15T06:18:00.000Z"
+   }
+  }
+ ],
+ "instrucciones": "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json.",
+ "borradores": [
+  {
+   "guid": "wp:1320",
+   "link": "https://www.fipro.hr/javni-poziv-pgz-2026/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-07T11:47:59.334Z",
+   "text_from": "página oficial",
+   "relevante": true,
+   "motivo_relevancia": "Personas físicas inventoras y pequeños emprendimientos pueden pedir financiamiento para desarrollar y comercializar una innovación, aunque con requisitos de sede en la región.",
+   "ficha": {
+    "cat": "emp",
+    "t": "Fondos para comercializar innovaciones en Primorsko-goranska",
+    "t_hr": "Javni poziv – PGŽ – 2026",
+    "who": "Zaklada FIPRO junto con la Región Primorsko-goranska (Zaklada FIPRO; Primorsko-goranska županija)",
+    "amount": "",
+    "what": "Es una convocatoria del proyecto «Komercijalizacija inovacija» para financiar el desarrollo y la salida al mercado de una innovación, como prototipos, equipos, materiales, certificaciones, promoción y protección de la propiedad intelectual. Pueden postularse personas físicas inventoras y pequeños emprendimientos; para empresas, la sede debe estar en Primorsko-goranska županija, y la innovación debe poder demostrarse con un prototipo funcional, una prueba de concepto o un artículo científico publicado.",
+    "el": {
+     "ar": [
+      "cond",
+      "Puede postularse como persona física inventora, pero antes del contrato debe constituir un obrt o sociedad con sede en Primorsko-goranska županija o ceder los derechos a una empresa con sede allí."
+     ],
+     "cit": [
+      "cond",
+      "Igual que para el perfil argentino sin ciudadanía croata: requiere sede en Primorsko-goranska županija para la empresa antes del contrato."
+     ],
+     "res": [
+      "cond",
+      "La fuente no exige residencia de diáspora, pero la empresa debe tener sede en Primorsko-goranska županija y la elegibilidad depende de cumplir todos los requisitos."
+     ]
+    },
+    "src": [
+     "fipro.hr",
+     "https://www.fipro.hr/javni-poziv-pgz-2026/"
+    ],
+    "ai_generated": true,
+    "deadline": "2026-11-13T23:59:00+01:00",
+    "flag": "Confirmar si una persona física que vive en Argentina puede postularse sin residencia en Croacia, dado que la fuente no lo aclara. Confirmar si la sede de la empresa debe estar en PGŽ al momento de postularse o solo antes de firmar el contrato. El aviso indica que quienes firmaron un contrato con FIPRO en los últimos 2 años no pueden ser beneficiarios. Verificar el requisito de constancia de no deuda tributaria (Potvrda Porezne uprave) para subjetos pequeños, que debe ser reciente. Los plazos de ejecución (6 meses desde el contrato) y de resolución (3.12.2026) deben tomarse de la convocatoria oficial. La fuente indica que el monto mínimo y máximo son por solicitante, mientras que 60.000 euros es el total de la convocatoria; la cita textual corresponde al total. El encabezado del sitio dice «Zaklada Fipro» y la metadata menciona «Fundación FIPRO»; confirmar el nombre oficial del organismo. Pedir confirmación de los documentos exigidos y de la prueba de innovación antes de publicar. Se borró el monto «Hasta 60.000 euros en total (sin IVA) para la convocatoria; cada solicitante puede recibir entre 7.000 y 20.000 euros. La mitad es a fondo perdido y la mitad es un préstamo sin intereses.»: no aparece textual en la fuente. Revisar el PDF de la convocatoria."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": "Prijave se zaprimaju do 13.11.2026. godine do kraja dana (23:59 h)."
+   }
+  }
+ ]
+}
