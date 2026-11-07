@@ -1,0 +1,42 @@
+{
+ "source": "rijeka_javni_pozivi",
+ "name": "Ciudad de Rijeka (Grad Rijeka): convocatorias públicas (Javni pozivi)",
+ "detected_at": "2026-11-07",
+ "added": [
+  {
+   "guid": "wp:318671",
+   "title": "Javni poziv za podnošenje prijedloga za dodjelu nagrade Grada Rijeke „AmbasadoRI mira“ u 2027. godini",
+   "link": "https://www.rijeka.hr/javni-poziv-za-podnosenje-prijedloga-za-dodjelu-nagrade-grada-rijeke-ambasadori-mira-u-2027-godini/",
+   "published": "2026-11-05T23:09:26.000Z",
+   "updated": "2026-11-06T07:41:20.000Z",
+   "summary": "Grad Rijeka, Upravni odjel za odgoj, obrazovanje, tehničku kulturu i mlade objavljuje Javni poziv za podnošenje prijedloga za dodjelu nagrade Grada Rijeke „AmbasadoRI mira“ u 2027. godini. Nagrada, koja se dodjeljuje za doprinos borbi protiv nasilja, promicanju tolerancije, međusobnog poštivanja i uvažavanja različitosti, u 2027. godini dodijelit će se po prvi put."
+  },
+  {
+   "guid": "wp:318904",
+   "title": "Grad Rijeka vratio 3,86 milijuna eura za sortirnicu; predstavljeni i novi projekti i potpore građanima",
+   "link": "https://www.rijeka.hr/grad-rijeka-vratio-386-milijuna-eura-za-sortirnicu-predstavljeni-i-novi-projekti-i-potpore-gradanima/",
+   "published": "2026-11-04T18:46:18.000Z",
+   "updated": "2026-11-04T18:46:18.000Z",
+   "summary": "Grad Rijeka vratio je 3,86 milijuna eura europskih sredstava za projekt sortirnice u Mihačevoj dragi, izvijestila je gradonačelnica Iva Rinčić na redovnoj konferenciji za medije. Uz gradonačelnicu, konferenciji su prisustvovali njezini zamjenici Vedran Vivoda i Aleksandar – Saša Milaković, koji su predstavili i aktualne gradske projekte, javne pozive i mjere potpore građanima, poduzetnicima, kulturnom sektoru i obrazovanju."
+  },
+  {
+   "guid": "wp:318397",
+   "title": "Javni poziv za dodjelu bespovratnih potpora poduzetnicima radi ublažavanja negativnih posljedica uzrokovanih radovima izvedenim u sklopu projekta “Poboljšanje vodnokomunalne infrastrukture na području aglomeracije Rijeka“",
+   "link": "https://www.rijeka.hr/javni-poziv-za-dodjelu-bespovratnih-potpora-poduzetnicima-radi-ublazavanja-negativnih-posljedica-uzrokovanih-radovima-izvedenim-u-sklopu-projekta-poboljsanje-vodnokomunalne-infrastrukture-na/",
+   "published": "2026-11-02T07:00:36.000Z",
+   "updated": "2026-11-05T09:28:43.000Z",
+   "summary": "Grad Rijeka objavio je Javni poziv za dodjelu bespovratnih potpora poduzetnicima radi ublažavanja negativnih posljedica uzrokovanih radovima izvedenim u sklopu projekta “Poboljšanje vodnokomunalne infrastrukture na području aglomeracije Rijeka“."
+  },
+  {
+   "guid": "wp:317695",
+   "title": "Otvoreni javni pozivi Saveza DND za Nagradu „Emil Paravina“ i Naj-projekte Dječjih vijeća i Dječjih foruma",
+   "link": "https://www.rijeka.hr/otvoreni-javni-pozivi-saveza-dnd-za-nagradu-emil-paravina-i-naj-projekte-djecjih-vijeca-i-djecjih-foruma-2/",
+   "published": "2026-10-27T12:34:27.000Z",
+   "updated": "2026-10-27T12:45:54.000Z",
+   "summary": "Savez društava „Naša djeca“ Hrvatske otvorio je javne pozive za Nagradu „Emil Paravina“ i za Naj-projekte Dječjih vijeća i Dječjih foruma za 2026. godinu. Natječaji su otvoreni do 13. studenoga."
+  }
+ ],
+ "changed": [],
+ "instrucciones": "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json.",
+ "borradores": []
+}
