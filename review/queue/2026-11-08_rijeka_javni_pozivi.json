@@ -1,0 +1,85 @@
+{
+ "source": "rijeka_javni_pozivi",
+ "name": "Ciudad de Rijeka (Grad Rijeka): convocatorias públicas (Javni pozivi)",
+ "detected_at": "2026-11-08",
+ "added": [
+  {
+   "guid": "wp:318671",
+   "title": "Javni poziv za podnošenje prijedloga za dodjelu nagrade Grada Rijeke „AmbasadoRI mira“ u 2027. godini",
+   "link": "https://www.rijeka.hr/javni-poziv-za-podnosenje-prijedloga-za-dodjelu-nagrade-grada-rijeke-ambasadori-mira-u-2027-godini/",
+   "published": "2026-11-05T23:09:26.000Z",
+   "updated": "2026-11-06T07:41:20.000Z",
+   "summary": "Grad Rijeka, Upravni odjel za odgoj, obrazovanje, tehničku kulturu i mlade objavljuje Javni poziv za podnošenje prijedloga za dodjelu nagrade Grada Rijeke „AmbasadoRI mira“ u 2027. godini. Nagrada, koja se dodjeljuje za doprinos borbi protiv nasilja, promicanju tolerancije, međusobnog poštivanja i uvažavanja različitosti, u 2027. godini dodijelit će se po prvi put."
+  },
+  {
+   "guid": "wp:318904",
+   "title": "Grad Rijeka vratio 3,86 milijuna eura za sortirnicu; predstavljeni i novi projekti i potpore građanima",
+   "link": "https://www.rijeka.hr/grad-rijeka-vratio-386-milijuna-eura-za-sortirnicu-predstavljeni-i-novi-projekti-i-potpore-gradanima/",
+   "published": "2026-11-04T18:46:18.000Z",
+   "updated": "2026-11-04T18:46:18.000Z",
+   "summary": "Grad Rijeka vratio je 3,86 milijuna eura europskih sredstava za projekt sortirnice u Mihačevoj dragi, izvijestila je gradonačelnica Iva Rinčić na redovnoj konferenciji za medije. Uz gradonačelnicu, konferenciji su prisustvovali njezini zamjenici Vedran Vivoda i Aleksandar – Saša Milaković, koji su predstavili i aktualne gradske projekte, javne pozive i mjere potpore građanima, poduzetnicima, kulturnom sektoru i obrazovanju."
+  },
+  {
+   "guid": "wp:318397",
+   "title": "Javni poziv za dodjelu bespovratnih potpora poduzetnicima radi ublažavanja negativnih posljedica uzrokovanih radovima izvedenim u sklopu projekta “Poboljšanje vodnokomunalne infrastrukture na području aglomeracije Rijeka“",
+   "link": "https://www.rijeka.hr/javni-poziv-za-dodjelu-bespovratnih-potpora-poduzetnicima-radi-ublazavanja-negativnih-posljedica-uzrokovanih-radovima-izvedenim-u-sklopu-projekta-poboljsanje-vodnokomunalne-infrastrukture-na/",
+   "published": "2026-11-02T07:00:36.000Z",
+   "updated": "2026-11-05T09:28:43.000Z",
+   "summary": "Grad Rijeka objavio je Javni poziv za dodjelu bespovratnih potpora poduzetnicima radi ublažavanja negativnih posljedica uzrokovanih radovima izvedenim u sklopu projekta “Poboljšanje vodnokomunalne infrastrukture na području aglomeracije Rijeka“."
+  },
+  {
+   "guid": "wp:317695",
+   "title": "Otvoreni javni pozivi Saveza DND za Nagradu „Emil Paravina“ i Naj-projekte Dječjih vijeća i Dječjih foruma",
+   "link": "https://www.rijeka.hr/otvoreni-javni-pozivi-saveza-dnd-za-nagradu-emil-paravina-i-naj-projekte-djecjih-vijeca-i-djecjih-foruma-2/",
+   "published": "2026-10-27T12:34:27.000Z",
+   "updated": "2026-10-27T12:45:54.000Z",
+   "summary": "Savez društava „Naša djeca“ Hrvatske otvorio je javne pozive za Nagradu „Emil Paravina“ i za Naj-projekte Dječjih vijeća i Dječjih foruma za 2026. godinu. Natječaji su otvoreni do 13. studenoga."
+  }
+ ],
+ "changed": [],
+ "instrucciones": "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json.",
+ "borradores": [
+  {
+   "guid": "wp:318671",
+   "link": "https://www.rijeka.hr/javni-poziv-za-podnosenje-prijedloga-za-dodjelu-nagrade-grada-rijeke-ambasadori-mira-u-2027-godini/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-08T12:06:08.735Z",
+   "text_from": "página oficial",
+   "relevante": true,
+   "motivo_relevancia": "Puede aprovecharla un alumno de una escuela de Rijeka con residencia de diáspora, o una asociación con sede en Rijeka que proponga a un socio, aunque no es una beca para postularse directamente.",
+   "ficha": {
+    "cat": "loc",
+    "t": "Premio Ciudad de Rijeka «AmbasadoRI mira» 2027 (propuestas)",
+    "t_hr": "Javni poziv za podnošenje prijedloga za dodjelu nagrade Grada Rijeke „AmbasadoRI mira“ u 2027. godini",
+    "who": "Grad Rijeka (Grad Rijeka), Upravni odjel za odgoj, obrazovanje, tehničku kulturu i mlade (Upravni odjel za odgoj, obrazovanje, tehničku kulturu i mlade)",
+    "amount": "1.000,00 eura por alumno y 2.000,00 eura por curso (razredni odjel), además del reconocimiento",
+    "what": "Premio que reconoce el aporte a la lucha contra la violencia y a la tolerancia y el respeto por las diferencias. Se entrega en 2027 por primera vez, en tres categorías: «Bura» para un alumno de primaria (5.º a 8.º) o de secundaria (1.º a 5.º), «Maestral» para un curso de primaria y «Levant» para un curso de secundaria. Las propuestas las presentan escuelas de Rijeka o asociaciones de ciudadanos con sede en Rijeka, nunca el propio candidato.",
+    "el": {
+     "ar": [
+      "no",
+      "Solo pueden proponerse alumnos regulares de escuelas con sede en Rijeka, así que una persona que vive en Argentina no puede aprovecharlo desde allí."
+     ],
+     "cit": [
+      "no",
+      "Solo pueden proponerse alumnos regulares de escuelas con sede en Rijeka, así que una persona que vive en Argentina no puede aprovecharlo desde allí."
+     ],
+     "res": [
+      "cond",
+      "Puede aplicar si la persona vive en Croacia con residencia de diáspora y es alumna regular de una escuela de Rijeka, pero la propuesta la hace la escuela o una asociación, no la persona."
+     ]
+    },
+    "src": [
+     "rijeka.hr",
+     "https://www.rijeka.hr/javni-poziv-za-podnosenje-prijedloga-za-dodjelu-nagrade-grada-rijeke-ambasadori-mira-u-2027-godini/"
+    ],
+    "ai_generated": true,
+    "deadline": "2026-12-07T23:59:00+01:00",
+    "flag": "La convocatoria es para premiar alumnos y cursos de escuelas de Rijeka; no es una beca ni un apoyo económico para postularse directamente, y conviene dejarlo claro en la ficha. Confirmar si una asociación de la diáspora con sede en Rijeka puede proponer a un socio que no sea alumno de la escuela, ya que la fuente solo menciona al candidato como miembro de la asociación. La fuente no dice si el premio en dinero se paga además del reconocimiento o si es un monto único por ganador; se tomó lo que dice la frase citada. La fuente indica que las propuestas se presentan por Pisarnica o correo postal; no se incluyen links según las reglas."
+   },
+   "citas": {
+    "amount": "u novčanom iznosu od 1.000,00 eura za učenika i 2.000,00 eura za razredni odjel.",
+    "deadline": "Rok za podnošenje prijedloga je 7. prosinca 2026. godine."
+   }
+  }
+ ]
+}

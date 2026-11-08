@@ -1,0 +1,66 @@
+{
+ "source": "fipro_pozivi",
+ "name": "Fundación FIPRO: convocatorias para innovación en la región de Rijeka (Javni pozivi, Zaklada FIPRO)",
+ "detected_at": "2026-11-08",
+ "added": [],
+ "changed": [
+  {
+   "guid": "wp:1320",
+   "title": "Javni poziv – PGŽ – 2026",
+   "link": "https://www.fipro.hr/javni-poziv-pgz-2026/",
+   "published": "2026-10-15T06:17:56.000Z",
+   "updated": "2026-11-02T08:20:57.000Z",
+   "summary": "Javni poziv za podnošenje zahtjeva za dodjelu financijskih sredstava iz projekta Komercijalizacija inovacija",
+   "before": {
+    "title": "Javni poziv – PGŽ – 2026",
+    "summary": "Javni poziv za podnošenje zahtjeva za dodjelu financijskih sredstava iz projekta Komercijalizacija inovacija",
+    "updated": "2026-10-15T06:18:00.000Z"
+   }
+  }
+ ],
+ "instrucciones": "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json.",
+ "borradores": [
+  {
+   "guid": "wp:1320",
+   "link": "https://www.fipro.hr/javni-poziv-pgz-2026/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-08T12:01:41.466Z",
+   "text_from": "página oficial",
+   "relevante": true,
+   "motivo_relevancia": "Personas físicas inventoras y pequeñas empresas con sede en Primorsko-goranska županija pueden postularse para desarrollar y comercializar una innovación, por lo que una persona descendiente de croatas podría aprovecharla si cumple las condiciones.",
+   "ficha": {
+    "cat": "emp",
+    "t": "Fondos para comercializar innovaciones en la región de Rijeka (PGŽ)",
+    "t_hr": "Javni poziv – PGŽ – 2026",
+    "who": "Fundación FIPRO (Zaklada FIPRO) junto con el Condado de Primorje-Gorski Kotar (Primorsko-goranska županija)",
+    "amount": "",
+    "what": "Es una convocatoria de fondos para inventores y pequeñas empresas que quieran llevar al mercado una innovación ya comprobada, con prototipo funcional, prueba de concepto o artículo científico publicado. Financia equipos, materiales, prototipos, certificaciones, promoción, búsqueda de patentes y protección de la propiedad intelectual. La mitad del dinero es a fondo perdido y la otra mitad es un préstamo sin intereses.",
+    "el": {
+     "ar": [
+      "cond",
+      "Exige que la empresa o el taller tengan sede en Primorsko-goranska županija, así que solo sería posible si se establece allí."
+     ],
+     "cit": [
+      "cond",
+      "Exige que la empresa o el taller tengan sede en Primorsko-goranska županija, así que solo sería posible si se establece allí."
+     ],
+     "res": [
+      "cond",
+      "Puede postularse como persona física, pero antes de firmar el contrato debe registrar una actividad con sede en PGŽ y cumplir con las obligaciones fiscales."
+     ]
+    },
+    "src": [
+     "fipro.hr",
+     "https://www.fipro.hr/javni-poziv-pgz-2026/"
+    ],
+    "ai_generated": true,
+    "deadline": "2026-11-13T23:59:00+01:00",
+    "flag": "La fuente no dice expresamente si una persona que vive fuera de Croacia puede postularse como persona física; confirmar con FIPRO. Confirmar si el monto de 7.000 a 20.000 euros es por proyecto o por postulante, y si la mitad en préstamo debe devolverse en 2 años con hasta 1 año de gracia. El monto de 60.000 euros es el total de la convocatoria, no por persona. No se revisaron el Pravilnik ni los formularios de solicitud, que podrían agregar requisitos. Confirmar que el aviso no tenga fecha de cierre distinta en la página de FIPRO. Se borró el monto «Hasta 60.000 euros en total para la convocatoria (sin IVA), con un monto por postulante entre 7.000 y 20.000 euros»: no aparece textual en la fuente. Revisar el PDF de la convocatoria."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": "Prijave se zaprimaju do 13.11.2026. godine do kraja dana (23:59 h)."
+   }
+  }
+ ]
+}
