@@ -41,6 +41,8 @@ export function build() {
     `<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src ${sha(data)} ${sha(`\n${js}`)}; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'">`,
   );
   html = html.replace(/<link rel="canonical"[^>]*>/, "");
+  // Sin conexión no se cuentan visitas (ZL-129): fuera el beacon de Cloudflare Web Analytics.
+  html = html.replace(/<!-- Cloudflare Web Analytics[\s\S]*?<\/script>\n?/, "");
   // Aviso visible: es una copia congelada.
   swap(
     '<span class="stamp">Zustro Labs · beta</span>',
