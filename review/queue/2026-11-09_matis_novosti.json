@@ -1,0 +1,155 @@
+{
+ "source": "matis_novosti",
+ "name": "Hrvatska matica iseljenika: novedades y programas (Novosti)",
+ "detected_at": "2026-11-09",
+ "added": [
+  {
+   "guid": "https://matis.hr/?p=81935",
+   "title": "Hrvatski jezik i identitet u središtu 9. susreta hrvatske dijaspore Južne Amerike",
+   "link": "https://matis.hr/novosti/hrvatski-jezik-i-identitet-u-sredistu-9-susreta-hrvatske-dijaspore-juzne-amerike/",
+   "published": "2026-11-08T09:40:49.000Z",
+   "summary": "Treći dan Susreta obilježila su izlaganja o jeziku, kulturi i identitetu, uz poseban naglasak na obrazovne programe i ulogu Hrvatske matice iseljenika u povezivanju novih naraštaja s Hrvatskom"
+  },
+  {
+   "guid": "https://matis.hr/?p=81909",
+   "title": "CroActivas u Córdobi: Žene koje čuvaju naslijeđe i stvaraju budućnost",
+   "link": "https://matis.hr/novosti/croactivas-u-cordobi-zene-koje-cuvaju-naslijede-i-stvaraju-buducnost/",
+   "published": "2026-11-07T08:54:14.000Z",
+   "summary": "Predstavljanjem knjige „Čuvarice niti”, u izdanju HMI-ja, odana je počast ženama koje su kroz generacije gradile mostove između domovine i iseljeništva"
+  },
+  {
+   "guid": "https://matis.hr/?p=81903",
+   "title": "U Córdobi svečano otvoren 9. Susret hrvatske dijaspore Južne Amerike",
+   "link": "https://matis.hr/novosti/u-cordobi-svecano-otvoren-9-susret-hrvatske-dijaspore-juzne-amerike/",
+   "published": "2026-11-06T15:33:00.000Z",
+   "summary": "Veliko okupljanje Hrvata južnoameričkog kontinenta u znaku zajedništva, očuvanja hrvatskog identiteta i jačanja veza s domovinom"
+  }
+ ],
+ "changed": [],
+ "instrucciones": "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json.",
+ "borradores": [
+  {
+   "guid": "https://matis.hr/?p=81935",
+   "link": "https://matis.hr/novosti/hrvatski-jezik-i-identitet-u-sredistu-9-susreta-hrvatske-dijaspore-juzne-amerike/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-09T14:09:59.629Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es una nota periodística sobre un encuentro ya realizado y no describe ninguna convocatoria, beca, ayuda ni programa para postularse.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Encuentro de la diáspora croata del Sur de América: idioma e identidad",
+    "t_hr": "Hrvatski jezik i identitet u središtu 9. susreta hrvatske dijaspore Južne Amerike",
+    "who": "Matica Croata de los Emigrados (Hrvatska matica iseljenika)",
+    "amount": "",
+    "what": "Crónica del 9.º Encuentro de la diáspora croata de Sudamérica, realizado en Córdoba (Argentina), centrado en la lengua, la cultura y la identidad croatas. La Matica participó con una presentación sobre la enseñanza del croata y el vínculo de las nuevas generaciones con Croacia. No hay ninguna convocatoria para postularse.",
+    "el": {
+     "ar": [
+      "no",
+      "No hay convocatoria ni programa al que una persona pueda postularse según la nota."
+     ],
+     "cit": [
+      "no",
+      "No hay convocatoria ni programa al que una persona pueda postularse según la nota."
+     ],
+     "res": [
+      "no",
+      "La nota no describe ningún trámite ni programa de residencia."
+     ]
+    },
+    "src": [
+     "matis.hr",
+     "https://matis.hr/novosti/hrvatski-jezik-i-identitet-u-sredistu-9-susreta-hrvatske-dijaspore-juzne-amerike/"
+    ],
+    "ai_generated": true,
+    "flag": "Es una nota de novedades sobre un encuentro ya realizado, no un aviso de convocatoria; se sugiere no publicar como oportunidad. Confirmar la forma oficial en castellano del nombre de la institución (Matica Croata de los Emigrados) porque es una traducción propia. La fuente menciona el 'tercer día' y el 'día 3' del encuentro y dice que el encuentro se realizó el 7 de noviembre de 2026; conviene verificar las fechas antes de citarlas. El texto de la fuente no contiene instrucciones para el sistema; se analizó solo como dato."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  },
+  {
+   "guid": "https://matis.hr/?p=81909",
+   "link": "https://matis.hr/novosti/croactivas-u-cordobi-zene-koje-cuvaju-naslijede-i-stvaraju-buducnost/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-09T14:10:19.222Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es una nota sobre un encuentro ya realizado y la presentación de un libro, sin convocatoria, beca, ayuda ni programa en el que una persona o asociación pueda postularse.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Encuentro CroActivas en Córdoba y presentación del libro «Čuvarice niti»",
+    "t_hr": "CroActivas u Córdobi: Žene koje čuvaju naslijeđe i stvaraju budućnost",
+    "who": "Matica de Emigrantes Croatas (Hrvatska matica iseljenika)",
+    "amount": "",
+    "what": "La Matica de Emigrantes Croatas publicó una nota sobre el 3.º encuentro de CroActivas, una red de mujeres de origen croata de Latinoamérica, realizado en Córdoba (Argentina) en el marco del 9.º Encuentro de la diáspora croata de Sudamérica. Durante el acto se presentó el libro «Čuvarice niti», con 25 historias de mujeres de origen croata, y se anunció que se seguirá trabajando en un segundo tomo.",
+    "el": {
+     "ar": [
+      "no",
+      "La fuente no describe ninguna convocatoria a la que se pueda postular."
+     ],
+     "cit": [
+      "no",
+      "La fuente no describe ninguna convocatoria a la que se pueda postular."
+     ],
+     "res": [
+      "no",
+      "La fuente no describe ninguna convocatoria ni trámite de residencia."
+     ]
+    },
+    "src": [
+     "matis.hr",
+     "https://matis.hr/novosti/croactivas-u-cordobi-zene-koje-cuvaju-naslijede-i-stvaraju-buducnost/"
+    ],
+    "ai_generated": true,
+    "flag": "Es una noticia sobre un evento ya realizado, sin convocatoria ni fecha de cierre; por eso relevante es false y la categoría «proy» es solo aproximada. La fuente no menciona montos ni plazos. La fecha de publicación indicada es 2026-11-07 y el texto dice «danas» (hoy); conviene confirmar la fecha exacta del encuentro antes de publicar. El texto contiene solo elementos de navegación y material de compartir al final, que se ignoraron."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  },
+  {
+   "guid": "https://matis.hr/?p=81903",
+   "link": "https://matis.hr/novosti/u-cordobi-svecano-otvoren-9-susret-hrvatske-dijaspore-juzne-amerike/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-09T14:10:41.139Z",
+   "text_from": "solo el resumen del feed (no se pudo leer la página: fetch failed)",
+   "relevante": false,
+   "motivo_relevancia": "Es una noticia sobre la apertura de un encuentro ya realizado, sin convocatoria, beca, ayuda ni programa que una persona o asociación pueda aprovechar.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Se inauguró en Córdoba el 9.º Encuentro de la diáspora croata de Sudamérica",
+    "t_hr": "U Córdobi svečano otvoren 9. Susret hrvatske dijaspore Južne Amerike",
+    "who": "Matica Croata de Emigrantes (Hrvatska matica iseljenika)",
+    "amount": "",
+    "what": "Según el título y la bajada de la fuente, se inauguró en Córdoba (Argentina) el 9.º Encuentro de la diáspora croata de Sudamérica, una reunión de personas de origen croata del continente para reforzar la identidad y los vínculos con Croacia. La fuente no describe actividades, inscripciones ni beneficios para participantes.",
+    "el": {
+     "ar": [
+      "no",
+      "La fuente es una noticia sobre un encuentro ya inaugurado y no describe ninguna convocatoria para este perfil."
+     ],
+     "cit": [
+      "no",
+      "La fuente es una noticia sobre un encuentro ya inaugurado y no describe ninguna convocatoria para este perfil."
+     ],
+     "res": [
+      "no",
+      "La fuente no menciona residencia en Croacia ni ningún trámite o programa para residentes de la diáspora."
+     ]
+    },
+    "src": [
+     "matis.hr",
+     "https://matis.hr/novosti/u-cordobi-svecano-otvoren-9-susret-hrvatske-dijaspore-juzne-amerike/"
+    ],
+    "ai_generated": true,
+    "flag": "La fuente solo trae el título y la bajada; no incluye el cuerpo de la nota, así que conviene revisar la publicación completa antes de cerrar la ficha. La categoría 'proy' se eligió por aproximación porque no hay convocatoria; revisar si corresponde otra o si la nota debe quedar fuera del Radar. La fecha de publicación es 2026-11-06 y el encuentro aparece como ya inaugurado; no se indican fechas de nuevas actividades ni de inscripción. No hay monto ni plazo en la fuente. El borrador se hizo con solo el resumen del feed (no se pudo leer la página: fetch failed)."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  }
+ ]
+}
