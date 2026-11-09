@@ -1,6 +1,6 @@
 {
  "version": "2026-10-20",
- "verified_at": "2026-10-26",
+ "verified_at": "2026-11-09",
  "note": "Beta. Fichas revisadas por Jeremías Giglio (Zustro Labs) con fuentes oficiales. Los montos y plazos pueden cambiar: la fuente oficial manda.",
  "profiles": {
   "ar": "Vive en Argentina, sin ciudadanía",
@@ -1598,8 +1598,8 @@
      45.81
     ]
    ],
-   "next": "Invierno de 2027: sin convocatoria todavía (la de 2026 salió en noviembre)",
-   "amount": "Inscripción: €90 (a los croatas de afuera se la pueden perdonar) más alojamiento con pensión completa, de €48 a €53 por día (2026)",
+   "next": "Escuela de invierno 2027: del 3 al 12/1/2027 en Sisak. La de verano 2027 todavía no se anunció.",
+   "amount": "Inscripción: €90 (a los croatas de afuera se la pueden perdonar) más alojamiento con pensión completa: €60 por día en la escuela de invierno 2027",
    "what": "Diez días de danzas, tamburica o instrumentos tradicionales de una región de Croacia: se elige uno de los tres programas. La Matica les perdona la inscripción a los croatas que viven afuera si su asociación o comunidad lo pide por escrito. Los menores de 16 años van solo con su padre, madre o tutor.",
    "el": {
     "ar": [
@@ -1617,12 +1617,13 @@
    },
    "src": [
     "matis.hr",
-    "https://matis.hr/programi/ljetna-skola-hrvatskoga-folklora-2/"
+    "https://matis.hr/novosti/najava-zimska-skola-hrvatskoga-folklora-2027/"
    ],
    "fuente": "oficial",
    "abierta": true,
-   "flag": "Las sedes y fechas de 2027 no están publicadas. En 2026 fueron en Sisak (3 al 12/1) y en Zadar (4 al 13/8).",
-   "verified_at": "2026-10-22"
+   "flag": "Invierno 2027: inscripción hasta el 15/12/2026 con el formulario de la Matica, por mail. El pedido de la asociación para perdonar la inscripción vence el mismo día. Los cupos son limitados. El alojamiento (Hotel Panonija, Sisak) se paga aparte y por adelantado.",
+   "verified_at": "2026-11-09",
+   "deadline": "2026-12-15T23:59:00+01:00"
   },
   {
    "id": "vaucer_croata",
