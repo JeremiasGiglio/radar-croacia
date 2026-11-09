@@ -73,7 +73,7 @@ export function html() {
 <title>Cómo responde el asistente · Radar Croacia</title>
 <meta name="description" content="Qué temas toma el asistente del Radar Croacia, cómo responde, sus límites y cómo cuida tu privacidad.">
 <meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; connect-src 'self' https://cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'none'; form-action 'none'">
 <link rel="canonical" href="https://radar.zustrolabs.com/asistente.html">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap">
 <link rel="stylesheet" href="assets/styles.css">
@@ -97,6 +97,7 @@ export function html() {
   <section class="panel"><h2>Controles automáticos</h2><p>Después de la IA, un programa revisa cada respuesta:</p>${ul(P.controles)}</section>
   <p class="note">Es información, no asesoramiento legal. Radar Croacia es un proyecto gratuito de Zustro Labs, con el Ateneo Croata de Rosario como socio.</p>
 </main>
+<!-- Cloudflare Web Analytics (ZL-129): cuenta visitas sin cookies ni datos personales --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "c8b1f991a80a462395ecc8dd99f2aad3"}'></script>
 </body></html>
 `;
 }
