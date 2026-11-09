@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'none'; form-action 'none'"
+      content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; connect-src 'self' https://cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'none'; form-action 'none'"
     />
     <link rel="canonical" href="https://radar.zustrolabs.com/privacidad.html" />
     <link
@@ -33,7 +33,12 @@
         <h2>La web</h2>
         <ul>
           <li>No hay que crear una cuenta ni dar datos para usar el Radar.</li>
-          <li>No usamos cookies, publicidad ni herramientas de seguimiento.</li>
+          <li>No usamos cookies ni publicidad.</li>
+          <li>
+            Contamos las visitas con Cloudflare Web Analytics, que no usa cookies, no te identifica y no guarda tu
+            dirección IP: solo vemos totales, como cuántas páginas se vieron, desde qué país y en qué tipo de
+            dispositivo.
+          </li>
           <li>
             El sitio se publica en GitHub Pages, que puede registrar datos técnicos de las visitas (como la dirección
             IP) por seguridad.
@@ -107,5 +112,11 @@
         <a href="https://github.com/JeremiasGiglio/radar-croacia">GitHub</a>.
       </p>
     </main>
+    <!-- Cloudflare Web Analytics (ZL-129): cuenta visitas sin cookies ni datos personales -->
+    <script
+      type="module"
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "c8b1f991a80a462395ecc8dd99f2aad3"}'
+    ></script>
   </body>
 </html>

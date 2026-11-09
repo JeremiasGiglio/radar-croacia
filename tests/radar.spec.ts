@@ -5,6 +5,10 @@ const total = data.opportunities.length;
 const usefulFor = (p: "ar" | "cit" | "res") => data.opportunities.filter((o) => o.el[p][0] !== "no").length;
 
 test.beforeEach(async ({ page }) => {
+  // ZL-129: el beacon de Web Analytics no sale a la red en los tests.
+  await page.route(/cloudflareinsights\.com/, (r) =>
+    r.fulfill({ status: 200, contentType: "text/javascript", body: "" }),
+  );
   await page.goto("/");
   await expect(page.locator("#list article")).toHaveCount(total);
 });
