@@ -69,5 +69,382 @@
  ],
  "changed": [],
  "instrucciones": "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json.",
- "borradores": []
+ "borradores": [
+  {
+   "guid": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/natjecaj-za-stipendije-narodne-republike-kine-u-akademskoj-godini-2027-2028/8156",
+   "link": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/natjecaj-za-stipendije-narodne-republike-kine-u-akademskoj-godini-2027-2028/8156",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-09T14:28:52.440Z",
+   "text_from": "página oficial",
+   "relevante": true,
+   "motivo_relevancia": "Una persona descendiente de croatas con ciudadanía croata que viva en Argentina podría postularse a becas para estudiar en China, aunque la convocatoria es para ciudadanos croatas.",
+   "ficha": {
+    "cat": "beca",
+    "t": "Becas del Gobierno chino para estudiar en China 2027/2028",
+    "t_hr": "Natječaj za stipendije Narodne Republike Kine u akademskoj godini 2027./2028.",
+    "who": "Ministerio de Ciencia, Educación y Juventud de Croacia (Ministarstvo znanosti, obrazovanja i mladih), junto con la Agencia para la Movilidad y Programas de la Unión Europea (Agencija za mobilnost i programe Europske unije)",
+    "amount": "330,00 a 470,00 EUR mensuales por persona, según el nivel de estudio",
+    "what": "Becas del Gobierno de la República Popular China para cursar carreras completas de grado, maestría o doctorado, o un año de perfeccionamiento profesional, en universidades chinas que participan del programa bilateral. La beca cubre matrícula, alojamiento estudiantil, seguro de salud, una ayuda económica mensual y un pasaje aéreo de ida y vuelta por año académico; la postulación se hace por la Agencia y por Campus China.",
+    "el": {
+     "ar": [
+      "no",
+      "La convocatoria está dirigida a ciudadanos croatas, y quien vive en Argentina sin ciudadanía croata no entra en ese grupo."
+     ],
+     "cit": [
+      "cond",
+      "Tiene ciudadanía croata, pero la fuente no dice si se exige residencia en Croacia y hay requisitos de documentación y de admisión universitaria."
+     ],
+     "res": [
+      "cond",
+      "Solo aplica si además tiene ciudadanía croata, porque la convocatoria se dirige a ciudadanos croatas y la residencia de diáspora no alcanza por sí sola."
+     ]
+    },
+    "src": [
+     "mzom.gov.hr",
+     "https://mzom.gov.hr/istaknute-teme/natjecaji-196/natjecaj-za-stipendije-narodne-republike-kine-u-akademskoj-godini-2027-2028/8156"
+    ],
+    "ai_generated": true,
+    "deadline": "2027-01-29T23:59:00+01:00",
+    "flag": "Confirmar si la convocatoria exige residencia en Croacia para ciudadanos croatas que viven en el exterior; la fuente no lo aclara. Confirmar si una persona con residencia de diáspora (art. 79.a) pero sin ciudadanía croata puede postularse; el texto dice «hrvatskim državljanima». El monto de 330 a 470 EUR es mensual por persona, según el nivel de estudio; el sitio de la fuente no informa cuál corresponde a cada nivel. Además de la documentación general, grado exige examen CSCA y maestría o doctorado exige dos cartas de recomendación; verificar cada requisito según el nivel elegido. La inscripción en Campus China debe hacerse con tipo de programa A y número de agencia 1911, según la fuente. Para estudios en inglés se pide prueba de inglés; para programas en chino, HSK nivel 3 (perfeccionamiento) o nivel 4 (maestría y doctorado). Verificar en la fuente original la fecha de cierre y el resto de los detalles antes de publicar."
+   },
+   "citas": {
+    "amount": "financijsku potporu (od 330,00 do 470,00 EUR mjesečno, ovisno o razini studija)",
+    "deadline": "Rok za podnošenje prijave za stipendiju je 29. siječnja 2027. godine ."
+   }
+  },
+  {
+   "guid": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/poziv-na-dostavu-projektnih-prijedloga-u-sklopu-rch-poziva-2027-godine/8153",
+   "link": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/poziv-na-dostavu-projektnih-prijedloga-u-sklopu-rch-poziva-2027-godine/8153",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-09T14:29:10.340Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es una convocatoria para consorcios transnacionales de investigación, con socios croatas que deben ser instituciones de investigación, así que no está pensada para personas ni para asociaciones de la diáspora salvo que sean ONG de investigación registradas en Croacia.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Convocatoria RCH 2027: proyectos de investigación sobre patrimonio cultural y cambio climático",
+    "t_hr": "Poziv na dostavu projektnih prijedloga u sklopu RCH poziva 2027. godine",
+    "who": "Ministerio de Ciencia, Educación y Juventud de Croacia (Ministarstvo znanosti, obrazovanja i mladih)",
+    "amount": "",
+    "what": "Es el primer llamado conjunto del Partenariado Europeo RCH para proyectos de investigación e innovación transnacionales sobre cómo proteger el patrimonio cultural frente al cambio climático. Cada proyecto debe reunir al menos tres organizaciones de tres países participantes, y Croacia financia solo a sus socios croatas, que deben ser institutos públicos, universidades, ONG de investigación o pymes con actividad de I+D registrada.",
+    "el": {
+     "ar": [
+      "no",
+      "La convocatoria financia solo socios croatas dentro de un consorcio, no a personas que viven en Argentina."
+     ],
+     "cit": [
+      "no",
+      "Aunque tenga ciudadanía croata, la convocatoria no financia personas sino socios institucionales croatas que cumplan los requisitos."
+     ],
+     "res": [
+      "cond",
+      "Solo aplica si la persona trabaja o está registrada en una institución croata elegible (universidad pública, instituto, ONG de investigación o pyme de I+D)."
+     ]
+    },
+    "src": [
+     "mzom.gov.hr",
+     "https://mzom.gov.hr/istaknute-teme/natjecaji-196/poziv-na-dostavu-projektnih-prijedloga-u-sklopu-rch-poziva-2027-godine/8153"
+    ],
+    "ai_generated": true,
+    "deadline": "2027-01-11T23:59:00+01:00",
+    "flag": "La fuente tiene dos plazos: pretprijava el 11-01-2027 (14:00 CET) y segunda fase el 16-06-2027 (14:00 CET). Se cargó el primero como deadline; confirmar cuál conviene mostrar. El aviso dice que el inicio de los proyectos es en diciembre de 2027 como mínimo. Los croatas deben avisar a la persona de contacto nacional antes de presentar el proyecto. El contacto nacional figura en la fuente como correo de MZOM. El webinar informativo del 17-11-2026 menciona una poveznica (enlace) de inscripción que no aparece en el texto; no se incluye enlace. Los proyectos ya financiados en otros instrumentos no son admisibles. Verificar que el aviso no se haya modificado tras la publicación del 2026-11-05. Contenido de la fuente sin instrucciones inyectadas; no se detectaron órdenes dentro del texto. Se borró el monto «500.000,00 eura (aporte de Croacia a la convocatoria; la fuente indica un presupuesto público total aproximado de 27 millones de euros para todos los países)»: no aparece textual en la fuente. Revisar el PDF de la convocatoria."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": "Rok za podnošenje projektnih prijedloga u prvoj fazi prijave (pretprijava) je 11. siječnja 2027. godine do 14:00 sati prema srednjoeuropskom vremenu."
+   }
+  },
+  {
+   "guid": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/javni-poziv-za-iskazivanjem-interesa-strucnih-suradnika-osnovnih-i-srednjih-skola-te-ucenickih-domova-za-nabavkom-mjernih-instrumenata-za-skolsku-godinu-2026-2027/8143",
+   "link": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/javni-poziv-za-iskazivanjem-interesa-strucnih-suradnika-osnovnih-i-srednjih-skola-te-ucenickih-domova-za-nabavkom-mjernih-instrumenata-za-skolsku-godinu-2026-2027/8143",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-09T14:29:23.318Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "La convocatoria es para que escuelas y hogares estudiantiles de Croacia soliciten instrumentos de medición a través de su personal técnico, no para personas o asociaciones de la diáspora.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Convocatoria para pedir instrumentos de medición en escuelas croatas 2026/2027",
+    "t_hr": "Javni poziv za iskazivanjem interesa stručnih suradnika osnovnih i srednjih škola te učeničkih domova za nabavkom mjernih instrumenata za školsku godinu 2026./2027.",
+    "who": "Ministerio de Ciencia, Educación y Juventud (Ministarstvo znanosti, obrazovanja i mladih)",
+    "amount": "",
+    "what": "Es un llamado para que el personal técnico de escuelas primarias y secundarias y de hogares estudiantiles de Croacia (psicólogos, pedagogos, pedagogos sociales, rehabilitadores educativos y logopedas) exprese interés en que el ministerio compre instrumentos de evaluación psicológica y educativa para el año escolar 2026/2027. Las solicitudes se hacen por formulario web, y el ministerio no cubre la capacitación obligatoria para usar esos instrumentos.",
+    "el": {
+     "ar": [
+      "no",
+      "Hay que ser personal técnico de una escuela o hogar estudiantil en Croacia, algo que no aplica a quien vive en Argentina."
+     ],
+     "cit": [
+      "no",
+      "Hay que ser personal técnico de una escuela o hogar estudiantil en Croacia, algo que no aplica a quien vive en Argentina aunque tenga ciudadanía croata."
+     ],
+     "res": [
+      "cond",
+      "Solo podría aplicar una persona con residencia en Croacia que trabaje como profesional de apoyo en una escuela u hogar estudiantil croata; la fuente no menciona la residencia de diáspora."
+     ]
+    },
+    "src": [
+     "mzom.gov.hr",
+     "https://mzom.gov.hr/istaknute-teme/natjecaji-196/javni-poziv-za-iskazivanjem-interesa-strucnih-suradnika-osnovnih-i-srednjih-skola-te-ucenickih-domova-za-nabavkom-mjernih-instrumenata-za-skolsku-godinu-2026-2027/8143"
+    ],
+    "ai_generated": true,
+    "deadline": "2026-11-20T23:59:00+01:00",
+    "flag": "La fuente no especifica ningún monto total ni por institución, por eso amount queda en null. El formulario de solicitud está en un documento enlazado que no se incluyó en el texto; habría que revisarlo antes de publicar. La categoría proy es la más cercana, pero la convocatoria es una compra institucional para escuelas; conviene confirmar la categoría. El aviso indica que la solicitud se hace por el formulario web entre el 3 y el 20 de noviembre de 2026; la fecha de cierre tomada es el 20 de noviembre de 2026 a las 12:00."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": "Rok: 20. studenoga 2026. godine do 12:00 sati"
+   }
+  },
+  {
+   "guid": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/obavijest-o-objavljenom-internom-oglasu-na-neodredjeno-vrijeme/8139",
+   "link": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/obavijest-o-objavljenom-internom-oglasu-na-neodredjeno-vrijeme/8139",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-09T14:29:31.869Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es un aviso de un concurso interno para cubrir dos puestos de la administración pública, reservado a personal ya empleado, así que no lo puede aprovechar una persona de la diáspora.",
+   "ficha": {
+    "cat": "emp",
+    "t": "Concurso interno para dos puestos en el Ministerio de Ciencia",
+    "t_hr": "Obavijest o objavljenom internom oglasu na neodređeno vrijeme",
+    "who": "Ministerio de Ciencia, Educación y Juventud (Ministarstvo znanosti, obrazovanja i mladih)",
+    "amount": "",
+    "what": "Aviso de un concurso interno por tiempo indefinido para cubrir dos puestos en el Departamento de Seguimiento del Trabajo de los Cuerpos Científicos: un jefe de departamento y un asesor superior. Las postulaciones se hacen por el Sistema Centralizado de Empleo y están pensadas para empleados públicos que ya trabajan en el ministerio.",
+    "el": {
+     "ar": [
+      "no",
+      "El concurso es interno y solo puede postularse personal que ya es parte de la administración pública croata."
+     ],
+     "cit": [
+      "no",
+      "El concurso es interno y solo puede postularse personal que ya es parte de la administración pública croata."
+     ],
+     "res": [
+      "no",
+      "El concurso es interno y solo puede postularse personal que ya es parte de la administración pública croata."
+     ]
+    },
+    "src": [
+     "mzom.gov.hr",
+     "https://mzom.gov.hr/istaknute-teme/natjecaji-196/obavijest-o-objavljenom-internom-oglasu-na-neodredjeno-vrijeme/8139"
+    ],
+    "ai_generated": true,
+    "deadline": "2026-11-14T23:59:00+01:00",
+    "flag": "Es un concurso interno de empleo público; no se publica para candidatos externos, por eso no se recomienda para la diáspora. El plazo 14 de noviembre de 2026 coincide con los 15 días desde la publicación del 30 de octubre de 2026 que indica el texto. La fecha de publicación del aviso en el sitio (2 de noviembre de 2026) es distinta de la fecha de publicación del concurso en el sistema (30 de octubre de 2026); conviene confirmar cuál mostrar. La fuente no contiene instrucciones dirigidas al sistema; se analizó como dato."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": "Rok: 14. studenoga 2026."
+   }
+  },
+  {
+   "guid": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/obavijest-o-objavljenom-javnom-natjecaju-na-neodredjeno-vrijeme-8138/8138",
+   "link": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/obavijest-o-objavljenom-javnom-natjecaju-na-neodredjeno-vrijeme-8138/8138",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-09T14:29:43.441Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es un llamado para un puesto de empleo permanente dentro de la administración pública croata, que queda fuera de lo que el Radar cubre.",
+   "ficha": {
+    "cat": "emp",
+    "t": "Llamado a concurso para Viši savjetnik en el Ministerio de Ciencia, Educación y Juventud",
+    "t_hr": "Obavijest o objavljenom javnom natječaju na neodređeno vrijeme",
+    "who": "Ministerio de Ciencia, Educación y Juventud (Ministarstvo znanosti, obrazovanja i mladih)",
+    "amount": "",
+    "what": "Concurso público para cubrir un puesto de Viši savjetnik (asesor senior), número 8.2.2.2., en el Servicio de Cooperación Europea e Internacional en el área de juventud, dentro del Sector de Proyectos, Programas y Cooperación Internacional en juventud. Es un cargo de planta permanente con una sola plaza. Las postulaciones se hacen por el Sistema Centralizado de Empleo.",
+    "el": {
+     "ar": [
+      "no",
+      "Es un puesto de planta en un ministerio croata que no se puede desempeñar desde Argentina, según surge del aviso."
+     ],
+     "cit": [
+      "cond",
+      "El aviso no dice si se exige ciudadanía croata, así que hay que confirmarlo en el llamado completo."
+     ],
+     "res": [
+      "cond",
+      "Depende de los requisitos de admisión del llamado, que el aviso no detalla."
+     ]
+    },
+    "src": [
+     "mzom.gov.hr",
+     "https://mzom.gov.hr/istaknute-teme/natjecaji-196/obavijest-o-objavljenom-javnom-natjecaju-na-neodredjeno-vrijeme-8138/8138"
+    ],
+    "ai_generated": true,
+    "deadline": "2026-11-14T23:59:00+01:00",
+    "flag": "El aviso no detalla requisitos de ciudadanía, residencia ni idioma; conviene revisar el llamado completo en selekcija.gov.hr antes de decidir elegibilidad. Plazo de 15 días desde la publicación del 30 de octubre de 2026, coherente con la fecha de cierre del 14 de noviembre. Relevante = false porque es un empleo en la administración pública."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": "Rok: 14. studenoga 2026."
+   }
+  },
+  {
+   "guid": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/program-fulbright-specialist-u-2027-i-2028-godini/8136",
+   "link": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/program-fulbright-specialist-u-2027-i-2028-godini/8136",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-09T14:29:58.060Z",
+   "text_from": "página oficial",
+   "relevante": true,
+   "motivo_relevancia": "Puede interesar a una asociación de la diáspora que funcione en Croacia y quiera ser institución anfitriona, porque la convocatoria acepta a ONG y udruge como anfitrionas, aunque no está dirigida a personas.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Fulbright Specialist: profesores estadounidenses en instituciones croatas en 2027 y 2028",
+    "t_hr": "Program „Fulbright Specialist“ u 2027. i 2028. godini",
+    "who": "Embajada de Estados Unidos en Zagreb (Veleposlanstvo Sjedinjenih Američkih Država u Zagrebu), en colaboración con el Ministerio de Ciencia, Educación y Juventud (Ministarstvo znanosti, obrazovanja i mladih) y la Agencia para la Movilidad y los Programas de la Unión Europea (Agencija za mobilnost i programe Europske unije)",
+    "amount": "",
+    "what": "Permite que instituciones de Croacia reciban por dos a seis semanas a profesores, docentes, científicos o especialistas estadounidenses, dentro del Programa Bilateral de Movilidad Académica. Pueden postularse universidades, institutos de investigación, bibliotecas, museos, teatros, instituciones de formación profesional, instituciones públicas, centros de salud públicos, ONG y asociaciones. La estadía tiene que realizarse entre el 1 de mayo de 2027 y el 30 de septiembre de 2028, y las instituciones presentan su propuesta de proyecto por el sistema electrónico de solicitudes.",
+    "el": {
+     "ar": [
+      "no",
+      "La solicitud la presentan instituciones anfitrionas en Croacia, así que una persona que vive en Argentina no puede postularse."
+     ],
+     "cit": [
+      "no",
+      "Tampoco aplica para ciudadanos que viven en Argentina, porque la postulación es institucional y se hace desde Croacia."
+     ],
+     "res": [
+      "cond",
+      "Solo podría participar si trabaja en una institución anfitriona en Croacia y ella presenta la solicitud, no la persona por su cuenta."
+     ]
+    },
+    "src": [
+     "mzom.gov.hr",
+     "https://mzom.gov.hr/istaknute-teme/natjecaji-196/program-fulbright-specialist-u-2027-i-2028-godini/8136"
+    ],
+    "ai_generated": true,
+    "deadline": "2027-01-31T23:59:00+01:00",
+    "flag": "Confirmar si una asociación de la diáspora con sede en Croacia encuadra como «udruga» o ONG elegible como institución anfitriona; la fuente no lo aclara. La categoría elegida es «proy» porque la convocatoria financia la visita de académicos a instituciones; revisar si conviene otra categoría. La fuente no indica montos ni costos de cobertura; no se incluyó ninguna cifra. No se incluyó el enlace al llamado en inglés porque el sistema agrega el oficial; el contenido detallado de la convocatoria en el enlace no fue revisado."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": "podnose svoje projektne prijedloge putem elektroničkog sustava za prijavu najkasnije do 31. siječnja 2027. godine"
+   }
+  },
+  {
+   "guid": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/poziv-na-podnosenje-projektnih-prijedloga-u-sklopu-esa-natjecaja-8127/8127",
+   "link": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/poziv-na-podnosenje-projektnih-prijedloga-u-sklopu-esa-natjecaja-8127/8127",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-09T14:30:09.787Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "La convocatoria es para organizaciones científicas y empresas croatas, no para personas descendientes de croatas ni para asociaciones de la diáspora.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Convocatoria ESA PECS para proyectos de ciencia y empresas en Croacia",
+    "t_hr": "Poziv na podnošenje projektnih prijedloga u sklopu ESA natječaja",
+    "who": "Ministerio de Ciencia, Educación y Juventud (Ministarstvo znanosti, obrazovanja i mladih)",
+    "amount": "",
+    "what": "Es el cuarto llamado nacional PECS de la Agencia Espacial Europea (ESA) con el Ministerio, para financiar proyectos de investigación, desarrollo de productos o servicios, ciencia espacial, aplicaciones espaciales, cursos universitarios y tesis doctorales. Está dirigido a organizaciones científicas y empresas croatas que quieran desarrollar el sector espacial en Croacia.",
+    "el": {
+     "ar": [
+      "no",
+      "Está pensada para organizaciones científicas y empresas croatas, no para personas que viven en Argentina."
+     ],
+     "cit": [
+      "no",
+      "Está pensada para organizaciones científicas y empresas croatas, y la fuente no habilita a personas con ciudadanía croata que viven en Argentina."
+     ],
+     "res": [
+      "cond",
+      "Solo podría aplicar una persona con residencia de diáspora en Croacia si participa en una organización científica o empresa croata que presente el proyecto."
+     ]
+    },
+    "src": [
+     "mzom.gov.hr",
+     "https://mzom.gov.hr/istaknute-teme/natjecaji-196/poziv-na-podnosenje-projektnih-prijedloga-u-sklopu-esa-natjecaja-8127/8127"
+    ],
+    "ai_generated": true,
+    "deadline": "2026-11-30T23:59:00+01:00",
+    "flag": "El aviso no detalla requisitos de elegibilidad, montos ni documentación; conviene revisar la convocatoria completa antes de publicar. La fuente menciona una poveznica con más información que no fue incluida; el sistema agrega el enlace oficial. La fuente indica como contacto una dirección de correo electrónico del Ministerio; no se incluyó en la ficha. La fuente dice 'Fuente: MZOM' en el encabezado del pedido, pero la página oficial se titula Ministarstvo znanosti, obrazovanja i mladih; se usó el nombre de la página. La fecha de publicación indicada es 2026-10-27, pero el aviso señala apertura el 19 de octubre de 2026; se usó el plazo de cierre de la fuente."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": "Poziv na podnošenje projektnih prijedloga otvoren je od 19. listopada 2026. godine do 30. studenoga 2026. godine."
+   }
+  },
+  {
+   "guid": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/odluka-o-obustavi-postupka-internog-oglasa-za-popunjavanje-radnog-mjesta-na-neodredjeno-vrijeme/8124",
+   "link": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/odluka-o-obustavi-postupka-internog-oglasa-za-popunjavanje-radnog-mjesta-na-neodredjeno-vrijeme/8124",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-09T14:30:17.652Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es una decisión interna de la administración pública sobre un puesto de trabajo estatal ya cerrado, sin convocatoria que una persona de la diáspora pueda aprovechar.",
+   "ficha": {
+    "cat": "emp",
+    "t": "Se suspende un concurso interno para un puesto de trabajo en el Ministerio de Ciencia, Educación y Juventud",
+    "t_hr": "Odluka o obustavi postupka Internog oglasa za popunjavanje radnog mjesta na neodređeno vrijeme",
+    "who": "Ministarstvo znanosti, obrazovanja i mladih (Ministarstvo znanosti, obrazovanja i mladih)",
+    "amount": "",
+    "what": "El ministerio decidió cancelar el proceso de un llamado interno para cubrir un puesto permanente de asesor superior, porque ningún candidato alcanzó un resultado satisfactorio en la entrevista. Es un trámite interno de empleo público, no una oportunidad abierta a personas de la diáspora.",
+    "el": {
+     "ar": [
+      "no",
+      "Es un concurso interno de la administración pública croata y ya fue suspendido, así que no se puede postular."
+     ],
+     "cit": [
+      "no",
+      "Es un concurso interno de la administración pública croata y ya fue suspendido, así que no se puede postular."
+     ],
+     "res": [
+      "no",
+      "Es un concurso interno de la administración pública croata y ya fue suspendido, así que no se puede postular."
+     ]
+    },
+    "src": [
+     "mzom.gov.hr",
+     "https://mzom.gov.hr/istaknute-teme/natjecaji-196/odluka-o-obustavi-postupka-internog-oglasa-za-popunjavanje-radnog-mjesta-na-neodredjeno-vrijeme/8124"
+    ],
+    "ai_generated": true,
+    "flag": "La fuente indica que el concurso se suspendió; no hay una convocatoria abierta. Se descarta por ser empleo público y resultado de un proceso cerrado. La fuente menciona que la decisión se publicará en el sitio del Ministerio de Pravosuđa, uprave i digitalne transformacije, pero no hay nada que aprovechar para la diáspora. La fuente no contiene instrucciones para el sistema; no se detectaron órdenes dentro del texto."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  },
+  {
+   "guid": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/odluka-o-obustavi-postupka-javnog-natjecaja-za-prijam-u-drzavnu-sluzbu-na-neodredjeno-vrijeme-8122/8122",
+   "link": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/odluka-o-obustavi-postupka-javnog-natjecaja-za-prijam-u-drzavnu-sluzbu-na-neodredjeno-vrijeme-8122/8122",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-09T14:30:26.634Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es la decisión de suspender un concurso para un puesto de empleo público, que no está dirigido a descendientes de croatas ni a asociaciones de la diáspora.",
+   "ficha": {
+    "cat": "emp",
+    "t": "Se suspende el concurso para auditor interno en el Ministerio de Ciencia, Educación y Juventud",
+    "t_hr": "Odluka o obustavi postupka Javnog natječaja za prijam u državnu službu na neodređeno vrijeme",
+    "who": "Ministarstvo znanosti, obrazovanja i mladih (Ministerio de Ciencia, Educación y Juventud)",
+    "amount": "",
+    "what": "El ministerio decidió dar por terminado sin contratación un concurso público para cubrir de forma permanente un puesto de unutarnji revizor (auditor interno) en la Samostalna služba za unutarnju reviziju. La razón es que la única candidata que llegó a la entrevista no obtuvo resultados satisfactorios. Es un trámite interno de la administración pública, sin beneficios para la diáspora.",
+    "el": {
+     "ar": [
+      "no",
+      "El concurso está suspendido y es solo para puestos de la administración pública croata."
+     ],
+     "cit": [
+      "no",
+      "El concurso está suspendido y es solo para puestos de la administración pública croata."
+     ],
+     "res": [
+      "no",
+      "El concurso está suspendido y es solo para puestos de la administración pública croata."
+     ]
+    },
+    "src": [
+     "mzom.gov.hr",
+     "https://mzom.gov.hr/istaknute-teme/natjecaji-196/odluka-o-obustavi-postupka-javnog-natjecaja-za-prijam-u-drzavnu-sluzbu-na-neodredjeno-vrijeme-8122/8122"
+    ],
+    "ai_generated": true,
+    "flag": "El aviso es una decisión de suspensión de un concurso de empleo público, no una convocatoria abierta; se marca como no relevante. La fuente está en la sección Natječaji (becas y convocatorias), pero el contenido es sobre empleo público; conviene revisar si la categoría emp es la adecuada o si el aviso debe descartarse directamente. La decisión está fechada el 19 de octubre de 2026 y la fecha de publicación en el sitio es el 26 de octubre de 2026; no hay plazo de cierre que cargar. No se encontraron instrucciones dentro de la fuente que haya que ignorar."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  }
+ ]
 }

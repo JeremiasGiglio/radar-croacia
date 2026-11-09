@@ -27,5 +27,89 @@
  ],
  "changed": [],
  "instrucciones": "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json.",
- "borradores": []
+ "borradores": [
+  {
+   "guid": "https://udruge.gov.hr/vijesti/javni-poziv-organizacijama-civilnoga-drustva-za-predlaganje-predstavnika-u-strucnu-radnu-skupinu-za-izradu-nacionalnog-plana-za-razvoj-biogospodarstva/6369",
+   "link": "https://udruge.gov.hr/vijesti/javni-poziv-organizacijama-civilnoga-drustva-za-predlaganje-predstavnika-u-strucnu-radnu-skupinu-za-izradu-nacionalnog-plana-za-razvoj-biogospodarstva/6369",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-09T14:30:40.307Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es una convocatoria para que organizaciones de la sociedad civil croata propongan representantes a un grupo de trabajo estatal, no un beneficio directo para descendientes de croatas ni para asociaciones de la diáspora.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Convocatoria para proponer representantes de la sociedad civil en el grupo de trabajo del Plan Nacional de Biogospodarstvo",
+    "t_hr": "Javni poziv organizacijama civilnoga društva za predlaganje predstavnika u stručnu radnu skupinu za izradu Nacionalnog plana za razvoj biogospodarstva",
+    "who": "Oficina para las Asociaciones del Gobierno de la República de Croacia (Ured za udruge)",
+    "amount": "",
+    "what": "El Gobierno croata inició la elaboración del Plan Nacional para el Desarrollo de la Bioeconomía para 2027 a 2035, con su Plan de Acción 2027 a 2030. La Oficina para las Asociaciones invita a organizaciones de la sociedad civil a proponer dos integrantes para el grupo de trabajo, más sus suplentes, con conocimientos sobre el tema.",
+    "el": {
+     "ar": [
+      "no",
+      "La convocatoria es para organizaciones de la sociedad civil que propongan representantes a un grupo de trabajo en Croacia, y no contempla a personas que viven en Argentina."
+     ],
+     "cit": [
+      "no",
+      "Aunque tenga ciudadanía, la convocatoria no está dirigida a personas que viven en Argentina y exige participar desde una organización civil en Croacia."
+     ],
+     "res": [
+      "cond",
+      "Solo podría participar si una organización croata propone a la persona como candidata; la fuente no aclara requisitos de residencia para los candidatos."
+     ]
+    },
+    "src": [
+     "udruge.gov.hr",
+     "https://udruge.gov.hr/vijesti/javni-poziv-organizacijama-civilnoga-drustva-za-predlaganje-predstavnika-u-strucnu-radnu-skupinu-za-izradu-nacionalnog-plana-za-razvoj-biogospodarstva/6369"
+    ],
+    "ai_generated": true,
+    "deadline": "2026-11-16T23:59:00+01:00",
+    "flag": "La fuente no aclara si las organizaciones deben estar registradas en Croacia ni si pueden proponer candidatos desde el exterior. El formulario de candidatura aparece solo como enlace sin contenido visible; conviene revisarlo. Se pide proponer dos miembros y sus suplentes; no se indican criterios de selección ni duración del mandato. Se marcó relevante false porque la convocatoria es de participación institucional y no un beneficio directo; revisar si conviene informarla igual a asociaciones de la diáspora que tengan sede en Croacia. El texto de la fuente no contiene instrucciones para el sistema; se lo tomó solo como dato."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": "Rok za dostavu prijedloga kandidata je 16. studeni 2026."
+   }
+  },
+  {
+   "guid": "https://udruge.gov.hr/vijesti/hrvatska-glazbena-mladez-ugostila-svicarsku-delegaciju-u-sklopu-programa-civilno-drustvo/6368",
+   "link": "https://udruge.gov.hr/vijesti/hrvatska-glazbena-mladez-ugostila-svicarsku-delegaciju-u-sklopu-programa-civilno-drustvo/6368",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-09T14:30:49.213Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es una noticia sobre una visita de una delegación suiza a un proyecto ya financiado, sin convocatoria abierta a la que una persona o asociación de la diáspora pueda postularse.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Visita suiza a un proyecto de educación para el desarrollo sostenible",
+    "t_hr": "Hrvatska glazbena mladež ugostila švicarsku delegaciju u sklopu Programa Civilno društvo",
+    "who": "Oficina para las Asociaciones del Gobierno (Ured za udruge)",
+    "amount": "",
+    "what": "La oficina informa que la Hrvatska glazbena mladež recibió a una misión técnica de donantes suizos del Programa Civilno društvo. Presentaron el proyecto «Glazba za ekološki osviještene uši», financiado por una convocatoria sobre educación para el desarrollo sostenible hecha por organizaciones de la sociedad civil. La nota no abre ninguna postulación.",
+    "el": {
+     "ar": [
+      "no",
+      "La nota no es una convocatoria y no indica ningún programa al que una persona pueda postularse desde Argentina."
+     ],
+     "cit": [
+      "no",
+      "La nota no es una convocatoria y no indica ningún programa al que una persona pueda postularse desde Argentina."
+     ],
+     "res": [
+      "no",
+      "La nota no es una convocatoria y no indica ningún programa para personas con residencia de diáspora en Croacia."
+     ]
+    },
+    "src": [
+     "udruge.gov.hr",
+     "https://udruge.gov.hr/vijesti/hrvatska-glazbena-mladez-ugostila-svicarsku-delegaciju-u-sklopu-programa-civilno-drustvo/6368"
+    ],
+    "ai_generated": true,
+    "flag": "Es una noticia sobre una visita, no una convocatoria. Se recomienda no publicarla como oportunidad salvo que se quiera usar como referencia del programa. La nota menciona un llamado (primero de cuatro) del Programa Civilno društvo sobre educación para el desarrollo sostenible, pero no da su plazo ni su monto. Conviene buscar la convocatoria original en la fuente oficial para ver si está abierta. El texto de la fuente contiene algunos errores tipográficos (por ejemplo «istodbno» y «mogučnosti»). No afectan los datos cargados."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  }
+ ]
 }
