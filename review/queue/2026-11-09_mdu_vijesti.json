@@ -446,6 +446,47 @@
     "amount": null,
     "deadline": null
    }
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/ministar-sipic-u-radnom-posjetu-osijeku-demografska-obnova-slavonije-zajednicki-je-zadatak-drzave-lokalne-zajednice-i-znanstvenog-kruga/7682",
+   "link": "https://mdu.gov.hr/vijesti-4693/ministar-sipic-u-radnom-posjetu-osijeku-demografska-obnova-slavonije-zajednicki-je-zadatak-drzave-lokalne-zajednice-i-znanstvenog-kruga/7682",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-09T14:28:36.405Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es una nota de prensa sobre una visita oficial y no describe una convocatoria abierta a la que una persona o asociación pueda postularse.",
+   "ficha": {
+    "cat": "loc",
+    "t": "Visita del ministro Šipić a Osijek sobre demografía en Eslavonia",
+    "t_hr": "Ministar Šipić u radnom posjetu Osijeku: Demografska obnova Slavonije zajednički je zadatak države, lokalne zajednice i znanstvenog kruga",
+    "who": "Ministerio de Demografía e Inmigración (Ministarstvo demografije i useljeništva)",
+    "amount": "",
+    "what": "Es una nota sobre la visita del ministro Ivan Šipić a Osijek, donde se reunió con el alcalde, la gobernadora del condado y la Universidad de Osijek para hablar de demografía en Eslavonia y de la preparación de una ley de renovación demográfica. Menciona programas ya existentes, como el de becas para aprender croata para retornados y sus descendientes, pero no abre ninguna convocatoria nueva.",
+    "el": {
+     "ar": [
+      "no",
+      "No hay convocatoria abierta a la que postularse desde Argentina."
+     ],
+     "cit": [
+      "no",
+      "No hay convocatoria abierta a la que postularse desde Argentina."
+     ],
+     "res": [
+      "no",
+      "No hay convocatoria abierta a la que postularse desde Croacia con residencia de diáspora."
+     ]
+    },
+    "src": [
+     "mdu.gov.hr",
+     "https://mdu.gov.hr/vijesti-4693/ministar-sipic-u-radnom-posjetu-osijeku-demografska-obnova-slavonije-zajednicki-je-zadatak-drzave-lokalne-zajednice-i-znanstvenog-kruga/7682"
+    ],
+    "ai_generated": true,
+    "flag": "La nota no contiene una convocatoria. Las cifras que menciona (640.000 euros de ayudas, más de seis millones de euros dados entre 2021 y 2026, 16 becarios de croata) son resultados o montos ya asignados, por eso amount quedó en null. Vale la pena seguir la futura Ley de Renovación Demográfica y una eventual nueva convocatoria de becas de idioma croata para retornados y descendientes, pero hay que verificarlas en la fuente oficial cuando se publiquen. El texto de la fuente no contiene instrucciones dirigidas al sistema; se analizó solo como contenido informativo."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
   }
  ]
 }
