@@ -24,6 +24,13 @@ async function get(url) {
   return { status: res.status, text: await res.text() };
 }
 
+// «fetch failed» no dice nada: la causa real (DNS, TLS, timeout, conexión rechazada) viene en e.cause (ZL-132).
+function describeError(e) {
+  const c = e?.cause;
+  const detail = c ? [c.code, c.message].filter(Boolean).join(" · ") : "";
+  return detail && !String(e.message).includes(detail) ? `${e.message} (${detail})` : String(e?.message ?? e);
+}
+
 const report = [];
 let failed = false;
 for (const src of sources) {
@@ -81,7 +88,7 @@ for (const src of sources) {
     for (const it of changed) report.push(`   - CAMBIÓ: [${it.title}](${it.link})`);
   } catch (e) {
     failed = true;
-    report.push(`❌ ${src.name}: ${e.message}`);
+    report.push(`❌ ${src.name}: ${describeError(e)}`);
   }
 }
 
