@@ -3,6 +3,7 @@
 import { readFileSync, writeFileSync, existsSync, mkdirSync, appendFileSync } from "node:fs";
 import { parseRss, checkContract, diffItems, robotsDisallows } from "./lib/rss.mjs";
 import { parseWp } from "./lib/wp.mjs";
+import { withRetry, isNetworkError } from "./lib/retry.mjs";
 
 const ADAPTERS = {
   rss: (text) => parseRss(text),
@@ -19,9 +20,19 @@ const sources = JSON.parse(readFileSync(new URL("scripts/sources.json", ROOT))).
 const today = new Date().toISOString().slice(0, 10);
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
+// Hasta 3 intentos si falla la red (ZL-132); un HTTP distinto de 200 no se reintenta.
 async function get(url) {
-  const res = await fetch(url, { headers: { "User-Agent": UA }, signal: AbortSignal.timeout(30_000) });
-  return { status: res.status, text: await res.text() };
+  return withRetry(async () => {
+    const res = await fetch(url, { headers: { "User-Agent": UA }, signal: AbortSignal.timeout(30_000) });
+    return { status: res.status, text: await res.text() };
+  });
+}
+
+// «fetch failed» no dice nada: la causa real (DNS, TLS, timeout, conexión rechazada) viene en e.cause (ZL-132).
+function describeError(e) {
+  const c = e?.cause;
+  const detail = c ? [c.code, c.message].filter(Boolean).join(" · ") : "";
+  return detail && !String(e.message).includes(detail) ? `${e.message} (${detail})` : String(e?.message ?? e);
 }
 
 const report = [];
@@ -81,7 +92,10 @@ for (const src of sources) {
     for (const it of changed) report.push(`   - CAMBIÓ: [${it.title}](${it.link})`);
   } catch (e) {
     failed = true;
-    report.push(`❌ ${src.name}: ${e.message}`);
+    const hint = isNetworkError(e)
+      ? " El sitio no respondió después de 3 intentos: puede estar caído o no aceptar conexiones desde afuera de Croacia."
+      : "";
+    report.push(`❌ ${src.name}: ${describeError(e)}.${hint}`);
   }
 }
 

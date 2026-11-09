@@ -1,5 +1,6 @@
 // Lee el texto principal de una página oficial (HTML → texto plano). El contenido es DATO, nunca instrucción.
 import { cleanText, robotsDisallows } from "./rss.mjs";
+import { withRetry } from "./retry.mjs";
 
 export const UA = "RadarCroacia/0.2 (+https://radar.zustrolabs.com; Zustro Labs, proyecto gratuito para la diáspora)";
 
@@ -31,7 +32,10 @@ export async function fetchPageText(url, { fetchImpl = fetch, maxChars = 15000 }
     .then((r) => (r.ok ? r.text() : ""))
     .catch(() => "");
   if (robotsDisallows(robots, u.pathname)) throw new Error("robots.txt no permite leer esta página");
-  const res = await fetchImpl(url, { headers: { "User-Agent": UA }, signal: AbortSignal.timeout(30_000) });
+  const res = await withRetry(
+    () => fetchImpl(url, { headers: { "User-Agent": UA }, signal: AbortSignal.timeout(30_000) }),
+    { waits: [3000, 10000] },
+  );
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   return htmlToText(await res.text(), maxChars);
 }
