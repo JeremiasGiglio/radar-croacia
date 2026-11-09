@@ -1,0 +1,31 @@
+{
+ "source": "udruge_vijesti",
+ "name": "Oficina para las Asociaciones del Gobierno (Ured za udruge): novedades y convocatorias (Vijesti)",
+ "detected_at": "2026-11-09",
+ "added": [
+  {
+   "guid": "https://udruge.gov.hr/vijesti/javni-poziv-organizacijama-civilnoga-drustva-za-predlaganje-predstavnika-u-strucnu-radnu-skupinu-za-izradu-nacionalnog-plana-za-razvoj-biogospodarstva/6369",
+   "title": "Javni poziv organizacijama civilnoga društva za predlaganje predstavnika u stručnu radnu skupinu za izradu Nacionalnog plana za razvoj biogospodarstva",
+   "link": "https://udruge.gov.hr/vijesti/javni-poziv-organizacijama-civilnoga-drustva-za-predlaganje-predstavnika-u-strucnu-radnu-skupinu-za-izradu-nacionalnog-plana-za-razvoj-biogospodarstva/6369",
+   "published": "2026-11-09T10:15:55.000Z",
+   "summary": "Rok za dostavu prijedloga kandidata je 16. studeni 2026."
+  },
+  {
+   "guid": "https://udruge.gov.hr/vijesti/hrvatska-glazbena-mladez-ugostila-svicarsku-delegaciju-u-sklopu-programa-civilno-drustvo/6368",
+   "title": "Hrvatska glazbena mladež ugostila švicarsku delegaciju u sklopu Programa Civilno društvo",
+   "link": "https://udruge.gov.hr/vijesti/hrvatska-glazbena-mladez-ugostila-svicarsku-delegaciju-u-sklopu-programa-civilno-drustvo/6368",
+   "published": "2026-11-06T16:28:54.000Z",
+   "summary": "Švicarskoj delegaciji predstavljen projekt \"Glazba za ekološki osviještene uši\" financiran iz Poziva \"Osnaživanje doprinosa organizacija civilnoga društva odgoju i obrazovanju za održivi razvoj\""
+  },
+  {
+   "guid": "https://udruge.gov.hr/vijesti/dodijeljeno-11-ugovora-vrijednih-vise-od-1-1-milijuna-eura-za-mikro-lokalni-razvoj-diljem-hrvatske/6364",
+   "title": "Dodijeljeno 11 ugovora vrijednih više od 1,1 milijuna eura za mikro lokalni razvoj diljem Hrvatske",
+   "link": "https://udruge.gov.hr/vijesti/dodijeljeno-11-ugovora-vrijednih-vise-od-1-1-milijuna-eura-za-mikro-lokalni-razvoj-diljem-hrvatske/6364",
+   "published": "2026-10-27T12:49:11.000Z",
+   "summary": "Ugovoreni projekti unutar trećeg poziva Programa Civilno društvo, Švicarsko-hrvatskog programa suradnje"
+  }
+ ],
+ "changed": [],
+ "instrucciones": "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json.",
+ "borradores": []
+}

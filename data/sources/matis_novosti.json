@@ -4,6 +4,27 @@
  "url": "https://matis.hr/feed/",
  "items": [
   {
+   "guid": "https://matis.hr/?p=81935",
+   "title": "Hrvatski jezik i identitet u središtu 9. susreta hrvatske dijaspore Južne Amerike",
+   "link": "https://matis.hr/novosti/hrvatski-jezik-i-identitet-u-sredistu-9-susreta-hrvatske-dijaspore-juzne-amerike/",
+   "published": "2026-11-08T09:40:49.000Z",
+   "summary": "Treći dan Susreta obilježila su izlaganja o jeziku, kulturi i identitetu, uz poseban naglasak na obrazovne programe i ulogu Hrvatske matice iseljenika u povezivanju novih naraštaja s Hrvatskom"
+  },
+  {
+   "guid": "https://matis.hr/?p=81909",
+   "title": "CroActivas u Córdobi: Žene koje čuvaju naslijeđe i stvaraju budućnost",
+   "link": "https://matis.hr/novosti/croactivas-u-cordobi-zene-koje-cuvaju-naslijede-i-stvaraju-buducnost/",
+   "published": "2026-11-07T08:54:14.000Z",
+   "summary": "Predstavljanjem knjige „Čuvarice niti”, u izdanju HMI-ja, odana je počast ženama koje su kroz generacije gradile mostove između domovine i iseljeništva"
+  },
+  {
+   "guid": "https://matis.hr/?p=81903",
+   "title": "U Córdobi svečano otvoren 9. Susret hrvatske dijaspore Južne Amerike",
+   "link": "https://matis.hr/novosti/u-cordobi-svecano-otvoren-9-susret-hrvatske-dijaspore-juzne-amerike/",
+   "published": "2026-11-06T15:33:00.000Z",
+   "summary": "Veliko okupljanje Hrvata južnoameričkog kontinenta u znaku zajedništva, očuvanja hrvatskog identiteta i jačanja veza s domovinom"
+  },
+  {
    "guid": "https://matis.hr/?p=81881",
    "title": "NAJAVA: Zimska škola hrvatskoga folklora 2027.",
    "link": "https://matis.hr/novosti/najava-zimska-skola-hrvatskoga-folklora-2027/",
@@ -51,27 +72,6 @@
    "link": "https://matis.hr/casopis_matica_sadrzaj/matica_kolumna/quo-vadis-bosnoi-hercegovino/",
    "published": "2026-11-02T12:35:53.000Z",
    "summary": "Koliko je god to postalo svagdanje, još je više potrebno isticati da država Bosna i Hercegovina može biti postojana i uspješna jedino ako njezina tri naroda budu u bitnome i pravednome odnosu svoji na svome s osiguranim ljudskim i narodnim pravima. Na taj način onda mogu izgrađivati zajedničku državu i pridonositi široj, europskoj zajednici. Piše: […]"
-  },
-  {
-   "guid": "https://matis.hr/?p=81736",
-   "title": "Subotom se u Varšavi govori hrvatski",
-   "link": "https://matis.hr/casopis_matica_sadrzaj/matica_clanak/subotom-se-u-varsavi-govori-hrvatski/",
-   "published": "2026-11-02T12:34:24.000Z",
-   "summary": "Hrvatska nastava u Poljskoj djeluje u Varšavi od 2012. godine na inicijativu Veleposlanstva RH i prve učiteljice Timee Sákán Škrlin Hrvatska nastava u Poljskoj djeluje samo na jednome mjestu – u Varšavi. U gradu od gotovo dva milijuna stanovnika, koji je posljednjih desetljeća postao jedno od najvažnijih poslovnih i institucionalnih središta srednje i istočne Europe, […]"
-  },
-  {
-   "guid": "https://matis.hr/?p=81731",
-   "title": "Mentorstva znanstvenika iz dijaspore",
-   "link": "https://matis.hr/casopis_matica_sadrzaj/matica_kolumna/mentorstva-znanstvenika-iz-dijaspore/",
-   "published": "2026-11-02T12:32:44.000Z",
-   "summary": "Umrežavanje hrvatskih znanstvenika iz dijaspore i domovine u sklopu inicijative CroScience, čije je ovogodišnje izdanje održano u Zagrebu, jača međugeneracijsko mentorstvo istraživača i donosi niz prijedloga koji će ubrzati suradnju naše akademske zajednice s gospodarstvom Piše: Vesna Kukavica Zagrebačko izdanje stručnog skupa CroScience okupilo je tri stotine hrvatskih znanstvenika iz domovine i iseljeništva s dva […]"
-  },
-  {
-   "guid": "https://matis.hr/?p=81722",
-   "title": "Matica 10 /2026.",
-   "link": "https://matis.hr/matica/matica-10-2026/",
-   "published": "2026-11-02T12:31:37.000Z",
-   "summary": "Listopadska Matica naslovnicu posvećuje Antonu Cetínu, međunarodno priznatom hrvatsko-kanadskom slikaru i grafičaru, koji je 90. rođendan obilježio monografijom 90 za 90 te izložbama u Zagrebu i Čazmi. Među središnjim temama broja izdvaja se 4. Susret klapa Hrvata izvan Republike Hrvatske, koji je u Hrvatskom narodnom kazalištu u Splitu okupio devet sastava. Posebnu pozornost posvećujemo i […]"
   }
  ]
 }

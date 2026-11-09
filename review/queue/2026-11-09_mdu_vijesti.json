@@ -1,0 +1,451 @@
+{
+ "source": "mdu_vijesti",
+ "name": "Ministerio de Demografía e Inmigración (MDU): novedades (Vijesti)",
+ "detected_at": "2026-11-09",
+ "added": [
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/ministar-sipic-na-krstenju-sestog-djeteta-obitelji-skomrlj-u-podstrani/7694",
+   "title": "Ministar Šipić na krštenju šestog djeteta obitelji Škomrlj u Podstrani",
+   "link": "https://mdu.gov.hr/vijesti-4693/ministar-sipic-na-krstenju-sestog-djeteta-obitelji-skomrlj-u-podstrani/7694",
+   "published": "2026-11-08T14:56:00.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/ministar-sipic-na-simpoziju-u-splitu-primalje-ce-imati-kljucnu-ulogu-u-podrsci-majkama-i-nakon-izlaska-iz-rodilista/7693",
+   "title": "Ministar Šipić na simpoziju u Splitu: Primalje će imati ključnu ulogu u podršci majkama i nakon izlaska iz rodilišta",
+   "link": "https://mdu.gov.hr/vijesti-4693/ministar-sipic-na-simpoziju-u-splitu-primalje-ce-imati-kljucnu-ulogu-u-podrsci-majkama-i-nakon-izlaska-iz-rodilista/7693",
+   "published": "2026-11-06T15:07:52.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/7692",
+   "title": "Ministarstvo demografije i useljeništva otvorilo savjetovanje o Nacrtu prijedloga zakona o izmjenama i dopuni Zakona o rodiljnim i roditeljskim potporama, s Konačnim prijedlogom zakona, Obrascu zakonodavnih aktivnosti i Obrascu iskaza procjene učinaka propisa",
+   "link": "https://mdu.gov.hr/vijesti-4693/7692",
+   "published": "2026-11-06T13:39:59.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/drzavni-tajnik-mladen-barac-na-9-susretu-hrvata-juzne-amerike-u-cordobi-hrvati-u-juznoj-americi-vazan-su-most-izmedju-domovine-i-zemalja-u-kojima-zive/7691",
+   "title": "Državni tajnik Mladen Barać na 9. susretu Hrvata Južne Amerike u Córdobi: Hrvati u Južnoj Americi važan su most između domovine i zemalja u kojima žive",
+   "link": "https://mdu.gov.hr/vijesti-4693/drzavni-tajnik-mladen-barac-na-9-susretu-hrvata-juzne-amerike-u-cordobi-hrvati-u-juznoj-americi-vazan-su-most-izmedju-domovine-i-zemalja-u-kojima-zive/7691",
+   "published": "2026-11-06T11:56:24.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/drzavna-tajnica-blazanovic-na-otvorenju-dogradjenog-djecjeg-vrtica-radost-u-ludbregu/7690",
+   "title": "Državna tajnica Blažanović na otvorenju dograđenog Dječjeg vrtića Radost u Ludbregu",
+   "link": "https://mdu.gov.hr/vijesti-4693/drzavna-tajnica-blazanovic-na-otvorenju-dogradjenog-djecjeg-vrtica-radost-u-ludbregu/7690",
+   "published": "2026-11-05T14:50:22.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/odobrene-prve-novcane-potpore-za-velike-obitelji-za-kupnju-vozila-sa-sedam-ili-vise-sjedala-osigurano-4-5-milijuna-eura/7689",
+   "title": "Odobrene prve novčane potpore za velike obitelji: za kupnju vozila sa sedam ili više sjedala osigurano 4,5 milijuna eura",
+   "link": "https://mdu.gov.hr/vijesti-4693/odobrene-prve-novcane-potpore-za-velike-obitelji-za-kupnju-vozila-sa-sedam-ili-vise-sjedala-osigurano-4-5-milijuna-eura/7689",
+   "published": "2026-11-04T13:26:55.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/mudrica-na-48-interliberu-besplatne-slikovnice-mastaonica-i-kviz-znanja-za-djecu-i-roditelje/7688",
+   "title": "Mudrica na 48. Interliberu: besplatne slikovnice, Maštaonica i kviz znanja za djecu i roditelje",
+   "link": "https://mdu.gov.hr/vijesti-4693/mudrica-na-48-interliberu-besplatne-slikovnice-mastaonica-i-kviz-znanja-za-djecu-i-roditelje/7688",
+   "published": "2026-11-04T08:35:54.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/drzavna-tajnica-blazanovic-na-konferenciji-poduzetnice-3-0-podrska-obitelji-i-fleksibilniji-uvjeti-rada-vazni-su-za-profesionalni-razvoj-zena/7687",
+   "title": "Državna tajnica Blažanović na konferenciji Poduzetnice 3.0: Podrška obitelji i fleksibilniji uvjeti rada važni su za profesionalni razvoj žena",
+   "link": "https://mdu.gov.hr/vijesti-4693/drzavna-tajnica-blazanovic-na-konferenciji-poduzetnice-3-0-podrska-obitelji-i-fleksibilniji-uvjeti-rada-vazni-su-za-profesionalni-razvoj-zena/7687",
+   "published": "2026-11-03T14:46:35.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/ministar-sipic-iz-munchena-vrijeme-je-da-se-ponovno-priblizimo-svom-domu/7686",
+   "title": "Ministar Šipić iz Münchena: Vrijeme je da se ponovno približimo svom domu",
+   "link": "https://mdu.gov.hr/vijesti-4693/ministar-sipic-iz-munchena-vrijeme-je-da-se-ponovno-priblizimo-svom-domu/7686",
+   "published": "2026-10-31T15:02:46.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/ministar-sipic-u-radnom-posjetu-osijeku-demografska-obnova-slavonije-zajednicki-je-zadatak-drzave-lokalne-zajednice-i-znanstvenog-kruga/7682",
+   "title": "Ministar Šipić u radnom posjetu Osijeku: Demografska obnova Slavonije zajednički je zadatak države, lokalne zajednice i znanstvenog kruga",
+   "link": "https://mdu.gov.hr/vijesti-4693/ministar-sipic-u-radnom-posjetu-osijeku-demografska-obnova-slavonije-zajednicki-je-zadatak-drzave-lokalne-zajednice-i-znanstvenog-kruga/7682",
+   "published": "2026-10-26T16:58:32.000Z",
+   "summary": ""
+  }
+ ],
+ "changed": [],
+ "instrucciones": "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json.",
+ "borradores": [
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/ministar-sipic-na-krstenju-sestog-djeteta-obitelji-skomrlj-u-podstrani/7694",
+   "link": "https://mdu.gov.hr/vijesti-4693/ministar-sipic-na-krstenju-sestog-djeteta-obitelji-skomrlj-u-podstrani/7694",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-09T14:10:53.329Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es una nota de prensa sobre un acto y medidas ya anunciadas, sin una convocatoria a la que una persona o asociación pueda postularse.",
+   "ficha": {
+    "cat": "proy",
+    "t": "El ministro Šipić en el bautismo del sexto hijo de la familia Škomrlj",
+    "t_hr": "Ministar Šipić na krštenju šestog djeteta obitelji Škomrlj u Podstrani",
+    "who": "Ministerio de Demografía e Inmigración (Ministarstvo demografije i useljeništva)",
+    "amount": "",
+    "what": "Nota sobre la presencia del ministro Ivan Šipić en el bautismo de un sexto hijo en Podstrana. El ministro mencionó medidas de apoyo a las familias: un pago único por recién nacido de 618 euros, con un aumento previsto a 803 euros desde 2027, y un piloto para cofinanciar la compra de vehículos de siete o más asientos para familias con cuatro o más hijos. No es una convocatoria con plazos ni requisitos para postularse.",
+    "el": {
+     "ar": [
+      "no",
+      "La nota no describe una convocatoria a la que se pueda postular desde Argentina."
+     ],
+     "cit": [
+      "no",
+      "La nota no describe una convocatoria a la que se pueda postular desde Argentina."
+     ],
+     "res": [
+      "no",
+      "La nota no describe una convocatoria a la que se pueda postular quien vive en Croacia con residencia de diáspora."
+     ]
+    },
+    "src": [
+     "mdu.gov.hr",
+     "https://mdu.gov.hr/vijesti-4693/ministar-sipic-na-krstenju-sestog-djeteta-obitelji-skomrlj-u-podstrani/7694"
+    ],
+    "ai_generated": true,
+    "flag": "La fuente no es una convocatoria: no tiene plazo ni requisitos de postulación. Se marcó como no relevante. Categoría: ninguna opción de la lista encaja bien; se usó 'proy' por defecto. Revisar si conviene excluir la ficha. Las cifras de 618 euros y 803 euros (previsto desde 2027) corresponden a medidas de apoyo a familias, no a una convocatoria. Confirmar si merecen una ficha aparte en la sección de medidas. El piloto de vehículos subió de 2,2 a 4,5 millones de euros; la fuente no aclara si es el total del programa. Confirmar antes de usar esa cifra. La fecha de publicación indicada es 2026-11-08 y la fuente dice 08.11.2026, que coinciden."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/ministar-sipic-na-simpoziju-u-splitu-primalje-ce-imati-kljucnu-ulogu-u-podrsci-majkama-i-nakon-izlaska-iz-rodilista/7693",
+   "link": "https://mdu.gov.hr/vijesti-4693/ministar-sipic-na-simpoziju-u-splitu-primalje-ce-imati-kljucnu-ulogu-u-podrsci-majkama-i-nakon-izlaska-iz-rodilista/7693",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-09T14:11:05.147Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es una noticia sobre un simposio y un piloto anunciado, sin convocatoria abierta a la que una persona o asociación de la diáspora pueda postularse.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Simposio de partería en Split y nuevo piloto de apoyo a madres",
+    "t_hr": "Ministar Šipić na simpoziju u Splitu: Primalje će imati ključnu ulogu u podršci majkama i nakon izlaska iz rodilišta",
+    "who": "Ministerio de Demografía e Inmigración (Ministarstvo demografije i useljeništva)",
+    "amount": "",
+    "what": "El ministro Ivan Šipić participó en la apertura del 3.º simposio de parteras «Elija Sotera 2026» en Split, donde habló del apoyo a las madres después del parto. Anunció el piloto «Mama, tu smo», de acompañamiento práctico, emocional y de lactancia durante los primeros tres meses posteriores al parto, que se haría en Zagreb, Split, Rijeka y Osijek con inicio estimado en la segunda mitad de 2027. No es una convocatoria para postularse.",
+    "el": {
+     "ar": [
+      "no",
+      "No hay convocatoria abierta; el piloto solo fue anunciado y no se indica cómo postularse."
+     ],
+     "cit": [
+      "no",
+      "No hay convocatoria abierta; el piloto solo fue anunciado y no se indica cómo postularse."
+     ],
+     "res": [
+      "no",
+      "No hay convocatoria abierta; el piloto solo fue anunciado y no se indica cómo postularse."
+     ]
+    },
+    "src": [
+     "mdu.gov.hr",
+     "https://mdu.gov.hr/vijesti-4693/ministar-sipic-na-simpoziju-u-splitu-primalje-ce-imati-kljucnu-ulogu-u-podrsci-majkama-i-nakon-izlaska-iz-rodilista/7693"
+    ],
+    "ai_generated": true,
+    "flag": "La noticia no contiene una convocatoria. Conviene revisar si el Ministerio publica luego un llamado para el piloto «Mama, tu smo» y, en ese caso, actualizar la ficha. El piloto está pensado para ciudades concretas de Croacia (Zagreb, Split, Rijeka y Osijek); si se abriera una convocatoria, habría que revisar si exige residencia o inscripción en esas ciudades. Las cifras de 3.001,79 euros, 618 euros, 803 euros y 4,5 millones de euros corresponden a prestaciones y programas ya existentes o anunciados, no a una convocatoria para la diáspora; no se cargaron como monto. La categoría «proy» es una aproximación, porque el piloto es de un ministerio y no de una asociación; confirmar la categoría correcta. La fuente se identifica como Ministerio de Demografía e Inmigración (MDU) en los metadatos y como Ministarstvo demografije i useljeništva en el texto; el nombre oficial usado es el del texto."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/7692",
+   "link": "https://mdu.gov.hr/vijesti-4693/7692",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-09T14:11:17.857Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es una consulta pública sobre un proyecto de ley de prestaciones por maternidad y crianza, no una convocatoria a la que una persona o asociación pueda postularse.",
+   "ficha": {
+    "cat": "res",
+    "t": "Consulta pública sobre cambios a la ley de prestaciones por maternidad y crianza",
+    "t_hr": "Ministarstvo demografije i useljeništva otvorilo savjetovanje o Nacrtu prijedloga zakona o izmjenama i dopuni Zakona o rodiljnim i roditeljskim potporama, s Konačnim prijedlogom zakona, Obrascu zakonodavnih aktivnosti i Obrascu iskaza procjene učinaka propisa",
+    "who": "Ministerio de Demografía e Inmigración (Ministarstvo demografije i useljeništva)",
+    "amount": "",
+    "what": "El ministerio abrió una consulta pública en el portal e-Savjetovanja sobre un proyecto de ley que modifica la ley de prestaciones por maternidad y crianza, junto con dos formularios que acompañan el proyecto: uno de actividad legislativa y otro de evaluación de efectos de la norma. Sirve para que la ciudadanía envíe comentarios antes de que se apruebe la ley; no otorga ningún beneficio ni ayuda directa.",
+    "el": {
+     "ar": [
+      "no",
+      "La consulta no otorga un beneficio a personas que viven en Argentina, así que no hay nada que solicitar desde ese perfil."
+     ],
+     "cit": [
+      "no",
+      "La consulta no otorga un beneficio a personas con ciudadanía argentina, así que no hay nada que solicitar desde ese perfil."
+     ],
+     "res": [
+      "no",
+      "La consulta no otorga un beneficio a personas con residencia de diáspora en Croacia, así que no hay nada que solicitar desde ese perfil."
+     ]
+    },
+    "src": [
+     "mdu.gov.hr",
+     "https://mdu.gov.hr/vijesti-4693/7692"
+    ],
+    "ai_generated": true,
+    "deadline": "2026-11-15T23:59:00+01:00",
+    "flag": "Son tres consultas distintas en e-Savjetovanja (Econ/10444, Econ/10443 y Econ/10442) con el mismo período de 5 al 15 de noviembre de 2026; el resumen usa la fecha de cierre común y no verifiqué cada portal. El título dice «Nacrt prijedloga zakona» pero el cuerpo del texto habla de «Prijedlog zakona»; conviene confirmar el nombre exacto del documento en el portal. La fuente no da el alcance de los cambios a la ley, así que el resumen no describe cuáles prestaciones se modifican. El aviso no dice si el portal admite comentarios de personas que viven fuera de Croacia; no lo asumí. Se detectó texto de navegación del sitio, sin instrucciones dirigidas al sistema; no se aplicó ninguna."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": "Javno savjetovanje otvoreno je u razdoblju od 5. do 15. studenoga 2026. godine."
+   }
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/drzavni-tajnik-mladen-barac-na-9-susretu-hrvata-juzne-amerike-u-cordobi-hrvati-u-juznoj-americi-vazan-su-most-izmedju-domovine-i-zemalja-u-kojima-zive/7691",
+   "link": "https://mdu.gov.hr/vijesti-4693/drzavni-tajnik-mladen-barac-na-9-susretu-hrvata-juzne-amerike-u-cordobi-hrvati-u-juznoj-americi-vazan-su-most-izmedju-domovine-i-zemalja-u-kojima-zive/7691",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-09T14:11:26.301Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es una noticia sobre una visita oficial y un encuentro de la diáspora, sin ninguna convocatoria, beca, ayuda ni programa con plazo para postularse.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Visita del secretario de Estado Mladen Barać al encuentro de croatas de Sudamérica en Córdoba",
+    "t_hr": "Državni tajnik Mladen Barać na 9. susretu Hrvata Južne Amerike u Córdobi: Hrvati u Južnoj Americi važan su most između domovine i zemalja u kojima žive",
+    "who": "Ministerio de Demografía e Inmigración (Ministarstvo demografije i useljeništva)",
+    "amount": "",
+    "what": "Comunicado sobre la participación del secretario de Estado Mladen Barać en la apertura del 9.º encuentro de croatas de Sudamérica en Córdoba, Argentina, con unas 500 personas de diez países. Se habló de fortalecer los vínculos con las comunidades croatas en el exterior, del programa Croaticum para jóvenes de origen croata y de una reunión bilateral con la Secretaría de Agricultura argentina. La nota no describe ninguna convocatoria abierta.",
+    "el": {
+     "ar": [
+      "no",
+      "La nota no describe ninguna convocatoria o programa al que una persona pueda postularse."
+     ],
+     "cit": [
+      "no",
+      "La nota no describe ninguna convocatoria o programa al que una persona pueda postularse."
+     ],
+     "res": [
+      "no",
+      "La nota no describe ninguna convocatoria o programa vinculado a residencia de diáspora."
+     ]
+    },
+    "src": [
+     "mdu.gov.hr",
+     "https://mdu.gov.hr/vijesti-4693/drzavni-tajnik-mladen-barac-na-9-susretu-hrvata-juzne-amerike-u-cordobi-hrvati-u-juznoj-americi-vazan-su-most-izmedju-domovine-i-zemalja-u-kojima-zive/7691"
+    ],
+    "ai_generated": true,
+    "flag": "Es una noticia sobre una visita oficial, no una convocatoria; conviene confirmar si el programa Croaticum tiene una convocatoria abierta aparte para revisar. La categoría 'proy' se eligió solo porque el enum la acerca más al tema; ninguna categoría describe bien una nota de prensa, así que conviene revisarla. El texto menciona que en Buenos Aires se presentarán medidas y programas para la diáspora, pero no da detalles ni plazos; no se incluyó nada de eso."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/drzavna-tajnica-blazanovic-na-otvorenju-dogradjenog-djecjeg-vrtica-radost-u-ludbregu/7690",
+   "link": "https://mdu.gov.hr/vijesti-4693/drzavna-tajnica-blazanovic-na-otvorenju-dogradjenog-djecjeg-vrtica-radost-u-ludbregu/7690",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-09T14:11:37.452Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es una nota sobre la inauguración de una obra ya financiada, sin convocatoria abierta que una persona o asociación pueda aprovechar.",
+   "ficha": {
+    "cat": "loc",
+    "t": "Inauguración de ampliación de un jardín infantil en Ludbreg",
+    "t_hr": "Državna tajnica Blažanović na otvorenju dograđenog Dječjeg vrtića Radost u Ludbregu",
+    "who": "Ministerio de Demografía e Inmigración (Ministarstvo demografije i useljeništva)",
+    "amount": "",
+    "what": "La secretaria de Estado Danijela Blažanović participó en la inauguración de la ampliación del jardín infantil Radost en Ludbreg y de un nuevo patio de juegos exterior. La ampliación agregó tres salas de uso diario y 44 lugares para niños. El Ministerio cofinanció el proyecto del patio de juegos con 24.831,15 euros dentro de un llamado público ya resuelto.",
+    "el": {
+     "ar": [
+      "no",
+      "La nota informa sobre obras ya inauguradas y fondos ya asignados, sin convocatoria abierta para personas que viven en Argentina."
+     ],
+     "cit": [
+      "no",
+      "La nota informa sobre obras ya inauguradas y fondos ya asignados, sin convocatoria abierta para ciudadanos que viven en Argentina."
+     ],
+     "res": [
+      "no",
+      "No hay una convocatoria abierta para residentes con residencia de diáspora; la nota solo describe una inauguración."
+     ]
+    },
+    "src": [
+     "mdu.gov.hr",
+     "https://mdu.gov.hr/vijesti-4693/drzavna-tajnica-blazanovic-na-otvorenju-dogradjenog-djecjeg-vrtica-radost-u-ludbregu/7690"
+    ],
+    "ai_generated": true,
+    "flag": "La fuente es una nota de prensa sobre una inauguración, no un llamado abierto; confirmar que no haya una convocatoria vigente relacionada. El Javni poziv mencionado (2025-2026) figura como resuelto en el texto; no se informan plazos ni requisitos vigentes. El texto de la página incluye elementos de navegación (Ispiši stranicu, Podijeli na Facebooku), sin instrucciones para el sistema; se ignoraron. Se borró el monto «€24.831,15 de cofinanciamiento del Ministerio para el patio de juegos; el proyecto total vale €77.685»: no aparece textual en la fuente. Revisar el PDF de la convocatoria."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/odobrene-prve-novcane-potpore-za-velike-obitelji-za-kupnju-vozila-sa-sedam-ili-vise-sjedala-osigurano-4-5-milijuna-eura/7689",
+   "link": "https://mdu.gov.hr/vijesti-4693/odobrene-prve-novcane-potpore-za-velike-obitelji-za-kupnju-vozila-sa-sedam-ili-vise-sjedala-osigurano-4-5-milijuna-eura/7689",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-09T14:11:49.805Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es el anuncio de resultados de una convocatoria ya cerrada (primeras ayudas otorgadas a 167 familias), y la fuente no abre ninguna nueva postulación.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Primeras ayudas para comprar vehículos de familias numerosas",
+    "t_hr": "Odobrene prve novčane potpore za velike obitelji: za kupnju vozila sa sedam ili više sjedala osigurano 4,5 milijuna eura",
+    "who": "Ministerio de Demografía e Inmigración (Ministarstvo demografije i useljeništva), que financia el programa; la implementa la Fundación «Hrvatska za djecu» (Zaklada «Hrvatska za djecu»)",
+    "amount": "",
+    "what": "Es un programa piloto que ayuda a sufinanciar la compra de un vehículo de siete o más asientos para familias con cuatro o más hijos, con un apoyo de hasta 15.000 euros. La fuente informa que ya se otorgaron las primeras ayudas a 167 familias con 764 hijos, y que el ministerio dice que habrá más decisiones a futuro.",
+    "el": {
+     "ar": [
+      "no",
+      "La convocatoria ya se cerró con la adjudicación de las primeras ayudas y la fuente no indica requisitos de residencia para personas en Argentina."
+     ],
+     "cit": [
+      "no",
+      "La convocatoria ya se cerró con la adjudicación de las primeras ayudas y la fuente no indica requisitos de residencia para personas en Argentina."
+     ],
+     "res": [
+      "cond",
+      "Si el programa exige residencia en Croacia, quien tenga residencia de diáspora podría cumplirlo, pero la fuente no lo aclara y la convocatoria está cerrada."
+     ]
+    },
+    "src": [
+     "mdu.gov.hr",
+     "https://mdu.gov.hr/vijesti-4693/odobrene-prve-novcane-potpore-za-velike-obitelji-za-kupnju-vozila-sa-sedam-ili-vise-sjedala-osigurano-4-5-milijuna-eura/7689"
+    ],
+    "ai_generated": true,
+    "flag": "La fuente no define requisitos de residencia ni de ciudadanía; habría que revisar las condiciones completas del programa en el sitio de la Fundación. Ninguna categoría encaja bien; se usó «proy» como opción más cercana, pero conviene revisarla. El texto dice que esta es la primera decisión y que el programa continúa, así que podría abrirse una nueva convocatoria; si se publica, habría que hacer una ficha nueva. El monto de 4,5 millones es el presupuesto total del programa, no un monto por familia; el tope de 15.000 euros por familia figura en el texto, pero sin cita textual en croata. El texto indica que la decisión completa se publicará en la web de la Fundación «Hrvatska za djecu» durante el día; no se tuvo acceso a ese documento. Se borró el monto «4,5 millones de euros de presupuesto total del programa; 2.389.680,15 euros otorgados a 167 familias; hasta 15.000 euros por familia»: no aparece textual en la fuente. Revisar el PDF de la convocatoria."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/mudrica-na-48-interliberu-besplatne-slikovnice-mastaonica-i-kviz-znanja-za-djecu-i-roditelje/7688",
+   "link": "https://mdu.gov.hr/vijesti-4693/mudrica-na-48-interliberu-besplatne-slikovnice-mastaonica-i-kviz-znanja-za-djecu-i-roditelje/7688",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-09T14:12:02.394Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es una actividad de una feria del libro en Zagreb para familias croatas, sin beca, ayuda, residencia ni programa dirigido a descendientes de croatas o a asociaciones de la diáspora.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Mudrica en la feria Interliberu: libros gratis, actividades y un quiz para chicos y familias",
+    "t_hr": "Mudrica na 48. Interliberu: besplatne slikovnice, Maštaonica i kviz znanja za djecu i roditelje",
+    "who": "Ministerio de Demografía e Inmigración (Ministarstvo demografije i useljeništva)",
+    "amount": "",
+    "what": "Durante la feria internacional de libros Interliberu, del 10 al 15 de noviembre de 2026 en Zagreb, el ministerio reparte gratis dos libros ilustrados en su stand y tiene una zona de juegos y dibujo con la mascota Mudrica. El viernes 13 de noviembre a las 17 h hay un quiz por equipos dirigido a chicos de primaria, con uno o dos adultos como máximo. Es una actividad puntual para familias que estén en la feria.",
+    "el": {
+     "ar": [
+      "no",
+      "No hay convocatoria para residentes en Argentina; es una actividad presencial en Zagreb."
+     ],
+     "cit": [
+      "no",
+      "No hay convocatoria para ciudadanos con residencia en Argentina; es una actividad presencial en Zagreb."
+     ],
+     "res": [
+      "no",
+      "No es una ayuda ni un trámite de residencia; solo es una actividad de feria abierta a visitantes."
+     ]
+    },
+    "src": [
+     "mdu.gov.hr",
+     "https://mdu.gov.hr/vijesti-4693/mudrica-na-48-interliberu-besplatne-slikovnice-mastaonica-i-kviz-znanja-za-djecu-i-roditelje/7688"
+    ],
+    "ai_generated": true,
+    "flag": "La fuente no da fecha de cierre para inscribirse al quiz; solo indica que los equipos se anotan por correo a mudrica@mdu.hr. El quiz está pensado para niños de primaria, por lo que es poco probable que un chico que vive en Argentina pueda participar. Se eligió la categoría 'proy' por falta de una categoría específica para eventos; la persona que revisa puede cambiarla. No aparecieron instrucciones dentro de la fuente que pidan cambiar el formato."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/drzavna-tajnica-blazanovic-na-konferenciji-poduzetnice-3-0-podrska-obitelji-i-fleksibilniji-uvjeti-rada-vazni-su-za-profesionalni-razvoj-zena/7687",
+   "link": "https://mdu.gov.hr/vijesti-4693/drzavna-tajnica-blazanovic-na-konferenciji-poduzetnice-3-0-podrska-obitelji-i-fleksibilniji-uvjeti-rada-vazni-su-za-profesionalni-razvoj-zena/7687",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-09T14:12:16.173Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es una noticia sobre una conferencia y no hay una convocatoria abierta; el reconocimiento anunciado es para empleadores y todavía no fue publicado.",
+   "ficha": {
+    "cat": "emp",
+    "t": "Conferencia Poduzetnice 3.0: la secretaria de Estado habló de familia y trabajo flexible",
+    "t_hr": "Državna tajnica Blažanović na konferenciji Poduzetnice 3.0: Podrška obitelji i fleksibilniji uvjeti rada važni su za profesionalni razvoj žena",
+    "who": "Ministerio de Demografía e Inmigración (Ministarstvo demografije i useljeništva)",
+    "amount": "",
+    "what": "La secretaria de Estado Danijela Blažanović participó en la conferencia Poduzetnice 3.0 y habló sobre la necesidad de que las mujeres no tengan que elegir entre familia y carrera. Mencionó el proyecto «Poslodavac prijatelj obitelji», que reconoce a empleadores con prácticas de conciliación como horario flexible, trabajo desde casa y retorno gradual tras la licencia parental. Anunció un nuevo ciclo de este reconocimiento, con publicación prevista para principios de diciembre y postulaciones abiertas hasta fines de enero del año siguiente.",
+    "el": {
+     "ar": [
+      "no",
+      "Es un reconocimiento para empleadores y la fuente no ofrece una vía para personas que viven en Argentina."
+     ],
+     "cit": [
+      "no",
+      "Es un reconocimiento para empleadores y la fuente no ofrece una vía para personas que viven en Argentina."
+     ],
+     "res": [
+      "cond",
+      "Solo aplicaría si la persona tiene un vínculo como empleadora en Croacia, lo que la fuente no precisa."
+     ]
+    },
+    "src": [
+     "mdu.gov.hr",
+     "https://mdu.gov.hr/vijesti-4693/drzavna-tajnica-blazanovic-na-konferenciji-poduzetnice-3-0-podrska-obitelji-i-fleksibilniji-uvjeti-rada-vazni-su-za-profesionalni-razvoj-zena/7687"
+    ],
+    "ai_generated": true,
+    "flag": "La noticia no es una convocatoria: anuncia que el ciclo del reconocimiento «Poslodavac prijatelj obitelji» se publicará a principios de diciembre (año 2026 según la fecha de publicación) y que las postulaciones estarán abiertas hasta fines de enero de 2027. Si se decide cargar la convocatoria cuando salga, verificar el texto oficial y la fecha exacta de cierre. Se dejó deadline en null porque la fecha de cierre no está publicada todavía y la fuente solo dice «do kraja siječnja». Confirmar si el reconocimiento está abierto solo a empleadores con sede en Croacia. Revisar si conviene dar seguimiento a la publicación del llamado para actualizar la ficha como convocatoria."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/ministar-sipic-iz-munchena-vrijeme-je-da-se-ponovno-priblizimo-svom-domu/7686",
+   "link": "https://mdu.gov.hr/vijesti-4693/ministar-sipic-iz-munchena-vrijeme-je-da-se-ponovno-priblizimo-svom-domu/7686",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-09T14:12:25.967Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es una noticia sobre una presentación del ministro en Múnich y no describe una convocatoria concreta que una persona o asociación pueda aprovechar.",
+   "ficha": {
+    "cat": "res",
+    "t": "Ministro Šipić en Múnich: es hora de acercarnos otra vez a nuestro hogar",
+    "t_hr": "Ministar Šipić iz Münchena: Vrijeme je da se ponovno približimo svom domu",
+    "who": "Ministerio de Demografía e Inmigración (Ministarstvo demografije i useljeništva)",
+    "amount": "",
+    "what": "El ministro Ivan Šipić presentó en Múnich la charla «Domovina - širom otvorena vrata» sobre el regreso y la integración de los croatas emigrados y sus descendientes. Habló en general de medidas de apoyo para quienes quieran volver, pero la nota no detalla ningún programa, requisito ni plazo.",
+    "el": {
+     "ar": [
+      "no",
+      "La nota no describe una convocatoria con requisitos para este perfil."
+     ],
+     "cit": [
+      "no",
+      "La nota no describe una convocatoria con requisitos para este perfil."
+     ],
+     "res": [
+      "no",
+      "La nota no describe una convocatoria con requisitos para este perfil."
+     ]
+    },
+    "src": [
+     "mdu.gov.hr",
+     "https://mdu.gov.hr/vijesti-4693/ministar-sipic-iz-munchena-vrijeme-je-da-se-ponovno-priblizimo-svom-domu/7686"
+    ],
+    "ai_generated": true,
+    "flag": "La categoría 'res' es una aproximación porque la nota no corresponde a un programa concreto; confirmar si conviene dejarla fuera del radar. La nota menciona 'potpore' para povratnike y la stipendiranje de la enseñanza del croata sin detalles; revisar la página de Javni pozivi del ministerio por si hay convocatorias abiertas separadas. La fuente no contiene instrucciones dirigidas al sistema; se analizó solo como dato."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  }
+ ]
+}
