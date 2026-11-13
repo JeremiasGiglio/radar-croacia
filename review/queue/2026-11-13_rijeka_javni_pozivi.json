@@ -1,0 +1,111 @@
+{
+ "source": "rijeka_javni_pozivi",
+ "name": "Ciudad de Rijeka (Grad Rijeka): convocatorias públicas (Javni pozivi)",
+ "detected_at": "2026-11-13",
+ "added": [
+  {
+   "guid": "wp:319849",
+   "title": "Javni poziv za podnošenje prijava za dodjelu nepovratnih potpora iz Općeg programa mjera poticanja razvoja poduzetništva na području grada Rijeke",
+   "link": "https://www.rijeka.hr/javni-poziv-za-podnosenje-prijava-za-dodjelu-nepovratnih-potpora-iz-opceg-programa-mjera-poticanja-razvoja-poduzetnistva-na-podrucju-grada-rijeke/",
+   "published": "2026-11-13T11:51:24.000Z",
+   "updated": "2026-11-13T11:58:40.000Z",
+   "summary": "Grad Rijeka objavio je Javni poziv za podnošenje prijava za dodjelu nepovratnih potpora iz Općeg programa mjera poticanja razvoja poduzetništva na području grada Rijeke"
+  },
+  {
+   "guid": "wp:319487",
+   "title": "Otvoren javni poziv za 22 ureda u riječkoj Sinergani",
+   "link": "https://www.rijeka.hr/otvoren-javni-poziv-za-22-ureda-u-rijeckoj-sinergani/",
+   "published": "2026-11-10T13:39:50.000Z",
+   "updated": "2026-11-12T10:42:59.000Z",
+   "summary": "Poduzetnici koji se bave razvojem videoigara, umjetnom inteligencijom, foto i videoprodukcijom te drugim djelatnostima iz područja IT-ja i kreativnih tehnologija mogu se prijaviti za rad u Sinergani, novom riječkom poduzetničkom inkubatoru. Riječka razvojna agencija Porin objavila je javni poziv za zakup 22 ureda, a prijave su otvorene do 11. prosinca 2026."
+  }
+ ],
+ "changed": [],
+ "instrucciones": "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json.",
+ "borradores": [
+  {
+   "guid": "wp:319849",
+   "link": "https://www.rijeka.hr/javni-poziv-za-podnosenje-prijava-za-dodjelu-nepovratnih-potpora-iz-opceg-programa-mjera-poticanja-razvoja-poduzetnistva-na-podrucju-grada-rijeke/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-13T13:17:47.993Z",
+   "text_from": "página oficial",
+   "relevante": true,
+   "motivo_relevancia": "Puede interesar a una persona descendiente de croatas que tenga o quiera crear una pequeña empresa privada con sede en Rijeka, siempre que viva en Croacia.",
+   "ficha": {
+    "cat": "emp",
+    "t": "Ayudas no reembolsables para emprendedores de Rijeka",
+    "t_hr": "Javni poziv za podnošenje prijava za dodjelu nepovratnih potpora iz Općeg programa mjera poticanja razvoja poduzetništva na području grada Rijeke",
+    "who": "Ciudad de Rijeka (Grad Rijeka), Upravni odjel za sport, poduzetništvo i turizam",
+    "amount": "Hasta 10.000,00 euros en total por solicitante, sumando las dos medidas",
+    "what": "La ciudad de Rijeka otorga subsidios que no hay que devolver a pequeños emprendedores con sede en la ciudad. Hay dos medidas: PP26, para cubrir gastos de quienes recién empiezan, y SUSO26, para comprar e instalar máquinas y equipos. Las inversiones deben haberse hecho desde el 1 de noviembre de 2025 hasta la fecha de presentación, y cada factura debe ser de al menos 150 euros sin IVA.",
+    "el": {
+     "ar": [
+      "no",
+      "Requiere ser un pequeño negocio con sede en Rijeka, algo que no se cumple viviendo en Argentina."
+     ],
+     "cit": [
+      "no",
+      "Requiere ser un pequeño negocio con sede en Rijeka, algo que no se cumple viviendo en Argentina aunque se tenga ciudadanía."
+     ],
+     "res": [
+      "cond",
+      "Solo podría postularse si tiene una empresa privada con sede en Rijeka; la residencia de diáspora por sí sola no alcanza."
+     ]
+    },
+    "src": [
+     "rijeka.hr",
+     "https://www.rijeka.hr/javni-poziv-za-podnosenje-prijava-za-dodjelu-nepovratnih-potpora-iz-opceg-programa-mjera-poticanja-razvoja-poduzetnistva-na-podrucju-grada-rijeke/"
+    ],
+    "ai_generated": true,
+    "deadline": "2026-11-30T23:59:00+01:00",
+    "flag": "La fuente no aclara si el tope de 10.000 euros es el total de ambas medidas o si cada una tiene su propio límite; confirmar con la ciudad. La fuente no define qué es un subjeto de pequeña economía; remite a una ley que no nombra. Confirmar requisitos exactos. Las solicitudes incompletas o con declaraciones modificadas se rechazan y no se puede completar la documentación después. Hay que cumplir que no existan deudas vencidas con la ciudad al 30 de septiembre de 2026 y otros requisitos financieros, así que conviene revisar la lista completa de exclusiones antes de postularse. La presentación se hace solo por el portal de e-usluge de la ciudad (sección Poduzetništvo), lo que puede ser una barrera para quien esté en el exterior. Verificar si la fuente exige CUIT o registro equivalente de extranjeros para la solicitud en línea."
+   },
+   "citas": {
+    "amount": "Na taj način moguće je ostvariti ukupan maksimalni iznos od 10.000,00 eura nepovratnih potpora.",
+    "deadline": "prijave na isti zaprimaju se od 16. studenoga 2026. godine u 08,00 sati do 30. studenoga 2026. godine do 16,00 sati."
+   }
+  },
+  {
+   "guid": "wp:319487",
+   "link": "https://www.rijeka.hr/otvoren-javni-poziv-za-22-ureda-u-rijeckoj-sinergani/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-13T13:18:03.373Z",
+   "text_from": "página oficial",
+   "relevante": true,
+   "motivo_relevancia": "Emprendedores de IT, videojuegos, IA o producción audiovisual, con empresa registrada, podrían postularse para una oficina en el incubador Sinergana, incluso desde fuera de Rijeka si luego registran sede allí.",
+   "ficha": {
+    "cat": "emp",
+    "t": "Oficinas para emprendedores de IT y creatividad en el incubador Sinergana (Rijeka)",
+    "t_hr": "Otvoren javni poziv za 22 ureda u riječkoj Sinergani",
+    "who": "Riječka razvojna agencija Porin (Riječka razvojna agencija Porin), con la Ciudad de Rijeka como publicadora del aviso",
+    "amount": "",
+    "what": "Llamado abierto para alquilar 22 oficinas en Sinergana, un incubador de empresas en Rijeka instalado en una antigua central energética de una fábrica de papel. Está dirigido a micro, pequeñas y medianas empresas (incluidos obrts y sociedades comerciales) de IT, tecnologías creativas y actividades afines; la incubación es para empresas registradas hasta hace tres años y la postincubación para las más antiguas. Incluye espacios de trabajo compartidos, equipamiento, capacitaciones y asesoramiento empresarial.",
+    "el": {
+     "ar": [
+      "cond",
+      "Solo puede postularse si tiene una empresa registrada (obrt o sociedad) y, si es aceptada desde fuera de la zona, debe registrar sede en Rijeka en tres meses."
+     ],
+     "cit": [
+      "cond",
+      "Mismo criterio que para Argentina: depende de tener empresa registrada y de la sede en Rijeka tras la aceptación, sin importar la ciudadanía."
+     ],
+     "res": [
+      "cond",
+      "Vivir en Croacia no alcanza por sí solo: hace falta una empresa registrada en el sector y, si no está en la zona de Rijeka, registrar sede allí en tres meses."
+     ]
+    },
+    "src": [
+     "rijeka.hr",
+     "https://www.rijeka.hr/otvoren-javni-poziv-za-22-ureda-u-rijeckoj-sinergani/"
+    ],
+    "ai_generated": true,
+    "deadline": "2026-12-11T23:59:00+01:00",
+    "flag": "La fuente es una nota de prensa; conviene revisar el llamado completo en el sitio de Porin para confirmar requisitos, formulario y criterios de selección. El aviso no indica el precio del alquiler ni el monto de apoyo, así que el monto quedó en null. Hay que confirmar si una persona sin empresa registrada puede postularse o si el requisito de registro es obligatorio. Los turnos de visita (19 y 26 de noviembre, 3 y 10 de diciembre, entre otros) figuran en la fuente y pueden servir de referencia, pero no fueron verificados. El certificado de la Porezna uprava sobre deudas es un requisito de la fuente que debería confirmarse para quienes apliquen desde Argentina. La fuente no contiene instrucciones para el sistema; no se detectaron intentos de alterar el formato."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": "prijave su otvorene do 11. prosinca 2026."
+   }
+  }
+ ]
+}

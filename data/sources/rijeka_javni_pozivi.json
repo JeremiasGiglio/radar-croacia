@@ -4,6 +4,22 @@
  "url": "https://www.rijeka.hr/wp-json/wp/v2/posts?search=javni%20poziv&orderby=date&order=desc&per_page=30&_fields=id,date_gmt,modified_gmt,link,title,excerpt",
  "items": [
   {
+   "guid": "wp:319849",
+   "title": "Javni poziv za podnošenje prijava za dodjelu nepovratnih potpora iz Općeg programa mjera poticanja razvoja poduzetništva na području grada Rijeke",
+   "link": "https://www.rijeka.hr/javni-poziv-za-podnosenje-prijava-za-dodjelu-nepovratnih-potpora-iz-opceg-programa-mjera-poticanja-razvoja-poduzetnistva-na-podrucju-grada-rijeke/",
+   "published": "2026-11-13T11:51:24.000Z",
+   "updated": "2026-11-13T11:58:40.000Z",
+   "summary": "Grad Rijeka objavio je Javni poziv za podnošenje prijava za dodjelu nepovratnih potpora iz Općeg programa mjera poticanja razvoja poduzetništva na području grada Rijeke"
+  },
+  {
+   "guid": "wp:319487",
+   "title": "Otvoren javni poziv za 22 ureda u riječkoj Sinergani",
+   "link": "https://www.rijeka.hr/otvoren-javni-poziv-za-22-ureda-u-rijeckoj-sinergani/",
+   "published": "2026-11-10T13:39:50.000Z",
+   "updated": "2026-11-12T10:42:59.000Z",
+   "summary": "Poduzetnici koji se bave razvojem videoigara, umjetnom inteligencijom, foto i videoprodukcijom te drugim djelatnostima iz područja IT-ja i kreativnih tehnologija mogu se prijaviti za rad u Sinergani, novom riječkom poduzetničkom inkubatoru. Riječka razvojna agencija Porin objavila je javni poziv za zakup 22 ureda, a prijave su otvorene do 11. prosinca 2026."
+  },
+  {
    "guid": "wp:318671",
    "title": "Javni poziv za podnošenje prijedloga za dodjelu nagrade Grada Rijeke „AmbasadoRI mira“ u 2027. godini",
    "link": "https://www.rijeka.hr/javni-poziv-za-podnosenje-prijedloga-za-dodjelu-nagrade-grada-rijeke-ambasadori-mira-u-2027-godini/",
