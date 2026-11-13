@@ -1,0 +1,108 @@
+{
+ "source": "mzom_natjecaji",
+ "name": "Ministerio de Ciencia, Educación y Juventud (MZOM): becas y convocatorias (Natječaji)",
+ "detected_at": "2026-11-13",
+ "added": [
+  {
+   "guid": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/javni-poziv-za-sufinanciranje-projekata-poticanja-obrazovanja-nacionalnih-manjina-u-republici-hrvatskoj-u-2026-2027-skolskoj-godini/8173",
+   "title": "Javni poziv za sufinanciranje projekata poticanja obrazovanja nacionalnih manjina u Republici Hrvatskoj u 2026./2027. školskoj godini",
+   "link": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/javni-poziv-za-sufinanciranje-projekata-poticanja-obrazovanja-nacionalnih-manjina-u-republici-hrvatskoj-u-2026-2027-skolskoj-godini/8173",
+   "published": "2026-11-13T09:36:42.000Z",
+   "summary": "Rok: 8. prosinca 2026."
+  },
+  {
+   "guid": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/javni-poziv-za-dodjelu-novcane-potpore-za-pokrice-dijela-troskova-prijevoza-za-studente-s-invaliditetom-za-akademsku-godinu-2026-2027-8168/8168",
+   "title": "Javni poziv za dodjelu novčane potpore za pokriće dijela troškova prijevoza za studente s invaliditetom za akademsku godinu 2026./2027.",
+   "link": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/javni-poziv-za-dodjelu-novcane-potpore-za-pokrice-dijela-troskova-prijevoza-za-studente-s-invaliditetom-za-akademsku-godinu-2026-2027-8168/8168",
+   "published": "2026-11-12T11:00:31.000Z",
+   "summary": "Rok: 13. siječnja 2027. do 12.00 sati"
+  }
+ ],
+ "changed": [],
+ "instrucciones": "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json.",
+ "borradores": [
+  {
+   "guid": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/javni-poziv-za-sufinanciranje-projekata-poticanja-obrazovanja-nacionalnih-manjina-u-republici-hrvatskoj-u-2026-2027-skolskoj-godini/8173",
+   "link": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/javni-poziv-za-sufinanciranje-projekata-poticanja-obrazovanja-nacionalnih-manjina-u-republici-hrvatskoj-u-2026-2027-skolskoj-godini/8173",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-13T13:17:16.394Z",
+   "text_from": "página oficial",
+   "relevante": true,
+   "motivo_relevancia": "Solo pueden postularse asociaciones inscriptas en Croacia que enseñen en lengua y escritura de minorías nacionales, así que una persona de la diáspora sólo podría aprovecharla dentro de una asociación croata que cumpla los requisitos.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Fondos para proyectos de educación de minorías nacionales (curso 2026/2027)",
+    "t_hr": "Javni poziv za sufinanciranje projekata poticanja obrazovanja nacionalnih manjina u Republici Hrvatskoj u 2026./2027. školskoj godini",
+    "who": "Ministerio de Ciencia, Educación y Juventud de Croacia (Ministarstvo znanosti, obrazovanja i mladih)",
+    "amount": "",
+    "what": "Convocatoria para asociaciones que enseñan en lengua y escritura de minorías nacionales en Croacia. Financia dos grupos: a) programas para directores de centros educativos que dan clases en lengua minoritaria, y b) escuelas de invierno para alumnos de minorías nacionales. Las asociaciones deben estar inscriptas en registros croatas y activas en Croacia desde hace al menos un año.",
+    "el": {
+     "ar": [
+      "no",
+      "Exige que la asociación esté inscripta en un registro croata y activa en Croacia al menos un año, requisitos que una asociación con sede en Argentina no cumple."
+     ],
+     "cit": [
+      "no",
+      "Exige que la asociación esté inscripta en un registro croata y activa en Croacia al menos un año, requisitos que una asociación con sede en Argentina no cumple."
+     ],
+     "res": [
+      "cond",
+      "Sólo podría participar como integrante o responsable de una asociación croata inscripta que cumpla los requisitos, no a título individual."
+     ]
+    },
+    "src": [
+     "mzom.gov.hr",
+     "https://mzom.gov.hr/istaknute-teme/natjecaji-196/javni-poziv-za-sufinanciranje-projekata-poticanja-obrazovanja-nacionalnih-manjina-u-republici-hrvatskoj-u-2026-2027-skolskoj-godini/8173"
+    ],
+    "ai_generated": true,
+    "deadline": "2026-12-08T23:59:00+01:00",
+    "flag": "Confirmar si alguna asociación de la diáspora inscripta en Croacia puede presentarse, dado que el texto exige registro croata y un año de actividad en Croacia. La fuente indica que las actividades pueden empezar desde el 1 de septiembre de 2026 y terminar a más tardar el 31 de agosto de 2027; la redacción del texto original es algo confusa («mogle su najranije započeti»), conviene confirmarlo con el ministerio. Los obligatorios (Obrazac 1 a 4, certificados judiciales y de la Porezna uprava) no fueron revisados aquí; los certificados deben tener no más de 30 días desde la publicación. El número de referencia de la Odluka en el texto (URBROJ 533-07-26-0001) difiere del número de este llamado (533-07-26-0003); no cambia el plazo pero conviene verificarlo. El texto menciona que las consultas van a posebni-programi@mzom.hr; el sistema no agrega links. Se borró el monto «€62.000 en total, valor indicativo de la convocatoria (€7.000 para el grupo a y €55.000 para el grupo b)»: no aparece textual en la fuente. Revisar el PDF de la convocatoria."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": "Prijave na Javni poziv podnose se do 8. prosinca 2026. godine ."
+   }
+  },
+  {
+   "guid": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/javni-poziv-za-dodjelu-novcane-potpore-za-pokrice-dijela-troskova-prijevoza-za-studente-s-invaliditetom-za-akademsku-godinu-2026-2027-8168/8168",
+   "link": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/javni-poziv-za-dodjelu-novcane-potpore-za-pokrice-dijela-troskova-prijevoza-za-studente-s-invaliditetom-za-akademsku-godinu-2026-2027-8168/8168",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-13T13:17:33.049Z",
+   "text_from": "página oficial",
+   "relevante": true,
+   "motivo_relevancia": "Puede interesar a un descendiente croata con ciudadanía que tenga discapacidad reconocida y esté inscripto en una universidad croata, aunque viva en Argentina.",
+   "ficha": {
+    "cat": "beca",
+    "t": "Ayuda para gastos de transporte de estudiantes con discapacidad",
+    "t_hr": "Javni poziv za dodjelu novčane potpore za pokriće dijela troškova prijevoza za studente s invaliditetom za akademsku godinu 2026./2027.",
+    "who": "Ministerio de Ciencia, Educación y Juventud (Ministarstvo znanosti, obrazovanja i mladih)",
+    "amount": "€250 por mes, pagados en diez y medio cuotas mensuales (octubre de 2026 a septiembre de 2027)",
+    "what": "Es una ayuda económica para cubrir una parte de los gastos de transporte de estudiantes con discapacidad inscriptos en universidades o instituciones de educación superior de Croacia. Está pensada para estudiantes con al menos 60% de daño orgánico o al menos III grado de daño de capacidades funcionales, inscriptos en el Registro de personas con discapacidad. Solo pueden postularse ciudadanos croatas, ciudadanos de la UE, del EEE o de Suiza, y personas con protección internacional.",
+    "el": {
+     "ar": [
+      "no",
+      "Solo pueden postularse ciudadanos croatas, de la UE, del EEE o de Suiza, o personas con protección internacional, y quien no tiene ciudadanía no entra en esos grupos."
+     ],
+     "cit": [
+      "cond",
+      "Puede postularse si está inscripto en una institución de educación superior de Croacia y tiene discapacidad reconocida; la fuente no exige vivir en Croacia, pero sí presentar la certificación de discapacidad emitida en el exterior."
+     ],
+     "res": [
+      "cond",
+      "Solo si además tiene ciudadanía croata, de la UE, del EEE o de Suiza, o protección internacional, porque la residencia de diáspora por sí sola no está prevista."
+     ]
+    },
+    "src": [
+     "mzom.gov.hr",
+     "https://mzom.gov.hr/istaknute-teme/natjecaji-196/javni-poziv-za-dodjelu-novcane-potpore-za-pokrice-dijela-troskova-prijevoza-za-studente-s-invaliditetom-za-akademsku-godinu-2026-2027-8168/8168"
+    ],
+    "ai_generated": true,
+    "flag": "Confirmar si una persona con ciudadanía croata que vive en Argentina puede presentar la prueba de discapacidad emitida en el exterior, y qué institución la expide. La fuente remite a una Odluka con el monto y no fue leída; el monto de 250 EUR surge del texto del llamado, pero conviene verificarlo en el documento. El llamado no especifica si la ayuda se paga también a quienes viven fuera de Croacia; confirmar con el ministerio (studentski-standard@mzom.hr). Verificar el cálculo de los requisitos académicos (ECTS) y el límite de duración de estudios según el Pravilnik, que no fue consultado. Confirmar que el plazo termina el 13 de enero de 2027 a las 12:00 hora local de Croacia. Se borró el plazo «2027-01-13»: no coincide con una fecha textual de la fuente."
+   },
+   "citas": {
+    "amount": "Mjesečni iznos potpore propisan je Odlukom o visini iznosa novčane potpore za pokriće dijela troškova prijevoza za studente s invaliditetom za akademsku godinu 2026./2027. te iznosi 250,00 EUR i isplaćivat će se u deset i pol mjesečnih rata za razdoblje od listopada 2026. do rujna 2027.",
+    "deadline": null
+   }
+  }
+ ]
+}

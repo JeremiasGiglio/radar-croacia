@@ -1,0 +1,203 @@
+{
+ "source": "mdu_vijesti",
+ "name": "Ministerio de Demografía e Inmigración (MDU): novedades (Vijesti)",
+ "detected_at": "2026-11-13",
+ "added": [
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/hrvatska-otvara-vrata-povratku-dodijeljeni-ugovori-za-66-projekata-vrijednih-1-2-milijuna-eura-predstavljena-i-dva-nova-pravilnika/7701",
+   "title": "Hrvatska otvara vrata povratku: dodijeljeni ugovori za 66 projekata vrijednih 1,2 milijuna eura, predstavljena i dva nova pravilnika",
+   "link": "https://mdu.gov.hr/vijesti-4693/hrvatska-otvara-vrata-povratku-dodijeljeni-ugovori-za-66-projekata-vrijednih-1-2-milijuna-eura-predstavljena-i-dva-nova-pravilnika/7701",
+   "published": "2026-11-13T11:19:08.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/u-makarskoj-otvoreni-dani-ranog-i-predskolskog-odgoja-i-obrazovanja-kvalitetan-vrtic-temelj-je-sretnog-djetinjstva-i-buducnosti-djece/7700",
+   "title": "U Makarskoj otvoreni Dani ranog i predškolskog odgoja i obrazovanja: Kvalitetan vrtić temelj je sretnog djetinjstva i budućnosti djece",
+   "link": "https://mdu.gov.hr/vijesti-4693/u-makarskoj-otvoreni-dani-ranog-i-predskolskog-odgoja-i-obrazovanja-kvalitetan-vrtic-temelj-je-sretnog-djetinjstva-i-buducnosti-djece/7700",
+   "published": "2026-11-12T14:19:24.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/medjunarodno-priznanje-hrvatskoj-ministarstvo-demografije-i-useljenistva-dobitnik-nagrade-iffd-awards-2027/7697",
+   "title": "Međunarodno priznanje Hrvatskoj: Ministarstvo demografije i useljeništva dobitnik nagrade IFFD Awards 2027.",
+   "link": "https://mdu.gov.hr/vijesti-4693/medjunarodno-priznanje-hrvatskoj-ministarstvo-demografije-i-useljenistva-dobitnik-nagrade-iffd-awards-2027/7697",
+   "published": "2026-11-10T07:47:18.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/drzavni-tajnik-barac-na-susretu-dijaspore-u-cordobi-raste-interes-mladih-za-zivot-i-rad-u-hrvatskoj/7696",
+   "title": "Državni tajnik Barać na susretu dijaspore u Córdobi: raste interes mladih za život i rad u Hrvatskoj",
+   "link": "https://mdu.gov.hr/vijesti-4693/drzavni-tajnik-barac-na-susretu-dijaspore-u-cordobi-raste-interes-mladih-za-zivot-i-rad-u-hrvatskoj/7696",
+   "published": "2026-11-09T18:18:05.000Z",
+   "summary": ""
+  }
+ ],
+ "changed": [],
+ "instrucciones": "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json.",
+ "borradores": [
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/hrvatska-otvara-vrata-povratku-dodijeljeni-ugovori-za-66-projekata-vrijednih-1-2-milijuna-eura-predstavljena-i-dva-nova-pravilnika/7701",
+   "link": "https://mdu.gov.hr/vijesti-4693/hrvatska-otvara-vrata-povratku-dodijeljeni-ugovori-za-66-projekata-vrijednih-1-2-milijuna-eura-predstavljena-i-dva-nova-pravilnika/7701",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-13T13:16:36.106Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "La nota informa sobre contratos ya firmados para 66 proyectos de una convocatoria cerrada y sobre dos borradores de pravilnik en consulta pública, sin una convocatoria abierta a la que una persona o asociación pueda postularse hoy.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Contratos para 66 proyectos de la diáspora y dos borradores de pravilnik",
+    "t_hr": "Hrvatska otvara vrata povratku: dodijeljeni ugovori za 66 projekata vrijednih 1,2 milijuna eura, predstavljena i dva nova pravilnika",
+    "who": "Ministerio de Demografía e Inmigración (Ministarstvo demografije i useljeništva)",
+    "amount": "",
+    "what": "El ministerio firmó contratos con organizaciones de la sociedad civil cuyos proyectos fueron elegidos en el Javni poziv de 2026 para favorecer el regreso, la radicación y la integración de la diáspora croata. Además presentó dos borradores de pravilnik que están en consulta pública en e-Savjetovanje: uno sobre becas para aprender croata (sin requisito de secundaria terminada, con pago de gastos de vida al inicio del semestre de invierno) y otro sobre medidas de integración para quienes regresan o se mudan a Croacia.",
+    "el": {
+     "ar": [
+      "no",
+      "No hay convocatoria abierta a la que postularse; los contratos ya fueron firmados y los pravilnici son borradores en consulta."
+     ],
+     "cit": [
+      "no",
+      "No hay convocatoria abierta a la que postularse; los contratos ya fueron firmados y los pravilnici son borradores en consulta."
+     ],
+     "res": [
+      "no",
+      "No hay convocatoria abierta a la que postularse; los contratos ya fueron firmados y los pravilnici son borradores en consulta."
+     ]
+    },
+    "src": [
+     "mdu.gov.hr",
+     "https://mdu.gov.hr/vijesti-4693/hrvatska-otvara-vrata-povratku-dodijeljeni-ugovori-za-66-projekata-vrijednih-1-2-milijuna-eura-predstavljena-i-dva-nova-pravilnika/7701"
+    ],
+    "ai_generated": true,
+    "flag": "La fuente no informa la fecha de cierre de la consulta pública de los dos pravilnici; conviene revisar e-Savjetovanje. Los dos pravilnici son propuestas y no están aprobados; revisar el texto final cuando se adopten para ver si se abre una convocatoria de becas para aprender croata. El monto de 1,2 millones de euros corresponde al total de la convocatoria de 66 proyectos de organizaciones civiles, no a ayudas individuales. La fuente dice que la beca depende de los fondos presupuestarios disponibles; no indica montos por persona. El texto de la fuente no contiene instrucciones dirigidas al sistema; no se aplicó ninguna. Se borró el monto «1,2 millones de euros en total para los 66 proyectos»: no aparece textual en la fuente. Revisar el PDF de la convocatoria."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/u-makarskoj-otvoreni-dani-ranog-i-predskolskog-odgoja-i-obrazovanja-kvalitetan-vrtic-temelj-je-sretnog-djetinjstva-i-buducnosti-djece/7700",
+   "link": "https://mdu.gov.hr/vijesti-4693/u-makarskoj-otvoreni-dani-ranog-i-predskolskog-odgoja-i-obrazovanja-kvalitetan-vrtic-temelj-je-sretnog-djetinjstva-i-buducnosti-djece/7700",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-13T13:16:45.058Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es una noticia sobre un congreso científico ya realizado y no describe ninguna convocatoria, beca ni ayuda a la que una persona o asociación pueda postularse.",
+   "ficha": {
+    "cat": "loc",
+    "t": "Jornadas de educación infantil y preescolar en Makarska",
+    "t_hr": "U Makarskoj otvoreni Dani ranog i predškolskog odgoja i obrazovanja: Kvalitetan vrtić temelj je sretnog djetinjstva i budućnosti djece",
+    "who": "Ministerio de Demografía e Inmigración (Ministarstvo demografije i useljeništva)",
+    "amount": "",
+    "what": "Se inauguró en Makarska el congreso científico y profesional «Mirisi djetinjstva - Socijalni kontekst dječjeg vrtića», organizado en el marco de las Jornadas de educación temprana y preescolar del condado de Split-Dalmacia. El representante del ministerio, Ante Babić, habló sobre la importancia de los jardines infantiles y mencionó en general un programa de mejora de las instalaciones de los jardines en comunidades locales, sin dar detalles de una convocatoria.",
+    "el": {
+     "ar": [
+      "no",
+      "No hay convocatoria ni ayuda abierta para personas que viven en Argentina."
+     ],
+     "cit": [
+      "no",
+      "No hay convocatoria ni ayuda abierta para ciudadanos que viven en Argentina."
+     ],
+     "res": [
+      "no",
+      "No hay convocatoria ni ayuda abierta para residentes de diáspora en Croacia."
+     ]
+    },
+    "src": [
+     "mdu.gov.hr",
+     "https://mdu.gov.hr/vijesti-4693/u-makarskoj-otvoreni-dani-ranog-i-predskolskog-odgoja-i-obrazovanja-kvalitetan-vrtic-temelj-je-sretnog-djetinjstva-i-buducnosti-djece/7700"
+    ],
+    "ai_generated": true,
+    "flag": "La fuente es una noticia sobre un evento ya realizado, no un aviso de convocatoria; se dejó relevante en false. La categoría «loc» es una aproximación porque ninguna de las opciones describe bien una noticia institucional; conviene revisarla. El programa «Dostupnost kvalitetne skrbi za djecu u lokalnim zajednicama kroz poboljšanje materijalnih uvjeta u dječjim vrtićima» se menciona sin detalles de convocatoria, plazos ni montos; si se quiere seguir, habría que buscar el aviso oficial aparte. La página no contiene instrucciones dirigidas al sistema; se procesó solo como dato."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/medjunarodno-priznanje-hrvatskoj-ministarstvo-demografije-i-useljenistva-dobitnik-nagrade-iffd-awards-2027/7697",
+   "link": "https://mdu.gov.hr/vijesti-4693/medjunarodno-priznanje-hrvatskoj-ministarstvo-demografije-i-useljenistva-dobitnik-nagrade-iffd-awards-2027/7697",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-13T13:16:54.903Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es una noticia sobre un premio internacional que recibió el ministerio, sin ninguna convocatoria, beca, ayuda ni programa al que una persona o asociación pueda postularse.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Premio internacional IFFD 2027 para el Ministerio de Demografía",
+    "t_hr": "Međunarodno priznanje Hrvatskoj: Ministarstvo demografije i useljeništva dobitnik nagrade IFFD Awards 2027.",
+    "who": "Ministerio de Demografía e Inmigración (Ministarstvo demografije i useljeništva)",
+    "amount": "",
+    "what": "La Federación Internacional para el Desarrollo de la Familia (IFFD) otorgó al ministerio croata el premio IFFD Awards 2027 por sus políticas de apoyo a familias, padres e hijos. La entrega será en febrero de 2027 en la sede de la ONU en Nueva York. No hay nada para postularse ni recibir apoyo.",
+    "el": {
+     "ar": [
+      "no",
+      "No es una convocatoria ni un programa al que se pueda aplicar desde Argentina."
+     ],
+     "cit": [
+      "no",
+      "No es una convocatoria ni un programa al que se pueda aplicar desde Argentina."
+     ],
+     "res": [
+      "no",
+      "No hay ninguna medida para personas con residencia de diáspora en la noticia."
+     ]
+    },
+    "src": [
+     "mdu.gov.hr",
+     "https://mdu.gov.hr/vijesti-4693/medjunarodno-priznanje-hrvatskoj-ministarstvo-demografije-i-useljenistva-dobitnik-nagrade-iffd-awards-2027/7697"
+    ],
+    "ai_generated": true,
+    "flag": "La categoría 'proy' se eligió porque ninguna opción encaja: confirmar si conviene no publicar esta noticia en el Radar. La fuente es una noticia de premios y no contiene convocatoria, plazo ni monto. Se marcó como no relevante. La fuente no contiene instrucciones para el agente; el texto fue tratado solo como dato."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/drzavni-tajnik-barac-na-susretu-dijaspore-u-cordobi-raste-interes-mladih-za-zivot-i-rad-u-hrvatskoj/7696",
+   "link": "https://mdu.gov.hr/vijesti-4693/drzavni-tajnik-barac-na-susretu-dijaspore-u-cordobi-raste-interes-mladih-za-zivot-i-rad-u-hrvatskoj/7696",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-13T13:17:02.513Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es una noticia sobre un encuentro con la diáspora, sin convocatoria concreta de becas, ayudas ni programas que una persona pueda solicitar.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Encuentro de la diáspora croata en Córdoba: interés de los jóvenes por vivir y trabajar en Croacia",
+    "t_hr": "Državni tajnik Barać na susretu dijaspore u Córdobi: raste interes mladih za život i rad u Hrvatskoj",
+    "who": "Ministerio de Demografía e Inmigración (Ministarstvo demografije i useljeništva)",
+    "amount": "",
+    "what": "El secretario de Estado Mladen Barać presentó en el 9.º encuentro de la diáspora croata del Sur de América, en Córdoba, las medidas del Gobierno para favorecer el regreso de emigrados y sus descendientes. Según la nota, crece el interés de los jóvenes por el mercado laboral croata, los emprendimientos y las inversiones, y el Servicio Croata de Empleo presentó opciones de empleo y autoempleo. También se mencionó que el reconocimiento de títulos universitarios extranjeros es un desafío pendiente.",
+    "el": {
+     "ar": [
+      "no",
+      "La nota no describe ninguna convocatoria a la que se pueda postular una persona que vive en Argentina."
+     ],
+     "cit": [
+      "no",
+      "La nota no describe ninguna convocatoria a la que se pueda postular una persona con ciudadanía argentina."
+     ],
+     "res": [
+      "no",
+      "La nota no describe ninguna convocatoria de residencia para personas de la diáspora."
+     ]
+    },
+    "src": [
+     "mdu.gov.hr",
+     "https://mdu.gov.hr/vijesti-4693/drzavni-tajnik-barac-na-susretu-dijaspore-u-cordobi-raste-interes-mladih-za-zivot-i-rad-u-hrvatskoj/7696"
+    ],
+    "ai_generated": true,
+    "flag": "La fuente es una noticia sin convocatoria; se marca como no relevante según la regla 5. La fecha de publicación indicada es 2026-11-09, coherente con la fecha del encuentro en el texto. Si el ministerio anuncia después medidas concretas (reconocimiento de títulos, ayudas al regreso o programas de empleo), conviene crear una ficha aparte."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  }
+ ]
+}
