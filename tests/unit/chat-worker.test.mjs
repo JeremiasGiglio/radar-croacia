@@ -407,3 +407,14 @@ test("control de idioma: en WhatsApp vale el idioma elegido si el mensaje no alc
   );
   assert.equal(idiomaEsperado(req("Can you recommend a restaurant in Rijeka?"), {}), "en");
 });
+
+test("política: las fichas que piden vivir en Croacia se ofrecen como paso para cuando se mude (no se esconden)", async () => {
+  const { reglasParaModelo } = await import("../../worker/src/policy.mjs");
+  const r = reglasParaModelo();
+  assert.match(r, /para cuando se mude/);
+  assert.match(r, /Nunca digas que no hay un programa si existe para cuando viva allá/);
+  assert.doesNotMatch(
+    r,
+    /No recomiendes una ficha que para su perfil dice «no», salvo para explicar que no le aplica\.$/m,
+  );
+});
