@@ -1,0 +1,17 @@
+{
+ "source": "mzom_natjecaji",
+ "name": "Ministerio de Ciencia, Educación y Juventud (MZOM): becas y convocatorias (Natječaji)",
+ "detected_at": "2026-11-21",
+ "added": [
+  {
+   "guid": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/natjecaj-za-sufinanciranje-znanstveno-istrazivackih-projekata-u-sklopu-zajednicke-hrvatsko-madjarske-suradnje-u-trajanju-od-1-rujna-2027-do-31-kolovoza-2029-godine/8175",
+   "title": "Natječaj za sufinanciranje znanstveno-istraživačkih projekata u sklopu zajedničke hrvatsko-mađarske suradnje u trajanju od 1. rujna 2027. do 31. kolovoza 2029. godine",
+   "link": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/natjecaj-za-sufinanciranje-znanstveno-istrazivackih-projekata-u-sklopu-zajednicke-hrvatsko-madjarske-suradnje-u-trajanju-od-1-rujna-2027-do-31-kolovoza-2029-godine/8175",
+   "published": "2026-11-16T11:31:31.000Z",
+   "summary": "Rok: 15. siječnja 2027."
+  }
+ ],
+ "changed": [],
+ "instrucciones": "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json.",
+ "borradores": []
+}

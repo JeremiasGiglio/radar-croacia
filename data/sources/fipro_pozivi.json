@@ -4,6 +4,14 @@
  "url": "https://www.fipro.hr/wp-json/wp/v2/pages?per_page=30&orderby=modified&order=desc&_fields=id,date_gmt,modified_gmt,link,title,excerpt",
  "items": [
   {
+   "guid": "wp:1338",
+   "title": "Javni poziv – GRADRI – 2026",
+   "link": "https://www.fipro.hr/javni-poziv-gradri-2026/",
+   "published": "2026-11-16T09:02:11.000Z",
+   "updated": "2026-11-16T09:15:23.000Z",
+   "summary": "Javni poziv za podnošenje zahtjeva za dodjelu financijskih sredstava iz projekta Komercijalizacija inovacija"
+  },
+  {
    "guid": "wp:1320",
    "title": "Javni poziv – PGŽ – 2026",
    "link": "https://www.fipro.hr/javni-poziv-pgz-2026/",

@@ -1,0 +1,224 @@
+{
+ "source": "mdu_vijesti",
+ "name": "Ministerio de Demografía e Inmigración (MDU): novedades (Vijesti)",
+ "detected_at": "2026-11-21",
+ "added": [
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/stradanja-mjestana-nadina-nikad-se-ne-smiju-zaboraviti/7709",
+   "title": "Stradanja mještana Nadina nikad se ne smiju zaboraviti",
+   "link": "https://mdu.gov.hr/vijesti-4693/stradanja-mjestana-nadina-nikad-se-ne-smiju-zaboraviti/7709",
+   "published": "2026-11-19T17:54:42.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/ministarstvo-nastavlja-jacati-veze-s-hrvatskim-iseljenistvom-u-juznoj-americi-susret-s-predsjednikom-najstarije-hrvatske-udruge-u-brazilu/7708",
+   "title": "Ministarstvo nastavlja jačati veze s hrvatskim iseljeništvom u Južnoj Americi: Susret s predsjednikom najstarije hrvatske udruge u Brazilu",
+   "link": "https://mdu.gov.hr/vijesti-4693/ministarstvo-nastavlja-jacati-veze-s-hrvatskim-iseljenistvom-u-juznoj-americi-susret-s-predsjednikom-najstarije-hrvatske-udruge-u-brazilu/7708",
+   "published": "2026-11-19T13:27:40.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/zrtve-vukovara-i-skabrnje-nasa-su-obveza-cuvanja-lijepe-nase/7707",
+   "title": "Žrtve Vukovara i Škabrnje naša su obveza čuvanja Lijepe Naše",
+   "link": "https://mdu.gov.hr/vijesti-4693/zrtve-vukovara-i-skabrnje-nasa-su-obveza-cuvanja-lijepe-nase/7707",
+   "published": "2026-11-18T16:33:17.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/sjecanje-koje-ne-blijedi-vukovar-i-skabrnja-simboli-hrvatske-hrabrosti-zrtve-i-slobode/7705",
+   "title": "Sjećanje koje ne blijedi: Vukovar i Škabrnja – simboli hrvatske hrabrosti, žrtve i slobode",
+   "link": "https://mdu.gov.hr/vijesti-4693/sjecanje-koje-ne-blijedi-vukovar-i-skabrnja-simboli-hrvatske-hrabrosti-zrtve-i-slobode/7705",
+   "published": "2026-11-17T14:00:35.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/ministar-sipic-u-opcini-ruzic-otvoreno-novouredjeno-djecje-igraliste-u-mirlovic-polju/7706",
+   "title": "Ministar Šipić u Općini Ružić: otvoreno novouređeno dječje igralište u Mirlović Polju",
+   "link": "https://mdu.gov.hr/vijesti-4693/ministar-sipic-u-opcini-ruzic-otvoreno-novouredjeno-djecje-igraliste-u-mirlovic-polju/7706",
+   "published": "2026-11-17T13:33:09.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/ministar-sipic-u-grudama-nastavljamo-ulagati-u-hrvatske-obitelji-djecu-i-predskolski-odgoj-u-bih/7704",
+   "title": "Ministar Šipić u Grudama: Nastavljamo ulagati u hrvatske obitelji, djecu i predškolski odgoj u BiH",
+   "link": "https://mdu.gov.hr/vijesti-4693/ministar-sipic-u-grudama-nastavljamo-ulagati-u-hrvatske-obitelji-djecu-i-predskolski-odgoj-u-bih/7704",
+   "published": "2026-11-16T14:05:04.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/drzavni-tajnik-barac-u-buenos-airesu-susreti-s-mnogobrojnom-hrvatskom-zajednicom/7703",
+   "title": "Državni tajnik Barać u Buenos Airesu: susreti s mnogobrojnom hrvatskom zajednicom",
+   "link": "https://mdu.gov.hr/vijesti-4693/drzavni-tajnik-barac-u-buenos-airesu-susreti-s-mnogobrojnom-hrvatskom-zajednicom/7703",
+   "published": "2026-11-16T14:00:07.000Z",
+   "summary": ""
+  }
+ ],
+ "changed": [],
+ "instrucciones": "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json.",
+ "borradores": [
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/stradanja-mjestana-nadina-nikad-se-ne-smiju-zaboraviti/7709",
+   "link": "https://mdu.gov.hr/vijesti-4693/stradanja-mjestana-nadina-nikad-se-ne-smiju-zaboraviti/7709",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-21T13:39:36.102Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es una nota sobre un acto conmemorativo y no ofrece ninguna convocatoria, beca, ayuda ni programa que una persona o asociación pueda aprovechar.",
+   "ficha": {
+    "cat": "loc",
+    "t": "Homenaje a las víctimas de Nadin en el 35.º aniversario",
+    "t_hr": "Stradanja mještana Nadina nikad se ne smiju zaboraviti",
+    "who": "Ministerio de Demografía e Inmigración (Ministarstvo demografije i useljeništva)",
+    "amount": "",
+    "what": "El Ministerio informa que su secretario de Estado, Frane Tokić, participó en el acto por el 35.º aniversario de la agresión a Nadin en la Guerra de la Independencia. Se pusieron coronas y velas en el monumento a las víctimas, en recuerdo de 14 civiles y cinco defensores croatas asesinados el 19 de noviembre de 1991, mientras tres personas siguen desaparecidas. No hay nada para postularse.",
+    "el": {
+     "ar": [
+      "no",
+      "No es una convocatoria, así que no hay un trámite para que una persona residente en Argentina pueda hacer."
+     ],
+     "cit": [
+      "no",
+      "No es una convocatoria, así que no hay un trámite para que una persona con ciudadanía argentina pueda hacer."
+     ],
+     "res": [
+      "no",
+      "No es una convocatoria, así que no hay un trámite para quien tenga residencia de diáspora en Croacia."
+     ]
+    },
+    "src": [
+     "mdu.gov.hr",
+     "https://mdu.gov.hr/vijesti-4693/stradanja-mjestana-nadina-nikad-se-ne-smiju-zaboraviti/7709"
+    ],
+    "ai_generated": true,
+    "flag": "La fuente es una noticia de la sección Vijesti sobre una conmemoración, no un llamado. Se dejó relevante en false y no corresponde cargarla como oportunidad. La categoría es provisional: ninguna de las cinco opciones describe bien una noticia. Confirmar si conviene cargarla o descartarla del radar. Confirmar si la sección de novedades del ministerio debe alimentar el radar o solo los avisos de convocatorias."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/ministarstvo-nastavlja-jacati-veze-s-hrvatskim-iseljenistvom-u-juznoj-americi-susret-s-predsjednikom-najstarije-hrvatske-udruge-u-brazilu/7708",
+   "link": "https://mdu.gov.hr/vijesti-4693/ministarstvo-nastavlja-jacati-veze-s-hrvatskim-iseljenistvom-u-juznoj-americi-susret-s-predsjednikom-najstarije-hrvatske-udruge-u-brazilu/7708",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-21T13:39:46.050Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es una noticia sobre un encuentro institucional, sin convocatoria ni beneficio que una persona o asociación pueda aprovechar.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Encuentro del ministerio con la asociación Croatia Sacra Paulistana",
+    "t_hr": "Ministarstvo nastavlja jačati veze s hrvatskim iseljeništvom u Južnoj Americi: Susret s predsjednikom najstarije hrvatske udruge u Brazilu",
+    "who": "Ministerio de Demografía e Inmigración (Ministarstvo demografije i useljeništva)",
+    "amount": "",
+    "what": "El ministerio se reunió con Tomislav Deura, presidente de la asociación Croatia Sacra Paulistana de Brasil, para hablar de la identidad croata, de los vínculos con la diáspora en Sudamérica y de posibles formas de colaboración. La nota no describe ningún programa, beca ni ayuda que se pueda solicitar.",
+    "el": {
+     "ar": [
+      "no",
+      "La fuente no describe ninguna convocatoria a la que pueda postularse una persona que vive en Argentina."
+     ],
+     "cit": [
+      "no",
+      "La fuente no describe ninguna convocatoria a la que pueda postularse una persona que vive en Argentina."
+     ],
+     "res": [
+      "no",
+      "La fuente no describe ninguna convocatoria para personas con residencia de diáspora en Croacia."
+     ]
+    },
+    "src": [
+     "mdu.gov.hr",
+     "https://mdu.gov.hr/vijesti-4693/ministarstvo-nastavlja-jacati-veze-s-hrvatskim-iseljenistvom-u-juznoj-americi-susret-s-predsjednikom-najstarije-hrvatske-udruge-u-brazilu/7708"
+    ],
+    "ai_generated": true,
+    "flag": "Es una noticia sin convocatoria. Conviene confirmar si corresponde cargarla en el radar o descartarla. La categoría 'proy' se asignó por la relación con una asociación, pero no hay un proyecto abierto en la fuente. Revisar si el ministerio publicó después alguna convocatoria para asociaciones de la diáspora sudamericana."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/zrtve-vukovara-i-skabrnje-nasa-su-obveza-cuvanja-lijepe-nase/7707",
+   "link": "https://mdu.gov.hr/vijesti-4693/zrtve-vukovara-i-skabrnje-nasa-su-obveza-cuvanja-lijepe-nase/7707",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-21T13:39:52.286Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es un comunicado conmemorativo sobre el Día de recuerdo de las víctimas de Vukovar y Škabrnja, sin convocatoria, beca ni programa que una persona o asociación pueda aprovechar.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Día de recuerdo de las víctimas de Vukovar y Škabrnja",
+    "t_hr": "Žrtve Vukovara i Škabrnje naša su obveza čuvanja Lijepe Naše",
+    "who": "Ministerio de Demografía e Inmigración (Ministarstvo demografije i useljeništva)",
+    "amount": "",
+    "what": "Es una nota conmemorativa del Ministerio en la que se recuerda a las víctimas de Vukovar y Škabrnja y a los caídos y desaparecidos de la guerra de la Patria. No describe ningún programa, beca ni convocatoria.",
+    "el": {
+     "ar": [
+      "no",
+      "No hay convocatoria ni programa al que postularse."
+     ],
+     "cit": [
+      "no",
+      "No hay convocatoria ni programa al que postularse."
+     ],
+     "res": [
+      "no",
+      "No hay convocatoria ni programa al que postularse."
+     ]
+    },
+    "src": [
+     "mdu.gov.hr",
+     "https://mdu.gov.hr/vijesti-4693/zrtve-vukovara-i-skabrnje-nasa-su-obveza-cuvanja-lijepe-nase/7707"
+    ],
+    "ai_generated": true,
+    "flag": "El aviso es una nota conmemorativa sin convocatoria; se recomienda no publicarlo como oportunidad. El texto de la fuente incluye una instrucción de navegación («Preskoči na glavni sadržaj») y menús, que no son datos relevantes; no se encontraron instrucciones dirigidas al sistema."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/sjecanje-koje-ne-blijedi-vukovar-i-skabrnja-simboli-hrvatske-hrabrosti-zrtve-i-slobode/7705",
+   "link": "https://mdu.gov.hr/vijesti-4693/sjecanje-koje-ne-blijedi-vukovar-i-skabrnja-simboli-hrvatske-hrabrosti-zrtve-i-slobode/7705",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-21T13:40:00.821Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es un mensaje conmemorativo del Ministerio sobre el Día de Vukovar y Škabrnja, sin ninguna convocatoria, beca, ayuda ni programa que una persona o asociación pueda aprovechar.",
+   "ficha": {
+    "cat": "loc",
+    "t": "Aviso conmemorativo por Vukovar y Škabrnja",
+    "t_hr": "Sjećanje koje ne blijedi: Vukovar i Škabrnja – simboli hrvatske hrabrosti, žrtve i slobode",
+    "who": "Ministerio de Demografía e Inmigración (Ministarstvo demografije i useljeništva)",
+    "amount": "",
+    "what": "Es una nota del Ministerio que recuerda a las víctimas de Vukovar y Škabrnja y a los caídos y civiles de la Guerra de la Independencia (Domovinski rat). No describe ningún programa, beca ni trámite para la diáspora.",
+    "el": {
+     "ar": [
+      "no",
+      "El aviso no contiene ninguna convocatoria para aplicar."
+     ],
+     "cit": [
+      "no",
+      "El aviso no contiene ninguna convocatoria para aplicar."
+     ],
+     "res": [
+      "no",
+      "El aviso no contiene ninguna convocatoria para aplicar."
+     ]
+    },
+    "src": [
+     "mdu.gov.hr",
+     "https://mdu.gov.hr/vijesti-4693/sjecanje-koje-ne-blijedi-vukovar-i-skabrnja-simboli-hrvatske-hrabrosti-zrtve-i-slobode/7705"
+    ],
+    "ai_generated": true,
+    "flag": "Es un aviso conmemorativo sin convocatoria. Se descarta por no ser aprovechable; no conviene publicarlo como oportunidad. Ninguna de las categorías del esquema describe bien este contenido; se usó 'loc' solo por completar el campo y no tiene valor práctico. Fecha de publicación según el aviso: 2026-11-17. El texto no incluye ningún enlace ni instrucción que deba seguirse."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  }
+ ]
+}

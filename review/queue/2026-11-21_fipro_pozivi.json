@@ -1,0 +1,61 @@
+{
+ "source": "fipro_pozivi",
+ "name": "Fundación FIPRO: convocatorias para innovación en la región de Rijeka (Javni pozivi, Zaklada FIPRO)",
+ "detected_at": "2026-11-21",
+ "added": [
+  {
+   "guid": "wp:1338",
+   "title": "Javni poziv – GRADRI – 2026",
+   "link": "https://www.fipro.hr/javni-poziv-gradri-2026/",
+   "published": "2026-11-16T09:02:11.000Z",
+   "updated": "2026-11-16T09:15:23.000Z",
+   "summary": "Javni poziv za podnošenje zahtjeva za dodjelu financijskih sredstava iz projekta Komercijalizacija inovacija"
+  }
+ ],
+ "changed": [],
+ "instrucciones": "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json.",
+ "borradores": [
+  {
+   "guid": "wp:1338",
+   "link": "https://www.fipro.hr/javni-poziv-gradri-2026/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-21T13:34:44.169Z",
+   "text_from": "página oficial",
+   "relevante": true,
+   "motivo_relevancia": "Personas físicas o microempresas con sede en Rijeka pueden postularse, por lo que una persona descendiente de croatas que se radique allí podría aprovechar la ayuda.",
+   "ficha": {
+    "cat": "emp",
+    "t": "Subsidios no reembolsables para comercializar innovaciones en Rijeka (2026)",
+    "t_hr": "Javni poziv – GRADRI – 2026",
+    "who": "Zaklada FIPRO (Fundación FIPRO), junto con la Ciudad de Rijeka (Grad Rijeka)",
+    "amount": "",
+    "what": "Son subsidios no reembolsables para personas y microempresas que desarrollan o comercializan un producto o servicio innovador con potencial de mercado en Rijeka. Cubren el 80 % de gastos elegibles sin IVA, entre 4.000 y 6.700 euros por proyecto; el 20 % restante lo pone el solicitante. Las personas físicas deben registrar una actividad con sede en Rijeka antes de firmar el contrato.",
+    "el": {
+     "ar": [
+      "no",
+      "Exige una actividad registrada con sede en Rijeka, por lo que no alcanza con vivir en Argentina."
+     ],
+     "cit": [
+      "no",
+      "Exige una actividad registrada con sede en Rijeka, por lo que no alcanza con tener ciudadanía croata desde Argentina."
+     ],
+     "res": [
+      "cond",
+      "Podría postularse si vive en Croacia con residencia de diáspora y registra su actividad con sede en Rijeka; la fuente no aclara si la residencia es un requisito aparte."
+     ]
+    },
+    "src": [
+     "fipro.hr",
+     "https://www.fipro.hr/javni-poziv-gradri-2026/"
+    ],
+    "ai_generated": true,
+    "deadline": "2026-12-15T23:59:00+01:00",
+    "flag": "Confirmar si una persona que vive fuera de Rijeka puede registrar la sede de su actividad allí; la fuente solo dice que debe tener sede en Rijeka antes de firmar el contrato. Verificar si la fecha de cierre (15.12.2026, 23:59 h) se toma en hora de Croacia. La fuente no indica que la residencia de diáspora sea un requisito; la columna res quedó en condicional por esta razón. Las personas físicas que no tengan empresa deben registrarla antes de firmar el contrato; el plazo de ejecución es de hasta seis meses desde la firma. Los gastos se reconocen solo si son posteriores a la publicación del llamado (16.11.2026) y los comprobantes deben estar pagados dentro del plazo de ejecución. Revisar en el sitio oficial los formularios y la lista de beneficiarios, prevista para el 25.1.2027 como fecha límite de publicación. El aviso lista como exclusión a quienes recibieron financiamiento de FIPRO en los últimos dos años; conviene aclararlo en la ficha. Se borró el monto «26.800,00 euros en total para la convocatoria; por proyecto, entre 4.000,00 y 6.700,00 euros (80 % de los gastos sin IVA)»: no aparece textual en la fuente. Revisar el PDF de la convocatoria."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": "Javni poziv otvoren je do 15.12.2026. godine do kraja dana (23:59 h)."
+   }
+  }
+ ]
+}
