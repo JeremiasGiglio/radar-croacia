@@ -1,0 +1,22 @@
+{
+ "source": "udruge_vijesti",
+ "name": "Oficina para las Asociaciones del Gobierno (Ured za udruge): novedades y convocatorias (Vijesti)",
+ "detected_at": "2026-11-21",
+ "added": [],
+ "changed": [
+  {
+   "guid": "https://udruge.gov.hr/vijesti/javni-poziv-organizacijama-civilnoga-drustva-za-predlaganje-predstavnika-u-strucnu-radnu-skupinu-za-izradu-nacionalnog-plana-za-razvoj-biogospodarstva/6369",
+   "title": "Javni poziv organizacijama civilnoga društva za predlaganje predstavnika u stručnu radnu skupinu za izradu Nacionalnog plana za razvoj biogospodarstva",
+   "link": "https://udruge.gov.hr/vijesti/javni-poziv-organizacijama-civilnoga-drustva-za-predlaganje-predstavnika-u-strucnu-radnu-skupinu-za-izradu-nacionalnog-plana-za-razvoj-biogospodarstva/6369",
+   "published": "2026-11-09T10:15:55.000Z",
+   "summary": "Novi rok za dostavu prijedloga kandidata je 23.11.2026.",
+   "before": {
+    "title": "Javni poziv organizacijama civilnoga društva za predlaganje predstavnika u stručnu radnu skupinu za izradu Nacionalnog plana za razvoj biogospodarstva",
+    "summary": "Rok za dostavu prijedloga kandidata je 16. studeni 2026.",
+    "updated": null
+   }
+  }
+ ],
+ "instrucciones": "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json.",
+ "borradores": []
+}

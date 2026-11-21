@@ -1,0 +1,348 @@
+{
+ "source": "matis_novosti",
+ "name": "Hrvatska matica iseljenika: novedades y programas (Novosti)",
+ "detected_at": "2026-11-21",
+ "added": [
+  {
+   "guid": "https://matis.hr/?p=4442",
+   "title": "Mala škola hrvatskoga jezika i kulture",
+   "link": "https://matis.hr/programi/mala-skola-hrvatskoga-jezika-i-kulture-4/",
+   "published": "2026-11-20T13:01:46.000Z",
+   "summary": "Mala škola 2027 Informacija za 2027. bit će dostupna početkom godine (planirani termin je 19. – 30. srpnja 2027.). U međuvremenu se zainteresirani mogu prijaviti na listu potencijalnih kandidata, do popunjenja mjesta. Dobna granica je od 9 do navršenih 14 godina (s datumom 31.8.). Važno! Prijava na listu potencijalnih kandidata nije registracija te ne garantira […]"
+  },
+  {
+   "guid": "https://matis.hr/?p=82012",
+   "title": "Dom kulture u Donjoj Lastvi dan na uporabu Hrvatskom nacionalnom vijeću",
+   "link": "https://matis.hr/novosti/dom-kulture-u-donjoj-lastvi-dan-na-uporabu-hrvatskom-nacionalnom-vijecu/",
+   "published": "2026-11-16T10:40:15.000Z",
+   "summary": "Ugovorom potpisanim u Zagrebu osigurano je dugoročno korištenje jednoga od najvažnijih kulturnih i identitetskih središta hrvatske zajednice u Crnoj Gori."
+  },
+  {
+   "guid": "https://matis.hr/?p=81998",
+   "title": "Održan 39. Tamburaški festival odraslih Hrvatske bratske zajednice u Americi",
+   "link": "https://matis.hr/novosti/odrzan-39-tamburaski-festival-odraslih-hrvatske-bratske-zajednice-u-americi/",
+   "published": "2026-11-13T20:04:12.000Z",
+   "summary": "Na tradicionalnom festivalu HBZ-a nastupila su 24 tamburaška ansambla s više od 500 tamburaša i folkloraša iz SAD-a, Kanade i Hrvatske"
+  },
+  {
+   "guid": "https://matis.hr/?p=81994",
+   "title": "NAJAVA: VIII. Svjetski festival hrvatske književnosti",
+   "link": "https://matis.hr/novosti/najava-viii-svjetski-festival-hrvatske-knjizevnosti/",
+   "published": "2026-11-13T13:00:50.000Z",
+   "summary": "Festival koji će 15. - 17. studenoga okupiti hrvatske književnike diljem svijeta posvećen je Danu sjećanja na žrtve Domovinskog rata i Danu sjećanja na žrtvu Vukovara i Škabrnje"
+  },
+  {
+   "guid": "https://matis.hr/?p=68900",
+   "title": "Zimska škola hrvatskoga folklora",
+   "link": "https://matis.hr/programi/zimska-skola-hrvatskog-folklora-2025/",
+   "published": "2026-11-09T19:50:42.000Z",
+   "summary": "Sisak, 3. - 12. siječnja 2027. godine"
+  },
+  {
+   "guid": "https://matis.hr/?p=81946",
+   "title": "NAJAVA: Hrvatska politička emigracija u fokusu dvodnevne znanstvene konferencije u Zagrebu",
+   "link": "https://matis.hr/novosti/najava-hrvatska-politicka-emigracija-u-fokusu-dvodnevne-znanstvene-konferencije-u-zagrebu/",
+   "published": "2026-11-09T15:44:07.000Z",
+   "summary": "Više od dvadesetero povjesničara, znanstvenika i istraživača okupit će se u Hrvatskoj matici iseljenika na II. konferenciji „Povijest hrvatske političke emigracije u 20. stoljeću“"
+  },
+  {
+   "guid": "https://matis.hr/?p=81878",
+   "title": "Kultura sjećanja i hrvatsko iseljeništvo: predstavljena historiografska studija Wollfyja Krašića",
+   "link": "https://matis.hr/novosti/kultura-sjecanja-i-hrvatsko-iseljenistvo-predstavljena-historiografska-studija-wolffyja-krasica/",
+   "published": "2026-11-06T19:00:00.000Z",
+   "summary": "„Naša je osveta – slobodna država Hrvatska ”, „Komemoracije Bleiburške tragedije u hrvatskim iseljeničkim zajednicama i na Bleiburškome polju u razdoblju od 1945. do 1990. godine”,"
+  }
+ ],
+ "changed": [],
+ "instrucciones": "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json.",
+ "borradores": [
+  {
+   "guid": "https://matis.hr/?p=4442",
+   "link": "https://matis.hr/programi/mala-skola-hrvatskoga-jezika-i-kulture-4/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-21T13:35:04.456Z",
+   "text_from": "página oficial",
+   "relevante": true,
+   "motivo_relevancia": "Es un curso de verano para chicos de 9 a 14 años de comunidades croatas en el exterior, y ya hay una lista de espera abierta para la edición 2027.",
+   "ficha": {
+    "cat": "beca",
+    "t": "Mala Škola: curso de lengua y cultura croata para chicos",
+    "t_hr": "Mala škola hrvatskoga jezika i kulture",
+    "who": "Matica Croata de Emigrantes (Hrvatska matica iseljenika)",
+    "amount": "",
+    "what": "Es un programa de verano de lengua y cultura croata para chicos de 9 a 14 años de comunidades croatas en el mundo, y también para chicos de otro origen que sean amigos de jóvenes croatas. Combina talleres de idioma y creativos, actividades deportivas, excursiones y folklore, en un campamento en Novi Vinodolski. La edición 2027 está prevista para el 19 al 30 de julio de 2027, pero la información completa recién se publicará a comienzos de 2027. Anotarse en la lista de potenciales candidatos no garantiza un lugar: la inscripción se completa cuando la organización recibe la solicitud y el pago.",
+    "el": {
+     "ar": [
+      "cond",
+      "El programa está abierto a chicos de comunidades croatas en el mundo, pero la fuente no aclara requisitos de residencia o ciudadanía y la inscripción 2027 todavía no abrió."
+     ],
+     "cit": [
+      "cond",
+      "Igual que para Argentina sin ciudadanía: la fuente no exige ciudadanía, pero la inscripción 2027 todavía no abrió."
+     ],
+     "res": [
+      "cond",
+      "No está pensado por residencia en Croacia, pero la fuente no lo excluye; conviene confirmarlo con la organización."
+     ]
+    },
+    "src": [
+     "matis.hr",
+     "https://matis.hr/programi/mala-skola-hrvatskoga-jezika-i-kulture-4/"
+    ],
+    "ai_generated": true,
+    "flag": "La fuente es de la edición 2026 (ya cerrada) y de la información preliminar de 2027; no se incluyen costos ni plazos de 2026 porque no corresponden a la edición 2027. No hay fecha de cierre ni monto para 2027. La fuente dice que el inicio de registro se avisará a los padres de la lista de espera. La fuente indica el límite de edad de 9 a 14 años con fecha de corte 31.8.; conviene confirmar si aplica al año 2027. La fuente indica que la inscripción en la lista no es registro y que los organizadores pueden cambiar fechas, programa o cancelar el programa. Contacto indicado en la fuente: Lada Kanajet Šimić, lada.kanajet@matis.hr (no se incluyó link). Hay que confirmar cómo anotarse en la lista de potenciales candidatos, porque la fuente no describe el procedimiento exacto para esta lista. La fuente incluye una instrucción de que la inscripción puede hacerse con cierto orden; no se siguió porque no es una orden para el resumen."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  },
+  {
+   "guid": "https://matis.hr/?p=82012",
+   "link": "https://matis.hr/novosti/dom-kulture-u-donjoj-lastvi-dan-na-uporabu-hrvatskom-nacionalnom-vijecu/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-21T13:36:07.383Z",
+   "text_from": "solo el resumen del feed (no se pudo leer la página: fetch failed)",
+   "relevante": false,
+   "motivo_relevancia": "Es una noticia sobre un acuerdo de uso de un centro cultural en Montenegro y no describe una convocatoria a la que una persona o asociación pueda postularse.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Casa de cultura en Donja Lastva cedida al Consejo Nacional Croata",
+    "t_hr": "Dom kulture u Donjoj Lastvi dan na uporabu Hrvatskom nacionalnom vijeću",
+    "who": "Hrvatska matica iseljenika (Hrvatska matica iseljenika)",
+    "amount": "",
+    "what": "La fuente informa que un contrato firmado en Zagreb asegura el uso a largo plazo de la Casa de Cultura de Donja Lastva, en Montenegro, que es uno de los centros culturales e identitarios más importantes de la comunidad croata allí. No hay convocatoria, requisitos ni plazos para postularse.",
+    "el": {
+     "ar": [
+      "no",
+      "La fuente no describe ningún programa al que pueda aplicar una persona que vive en Argentina."
+     ],
+     "cit": [
+      "no",
+      "La fuente no describe ningún programa al que pueda aplicar una persona con ciudadanía argentina."
+     ],
+     "res": [
+      "no",
+      "La fuente no describe ningún programa para personas con residencia de diáspora en Croacia."
+     ]
+    },
+    "src": [
+     "matis.hr",
+     "https://matis.hr/novosti/dom-kulture-u-donjoj-lastvi-dan-na-uporabu-hrvatskom-nacionalnom-vijecu/"
+    ],
+    "ai_generated": true,
+    "flag": "La noticia es sobre un contrato de uso de un inmueble en Montenegro, no sobre una convocatoria; conviene confirmar que no haya una convocatoria asociada en otra publicación. El texto menciona el acuerdo con el Consejo Nacional Croata, pero el organismo que publica es Hrvatska matica iseljenika; confirmar el nombre oficial del organismo para el campo who. La categoría 'proy' se eligió por aproximación porque la noticia no encaja de forma clara en ninguna de las cinco categorías; revisar si corresponde otra o no publicarla. El texto de la fuente es un resumen corto; conviene revisar la nota completa en el sitio oficial antes de publicar. El borrador se hizo con solo el resumen del feed (no se pudo leer la página: fetch failed)."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  },
+  {
+   "guid": "https://matis.hr/?p=81998",
+   "link": "https://matis.hr/novosti/odrzan-39-tamburaski-festival-odraslih-hrvatske-bratske-zajednice-u-americi/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-21T13:36:27.261Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es una crónica de un festival que ya se realizó, no una convocatoria, así que no hay nada para postularse.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Crónica del festival de tamburaši de la Hrvatska bratska zajednica en Estados Unidos",
+    "t_hr": "Održan 39. Tamburaški festival odraslih Hrvatske bratske zajednice u Americi",
+    "who": "Hrvatska bratska zajednica en Estados Unidos (Hrvatska bratska zajednica u Americi)",
+    "amount": "",
+    "what": "Nota que relata el 39.º festival de tamburaši adultos de la Hrvatska bratska zajednica, realizado del 6 al 8 de noviembre de 2026 en Columbus, con 24 ansambles y más de 500 músicos y folkloristas de Estados Unidos, Canadá y Croacia. No es un programa ni una ayuda que se pueda solicitar.",
+    "el": {
+     "ar": [
+      "no",
+      "No hay convocatoria abierta; la fuente solo relata un evento ya realizado."
+     ],
+     "cit": [
+      "no",
+      "No hay convocatoria abierta; la fuente solo relata un evento ya realizado."
+     ],
+     "res": [
+      "no",
+      "No hay convocatoria abierta; la fuente solo relata un evento ya realizado."
+     ]
+    },
+    "src": [
+     "matis.hr",
+     "https://matis.hr/novosti/odrzan-39-tamburaski-festival-odraslih-hrvatske-bratske-zajednice-u-americi/"
+    ],
+    "ai_generated": true,
+    "flag": "Es una noticia sobre un evento ya ocurrido, no un aviso de convocatoria; se marcó como no relevante según la regla 5. Los enlaces de 'Vezani sadržaj' (por ejemplo, becas para el curso 2024./2025.) pertenecen a otras notas y no se usaron para esta ficha. No se encontró ningún instructivo ni orden dentro de la fuente."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  },
+  {
+   "guid": "https://matis.hr/?p=81994",
+   "link": "https://matis.hr/novosti/najava-viii-svjetski-festival-hrvatske-knjizevnosti/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-21T13:37:24.149Z",
+   "text_from": "solo el resumen del feed (no se pudo leer la página: fetch failed)",
+   "relevante": false,
+   "motivo_relevancia": "Es el anuncio de un festival literario sin convocatoria para postularse, así que no hay nada que una persona descendiente de croatas o una asociación pueda aprovechar directamente.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Anuncio: VIII Festival Mundial de Literatura Croata",
+    "t_hr": "NAJAVA: VIII. Svjetski festival hrvatske književnosti",
+    "who": "Hrvatska matica iseljenika (Hrvatska matica iseljenika)",
+    "amount": "",
+    "what": "Festival que reúne a escritores croatas de todo el mundo, del 15 al 17 de noviembre. Está dedicado al Día de la Memoria de las víctimas de la Guerra de la Independencia (Domovinski rat) y al Día de la Memoria de las víctimas de Vukovar y Škabrnja. Es un anuncio de un evento, no una convocatoria para postularse.",
+    "el": {
+     "ar": [
+      "no",
+      "Es un anuncio de festival y la fuente no ofrece ninguna forma de postulación para este perfil."
+     ],
+     "cit": [
+      "no",
+      "Es un anuncio de festival y la fuente no ofrece ninguna forma de postulación para este perfil."
+     ],
+     "res": [
+      "no",
+      "Es un anuncio de festival y la fuente no ofrece ninguna forma de postulación para este perfil."
+     ]
+    },
+    "src": [
+     "matis.hr",
+     "https://matis.hr/novosti/najava-viii-svjetski-festival-hrvatske-knjizevnosti/"
+    ],
+    "ai_generated": true,
+    "flag": "El extracto no dice el año del festival; el 2026 surge solo de la fecha de publicación, así que hay que confirmarlo. El extracto no nombra al organizador del festival; se usó como fuente la publicación de Hrvatska matica iseljenika. Confirmar quién lo organiza. El extracto es muy breve: conviene revisar la página completa por si hay un programa, inscripción o convocatoria para participar. La categoría 'proy' se eligió por descarte, porque el enum no tiene una opción específica para eventos culturales. Revisar si corresponde otra. Si el festival incluye convocatoria para escritores de la diáspora, la ficha debería actualizarse. El borrador se hizo con solo el resumen del feed (no se pudo leer la página: fetch failed)."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  },
+  {
+   "guid": "https://matis.hr/?p=68900",
+   "link": "https://matis.hr/programi/zimska-skola-hrvatskog-folklora-2025/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-21T13:38:06.134Z",
+   "text_from": "página oficial",
+   "relevante": true,
+   "motivo_relevancia": "Es un curso de folklore abierto a participantes, y las personas croatas en el exterior pueden pedir que se les exima de la matrícula a través de su comunidad cultural o asociación.",
+   "ficha": {
+    "cat": "beca",
+    "t": "Escuela de invierno de folklore croata 2027",
+    "t_hr": "Zimska škola hrvatskoga folklora",
+    "who": "Matica de Croatas Emigrados (Hrvatska matica iseljenika)",
+    "amount": "90 € de matrícula por persona (es un costo de inscripción, no una ayuda económica)",
+    "what": "Curso intensivo de folklore croata del 3 al 12 de enero de 2027 en Sisak, con danzas, trajes e instrumentos tradicionales de distintas zonas de la costa adriática. Los participantes eligen entre tres programas: danza, tamburitza o instrumentos tradicionales. Incluye matrícula de 90 € por persona y alojamiento con pensión completa en el Hotel Panonija a 60 € por día por persona, que se paga aparte; el cupo es limitado.",
+    "el": {
+     "ar": [
+      "cond",
+      "No hay restricción de residencia, pero la exención de matrícula es solo para croatas fuera de Croacia con solicitud escrita de su comunidad o asociación, así que sin eso paga 90 €."
+     ],
+     "cit": [
+      "cond",
+      "Misma situación que para quien no tiene ciudadanía: la exención depende de una solicitud escrita de la comunidad o asociación; de lo contrario paga la matrícula y el alojamiento."
+     ],
+     "res": [
+      "cond",
+      "La convocatoria está abierta a participantes, pero la exención de matrícula es para croatas fuera de la República de Croacia, así que quien vive en Croacia tendría que pagar; la fuente no aclara la prioridad."
+     ]
+    },
+    "src": [
+     "matis.hr",
+     "https://matis.hr/programi/zimska-skola-hrvatskog-folklora-2025/"
+    ],
+    "ai_generated": true,
+    "deadline": "2026-12-15T23:59:00+01:00",
+    "flag": "Confirmar si la exención de matrícula requiere solicitud de una asociación o si alcanza con una carta individual, y si la carta de asociación tiene formato propio. Confirmar si personas que viven en Croacia con residencia de diáspora pueden postularse en igualdad de condiciones. El alojamiento (60 € por día por persona) no tiene ayuda económica en la fuente; confirmar si hay becas de alojamiento. La fuente no informa de becas de viaje ni de cómo llegar a Sisak desde el exterior. La fecha de cierre de la solicitud de exención y de la inscripción es la misma (15 de diciembre de 2026); confirmar que sea la misma fecha límite para ambos trámites. El cupo es limitado y la fuente no indica cuántos lugares hay."
+   },
+   "citas": {
+    "amount": "Cijena školarine iznosi 90 eura",
+    "deadline": "najkasnije do 15. prosinca 2026. godine"
+   }
+  },
+  {
+   "guid": "https://matis.hr/?p=81946",
+   "link": "https://matis.hr/novosti/najava-hrvatska-politicka-emigracija-u-fokusu-dvodnevne-znanstvene-konferencije-u-zagrebu/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-21T13:38:24.007Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es una conferencia académica sobre historia de la emigración política croata, sin convocatoria de becas, ayudas ni programas que una persona o asociación pueda aprovechar.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Conferencia sobre la historia de la emigración política croata en Zagreb",
+    "t_hr": "II. konferencija „Povijest hrvatske političke emigracije u 20. stoljeću“",
+    "who": "Hrvatska matica iseljenika (Hrvatska matica iseljenika), en organización con el Centar za istraživanje hrvatskog iseljeništva, el Institut za istraživanje migracija y el Hrvatski križni put",
+    "amount": "",
+    "what": "Es una conferencia científica de dos días, los 11 y 12 de noviembre, en la sede de la Hrvatska matica iseljenika en Zagreb, donde historiadores e investigadores presentan trabajos sobre personas, organizaciones y hechos de la emigración política croata del siglo XX. Es un evento abierto de divulgación académica y no ofrece financiamiento ni inscripciones para beneficiarios.",
+    "el": {
+     "ar": [
+      "no",
+      "Es un evento de divulgación académica sin convocatoria para participar como beneficiario."
+     ],
+     "cit": [
+      "no",
+      "Es un evento de divulgación académica sin convocatoria para participar como beneficiario."
+     ],
+     "res": [
+      "no",
+      "Es un evento de divulgación académica sin convocatoria para participar como beneficiario."
+     ]
+    },
+    "src": [
+     "matis.hr",
+     "https://matis.hr/novosti/najava-hrvatska-politicka-emigracija-u-fokusu-dvodnevne-znanstvene-konferencije-u-zagrebu/"
+    ],
+    "ai_generated": true,
+    "flag": "El aviso es una nota de agenda de una conferencia ya programada, no una convocatoria; se marcó como no relevante según la regla de noticias sin convocatoria. La fuente no indica si la asistencia es libre o requiere inscripción; conviene confirmarlo si se quiere difundir como evento. La fuente contiene una instrucción en el texto de los vínculos relacionados («Vezani sadržaj») que no corresponde a este aviso y fue ignorada."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  },
+  {
+   "guid": "https://matis.hr/?p=81878",
+   "link": "https://matis.hr/novosti/kultura-sjecanja-i-hrvatsko-iseljenistvo-predstavljena-historiografska-studija-wolffyja-krasica/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-21T13:39:26.895Z",
+   "text_from": "solo el resumen del feed (no se pudo leer la página: fetch failed)",
+   "relevante": false,
+   "motivo_relevancia": "Es una noticia sobre la presentación de un estudio historiográfico, no una convocatoria que una persona o asociación pueda aprovechar.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Presentación de un estudio sobre memoria y la diáspora croata",
+    "t_hr": "Kultura sjećanja i hrvatsko iseljeništvo: predstavljena historiografska studija Wollfyja Krašića",
+    "who": "Hrvatska matica iseljenika (Matica iseljenika Hrvatske)",
+    "amount": "",
+    "what": "La fuente anuncia la presentación de una investigación historiográfica sobre la cultura de la memoria y la comunidad croata en el exterior, centrada en las conmemoraciones de la tragedia de Bleiburg entre 1945 y 1990. No describe ningún programa, beca ni ayuda que se pueda solicitar.",
+    "el": {
+     "ar": [
+      "no",
+      "La fuente no ofrece ninguna convocatoria a la que una persona pueda postularse."
+     ],
+     "cit": [
+      "no",
+      "La fuente no ofrece ninguna convocatoria a la que una persona pueda postularse."
+     ],
+     "res": [
+      "no",
+      "La fuente no ofrece ninguna convocatoria ni trámite de residencia."
+     ]
+    },
+    "src": [
+     "matis.hr",
+     "https://matis.hr/novosti/kultura-sjecanja-i-hrvatsko-iseljenistvo-predstavljena-historiografska-studija-wolffyja-krasica/"
+    ],
+    "ai_generated": true,
+    "flag": "El texto de la fuente está incompleto: solo trae el título y dos citas de títulos, sin fecha, lugar ni descripción de la presentación. Confirmar la grafía del nombre del autor (\"Wollfy Krašić\" en el título), que podría ser un error de transcripción. Verificar en la página oficial si la presentación implica alguna inscripción o convocatoria, en cuyo caso habría que revisar la ficha. El aviso fue publicado el 2026-11-06; confirmar si corresponde a un evento ya realizado. El borrador se hizo con solo el resumen del feed (no se pudo leer la página: fetch failed)."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  }
+ ]
+}
