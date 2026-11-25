@@ -41,6 +41,11 @@ export function build() {
     `<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src ${sha(data)} ${sha(`\n${js}`)}; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'">`,
   );
   html = html.replace(/<link rel="canonical"[^>]*>/, "");
+  // Íconos, imagen para compartir y links a las páginas por tema: son de la web publicada, no del archivo.
+  html = html
+    .replace(/<link rel="(icon|apple-touch-icon)"[^>]*>/g, "")
+    .replace(/<meta (property|name)="(og|twitter):[^>]*>/g, "")
+    .replace(/\n *<nav class="temas"[\s\S]*?<\/nav>\n/, "\n");
   // Sin conexión no se cuentan visitas (ZL-129): fuera el beacon de Cloudflare Web Analytics.
   html = html.replace(/<!-- Cloudflare Web Analytics[\s\S]*?<\/script>\n?/, "");
   // Aviso visible: es una copia congelada.

@@ -299,17 +299,6 @@ svg {
   opacity: 1;
   stroke-width: 4;
 }
-.plomin circle {
-  fill: none;
-  stroke: var(--red);
-  stroke-width: 2.5;
-  stroke-dasharray: 5 4;
-}
-.plomin text {
-  font-family: var(--display);
-  font-size: 20px;
-  fill: var(--red);
-}
 .legend {
   display: flex;
   flex-wrap: wrap;
@@ -788,16 +777,21 @@ footer {
   font-size: 12px;
   line-height: 1.4;
 }
+/* En el celular el chat ocupa toda la pantalla (ZL-169). */
 @media (max-width: 700px) {
   .chat {
-    left: 8px;
-    right: 8px;
-    bottom: 8px;
+    inset: 0;
     width: auto;
-    max-height: calc(100dvh - 16px);
+    height: 100dvh;
+    max-height: none;
+    border: 0;
+    border-radius: 0;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
   }
   .chat-fab {
-    padding: 12px 14px;
+    padding: 11px 14px;
+    font-size: 14px;
   }
 }
 .chat-count {
@@ -886,4 +880,351 @@ footer {
 }
 .mk.cluster.open text.num {
   fill: var(--ink, #1b2230);
+}
+
+/* ---------- ZL-169: interfaz más simple, fichas compactas y páginas por ficha ---------- */
+.skip {
+  position: absolute;
+  left: 8px;
+  top: -60px;
+  z-index: 60;
+  background: var(--ink);
+  color: var(--bg);
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+.skip:focus {
+  top: 8px;
+}
+.intro {
+  margin: -8px 0 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+.intro:empty {
+  display: none;
+}
+
+/* Filtros: en la computadora siempre abiertos; en el celular, una barra que se despliega. */
+.controls > summary {
+  display: none;
+}
+details.controls:not([open]) {
+  padding-block: 0;
+}
+.filtros-sum,
+.mapa-sum {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+}
+.filtros-sum::-webkit-details-marker,
+.mapa-sum::-webkit-details-marker {
+  display: none;
+}
+.filtros-t,
+.mapa-sum {
+  font-family: var(--display);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 15px;
+  font-weight: 600;
+}
+.filtros-t::before,
+.mapa-sum::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 8px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(-45deg);
+  vertical-align: 2px;
+}
+details[open] > summary .filtros-t::before,
+details[open] > .mapa-sum::before {
+  transform: rotate(45deg);
+  vertical-align: 4px;
+}
+.filtros-res {
+  font-size: 13px;
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+.mapbox > summary {
+  display: none;
+}
+@media (max-width: 860px) {
+  .controls > summary,
+  .mapbox > summary {
+    display: flex;
+  }
+  .controls {
+    padding: 2px 14px;
+  }
+  .controls[open] {
+    padding-bottom: 14px;
+  }
+  .lbl {
+    min-width: 0;
+    width: 100%;
+  }
+  .mapbox {
+    background: var(--surface);
+  }
+  .mapa-sum {
+    padding: 0 14px;
+  }
+  .mapbox[open] > svg {
+    background: var(--water);
+    border-top: 1px solid var(--line);
+  }
+}
+
+/* Lista */
+.list-col {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+}
+.list-col > .count {
+  margin: 0;
+}
+.count {
+  font-size: 14px;
+  color: var(--muted);
+}
+.card {
+  gap: 6px;
+  padding: 12px 14px;
+  cursor: pointer;
+}
+.card-t {
+  all: unset;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+  cursor: pointer;
+  font: 700 17px/1.25 var(--body);
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+.card-t:focus-visible {
+  outline: 2px solid var(--sea);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+.card-mas {
+  flex: none;
+  width: 9px;
+  height: 9px;
+  margin-top: 5px;
+  border-right: 2px solid var(--muted);
+  border-bottom: 2px solid var(--muted);
+  transform: rotate(45deg);
+}
+.card.abierta .card-mas {
+  transform: rotate(-135deg);
+  margin-top: 9px;
+}
+.card > .who {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card.abierta > .who {
+  white-space: normal;
+}
+.card-det {
+  display: grid;
+  gap: 8px;
+  padding-top: 4px;
+  cursor: auto;
+}
+.acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--sea);
+  text-decoration: none;
+  border: 1px solid var(--sea);
+  border-radius: 999px;
+  padding: 3px 10px;
+}
+.btn:hover {
+  background: var(--sea-soft);
+}
+.ver-mas {
+  font: 600 15px var(--body);
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 12px;
+  cursor: pointer;
+}
+.ver-mas:hover {
+  border-color: var(--sea);
+}
+button.link {
+  all: unset;
+  cursor: pointer;
+  color: var(--sea);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+button.link:focus-visible {
+  outline: 2px solid var(--sea);
+}
+.temas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.temas a {
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 12px;
+}
+.temas a:hover {
+  border-color: var(--sea);
+}
+
+/* Lo que escribe el build (sin JavaScript) y las páginas de ficha y de tema */
+.pre-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+.card.pre {
+  cursor: auto;
+}
+.card.pre h3 {
+  font-size: 17px;
+}
+.card.pre h3 a {
+  color: var(--ink);
+}
+header.mini {
+  align-items: center;
+}
+header.mini .brand {
+  color: var(--ink);
+  text-decoration: none;
+  gap: 10px;
+}
+header.mini .checker {
+  width: 28px;
+  height: 28px;
+}
+.brand-t {
+  font: 700 24px/1 var(--display);
+  text-transform: uppercase;
+}
+.head-link {
+  font-weight: 600;
+}
+.migas {
+  font-size: 14px;
+  color: var(--muted);
+}
+.contenido {
+  display: grid;
+  gap: 16px;
+}
+.ficha {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 18px 20px;
+  display: grid;
+  gap: 10px;
+}
+.ficha p,
+.ficha h1 {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.ficha h1 {
+  font-size: clamp(26px, 7vw, 36px);
+  text-transform: none;
+  line-height: 1.1;
+}
+.ficha h2 {
+  font-size: 19px;
+}
+.el3 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+  font-size: 14px;
+}
+.el3 li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+  align-items: start;
+}
+.pagina h1 {
+  text-transform: none;
+}
+
+/* El botón del chat no tapa el final de la página en el celular. */
+@media (max-width: 860px) {
+  body {
+    padding-bottom: calc(84px + env(safe-area-inset-bottom, 0px));
+  }
+  .sub {
+    font-size: 14px;
+  }
+  .stamp {
+    display: none;
+  }
+}
+.controls > *,
+.mapbox > * {
+  min-width: 0;
+}
+.filtros-res {
+  flex: 1 1 auto;
+}
+.filtros-t {
+  flex: none;
+}
+/* Ficha cerrada: los textos largos de estado van en una línea; al abrirla se leen enteros. */
+.card:not(.abierta) > .top .pill {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card.pre > .top .pill {
+  white-space: normal;
+}
+.pagina .wrap {
+  max-width: 880px;
 }
