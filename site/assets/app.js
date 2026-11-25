@@ -388,7 +388,7 @@ function start(DB, CONTACT) {
 
 /* ---------- Chat: asistente con IA sobre las fichas verificadas ---------- */
 var CHAT_SUGS = [
-  "Vivo en Argentina, ¿qué me sirve?",
+  "Vivo en Sudamérica, ¿qué me sirve?",
   "¿Hay becas para estudiar croata?",
   "¿Qué carreras hay en inglés?",
   "¿Cómo es la residencia de diáspora?",

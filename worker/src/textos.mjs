@@ -33,8 +33,8 @@ export const TEXTOS_I18N = {
       "Soy un asistente automático: es información, no asesoramiento legal. Guardamos tu perfil por 90 días, pero no lo que escribís (salvo que pidas hablar con una persona). Escribí PERSONA para hablar con alguien del equipo o BORRAR para que lo olvidemos.",
     perfilPedir: "Contame tu situación:",
     perfilListo: {
-      ar: "Listo: vivís en Argentina y no tenés la ciudadanía croata. ¿Qué estás buscando? Por ejemplo becas, cursos de croata o ayudas para mudarte.",
-      cit: "Listo: vivís en Argentina y tenés la ciudadanía croata. ¿Qué estás buscando? Por ejemplo becas, trabajo o ayudas para mudarte.",
+      ar: "Listo: vivís fuera de Croacia y no tenés la ciudadanía croata. ¿Qué estás buscando? Por ejemplo becas, cursos de croata o ayudas para mudarte.",
+      cit: "Listo: vivís fuera de Croacia y tenés la ciudadanía croata. ¿Qué estás buscando? Por ejemplo becas, trabajo o ayudas para mudarte.",
       res: "Listo: vivís en Croacia con residencia de diáspora. ¿Qué estás buscando? Por ejemplo ayudas para emprender, cursos o trámites.",
     },
     botones: ["Sin ciudadanía", "Con ciudadanía", "Vivo en Croacia"],
