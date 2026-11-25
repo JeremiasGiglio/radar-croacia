@@ -1,0 +1,18 @@
+{
+ "source": "rijeka_javni_pozivi",
+ "name": "Ciudad de Rijeka (Grad Rijeka): convocatorias públicas (Javni pozivi)",
+ "detected_at": "2026-11-25",
+ "added": [
+  {
+   "guid": "wp:319886",
+   "title": "Objavljen novi Javni poziv za dodjelu sredstava Zaklade FIPRO za inovacijske projekte riječkih poduzetnika",
+   "link": "https://www.rijeka.hr/objavljen-novi-javni-poziv-za-dodjelu-sredstava-zaklade-fipro-za-inovacijske-projekte-rijeckih-poduzetnika/",
+   "published": "2026-11-16T09:34:15.000Z",
+   "updated": "2026-11-16T09:34:28.000Z",
+   "summary": "Zaklada FIPRO, u suradnji s Gradom Rijeka, objavila je novi javni poziv za dodjelu financijskih sredstava za inovativne poduzetničke projekte s područja grada Rijeke u 2026. godini."
+  }
+ ],
+ "changed": [],
+ "instrucciones": "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json.",
+ "borradores": []
+}

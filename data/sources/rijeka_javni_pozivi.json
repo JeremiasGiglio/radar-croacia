@@ -4,6 +4,14 @@
  "url": "https://www.rijeka.hr/wp-json/wp/v2/posts?search=javni%20poziv&orderby=date&order=desc&per_page=30&_fields=id,date_gmt,modified_gmt,link,title,excerpt",
  "items": [
   {
+   "guid": "wp:319886",
+   "title": "Objavljen novi Javni poziv za dodjelu sredstava Zaklade FIPRO za inovacijske projekte riječkih poduzetnika",
+   "link": "https://www.rijeka.hr/objavljen-novi-javni-poziv-za-dodjelu-sredstava-zaklade-fipro-za-inovacijske-projekte-rijeckih-poduzetnika/",
+   "published": "2026-11-16T09:34:15.000Z",
+   "updated": "2026-11-16T09:34:28.000Z",
+   "summary": "Zaklada FIPRO, u suradnji s Gradom Rijeka, objavila je novi javni poziv za dodjelu financijskih sredstava za inovativne poduzetničke projekte s područja grada Rijeke u 2026. godini."
+  },
+  {
    "guid": "wp:319849",
    "title": "Javni poziv za podnošenje prijava za dodjelu nepovratnih potpora iz Općeg programa mjera poticanja razvoja poduzetništva na području grada Rijeke",
    "link": "https://www.rijeka.hr/javni-poziv-za-podnosenje-prijava-za-dodjelu-nepovratnih-potpora-iz-opceg-programa-mjera-poticanja-razvoja-poduzetnistva-na-podrucju-grada-rijeke/",
@@ -66,22 +74,6 @@
    "published": "2026-10-21T07:53:08.000Z",
    "updated": "2026-10-21T07:58:44.000Z",
    "summary": "Grad Rijeka, Upravni odjel za kulturu i kreativni razvoj objavio je Javni poziv za utvrđivanje programa kulture od interesa za Grad Rijeku iz djelatnosti kulture, umjetnosti i transverzalnih područja za 2027. godinu"
-  },
-  {
-   "guid": "wp:315177",
-   "title": "Otvoren Javni poziv za prikupljanje prijedloga programa za izradu programa javnih potreba u sportu Grada Rijeke u 2027. godini",
-   "link": "https://www.rijeka.hr/otvoren-javni-poziv-za-prikupljanje-prijedloga-programa-za-izradu-programa-javnih-potreba-u-sportu-grada-rijeke-u-2027-godini/",
-   "published": "2026-10-01T11:41:55.000Z",
-   "updated": "2026-10-06T08:49:35.000Z",
-   "summary": "Zajednica sportskih udruga grada Rijeke “Riječki sportski savez” objavila je Poziv za prikupljanje prijedloga programa za izradu programa javnih potreba u sportu Grada Rijeke u 2027. godini. Poziv je otvoren do 3. studenoga."
-  },
-  {
-   "guid": "wp:315082",
-   "title": "Grad Rijeka prijavio projekt dogradnje sportske dvorane škole Gelsi na javni poziv za bespovratna sredstva",
-   "link": "https://www.rijeka.hr/grad-rijeka-prijavio-projekt-dogradnje-sportske-dvorane-skole-gelsi-na-javni-poziv-za-bespovratna-sredstva/",
-   "published": "2026-09-30T16:07:12.000Z",
-   "updated": "2026-09-30T17:14:45.000Z",
-   "summary": "Grad Rijeka prijavio je projekt naziva Dogradnja sportske dvorane Osnovne škole-Scuola elementare Gelsi na javni poziv Izgradnja, rekonstrukcija i opremanje osnovnih škola za potrebe jednosmjenskog rada i cjelodnevne škole, u sklopu Nacionalnog plana oporavka i otpornosti."
   }
  ]
 }

@@ -4,11 +4,25 @@
  "url": "https://udruge.gov.hr/rss.aspx?ID=8",
  "items": [
   {
+   "guid": "https://udruge.gov.hr/vijesti/javni-poziv-organizacijama-civilnoga-drustva-za-predlaganje-predstavnika-u-radnu-skupinu-za-izradu-stajalista-na-prijedlog-izmjena-eu-ets-direktive/6375",
+   "title": "Javni poziv organizacijama civilnoga društva za predlaganje predstavnika u radnu skupinu za izradu stajališta na prijedlog izmjena EU ETS Direktive",
+   "link": "https://udruge.gov.hr/vijesti/javni-poziv-organizacijama-civilnoga-drustva-za-predlaganje-predstavnika-u-radnu-skupinu-za-izradu-stajalista-na-prijedlog-izmjena-eu-ets-direktive/6375",
+   "published": "2026-11-24T09:19:41.000Z",
+   "summary": "Rok za dostavu prijedloga kandidata je 1. prosinca 2026. godine"
+  },
+  {
+   "guid": "https://udruge.gov.hr/vijesti/odrzana-11-sjednica-8-saziva-savjeta-za-razvoj-civilnoga-drustva/6374",
+   "title": "Održana 11. sjednica 8. saziva Savjeta za razvoj civilnoga društva",
+   "link": "https://udruge.gov.hr/vijesti/odrzana-11-sjednica-8-saziva-savjeta-za-razvoj-civilnoga-drustva/6374",
+   "published": "2026-11-24T09:02:35.000Z",
+   "summary": "U Nacionalnoj i sveučilišnoj knjižnici u Zagrebu 23. studenoga 2026. godine."
+  },
+  {
    "guid": "https://udruge.gov.hr/vijesti/javni-poziv-organizacijama-civilnoga-drustva-za-predlaganje-predstavnika-u-strucnu-radnu-skupinu-za-izradu-nacionalnog-plana-za-razvoj-biogospodarstva/6369",
    "title": "Javni poziv organizacijama civilnoga društva za predlaganje predstavnika u stručnu radnu skupinu za izradu Nacionalnog plana za razvoj biogospodarstva",
    "link": "https://udruge.gov.hr/vijesti/javni-poziv-organizacijama-civilnoga-drustva-za-predlaganje-predstavnika-u-strucnu-radnu-skupinu-za-izradu-nacionalnog-plana-za-razvoj-biogospodarstva/6369",
    "published": "2026-11-09T10:15:55.000Z",
-   "summary": "Rok za dostavu prijedloga kandidata je 16. studeni 2026."
+   "summary": "Novi rok za dostavu prijedloga kandidata je 23.11.2026."
   },
   {
    "guid": "https://udruge.gov.hr/vijesti/hrvatska-glazbena-mladez-ugostila-svicarsku-delegaciju-u-sklopu-programa-civilno-drustvo/6368",
@@ -128,20 +142,6 @@
    "link": "https://udruge.gov.hr/vijesti/odrzana-10-sjednica-9-saziva-savjeta-za-razvoj-civilnoga-drustva/6330",
    "published": "2026-07-21T09:24:19.000Z",
    "summary": "20. srpnja 2026. u Nacionalnoj i sveučilišnoj knjižnici"
-  },
-  {
-   "guid": "https://udruge.gov.hr/vijesti/odluka-o-dodjeli-financijskih-sredstava-udrugama-prijavljenima-na-javni-poziv-komunikacijska-podrska-drustveno-korisnim-programima-udruga-6342/6342",
-   "title": "Odluka o dodjeli financijskih sredstava udrugama prijavljenima na Javni poziv „Komunikacijska podrška društveno korisnim programima udruga“",
-   "link": "https://udruge.gov.hr/vijesti/odluka-o-dodjeli-financijskih-sredstava-udrugama-prijavljenima-na-javni-poziv-komunikacijska-podrska-drustveno-korisnim-programima-udruga-6342/6342",
-   "published": "2026-07-20T06:58:13.000Z",
-   "summary": "Ured za udruge Vlade Republike Hrvatske je, u suradnji s Hrvatskom udrugom za odnose s javnošću, dodijelio tri nagrade udrugama rade u području promicanja volontiranja, kao i provedbe volonterskih programa radi učinkovitog upravljanja volonterima."
-  },
-  {
-   "guid": "https://udruge.gov.hr/vijesti/objavljena-je-druga-odluka-o-financiranju-u-okviru-poziva-osnazivanje-doprinosa-organizacija-civilnoga-drustva-drustveno-korisnom-ucenju/6329",
-   "title": "Objavljena je druga Odluka o financiranju u okviru Poziva „Osnaživanje doprinosa organizacija civilnoga društva društveno korisnom učenju\"",
-   "link": "https://udruge.gov.hr/vijesti/objavljena-je-druga-odluka-o-financiranju-u-okviru-poziva-osnazivanje-doprinosa-organizacija-civilnoga-drustva-drustveno-korisnom-ucenju/6329",
-   "published": "2026-07-16T09:05:53.000Z",
-   "summary": "Ured za udruge je donio drugu Odluku o financiranju u okviru Poziva \"Osnaživanje doprinosa organizacija civilnoga društva društveno korisnom učenju\"."
   }
  ]
 }

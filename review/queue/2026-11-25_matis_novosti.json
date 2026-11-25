@@ -1,0 +1,491 @@
+{
+ "source": "matis_novosti",
+ "name": "Hrvatska matica iseljenika: novedades y programas (Novosti)",
+ "detected_at": "2026-11-25",
+ "added": [
+  {
+   "guid": "https://matis.hr/?p=82122",
+   "title": "Poznati svi nominirani za Domovnicu 2027.",
+   "link": "https://matis.hr/novosti/poznati-svi-nominirani-za-domovnicu-2027/",
+   "published": "2026-11-25T14:45:00.000Z",
+   "summary": "Objavljen je popis 87 nominiranih kandidata za prestižnu iseljeničku nagradu „Domovnica 2027.“"
+  },
+  {
+   "guid": "https://matis.hr/?p=82105",
+   "title": "NAJAVA: Forum o ulozi hrvatskih iseljenika u Domovinskom ratu “Domovina u mom srcu – istinom protiv zaborava”",
+   "link": "https://matis.hr/novosti/najava-forum-o-ulozi-hrvatskih-iseljenika-u-domovinskom-ratu-domovina-u-mom-srcu-istinom-protiv-zaborava/",
+   "published": "2026-11-25T11:45:14.000Z",
+   "summary": "Forum će se održati 30. studenoga 2026. godine u Pastoralnom centru sv. Bono u Vukovaru"
+  },
+  {
+   "guid": "https://matis.hr/?p=82082",
+   "title": "Matica i Velebit o novim zajedničkim projektima",
+   "link": "https://matis.hr/novosti/matica-i-velebit-o-novim-zajednickim-projektima/",
+   "published": "2026-11-24T20:04:27.000Z",
+   "summary": "Velebit, koji više od šest desetljeća okuplja Hrvate u Göteborgu, ugostio je ravnatelja Hrvatske matice iseljenika"
+  },
+  {
+   "guid": "https://matis.hr/?p=82064",
+   "title": "Göteborg u znaku hrvatske pjesme, ponosa i zajedništva",
+   "link": "https://matis.hr/novosti/goteborg-u-znaku-hrvatske-pjesme-ponosa-i-zajednistva/",
+   "published": "2026-11-23T19:46:00.000Z",
+   "summary": "Na 45. Smotri hrvatske kulture u Švedskoj folkloraši svih naraštaja, od najmlađih do veterana, predstavili su baštinu hrvatskih krajeva"
+  },
+  {
+   "guid": "https://matis.hr/?p=82030",
+   "title": "NAJAVA: Sakralna baština kao čuvar identiteta gradišćanskih Hrvata",
+   "link": "https://matis.hr/novosti/najava-sakralna-bastina-kao-cuvar-identiteta-gradiscanskih-hrvata/",
+   "published": "2026-11-23T19:33:27.000Z",
+   "summary": "Izložba fotografija Franje Pajrića u Kaštel Lukšiću otvara se 24. studenoga 2026. u 19 sati"
+  },
+  {
+   "guid": "https://matis.hr/?p=82049",
+   "title": "NAJAVA: 31. Forum hrvatske nacionalne manjine – Mladi i djeca, budućnost hrvatskih manjinskih zajednica",
+   "link": "https://matis.hr/novosti/najava-31-forum-hrvatske-nacionalne-manjine-mladi-i-djeca-buducnost-hrvatskih-manjinskih-zajednica/",
+   "published": "2026-11-23T11:17:54.000Z",
+   "summary": "31. Forum hrvatske nacionalne manjine održava se 27. studenoga 2026. u Hrvatskoj matici iseljenika"
+  },
+  {
+   "guid": "https://matis.hr/?p=82044",
+   "title": "NAJAVA: Izložba spomen-knjiga Kanadsko-hrvatskih folklornih festivala i dodjela priznanja Anti Belji",
+   "link": "https://matis.hr/novosti/najava-izlozba-spomen-knjiga-kanadsko-hrvatskih-folklornih-festivala-i-dodjela-priznanja-anti-belji/",
+   "published": "2026-11-23T11:13:51.000Z",
+   "summary": "U Hrvatskoj matici iseljenika u Zagrebu, 25. studenog čeka vas otvorenje izložbe te dodjela priznanja bivšem ravnatelju HMI-ja"
+  },
+  {
+   "guid": "https://matis.hr/?p=4442",
+   "title": "Mala škola hrvatskoga jezika i kulture",
+   "link": "https://matis.hr/programi/mala-skola-hrvatskoga-jezika-i-kulture-4/",
+   "published": "2026-11-20T13:01:46.000Z",
+   "summary": "Mala škola 2027 Informacija za 2027. bit će dostupna početkom godine (planirani termin je 19. – 30. srpnja 2027.). U međuvremenu se zainteresirani mogu prijaviti na listu potencijalnih kandidata, do popunjenja mjesta. Dobna granica je od 9 do navršenih 14 godina (s datumom 31.8.). Važno! Prijava na listu potencijalnih kandidata nije registracija te ne garantira […]"
+  },
+  {
+   "guid": "https://matis.hr/?p=82012",
+   "title": "Dom kulture u Donjoj Lastvi dan na uporabu Hrvatskom nacionalnom vijeću",
+   "link": "https://matis.hr/novosti/dom-kulture-u-donjoj-lastvi-dan-na-uporabu-hrvatskom-nacionalnom-vijecu/",
+   "published": "2026-11-16T10:40:15.000Z",
+   "summary": "Ugovorom potpisanim u Zagrebu osigurano je dugoročno korištenje jednoga od najvažnijih kulturnih i identitetskih središta hrvatske zajednice u Crnoj Gori."
+  },
+  {
+   "guid": "https://matis.hr/?p=81998",
+   "title": "Održan 39. Tamburaški festival odraslih Hrvatske bratske zajednice u Americi",
+   "link": "https://matis.hr/novosti/odrzan-39-tamburaski-festival-odraslih-hrvatske-bratske-zajednice-u-americi/",
+   "published": "2026-11-13T20:04:12.000Z",
+   "summary": "Na tradicionalnom festivalu HBZ-a nastupila su 24 tamburaška ansambla s više od 500 tamburaša i folkloraša iz SAD-a, Kanade i Hrvatske"
+  }
+ ],
+ "changed": [],
+ "instrucciones": "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json.",
+ "borradores": [
+  {
+   "guid": "https://matis.hr/?p=82122",
+   "link": "https://matis.hr/novosti/poznati-svi-nominirani-za-domovnicu-2027/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-25T15:45:01.171Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es el listado de nominados a un premio de popularidad, no una convocatoria a la que una persona o asociación pueda postularse.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Nominados a Domovnica 2027",
+    "t_hr": "Poznati svi nominirani za Domovnicu 2027.",
+    "who": "Fenix-magazin y Večernji list (Fenix-magazin i Večernji list), publicado en Hrvatska matica iseljenika (Novosti)",
+    "amount": "",
+    "what": "Se publicó la lista de 87 nominados para el premio Domovnica 2027, que reconoce a croatas destacados fuera de Croacia en deportes, música, actuación y espectáculos, además de clubes, asociaciones y eventos de la diáspora. No hay una convocatoria para postularse: la votación en línea se anunció para el comienzo de la semana siguiente y la ceremonia será el 27 de febrero de 2027 en Bad Homburg, Alemania.",
+    "el": {
+     "ar": [
+      "no",
+      "No es una beca ni un programa al que se pueda aplicar desde Argentina; es un listado de nominados."
+     ],
+     "cit": [
+      "no",
+      "No es una beca ni un programa al que se pueda aplicar con ciudadanía croata; es un listado de nominados."
+     ],
+     "res": [
+      "no",
+      "No hay un trámite ni convocatoria para residentes; solo se informan los nominados."
+     ]
+    },
+    "src": [
+     "matis.hr",
+     "https://matis.hr/novosti/poznati-svi-nominirani-za-domovnicu-2027/"
+    ],
+    "ai_generated": true,
+    "flag": "La fuente es un anuncio de nominados, no una convocatoria; conviene revisar si corresponde mantenerla en el radar. La fuente no da una fecha concreta de inicio de la votación en línea, solo dice que se anunciará como muy tarde al comienzo de la semana siguiente. La fuente figura como novedades de Hrvatska matica iseljenika, pero el texto atribuye la elaboración de la lista a las redacciones de Fenix-magazin y Večernji list; verificar quién organiza el premio. El premio «Osoba godine» lo decide un jurado de expertos y la fuente no da detalles de su proceso. Revisar la fecha de la ceremonia (27 de febrero de 2027) con la organización antes de difundirla."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  },
+  {
+   "guid": "https://matis.hr/?p=82105",
+   "link": "https://matis.hr/novosti/najava-forum-o-ulozi-hrvatskih-iseljenika-u-domovinskom-ratu-domovina-u-mom-srcu-istinom-protiv-zaborava/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-25T15:46:04.517Z",
+   "text_from": "solo el resumen del feed (no se pudo leer la página: fetch failed)",
+   "relevante": false,
+   "motivo_relevancia": "Es el anuncio de un foro con fecha y lugar, no una convocatoria de becas, ayudas ni programas que una persona o asociación pueda aprovechar.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Foro sobre el papel de los emigrados croatas en la Guerra de la Patria",
+    "t_hr": "Forum o ulozi hrvatskih iseljenika u Domovinskom ratu “Domovina u mom srcu – istinom protiv zaborava”",
+    "who": "Hrvatska matica iseljenika (Hrvatska matica iseljenika)",
+    "amount": "",
+    "what": "Anuncio de un foro que se realizará el 30 de noviembre de 2026 en el Centro Pastoral San Bono de Vukovar, sobre el rol de los emigrados croatas en la Guerra de la Patria. La fuente es una nota breve de difusión y no describe inscripción, programa ni participantes.",
+    "el": {
+     "ar": [
+      "no",
+      "No es una convocatoria; es un foro con fecha y lugar definidos."
+     ],
+     "cit": [
+      "no",
+      "No es una convocatoria; es un foro con fecha y lugar definidos."
+     ],
+     "res": [
+      "no",
+      "No es una convocatoria; es un foro con fecha y lugar definidos."
+     ]
+    },
+    "src": [
+     "matis.hr",
+     "https://matis.hr/novosti/najava-forum-o-ulozi-hrvatskih-iseljenika-u-domovinskom-ratu-domovina-u-mom-srcu-istinom-protiv-zaborava/"
+    ],
+    "ai_generated": true,
+    "flag": "La fuente es un aviso breve sin detalles de programa, inscripción ni costo; conviene confirmar con Hrvatska matica iseljenika si el foro está abierto al público y si requiere inscripción. Confirmar si el aviso tiene una versión más completa en el sitio oficial antes de publicar la ficha. La categoría proy se eligió por ser la más cercana para un evento de la diáspora; revisar si corresponde una categoría distinta o no publicar la ficha por tratarse de un evento sin convocatoria. El borrador se hizo con solo el resumen del feed (no se pudo leer la página: fetch failed)."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  },
+  {
+   "guid": "https://matis.hr/?p=82082",
+   "link": "https://matis.hr/novosti/matica-i-velebit-o-novim-zajednickim-projektima/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-25T15:46:27.624Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es una nota sobre una visita de trabajo y no describe ninguna convocatoria abierta, por lo que no hay nada que una persona o asociación pueda solicitar.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Visita de la Matica a la sociedad Velebit en Göteborg",
+    "t_hr": "Matica i Velebit o novim zajedničkim projektima",
+    "who": "Hrvatska matica iseljenika (Hrvatska matica iseljenika)",
+    "amount": "",
+    "what": "La nota cuenta que el director de la Matica, Zdeslav Milas, visitó en Göteborg (Suecia) a la sociedad croata Velebit y presentó los programas para jóvenes de la institución. Las partes conversaron sobre sumar más jóvenes a las sociedades croatas de Suecia y sobre posibles proyectos conjuntos, pero no se anuncia ninguna convocatoria ni condiciones para postularse.",
+    "el": {
+     "ar": [
+      "no",
+      "La nota no describe ninguna convocatoria a la que se pueda postular."
+     ],
+     "cit": [
+      "no",
+      "La nota no describe ninguna convocatoria a la que se pueda postular."
+     ],
+     "res": [
+      "no",
+      "La nota no se refiere a residencia ni a trámites para personas que viven en Croacia."
+     ]
+    },
+    "src": [
+     "matis.hr",
+     "https://matis.hr/novosti/matica-i-velebit-o-novim-zajednickim-projektima/"
+    ],
+    "ai_generated": true,
+    "flag": "La nota menciona programas para jóvenes de la Matica pero no da nombres, requisitos ni plazos; conviene revisar la sección de programas de la web oficial de la Matica para ver si hay una convocatoria concreta que cargar aparte. La nota no trae ninguna cifra ni fecha de cierre. No hay instrucciones dentro de la fuente que requieran acción; el texto es solo informativo."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  },
+  {
+   "guid": "https://matis.hr/?p=82064",
+   "link": "https://matis.hr/novosti/goteborg-u-znaku-hrvatske-pjesme-ponosa-i-zajednistva/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-25T15:47:23.379Z",
+   "text_from": "solo el resumen del feed (no se pudo leer la página: fetch failed)",
+   "relevante": false,
+   "motivo_relevancia": "Es una nota sobre un festival ya realizado y no hay convocatoria, ayuda ni programa que una persona o asociación pueda aprovechar.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Festival de cultura croata en Gotemburgo, Suecia",
+    "t_hr": "Göteborg u znaku hrvatske pjesme, ponosa i zajedništva",
+    "who": "Institución croata de la diáspora (Hrvatska matica iseljenika)",
+    "amount": "",
+    "what": "La nota cuenta que en la 45.ª Smotra de la cultura croata en Suecia, realizada en Gotemburgo, grupos de folclore de todas las edades mostraron el patrimonio de distintas regiones de Croacia. Es un informe de un evento pasado, no una oportunidad para postularse.",
+    "el": {
+     "ar": [
+      "no",
+      "No hay convocatoria a la que pueda postularse una persona que vive en Argentina."
+     ],
+     "cit": [
+      "no",
+      "No hay convocatoria a la que pueda postularse una persona ciudadana que vive en Argentina."
+     ],
+     "res": [
+      "no",
+      "No hay convocatoria ni beneficio para residentes de diáspora en Croacia."
+     ]
+    },
+    "src": [
+     "matis.hr",
+     "https://matis.hr/novosti/goteborg-u-znaku-hrvatske-pjesme-ponosa-i-zajednistva/"
+    ],
+    "ai_generated": true,
+    "flag": "La fuente es solo un extracto breve de una nota de noticias; no alcanza para confirmar si hay una convocatoria relacionada en el sitio de la institución. La categoría 'proy' es provisoria y se eligió solo por ser la más cercana para un evento de asociaciones de la diáspora; conviene revisarla o dar de baja la ficha si el radar solo incluye convocatorias. Revisar si la fecha de publicación (2026-11-23) corresponde a la nota original o a su carga en el sitio. El borrador se hizo con solo el resumen del feed (no se pudo leer la página: fetch failed)."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  },
+  {
+   "guid": "https://matis.hr/?p=82030",
+   "link": "https://matis.hr/novosti/najava-sakralna-bastina-kao-cuvar-identiteta-gradiscanskih-hrvata/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-25T15:48:02.897Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es la inauguración de una exposición de fotos abierta al público, no una beca, ayuda ni programa al que una persona o asociación pueda postularse.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Muestra de fotos sobre el patrimonio religioso de los croatas de Gradišće",
+    "t_hr": "Sakralna baština kao čuvar identiteta gradišćanskih Hrvata",
+    "who": "Hrvatska matica iseljenika – Podružnica Split (Hrvatska matica iseljenika – Podružnica Split), junto con el Muzej Grada Kaštela (Muzej Grada Kaštela)",
+    "amount": "",
+    "what": "Se inaugura una exposición de fotografías de Franjo Pajrić sobre las iglesias y los edificios religiosos de los croatas del oeste de Hungría. Es parte del programa Días de los Croatas de Hungría en la región de Split-Dalmacia y se presenta el 24 de noviembre de 2026 a las 19 horas en el Dvorac Vitturi de Kaštel Lukšić, con música a cargo del coro Pučki pivači sv. Cecilije.",
+    "el": {
+     "ar": [
+      "no",
+      "No es una convocatoria a la que se pueda postular; es una muestra abierta al público."
+     ],
+     "cit": [
+      "no",
+      "No es una convocatoria a la que se pueda postular; es una muestra abierta al público."
+     ],
+     "res": [
+      "no",
+      "No es una convocatoria a la que se pueda postular; es una muestra abierta al público."
+     ]
+    },
+    "src": [
+     "matis.hr",
+     "https://matis.hr/novosti/najava-sakralna-bastina-kao-cuvar-identiteta-gradiscanskih-hrvata/"
+    ],
+    "ai_generated": true,
+    "flag": "El aviso describe una exposición y no una convocatoria; confirmar si existe algún llamado asociado a este programa. La fuente dice que la muestra se puede visitar hasta el 4 de diciembre de 2026; se trata de la fecha de cierre de la exposición, no de un plazo de postulación, por eso deadline quedó en null. El aviso no contiene instrucciones dirigidas al sistema; se analizó solo su contenido informativo. El aviso habla de un ciclo de promoción en doce países europeos; no se incluyó porque la fuente no da detalles de otras sedes."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  },
+  {
+   "guid": "https://matis.hr/?p=82049",
+   "link": "https://matis.hr/novosti/najava-31-forum-hrvatske-nacionalne-manjine-mladi-i-djeca-buducnost-hrvatskih-manjinskih-zajednica/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-25T15:48:57.097Z",
+   "text_from": "solo el resumen del feed (no se pudo leer la página: fetch failed)",
+   "relevante": false,
+   "motivo_relevancia": "Es el anuncio de un foro y no una convocatoria con beneficios o ayudas que una persona o asociación pueda solicitar.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Foro de la minoría nacional croata 2026",
+    "t_hr": "NAJAVA: 31. Forum hrvatske nacionalne manjine – Mladi i djeca, budućnost hrvatskih manjinskih zajednica",
+    "who": "Hrvatska matica iseljenika (Hrvatska matica iseljenika)",
+    "amount": "",
+    "what": "Anuncio de la 31.ª edición del Foro de la minoría nacional croata, dedicado a jóvenes, niños y el futuro de las comunidades croatas minoritarias. Según la fuente, se realiza el 27 de noviembre de 2026 en la Hrvatska matica iseljenika. La fuente no describe inscripción ni participación para particulares.",
+    "el": {
+     "ar": [
+      "no",
+      "No es una convocatoria a la que se pueda postular; solo informa una fecha de evento."
+     ],
+     "cit": [
+      "no",
+      "No es una convocatoria a la que se pueda postular; solo informa una fecha de evento."
+     ],
+     "res": [
+      "no",
+      "No es una convocatoria a la que se pueda postular; solo informa una fecha de evento."
+     ]
+    },
+    "src": [
+     "matis.hr",
+     "https://matis.hr/novosti/najava-31-forum-hrvatske-nacionalne-manjine-mladi-i-djeca-buducnost-hrvatskih-manjinskih-zajednica/"
+    ],
+    "ai_generated": true,
+    "flag": "La fecha 27. studenoga 2026 corresponde al evento y no es un plazo de cierre de postulación. Verificar si el foro admite participación de asociaciones de la diáspora o público en general; la fuente no lo dice. Confirmar si el aviso forma parte de la sección Novosti y no de un programa con convocatoria asociada. El borrador se hizo con solo el resumen del feed (no se pudo leer la página: fetch failed)."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  },
+  {
+   "guid": "https://matis.hr/?p=82044",
+   "link": "https://matis.hr/novosti/najava-izlozba-spomen-knjiga-kanadsko-hrvatskih-folklornih-festivala-i-dodjela-priznanja-anti-belji/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-25T15:49:30.683Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es un aviso de un evento puntual (inauguración de una exhibición y entrega de un reconocimiento) sin convocatoria a la que una persona o asociación de la diáspora pueda postularse.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Exposición de libros conmemorativos de festivales folklóricos canadienses y homenaje a Ante Belja",
+    "t_hr": "NAJAVA: Izložba spomen-knjiga Kanadsko-hrvatskih folklornih festivala i dodjela priznanja Anti Belji",
+    "who": "Hrvatska matica iseljenika (Hrvatska matica iseljenika)",
+    "amount": "",
+    "what": "El 25 de noviembre de 2026, en la sede de la Hrvatska matica iseljenika en Zagreb, se inaugura una muestra de libros conmemorativos de los festivales folklóricos croatas de Canadá, editados desde 1973. A las 18 horas, la Udruga hrvatskih branitelja Domovinskog rata 91 entrega a Ante Belja, exdirector de la Matica, la Gran Placa Dorada «Da se ne zaboravi».",
+    "el": {
+     "ar": [
+      "no",
+      "No hay convocatoria ni programa al que postularse; es un evento con fecha fija."
+     ],
+     "cit": [
+      "no",
+      "No hay convocatoria ni programa al que postularse; es un evento con fecha fija."
+     ],
+     "res": [
+      "no",
+      "No hay convocatoria ni programa al que postularse; es un evento con fecha fija."
+     ]
+    },
+    "src": [
+     "matis.hr",
+     "https://matis.hr/novosti/najava-izlozba-spomen-knjiga-kanadsko-hrvatskih-folklornih-festivala-i-dodjela-priznanja-anti-belji/"
+    ],
+    "ai_generated": true,
+    "flag": "La fecha 25 de noviembre de 2026 es la del evento, no un plazo de cierre; no se usó como deadline. El aviso no describe ninguna beca, ayuda ni programa para descendientes o asociaciones, por eso relevante quedó en false. La categoría 'proy' se eligió por ser la más cercana a un tema de asociaciones culturales; revisar si conviene dejar la nota fuera del radar."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  },
+  {
+   "guid": "https://matis.hr/?p=4442",
+   "link": "https://matis.hr/programi/mala-skola-hrvatskoga-jezika-i-kulture-4/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-25T15:49:58.059Z",
+   "text_from": "página oficial",
+   "relevante": true,
+   "motivo_relevancia": "Es un campamento de idioma y cultura croata para chicos de 9 a 14 años de comunidades croatas en el mundo, y la lista de posibles candidatos para 2027 está abierta ahora.",
+   "ficha": {
+    "cat": "beca",
+    "t": "Mala Škola: campamento de croata para chicos de 9 a 14 años",
+    "t_hr": "Mala škola hrvatskoga jezika i kulture",
+    "who": "Hrvatska matica iseljenika (Hrvatska matica iseljenika)",
+    "amount": "",
+    "what": "Es un campamento de verano en Novi Vinodolski, en la costa croata, con clases de croata en tres niveles y talleres creativos como teatro, periodismo, cine y folklore, además de deportes y actividades. Está pensado para chicos de 9 a 14 años de comunidades croatas en el mundo y también para niños de origen no croata que tengan vínculo con Croacia. Para 2027 se prevé del 19 al 30 de julio, pero la inscripción actual es solo a una lista de posibles candidatos y no garantiza lugar.",
+    "el": {
+     "ar": [
+      "cond",
+      "La fuente acepta niños de comunidades croatas en el mundo, pero no detalla requisitos de residencia y la inscripción para 2027 todavía no está abierta."
+     ],
+     "cit": [
+      "cond",
+      "La fuente acepta niños de comunidades croatas en el mundo, pero no detalla requisitos de ciudadanía y la inscripción para 2027 todavía no está abierta."
+     ],
+     "res": [
+      "cond",
+      "La fuente no dice si niños que viven en Croacia con residencia de diáspora pueden anotarse, así que hay que confirmarlo con la organización."
+     ]
+    },
+    "src": [
+     "matis.hr",
+     "https://matis.hr/programi/mala-skola-hrvatskoga-jezika-i-kulture-4/"
+    ],
+    "ai_generated": true,
+    "flag": "La página muestra la edición 2026, que ya cerró, y las fechas y precios de 2027 todavía no están confirmados. Los precios (100 € y 473 €) pueden corresponder a 2026; hay que confirmar los de 2027. La fuente dice que la inscripción a la lista de candidatos no es registro y no garantiza lugar; el lugar se confirma al pagar. No hay fecha de inicio de la inscripción 2027; la organización avisará a las familias de la lista. El límite de edad es de 9 a 14 años cumplidos con fecha de corte 31.8. Los organizadores pueden cambiar fechas o cancelar el programa; si hay menos de 25 niños inscriptos, se cancela y se devuelve el pago. Confirmar con la organización si niños que viven en Argentina sin ciudadanía croata y con ciudadanía pueden anotarse sin más requisitos. Contacto indicado en la fuente: lada.kanajet@matis.hr. Se borró el monto «€100 de organización más €473 del campamento y alojamiento, por niño (son dos pagos separados; la fuente no da un total)»: no aparece textual en la fuente. Revisar el PDF de la convocatoria."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  },
+  {
+   "guid": "https://matis.hr/?p=82012",
+   "link": "https://matis.hr/novosti/dom-kulture-u-donjoj-lastvi-dan-na-uporabu-hrvatskom-nacionalnom-vijecu/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-25T15:50:55.278Z",
+   "text_from": "solo el resumen del feed (no se pudo leer la página: fetch failed)",
+   "relevante": false,
+   "motivo_relevancia": "El aviso informa un contrato de uso de un centro cultural en Montenegro y no describe ninguna convocatoria que una persona o asociación de la diáspora pueda aprovechar.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Casa de cultura en Donja Lastva pasa a uso del Consejo Nacional Croata",
+    "t_hr": "Dom kulture u Donjoj Lastvi dan na uporabu Hrvatskom nacionalnom vijeću",
+    "who": "Hrvatsko nacionalno vijeće (Hrvatsko nacionalno vijeće de Crna Gora), con la noticia publicada por Hrvatska matica iseljenika",
+    "amount": "",
+    "what": "Un contrato firmado en Zagreb asegura el uso a largo plazo de la Casa de Cultura de Donja Lastva, en Montenegro, que es un centro cultural e identitario de la comunidad croata de ese país. El aviso no describe programas, requisitos ni destinatarios.",
+    "el": {
+     "ar": [
+      "no",
+      "No hay convocatoria para personas; el aviso solo informa un acuerdo sobre un inmueble."
+     ],
+     "cit": [
+      "no",
+      "No hay convocatoria para personas; el aviso solo informa un acuerdo sobre un inmueble."
+     ],
+     "res": [
+      "no",
+      "No hay convocatoria para personas; el aviso solo informa un acuerdo sobre un inmueble."
+     ]
+    },
+    "src": [
+     "matis.hr",
+     "https://matis.hr/novosti/dom-kulture-u-donjoj-lastvi-dan-na-uporabu-hrvatskom-nacionalnom-vijecu/"
+    ],
+    "ai_generated": true,
+    "flag": "La fuente es un texto muy breve con solo el título y una frase; no incluye detalles del contrato ni de la casa de cultura. No aparece ningún monto, plazo ni convocatoria asociada; confirmar en la fuente original si existe algún llamado vinculado. El aviso está en el sitio de Hrvatska matica iseljenika, pero el organismo que recibe el inmueble es el Hrvatsko nacionalno vijeće de Montenegro; verificar el nombre oficial. No se detectaron instrucciones dentro del texto de la fuente. El borrador se hizo con solo el resumen del feed (no se pudo leer la página: fetch failed)."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  },
+  {
+   "guid": "https://matis.hr/?p=81998",
+   "link": "https://matis.hr/novosti/odrzan-39-tamburaski-festival-odraslih-hrvatske-bratske-zajednice-u-americi/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-25T15:51:21.238Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es una nota sobre un festival que ya se realizó y no describe ninguna convocatoria, beca ni ayuda que una persona o asociación pueda solicitar.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Festival de tamburaši de la Hrvatska bratska zajednica en EE. UU. (ya realizado)",
+    "t_hr": "Održan 39. Tamburaški festival odraslih Hrvatske bratske zajednice u Americi",
+    "who": "Hrvatska bratska zajednica (Hrvatska bratska zajednica)",
+    "amount": "",
+    "what": "La nota informa sobre el 39.º Festival de Tamburaši Adultos de la Hrvatska bratska zajednica, realizado del 6 al 8 de noviembre de 2026 en Columbus, con 24 ensambles y más de 500 músicos y folkloristas de EE. UU., Canadá y Croacia. No es una convocatoria abierta ni ofrece apoyo económico o de otro tipo.",
+    "el": {
+     "ar": [
+      "no",
+      "La nota no describe ninguna convocatoria ni programa al que una persona pueda postularse."
+     ],
+     "cit": [
+      "no",
+      "La nota no describe ninguna convocatoria ni programa al que una persona pueda postularse."
+     ],
+     "res": [
+      "no",
+      "La nota no describe ninguna convocatoria ni programa vinculado a la residencia de diáspora."
+     ]
+    },
+    "src": [
+     "matis.hr",
+     "https://matis.hr/novosti/odrzan-39-tamburaski-festival-odraslih-hrvatske-bratske-zajednice-u-americi/"
+    ],
+    "ai_generated": true,
+    "flag": "Es una noticia sobre un evento ya realizado (6 al 8 de noviembre de 2026), no un aviso de convocatoria; no corresponde publicar como oportunidad. La fuente indica que el texto es de Hrvatska matica iseljenika (Novosti), pero el festival lo organiza la Hrvatska bratska zajednica; el nombre del organismo en la ficha es el de la organizadora. Si en el futuro la Hrvatska bratska zajednica publica una convocatoria para participar en el festival, conviene revisarla por separado."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  }
+ ]
+}
