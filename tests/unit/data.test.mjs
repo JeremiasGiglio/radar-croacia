@@ -79,3 +79,16 @@ test("prototype/index.html (datos embebidos para el evento): PGŽ 2.7 con el mis
     }
   });
 }
+
+test("ZL-170: los perfiles sirven a toda la diáspora, no solo a la Argentina", () => {
+  for (const f of FILES) {
+    const { profiles } = load(f);
+    assert.equal(profiles.ar, "Vive fuera de Croacia, sin ciudadanía", f);
+    assert.equal(profiles.cit, "Vive fuera de Croacia, con ciudadanía", f);
+    assert.doesNotMatch(JSON.stringify(profiles), /Argentina/, f);
+  }
+  const html = readFileSync(new URL("../../site/index.html", import.meta.url), "utf8");
+  assert.match(html, /Vivo fuera de Croacia, sin ciudadanía/);
+  assert.match(html, /Vivo fuera de Croacia, con ciudadanía/);
+  assert.doesNotMatch(html, /Vivo en Argentina/);
+});

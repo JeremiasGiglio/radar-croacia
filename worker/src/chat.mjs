@@ -12,8 +12,8 @@ export const LIMITS = {
   fichas: LIMITES.fichas,
 };
 const PROFILES_FALLBACK = {
-  ar: "Vive en Argentina, sin ciudadanía",
-  cit: "Vive en Argentina, con ciudadanía",
+  ar: "Vive fuera de Croacia, sin ciudadanía",
+  cit: "Vive fuera de Croacia, con ciudadanía",
   res: "Vive en Croacia con residencia de diáspora",
 };
 
