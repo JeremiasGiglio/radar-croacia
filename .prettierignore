@@ -16,3 +16,4 @@ worker/dist/
 worker/.wrangler/
 worker/package-lock.json
 site/asistente.html
+_site/

@@ -1,10 +1,10 @@
 # Radar Croacia 🇭🇷 · Radar Hrvatska
 
-**Programas, becas y oportunidades en Croacia, para la diáspora sudamericana y para quien quiera ir. En español, filtrados según tu situación y en un mapa.**
+**Programas, becas y oportunidades en Croacia, para la diáspora croata de todo el mundo y para quien quiera ir. En español, filtrados según tu situación y en un mapa.**
 
 Becas, cursos y estudios universitarios (también universidades privadas con carreras en inglés), portales de trabajo, residencia, ayudas para emprender, programas municipales y convocatorias para proyectos de la comunidad. Cada ficha dice qué tipo de fuente es (oficial, institución, portal de empleo) y si está abierta a todos o pide ascendencia croata. Un proceso automático revisa todos los días las páginas oficiales croatas, la IA resume en español lo nuevo y una persona del equipo verifica cada ficha antes de publicarla.
 
-> Proyecto de **Zustro Labs**, el estudio de QA e IA de **Jeremías Ismael Giglio**, con el **Ateneo Croata de Rosario** como socio.
+> Proyecto de **Zustro Labs**, el estudio de software e IA de **Jeremías Ismael Giglio**.
 > Presentado a la **Convocatoria Pública 2026 de la Oficina Central para los Croatas fuera de Croacia** (Cat. B, formulario 51709, enviado el 7/10/2026).
 
 ---
@@ -72,6 +72,6 @@ CLAUDE.md             contexto para el chat de desarrollo
 ## Principios (no negociables)
 1. **La fuente oficial manda.** Cada ficha lleva el link oficial y la fecha de revisión.
 2. **Revisión humana** antes de publicar. La IA propone; una persona aprueba.
-3. **Gratis y de código abierto** para la comunidad (es un compromiso con la Oficina). El Radar es de Zustro Labs, con el Ateneo como socio (ver la nota en `docs/02_compromisos_convocatoria.md`).
+3. **Gratis y de código abierto** para la comunidad (es un compromiso con la Oficina). El Radar es de Zustro Labs (ver la nota en `docs/02_compromisos_convocatoria.md`).
 4. **Legal:** se reutiliza información pública (ZPPI, Directiva 2019/1024). Se enlazan los PDF, no se vuelven a alojar. Sin datos personales de resoluciones. Se respeta robots.txt, con visitas espaciadas y un User-Agent identificable.
 5. "Es información, no asesoramiento legal."

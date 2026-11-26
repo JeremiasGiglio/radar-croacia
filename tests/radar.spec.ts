@@ -1,8 +1,18 @@
-import { test, expect } from "@playwright/test";
+import { test, expect, type Page } from "@playwright/test";
 import data from "../site/data/opportunities.json" with { type: "json" };
 
 const total = data.opportunities.length;
 const usefulFor = (p: "ar" | "cit" | "res") => data.opportunities.filter((o) => o.el[p][0] !== "no").length;
+
+// En el celular los filtros y el mapa arrancan plegados (ZL-169): estos helpers los abren si hace falta.
+async function abrir(page: Page, id: "filtros" | "mapa") {
+  const d = page.locator(`#${id}`);
+  if (!(await d.evaluate((e) => (e as HTMLDetailsElement).open))) await d.locator("summary").click();
+}
+const elegir = async (page: Page, sel: string) => {
+  await abrir(page, "filtros");
+  await page.locator(sel).click();
+};
 
 test.beforeEach(async ({ page }) => {
   // ZL-129: el beacon de Web Analytics no sale a la red en los tests.
@@ -10,7 +20,8 @@ test.beforeEach(async ({ page }) => {
     r.fulfill({ status: 200, contentType: "text/javascript", body: "" }),
   );
   await page.goto("/");
-  await expect(page.locator("#list article")).toHaveCount(total);
+  // El HTML ya trae las fichas escritas por el build; se espera a que el JavaScript arme la lista interactiva.
+  await expect(page.locator('#list[data-render="js"] article')).toHaveCount(total);
 });
 
 test("carga todas las fichas desde el JSON", async ({ page }) => {
@@ -20,7 +31,7 @@ test("carga todas las fichas desde el JSON", async ({ page }) => {
 
 for (const p of ["ar", "cit", "res"] as const) {
   test(`el perfil "${p}" cuenta bien las que sirven`, async ({ page }) => {
-    await page.locator(`#pf-${p}`).click();
+    await elegir(page, `#pf-${p}`);
     await expect(page.locator(`#pf-${p}`)).toHaveAttribute("aria-pressed", "true");
     await expect(page.locator("#count")).toHaveText(`${usefulFor(p)} de ${total} te sirven`);
   });
@@ -28,7 +39,7 @@ for (const p of ["ar", "cit", "res"] as const) {
 
 test("apagar una categoría saca sus fichas", async ({ page }) => {
   const becas = data.opportunities.filter((o) => o.cat === "beca").length;
-  await page.locator("#cat-beca").click();
+  await elegir(page, "#cat-beca");
   await expect(page.locator("#cat-beca")).toHaveAttribute("aria-pressed", "false");
   await expect(page.locator("#list article")).toHaveCount(total - becas);
 });
@@ -43,12 +54,15 @@ test("cada ficha tiene enlace oficial https y fecha de revisión", async ({ page
 });
 
 test("tocar un marcador del mapa selecciona su ficha", async ({ page }) => {
+  await abrir(page, "mapa");
   await page.locator("#markers .mk:not(.cluster)").first().click();
   await expect(page.locator("#list article.sel")).toHaveCount(1);
 });
 
-test("muestra los eventos y la nota de revisión", async ({ page }) => {
-  await expect(page.locator("#events li")).toHaveCount(data.events.length);
+test("muestra los eventos que no terminaron y la nota de revisión", async ({ page }) => {
+  const hoy = new Date().toISOString().slice(0, 10);
+  const proximos = data.events.filter((e: { end?: string }) => !e.end || e.end >= hoy).length;
+  await expect(page.locator("#events li")).toHaveCount(proximos);
   await expect(page.locator("#note")).toContainText(data.note);
 });
 
@@ -100,6 +114,7 @@ test.describe("Programas en Croacia (ZL-79)", () => {
   test("«Solo las abiertas a todos» deja solo las que no piden ascendencia croata", async ({ page }) => {
     test.skip(abiertas === 0, "no hay fichas abiertas a todos");
     const b = page.locator("#solo-abiertas");
+    await abrir(page, "filtros");
     await b.click();
     await expect(b).toHaveAttribute("aria-pressed", "true");
     await expect(page.locator("#list article")).toHaveCount(abiertas);
@@ -129,6 +144,7 @@ test.describe("Programas en Croacia (ZL-79)", () => {
         porLugar[p.map((x) => x.toFixed(2)).join(",")] = (porLugar[p.map((x) => x.toFixed(2)).join(",")] ?? 0) + 1;
     const [k, n] = Object.entries(porLugar).sort((a, b) => b[1] - a[1])[0];
     test.skip(n <= 6, "ningún lugar tiene más de 6 fichas");
+    await abrir(page, "mapa");
     const c = page.locator(`#markers .cluster[data-grupo="${k}"]`);
     await expect(c).toHaveAttribute("aria-expanded", "false");
     await expect(c.locator("text")).toHaveText(String(n));
@@ -186,7 +202,7 @@ test.describe("WhatsApp", () => {
     await expect(general).toBeVisible();
     await expect(general).toHaveAttribute("href", /^https:\/\/wa\.me\/5493410000000\?text=/);
 
-    await page.locator("#pf-res").click();
+    await elegir(page, "#pf-res");
     const first = data.opportunities[0];
     const href = await page.locator(`a.wa[data-wa="${first.id}"]`).getAttribute("href");
     const text = decodeURIComponent(new URL(href!).searchParams.get("text")!);
@@ -220,7 +236,8 @@ test.describe("Zustro Labs", () => {
   test("el pie dice de quién es el proyecto y muestra el símbolo", async ({ page }) => {
     const madeBy = page.locator("#made-by");
     await expect(madeBy).toContainText("Zustro Labs");
-    await expect(madeBy).toContainText("Ateneo Croata de Rosario");
+    // El Ateneo pidió no aparecer (24/11/2026).
+    await expect(madeBy).not.toContainText("Ateneo");
     const img = madeBy.locator("img");
     await expect(img).toBeVisible();
     expect(await img.evaluate((el: HTMLImageElement) => el.naturalWidth)).toBeGreaterThan(0);
@@ -260,7 +277,7 @@ test.describe("Chat con IA", () => {
         fuera_de_tema: false,
       })(r);
     });
-    await page.locator("#pf-cit").click();
+    await elegir(page, "#pf-cit");
     await page.locator("#chat-open").click();
     await expect(page.locator("#chat")).toBeVisible();
     await expect(page.locator("#chat-input")).toBeFocused();
