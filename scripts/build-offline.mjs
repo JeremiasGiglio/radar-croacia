@@ -18,6 +18,7 @@ export function build() {
   const css = read("site/assets/styles.css");
   const js = read("site/assets/app.js");
   const svg = read("site/assets/zustro-simbolo.svg");
+  const camara = readFileSync(new URL("../site/assets/colaboradores/camara-colombia-croacia.webp", import.meta.url));
   const data = `window.RADAR_OFFLINE=${safeJson({ db, contact, built_at: db.verified_at })};`;
 
   let html = read("site/index.html");
@@ -34,6 +35,10 @@ export function build() {
   swap(
     'src="assets/zustro-simbolo.svg"',
     `src="data:image/svg+xml;base64,${Buffer.from(svg, "utf8").toString("base64")}"`,
+  );
+  swap(
+    'src="assets/colaboradores/camara-colombia-croacia.webp"',
+    `src="data:image/webp;base64,${camara.toString("base64")}"`,
   );
   // CSP: nada de red; solo los dos scripts de este archivo (por hash) y los estilos de adentro.
   html = html.replace(
