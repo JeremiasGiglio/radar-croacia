@@ -9,7 +9,7 @@
     "node": ">=22"
   },
   "scripts": {
-    "serve": "http-server site -p 8080 -c-1",
+    "serve": "node scripts/build-site.mjs && http-server _site -p 8080 -c-1",
     "validate": "node scripts/validate-data.mjs",
     "lint": "eslint . && prettier --check . && tsc -p .",
     "format": "prettier --write .",
@@ -19,7 +19,9 @@
     "check": "npm run lint && npm test",
     "monitor": "node scripts/monitor.mjs",
     "policy": "node scripts/build-policy.mjs",
-    "offline": "node scripts/build-offline.mjs"
+    "offline": "node scripts/build-offline.mjs",
+    "build": "node scripts/build-site.mjs",
+    "marca": "node scripts/marca.mjs"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
@@ -34,6 +36,6 @@
     "typescript": "7.0.2"
   },
   "dependencies": {
-    "fast-xml-parser": "5.12.0"
+    "fast-xml-parser": "5.12.1"
   }
 }

@@ -10,3 +10,4 @@ privado/
 test-results/
 worker/dist/
 worker/.wrangler/
+_site/

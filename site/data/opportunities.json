@@ -3,8 +3,8 @@
  "verified_at": "2026-11-09",
  "note": "Beta. Fichas revisadas por Jeremías Giglio (Zustro Labs) con fuentes oficiales. Los montos y plazos pueden cambiar: la fuente oficial manda.",
  "profiles": {
-  "ar": "Vive en Argentina, sin ciudadanía",
-  "cit": "Vive en Argentina, con ciudadanía",
+  "ar": "Vive fuera de Croacia, sin ciudadanía",
+  "cit": "Vive fuera de Croacia, con ciudadanía",
   "res": "Vive en Croacia con residencia de diáspora (art. 79.a)"
  },
  "categories": {
@@ -1945,6 +1945,8 @@
  "events": [
   {
    "date": "05–08/11/2026",
+      "start": "2026-11-05",
+      "end": "2026-11-08",
    "t": "9.º Encuentro de la Diáspora Croata Sudamericana",
    "where": "Córdoba",
    "note": "Inscripción en credentia.com.ar.",
@@ -1955,6 +1957,8 @@
   },
   {
    "date": "30/11–02/12/2026",
+      "start": "2026-11-30",
+      "end": "2026-12-02",
    "t": "IV Encuentro \"Procesos migratorios entre Croacia y América del Sur\"",
    "where": "híbrido, con sede en Rosario",
    "note": "Resúmenes hasta el 21/10/2026.",

@@ -12,7 +12,8 @@ export default defineConfig({
     launchOptions: process.env.PW_CHROMIUM ? { executablePath: process.env.PW_CHROMIUM } : {},
   },
   webServer: {
-    command: "npx http-server site -p 8080 -c-1 -s",
+    // Los tests usan la web armada (ZL-169): las fichas, temas y sitemap salen del build.
+    command: "node scripts/build-site.mjs && npx http-server _site -p 8080 -c-1 -s",
     url: "http://127.0.0.1:8080",
     reuseExistingServer: !process.env.CI,
   },

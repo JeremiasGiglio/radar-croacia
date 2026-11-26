@@ -83,7 +83,9 @@
         "type": "object",
         "required": ["date", "t", "where", "note", "src"],
         "properties": {
-          "src": { "type": "array", "items": [{ "type": "string" }, { "type": "string", "pattern": "^https://" }] }
+          "src": { "type": "array", "items": [{ "type": "string" }, { "type": "string", "pattern": "^https://" }] },
+          "start": { "type": "string", "format": "date" },
+          "end": { "type": "string", "format": "date" }
         }
       }
     }

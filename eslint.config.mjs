@@ -11,6 +11,7 @@ export default [
       "prototype/",
       "playwright-report/",
       "test-results/",
+      "_site/",
       "**/*.ts",
     ],
   },

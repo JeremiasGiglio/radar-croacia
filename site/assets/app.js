@@ -62,9 +62,21 @@ function waGeneral(C, DB) {
   a.title = C.nota || "";
   a.hidden = false;
 }
+function hoyIso() {
+  var d = new Date();
+  return d.getFullYear() + "-" + ("0" + (d.getMonth() + 1)).slice(-2) + "-" + ("0" + d.getDate()).slice(-2);
+}
+// Eventos que todavía no terminaron (ZL-169): los vencidos se ocultan solos, sin tocar los datos.
+function proximosEventos(DB) {
+  var hoy = hoyIso();
+  return (DB.events || []).filter(function (e) {
+    return !e.end || e.end >= hoy;
+  });
+}
 function renderExtras(DB) {
-  var ev = document.getElementById("events");
-  ev.innerHTML = (DB.events || [])
+  var ev = document.getElementById("events"),
+    lista = proximosEventos(DB);
+  ev.innerHTML = lista
     .map(function (e) {
       return (
         "<li><time>" +
@@ -83,6 +95,32 @@ function renderExtras(DB) {
       );
     })
     .join("");
+  var vacio = document.getElementById("events-vacio");
+  if (vacio) vacio.hidden = lista.length > 0;
+  // Últimas revisiones: salen de la fecha de revisión de cada ficha, no de ejemplos fijos.
+  var ul = document.getElementById("ultimas");
+  if (ul)
+    ul.innerHTML = DB.opportunities
+      .slice()
+      .sort(function (a, b) {
+        return String(b.verified_at || "").localeCompare(String(a.verified_at || ""));
+      })
+      .slice(0, 5)
+      .map(function (o) {
+        return (
+          "<li><time>" +
+          fmt(o.verified_at) +
+          '</time><span class="t"><button type="button" class="link" data-ficha="' +
+          esc(o.id) +
+          '">' +
+          esc(o.t) +
+          "</button></span></li>"
+        );
+      })
+      .join("");
+  // El build ya la escribe con la cantidad de fuentes; si no está (demo sin conexión), va la cantidad de fichas.
+  var intro = document.getElementById("intro");
+  if (intro && !intro.textContent.trim()) intro.textContent = DB.opportunities.length + " fichas revisadas a mano.";
   document.getElementById("note").textContent = DB.note + " Última revisión: " + fmt(DB.verified_at) + ".";
 }
 
@@ -104,16 +142,21 @@ function start(DB, CONTACT) {
   ];
 
   var DATA = DB.opportunities;
+  var OFF = !!window.RADAR_OFFLINE;
 
   var FUENTES = DB.fuentes || { oficial: "Fuente oficial" };
+  var PAGINA = 10; // fichas que se ven de entrada; el resto con «Ver más» (ZL-169)
   var profile = "ar",
     soloAbiertas = false,
     expanded = {},
+    abiertas = {},
+    limite = PAGINA,
     active = {};
   Object.keys(CATS).forEach(function (k) {
     active[k] = true;
   });
   var sel = null;
+  var celular = matchMedia("(max-width: 860px)");
 
   function status(d) {
     if (d.deadline) {
@@ -129,6 +172,16 @@ function start(DB, CONTACT) {
     return { cls: "p-next", txt: d.next };
   }
   var EL = { ok: ["p-ok", "Te sirve"], cond: ["p-warn", "Con condiciones"], no: ["p-no", "No aplica"] };
+
+  // En el celular, los filtros y el mapa arrancan plegados para que lo primero que se vea sean las fichas.
+  var filtros = document.getElementById("filtros"),
+    mapa = document.getElementById("mapa");
+  function plegar() {
+    filtros.open = !celular.matches;
+    mapa.open = !celular.matches;
+  }
+  plegar();
+  if (celular.addEventListener) celular.addEventListener("change", plegar);
 
   // cities
   var gc = document.getElementById("cities"),
@@ -148,13 +201,6 @@ function start(DB, CONTACT) {
     t.textContent = c[0];
     gc.appendChild(t);
   });
-  var pp = P(14.18, 45.14),
-    gp = document.getElementById("plomin");
-  gp.setAttribute("class", "plomin");
-  gp.appendChild(el("circle", { cx: pp[0], cy: pp[1], r: 13 }));
-  var pt = el("text", { x: pp[0] + 18, y: pp[1] + 30 });
-  pt.textContent = "Plomin";
-  gp.appendChild(pt);
 
   // legend + chips
   var lg = document.getElementById("legend"),
@@ -172,6 +218,7 @@ function start(DB, CONTACT) {
     b.onclick = function () {
       active[k] = !active[k];
       b.setAttribute("aria-pressed", active[k]);
+      limite = PAGINA;
       render();
     };
     cats.appendChild(b);
@@ -198,8 +245,18 @@ function start(DB, CONTACT) {
     ab.onclick = function () {
       soloAbiertas = !soloAbiertas;
       ab.setAttribute("aria-pressed", soloAbiertas);
+      limite = PAGINA;
       render();
     };
+  var mas = document.getElementById("ver-mas");
+  mas.onclick = function () {
+    var primera = limite;
+    limite += 20;
+    render();
+    var c = document.querySelectorAll("#list article")[primera];
+    var t = c && c.querySelector(".card-t");
+    if (t) t.focus();
+  };
 
   // Más de MAX_GRUPO fichas en el mismo lugar (Zagreb): un solo círculo con el número; al tocarlo se abre (ZL-81).
   var MAX_GRUPO = 6;
@@ -232,6 +289,93 @@ function start(DB, CONTACT) {
     gm.appendChild(g);
   }
 
+  function resumenFiltros(n) {
+    var r = document.getElementById("filtros-res");
+    if (!r) return;
+    var b = document.getElementById("pf-" + profile),
+      on = Object.keys(CATS).filter(function (k) {
+        return active[k];
+      }).length,
+      total = Object.keys(CATS).length;
+    r.textContent =
+      (b ? b.textContent : "") +
+      " · " +
+      (on === total ? "todos los temas" : on + (on === 1 ? " tema" : " temas")) +
+      (soloAbiertas ? " · abiertas a todos" : "") +
+      " · " +
+      n +
+      (n === 1 ? " ficha" : " fichas");
+  }
+
+  function card(d) {
+    var st = status(d),
+      e = d.el[profile],
+      abierta = !!abiertas[d.id],
+      c = document.createElement("article");
+    c.className = "card" + (sel === d.id ? " sel" : "") + (abierta ? " abierta" : "");
+    c.id = "card-" + d.id;
+    c.innerHTML =
+      '<div class="top"><span class="cat"><b style="background:' +
+      CATS[d.cat].c +
+      '"></b>' +
+      esc(CATS[d.cat].n) +
+      "</span>" +
+      '<span class="pill ' +
+      st.cls +
+      (st.cd ? " cd" : "") +
+      '">' +
+      esc(st.txt) +
+      '</span><span class="pill ' +
+      EL[e[0]][0] +
+      '">' +
+      EL[e[0]][1] +
+      "</span>" +
+      (d.abierta ? '<span class="pill p-abierta">Abierta a todos</span>' : "") +
+      "</div>" +
+      '<h3><button type="button" class="card-t" aria-expanded="' +
+      abierta +
+      '" aria-controls="det-' +
+      esc(d.id) +
+      '">' +
+      esc(d.t) +
+      '<span class="card-mas" aria-hidden="true"></span></button></h3>' +
+      '<p class="who">' +
+      esc(d.who) +
+      "</p>" +
+      '<div class="card-det" id="det-' +
+      esc(d.id) +
+      '"' +
+      (abierta ? "" : " hidden") +
+      ">" +
+      (d.t_hr ? '<p class="who" lang="hr">' + esc(d.t_hr) + "</p>" : "") +
+      "<p>" +
+      esc(d.what) +
+      "</p>" +
+      '<dl class="facts"><div><dt>Monto</dt><dd>' +
+      esc(d.amount) +
+      "</dd></div></dl>" +
+      '<p class="why">' +
+      esc(e[1]) +
+      "</p>" +
+      (d.flag ? '<p class="flag">' + esc(d.flag) + "</p>" : "") +
+      '<div class="src"><span class="src-tipo src-' +
+      esc(d.fuente || "oficial") +
+      '">' +
+      esc(FUENTES[d.fuente] || "Fuente") +
+      ': <a href="' +
+      safeUrl(d.src[1]) +
+      '" target="_blank" rel="noopener">' +
+      esc(d.src[0]) +
+      "</a></span><span>Revisado " +
+      fmt(d.verified_at || DB.verified_at) +
+      "</span></div>" +
+      '<div class="acciones">' +
+      waLink(CONTACT, DB, d) +
+      (OFF ? "" : '<a class="btn" href="f/' + esc(d.id) + '.html">Ficha completa y para compartir</a>') +
+      "</div></div>";
+    return c;
+  }
+
   function render() {
     var shown = DATA.filter(function (d) {
       return active[d.cat] && (!soloAbiertas || d.abierta === true);
@@ -242,6 +386,7 @@ function start(DB, CONTACT) {
       return d.el[profile][0] !== "no";
     }).length;
     document.getElementById("count").textContent = useful + " de " + shown.length + " te sirven";
+    resumenFiltros(shown.length);
     // markers
     var gm = document.getElementById("markers");
     gm.innerHTML = "";
@@ -298,79 +443,73 @@ function start(DB, CONTACT) {
       });
       if (grande) cluster(gm, k, P(arr[0][1][0], arr[0][1][1]), n, true);
     });
-    // list
+    // list: todas las fichas están en la página (para buscar con Ctrl+F y para los lectores de pantalla al
+    // pedir «Ver más»), pero solo las primeras se muestran.
+    var idx = sel
+      ? shown.findIndex(function (d) {
+          return d.id === sel;
+        })
+      : -1;
+    if (idx >= limite) limite = idx + 1;
     var L = document.getElementById("list");
     L.innerHTML = "";
-    shown.forEach(function (d) {
-      var st = status(d),
-        e = d.el[profile],
-        c = document.createElement("article");
-      c.className = "card" + (sel === d.id ? " sel" : "");
-      c.id = "card-" + d.id;
-      c.innerHTML =
-        '<div class="top"><span class="cat"><b style="background:' +
-        CATS[d.cat].c +
-        '"></b>' +
-        esc(CATS[d.cat].n) +
-        "</span>" +
-        '<span class="pill ' +
-        st.cls +
-        (st.cd ? " cd" : "") +
-        '">' +
-        esc(st.txt) +
-        '</span><span class="pill ' +
-        EL[e[0]][0] +
-        '">' +
-        EL[e[0]][1] +
-        "</span>" +
-        (d.abierta ? '<span class="pill p-abierta">Abierta a todos</span>' : "") +
-        "</div>" +
-        "<h3>" +
-        esc(d.t) +
-        "</h3>" +
-        (d.t_hr ? '<p class="who" lang="hr">' + esc(d.t_hr) + "</p>" : "") +
-        '<p class="who">' +
-        esc(d.who) +
-        "</p><p>" +
-        esc(d.what) +
-        "</p>" +
-        '<dl class="facts"><div><dt>Monto</dt><dd>' +
-        esc(d.amount) +
-        "</dd></div></dl>" +
-        '<p class="why">' +
-        esc(e[1]) +
-        "</p>" +
-        (d.flag ? '<p class="flag">' + esc(d.flag) + "</p>" : "") +
-        '<div class="src"><span class="src-tipo src-' +
-        esc(d.fuente || "oficial") +
-        '">' +
-        esc(FUENTES[d.fuente] || "Fuente") +
-        ': <a href="' +
-        safeUrl(d.src[1]) +
-        '" target="_blank" rel="noopener">' +
-        esc(d.src[0]) +
-        "</a></span><span>Revisado " +
-        fmt(d.verified_at || DB.verified_at) +
-        "</span>" +
-        waLink(CONTACT, DB, d) +
-        "</div>";
-      c.onclick = function (ev) {
-        if (ev.target.tagName !== "A") pick(d.id, false);
-      };
+    shown.forEach(function (d, i) {
+      var c = card(d);
+      if (i >= limite) c.hidden = true;
       L.appendChild(c);
     });
+    L.setAttribute("data-render", "js");
+    var resto = shown.length - limite;
+    mas.hidden = resto <= 0;
+    mas.textContent = "Ver " + Math.min(resto, 20) + " más (quedan " + resto + ")";
   }
+  document.getElementById("list").addEventListener("click", function (ev) {
+    if (ev.target.closest("a")) return;
+    var c = ev.target.closest("article.card");
+    if (!c) return;
+    var id = c.id.slice(5);
+    // Dentro del detalle se puede seleccionar texto sin que la ficha se cierre.
+    if (ev.target.closest(".card-det")) return;
+    pick(id, false);
+  });
   function pick(id, scroll) {
-    sel = sel === id ? null : id;
-    render();
-    if (sel && scroll) {
-      var c = document.getElementById("card-" + id);
-      if (c)
-        c.scrollIntoView({
-          behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
-          block: "nearest",
-        });
+    if (sel === id) {
+      sel = null;
+      abiertas[id] = false;
+    } else {
+      sel = id;
+      abiertas[id] = true;
     }
+    render();
+    var c = document.getElementById("card-" + id);
+    if (c && document.activeElement === document.body) {
+      var t = c.querySelector(".card-t");
+      if (t) t.focus({ preventScroll: true });
+    }
+    if (sel && scroll && c)
+      c.scrollIntoView({
+        behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+        block: "nearest",
+      });
+  }
+  document.getElementById("ultimas").addEventListener("click", function (ev) {
+    var b = ev.target.closest("[data-ficha]");
+    if (!b) return;
+    mostrar(b.dataset.ficha);
+  });
+  // Mostrar una ficha desde afuera (chat, «Últimas revisiones», ?f=…): sin cerrarla si ya estaba abierta.
+  function mostrar(id) {
+    if (
+      !DATA.some(function (d) {
+        return d.id === id;
+      })
+    )
+      return;
+    if (sel === id) sel = null;
+    pick(id, true);
+    var c = document.getElementById("card-" + id),
+      t = c && c.querySelector(".card-t");
+    if (t) t.focus({ preventScroll: true });
   }
   render();
   setInterval(render, 60000);
@@ -379,16 +518,16 @@ function start(DB, CONTACT) {
   document.getElementById("profile").addEventListener("click", function () {
     waGeneral(CONTACT, DB);
   });
-  // Desde el chat: mostrar una ficha (sin des-seleccionarla si ya estaba elegida).
-  initChat(CONTACT, DB, function (id) {
-    if (sel === id) sel = null;
-    pick(id, true);
-  });
+  var chat = initChat(CONTACT, DB, mostrar);
+  // Links de afuera: /?f=<id> abre esa ficha; /?chat=1 abre el chat (desde las páginas de cada ficha).
+  var q = new URLSearchParams(location.search);
+  if (q.get("f")) mostrar(q.get("f"));
+  if (q.get("chat") === "1" && chat) chat.open();
 }
 
 /* ---------- Chat: asistente con IA sobre las fichas verificadas ---------- */
 var CHAT_SUGS = [
-  "Vivo en Argentina, ¿qué me sirve?",
+  "Vivo fuera de Croacia, ¿qué me sirve?",
   "¿Hay becas para estudiar croata?",
   "¿Qué carreras hay en inglés?",
   "¿Cómo es la residencia de diáspora?",
@@ -564,6 +703,7 @@ function initChat(C, DB, show) {
       ask(input.value);
     }
   });
+  return { open: open };
 }
 
 // Demo sin conexión (ZL-41): prototype/radar-offline.html trae los datos adentro y no pide nada a la red.
