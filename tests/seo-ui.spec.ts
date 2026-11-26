@@ -310,3 +310,15 @@ test("capturas de la portada (escritorio y celular)", async ({ page }, info) => 
     contentType: "image/png",
   });
 });
+
+test("Colaboradores: el logo de la Cámara de Comercio Colombia - Croacia lleva a su web oficial", async ({ page }) => {
+  await cargar(page);
+  const a = page.locator(".colab a");
+  await expect(a).toHaveCount(1);
+  await expect(a).toHaveAttribute("href", "https://camaracolombiacroacia.org/");
+  await expect(a).toHaveAttribute("rel", /noopener/);
+  const img = a.locator("img");
+  await expect(img).toHaveAttribute("alt", "Cámara de Comercio Colombia - Croacia");
+  await img.scrollIntoViewIfNeeded();
+  await expect.poll(() => img.evaluate((i) => (i as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
+});
