@@ -359,7 +359,7 @@
     "https://www2.pgz.hr/doc/programi/2026/razvoj-poduzetnistva-mjera-21-23-26-27/jp.docx"
    ],
    "verified_at": "2026-10-16",
-   "flag": "El autoempleo cuenta como persona empleada (texto oficial 2026). Paušal y tarjeta de residencia aceptados por escrito (PGŽ, 24/9/2026). App SOM: registro con mail. Requisito: no haber sido dueño de otro negocio en los 2 años previos.",
+   "flag": "El autoempleo cuenta como persona empleada (texto oficial 2026). Paušal y tarjeta de residencia aceptados por escrito (PGŽ, 24/9/2026). App SOM: registro con mail. Requisito: no haber sido dueño de otro negocio en los 2 años previos. La página oficial (pgz.hr) a veces no abre desde fuera de Croacia: si no carga, probá más tarde.",
    "fuente": "oficial",
    "abierta": false
   },
@@ -992,7 +992,8 @@
    ],
    "fuente": "oficial",
    "abierta": false,
-   "verified_at": "2026-10-20"
+   "verified_at": "2026-10-20",
+   "flag": "La página oficial (pgz.hr) a veces no abre desde fuera de Croacia: si no carga, probá más tarde."
   },
   {
    "id": "dozvola_trabajo",
@@ -1900,7 +1901,7 @@
    ],
    "fuente": "oficial",
    "abierta": true,
-   "flag": "Las condiciones son del llamado 2025/26. Hay un reglamento nuevo en consulta pública desde el 25/9/2026 que puede cambiarlas (https://www.pgz.hr/savjetovanje_javnost/prijedlog-pravilnika-o-uvjetima-kriterijima-i-postupku-dodjele-stipendija-iz-proracuna-primorsko-goranske-zupanije/): revisar el llamado 2026/27.",
+   "flag": "Las condiciones son del llamado 2025/26. Hay un reglamento nuevo en consulta pública desde el 25/9/2026 que puede cambiarlas (https://www.pgz.hr/savjetovanje_javnost/prijedlog-pravilnika-o-uvjetima-kriterijima-i-postupku-dodjele-stipendija-iz-proracuna-primorsko-goranske-zupanije/): revisar el llamado 2026/27. La página oficial (pgz.hr) a veces no abre desde fuera de Croacia: si no carga, probá más tarde.",
    "verified_at": "2026-10-22"
   },
   {
@@ -2000,7 +2001,7 @@
    "end": "2026-12-02",
    "t": "IV Encuentro \"Procesos migratorios entre Croacia y América del Sur\"",
    "where": "híbrido, con sede en Rosario",
-   "note": "Resúmenes hasta el 21/10/2026.",
+   "note": "Encuentro académico sobre migraciones, abierto a la comunidad.",
    "src": [
     "croacialatam.com.hr",
     "https://croacialatam.com.hr/iv-encuentro-internacional/"

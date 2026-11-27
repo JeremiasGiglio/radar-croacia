@@ -533,5 +533,33 @@
       "respuesta_incluye_alguno": [" you", "your"],
       "respuesta_no_incluye": ["whatsapp", "querés"]
     }
+  },
+  {
+    "id": "sin_situacion_no_supone",
+    "porque": "ZL-193: la página arranca sin situación elegida; la IA no puede suponer país, ciudadanía ni residencia.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "¿Qué becas hay para estudiar en Croacia?"
+      }
+    ],
+    "expect": {
+      "fuera_de_tema": false,
+      "respuesta_no_incluye": ["argentin", "sudamérica", "en tu caso, como vivís"]
+    }
+  },
+  {
+    "id": "otro_pais_con_ciudadania",
+    "porque": "Diáspora de otro país: usa lo que dice la persona, sin suponer Argentina.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Vivo en Chile y tengo ciudadanía croata. ¿Qué me sirve para trabajar en Croacia?"
+      }
+    ],
+    "expect": {
+      "fuera_de_tema": false,
+      "respuesta_no_incluye": ["argentin"]
+    }
   }
 ]

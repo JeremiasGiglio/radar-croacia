@@ -120,7 +120,8 @@ test("pedido: recorta turnos y largo, junta mensajes seguidos y exige que el úl
   const many = Array.from({ length: 30 }, (_, i) => ({ role: i % 2 ? "assistant" : "user", content: "m" + i }));
   many.push({ role: "user", content: "y".repeat(5000) });
   const r = parseRequest({ messages: many, perfil: "zzz" });
-  assert.equal(r.perfil, "ar");
+  // Un perfil inválido o ausente no se reemplaza por uno cualquiera: la IA no supone la situación (ZL-193).
+  assert.equal(r.perfil, null);
   assert.ok(r.messages.length <= 12);
   assert.equal(r.messages[0].role, "user");
   assert.ok(r.messages.at(-1).content.length <= 800 * 2);
@@ -417,4 +418,13 @@ test("política: las fichas que piden vivir en Croacia se ofrecen como paso para
     r,
     /No recomiendes una ficha que para su perfil dice «no», salvo para explicar que no le aplica\.$/m,
   );
+});
+
+test("sin perfil elegido, el pedido le avisa a la IA que no suponga la situación (ZL-193)", () => {
+  const req = buildRequest(DB, parseRequest({ messages: [{ role: "user", content: "¿Qué becas hay?" }] }));
+  const last = req.messages.at(-1).content;
+  assert.match(last, /no eligió su situación/);
+  assert.doesNotMatch(last, /Perfil elegido/);
+  assert.match(req.system, /nunca supongas su país/);
+  assert.doesNotMatch(req.system, /sudamericana/);
 });

@@ -349,7 +349,7 @@ svg {
   font-family: var(--display);
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  font-size: 12px;
+  font-size: 13px;
   color: var(--muted);
   display: inline-flex;
   align-items: center;
@@ -774,7 +774,7 @@ footer {
   margin: 0;
   padding: 0 12px 10px;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.4;
 }
 /* En el celular el chat ocupa toda la pantalla (ZL-169). */
@@ -1264,4 +1264,74 @@ header.mini .checker {
   width: 220px;
   max-width: 100%;
   height: auto;
+}
+
+/* ---------- ZL-193: auditoría del 27/11 ---------- */
+/* La marca va como logo y el título dice qué es (lo que posiciona en los buscadores). */
+.marca {
+  margin: 0 0 4px;
+  font: 700 15px/1 var(--display);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--red);
+}
+header h1 {
+  font-size: clamp(26px, 6vw, 38px);
+  line-height: 1.05;
+  text-transform: none;
+}
+/* Ficha cerrada: el título ocupa todo el ancho y la flecha va arriba, junto a las etiquetas. */
+.card {
+  position: relative;
+}
+.card > .top {
+  padding-right: 22px;
+}
+.card-t {
+  display: block;
+}
+.card-mas {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  margin: 0;
+}
+.card.abierta .card-mas {
+  margin: 0;
+  top: 20px;
+}
+.el3 {
+  font-size: 14px;
+}
+/* Pie común con los otros proyectos de Zustro Labs */
+.familia {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+  align-items: center;
+  font-size: 14px;
+  color: var(--muted);
+}
+.colab .note {
+  margin: 0;
+}
+/* Toques de 44 px en el celular: links del pie, de los eventos y del chat. */
+@media (max-width: 860px) {
+  .familia a,
+  footer a,
+  .feed .t a,
+  .chat-ficha,
+  .chat-note a,
+  .temas a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+}
+/* En la computadora el chat es más ancho, para respuestas con varias fichas. */
+@media (min-width: 701px) {
+  .chat {
+    width: min(460px, calc(100vw - 32px));
+    max-height: min(78vh, 760px);
+  }
 }

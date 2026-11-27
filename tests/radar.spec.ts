@@ -24,9 +24,32 @@ test.beforeEach(async ({ page }) => {
   await expect(page.locator('#list[data-render="js"] article')).toHaveCount(total);
 });
 
-test("carga todas las fichas desde el JSON", async ({ page }) => {
+test("carga todas las fichas desde el JSON, sin situación elegida (ZL-193)", async ({ page }) => {
   await expect(page).toHaveTitle(/Radar Croacia/);
-  await expect(page.locator("#count")).toHaveText(`${usefulFor("ar")} de ${total} te sirven`);
+  for (const p of ["ar", "cit", "res"]) await expect(page.locator(`#pf-${p}`)).toHaveAttribute("aria-pressed", "false");
+  await expect(page.locator("#count")).toContainText(`${total} fichas`);
+  // Sin situación, cada ficha dice para quién sirve en las tres, sin suponer ninguna.
+  await expect(page.locator("#list article").first().locator(".el3 li")).toHaveCount(3);
+  await expect(page.locator("#list article").first().locator(".top .p-ok, .top .p-warn, .top .p-no")).toHaveCount(0);
+});
+
+test("tocar la situación elegida la saca y los filtros quedan en la dirección (ZL-193)", async ({ page }) => {
+  await elegir(page, "#pf-res");
+  await expect(page).toHaveURL(/[?&]perfil=res\b/);
+  await expect(page.locator("#count")).toHaveText(`${usefulFor("res")} de ${total} te sirven`);
+  await page.locator("#cat-beca").click();
+  await expect(page).toHaveURL(/temas=/);
+  await page.locator("#pf-res").click();
+  await expect(page.locator("#pf-res")).toHaveAttribute("aria-pressed", "false");
+  await expect(page).not.toHaveURL(/perfil=/);
+  // Un link compartido abre con los mismos filtros.
+  await page.goto("/?perfil=cit&temas=trab&sinasc=1");
+  await expect(page.locator('#list[data-render="js"]')).toHaveCount(1);
+  await expect(page.locator("#pf-cit")).toHaveAttribute("aria-pressed", "true");
+  await expect(page.locator("#cat-beca")).toHaveAttribute("aria-pressed", "false");
+  await expect(page.locator("#solo-abiertas")).toHaveAttribute("aria-pressed", "true");
+  const esperadas = data.opportunities.filter((o) => o.cat === "trab" && o.abierta === true).length;
+  await expect(page.locator("#list article")).toHaveCount(esperadas);
 });
 
 for (const p of ["ar", "cit", "res"] as const) {
@@ -106,9 +129,11 @@ test.describe("Programas en Croacia (ZL-79)", () => {
   test("el subtítulo habla de programas en Croacia, no de «oportunidades oficiales para descendientes»", async ({
     page,
   }) => {
-    await expect(page.locator(".sub")).toContainText("Programas, becas y oportunidades en Croacia");
+    await expect(page.locator("h1")).toHaveText("Programas, becas y oportunidades en Croacia");
+    await expect(page.locator(".marca")).toHaveText("Radar Croacia");
     await expect(page.locator("header")).not.toContainText(/oficiales para descendientes/i);
-    await expect(page).toHaveTitle(/Programas, becas y oportunidades en Croacia/);
+    await expect(page).toHaveTitle(/Becas y programas en Croacia/);
+    expect((await page.title()).length).toBeLessThanOrEqual(60);
   });
 
   test("«Solo las abiertas a todos» deja solo las que no piden ascendencia croata", async ({ page }) => {

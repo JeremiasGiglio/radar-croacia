@@ -78,9 +78,14 @@ ${jsonld.map(ld).join("\n")}
 <main id="contenido" class="contenido">`;
 }
 
+// Navegación cruzada (ZL-193): quien busca cursos de croata también puede practicar gratis con Kuna, del mismo estudio.
+const KUNA = `<aside class="panel kuna"><h2>Practicá croata gratis con Kuna</h2><p>Kuna es la app de Zustro Labs para aprender croata desde cero, en castellano: diez minutos por día, situaciones de la vida real y audio en cada frase. Sirve para llegar a los cursos con lo básico.</p><p><a class="btn" href="https://croata.zustrolabs.com/" target="_blank" rel="noopener">Abrir Kuna ↗</a></p></aside>`;
+const FAMILIA = `<nav class="familia" aria-label="Zustro Labs"><span>Un proyecto de <a href="https://zustrolabs.com/" target="_blank" rel="noopener">Zustro Labs</a></span><a href="https://croata.zustrolabs.com/" target="_blank" rel="noopener">Kuna: aprendé croata gratis</a><a href="mailto:contact@zustrolabs.com">contact@zustrolabs.com</a><a href="/privacidad.html">Privacidad</a></nav>`;
+
 function pie(db) {
   return `</main>
 <nav class="temas" aria-label="Temas">${TEMAS.map((t) => `<a href="/${t.slug}/">${esc(t.nombre)}</a>`).join("")}</nav>
+${FAMILIA}
 <footer><span>${esc(db.note)} Última revisión: ${fecha(db.verified_at)}.</span>
 <span class="made-by"><img src="/assets/zustro-simbolo.svg" alt="" width="16" height="16"> Radar Croacia es un proyecto de <strong>Zustro Labs</strong>, estudio de software e inteligencia artificial. Es gratis y de código abierto: <a href="https://github.com/JeremiasGiglio/radar-croacia">GitHub</a>. Es información, no asesoramiento legal. <a href="/privacidad.html">Privacidad</a>.</span></footer>
 </div>
@@ -167,6 +172,7 @@ ${o.flag ? `<p class="flag">${esc(o.flag)}</p>` : ""}
 <div class="acciones"><a class="btn" href="/?f=${esc(o.id)}">Ver en el mapa</a><a class="btn" href="/?chat=1">Preguntale al Radar</a>${wa ? `<a class="wa" href="${esc(wa)}" target="_blank" rel="noopener">Consultar por WhatsApp</a>` : ""}</div>
 <p class="note">La fuente oficial manda: los montos y plazos pueden cambiar. Es información, no asesoramiento legal.</p>
 </article>
+${temas.some((t) => t.slug === "aprender-croata") ? KUNA : ""}
 ${
   otras.length
     ? `<section class="panel"><h2>Más de ${esc(tema.nombre.toLowerCase())}</h2><ul class="pre-list">${otras
@@ -205,7 +211,8 @@ export function paginaTema(tema, db, hoy = new Date()) {
 <h1>${esc(tema.titulo)}</h1>
 <p class="sub">${esc(tema.intro)}</p>
 <p class="count">${lista.length} fichas · <a href="/">Filtrarlas según tu situación</a></p>
-<ul class="pre-list">${lista.map((o) => tarjeta(o, db, hoy)).join("")}</ul>` +
+<ul class="pre-list">${lista.map((o) => tarjeta(o, db, hoy)).join("")}</ul>
+${tema.slug === "aprender-croata" ? KUNA : ""}` +
     pie(db)
   );
 }
