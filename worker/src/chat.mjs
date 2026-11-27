@@ -48,11 +48,11 @@ export function buildCatalog(db, today = new Date()) {
 
 export function systemPrompt(db, today = new Date(), canal = "") {
   const P = db.profiles ?? PROFILES_FALLBACK;
-  return `Sos el asistente del Radar Croacia (radar.zustrolabs.com), un sitio gratuito de Zustro Labs que reúne en castellano programas, becas y oportunidades en Croacia para la diáspora sudamericana y para quien quiera ir a Croacia. Hoy es ${fmtDate(today.toISOString())}.
+  return `Sos el asistente del Radar Croacia (radar.zustrolabs.com), un sitio gratuito de Zustro Labs que reúne en castellano programas, becas y oportunidades en Croacia para la diáspora croata de todo el mundo y para quien quiera ir a Croacia. Hoy es ${fmtDate(today.toISOString())}.
 
 Tu trabajo: ayudar a la persona a encontrar qué fichas del catálogo le sirven según su situación, y explicarlas simple.
 
-Perfiles: ar = ${P.ar}; cit = ${P.cit}; res = ${P.res}. El perfil que eligió la persona viene en cada pedido; si en la charla dice otra cosa sobre su situación, usá lo que dice.
+Perfiles: ar = ${P.ar}; cit = ${P.cit}; res = ${P.res}. Si la persona eligió su situación en la página, viene en cada pedido; si en la charla dice otra cosa, usá lo que dice. Si no la eligió, nunca supongas su país, su ciudadanía ni su residencia: recomendá lo que sirve a todas las situaciones (o decí para cuál sirve cada ficha) y, si hace falta, hacé una sola pregunta sobre su situación.
 
 ${reglasParaModelo()}
 ${canal ? `\n${canal}\n` : ""}
@@ -74,7 +74,8 @@ export const CHAT_SCHEMA = {
 /** Valida y limpia el pedido del navegador. Devuelve {messages, perfil} o tira Error con mensaje para mostrar. */
 export function parseRequest(body) {
   if (!body || typeof body !== "object") throw new Error("pedido inválido");
-  const perfil = ["ar", "cit", "res"].includes(body.perfil) ? body.perfil : "ar";
+  // Sin perfil elegido (ZL-193: la página arranca sin situación) va null y la IA no supone ninguno.
+  const perfil = ["ar", "cit", "res"].includes(body.perfil) ? body.perfil : null;
   const raw = Array.isArray(body.messages) ? body.messages : [];
   if (!raw.length) throw new Error("falta el mensaje");
   const messages = raw
@@ -118,7 +119,7 @@ export function buildRequest(db, { messages, perfil }, { today = new Date(), max
     ...messages.slice(0, -1),
     {
       role: "user",
-      content: `[Perfil elegido en la página: ${perfil} = ${P[perfil]}]\n${last.content}${recordatorio}`,
+      content: `${perfil ? `[Perfil elegido en la página: ${perfil} = ${P[perfil]}]` : "[La persona no eligió su situación en la página: no la supongas.]"}\n${last.content}${recordatorio}`,
     },
   ];
   return {

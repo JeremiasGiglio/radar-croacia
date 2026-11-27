@@ -20,21 +20,24 @@ function waNumber(C) {
 }
 function currentProfile() {
   var b = document.querySelector('#profile button[aria-pressed="true"]');
-  return b ? b.dataset.p : "ar";
+  return b ? b.dataset.p : null;
 }
 function waHref(C, text) {
   return "https://wa.me/" + waNumber(C) + "?text=" + encodeURIComponent(text);
 }
+// La situación solo va en el mensaje si la persona la eligió (ZL-193: la página arranca sin situación).
+function situacionTexto(DB) {
+  var p = currentProfile();
+  return p ? " Mi situación: " + ((DB.profiles && DB.profiles[p]) || p) + "." : "";
+}
 function waLink(C, DB, d) {
   if (!waNumber(C)) return "";
-  var p = currentProfile(),
-    perfil = (DB.profiles && DB.profiles[p]) || p;
   var text =
     "Hola, vengo del Radar Croacia. Quiero consultar sobre: «" +
     d.t +
-    "». Mi situación: " +
-    perfil +
-    ". (ficha " +
+    "»." +
+    situacionTexto(DB) +
+    " (ficha " +
     d.id +
     ")";
   return (
@@ -55,9 +58,7 @@ function waGeneral(C, DB) {
     a.hidden = true;
     return;
   }
-  var p = currentProfile(),
-    perfil = (DB.profiles && DB.profiles[p]) || p;
-  a.href = waHref(C, "Hola, vengo del Radar Croacia y tengo una consulta. Mi situación: " + perfil + ".");
+  a.href = waHref(C, "Hola, vengo del Radar Croacia y tengo una consulta." + situacionTexto(DB));
   a.innerHTML = WA_ICON + "¿Dudas? Escribinos";
   a.title = C.nota || "";
   a.hidden = false;
@@ -146,7 +147,7 @@ function start(DB, CONTACT) {
 
   var FUENTES = DB.fuentes || { oficial: "Fuente oficial" };
   var PAGINA = 10; // fichas que se ven de entrada; el resto con «Ver más» (ZL-169)
-  var profile = "ar",
+  var profile = null,
     soloAbiertas = false,
     expanded = {},
     abiertas = {},
@@ -223,18 +224,56 @@ function start(DB, CONTACT) {
     };
     cats.appendChild(b);
   });
+  // Tocar la situación elegida la saca: se vuelve a ver todo, con lo que sirve a cada situación (ZL-193).
+  function elegirPerfil(p) {
+    profile = p;
+    document.querySelectorAll("#profile button").forEach(function (x) {
+      x.setAttribute("aria-pressed", String(x.dataset.p === p));
+    });
+  }
   document.querySelectorAll("#profile button").forEach(function (b) {
     b.onclick = function () {
-      profile = b.dataset.p;
-      document.querySelectorAll("#profile button").forEach(function (x) {
-        x.setAttribute("aria-pressed", x === b);
-      });
+      elegirPerfil(profile === b.dataset.p ? null : b.dataset.p);
+      limite = PAGINA;
       render();
     };
   });
+  // Los filtros quedan en la dirección para poder compartirlos: ?perfil=res&temas=beca,trab&sinasc=1
+  function leerUrl() {
+    var q = new URLSearchParams(location.search);
+    if (["ar", "cit", "res"].indexOf(q.get("perfil")) >= 0) elegirPerfil(q.get("perfil"));
+    var t = (q.get("temas") || "").split(",").filter(function (k) {
+      return CATS[k];
+    });
+    if (t.length)
+      Object.keys(CATS).forEach(function (k) {
+        active[k] = t.indexOf(k) >= 0;
+        document.getElementById("cat-" + k).setAttribute("aria-pressed", String(active[k]));
+      });
+    if (q.get("sinasc") === "1") {
+      soloAbiertas = true;
+      var b = document.getElementById("solo-abiertas");
+      if (b) b.setAttribute("aria-pressed", "true");
+    }
+  }
+  function escribirUrl() {
+    if (!window.history || !history.replaceState || OFF) return;
+    var q = new URLSearchParams(location.search);
+    ["perfil", "temas", "sinasc"].forEach(function (k) {
+      q.delete(k);
+    });
+    if (profile) q.set("perfil", profile);
+    var on = Object.keys(CATS).filter(function (k) {
+      return active[k];
+    });
+    if (on.length !== Object.keys(CATS).length) q.set("temas", on.join(","));
+    if (soloAbiertas) q.set("sinasc", "1");
+    var s = q.toString();
+    history.replaceState(null, "", location.pathname + (s ? "?" + s.replace(/%2C/g, ",") : "") + location.hash);
+  }
 
   function rank(d) {
-    var e = d.el[profile][0],
+    var e = profile ? d.el[profile][0] : "ok",
       ms = d.deadline ? new Date(d.deadline).getTime() - Date.now() : 9e12;
     if (ms < 0) return 4e13 - ms;
     return (e === "ok" ? 0 : e === "cond" ? 1 : 2) * 1e13 + ms;
@@ -298,18 +337,42 @@ function start(DB, CONTACT) {
       }).length,
       total = Object.keys(CATS).length;
     r.textContent =
-      (b ? b.textContent : "") +
+      (b ? b.textContent : "Sin situación elegida") +
       " · " +
       (on === total ? "todos los temas" : on + (on === 1 ? " tema" : " temas")) +
-      (soloAbiertas ? " · abiertas a todos" : "") +
+      (soloAbiertas ? " · sin requisito de ascendencia" : "") +
       " · " +
       n +
       (n === 1 ? " ficha" : " fichas");
   }
 
+  // Sin situación elegida, cada ficha dice para quién sirve en las tres (ZL-193).
+  function el3(d) {
+    return (
+      '<ul class="el3">' +
+      Object.keys(DB.profiles)
+        .map(function (p) {
+          var x = d.el[p];
+          return (
+            '<li><span class="pill ' +
+            EL[x[0]][0] +
+            '">' +
+            EL3[x[0]] +
+            "</span><span><b>" +
+            esc(DB.profiles[p]) +
+            ".</b> " +
+            esc(x[1]) +
+            "</span></li>"
+          );
+        })
+        .join("") +
+      "</ul>"
+    );
+  }
+  var EL3 = { ok: "Sirve", cond: "Con condiciones", no: "No aplica" };
   function card(d) {
     var st = status(d),
-      e = d.el[profile],
+      e = profile ? d.el[profile] : null,
       abierta = !!abiertas[d.id],
       c = document.createElement("article");
     c.className = "card" + (sel === d.id ? " sel" : "") + (abierta ? " abierta" : "");
@@ -325,11 +388,8 @@ function start(DB, CONTACT) {
       (st.cd ? " cd" : "") +
       '">' +
       esc(st.txt) +
-      '</span><span class="pill ' +
-      EL[e[0]][0] +
-      '">' +
-      EL[e[0]][1] +
       "</span>" +
+      (e ? '<span class="pill ' + EL[e[0]][0] + '">' + EL[e[0]][1] + "</span>" : "") +
       (d.abierta ? '<span class="pill p-abierta">Abierta a todos</span>' : "") +
       "</div>" +
       '<h3><button type="button" class="card-t" aria-expanded="' +
@@ -354,9 +414,7 @@ function start(DB, CONTACT) {
       '<dl class="facts"><div><dt>Monto</dt><dd>' +
       esc(d.amount) +
       "</dd></div></dl>" +
-      '<p class="why">' +
-      esc(e[1]) +
-      "</p>" +
+      (e ? '<p class="why">' + esc(e[1]) + "</p>" : el3(d)) +
       (d.flag ? '<p class="flag">' + esc(d.flag) + "</p>" : "") +
       '<div class="src"><span class="src-tipo src-' +
       esc(d.fuente || "oficial") +
@@ -382,10 +440,16 @@ function start(DB, CONTACT) {
     }).sort(function (a, b) {
       return rank(a) - rank(b);
     });
-    var useful = shown.filter(function (d) {
-      return d.el[profile][0] !== "no";
-    }).length;
-    document.getElementById("count").textContent = useful + " de " + shown.length + " te sirven";
+    // Un solo número (ZL-193): con situación, cuántas le sirven; sin situación, cuántas hay.
+    var useful = profile
+      ? shown.filter(function (d) {
+          return d.el[profile][0] !== "no";
+        }).length
+      : shown.length;
+    document.getElementById("count").textContent = profile
+      ? useful + " de " + shown.length + " te sirven"
+      : shown.length + (shown.length === 1 ? " ficha" : " fichas") + ". Elegí tu situación para ver cuáles te sirven.";
+    escribirUrl();
     resumenFiltros(shown.length);
     // markers
     var gm = document.getElementById("markers");
@@ -411,7 +475,7 @@ function start(DB, CONTACT) {
       arr.forEach(function (it, i) {
         var d = it[0],
           p = it[1],
-          e = d.el[profile][0],
+          e = profile ? d.el[profile][0] : "ok",
           col = CATS[d.cat].c,
           xy = P(p[0], p[1]);
         // Grupo abierto: dos anillos (hasta 9 adentro y el resto afuera) para que no se salga tanto del lugar.
@@ -461,7 +525,8 @@ function start(DB, CONTACT) {
     L.setAttribute("data-render", "js");
     var resto = shown.length - limite;
     mas.hidden = resto <= 0;
-    mas.textContent = "Ver " + Math.min(resto, 20) + " más (quedan " + resto + ")";
+    mas.textContent =
+      "Ver " + Math.min(resto, 20) + " más · mostrando " + Math.min(limite, shown.length) + " de " + shown.length;
   }
   document.getElementById("list").addEventListener("click", function (ev) {
     if (ev.target.closest("a")) return;
@@ -511,6 +576,7 @@ function start(DB, CONTACT) {
       t = c && c.querySelector(".card-t");
     if (t) t.focus({ preventScroll: true });
   }
+  leerUrl();
   render();
   setInterval(render, 60000);
   renderExtras(DB);
@@ -607,14 +673,11 @@ function initChat(C, DB, show) {
   }
   function waHtml(question) {
     if (!waNumber(C)) return "";
-    var p = currentProfile(),
-      perfil = (DB.profiles && DB.profiles[p]) || p;
     var text =
       "Hola, vengo del chat del Radar Croacia. Mi consulta: «" +
       String(question).slice(0, 300) +
-      "». Mi situación: " +
-      perfil +
-      ".";
+      "»." +
+      situacionTexto(DB);
     return (
       '<a class="wa msg-wa" href="' +
       esc(waHref(C, text)) +
