@@ -1,0 +1,59 @@
+{
+ "source": "udruge_vijesti",
+ "name": "Oficina para las Asociaciones del Gobierno (Ured za udruge): novedades y convocatorias (Vijesti)",
+ "detected_at": "2026-11-28",
+ "added": [
+  {
+   "guid": "https://udruge.gov.hr/vijesti/nacionalna-kontaktna-tocka-cerv-programa-na-konferenciji-centralizirani-instrumenti-i-programi-europske-unije/6376",
+   "title": "Nacionalna kontaktna točka CERV programa na konferenciji „Centralizirani instrumenti i programi Europske unije“",
+   "link": "https://udruge.gov.hr/vijesti/nacionalna-kontaktna-tocka-cerv-programa-na-konferenciji-centralizirani-instrumenti-i-programi-europske-unije/6376",
+   "published": "2026-11-27T14:45:55.000Z",
+   "summary": "Ured za udruge Vlade Republike Hrvatske, predstavio je nove mogućnosti financiranja kroz CERV program"
+  }
+ ],
+ "changed": [],
+ "instrucciones": "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json.",
+ "borradores": [
+  {
+   "guid": "https://udruge.gov.hr/vijesti/nacionalna-kontaktna-tocka-cerv-programa-na-konferenciji-centralizirani-instrumenti-i-programi-europske-unije/6376",
+   "link": "https://udruge.gov.hr/vijesti/nacionalna-kontaktna-tocka-cerv-programa-na-konferenciji-centralizirani-instrumenti-i-programi-europske-unije/6376",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-28T14:21:04.461Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es una noticia sobre una conferencia ya realizada y no describe una convocatoria concreta a la que una persona o asociación pueda postularse.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Información sobre el programa CERV de la UE en una conferencia",
+    "t_hr": "Nacionalna kontaktna točka CERV programa na konferenciji „Centralizirani instrumenti i programi Europske unije“",
+    "who": "Oficina para las Asociaciones del Gobierno de la República de Croacia (Ured za udruge Vlade Republike Hrvatske)",
+    "amount": "",
+    "what": "El Gobierno croata informó sobre el programa CERV de la Unión Europea, que financia proyectos vinculados a derechos, igualdad, participación ciudadana y valores europeos. La presentación se hizo en una conferencia sobre fondos centralizados de la UE para 2026 y 2027, y la fuente menciona convocatorias presentes y futuras sin dar detalles de fechas ni requisitos.",
+    "el": {
+     "ar": [
+      "cond",
+      "La fuente no describe una convocatoria con requisitos de perfil, así que no se puede confirmar elegibilidad."
+     ],
+     "cit": [
+      "cond",
+      "La fuente no describe una convocatoria con requisitos de perfil, así que no se puede confirmar elegibilidad."
+     ],
+     "res": [
+      "cond",
+      "La fuente no describe una convocatoria con requisitos de perfil, así que no se puede confirmar elegibilidad."
+     ]
+    },
+    "src": [
+     "udruge.gov.hr",
+     "https://udruge.gov.hr/vijesti/nacionalna-kontaktna-tocka-cerv-programa-na-konferenciji-centralizirani-instrumenti-i-programi-europske-unije/6376"
+    ],
+    "ai_generated": true,
+    "flag": "La conferencia ya se realizó; el aviso no es una convocatoria abierta. La fuente menciona convocatorias CERV de 2026 y 2027 pero no da fechas ni montos; conviene buscar la convocatoria concreta antes de publicar una ficha de aplicación. Los enlaces a la presentación y a la publicación completa no se incluyeron; el sistema agrega el oficial. El llamado de la sección «Sljedeća» (representantes de la sociedad civil para un grupo de trabajo sobre la Directiva EU ETS) no fue analizado porque es un aviso distinto."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  }
+ ]
+}

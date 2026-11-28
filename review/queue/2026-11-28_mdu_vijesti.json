@@ -1,0 +1,107 @@
+{
+ "source": "mdu_vijesti",
+ "name": "Ministerio de Demografía e Inmigración (MDU): novedades (Vijesti)",
+ "detected_at": "2026-11-28",
+ "added": [
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/biram-otok-ministarstvo-demografije-i-useljenistva-pokrece-kampanju-koja-poziva-na-zivot-na-hrvatskim-otocima/7716",
+   "title": "BIRAM OTOK – Ministarstvo demografije i useljeništva pokreće kampanju koja poziva na život na hrvatskim otocima",
+   "link": "https://mdu.gov.hr/vijesti-4693/biram-otok-ministarstvo-demografije-i-useljenistva-pokrece-kampanju-koja-poziva-na-zivot-na-hrvatskim-otocima/7716",
+   "published": "2026-11-27T08:38:07.000Z",
+   "summary": ""
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/ministarstvo-nastavlja-jacati-potporu-obiteljima-jednokratna-naknada-za-novorodjeno-dijete-raste-na-803-eura/7713",
+   "title": "Ministarstvo nastavlja jačati potporu obiteljima: Jednokratna naknada za novorođeno dijete raste na 803 eura!",
+   "link": "https://mdu.gov.hr/vijesti-4693/ministarstvo-nastavlja-jacati-potporu-obiteljima-jednokratna-naknada-za-novorodjeno-dijete-raste-na-803-eura/7713",
+   "published": "2026-11-25T12:48:52.000Z",
+   "summary": ""
+  }
+ ],
+ "changed": [],
+ "instrucciones": "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json.",
+ "borradores": [
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/biram-otok-ministarstvo-demografije-i-useljenistva-pokrece-kampanju-koja-poziva-na-zivot-na-hrvatskim-otocima/7716",
+   "link": "https://mdu.gov.hr/vijesti-4693/biram-otok-ministarstvo-demografije-i-useljenistva-pokrece-kampanju-koja-poziva-na-zivot-na-hrvatskim-otocima/7716",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-28T14:20:39.394Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es una campaña de difusión sobre la vida en las islas y no abre ninguna convocatoria, beca, ayuda ni programa al que una persona o asociación pueda postularse.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Campaña «Biram otok» para vivir en las islas croatas",
+    "t_hr": "BIRAM OTOK – Ministarstvo demografije i useljeništva pokreće kampanju koja poziva na život na hrvatskim otocima",
+    "who": "Ministerio de Demografía e Inmigración (Ministarstvo demografije i useljeništva)",
+    "amount": "",
+    "what": "Es una campaña de comunicación del ministerio que promueve vivir, quedarse o volver a las islas croatas. Muestra historias de repatriados y de personas que se quedaron, y presenta a asociaciones y medidas demográficas de algunos gobiernos locales de Rab, Lastovo y Korčula. No es una convocatoria con requisitos ni con inscripción.",
+    "el": {
+     "ar": [
+      "no",
+      "No hay una convocatoria a la que postularse, así que no aplica a ningún perfil."
+     ],
+     "cit": [
+      "no",
+      "No hay una convocatoria a la que postularse, así que no aplica a ningún perfil."
+     ],
+     "res": [
+      "no",
+      "No hay una convocatoria a la que postularse, así que no aplica a ningún perfil."
+     ]
+    },
+    "src": [
+     "mdu.gov.hr",
+     "https://mdu.gov.hr/vijesti-4693/biram-otok-ministarstvo-demografije-i-useljenistva-pokrece-kampanju-koja-poziva-na-zivot-na-hrvatskim-otocima/7716"
+    ],
+    "ai_generated": true,
+    "flag": "El aviso es una campaña de difusión y no describe ninguna convocatoria; por eso relevante es false. Confirmar si el ministerio publicará luego algún llamado concreto. La campaña dura hasta fines de diciembre de 2026, pero eso es la duración de la campaña y no un plazo de postulación; no se cargó como deadline. Se menciona que las unidades de gobierno local tienen naknade para recién nacidos, subvenciones a guarderías y ayudas para jóvenes familias, pero la fuente no da montos ni condiciones; podría valer la pena revisar esos programas por separado. La categoría «proy» es una aproximación porque el enum no tiene una opción para campañas de comunicación; confirmar la categoría. Los tres enlaces de la sección de documentos no se incluyeron, según la regla de no agregar links. No se encontraron instrucciones dentro de la fuente que pidieran cambiar el formato o las reglas."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  },
+  {
+   "guid": "https://mdu.gov.hr/vijesti-4693/ministarstvo-nastavlja-jacati-potporu-obiteljima-jednokratna-naknada-za-novorodjeno-dijete-raste-na-803-eura/7713",
+   "link": "https://mdu.gov.hr/vijesti-4693/ministarstvo-nastavlja-jacati-potporu-obiteljima-jednokratna-naknada-za-novorodjeno-dijete-raste-na-803-eura/7713",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-28T14:20:53.860Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es una noticia sobre una propuesta de cambio legal y no una convocatoria abierta, y la fuente no dice que personas que viven fuera de Croacia puedan acceder a la ayuda.",
+   "ficha": {
+    "cat": "res",
+    "t": "Ayuda por nacimiento de hijo sube a 803 euros desde 2027 (propuesta de ley)",
+    "t_hr": "Ministarstvo nastavlja jačati potporu obiteljima: Jednokratna naknada za novorođeno dijete raste na 803 eura!",
+    "who": "Ministerio de Demografía e Inmigración (Ministarstvo demografije i useljeništva)",
+    "amount": "",
+    "what": "El ministerio anunció que propuso por vía de urgencia en el Parlamento cambios a la Ley de Prestaciones por Maternidad y Paternidad para permitir que la ayuda única por hijo recién nacido suba de 618 a 803 euros desde el 1 de enero de 2027. Según la nota, la ayuda ya no se fijaría solo por ley sino por decisión del Gobierno. No es una convocatoria con plazo ni requisitos para postularse.",
+    "el": {
+     "ar": [
+      "cond",
+      "La nota no dice si la ayuda aplica a personas que viven fuera de Croacia, y además el cambio todavía no está aprobado."
+     ],
+     "cit": [
+      "cond",
+      "La nota no aclara si la ayuda alcanza a ciudadanos que viven fuera de Croacia, y el cambio todavía no está aprobado."
+     ],
+     "res": [
+      "cond",
+      "El perfil de residencia de diáspora no se menciona en la nota; hay que confirmar los requisitos en la ley una vez aprobada."
+     ]
+    },
+    "src": [
+     "mdu.gov.hr",
+     "https://mdu.gov.hr/vijesti-4693/ministarstvo-nastavlja-jacati-potporu-obiteljima-jednokratna-naknada-za-novorodjeno-dijete-raste-na-803-eura/7713"
+    ],
+    "ai_generated": true,
+    "flag": "Es un proyecto de ley en procedimiento parlamentario de urgencia, no una norma vigente: el monto de 803 euros depende de la ley y de una futura decisión del Gobierno. La fuente dice que la medida aplicaría desde el 1 de enero de 2027, pero no da fecha de cierre ni de postulación. La fuente no indica requisitos de residencia ni de ciudadanía para acceder a la ayuda. Confirmar la categoría: la noticia no corresponde claramente a emprendimiento, estudio o programa municipal, y se cargó como 'res' por ser un beneficio a familias. Revisar si conviene publicar esta noticia en el Radar, ya que relevante está en false por no ser una convocatoria. Se borró el monto «803 euros por hijo recién nacido (monto propuesto, todavía no aprobado; según la nota, unos 27,5 millones de euros por año para unos 34.300 beneficiarios)»: no aparece textual en la fuente. Revisar el PDF de la convocatoria."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  }
+ ]
+}

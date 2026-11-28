@@ -4,6 +4,20 @@
  "url": "https://matis.hr/feed/",
  "items": [
   {
+   "guid": "https://matis.hr/?p=82149",
+   "title": "31. Forum hrvatske nacionalne manjine: Mladi i djeca ključni su nositelji budućnosti",
+   "link": "https://matis.hr/novosti/31-forum-hrvatske-nacionalne-manjine-mladi-i-djeca-kljucni-su-nositelji-buducnosti/",
+   "published": "2026-11-27T19:48:01.000Z",
+   "summary": "U organizaciji Hrvatske matice iseljenika u Zagrebu je održan 31. Forum hrvatske nacionalne manjine koji je okupio predstavnike hrvatskih manjinskih zajednica iz 12 europskih država"
+  },
+  {
+   "guid": "https://matis.hr/?p=82126",
+   "title": "Priznanje Anti Belji za desetljeća povezivanja domovinske i iseljene Hrvatske",
+   "link": "https://matis.hr/novosti/priznanje-anti-belji-za-desetljeca-povezivanja-domovinske-i-iseljene-hrvatske/",
+   "published": "2026-11-26T09:31:17.000Z",
+   "summary": "U Hrvatskoj matici iseljenika održana izložba spomen-knjiga Hrvatsko-kanadskog folklornog saveza i dodijeljeno priznanje Anti Belji"
+  },
+  {
    "guid": "https://matis.hr/?p=82122",
    "title": "Poznati svi nominirani za Domovnicu 2027.",
    "link": "https://matis.hr/novosti/poznati-svi-nominirani-za-domovnicu-2027/",
@@ -16,6 +30,13 @@
    "link": "https://matis.hr/novosti/najava-forum-o-ulozi-hrvatskih-iseljenika-u-domovinskom-ratu-domovina-u-mom-srcu-istinom-protiv-zaborava/",
    "published": "2026-11-25T11:45:14.000Z",
    "summary": "Forum će se održati 30. studenoga 2026. godine u Pastoralnom centru sv. Bono u Vukovaru"
+  },
+  {
+   "guid": "https://matis.hr/?p=82049",
+   "title": "NAJAVA: 31. Forum hrvatske nacionalne manjine – Mladi i djeca, budućnost hrvatskih manjinskih zajednica",
+   "link": "https://matis.hr/novosti/najava-31-forum-hrvatske-nacionalne-manjine-mladi-i-djeca-buducnost-hrvatskih-manjinskih-zajednica/",
+   "published": "2026-11-25T11:17:00.000Z",
+   "summary": "31. Forum hrvatske nacionalne manjine održava se 27. studenoga 2026. u Hrvatskoj matici iseljenika"
   },
   {
    "guid": "https://matis.hr/?p=82082",
@@ -39,13 +60,6 @@
    "summary": "Izložba fotografija Franje Pajrića u Kaštel Lukšiću otvara se 24. studenoga 2026. u 19 sati"
   },
   {
-   "guid": "https://matis.hr/?p=82049",
-   "title": "NAJAVA: 31. Forum hrvatske nacionalne manjine – Mladi i djeca, budućnost hrvatskih manjinskih zajednica",
-   "link": "https://matis.hr/novosti/najava-31-forum-hrvatske-nacionalne-manjine-mladi-i-djeca-buducnost-hrvatskih-manjinskih-zajednica/",
-   "published": "2026-11-23T11:17:54.000Z",
-   "summary": "31. Forum hrvatske nacionalne manjine održava se 27. studenoga 2026. u Hrvatskoj matici iseljenika"
-  },
-  {
    "guid": "https://matis.hr/?p=82044",
    "title": "NAJAVA: Izložba spomen-knjiga Kanadsko-hrvatskih folklornih festivala i dodjela priznanja Anti Belji",
    "link": "https://matis.hr/novosti/najava-izlozba-spomen-knjiga-kanadsko-hrvatskih-folklornih-festivala-i-dodjela-priznanja-anti-belji/",
@@ -58,20 +72,6 @@
    "link": "https://matis.hr/programi/mala-skola-hrvatskoga-jezika-i-kulture-4/",
    "published": "2026-11-20T13:01:46.000Z",
    "summary": "Mala škola 2027 Informacija za 2027. bit će dostupna početkom godine (planirani termin je 19. – 30. srpnja 2027.). U međuvremenu se zainteresirani mogu prijaviti na listu potencijalnih kandidata, do popunjenja mjesta. Dobna granica je od 9 do navršenih 14 godina (s datumom 31.8.). Važno! Prijava na listu potencijalnih kandidata nije registracija te ne garantira […]"
-  },
-  {
-   "guid": "https://matis.hr/?p=82012",
-   "title": "Dom kulture u Donjoj Lastvi dan na uporabu Hrvatskom nacionalnom vijeću",
-   "link": "https://matis.hr/novosti/dom-kulture-u-donjoj-lastvi-dan-na-uporabu-hrvatskom-nacionalnom-vijecu/",
-   "published": "2026-11-16T10:40:15.000Z",
-   "summary": "Ugovorom potpisanim u Zagrebu osigurano je dugoročno korištenje jednoga od najvažnijih kulturnih i identitetskih središta hrvatske zajednice u Crnoj Gori."
-  },
-  {
-   "guid": "https://matis.hr/?p=81998",
-   "title": "Održan 39. Tamburaški festival odraslih Hrvatske bratske zajednice u Americi",
-   "link": "https://matis.hr/novosti/odrzan-39-tamburaski-festival-odraslih-hrvatske-bratske-zajednice-u-americi/",
-   "published": "2026-11-13T20:04:12.000Z",
-   "summary": "Na tradicionalnom festivalu HBZ-a nastupila su 24 tamburaška ansambla s više od 500 tamburaša i folkloraša iz SAD-a, Kanade i Hrvatske"
   }
  ]
 }

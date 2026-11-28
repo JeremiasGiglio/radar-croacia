@@ -1,0 +1,107 @@
+{
+ "source": "matis_novosti",
+ "name": "Hrvatska matica iseljenika: novedades y programas (Novosti)",
+ "detected_at": "2026-11-28",
+ "added": [
+  {
+   "guid": "https://matis.hr/?p=82149",
+   "title": "31. Forum hrvatske nacionalne manjine: Mladi i djeca ključni su nositelji budućnosti",
+   "link": "https://matis.hr/novosti/31-forum-hrvatske-nacionalne-manjine-mladi-i-djeca-kljucni-su-nositelji-buducnosti/",
+   "published": "2026-11-27T19:48:01.000Z",
+   "summary": "U organizaciji Hrvatske matice iseljenika u Zagrebu je održan 31. Forum hrvatske nacionalne manjine koji je okupio predstavnike hrvatskih manjinskih zajednica iz 12 europskih država"
+  },
+  {
+   "guid": "https://matis.hr/?p=82126",
+   "title": "Priznanje Anti Belji za desetljeća povezivanja domovinske i iseljene Hrvatske",
+   "link": "https://matis.hr/novosti/priznanje-anti-belji-za-desetljeca-povezivanja-domovinske-i-iseljene-hrvatske/",
+   "published": "2026-11-26T09:31:17.000Z",
+   "summary": "U Hrvatskoj matici iseljenika održana izložba spomen-knjiga Hrvatsko-kanadskog folklornog saveza i dodijeljeno priznanje Anti Belji"
+  }
+ ],
+ "changed": [],
+ "instrucciones": "Revisar a mano. Si aplica a descendientes, crear o actualizar la ficha en site/data/opportunities.json.",
+ "borradores": [
+  {
+   "guid": "https://matis.hr/?p=82149",
+   "link": "https://matis.hr/novosti/31-forum-hrvatske-nacionalne-manjine-mladi-i-djeca-kljucni-su-nositelji-buducnosti/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-28T14:20:17.572Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es una crónica de un foro ya realizado el 27 de noviembre de 2026 y no describe ninguna convocatoria, beca ni ayuda que una persona o asociación pueda solicitar.",
+   "ficha": {
+    "cat": "proy",
+    "t": "31° Foro de la minoría nacional croata: jóvenes y niños como futuro",
+    "t_hr": "31. Forum hrvatske nacionalne manjine: Mladi i djeca ključni su nositelji budućnosti",
+    "who": "Matica croata de la emigración (Hrvatska matica iseljenika)",
+    "amount": "",
+    "what": "Crónica del 31° Foro de la minoría nacional croata, realizado el 27 de noviembre de 2026 en Zagreb, dedicado a cómo transmitir el idioma, la cultura y la identidad croata a las nuevas generaciones. Presenta experiencias de comunidades croatas de varios países europeos y habla de programas de la Matica para niños y jóvenes, pero no abre ninguna convocatoria.",
+    "el": {
+     "ar": [
+      "no",
+      "La nota no describe ninguna convocatoria a la que una persona pueda postularse."
+     ],
+     "cit": [
+      "no",
+      "La nota no describe ninguna convocatoria a la que una persona pueda postularse."
+     ],
+     "res": [
+      "no",
+      "La nota no trata sobre residencia ni trámites."
+     ]
+    },
+    "src": [
+     "matis.hr",
+     "https://matis.hr/novosti/31-forum-hrvatske-nacionalne-manjine-mladi-i-djeca-kljucni-su-nositelji-buducnosti/"
+    ],
+    "ai_generated": true,
+    "flag": "Es una noticia sobre un evento ya realizado y no una convocatoria; conviene no publicarla como oportunidad. La fuente menciona el proyecto «Putujuća škola», planificado para diciembre de 2026 en el museo de Eslovaquia, y el Savjet mladih para Hrvate izvan RH; si se abren convocatorias, habría que revisarlas por separado. El texto de la fuente aparece cortado al final (en la sección sobre Eco Heritage Task Force y «Igračka u srcu»); conviene revisar la página completa por si hay algún anuncio de convocatoria."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  },
+  {
+   "guid": "https://matis.hr/?p=82126",
+   "link": "https://matis.hr/novosti/priznanje-anti-belji-za-desetljeca-povezivanja-domovinske-i-iseljene-hrvatske/",
+   "model": "claude-haiku-5-5",
+   "generated_at": "2026-11-28T14:20:29.028Z",
+   "text_from": "página oficial",
+   "relevante": false,
+   "motivo_relevancia": "Es una nota sobre una distinción ya entregada a Ante Beljo, no una convocatoria que una persona o asociación pueda aprovechar.",
+   "ficha": {
+    "cat": "proy",
+    "t": "Reconocimiento a Ante Beljo por su trayectoria en la diáspora",
+    "t_hr": "Priznanje Anti Belji za desetljeća povezivanja domovinske i iseljene Hrvatske",
+    "who": "Hrvatska matica iseljenika (Hrvatska matica iseljenika)",
+    "amount": "",
+    "what": "Se entregó la Velika zlatna plaketa «Da se ne zaboravi» a Ante Beljo, exdiputado y exdirector de la Hrvatska matica iseljenika, por su trayectoria en la creación del Estado croata, el vínculo con la diáspora y la investigación de la historia croata. La nota también repasa el Hrvatsko-kanadski folklorni savez, que él ayudó a fundar en Sudbury. No hay ninguna convocatoria ni forma de postularse.",
+    "el": {
+     "ar": [
+      "no",
+      "No hay convocatoria a la que postularse; es el reconocimiento de una distinción ya entregada."
+     ],
+     "cit": [
+      "no",
+      "No hay convocatoria a la que postularse; es el reconocimiento de una distinción ya entregada."
+     ],
+     "res": [
+      "no",
+      "La nota no describe ningún trámite ni beneficio de residencia."
+     ]
+    },
+    "src": [
+     "matis.hr",
+     "https://matis.hr/novosti/priznanje-anti-belji-za-desetljeca-povezivanja-domovinske-i-iseljene-hrvatske/"
+    ],
+    "ai_generated": true,
+    "flag": "Es una noticia sobre una ceremonia realizada el 25 de noviembre de 2026, no un aviso de convocatoria; probablemente no corresponde publicarla como oportunidad. La fuente no indica criterios ni plazos de postulación para ninguna distinción o programa."
+   },
+   "citas": {
+    "amount": null,
+    "deadline": null
+   }
+  }
+ ]
+}
